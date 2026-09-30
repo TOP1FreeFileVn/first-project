@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://game/data/LevelData.gd" id="1_level"]
+[ext_resource type="Resource" path="res://game/data/troops/pawn.tres" id="2_pawn"]
+[ext_resource type="Resource" path="res://game/data/troops/warrior.tres" id="3_warrior"]
+[ext_resource type="Resource" path="res://game/data/troops/archer.tres" id="4_archer"]
+
+[resource]
+script = ExtResource("1_level")
+display_name = "Màn 1 · Đồng Cỏ"
+troop_pool = [ExtResource("2_pawn"), ExtResource("3_warrior"), ExtResource("4_archer")]
+start_meat = 6.0
+core_hp = 100.0
+enemy_power = 0.9
+prep_time = 12.0
+waves = [{
+"gap": 12.0,
+"groups": [{"troop": "pawn", "count": 5, "interval": 1.8}]
+}, {
+"gap": 14.0,
+"groups": [{"troop": "pawn", "count": 6, "interval": 1.4}, {"troop": "warrior", "count": 2, "interval": 3.0, "start": 4.0}]
+}, {
+"gap": 16.0,
+"groups": [{"troop": "warrior", "count": 4, "interval": 2.0}, {"troop": "archer", "count": 3, "interval": 2.5, "start": 3.0}, {"troop": "pawn", "count": 4, "interval": 1.2, "start": 6.0}]
+}, {
+"gap": 18.0,
+"groups": [{"troop": "pawn", "count": 8, "interval": 1.0}, {"troop": "warrior", "count": 5, "interval": 1.8, "start": 2.0}, {"troop": "archer", "count": 3, "interval": 2.0, "start": 5.0}, {"troop": "warrior", "count": 1, "interval": 1.0, "start": 10.0, "elite": true}]
+}]

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "assassin"
+display_name = "Sát thủ"
+description = "Nhanh như gió, lách qua tuyến đầu để hạ cung thủ và tu sĩ địch."
+rarity = 1
+unit_key = "PawnKnife"
+building = "House2"
+role = 0
+max_hp = 38.0
+damage = 11.0
+attack_range = 32.0
+attack_cooldown = 0.7
+move_speed = 115.0
+aggro_range = 260.0
+spawn_interval = 4.8
+max_alive = 2
+summon_weight = 0.8
+ability = 3
+ability_text = "Ám sát: ưu tiên địch bắn xa và hồi máu ở bất cứ đâu; nhát đầu gây x2.5 sát thương."
+ability_value = 2.5
+crit_chance = 0.25
+crit_mult = 2.0

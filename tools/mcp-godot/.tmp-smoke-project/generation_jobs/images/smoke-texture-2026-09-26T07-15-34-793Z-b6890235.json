@@ -1,0 +1,15 @@
+{
+  "id": "2026-09-26T07-15-34-793Z-b6890235",
+  "kind": "images",
+  "provider": "none",
+  "prompt": "A tiny smoke-test tile\nRequirement: seamless/tileable texture.",
+  "targetPath": "res://assets/generated/textures/smoke.png",
+  "options": {
+    "name": "smoke-texture",
+    "size": "1024x1024",
+    "kind": "texture"
+  },
+  "status": "queued",
+  "createdAt": "2026-09-26T07:15:34.793Z",
+  "note": "Provider is none, so this job records the prompt without generating an asset."
+}

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3 uid="uid://jppgo7wppjxc"]
+
+[ext_resource type="Script" uid="uid://yjtrdo1h3tku" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "lancer"
+display_name = "Kỵ thương"
+description = "Kỵ binh cầm giáo: nhanh, đánh đau, xông thẳng vào địch."
+rarity = 1
+unit_key = "Lancer"
+building = "Tower"
+max_hp = 55.0
+damage = 14.0
+attack_range = 52.0
+attack_cooldown = 1.1
+move_speed = 95.0
+aggro_range = 240.0
+spawn_interval = 5.0
+max_alive = 2
+summon_weight = 0.8
+crit_chance = 0.15
+crit_mult = 1.75

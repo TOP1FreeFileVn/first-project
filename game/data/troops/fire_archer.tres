@@ -1,0 +1,29 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "fire_archer"
+display_name = "Cung lửa"
+description = "Tên tẩm dầu: mỗi phát bắn đốt cháy mục tiêu."
+rarity = 1
+unit_key = "Archer"
+building = "Archery"
+role = 1
+tint = Color(1, 0.72, 0.55, 1)
+max_hp = 30.0
+damage = 7.0
+attack_range = 230.0
+attack_cooldown = 1.4
+move_speed = 55.0
+aggro_range = 280.0
+spawn_interval = 5.0
+max_alive = 2
+summon_weight = 0.8
+ability = 5
+ability_text = "Tên lửa: mục tiêu bị đốt 4 sát thương/giây trong 3 giây."
+ability_value = 4.0
+ability_duration = 3.0
+crit_chance = 0.1
+crit_mult = 1.5

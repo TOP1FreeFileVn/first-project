@@ -1,0 +1,24 @@
+[gd_resource type="Resource" format=3 uid="uid://ccx6sqc4cvois"]
+
+[ext_resource type="Script" uid="uid://yjtrdo1h3tku" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "monk"
+display_name = "Tu sĩ"
+description = "Không đánh, chỉ hồi máu cho đồng đội bị thương gần nhất."
+rarity = 2
+unit_key = "Monk"
+building = "Monastery"
+role = 2
+max_hp = 36.0
+damage = 10.0
+attack_range = 170.0
+attack_cooldown = 1.8
+move_speed = 58.0
+aggro_range = 240.0
+spawn_interval = 6.0
+max_alive = 2
+summon_weight = 0.6
+crit_chance = 0.0
+crit_mult = 1.5

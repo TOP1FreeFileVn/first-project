@@ -1,0 +1,171 @@
+{
+	"version": 1,
+	"formulas": {
+		"level_cost": {
+			"label": "Giá lên cấp lính (vàng)",
+			"used_in": "Lính → Nâng cấp",
+			"expr": "round(50 * pow(1.35, level - 1))",
+			"vars": ["level"],
+			"preview": {"x": "level", "from": 1, "to": 30, "step": 1},
+			"min": 1
+		},
+		"troop_multiplier": {
+			"label": "Hệ số sức mạnh lính theo cấp và sao",
+			"used_in": "Máu và sát thương lính trong trận",
+			"expr": "(1 + 0.08 * (level - 1)) * pow(1.2, stars - 1)",
+			"vars": ["level", "stars"],
+			"preview": {"x": "level", "from": 1, "to": 30, "step": 1, "series": "stars", "series_values": [1, 2, 3]},
+			"min": 0.01
+		},
+		"tier_multiplier": {
+			"label": "Hệ số theo bậc gear (ghép)",
+			"used_in": "Máu và sát thương lính sinh ra từ gear",
+			"expr": "pow(1.75, tier - 1)",
+			"vars": ["tier"],
+			"preview": {"x": "tier", "from": 1, "to": 5, "step": 1},
+			"min": 0.01
+		},
+		"spawn_interval": {
+			"label": "Thời gian gear sinh 1 lính (giây)",
+			"used_in": "Gear trong trận",
+			"expr": "base * pow(0.92, tier - 1) / (1 + master_bonus)",
+			"vars": ["base", "tier", "master_bonus"],
+			"preview": {"x": "tier", "from": 1, "to": 5, "step": 1, "samples": {"base": 4.5, "master_bonus": 0}},
+			"min": 0.2
+		},
+		"round_income": {
+			"label": "Thu nhập thịt sau mỗi đợt",
+			"used_in": "Hết đợt, trước lượt nghỉ; wave = đợt vừa xong (từ 1), bonus = Lò thịt",
+			"expr": "5 + wave + bonus",
+			"vars": ["wave", "bonus"],
+			"preview": {"x": "wave", "from": 1, "to": 8, "step": 1, "series": "bonus", "series_values": [0, 2, 5]},
+			"min": 0
+		},
+		"interest": {
+			"label": "Lãi thịt khi để dành",
+			"used_in": "Hết đợt, tính trên số thịt đang có trước khi cộng thu nhập",
+			"expr": "min(floor(meat / 5), 3)",
+			"vars": ["meat"],
+			"preview": {"x": "meat", "from": 0, "to": 20, "step": 1},
+			"min": 0
+		},
+		"enemy_multiplier": {
+			"label": "Hệ số sức mạnh quân địch",
+			"used_in": "Máu và sát thương địch; power = sức mạnh màn, wave = đợt (từ 0)",
+			"expr": "power * (1 + 0.2 * wave)",
+			"vars": ["power", "wave"],
+			"preview": {"x": "wave", "from": 0, "to": 7, "step": 1, "series": "power", "series_values": [1, 2, 3]},
+			"min": 0.01
+		},
+		"siege_damage": {
+			"label": "Sát thương địch gây cho tường thành",
+			"used_in": "Khi địch đánh vào tường; damage = sát thương của địch",
+			"expr": "damage * 0.35",
+			"vars": ["damage"],
+			"preview": {"x": "damage", "from": 0, "to": 50, "step": 5},
+			"min": 0
+		},
+		"workshop_cost": {
+			"label": "Giá nâng cấp Xưởng (vàng)",
+			"used_in": "Thành → Xưởng; base, growth lấy theo từng nâng cấp",
+			"expr": "round(base * pow(growth, level))",
+			"vars": ["base", "growth", "level"],
+			"preview": {"x": "level", "from": 0, "to": 5, "step": 1, "samples": {"base": 120, "growth": 1.6}},
+			"min": 1
+		},
+		"win_gold": {
+			"label": "Vàng khi thắng màn",
+			"used_in": "Bảng kết thúc trận; level = số thứ tự màn (từ 0)",
+			"expr": "60 + 40 * (level + 1) + 20 * stars",
+			"vars": ["level", "stars"],
+			"preview": {"x": "level", "from": 0, "to": 9, "step": 1, "series": "stars", "series_values": [1, 2, 3]},
+			"min": 0
+		},
+		"loss_gold": {
+			"label": "Vàng khi thua màn",
+			"used_in": "Bảng kết thúc trận; waves = số đợt đã qua",
+			"expr": "15 * waves",
+			"vars": ["waves"],
+			"preview": {"x": "waves", "from": 0, "to": 8, "step": 1},
+			"min": 0
+		},
+		"patrol_rate": {
+			"label": "Vàng tuần tra mỗi giờ",
+			"used_in": "Tuần tra; cleared = số màn đã qua",
+			"expr": "60 + 60 * cleared",
+			"vars": ["cleared"],
+			"preview": {"x": "cleared", "from": 0, "to": 10, "step": 1},
+			"min": 0
+		},
+		"battle_stars": {
+			"label": "Số sao cuối trận",
+			"used_in": "Khi thắng; hp_ratio = máu thành còn lại (0–1)",
+			"expr": "1 + int(hp_ratio >= 0.45) + int(hp_ratio >= 0.8)",
+			"vars": ["hp_ratio"],
+			"preview": {"x": "hp_ratio", "from": 0, "to": 1, "step": 0.1},
+			"min": 1,
+			"max": 3
+		}
+	},
+	"values": {
+		"levels_per_star": {"value": 10, "label": "Số cấp mỗi sao (trần cấp = sao × số này)", "min": 1, "max": 50, "step": 1},
+		"spare_card_gold": {"value": 20, "label": "Vàng đổi cho 1 thẻ thừa (lính đã tối đa sao)", "min": 0, "max": 1000, "step": 5},
+		"elite_hp_mult": {"value": 5.0, "label": "Tinh nhuệ: hệ số máu", "min": 1, "max": 30, "step": 0.1},
+		"elite_damage_mult": {"value": 1.8, "label": "Tinh nhuệ: hệ số sát thương", "min": 1, "max": 10, "step": 0.1},
+		"kill_meat": {"value": 0.35, "label": "Thịt nhận khi giết 1 địch", "min": 0, "max": 5, "step": 0.05},
+		"elite_kill_meat": {"value": 3.0, "label": "Thịt nhận khi giết tinh nhuệ", "min": 0, "max": 20, "step": 0.5},
+		"max_player_units": {"value": 60, "label": "Số lính ta tối đa trên sân", "min": 5, "max": 200, "step": 5},
+		"first_clear_gold_mult": {"value": 2, "label": "Hệ số vàng lần đầu qua màn", "min": 1, "max": 10, "step": 0.5},
+		"first_three_star_gems": {"value": 10, "label": "Kim cương khi đạt 3★ lần đầu", "min": 0, "max": 500, "step": 5},
+		"free_chest_hours": {"value": 4, "label": "Rương Gỗ miễn phí mỗi (giờ)", "min": 0.1, "max": 48, "step": 0.5},
+		"gold_chest_pity": {"value": 10, "label": "Rương Vàng: số lần để chắc chắn có Sử thi", "min": 1, "max": 100, "step": 1},
+		"exchange_gems": {"value": 20, "label": "Đổi: số kim cương", "min": 1, "max": 1000, "step": 1},
+		"exchange_gold": {"value": 500, "label": "Đổi: số vàng nhận", "min": 1, "max": 100000, "step": 50},
+		"patrol_max_hours": {"value": 8, "label": "Tuần tra: kho chứa tối đa (giờ)", "min": 1, "max": 72, "step": 1},
+		"patrol_quick_hours": {"value": 2, "label": "Tuần tra nhanh: số giờ nhận ngay", "min": 0.5, "max": 24, "step": 0.5},
+		"patrol_quick_free": {"value": 2, "label": "Tuần tra nhanh: lượt miễn phí mỗi ngày", "min": 0, "max": 20, "step": 1},
+		"patrol_quick_gems": {"value": 20, "label": "Tuần tra nhanh: giá kim cương", "min": 0, "max": 1000, "step": 5},
+		"start_gems": {"value": 30, "label": "Kim cương khi bắt đầu game mới", "min": 0, "max": 10000, "step": 10}
+	},
+	"star_card_cost": [10, 30],
+	"rarity_weights": [64, 32, 3.6, 0.4],
+	"castle": [
+		{"hp": 1.00, "meat": 20, "cells": 12, "team": 3, "cost": 0},
+		{"hp": 1.15, "meat": 20, "cells": 14, "team": 3, "cost": 150},
+		{"hp": 1.30, "meat": 22, "cells": 16, "team": 4, "cost": 250},
+		{"hp": 1.50, "meat": 22, "cells": 18, "team": 4, "cost": 400},
+		{"hp": 1.70, "meat": 24, "cells": 20, "team": 4, "cost": 600},
+		{"hp": 1.95, "meat": 24, "cells": 22, "team": 5, "cost": 850},
+		{"hp": 2.20, "meat": 26, "cells": 23, "team": 5, "cost": 1200},
+		{"hp": 2.50, "meat": 26, "cells": 23, "team": 5, "cost": 1650},
+		{"hp": 2.85, "meat": 28, "cells": 23, "team": 5, "cost": 2200},
+		{"hp": 3.20, "meat": 30, "cells": 23, "team": 5, "cost": 3000}
+	],
+	"workshop": {
+		"meat_regen": {"name": "Lò thịt", "desc": "+%d thịt thu nhập mỗi đợt", "max": 5, "base": 120, "growth": 1.6, "step": 1},
+		"start_meat": {"name": "Kho dự trữ", "desc": "+%d thịt khi vào trận", "max": 4, "base": 100, "growth": 1.8, "step": 1},
+		"master_gear": {"name": "Bánh răng tổng", "desc": "Gear sinh lính nhanh hơn %d%%", "max": 5, "base": 150, "growth": 1.6, "step": 5}
+	},
+	"battle_shop": {
+		"slots": 5,
+		"prices": [2, 3, 4, 6],
+		"reroll_cost": 1,
+		"free_rerolls": 1,
+		"sell_refund": 0.75,
+		"tier2_from_wave": 5,
+		"tier2_chance": 0.15,
+		"tier2_price_mult": 2.5,
+		"odds": [
+			{"from": 1, "weights": [80, 20, 0, 0]},
+			{"from": 3, "weights": [60, 32, 8, 0]},
+			{"from": 5, "weights": [45, 35, 16, 4]},
+			{"from": 7, "weights": [35, 35, 22, 8]}
+		]
+	},
+	"chests": {
+		"wood": {"name": "Rương Gỗ", "cards": 3, "gold": 0, "gems": 0, "bonus_gold": [50, 100], "min_rare": 0},
+		"silver": {"name": "Rương Bạc", "cards": 8, "gold": 600, "gems": 0, "bonus_gold": [0, 0], "min_rare": 0},
+		"gold": {"name": "Rương Vàng", "cards": 25, "gold": 0, "gems": 120, "bonus_gold": [0, 0], "min_rare": 3},
+		"victory": {"name": "Rương chiến thắng", "cards": 2, "gold": 0, "gems": 0, "bonus_gold": [0, 0], "min_rare": 0}
+	}
+}

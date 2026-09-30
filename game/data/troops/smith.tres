@@ -1,0 +1,28 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "smith"
+display_name = "Thợ rèn"
+description = "Cầm búa đi theo đội, rèn giáp cho đồng đội đứng gần."
+rarity = 0
+unit_key = "PawnHammer"
+building = "House3"
+role = 0
+max_hp = 45.0
+damage = 6.0
+attack_range = 34.0
+attack_cooldown = 1.1
+move_speed = 62.0
+aggro_range = 200.0
+spawn_interval = 3.8
+max_alive = 3
+summon_weight = 1.0
+ability = 2
+ability_text = "Rèn giáp: 5 giây một lần, đồng đội trong bán kính 110 chịu ít hơn 25% sát thương trong 3 giây."
+ability_value = 0.25
+ability_duration = 3.0
+ability_cooldown = 5.0
+ability_radius = 110.0

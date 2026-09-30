@@ -1,0 +1,51 @@
+﻿Level,Giai đoạn,Tên màn,Trạng thái,Số đợt,Số quân,Tinh nhuệ,Sức mạnh địch,Máu thành,Thịt đầu,Ô gear,Cơ chế / trọng tâm,Độ khó (1-5),Chỉ số sức ép,Thưởng vàng 3 sao,Thưởng thêm
+1,GĐ1 Làm quen,Đồng Cỏ,Có trong demo,4,41,1,0.9,100,6,12,"Mua gear, đặt cạnh trục cam, bánh răng quay thì sinh lính",1,0.37,160,Mở khoá Kỵ thương
+2,GĐ1 Làm quen,Đồi Đá,Có trong demo,5,65,1,1.4,100,7,12,"Ghép 2 gear giống nhau lên bậc 2; Kỵ thương địch xuất hiện",2,0.91,200,Mở khoá Tu sĩ
+3,GĐ1 Làm quen,Pháo Đài Đỏ,Có trong demo,6,89,3,1.5,120,8,14,"Xích truyền động qua gear khác; Tu sĩ địch hồi máu",1,1.11,240,Mở khoá Thợ mỏ
+4,GĐ1 Làm quen,Rừng Thông,Có trong demo,6,97,1,1.9,120,9,14,Kinh tế: để dành thịt để nhận lãi (tối đa +3/đợt),2,1.54,280,
+5,GĐ1 Làm quen,Hẻm Núi,Có trong demo,6,102,2,2.2,120,10,16,"Thợ mỏ địch chịu tên: cần cận chiến; mở khoá Hiệp sĩ khiên",2,1.87,320,Mở khoá Hiệp sĩ khiên
+6,GĐ1 Làm quen,Làng Bỏ Hoang,Có trong demo,7,138,2,2.3,130,11,16,"Cung lửa địch đốt lính; khoá shop giữ gear hiếm",2,2.44,360,
+7,GĐ1 Làm quen,Đầm Lầy,Có trong demo,7,136,3,2.5,130,12,18,"Sát thủ địch săn lính bắn xa; Hiệp sĩ khiên địch",3,2.62,400,Mở khoá Cung lửa
+8,GĐ1 Làm quen,Thành Đá Đen,Có trong demo,7,147,3,2.4,140,13,18,"Đầu bếp, Thợ rèn, Pháo thủ địch: dàn lính tản ra",3,2.52,440,
+9,GĐ1 Làm quen,Cổng Pháo Đài,Có trong demo,8,171,4,2.6,140,14,20,"Kiểm tra tổng hợp: 8 đợt, 4 tinh nhuệ, gear bậc 3",3,3.18,480,
+10,GĐ1 Làm quen,Vua Đỏ,Có trong demo,8,198,4,2.7,150,15,20,TRÙM: Tướng quân địch (Huyền thoại),4,3.56,520,
+11,GĐ2 Mở rộng cơ chế,Bến Cảng,Có trong demo,8,191,3,2.9,150,15,22,Ô đá chắn cạnh trục cam: phải nối xích đi vòng,2,3.69,560,
+12,GĐ2 Mở rộng cơ chế,Rừng Sương,Có trong demo,8,158,2,3.1,150,15,22,Nhiều Hiệp sĩ khiên địch + ô đá: cần sát thương dồn,2,3.27,600,Mở khoá Thợ rèn
+13,GĐ2 Mở rộng cơ chế,Đồi Cừu,Có trong demo,8,183,3,3.6,155,16,22,Ô vàng: gear đặt lên sinh lính nhanh hơn 50%,3,4.25,640,
+14,GĐ2 Mở rộng cơ chế,Mỏ Vàng,Có trong demo,8,176,3,3.7,155,16,22,"Ô rỉ sét: gear chỉ truyền động, không sinh lính; kỵ thương dồn dập",3,4.20,680,
+15,GĐ2 Mở rộng cơ chế,Cầu Đá,Có trong demo,8,182,4,4.4,160,17,22,"Ô băng: gear chỉ quay khi chạm trục; trùm nhỏ Thợ rèn + khiên tinh nhuệ",4,5.01,720,Mở khoá Sát thủ
+16,GĐ2 Mở rộng cơ chế,Trại Lính,Dự kiến,8,218,5,4.5,165,17,22,"Đầu bếp địch đi theo nhóm, hồi máu liên tục",3,5.95,760,
+17,GĐ2 Mở rộng cơ chế,Bãi Lau,Dự kiến,8,223,5,4.82,165,17,22,Sương mù: không xem trước đợt địch kế tiếp,3,6.51,800,
+18,GĐ2 Mở rộng cơ chế,Tháp Canh,Dự kiến,9,256,5,5.15,170,17,22,Shop chỉ còn 4 ô: chọn lọc kỹ hơn,3,7.76,840,
+19,GĐ2 Mở rộng cơ chế,Thung Lũng Gió,Dự kiến,9,261,5,5.52,170,18,23,Hai tinh nhuệ mỗi đợt,4,8.47,880,
+20,GĐ2 Mở rộng cơ chế,Pháo Đài Đen,Dự kiến,9,266,6,6.61,175,18,23,TRÙM: Tướng quân Đen + cận vệ khiên,4,10.05,920,50 kim cương + Pháo thủ
+21,GĐ3 Tăng thử thách,Làng Cháy,Dự kiến,9,270,6,5.68,175,18,23,Thành bắt đầu với 70% máu,3,8.76,960,
+22,GĐ3 Tăng thử thách,Cối Xay Gỉ,Dự kiến,9,275,6,6.76,180,19,23,Trục cam quay chậm hơn 20%,3,10.33,1000,
+23,GĐ3 Tăng thử thách,Doanh Trại Pháo,Dự kiến,9,280,6,7.23,180,19,23,Pháo thủ địch bắn vào bàn gear: gear trúng bom ngừng quay 3 giây,3,11.25,1040,
+24,GĐ3 Tăng thử thách,Mê Cung Đá,Dự kiến,9,285,6,7.74,185,19,23,Ô lưới khoá luân phiên mỗi đợt,4,11.92,1080,
+25,GĐ3 Tăng thử thách,Đèo Hiểm,Dự kiến,9,290,7,8.77,185,20,23,Trùm nhỏ: Sát thủ Bóng Đêm địch săn lính bắn xa,4,13.75,1120,Rương Vàng
+26,GĐ3 Tăng thử thách,Chiến Hào,Dự kiến,10,328,7,8.86,190,20,23,Đợt đôi: hai đợt liền nhau không có lượt nghỉ,3,15.30,1160,
+27,GĐ3 Tăng thử thách,Kho Lương Trống,Dự kiến,10,334,7,9.48,190,20,23,"Thịt khởi đầu thấp, lãi tiết kiệm tăng",4,16.66,1200,
+28,GĐ3 Tăng thử thách,Tu Viện Đen,Dự kiến,10,339,7,10.14,195,21,23,Tu sĩ địch hồi sinh đồng đội một lần,4,17.63,1240,
+29,GĐ3 Tăng thử thách,Tường Thành Cổ,Dự kiến,10,345,7,10.85,195,21,23,Tổng hợp giai đoạn 3,4,19.20,1280,
+30,GĐ3 Tăng thử thách,Vua Đỏ Trở Lại,Dự kiến,10,350,8,13,200,21,23,TRÙM 2 giai đoạn: khi còn 50% máu gọi thêm quân,5,22.75,1320,80 kim cương + 10 mảnh tướng
+31,GĐ4 Biến thể phức tạp,Nhà Máy Bánh Răng,Dự kiến,10,356,8,11.18,200,22,23,Hai trục cam: hai chuỗi truyền động riêng,3,19.90,1360,
+32,GĐ4 Biến thể phức tạp,Xưởng Đảo Chiều,Dự kiến,10,361,8,13.29,205,22,23,Ô đảo chiều: gear quay ngược thì không sinh lính,4,23.40,1400,
+33,GĐ4 Biến thể phức tạp,Sông Băng,Dự kiến,10,367,8,14.22,205,22,23,Địch làm chậm lính ta khi đánh trúng,4,25.46,1440,
+34,GĐ4 Biến thể phức tạp,Ngã Ba,Dự kiến,11,409,8,15.22,210,23,23,Địch tấn công hai hướng: trái và phải,4,29.64,1480,
+35,GĐ4 Biến thể phức tạp,Cổng Sắt,Dự kiến,11,415,9,17.26,210,23,23,Trùm nhỏ: Hiệp sĩ Thép miễn tên,5,34.11,1520,Rương Vàng
+36,GĐ4 Biến thể phức tạp,Chợ Đen,Dự kiến,11,421,9,17.42,215,23,23,Giới hạn 3 lần đổi shop cả màn,4,34.11,1560,
+37,GĐ4 Biến thể phức tạp,Tháp Cung,Dự kiến,11,427,9,18.64,215,24,23,Địch miễn sát thương tên trong 2 đợt,4,37.02,1600,
+38,GĐ4 Biến thể phức tạp,Hẻm Chật,Dự kiến,11,433,9,19.95,220,24,23,Số lính tối đa trên sân giảm còn 40,4,39.27,1640,
+39,GĐ4 Biến thể phức tạp,Thành Lũy Kép,Dự kiến,11,439,9,21.34,220,24,23,Tổng hợp giai đoạn 4,5,42.58,1680,
+40,GĐ4 Biến thể phức tạp,Quân Đoàn Đen,Dự kiến,11,446,10,25.58,225,25,23,TRÙM: 3 tinh nhuệ + Tướng quân Đen cùng lúc,5,50.71,1720,100 kim cương + Tướng Sử thi
+41,GĐ5 Thử thách cao,Vực Thẳm,Dự kiến,11,452,10,21.99,225,25,23,Mọi đợt có tinh nhuệ,4,44.18,1760,
+42,GĐ5 Thử thách cao,Rừng Chết,Dự kiến,12,499,10,26.15,230,25,23,Sương mù + đợt đôi,4,56.73,1800,
+43,GĐ5 Thử thách cao,Pháo Đài Lửa,Dự kiến,12,506,10,27.98,230,26,23,Cung lửa và Pháo thủ địch số đông,5,61.56,1840,
+44,GĐ5 Thử thách cao,Đại Lộ Máu,Dự kiến,12,512,10,29.93,235,26,23,Thành 60% máu + trục chậm,4,65.21,1880,
+45,GĐ5 Thử thách cao,Cổng Địa Ngục,Dự kiến,12,519,11,33.95,235,26,23,Trùm nhỏ: hai Tướng quân địch,5,74.98,1920,Rương Vàng x2
+46,GĐ5 Thử thách cao,Tháp Đồng Hồ,Dự kiến,12,526,11,34.27,240,27,23,Hai trục cam + ô khoá luân phiên,4,75.11,1960,
+47,GĐ5 Thử thách cao,Hầm Mộ,Dự kiến,12,532,11,36.67,240,27,23,Địch hồi sinh + hồi máu,5,81.29,2000,
+48,GĐ5 Thử thách cao,Lâu Đài Gió,Dự kiến,12,539,11,39.24,245,27,23,Tấn công hai hướng + shop 4 ô,5,86.33,2040,
+49,GĐ5 Thử thách cao,Ngai Vàng,Dự kiến,12,545,11,41.98,245,28,23,Tổng hợp mọi cơ chế,5,93.38,2080,
+50,GĐ5 Thử thách cao,Vua Đen,Dự kiến,12,552,12,50.31,250,28,23,TRÙM CUỐI 3 giai đoạn,5,111.08,2120,200 kim cương + Tướng Huyền thoại

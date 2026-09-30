@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "godotMCP": {
+      "command": "C:/Users/dangp/AppData/Local/OpenAI/Codex/runtimes/cua_node/13827bafdc0b5422/bin/node.exe",
+      "args": [
+        "C:/Users/dangp/GodotProjects/first-project/tools/mcp-godot/src/server.mjs",
+        "--project-root",
+        "C:/Users/dangp/GodotProjects/first-project"
+      ],
+      "env": {
+        "GODOT_PROJECT_ROOT": "C:/Users/dangp/GodotProjects/first-project",
+        "GODOT_MCP_PORT": "8765"
+      }
+    }
+  }
+}

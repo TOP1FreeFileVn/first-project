@@ -1,0 +1,31 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "general"
+display_name = "Tướng quân"
+description = "Huyền thoại chiến trường. Một mình quét sạch tuyến đầu và hiệu triệu cả đội."
+rarity = 3
+unit_key = "General"
+building = "Castle"
+role = 0
+sprite_scale = 1.4
+max_hp = 260.0
+damage = 20.0
+attack_range = 46.0
+attack_cooldown = 1.0
+move_speed = 62.0
+aggro_range = 260.0
+spawn_interval = 10.0
+max_alive = 1
+summon_weight = 0.45
+ability = 8
+ability_text = "Hiệu lệnh: đồng đội trong bán kính 160 gây thêm 30% sát thương. Mỗi nhát chém trúng mọi địch sát mục tiêu; 5 giây một lần xoay kiếm gây x1.5 sát thương quanh mình."
+ability_value = 0.3
+ability_duration = 1.5
+ability_cooldown = 5.0
+ability_radius = 160.0
+crit_chance = 0.15
+crit_mult = 2.0

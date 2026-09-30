@@ -1,0 +1,30 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "guard"
+display_name = "Hiệp sĩ khiên"
+description = "Giáp nặng, khiên lớn. Giữ tuyến lâu hơn bất kỳ ai."
+rarity = 1
+unit_key = "Guard"
+building = "Barracks"
+role = 0
+tint = Color(0.82, 0.86, 0.95, 1)
+sprite_scale = 1.1
+max_hp = 130.0
+damage = 6.0
+attack_range = 38.0
+attack_cooldown = 1.2
+move_speed = 48.0
+aggro_range = 200.0
+spawn_interval = 5.5
+max_alive = 2
+summon_weight = 0.8
+ability = 4
+ability_text = "Giơ khiên: 4 giây một lần, miễn nhiễm mọi sát thương trong 1.2 giây."
+ability_duration = 1.2
+ability_cooldown = 4.0
+crit_chance = 0.03
+crit_mult = 1.5

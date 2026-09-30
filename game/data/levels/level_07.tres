@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://game/data/LevelData.gd" id="1_level"]
+[ext_resource type="Resource" path="res://game/data/troops/pawn.tres" id="2_pawn"]
+[ext_resource type="Resource" path="res://game/data/troops/warrior.tres" id="3_warrior"]
+[ext_resource type="Resource" path="res://game/data/troops/archer.tres" id="4_archer"]
+[ext_resource type="Resource" path="res://game/data/troops/lancer.tres" id="5_lancer"]
+[ext_resource type="Resource" path="res://game/data/troops/monk.tres" id="6_monk"]
+
+[resource]
+script = ExtResource("1_level")
+display_name = "Màn 7 · Đầm Lầy"
+troop_pool = [ExtResource("2_pawn"), ExtResource("3_warrior"), ExtResource("4_archer"), ExtResource("5_lancer"), ExtResource("6_monk")]
+start_meat = 12.0
+core_hp = 130.0
+enemy_power = 2.5
+prep_time = 14.0
+waves = [{
+"gap": 12.0,
+"groups": [{"troop": "warrior", "count": 7, "interval": 1.6, "start": 0.0}, {"troop": "archer", "count": 5, "interval": 1.6, "start": 2.0}]
+}, {
+"gap": 14.0,
+"groups": [{"troop": "lancer", "count": 7, "interval": 1.5, "start": 0.0}, {"troop": "assassin", "count": 6, "interval": 1.5, "start": 2.0}]
+}, {
+"gap": 16.0,
+"groups": [{"troop": "warrior", "count": 7, "interval": 1.4, "start": 0.0}, {"troop": "archer", "count": 6, "interval": 1.4, "start": 2.0}, {"troop": "monk", "count": 2, "interval": 1.4, "start": 4.0}]
+}, {
+"gap": 18.0,
+"groups": [{"troop": "lancer", "count": 8, "interval": 1.3, "start": 0.0}, {"troop": "archer", "count": 8, "interval": 1.3, "start": 2.0}, {"troop": "monk", "count": 2, "interval": 1.3, "start": 4.0}, {"troop": "lancer", "count": 1, "interval": 1.0, "start": 5.0, "elite": true}]
+}, {
+"gap": 20.0,
+"groups": [{"troop": "pawn", "count": 15, "interval": 1.2, "start": 0.0}, {"troop": "guard", "count": 5, "interval": 1.2, "start": 2.0}, {"troop": "lancer", "count": 6, "interval": 1.2, "start": 4.0}]
+}, {
+"gap": 22.0,
+"groups": [{"troop": "pawn", "count": 17, "interval": 1.1, "start": 0.0}, {"troop": "warrior", "count": 8, "interval": 1.1, "start": 2.0}]
+}, {
+"gap": 24.0,
+"groups": [{"troop": "warrior", "count": 15, "interval": 1.0, "start": 0.0}, {"troop": "archer", "count": 9, "interval": 1.0, "start": 2.0}, {"troop": "warrior", "count": 1, "interval": 1.0, "start": 3.0, "elite": true}, {"troop": "lancer", "count": 1, "interval": 1.0, "start": 7.0, "elite": true}]
+}]

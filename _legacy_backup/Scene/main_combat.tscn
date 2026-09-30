@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dxx0bsx7u0i4l"]
+
+[ext_resource type="PackedScene" uid="uid://bmwjka6g5y8d8" path="res://Character/character_body_2d.tscn" id="1_rrvxf"]
+[ext_resource type="Script" path="res://Scene/RTSController.gd" id="2_controller"]
+
+[node name="MainCombat" type="Node2D" unique_id=1808340183]
+script = ExtResource("2_controller")
+
+[node name="Warrior1" parent="." unique_id=34932886 instance=ExtResource("1_rrvxf")]
+position = Vector2(-160, 0)
+
+[node name="Warrior2" parent="." instance=ExtResource("1_rrvxf")]
+position = Vector2(0, 0)
+
+[node name="Warrior3" parent="." instance=ExtResource("1_rrvxf")]
+position = Vector2(160, 0)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1861064433]

@@ -1,0 +1,1225 @@
+extends Node
+
+# Everything the player owns and has unlocked, plus every rule for spending it. Menu pages
+# only read from here and call these methods; Battle asks it for multipliers when a level
+# starts and reports results back through grant_battle_rewards().
+
+signal changed
+
+const Economy = preload("res://game/core/Economy.gd")
+const Content = preload("res://game/core/Content.gd")
+const Heroes = preload("res://game/core/Heroes.gd")
+const Meta = preload("res://game/core/Meta.gd")
+
+const SAVE_PATH := "user://save.json"
+const LEGACY_SAVE_PATH := "user://progress.cfg"
+const SAVE_VERSION := 1
+
+const LEVELS := Content.LEVELS
+const TROOP_ORDER := Content.TROOP_ORDER
+const STARTER_TROOPS := ["pawn", "warrior", "archer"]
+
+## id -> TroopData, filled from Content.TROOP_ORDER (the same instances Balance edits).
+var TROOPS := {}
+
+## Tools such as the balance bot turn this off so they never touch the player save.
+var persist := true
+var current_level := 0
+
+var gold := 0
+var gems := 0
+var unlocked_levels := 1
+var level_stars := {}
+var troops := {}
+var castle_level := 1
+## Troop ids brought into battle, in slot order. The battle shop only offers these.
+var team: Array = []
+var workshop := {}
+var free_chest_at := 0
+var gold_chest_pity := 0
+var patrol_last_claim := 0
+var patrol_quick_left := 0
+var patrol_quick_day := 0
+## Settings: skip the chest-opening animation.
+var fast_chest := false
+## Settings: "cozy" (Cozy UI Pack) or "swords" (Tiny Swords UI art).
+var ui_skin := "cozy"
+## Settings: sound effects on.
+var sound_on := true
+## The first-battle tutorial has been finished (or skipped).
+var tutorial_done := false
+## Special board cells the player has already been shown (see GearBoard.TILE_INFO).
+var seen_tiles: Array = []
+## Set once any admin cheat touched this save, so balance feedback can be discounted.
+var cheated := false
+## Heroes: id -> {"owned", "level", "stars", "shards"}. `hero` leads the team.
+var heroes := {}
+var hero := ""
+var summon_pity := 0
+var summon_free_day := -1
+var summon_total := 0
+## 7-day login gift: gifts claimed in this cycle (0-7), the day of the last claim, and
+## how many full cycles were finished.
+var login_claimed := 0
+var login_day := -1
+var login_cycles := 0
+## Daily quests: the day they belong to, progress per quest, claimed quests and milestones.
+var quest_day := -1
+var quest_progress := {}
+var quest_claimed: Array = []
+var quest_milestones: Array = []
+## Profile: name, avatar ("1".."25" for the pack avatars, "hero:<id>" for a hero) and frame.
+var player_name := "Chỉ Huy"
+var avatar := "1"
+var frame := "wood"
+
+
+func _init() -> void:
+	for id in TROOP_ORDER:
+		TROOPS[id] = load(Content.TROOP_PATH % id)
+
+
+func _ready() -> void:
+	_reset()
+	if not _load():
+		_migrate_legacy()
+	current_level = unlocked_levels - 1
+
+
+static func now() -> int:
+	return int(Time.get_unix_time_from_system())
+
+
+## Local calendar day number (daily gifts and quests roll over at local midnight).
+static func today() -> int:
+	var bias: int = Time.get_time_zone_from_system().get("bias", 0)
+	return floori((now() + bias * 60) / 86400.0)
+
+
+# --- Levels ---------------------------------------------------------------------------
+
+func level_data(index := current_level) -> Resource:
+	return load(LEVELS[index])
+
+
+func can_select(index: int) -> bool:
+	return index >= 0 and index < unlocked_levels
+
+
+func select_level(index: int) -> void:
+	if can_select(index):
+		current_level = index
+
+
+func has_next_level() -> bool:
+	return can_select(current_level + 1)
+
+
+func stars_for(index: int) -> int:
+	return level_stars.get(index, 0)
+
+
+func levels_cleared() -> int:
+	return level_stars.size()
+
+
+# --- Troops ---------------------------------------------------------------------------
+
+func troop(id: String) -> Dictionary:
+	return troops[id]
+
+
+func rarity_of(id: String) -> int:
+	return TROOPS[id].rarity
+
+
+func is_unlocked(id: String) -> bool:
+	return troops[id]["unlocked"]
+
+
+func level_cap(id: String) -> int:
+	return troops[id]["stars"] * Economy.LEVELS_PER_STAR
+
+
+func troop_multiplier(id: String) -> float:
+	var t: Dictionary = troops[id]
+	return Economy.troop_multiplier(t["level"], t["stars"])
+
+
+## Gold to reach the next level, or -1 when capped by stars.
+func level_up_cost(id: String) -> int:
+	var t: Dictionary = troops[id]
+	if not t["unlocked"] or t["level"] >= level_cap(id):
+		return -1
+	return Economy.level_cost(t["level"])
+
+
+func level_up(id: String) -> bool:
+	var cost := level_up_cost(id)
+	if cost < 0 or gold < cost:
+		return false
+	gold -= cost
+	troops[id]["level"] += 1
+	track("upgrade")
+	_commit()
+	return true
+
+
+## Cards to reach the next star, or -1 at max stars.
+func star_up_cost(id: String) -> int:
+	var t: Dictionary = troops[id]
+	if not t["unlocked"] or t["stars"] >= Economy.MAX_STARS:
+		return -1
+	return Economy.STAR_CARD_COST[t["stars"] - 1]
+
+
+func star_up(id: String) -> bool:
+	var cost := star_up_cost(id)
+	if cost < 0 or troops[id]["cards"] < cost:
+		return false
+	troops[id]["cards"] -= cost
+	troops[id]["stars"] += 1
+	track("upgrade")
+	_commit()
+	return true
+
+
+func can_improve(id: String) -> bool:
+	var level_cost := level_up_cost(id)
+	var star_cost := star_up_cost(id)
+	return (level_cost >= 0 and gold >= level_cost) or (star_cost >= 0 and troops[id]["cards"] >= star_cost)
+
+
+## The first card of a locked troop unlocks it; cards beyond max stars turn into gold.
+func add_cards(id: String, count: int) -> void:
+	var t: Dictionary = troops[id]
+	if not t["unlocked"]:
+		t["unlocked"] = true
+		count -= 1
+		var current := battle_team()
+		if not current.has(id) and current.size() < team_slots():
+			current.append(id)
+			team = current
+	if t["stars"] >= Economy.MAX_STARS:
+		gold += count * Economy.SPARE_CARD_GOLD
+	else:
+		t["cards"] += count
+
+
+# --- Team -----------------------------------------------------------------------------
+
+func team_slots() -> int:
+	return Economy.team_slots(castle_level)
+
+
+## The team as it will play: unlocked, known, no duplicates, within the slot count, and
+## never empty.
+func battle_team() -> Array:
+	var result := []
+	for id in team:
+		if TROOPS.has(id) and is_unlocked(id) and not result.has(id) and result.size() < team_slots():
+			result.append(id)
+	if result.is_empty():
+		result = auto_team()
+	return result
+
+
+func in_team(id: String) -> bool:
+	return battle_team().has(id)
+
+
+## Strongest unlocked troops, one per slot (used for new saves and the simulator).
+func auto_team() -> Array:
+	var ids := []
+	for id in TROOP_ORDER:
+		if is_unlocked(id):
+			ids.append(id)
+	ids.sort_custom(func(a, b): return troop_power(a) > troop_power(b))
+	return ids.slice(0, team_slots())
+
+
+## Adds a troop to the first free slot. Returns false when the team is full.
+func add_to_team(id: String) -> bool:
+	var current := battle_team()
+	if current.has(id) or not is_unlocked(id):
+		return current.has(id)
+	if current.size() >= team_slots():
+		return false
+	current.append(id)
+	team = current
+	_commit()
+	return true
+
+
+func remove_from_team(id: String) -> bool:
+	var current := battle_team()
+	if not current.has(id) or current.size() <= 1:
+		return false
+	current.erase(id)
+	team = current
+	_commit()
+	return true
+
+
+## Puts the troop in the given slot, swapping with its old slot if it was already in the team.
+func set_team_slot(index: int, id: String) -> void:
+	var current := battle_team()
+	if not is_unlocked(id) or index < 0 or index >= team_slots():
+		return
+	var old := current.find(id)
+	if index >= current.size():
+		if old >= 0:
+			current.remove_at(old)
+		current.append(id)
+	elif old >= 0:
+		current[old] = current[index]
+		current[index] = id
+	else:
+		current[index] = id
+	team = current
+	_commit()
+
+
+## Rough fighting value of one troop at the player's level and stars: HP x damage per
+## second, with supports and abilities counted by a flat bonus.
+func troop_power(id: String) -> float:
+	var troop: Resource = TROOPS[id]
+	var mult := troop_multiplier(id)
+	var dps: float = troop.damage / maxf(troop.attack_cooldown, 0.1) * troop.crit_factor()
+	if troop.role == 3:
+		dps = 6.0
+	var bonus: float = 1.0 + 0.15 * troop.rarity
+	return troop.max_hp * mult * dps * mult * bonus
+
+
+func team_power() -> int:
+	var total := 0.0
+	for id in battle_team():
+		total += troop_power(id)
+	total *= hero_hp_multiplier() * hero_damage_multiplier()
+	return roundi(sqrt(total) * 10.0)
+
+
+# --- Castle & workshop ----------------------------------------------------------------
+
+func castle_stats() -> Dictionary:
+	return Economy.CASTLE[castle_level - 1]
+
+
+func castle_max_level() -> int:
+	return Economy.CASTLE.size()
+
+
+func castle_upgrade_cost() -> int:
+	if castle_level >= castle_max_level():
+		return -1
+	return Economy.CASTLE[castle_level]["cost"]
+
+
+func upgrade_castle() -> bool:
+	var cost := castle_upgrade_cost()
+	if cost < 0 or gold < cost:
+		return false
+	gold -= cost
+	castle_level += 1
+	_commit()
+	return true
+
+
+func workshop_level(id: String) -> int:
+	return workshop.get(id, 0)
+
+
+func workshop_cost(id: String) -> int:
+	var level := workshop_level(id)
+	if level >= Economy.WORKSHOP[id]["max"]:
+		return -1
+	return Economy.workshop_cost(id, level)
+
+
+func upgrade_workshop(id: String) -> bool:
+	var cost := workshop_cost(id)
+	if cost < 0 or gold < cost:
+		return false
+	gold -= cost
+	workshop[id] = workshop_level(id) + 1
+	_commit()
+	return true
+
+
+func workshop_value(id: String, level := -1) -> int:
+	if level < 0:
+		level = workshop_level(id)
+	return level * Economy.WORKSHOP[id]["step"]
+
+
+func can_improve_castle() -> bool:
+	var cost := castle_upgrade_cost()
+	if cost >= 0 and gold >= cost:
+		return true
+	for id in Economy.WORKSHOP_ORDER:
+		cost = workshop_cost(id)
+		if cost >= 0 and gold >= cost:
+			return true
+	return false
+
+
+# Battle-facing modifiers.
+func core_hp_multiplier() -> float:
+	return castle_stats()["hp"] * (1.0 + hero_bonus("core") / 100.0)
+
+
+func max_meat() -> float:
+	return castle_stats()["meat"]
+
+
+func unlocked_cells() -> int:
+	return castle_stats()["cells"]
+
+
+## Extra meat per cleared wave from the Meat Oven workshop.
+func round_income_bonus() -> int:
+	return workshop_value("meat_regen") + floori(hero_bonus("income"))
+
+
+func start_meat_bonus() -> float:
+	return workshop_value("start_meat")
+
+
+func spawn_speed_multiplier() -> float:
+	return 1.0 + (workshop_value("master_gear") + hero_bonus("spawn")) / 100.0
+
+
+## Unit HP and damage multipliers from the leading hero.
+func hero_hp_multiplier() -> float:
+	return 1.0 + hero_bonus("hp") / 100.0
+
+
+func hero_damage_multiplier() -> float:
+	return 1.0 + hero_bonus("damage") / 100.0
+
+
+# --- Shop -----------------------------------------------------------------------------
+
+func free_chest_seconds_left() -> int:
+	return maxi(0, free_chest_at - now())
+
+
+func can_open_chest(kind: String) -> bool:
+	var chest: Dictionary = Economy.CHESTS[kind]
+	if kind == "wood":
+		return free_chest_seconds_left() == 0
+	return gold >= chest["gold"] and gems >= chest["gems"]
+
+
+## Pays for and opens a chest. Returns {"cards": {id: count}, "gold": n} or {} if refused.
+func open_chest(kind: String) -> Dictionary:
+	if not can_open_chest(kind):
+		return {}
+	var chest: Dictionary = Economy.CHESTS[kind]
+	gold -= chest["gold"]
+	gems -= chest["gems"]
+	if kind == "wood":
+		free_chest_at = now() + Economy.FREE_CHEST_COOLDOWN
+	var guaranteed_epic := false
+	if kind == "gold":
+		gold_chest_pity += 1
+		if gold_chest_pity >= Economy.GOLD_CHEST_PITY:
+			guaranteed_epic = true
+			gold_chest_pity = 0
+	var result := _roll_cards(chest["cards"], chest["min_rare"], guaranteed_epic)
+	var bonus: Array = chest["bonus_gold"]
+	result["gold"] = randi_range(bonus[0], bonus[1]) if bonus[1] > 0 else 0
+	_apply_loot(result)
+	track("chest")
+	_commit()
+	return result
+
+
+func gold_chest_pity_left() -> int:
+	return Economy.GOLD_CHEST_PITY - gold_chest_pity
+
+
+func exchange_gems() -> bool:
+	if gems < Economy.EXCHANGE_GEMS:
+		return false
+	gems -= Economy.EXCHANGE_GEMS
+	gold += Economy.EXCHANGE_GOLD
+	_commit()
+	return true
+
+
+func _roll_cards(count: int, min_rare: int, guaranteed_epic: bool) -> Dictionary:
+	var rarities := []
+	for i in count:
+		rarities.append(_roll_rarity())
+	# Chest guarantees upgrade the lowest rolls, so the total card count never changes.
+	rarities.sort()
+	for i in mini(min_rare, count):
+		rarities[i] = maxi(rarities[i], Economy.Rarity.RARE)
+	if guaranteed_epic and rarities.max() < Economy.Rarity.EPIC:
+		rarities[0] = Economy.Rarity.EPIC
+	var cards := {}
+	for rarity in rarities:
+		var id := _random_troop_of(rarity)
+		cards[id] = cards.get(id, 0) + 1
+	return {"cards": cards}
+
+
+func _roll_rarity() -> int:
+	var total := 0.0
+	for weight in Economy.RARITY_WEIGHTS:
+		total += weight
+	var pick := randf() * total
+	for rarity in Economy.RARITY_WEIGHTS.size():
+		pick -= Economy.RARITY_WEIGHTS[rarity]
+		if pick <= 0.0:
+			return rarity
+	return Economy.Rarity.COMMON
+
+
+func _random_troop_of(rarity: int) -> String:
+	var pool := []
+	for id in TROOP_ORDER:
+		if TROOPS[id].rarity == rarity:
+			pool.append(id)
+	# No troop of that rarity (admin edits): fall back to the next rarity down.
+	if pool.is_empty():
+		return _random_troop_of(rarity - 1) if rarity > 0 else TROOP_ORDER.pick_random()
+	return pool.pick_random()
+
+
+func _apply_loot(loot: Dictionary) -> void:
+	for id in loot.get("cards", {}):
+		add_cards(id, loot["cards"][id])
+	gold += loot.get("gold", 0)
+	gems += loot.get("gems", 0)
+
+
+# --- Patrol ---------------------------------------------------------------------------
+
+func patrol_rate() -> float:
+	return Economy.patrol_rate(levels_cleared())
+
+
+func patrol_capacity() -> int:
+	return floori(patrol_rate() * Economy.PATROL_MAX_HOURS)
+
+
+func patrol_stored() -> int:
+	var hours := maxf(0.0, (now() - patrol_last_claim) / 3600.0)
+	return mini(floori(patrol_rate() * hours), patrol_capacity())
+
+
+func claim_patrol() -> int:
+	var amount := patrol_stored()
+	gold += amount
+	patrol_last_claim = now()
+	if amount > 0:
+		track("patrol")
+	_commit()
+	return amount
+
+
+func quick_patrol_free_left() -> int:
+	_refresh_patrol_day()
+	return patrol_quick_left
+
+
+func can_quick_patrol() -> bool:
+	return quick_patrol_free_left() > 0 or gems >= Economy.PATROL_QUICK_GEMS
+
+
+func quick_patrol() -> int:
+	if not can_quick_patrol():
+		return 0
+	if patrol_quick_left > 0:
+		patrol_quick_left -= 1
+	else:
+		gems -= Economy.PATROL_QUICK_GEMS
+	var amount := floori(patrol_rate() * Economy.PATROL_QUICK_HOURS)
+	gold += amount
+	track("patrol")
+	_commit()
+	return amount
+
+
+func _refresh_patrol_day() -> void:
+	var today := floori(now() / 86400.0)
+	if today != patrol_quick_day:
+		patrol_quick_day = today
+		patrol_quick_left = Economy.PATROL_QUICK_FREE
+
+
+# --- Battle results -------------------------------------------------------------------
+
+## Pays out a finished battle. Returns what was granted, for the end-of-battle panel:
+## {"gold", "gems", "cards": {id: n}, "first_clear", "gift", "new": [ids unlocked now]}.
+func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictionary:
+	var reward := {"gold": 0, "gems": 0, "cards": {}, "first_clear": false, "gift": "", "new": []}
+	if not won:
+		reward["gold"] = Economy.loss_gold(waves_cleared)
+		gold += reward["gold"]
+		_commit()
+		return reward
+	track("win")
+	var index := current_level
+	var first_clear := not level_stars.has(index)
+	var gold_won := Economy.win_gold(index, stars)
+	if first_clear:
+		gold_won = roundi(gold_won * Economy.FIRST_CLEAR_GOLD_MULT)
+		reward["first_clear"] = true
+		var gift: String = Economy.FIRST_CLEAR_GIFT.get(index, "")
+		if gift != "":
+			reward["gift"] = gift
+			reward["cards"][gift] = 1
+	if stars == 3 and stars_for(index) < 3:
+		reward["gems"] = Economy.FIRST_THREE_STAR_GEMS
+	reward["gold"] = gold_won
+	var chest: Dictionary = Economy.CHESTS["victory"]
+	var chest_cards: Dictionary = _roll_cards(chest["cards"] + (1 if stars == 3 else 0), 0, false)["cards"]
+	for id in chest_cards:
+		reward["cards"][id] = reward["cards"].get(id, 0) + chest_cards[id]
+	level_stars[index] = maxi(stars_for(index), stars)
+	unlocked_levels = maxi(unlocked_levels, mini(index + 2, LEVELS.size()))
+	for id in reward["cards"]:
+		if not is_unlocked(id):
+			reward["new"].append(id)
+	_apply_loot(reward)
+	_commit()
+	return reward
+
+
+# --- Heroes ---------------------------------------------------------------------------
+
+func hero_state(id: String) -> Dictionary:
+	return heroes[id]
+
+
+func owns_hero(id: String) -> bool:
+	return heroes.has(id) and heroes[id]["owned"]
+
+
+## The hero leading the team, or "" if none is owned.
+func leader() -> String:
+	return hero if owns_hero(hero) else ""
+
+
+func select_hero(id: String) -> void:
+	if owns_hero(id):
+		hero = id
+		_commit()
+
+
+func heroes_owned() -> int:
+	var count := 0
+	for id in Heroes.ORDER:
+		if owns_hero(id):
+			count += 1
+	return count
+
+
+## The leader's bonus of this kind ("hp", "damage", "spawn", "income", "core"), else 0.
+func hero_bonus(kind: String) -> float:
+	var id := leader()
+	if id == "" or Heroes.HEROES[id]["buff"] != kind:
+		return 0.0
+	return Heroes.bonus(id, heroes[id]["level"], heroes[id]["stars"])
+
+
+func hero_level_cap(id: String) -> int:
+	return heroes[id]["stars"] * Heroes.LEVELS_PER_STAR
+
+
+func hero_level_cost(id: String) -> int:
+	if not owns_hero(id) or heroes[id]["level"] >= hero_level_cap(id):
+		return -1
+	return Heroes.level_cost(heroes[id]["level"])
+
+
+func hero_level_up(id: String) -> bool:
+	var cost := hero_level_cost(id)
+	if cost < 0 or gold < cost:
+		return false
+	gold -= cost
+	heroes[id]["level"] += 1
+	track("upgrade")
+	_commit()
+	return true
+
+
+func hero_star_cost(id: String) -> int:
+	if not owns_hero(id) or heroes[id]["stars"] >= Heroes.MAX_STARS:
+		return -1
+	return Heroes.STAR_SHARDS[heroes[id]["stars"] - 1]
+
+
+func hero_star_up(id: String) -> bool:
+	var cost := hero_star_cost(id)
+	if cost < 0 or heroes[id]["shards"] < cost:
+		return false
+	heroes[id]["shards"] -= cost
+	heroes[id]["stars"] += 1
+	track("upgrade")
+	_commit()
+	return true
+
+
+func hero_can_unlock(id: String) -> bool:
+	return not owns_hero(id) and heroes[id]["shards"] >= Heroes.UNLOCK_SHARDS
+
+
+func hero_unlock(id: String) -> bool:
+	if not hero_can_unlock(id):
+		return false
+	heroes[id]["shards"] -= Heroes.UNLOCK_SHARDS
+	add_hero(id)
+	_commit()
+	return true
+
+
+func hero_can_improve(id: String) -> bool:
+	if hero_can_unlock(id):
+		return true
+	var level_cost := hero_level_cost(id)
+	var star_cost := hero_star_cost(id)
+	return (level_cost >= 0 and gold >= level_cost) or (star_cost >= 0 and heroes[id]["shards"] >= star_cost)
+
+
+## Gives a hero. Returns true if it is new; a duplicate turns into shards instead.
+func add_hero(id: String) -> bool:
+	var h: Dictionary = heroes[id]
+	if h["owned"]:
+		h["shards"] += Heroes.DUPLICATE_SHARDS
+		return false
+	h["owned"] = true
+	if leader() == "":
+		hero = id
+	return true
+
+
+# --- Hero summon event ------------------------------------------------------------------
+
+func summon_week() -> int:
+	return floori(now() / float(Heroes.WEEK))
+
+
+func summon_featured() -> String:
+	return Heroes.featured_for(summon_week())
+
+
+func summon_seconds_left() -> int:
+	return (summon_week() + 1) * Heroes.WEEK - now()
+
+
+func summon_free_ready() -> bool:
+	return summon_free_day != today()
+
+
+func summon_cost(count: int) -> int:
+	if count == 1 and summon_free_ready():
+		return 0
+	return Heroes.SUMMON_COST[count]
+
+
+func can_summon(count: int) -> bool:
+	return gems >= summon_cost(count)
+
+
+func summon_pity_left() -> int:
+	return Heroes.SUMMON_PITY - summon_pity
+
+
+## Pays for and rolls `count` pulls (1 or 10). Each result is {"type": "hero", "id", "new"},
+## {"type": "shards", "id", "count"} or {"type": "gold", "amount"}. [] if refused.
+func summon(count: int) -> Array:
+	if not can_summon(count):
+		return []
+	var cost := summon_cost(count)
+	if count == 1 and cost == 0:
+		summon_free_day = today()
+	gems -= cost
+	var results := []
+	for i in count:
+		results.append(_summon_one())
+	# A ten-pull always has at least one hero.
+	if count >= 10 and not results.any(func(r): return r["type"] == "hero"):
+		results[count - 1] = _hero_result(Heroes.of_rarity(1).pick_random())
+	track("summon", count)
+	_commit()
+	return results
+
+
+func _summon_one() -> Dictionary:
+	summon_pity += 1
+	summon_total += 1
+	var featured := summon_featured()
+	var kind: String = "featured" if summon_pity >= Heroes.SUMMON_PITY else _roll_summon_kind()
+	match kind:
+		"featured":
+			return _hero_result(featured)
+		"legendary", "epic", "rare":
+			var pool := Heroes.of_rarity({"legendary": 3, "epic": 2, "rare": 1}[kind])
+			pool.erase(featured)
+			return _hero_result(pool.pick_random() if not pool.is_empty() else featured)
+		"featured_shards":
+			return _shard_result(featured, Heroes.FEATURED_SHARDS)
+		"shards":
+			return _shard_result(Heroes.ORDER.pick_random(), Heroes.RANDOM_SHARDS)
+	gold += Heroes.SUMMON_GOLD
+	return {"type": "gold", "amount": Heroes.SUMMON_GOLD}
+
+
+func _roll_summon_kind() -> String:
+	var pick := randf() * 100.0
+	for row in Heroes.SUMMON_TABLE:
+		pick -= row[1]
+		if pick <= 0.0:
+			return row[0]
+	return "gold"
+
+
+func _hero_result(id: String) -> Dictionary:
+	if id == summon_featured():
+		summon_pity = 0
+	return {"type": "hero", "id": id, "new": add_hero(id)}
+
+
+func _shard_result(id: String, count: int) -> Dictionary:
+	heroes[id]["shards"] += count
+	return {"type": "shards", "id": id, "count": count}
+
+
+# --- Rewards ----------------------------------------------------------------------------
+
+## Grants a Meta reward dictionary. Returns what was given, for display:
+## {"gold", "gems", "cards": {troop: n}, "new": [troops], "shards": {hero: n}, "heroes": [ids]}.
+func grant(reward: Dictionary) -> Dictionary:
+	var got := {"gold": int(reward.get("gold", 0)), "gems": int(reward.get("gems", 0)), "cards": {}, "new": [], "shards": {}, "heroes": []}
+	gold += got["gold"]
+	gems += got["gems"]
+	if reward.has("cards"):
+		var cards: Dictionary = _roll_cards(int(reward["cards"]), 0, false)["cards"]
+		for id in cards:
+			if not is_unlocked(id):
+				got["new"].append(id)
+			add_cards(id, cards[id])
+		got["cards"] = cards
+	if reward.has("shards"):
+		var id: String = reward["shards"][0]
+		if id == "featured":
+			id = summon_featured()
+		heroes[id]["shards"] += int(reward["shards"][1])
+		got["shards"][id] = int(reward["shards"][1])
+	if reward.has("hero"):
+		var id: String = reward["hero"]
+		if add_hero(id):
+			got["heroes"].append(id)
+		else:
+			got["shards"][id] = got["shards"].get(id, 0) + Heroes.DUPLICATE_SHARDS
+	return got
+
+
+# --- 7-day login ------------------------------------------------------------------------
+
+func login_can_claim() -> bool:
+	return login_day != today()
+
+
+## Gifts shown as claimed: a finished cycle starts over once the next day's gift is ready.
+func login_progress() -> int:
+	return 0 if login_claimed >= Meta.LOGIN_REWARDS.size() and login_can_claim() else login_claimed
+
+
+func claim_login() -> Dictionary:
+	if not login_can_claim():
+		return {}
+	if login_claimed >= Meta.LOGIN_REWARDS.size():
+		login_claimed = 0
+	var got := grant(Meta.LOGIN_REWARDS[login_claimed])
+	login_claimed += 1
+	login_day = today()
+	if login_claimed == Meta.LOGIN_REWARDS.size():
+		login_cycles += 1
+	_commit()
+	return got
+
+
+# --- Daily quests -----------------------------------------------------------------------
+
+func _refresh_quests() -> void:
+	var day := today()
+	if day != quest_day:
+		quest_day = day
+		quest_progress = {"login": 1}
+		quest_claimed = []
+		quest_milestones = []
+
+
+## Counts progress towards a daily quest. The caller saves (it always commits anyway).
+func track(id: String, amount := 1) -> void:
+	_refresh_quests()
+	quest_progress[id] = int(quest_progress.get(id, 0)) + amount
+
+
+func quest_count(id: String) -> int:
+	_refresh_quests()
+	return mini(int(quest_progress.get(id, 0)), Meta.quest(id)["goal"])
+
+
+func quest_done(id: String) -> bool:
+	return quest_count(id) >= Meta.quest(id)["goal"]
+
+
+func quest_is_claimed(id: String) -> bool:
+	_refresh_quests()
+	return quest_claimed.has(id)
+
+
+func claim_quest(id: String) -> Dictionary:
+	if not quest_done(id) or quest_is_claimed(id):
+		return {}
+	quest_claimed.append(id)
+	var got := grant(Meta.quest(id)["reward"])
+	_commit()
+	return got
+
+
+func quest_points() -> int:
+	_refresh_quests()
+	return quest_claimed.size() * Meta.QUEST_POINTS
+
+
+func milestone_ready(index: int) -> bool:
+	return quest_points() >= Meta.QUEST_MILESTONES[index]["points"] and not quest_milestones.has(index)
+
+
+func milestone_claimed(index: int) -> bool:
+	_refresh_quests()
+	return quest_milestones.has(index)
+
+
+func claim_milestone(index: int) -> Dictionary:
+	if not milestone_ready(index):
+		return {}
+	quest_milestones.append(index)
+	var got := grant(Meta.QUEST_MILESTONES[index]["reward"])
+	_commit()
+	return got
+
+
+# --- Profile ----------------------------------------------------------------------------
+
+func avatar_unlocked(value: String) -> bool:
+	if value.begins_with("hero:"):
+		return owns_hero(value.substr(5))
+	return value.is_valid_int() and levels_cleared() >= Meta.avatar_need(int(value))
+
+
+func set_avatar(value: String) -> void:
+	if avatar_unlocked(value):
+		avatar = value
+		_commit()
+
+
+func frame_unlocked(id: String) -> bool:
+	match id:
+		"silver":
+			return levels_cleared() >= 3
+		"gold":
+			return login_cycles >= 1
+		"royal":
+			for hero_id in Heroes.of_rarity(3):
+				if owns_hero(hero_id):
+					return true
+			return false
+	return id == "wood"
+
+
+func set_frame(id: String) -> void:
+	if frame_unlocked(id):
+		frame = id
+		_commit()
+
+
+func set_player_name(text: String) -> void:
+	var clean := text.strip_edges().left(16)
+	if clean != "":
+		player_name = clean
+		_commit()
+
+
+# --- Alerts for the nav bar -----------------------------------------------------------
+
+func any_troop_improvable() -> bool:
+	for id in TROOP_ORDER:
+		if can_improve(id):
+			return true
+	return false
+
+
+func patrol_alert() -> bool:
+	return patrol_stored() >= patrol_capacity() / 2.0
+
+
+func hero_alert() -> bool:
+	for id in Heroes.ORDER:
+		if hero_can_improve(id):
+			return true
+	return false
+
+
+func events_alert() -> bool:
+	return patrol_alert() or summon_free_ready()
+
+
+func quest_alert() -> bool:
+	for q in Meta.QUESTS:
+		if quest_done(q["id"]) and not quest_is_claimed(q["id"]):
+			return true
+	for i in Meta.QUEST_MILESTONES.size():
+		if milestone_ready(i):
+			return true
+	return false
+
+
+# --- Save -----------------------------------------------------------------------------
+
+func reset_progress() -> void:
+	var keep_fast := fast_chest
+	var keep_skin := ui_skin
+	var keep_sound := sound_on
+	_reset()
+	fast_chest = keep_fast
+	ui_skin = keep_skin
+	sound_on = keep_sound
+	current_level = 0
+	_commit()
+
+
+func _reset() -> void:
+	gold = 0
+	gems = Economy.START_GEMS
+	unlocked_levels = 1
+	level_stars = {}
+	troops = {}
+	for id in TROOP_ORDER:
+		troops[id] = {"unlocked": id in STARTER_TROOPS, "level": 1, "stars": 1, "cards": 0}
+	castle_level = 1
+	team = STARTER_TROOPS.duplicate()
+	workshop = {}
+	free_chest_at = now()
+	gold_chest_pity = 0
+	patrol_last_claim = now()
+	patrol_quick_left = Economy.PATROL_QUICK_FREE
+	patrol_quick_day = floori(now() / 86400.0)
+	cheated = false
+	fast_chest = false
+	heroes = {}
+	for id in Heroes.ORDER:
+		heroes[id] = {"owned": id == Heroes.STARTER, "level": 1, "stars": 1, "shards": 0}
+	hero = Heroes.STARTER
+	summon_pity = 0
+	summon_free_day = -1
+	summon_total = 0
+	login_claimed = 0
+	login_day = -1
+	login_cycles = 0
+	quest_day = -1
+	quest_progress = {}
+	quest_claimed = []
+	quest_milestones = []
+	player_name = "Chỉ Huy"
+	avatar = "1"
+	frame = "wood"
+	tutorial_done = false
+	seen_tiles = []
+
+
+func set_ui_skin(skin: String) -> void:
+	ui_skin = skin
+	_commit()
+
+
+func finish_tutorial() -> void:
+	tutorial_done = true
+	_commit()
+
+
+func mark_tiles_seen(kinds: Array) -> void:
+	for kind in kinds:
+		if not seen_tiles.has(kind):
+			seen_tiles.append(kind)
+	_commit()
+
+
+func set_sound(on: bool) -> void:
+	sound_on = on
+	_commit()
+
+
+func set_fast_chest(on: bool) -> void:
+	fast_chest = on
+	_commit()
+
+
+## Saves a change made from the admin panel (marks the save as cheated).
+func commit_cheat() -> void:
+	cheated = true
+	_commit()
+
+
+func _commit() -> void:
+	changed.emit()
+	if persist:
+		_save()
+
+
+## The whole profile as plain data (what the save file holds).
+func to_dict() -> Dictionary:
+	return {
+		"version": SAVE_VERSION,
+		"settings": {"fast_chest": fast_chest, "ui_skin": ui_skin, "sound": sound_on},
+		"cheated": cheated,
+		"gold": gold,
+		"gems": gems,
+		"levels": {"unlocked": unlocked_levels, "stars": level_stars},
+		"troops": troops,
+		"castle": {"level": castle_level},
+		"team": battle_team(),
+		"workshop": workshop,
+		"shop": {"free_chest_at": free_chest_at, "gold_chest_pity": gold_chest_pity},
+		"patrol": {"last_claim": patrol_last_claim, "quick_left": patrol_quick_left, "quick_day": patrol_quick_day},
+		"heroes": {"list": heroes, "leader": hero},
+		"summon": {"pity": summon_pity, "free_day": summon_free_day, "total": summon_total},
+		"login": {"claimed": login_claimed, "day": login_day, "cycles": login_cycles},
+		"quests": {"day": quest_day, "progress": quest_progress, "claimed": quest_claimed, "milestones": quest_milestones},
+		"profile": {"name": player_name, "avatar": avatar, "frame": frame},
+		"tutorial": {"done": tutorial_done, "seen_tiles": seen_tiles},
+	}.duplicate(true)
+
+
+## Replaces the whole profile (used by admin snapshots and the simulator).
+func from_dict(data: Dictionary) -> void:
+	_reset()
+	gold = int(data.get("gold", 0))
+	gems = int(data.get("gems", Economy.START_GEMS))
+	cheated = bool(data.get("cheated", false))
+	fast_chest = bool(data.get("settings", {}).get("fast_chest", false))
+	ui_skin = str(data.get("settings", {}).get("ui_skin", "cozy"))
+	sound_on = bool(data.get("settings", {}).get("sound", true))
+	var levels: Dictionary = data.get("levels", {})
+	unlocked_levels = clampi(int(levels.get("unlocked", 1)), 1, LEVELS.size())
+	# JSON turns int keys into strings.
+	for key in levels.get("stars", {}):
+		level_stars[int(key)] = int(levels["stars"][key])
+	var saved_troops: Dictionary = data.get("troops", {})
+	for id in TROOP_ORDER:
+		if saved_troops.has(id):
+			var t: Dictionary = saved_troops[id]
+			troops[id] = {
+				"unlocked": bool(t.get("unlocked", false)),
+				"level": int(t.get("level", 1)),
+				"stars": int(t.get("stars", 1)),
+				"cards": int(t.get("cards", 0)),
+			}
+	castle_level = clampi(int(data.get("castle", {}).get("level", 1)), 1, castle_max_level())
+	# Saves from before teams existed get the strongest troops they own.
+	team = []
+	for id in data.get("team", []):
+		team.append(str(id))
+	if team.is_empty():
+		team = auto_team()
+	for id in data.get("workshop", {}):
+		if Economy.WORKSHOP.has(id):
+			workshop[id] = int(data["workshop"][id])
+	var shop: Dictionary = data.get("shop", {})
+	free_chest_at = int(shop.get("free_chest_at", now()))
+	gold_chest_pity = int(shop.get("gold_chest_pity", 0))
+	var patrol: Dictionary = data.get("patrol", {})
+	# A clock set backwards must not create negative time; clamp to now.
+	patrol_last_claim = mini(int(patrol.get("last_claim", now())), now())
+	patrol_quick_left = int(patrol.get("quick_left", Economy.PATROL_QUICK_FREE))
+	patrol_quick_day = int(patrol.get("quick_day", 0))
+	var saved_heroes: Dictionary = data.get("heroes", {})
+	var hero_list: Dictionary = saved_heroes.get("list", {})
+	for id in Heroes.ORDER:
+		if hero_list.has(id):
+			var h: Dictionary = hero_list[id]
+			heroes[id] = {
+				"owned": bool(h.get("owned", false)),
+				"level": int(h.get("level", 1)),
+				"stars": clampi(int(h.get("stars", 1)), 1, Heroes.MAX_STARS),
+				"shards": int(h.get("shards", 0)),
+			}
+	hero = str(saved_heroes.get("leader", Heroes.STARTER))
+	var summon_data: Dictionary = data.get("summon", {})
+	summon_pity = int(summon_data.get("pity", 0))
+	summon_free_day = int(summon_data.get("free_day", -1))
+	summon_total = int(summon_data.get("total", 0))
+	var login: Dictionary = data.get("login", {})
+	login_claimed = clampi(int(login.get("claimed", 0)), 0, Meta.LOGIN_REWARDS.size())
+	login_day = int(login.get("day", -1))
+	login_cycles = int(login.get("cycles", 0))
+	var quests: Dictionary = data.get("quests", {})
+	quest_day = int(quests.get("day", -1))
+	quest_progress = {}
+	var progress: Dictionary = quests.get("progress", {})
+	for key in progress:
+		quest_progress[str(key)] = int(progress[key])
+	quest_claimed = []
+	for id in quests.get("claimed", []):
+		quest_claimed.append(str(id))
+	quest_milestones = []
+	for index in quests.get("milestones", []):
+		quest_milestones.append(int(index))
+	var profile: Dictionary = data.get("profile", {})
+	player_name = str(profile.get("name", "Chỉ Huy"))
+	avatar = str(profile.get("avatar", "1"))
+	frame = str(profile.get("frame", "wood"))
+	var tutorial: Dictionary = data.get("tutorial", {})
+	# Saves from before the tutorial existed belong to players who already know the game.
+	tutorial_done = bool(tutorial.get("done", data.has("levels") and int(data.get("levels", {}).get("unlocked", 1)) > 1))
+	seen_tiles = []
+	for kind in tutorial.get("seen_tiles", []):
+		seen_tiles.append(str(kind))
+
+
+func _save() -> void:
+	var data := to_dict()
+	# Write to a temp file first so a crash mid-write can't corrupt the save.
+	var temp_path := SAVE_PATH + ".tmp"
+	var file := FileAccess.open(temp_path, FileAccess.WRITE)
+	if file == null:
+		push_warning("Could not write save: %s" % FileAccess.get_open_error())
+		return
+	file.store_string(JSON.stringify(data, "\t"))
+	file.close()
+	DirAccess.rename_absolute(temp_path, SAVE_PATH)
+
+
+func _load() -> bool:
+	if not FileAccess.file_exists(SAVE_PATH):
+		return false
+	var data = JSON.parse_string(FileAccess.get_file_as_string(SAVE_PATH))
+	if not data is Dictionary:
+		push_warning("Save file unreadable, starting fresh.")
+		return false
+	from_dict(data)
+	return true
+
+
+func _migrate_legacy() -> void:
+	var cfg := ConfigFile.new()
+	if cfg.load(LEGACY_SAVE_PATH) != OK:
+		return
+	unlocked_levels = clampi(cfg.get_value("progress", "unlocked", 1), 1, LEVELS.size())
+	var stars: Dictionary = cfg.get_value("progress", "best_stars", {})
+	for key in stars:
+		level_stars[int(key)] = int(stars[key])
+		# Levels cleared before rewards existed still hand out their unlock gift.
+		var gift: String = Economy.FIRST_CLEAR_GIFT.get(int(key), "")
+		if gift != "":
+			add_cards(gift, 1)
+	if persist:
+		_save()

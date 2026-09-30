@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/BattleShopShot.gd" id="1_bshop"]
+
+[node name="BattleShopShot" type="Node"]
+script = ExtResource("1_bshop")

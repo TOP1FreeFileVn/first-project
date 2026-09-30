@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://drxe46oy58286"]
+
+[ext_resource type="Script" uid="uid://ivkbgxeko8oj" path="res://game/battle/Battle.gd" id="1_battle"]
+[ext_resource type="Script" uid="uid://bgk2b3ne1a1oh" path="res://game/battle/Background.gd" id="2_background"]
+[ext_resource type="Script" uid="uid://cyo2ntyigclkq" path="res://game/battle/Core.gd" id="3_core"]
+[ext_resource type="Script" uid="uid://80fpepl8lumr" path="res://game/battle/GearBoard.gd" id="4_board"]
+[ext_resource type="Script" uid="uid://cjydgwmnpfvhk" path="res://game/battle/WaveDirector.gd" id="5_waves"]
+[ext_resource type="Script" uid="uid://ci7ej7mbgcd15" path="res://game/ui/HUD.gd" id="6_hud"]
+
+[node name="Battle" type="Node2D" unique_id=467749063]
+script = ExtResource("1_battle")
+
+[node name="Background" type="Node2D" parent="." unique_id=1683862416]
+script = ExtResource("2_background")
+
+[node name="Core" type="Node2D" parent="." unique_id=179279138]
+position = Vector2(310, 910)
+script = ExtResource("3_core")
+
+[node name="Board" type="Node2D" parent="." unique_id=2110597641]
+position = Vector2(60, 760)
+script = ExtResource("4_board")
+
+[node name="Units" type="Node2D" parent="." unique_id=1168155134]
+y_sort_enabled = true
+
+[node name="Projectiles" type="Node2D" parent="." unique_id=296224053]
+z_index = 5
+
+[node name="Effects" type="Node2D" parent="." unique_id=1764755911]
+z_index = 6
+
+[node name="WaveDirector" type="Node" parent="." unique_id=1973705104]
+script = ExtResource("5_waves")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=2016807746]
+script = ExtResource("6_hud")

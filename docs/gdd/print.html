@@ -1,0 +1,1075 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>
+<title>GDD Gear Defenders</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --paper: #ffffff;
+    --ink: #1d2733;
+    --muted: #5d6b7a;
+    --line: #d9dfe6;
+    --soft: #eef2f6;
+    --orb: #d9701a;
+    --orb-soft: #fbeadb;
+    --blue: #2c66a8;
+    --blue-soft: #e3edf8;
+    --red: #b83b35;
+    --red-soft: #f8e4e2;
+    --green: #3f7d34;
+    --green-soft: #e3f0df;
+    --gold: #b88a12;
+    --r0: #7d8894; --r1: #2f7fc9; --r2: #8a52d6; --r3: #d98a00;
+    --shadow: 0 1px 2px rgba(20, 30, 45, .06), 0 4px 14px rgba(20, 30, 45, .05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #141a21; --paper: #1b232c; --ink: #e8edf2; --muted: #9aa8b6; --line: #2f3a46; --soft: #232d38;
+      --orb: #f0923f; --orb-soft: #3a2a1c; --blue: #6fa7e6; --blue-soft: #1d2d40; --red: #ec7b72; --red-soft: #3b2322;
+      --green: #7fbf6f; --green-soft: #1f3120; --gold: #e2b84a;
+      --r0: #a3adb8; --r1: #62a7ea; --r2: #b28af0; --r3: #f0a830;
+      --shadow: none;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #141a21; --paper: #1b232c; --ink: #e8edf2; --muted: #9aa8b6; --line: #2f3a46; --soft: #232d38;
+    --orb: #f0923f; --orb-soft: #3a2a1c; --blue: #6fa7e6; --blue-soft: #1d2d40; --red: #ec7b72; --red-soft: #3b2322;
+    --green: #7fbf6f; --green-soft: #1f3120; --gold: #e2b84a;
+    --r0: #a3adb8; --r1: #62a7ea; --r2: #b28af0; --r3: #f0a830;
+    --shadow: none;
+  }
+
+  body { background: var(--bg); color: var(--ink); font: 15px/1.62 "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif; padding-inline: 16px; padding-block: 28px 64px; }
+  .doc { max-width: 900px; margin: 0 auto; display: grid; gap: 22px; }
+  h1, h2, h3 { font-family: "Paytone One", "Be Vietnam Pro", sans-serif; font-weight: 400; text-wrap: balance; line-height: 1.2; margin: 0; }
+  h2 { font-size: 27px; display: flex; gap: 12px; align-items: baseline; }
+  h2 .no { color: var(--orb); font-variant-numeric: tabular-nums; }
+  h3 { font-size: 18px; margin-top: 8px; }
+  p { margin: 0; max-width: 72ch; }
+  section { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 26px 28px; display: grid; gap: 14px; box-shadow: var(--shadow); }
+  .lead { font-size: 16.5px; color: var(--ink); }
+  .muted { color: var(--muted); }
+  small, .cap { font-size: 12.5px; color: var(--muted); }
+  code, .mono { font-family: "JetBrains Mono", Consolas, monospace; font-size: 12.5px; }
+  code { background: var(--soft); padding: 1px 5px; border-radius: 4px; }
+  ul, ol { margin: 0; padding-left: 20px; display: grid; gap: 4px; }
+  b, strong { font-weight: 600; }
+
+  /* Cover */
+  .cover { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); display: grid; grid-template-columns: 1.35fr 1fr; }
+  .cover .txt { padding: 32px 30px; display: grid; gap: 14px; align-content: start; }
+  .eyebrow { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--orb); font-weight: 700; }
+  .cover h1 { font-size: clamp(38px, 7vw, 58px); color: var(--ink); letter-spacing: .5px; }
+  .cover h1 span { color: var(--orb); }
+  .cover .art { background: #2d3b2a; display: grid; place-items: center; padding: 18px; }
+  .cover .art img { width: 100%; max-width: 250px; border-radius: 10px; }
+  .meta { display: grid; grid-template-columns: max-content 1fr; gap: 4px 14px; font-size: 13.5px; }
+  .meta dt { color: var(--muted); }
+  .meta dd { margin: 0; font-weight: 500; }
+
+  .toc { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2px 20px; font-size: 14px; }
+  .toc a { color: var(--ink); text-decoration: none; display: flex; gap: 10px; padding: 3px 0; border-bottom: 1px dashed var(--line); }
+  .toc a:hover { color: var(--orb); }
+  .toc a span { color: var(--orb); font-variant-numeric: tabular-nums; min-width: 22px; }
+  a:focus-visible { outline: 2px solid var(--orb); outline-offset: 2px; }
+
+  /* Tables */
+  .tw { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--soft); font-weight: 600; font-size: 12.5px; white-space: nowrap; }
+  tr:last-child td { border-bottom: 0; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  .compact td, .compact th { padding: 5px 8px; font-size: 12.5px; }
+
+  /* Pills & chips */
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 99px; font-size: 11.5px; font-weight: 600; white-space: nowrap; border: 1px solid currentColor; }
+  .r0 { color: var(--r0); } .r1 { color: var(--r1); } .r2 { color: var(--r2); } .r3 { color: var(--r3); }
+  .ok { color: var(--green); } .bad { color: var(--red); } .warn { color: var(--gold); }
+
+  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .box { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; align-content: start; }
+  .box h4 { margin: 0; font-size: 14.5px; font-weight: 700; }
+  .box.blue { background: var(--blue-soft); border-color: transparent; }
+  .box.orb { background: var(--orb-soft); border-color: transparent; }
+  .box.green { background: var(--green-soft); border-color: transparent; }
+  .box.red { background: var(--red-soft); border-color: transparent; }
+  .pillar { font-family: "Paytone One", sans-serif; font-size: 17px; color: var(--orb); }
+
+  .formula { font-family: "JetBrains Mono", Consolas, monospace; font-size: 13px; background: var(--soft); border-radius: 8px; padding: 10px 14px; overflow-x: auto; white-space: pre; line-height: 1.55; }
+
+  /* Loop diagram */
+  .loop { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .loop .step { background: var(--soft); border-radius: 8px; padding: 6px 12px; font-size: 13.5px; font-weight: 500; }
+  .loop .step.hot { background: var(--orb); color: #fff; }
+  .loop .arr { color: var(--muted); }
+  .loops { display: grid; gap: 10px; }
+  .loops .row { display: grid; grid-template-columns: 150px 1fr; gap: 12px; align-items: center; }
+  .loops .lbl { font-weight: 700; font-size: 13.5px; }
+  .loops .lbl small { display: block; font-weight: 400; }
+
+  /* Screens */
+  .shots { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  figure { margin: 0; display: grid; gap: 6px; align-content: start; }
+  figure img { width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; }
+  figcaption { font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+
+  .board svg { width: 100%; max-width: 520px; height: auto; display: block; }
+  .board-row { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 18px; align-items: center; }
+
+  .bars { display: grid; gap: 6px; }
+  .bar { display: grid; grid-template-columns: 58px 1fr 80px; gap: 10px; align-items: center; font-size: 13px; font-variant-numeric: tabular-nums; }
+  .bar .track { height: 12px; background: var(--soft); border-radius: 6px; overflow: hidden; position: relative; }
+  .bar .fill { height: 100%; border-radius: 6px; background: var(--green); }
+  .bar .fill.mid { background: var(--gold); }
+  .bar .target { position: absolute; top: -2px; bottom: -2px; border-left: 2px solid var(--ink); border-right: 2px solid var(--ink); opacity: .35; }
+
+  .note { border-left: 3px solid var(--orb); padding: 4px 0 4px 14px; color: var(--ink); }
+
+  @media (max-width: 720px) {
+    .cover { grid-template-columns: 1fr; }
+    .cover .art img { max-width: 180px; }
+    .grid2, .grid3, .board-row { grid-template-columns: 1fr; }
+    section { padding: 20px 16px; }
+    .loops .row { grid-template-columns: 1fr; gap: 4px; }
+    h2 { font-size: 23px; }
+  }
+
+  @page { size: A4; margin: 13mm 12mm 14mm; }
+  @media print {
+    :root { color-scheme: light; }
+    body { background: #fff; padding: 0; font-size: 12.5px; line-height: 1.5; }
+    .doc { max-width: none; gap: 12px; }
+    section, .cover { box-shadow: none; break-inside: auto; padding: 16px 18px; }
+    section.chapter { break-before: page; }
+    .tw, figure, .box, .formula, .bar, tr { break-inside: avoid; }
+    h2, h3 { break-after: avoid; }
+    table { font-size: 11.5px; }
+    .shots { grid-template-columns: repeat(5, 1fr); gap: 10px; }
+    .toc a { font-size: 12.5px; }
+  }
+</style>
+
+<main class="doc">
+
+<!-- ========================================================= COVER -->
+<header class="cover">
+  <div class="txt">
+    <div class="eyebrow">Game Design Document · bản demo</div>
+    <h1>GEAR <span>DEFENDERS</span></h1>
+    <p class="lead">Xoay bánh răng để sinh quân, ghép bánh răng để quân mạnh hơn, giữ thành qua từng đợt địch.</p>
+    <dl class="meta">
+      <dt>Thể loại</dt><dd>Thủ thành kết hợp ghép bánh răng và shop giữa đợt</dd>
+      <dt>Nền tảng</dt><dd>Điện thoại dọc 720×1280 · Windows · trình duyệt (WebGL2)</dd>
+      <dt>Engine</dt><dd>Godot 4.7.2, GDScript</dd>
+      <dt>Phạm vi demo</dt><dd>15 màn, 13 lính, 6 tướng, sảnh 5 tab</dd>
+      <dt>Người viết</dt><dd>Nguyễn Đình Cường Quốc · B24DCGA124 · D24CQGA04-B</dd>
+      <dt>GVHD</dt><dd>ThS. Trần Duy Hiếu</dd>
+      <dt>Phiên bản</dt><dd>1.0 · 28/09/2026</dd>
+    </dl>
+  </div>
+  <div class="art"><img src="img/battle_fight.png" alt="Ảnh trong trận: lính xanh đánh lính đỏ phía trên tường thành, bàn bánh răng ở dưới"></div>
+</header>
+
+<section>
+  <h3 style="margin:0">Mục lục</h3>
+  <nav class="toc">
+    <a href="#tong-quan"><span>1</span>Tổng quan</a>
+    <a href="#vong-lap"><span>2</span>Vòng lặp chơi</a>
+    <a href="#ban-gear"><span>3</span>Bàn bánh răng</a>
+    <a href="#tran"><span>4</span>Trận đấu và chiến trường</a>
+    <a href="#kinh-te-tran"><span>5</span>Kinh tế trong trận</a>
+    <a href="#linh"><span>6</span>Lính · đơn vị đo</a>
+    <a href="#tuong"><span>7</span>Tướng</a>
+    <a href="#man"><span>8</span>Màn chơi và địch</a>
+    <a href="#meta"><span>9</span>Sảnh và tiến trình</a>
+    <a href="#giu-chan"><span>10</span>Giữ chân người chơi</a>
+    <a href="#kinh-te"><span>11</span>Kinh tế tổng</a>
+    <a href="#ui"><span>12</span>Giao diện và hướng dẫn</a>
+    <a href="#art"><span>13</span>Hình ảnh và âm thanh</a>
+    <a href="#ky-thuat"><span>14</span>Kỹ thuật</a>
+    <a href="#can-bang"><span>15</span>Cân bằng và số liệu</a>
+    <a href="#lo-trinh"><span>16</span>Lộ trình phát triển</a>
+    <a href="#phu-luc"><span>A</span>Phụ lục: công thức, thuật ngữ</a>
+  </nav>
+</section>
+
+<!-- ========================================================= 1 -->
+<section id="tong-quan">
+  <h2><span class="no">1</span>Tổng quan</h2>
+  <p class="lead"><b>Gear Defenders</b> là game thủ thành màn hình dọc. Người chơi không điều khiển lính. Họ xếp các bánh răng (gear) trên một bàn 6×4 ở dưới tường thành. Gear nào ăn khớp với quả cầu truyền động thì quay, và gear đang quay thì sinh lính. Lính tự chạy lên chiến trường đánh các đợt địch đang tiến về thành.</p>
+  <p>Bản này là bản làm lại theo ý tưởng của game di động <i>Gear Defenders</i> (iogame), dùng bộ hình Tiny Swords của Pixel Frog, giao diện tiếng Việt. Phần kiếm tiền (quảng cáo, gói nạp, VIP, battle pass) được bỏ. Đây là bản demo phục vụ học tập, không phát hành lên cửa hàng.</p>
+
+  <h3>Ba trụ cột thiết kế</h3>
+  <div class="grid3">
+    <div class="box"><div class="pillar">Cơ khí nhìn thấy được</div><p>Mọi thứ trên bàn là cơ học thật: gear chạm nhau mới quay, quay ngược chiều nhau, chuỗi bị đứt thì dừng. Người chơi đọc được lý do vì sao lính không ra.</p></div>
+    <div class="box"><div class="pillar">Ghép là phần thưởng</div><p>Hai gear giống nhau ghép thành một gear bậc cao hơn: mạnh hơn ×1,75 và sinh lính nhanh hơn. Mỗi lần ghép là một khoảnh khắc "ăn" rõ ràng.</p></div>
+    <div class="box"><div class="pillar">Lựa chọn giữa đợt</div><p>Giữa các đợt là lượt nghỉ: chọn mua gì trong 5 món, đổi shop, để dành lấy lãi. Quyết định kinh tế ngắn, lặp lại, có hệ quả.</p></div>
+  </div>
+
+  <h3>Điểm khác biệt (USP)</h3>
+  <ul>
+    <li><b>Lưới truyền động thay cho ô đặt tháp.</b> Vị trí của gear quan trọng vì nó quyết định gear có quay hay không, chứ không vì tầm bắn.</li>
+    <li><b>Shop kiểu auto-chess trong game thủ thành.</b> Thu nhập theo đợt, lãi khi để dành, tỉ lệ độ hiếm tăng theo đợt.</li>
+    <li><b>Ô đặc biệt trên lưới</b> (đá, vàng, rỉ sét, băng) biến mỗi màn thành một câu đố xếp gear khác nhau mà không cần hình mới.</li>
+  </ul>
+
+  <div class="grid2">
+    <div class="box">
+      <h4>Người chơi mục tiêu</h4>
+      <ul>
+        <li>Người chơi di động 16–30 tuổi thích game chiến thuật nhẹ, chơi 3–5 phút mỗi trận.</li>
+        <li>Đã quen merge game hoặc auto-chess, muốn thứ gì ngắn hơn TFT.</li>
+        <li>Chơi một tay, màn hình dọc, lúc rảnh.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h4>Game tham khảo</h4>
+      <ul>
+        <li><b>Gear Defenders</b> (bản gốc): bàn gear, ghép, thành, rương thẻ lính.</li>
+        <li><b>Teamfight Tactics</b>: shop 5 món, đổi shop, lãi tiết kiệm.</li>
+        <li><b>Kingdom Rush</b>: đợt địch có kiểu, tinh nhuệ, trùm cuối chương.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Phạm vi bản demo</h3>
+  <div class="tw"><table>
+    <tr><th>Có trong demo</th><th>Chưa làm (xem mục 16)</th></tr>
+    <tr><td>15 màn (10 màn giai đoạn 1, 5 màn có ô đặc biệt), trùm ở màn 10</td><td>Màn 16–50 mới ở mức kế hoạch</td></tr>
+    <tr><td>13 lính (5 Thường, 4 Hiếm, 3 Sử thi, 1 Huyền thoại), 6 tướng</td><td>Chế độ vô tận, thử thách ngày, xếp hạng</td></tr>
+    <tr><td>Sảnh: Cửa hàng, Lính, Chiến đấu, Thành, Tướng; sự kiện triệu hồi; tuần tra</td><td>Kỹ năng chủ động của tướng, buff chọn giữa đợt, cộng hưởng lính</td></tr>
+    <tr><td>Quà 7 ngày, nhiệm vụ ngày, hồ sơ và khung ảnh</td><td>Tài khoản online, đồng bộ đám mây</td></tr>
+    <tr><td>Hướng dẫn người mới, âm thanh tổng hợp, admin chỉnh số</td><td>Nhạc nền, lồng tiếng, bản địa hoá tiếng Anh</td></tr>
+  </table></div>
+</section>
+
+<!-- ========================================================= 2 -->
+<section id="vong-lap" class="chapter">
+  <h2><span class="no">2</span>Vòng lặp chơi</h2>
+  <div class="loops">
+    <div class="row"><div class="lbl">Vòng trận<small>3–5 phút</small></div>
+      <div class="loop"><span class="step hot">Lượt nghỉ: mua gear</span><span class="arr">→</span><span class="step">Xếp, ghép, bán</span><span class="arr">→</span><span class="step hot">SẴN SÀNG</span><span class="arr">→</span><span class="step">Gear quay, lính ra đánh</span><span class="arr">→</span><span class="step">Hết đợt: thịt + lãi</span><span class="arr">↺</span></div></div>
+    <div class="row"><div class="lbl">Vòng sảnh<small>mỗi lần mở game</small></div>
+      <div class="loop"><span class="step">Nhận thưởng trận</span><span class="arr">→</span><span class="step">Mở rương</span><span class="arr">→</span><span class="step">Nâng lính, thành, tướng</span><span class="arr">→</span><span class="step">Chỉnh đội hình</span><span class="arr">→</span><span class="step hot">Màn tiếp</span></div></div>
+    <div class="row"><div class="lbl">Vòng ngày<small>quay lại mỗi ngày</small></div>
+      <div class="loop"><span class="step">Quà 7 ngày</span><span class="arr">→</span><span class="step">Nhiệm vụ ngày</span><span class="arr">→</span><span class="step">Rương Gỗ miễn phí</span><span class="arr">→</span><span class="step">Thu tuần tra</span><span class="arr">→</span><span class="step">Lượt triệu hồi miễn phí</span></div></div>
+  </div>
+  <p>Mục tiêu nhịp: sau mỗi 1–2 trận người chơi có ít nhất một thứ để nâng cấp. Nút có việc để làm hiện chấm đỏ.</p>
+
+  <h3>Một màn diễn ra thế nào</h3>
+  <ol>
+    <li><b>Lượt nghỉ 1.</b> Không có địch, thời gian trận dừng. Người chơi có <code>5 + số màn</code> thịt để mua 2–3 gear đầu tiên.</li>
+    <li><b>Bấm SẴN SÀNG.</b> Địch ra theo danh sách của đợt. Gear đang quay sinh lính theo nhịp. Lính tự chọn mục tiêu và đánh.</li>
+    <li><b>Trong lúc đánh</b> không mua được, nhưng vẫn kéo, ghép và bán gear để cứu tình huống.</li>
+    <li><b>Hết đợt</b> khi địch đã ra hết và bị giết hết. Lính còn sống được giữ lại và về điểm tập trung. Người chơi nhận thu nhập và lãi, shop làm mới.</li>
+    <li><b>Lặp lại</b> đến đợt cuối (4–8 đợt tuỳ màn). Thắng khi hạ hết đợt cuối, thua khi máu thành về 0.</li>
+    <li><b>Kết thúc.</b> Các hiệp sĩ nhảy mừng, bảng kết quả hiện số sao, vàng, thẻ lính, rương chiến thắng.</li>
+  </ol>
+
+  <h3>Điều khiển</h3>
+  <div class="tw"><table>
+    <tr><th>Thao tác</th><th>Kết quả</th></tr>
+    <tr><td>Chạm thẻ trong shop</td><td>Mua gear, gear bay xuống ô trống gần quả cầu truyền động nhất</td></tr>
+    <tr><td>Kéo gear sang ô trống</td><td>Di chuyển; kéo sang ô có gear khác thì đổi chỗ</td></tr>
+    <tr><td>Thả gear lên gear giống hệt (cùng lính, cùng bậc)</td><td>Ghép thành bậc +1</td></tr>
+    <tr><td>Kéo gear vào ô BÁN (góc dưới trái) hoặc chuột phải</td><td>Bán, hoàn 75% giá trị</td></tr>
+    <tr><td>ĐỔI SHOP / KHOÁ</td><td>Làm mới 5 món (lần đầu mỗi lượt nghỉ miễn phí) / giữ 5 món sang lượt sau</td></tr>
+    <tr><td>SẴN SÀNG</td><td>Bắt đầu đợt tiếp theo</td></tr>
+  </table></div>
+
+  <div class="shots">
+    <figure><img src="img/battle_shop.png" alt="Lượt nghỉ với shop 5 thẻ gear"><figcaption>Lượt nghỉ: shop 5 món, xem trước đợt địch, nút SẴN SÀNG.</figcaption></figure>
+    <figure><img src="img/battle_fight.png" alt="Lượt đánh"><figcaption>Lượt đánh: gear quay, lính ta (xanh) đánh địch (đỏ).</figcaption></figure>
+    <figure><img src="img/battle_win.png" alt="Bảng thắng trận"><figcaption>Thắng trận: sao, vàng, thẻ, rương chiến thắng.</figcaption></figure>
+  </div>
+</section>
+
+<!-- ========================================================= 3 -->
+<section id="ban-gear" class="chapter">
+  <h2><span class="no">3</span>Bàn bánh răng</h2>
+  <p>Đây là cơ chế cốt lõi và là thứ làm game khác các game thủ thành khác.</p>
+  <div class="board-row">
+    <div class="board">
+      <svg viewBox="0 0 620 430" role="img" aria-label="Sơ đồ bàn 6 cột 4 hàng, quả cầu truyền động ở cột 3 hàng 2, một chuỗi gear nối từ quả cầu">
+        <rect x="0" y="0" width="620" height="430" rx="14" fill="var(--soft)"/>
+        <g font-family="Be Vietnam Pro, sans-serif" font-size="12" fill="var(--muted)">
+          <text x="310" y="22" text-anchor="middle">Tường thành (địch đến từ phía trên)</text>
+        </g>
+        <g stroke="var(--line)" stroke-width="2">
+          <!-- 6x4 cells of 90px starting at x=40,y=36 -->
+          <rect x="40" y="36" width="540" height="360" rx="8" fill="var(--paper)"/>
+          <line x1="130" y1="36" x2="130" y2="396"/><line x1="220" y1="36" x2="220" y2="396"/><line x1="310" y1="36" x2="310" y2="396"/>
+          <line x1="400" y1="36" x2="400" y2="396"/><line x1="490" y1="36" x2="490" y2="396"/>
+          <line x1="40" y1="126" x2="580" y2="126"/><line x1="40" y1="216" x2="580" y2="216"/><line x1="40" y1="306" x2="580" y2="306"/>
+        </g>
+        <!-- locked cells at castle level 1 (outer ring example) -->
+        <g fill="var(--soft)" stroke="none">
+          <rect x="492" y="38" width="86" height="86"/><rect x="492" y="308" width="86" height="86"/><rect x="42" y="308" width="86" height="86"/>
+          <rect x="42" y="38" width="86" height="86"/><rect x="492" y="218" width="86" height="86"/><rect x="402" y="308" width="86" height="86"/>
+        </g>
+        <g font-size="18" text-anchor="middle" fill="var(--muted)" font-family="Be Vietnam Pro, sans-serif">
+          <text x="535" y="87">🔒</text><text x="535" y="357">🔒</text><text x="85" y="357">🔒</text><text x="85" y="87">🔒</text><text x="535" y="267">🔒</text><text x="445" y="357">🔒</text>
+        </g>
+        <!-- master orb at (2,1) -->
+        <circle cx="265" cy="171" r="34" fill="var(--orb)"/>
+        <circle cx="265" cy="171" r="12" fill="var(--paper)"/>
+        <!-- turning gears: (1,1) (3,1) (3,2) (4,2) ; stranded (0,3) -->
+        <g stroke-width="3">
+          <circle cx="175" cy="171" r="32" fill="var(--blue-soft)" stroke="var(--blue)"/>
+          <circle cx="355" cy="171" r="32" fill="var(--blue-soft)" stroke="var(--blue)"/>
+          <circle cx="355" cy="261" r="32" fill="var(--blue-soft)" stroke="var(--blue)"/>
+          <circle cx="445" cy="261" r="32" fill="var(--blue-soft)" stroke="var(--blue)"/>
+          <circle cx="265" cy="81" r="32" fill="var(--blue-soft)" stroke="var(--blue)"/>
+          <circle cx="175" cy="351" r="32" fill="var(--red-soft)" stroke="var(--red)" stroke-dasharray="6 5"/>
+        </g>
+        <g font-family="Be Vietnam Pro, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="var(--ink)">
+          <text x="175" y="176">↻ A</text><text x="355" y="176">↻ W</text><text x="355" y="266">↺ W</text><text x="445" y="266">↻ L</text><text x="265" y="86">↻ M</text>
+          <text x="175" y="356">A ✕</text>
+          <text x="265" y="220" font-size="11" fill="var(--orb)">Cầu truyền động</text>
+        </g>
+        <g font-family="Be Vietnam Pro, sans-serif" font-size="12" fill="var(--muted)">
+          <text x="40" y="418">Xanh: gear đang quay. Đỏ nét đứt: gear không chạm chuỗi nào nên đứng yên. 🔒: ô khoá theo cấp thành.</text>
+        </g>
+      </svg>
+    </div>
+    <div style="display:grid;gap:10px">
+      <div class="box"><h4>Luật truyền động</h4>
+        <ul>
+          <li>Bàn 6 cột × 4 hàng. Quả cầu truyền động chiếm ô (2,1) và không bao giờ dừng.</li>
+          <li>Gear chỉ quay khi <b>ăn khớp theo 4 hướng</b> (trên, dưới, trái, phải) với một gear đang quay hoặc với quả cầu.</li>
+          <li>Hai gear ăn khớp quay <b>ngược chiều</b> nhau, như bánh răng thật.</li>
+          <li>Quả cầu có một chốt. Mỗi vòng (3 giây) chốt đẩy mỗi gear kề bên đi một răng, rồi cả chuỗi nghỉ. Kiểu truyền động Geneva này làm chuỗi gear chuyển động giật từng nấc, dễ nhìn.</li>
+          <li>Gear chạm quả cầu ở 2 mặt thì quay và sinh lính nhanh gấp đôi.</li>
+        </ul></div>
+    </div>
+  </div>
+
+  <h3>Ghép gear</h3>
+  <div class="grid2">
+    <div class="box"><ul>
+      <li>Thả một gear lên gear <b>cùng lính, cùng bậc</b> để ghép thành bậc +1. Bậc tối đa là 5.</li>
+      <li>Màu áo lính đổi theo bậc để nhìn là biết: xanh ở bậc thấp, rồi tím, rồi vàng.</li>
+      <li>Shop gắn nhãn <b>GHÉP ĐƯỢC</b> lên món có gear giống trên bàn.</li>
+      <li>Đội hình nhỏ thì dễ ra gear trùng để ghép hơn. Đội đa dạng thì linh hoạt hơn. Đây là đánh đổi chiến thuật chính ngoài sảnh.</li>
+    </ul></div>
+    <div class="formula">sức mạnh bậc  = 1,75^(bậc − 1)
+bậc 1 ×1,00 · bậc 2 ×1,75 · bậc 3 ×3,06
+bậc 4 ×5,36 · bậc 5 ×9,38
+
+giây / lính   = gốc × 0,92^(bậc − 1)
+                ÷ (1 + thưởng Bánh răng tổng)</div>
+  </div>
+
+  <h3>Ô mở theo cấp thành</h3>
+  <p>Thành cấp 1 mở 12 ô, mỗi cấp mở thêm 2 ô, đủ 23 ô ở cấp 7. Ô mở theo vòng từ quả cầu ra ngoài để ô nào đã mở cũng nối được vào chuỗi.</p>
+
+  <h3>Ô đặc biệt (từ màn 11)</h3>
+  <div class="tw"><table>
+    <tr><th>Ô</th><th>Luật</th><th>Vai trò thiết kế</th><th>Màn</th></tr>
+    <tr><td><b>Ô đá</b></td><td>Không đặt gear được</td><td>Chặn một mặt của quả cầu, buộc nối chuỗi đi vòng</td><td class="n">11, 12, 13, 15</td></tr>
+    <tr><td><b>Ô vàng</b></td><td>Gear trên ô sinh lính nhanh hơn 50%</td><td>Thưởng cho việc kéo chuỗi ra xa quả cầu</td><td class="n">13, 14</td></tr>
+    <tr><td><b>Ô rỉ sét</b></td><td>Gear vẫn quay và truyền động, nhưng không sinh lính</td><td>Buộc dùng một gear rẻ làm cầu nối</td><td class="n">14</td></tr>
+    <tr><td><b>Ô băng</b></td><td>Gear trơn: không ăn khớp gear nào, chỉ quay khi chạm thẳng quả cầu</td><td>Cắt chuỗi, ô cạnh quả cầu thành ngõ cụt</td><td class="n">15</td></tr>
+  </table></div>
+  <p class="cap">Lần đầu gặp một loại ô, trận dừng lại và hiện bảng "Ô MỚI TRÊN LƯỚI!" có hình mẫu và luật, các ô đó nhấp nháy trên bàn.</p>
+</section>
+
+<!-- ========================================================= 4 -->
+<section id="tran" class="chapter">
+  <h2><span class="no">4</span>Trận đấu và chiến trường</h2>
+  <div class="grid2">
+    <div class="box"><h4>Bố cục màn hình trận (720×1280)</h4>
+      <ul>
+        <li><b>Trên cùng:</b> nút về, tên màn, tốc độ x1/x2; máu thành, đợt hiện tại, thịt.</li>
+        <li><b>Chiến trường</b> (y 110 → 700): địch xuất hiện ở mép trên và tiến xuống. Lính ta tập trung ở y 470.</li>
+        <li><b>Tường thành</b> ở y 700. Địch chạm tường thì đánh vào thành.</li>
+        <li><b>Bàn gear</b> ở dưới tường. Góc dưới trái là ô BÁN, dưới cùng là nút SẴN SÀNG.</li>
+      </ul></div>
+    <div class="box"><h4>Lính tự đánh</h4>
+      <ul>
+        <li>Lính ta sinh ra ở gear, chạy lên điểm tập trung rồi tìm địch gần nhất.</li>
+        <li>Lính giữ khoảng cách với đồng đội để không chồng lên nhau và không giật hình khi đứng yên.</li>
+        <li>Tối đa 60 lính ta trên sân. Hết chỗ thì gear tạm ngừng sinh.</li>
+        <li>Tướng xuất hiện ở giữa tường thành và đánh như một lính lớn. Tướng ngã thì quay lại ở đợt sau.</li>
+      </ul></div>
+  </div>
+
+  <h3>Tốc chạy và chí mạng</h3>
+  <div class="grid2">
+    <div class="box"><h4>Tốc chạy</h4>
+      <ul>
+        <li>Mỗi lính có tốc chạy riêng, từ 48 (Hiệp sĩ khiên) đến 115 (Sát thủ).</li>
+        <li>Lính nhanh tới địch trước và nhận đòn đầu. Kỵ thương và Sát thủ vì thế hợp để mở giao tranh, còn lính chậm nhưng trâu giữ tuyến.</li>
+        <li>Popup lính ghi tốc chạy kèm chữ: <b>chậm</b> (dưới 52), <b>vừa</b> (52–69), <b>nhanh</b> (70–99), <b>rất nhanh</b> (100 trở lên).</li>
+        <li>Cấp, sao và bậc gear không đổi tốc chạy.</li>
+      </ul></div>
+    <div class="box"><h4>Chí mạng</h4>
+      <ul>
+        <li>Mỗi đòn đánh có một tỉ lệ thành <b>chí mạng</b>, gây sát thương nhân với hệ số chí mạng của lính.</li>
+        <li>Áp dụng cho đòn cận chiến, tên, bom và đòn đánh vào thành. Không áp dụng cho hồi máu, cháy và kỹ năng.</li>
+        <li>Chí mạng cộng dồn với nhát đầu ×2,5 của Sát thủ, nên đòn mở màn của Sát thủ có thể gây ×5.</li>
+        <li><b>Chỉ lính ta có chí mạng.</b> Bản thử cho cả địch chí mạng làm bot tụt từ 4/4 xuống 0–3/4 ở màn 5–10, nên chí mạng được giữ làm lợi thế của người chơi; độ khó của địch chỉ chỉnh bằng sức mạnh màn.</li>
+        <li>Đòn chí mạng hiện chữ vàng <b>"CHÍ MẠNG!"</b> bay lên tại chỗ trúng, giới hạn khoảng 11 lần mỗi giây để trận đông không rối mắt.</li>
+      </ul></div>
+  </div>
+  <div class="formula">sát thương đòn đánh = sát thương × (hệ số chí mạng nếu chí mạng, không thì 1)
+sát thương trung bình = sát thương × (1 + tỉ lệ × (hệ số − 1))
+ví dụ Sát thủ: 1 + 0,25 × (2 − 1) = ×1,25   ·   Chiến binh: 1 + 0,05 × 0,5 = ×1,025</div>
+
+  <h3>Sức mạnh địch</h3>
+  <div class="formula">hệ số địch       = sức_mạnh_màn × (1 + 0,2 × số_thứ_tự_đợt)   (đợt đầu = 0)
+tinh nhuệ        = máu ×5, sát thương ×1,8
+sát thương vào thành = sát thương của địch × 0,35</div>
+  <p>Vì hệ số tăng 20% mỗi đợt, đợt cuối của màn 8 đợt mạnh gấp 2,4 lần đợt đầu. Người chơi phải ghép lên bậc cao, không chỉ mua thêm gear.</p>
+
+  <h3>Thắng, thua, sao</h3>
+  <div class="tw"><table>
+    <tr><th>Kết quả</th><th>Điều kiện</th></tr>
+    <tr><td><b class="ok">Thắng</b></td><td>Hạ hết địch của đợt cuối</td></tr>
+    <tr><td><b class="bad">Thua</b></td><td>Máu thành về 0</td></tr>
+    <tr><td>★</td><td>Thắng</td></tr>
+    <tr><td>★★</td><td>Thắng, thành còn ít nhất 45% máu</td></tr>
+    <tr><td>★★★</td><td>Thắng, thành còn ít nhất 80% máu</td></tr>
+  </table></div>
+</section>
+
+<!-- ========================================================= 5 -->
+<section id="kinh-te-tran">
+  <h2><span class="no">5</span>Kinh tế trong trận</h2>
+  <p>Tiền trong trận là <b>thịt</b>. Thịt không tự hồi theo thời gian; nó đến theo đợt, nên mỗi lượt nghỉ là một lần quyết định chi tiêu.</p>
+  <div class="tw"><table>
+    <tr><th>Nguồn thịt</th><th>Giá trị</th><th>Ghi chú</th></tr>
+    <tr><td>Thịt đầu trận</td><td>5 + số màn (+ Kho dự trữ)</td><td>Màn 1: 6 thịt, màn 10: 15 thịt</td></tr>
+    <tr><td>Thu nhập mỗi đợt</td><td>5 + số đợt vừa xong + Lò thịt</td><td>Hết đợt 1: +6, hết đợt 2: +7…</td></tr>
+    <tr><td>Lãi</td><td>+1 cho mỗi 5 thịt đang giữ, tối đa +3</td><td>Tính trước khi cộng thu nhập</td></tr>
+    <tr><td>Giết địch</td><td>0,35 mỗi địch · 3 mỗi tinh nhuệ</td><td></td></tr>
+    <tr><td>Bán gear</td><td>75% giá trị (giá bậc 1 × 2^(bậc−1)), tối thiểu 1</td><td>Chặn mua bán lòng vòng</td></tr>
+    <tr><td>Đầu bếp (lính)</td><td>+1 mỗi 6 giây khi còn sống</td><td>Chỉ trong lúc đánh</td></tr>
+    <tr><td>Trần thịt</td><td>20 → 30 theo cấp thành</td><td>Chặn tích trữ quá nhiều</td></tr>
+  </table></div>
+
+  <div class="grid2">
+    <div>
+      <h3>Shop giữa đợt</h3>
+      <ul>
+        <li>5 ô, mỗi ô là một gear bậc 1 của <b>một lính trong đội hình</b>.</li>
+        <li>Giá: Thường 2 · Hiếm 3 · Sử thi 4 · Huyền thoại 6 thịt.</li>
+        <li>Đổi shop 1 thịt, lần đầu mỗi lượt nghỉ miễn phí. KHOÁ giữ nguyên 5 món.</li>
+        <li>Từ đợt 5, mỗi ô có 15% ra <b>gear bậc 2</b>, giá ×2,5.</li>
+        <li>Không có thời gian đếm ngược ở lượt nghỉ.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Tỉ lệ độ hiếm trong shop</h3>
+      <div class="tw"><table class="compact">
+        <tr><th>Từ đợt</th><th class="n"><span class="r0">Thường</span></th><th class="n"><span class="r1">Hiếm</span></th><th class="n"><span class="r2">Sử thi</span></th><th class="n"><span class="r3">Huyền thoại</span></th></tr>
+        <tr><td>1</td><td class="n">80%</td><td class="n">20%</td><td class="n">0%</td><td class="n">0%</td></tr>
+        <tr><td>3</td><td class="n">60%</td><td class="n">32%</td><td class="n">8%</td><td class="n">0%</td></tr>
+        <tr><td>5</td><td class="n">45%</td><td class="n">35%</td><td class="n">16%</td><td class="n">4%</td></tr>
+        <tr><td>7</td><td class="n">35%</td><td class="n">35%</td><td class="n">22%</td><td class="n">8%</td></tr>
+      </table></div>
+      <p class="cap">Nếu đội không có lính ở độ hiếm bốc ra thì bốc lại trong các độ hiếm đội có.</p>
+    </div>
+  </div>
+  <p class="note">Ví dụ: cuối đợt 3 đang giữ 12 thịt. Lãi = min(12 ÷ 5, 3) = +2, thu nhập = 5 + 3 = +8. Vào lượt nghỉ 4 với 22 thịt. Để dành thì ăn lãi nhưng đợt sau yếu hơn: đó là lựa chọn kinh tế người chơi phải làm mỗi lượt.</p>
+</section>
+
+<!-- ========================================================= 6 -->
+<section id="linh" class="chapter">
+  <h2><span class="no">6</span>Lính</h2>
+  <p>13 lính, 4 độ hiếm. Bộ hình Tiny Swords miễn phí chỉ có 5 loại người, nên lính mới được làm bằng cách đổi đồ cầm tay (cuốc, búa, dao, thịt, túi bom), đổi đòn đánh, và thêm hiệu ứng vẽ bằng code. Chỉ số dưới đây là ở cấp 1, 1 sao, gear bậc 1. Tốc chạy tính bằng điểm ảnh mỗi giây, tầm đánh bằng điểm ảnh, hồi chiêu và giây/lính bằng giây; chí mạng ghi theo dạng "tỉ lệ × hệ số sát thương". Cách hình dung các đơn vị này nằm ở mục <a href="#don-vi">Hiểu các con số</a> ngay dưới bảng.</p>
+  <div class="tw"><table class="compact">
+    <tr><th>Lính</th><th>Độ hiếm</th><th>Vai trò</th><th class="n">Máu</th><th class="n">Sát thương</th><th class="n">Hồi chiêu</th><th class="n">Tầm</th><th class="n">Giây/lính</th><th class="n">Tốc chạy</th><th class="n">Chí mạng</th><th>Kỹ năng</th></tr>
+    <tr><td><b>Nông dân</b></td><td><span class="pill r0">Thường</span></td><td>Cận chiến</td><td class="n">30</td><td class="n">5</td><td class="n">0,9</td><td class="n">34</td><td class="n">2,6</td><td class="n">78</td><td class="n">5% ×1,5</td><td>Rẻ, đông, yếu</td></tr>
+    <tr><td><b>Chiến binh</b></td><td><span class="pill r0">Thường</span></td><td>Cận chiến</td><td class="n">85</td><td class="n">8</td><td class="n">1,0</td><td class="n">38</td><td class="n">4,5</td><td class="n">55</td><td class="n">5% ×1,5</td><td>Giữ tuyến</td></tr>
+    <tr><td><b>Cung thủ</b></td><td><span class="pill r0">Thường</span></td><td>Bắn xa</td><td class="n">28</td><td class="n">9</td><td class="n">1,3</td><td class="n">230</td><td class="n">4,5</td><td class="n">55</td><td class="n">12% ×1,6</td><td>Bắn từ phía sau</td></tr>
+    <tr><td><b>Thợ mỏ</b></td><td><span class="pill r0">Thường</span></td><td>Cận chiến</td><td class="n">60</td><td class="n">6</td><td class="n">1,0</td><td class="n">34</td><td class="n">3,6</td><td class="n">60</td><td class="n">5% ×1,5</td><td>Đào hầm: chịu ít hơn 50% sát thương từ tên và bom</td></tr>
+    <tr><td><b>Thợ rèn</b></td><td><span class="pill r0">Thường</span></td><td>Cận chiến</td><td class="n">45</td><td class="n">6</td><td class="n">1,1</td><td class="n">34</td><td class="n">3,8</td><td class="n">62</td><td class="n">5% ×1,5</td><td>Rèn giáp: 5 giây một lần, đồng đội trong bán kính 110 chịu ít hơn 25% sát thương trong 3 giây</td></tr>
+    <tr><td><b>Kỵ thương</b></td><td><span class="pill r1">Hiếm</span></td><td>Cận chiến</td><td class="n">55</td><td class="n">14</td><td class="n">1,1</td><td class="n">52</td><td class="n">5,0</td><td class="n">95</td><td class="n">15% ×1,75</td><td>Nhanh, đánh đau</td></tr>
+    <tr><td><b>Sát thủ</b></td><td><span class="pill r1">Hiếm</span></td><td>Cận chiến</td><td class="n">38</td><td class="n">11</td><td class="n">0,7</td><td class="n">32</td><td class="n">4,8</td><td class="n">115</td><td class="n">25% ×2</td><td>Ám sát: săn địch bắn xa và hồi máu; nhát đầu ×2,5</td></tr>
+    <tr><td><b>Hiệp sĩ khiên</b></td><td><span class="pill r1">Hiếm</span></td><td>Cận chiến</td><td class="n">130</td><td class="n">6</td><td class="n">1,2</td><td class="n">38</td><td class="n">5,5</td><td class="n">48</td><td class="n">3% ×1,5</td><td>Giơ khiên: 4 giây một lần, miễn mọi sát thương trong 1,2 giây</td></tr>
+    <tr><td><b>Cung lửa</b></td><td><span class="pill r1">Hiếm</span></td><td>Bắn xa</td><td class="n">30</td><td class="n">7</td><td class="n">1,4</td><td class="n">230</td><td class="n">5,0</td><td class="n">55</td><td class="n">10% ×1,5</td><td>Tên lửa: đốt 4 sát thương/giây trong 3 giây</td></tr>
+    <tr><td><b>Tu sĩ</b></td><td><span class="pill r2">Sử thi</span></td><td>Hồi máu</td><td class="n">36</td><td class="n">10</td><td class="n">1,8</td><td class="n">170</td><td class="n">6,0</td><td class="n">58</td><td class="n">—</td><td>Hồi máu đồng đội bị thương gần nhất</td></tr>
+    <tr><td><b>Đầu bếp</b></td><td><span class="pill r2">Sử thi</span></td><td>Hỗ trợ</td><td class="n">40</td><td class="n">0</td><td class="n">—</td><td class="n">—</td><td class="n">7,0</td><td class="n">55</td><td class="n">—</td><td>Nấu thịt: +1 thịt mỗi 6 giây. Ở phe địch: hồi máu quân xung quanh</td></tr>
+    <tr><td><b>Pháo thủ</b></td><td><span class="pill r2">Sử thi</span></td><td>Bắn xa</td><td class="n">34</td><td class="n">12</td><td class="n">2,4</td><td class="n">210</td><td class="n">6,0</td><td class="n">50</td><td class="n">8% ×1,5</td><td>Bom: nổ trúng mọi địch trong bán kính 70</td></tr>
+    <tr><td><b>Tướng quân</b></td><td><span class="pill r3">Huyền thoại</span></td><td>Cận chiến</td><td class="n">260</td><td class="n">20</td><td class="n">1,0</td><td class="n">46</td><td class="n">10,0</td><td class="n">62</td><td class="n">15% ×2</td><td>Hiệu lệnh +30% sát thương cho đồng đội bán kính 160; chém lan; xoay kiếm ×1,5 mỗi 5 giây</td></tr>
+  </table></div>
+
+
+  <h3 id="don-vi">Hiểu các con số: đơn vị và cách hình dung</h3>
+  <p>Các chỉ số trong bảng trên là số trong file dữ liệu của engine. Phần này quy chúng ra thứ nhìn thấy được trên màn hình, để người thiết kế không cần mở engine vẫn hình dung được lính chạy nhanh cỡ nào, đánh dày cỡ nào, tầm với tới đâu.</p>
+
+  <div class="box orb">
+    <h4>Quy ước chung</h4>
+    <ul>
+      <li><b>Khoảng cách tính bằng điểm ảnh (px) của màn hình game 720 × 1280.</b> Trên máy thật, màn hình được co giãn cho vừa, nên nên nghĩ theo tỉ lệ: 720 px là hết chiều ngang màn hình.</li>
+      <li><b>Mốc dễ nhớ: 1 ô gear = 100 px.</b> Bàn gear rộng 6 ô = 600 px, gần hết chiều ngang. Trên điện thoại màn hình ngang khoảng 7 cm, nên 100 px ≈ 1 cm.</li>
+      <li><b>Thời gian tính bằng giây thật ở tốc độ x1.</b> Nút x2 trong trận làm mọi thứ nhanh gấp đôi, nhưng các con số vẫn ghi theo x1.</li>
+      <li><b>Máu và sát thương là điểm</b>, không có đơn vị ngoài game. Chỉ có ý nghĩa khi so với nhau: một đòn trừ đúng số máu bằng sát thương.</li>
+      <li>Cấp, sao, bậc gear và sức mạnh màn chỉ nhân <b>máu và sát thương</b>. Tốc chạy, hồi chiêu, tầm đánh, chí mạng thì không đổi.</li>
+    </ul>
+  </div>
+
+  <div class="board-row">
+    <figure><svg viewBox="-150 -60 1010 1360" role="img" aria-label="Màn hình trận vẽ đúng tỉ lệ 720 x 1280 điểm ảnh">
+  <rect x="0" y="0" width="720" height="1280" rx="24" fill="var(--soft)" stroke="var(--line)" stroke-width="4"/>
+  <rect x="24" y="110" width="672" height="590" fill="var(--green-soft)"/>
+  <line x1="0" y1="700" x2="720" y2="700" stroke="var(--ink)" stroke-width="10"/>
+  <line x1="24" y1="470" x2="696" y2="470" stroke="var(--blue)" stroke-width="4" stroke-dasharray="18 12"/>
+  <g stroke="var(--line)" stroke-width="3" fill="var(--paper)">
+    <rect x="60" y="760" width="100" height="100"/><rect x="60" y="860" width="100" height="100"/><rect x="60" y="960" width="100" height="100"/><rect x="60" y="1060" width="100" height="100"/><rect x="160" y="760" width="100" height="100"/><rect x="160" y="860" width="100" height="100"/><rect x="160" y="960" width="100" height="100"/><rect x="160" y="1060" width="100" height="100"/><rect x="260" y="760" width="100" height="100"/><rect x="260" y="860" width="100" height="100"/><rect x="260" y="960" width="100" height="100"/><rect x="260" y="1060" width="100" height="100"/><rect x="360" y="760" width="100" height="100"/><rect x="360" y="860" width="100" height="100"/><rect x="360" y="960" width="100" height="100"/><rect x="360" y="1060" width="100" height="100"/><rect x="460" y="760" width="100" height="100"/><rect x="460" y="860" width="100" height="100"/><rect x="460" y="960" width="100" height="100"/><rect x="460" y="1060" width="100" height="100"/><rect x="560" y="760" width="100" height="100"/><rect x="560" y="860" width="100" height="100"/><rect x="560" y="960" width="100" height="100"/><rect x="560" y="1060" width="100" height="100"/>
+  </g>
+  <circle cx="310" cy="910" r="34" fill="var(--orb)"/>
+  <rect x="16" y="1196" width="152" height="76" rx="10" fill="var(--red-soft)"/>
+  <g fill="var(--red)"><circle cx="300" cy="-30" r="12"/><circle cx="330" cy="-30" r="12"/><circle cx="360" cy="-30" r="12"/></g>
+  <g fill="var(--blue)"><circle cx="300" cy="470" r="12"/><circle cx="324" cy="470" r="12"/><circle cx="348" cy="470" r="12"/></g>
+  <g stroke="var(--orb)" stroke-width="5" fill="none"><line x1="760" y1="-30" x2="760" y2="700"/><line x1="745" y1="-30" x2="775" y2="-30"/><line x1="745" y1="700" x2="775" y2="700"/>
+    <line x1="-60" y1="470" x2="-60" y2="960"/><line x1="-75" y1="470" x2="-45" y2="470"/><line x1="-75" y1="960" x2="-45" y2="960"/>
+    <line x1="60" y1="1225" x2="160" y2="1225"/></g>
+  <g font-family="Be Vietnam Pro, sans-serif" font-size="30" fill="var(--ink)">
+    <text x="400" y="-20">địch xuất hiện</text>
+    <text x="40" y="160">Chiến trường 672 × 590</text>
+    <text x="370" y="455" fill="var(--blue)">điểm tập trung</text>
+    <text x="40" y="690">tường thành</text>
+    <text x="60" y="745" font-size="26">bàn gear, 1 ô = 100</text>
+    <text x="180" y="1245" font-size="26" fill="var(--orb)">= 100 điểm ảnh</text>
+    <text x="785" y="320" fill="var(--orb)" transform="rotate(90 785 320)">730: địch đi tới tường</text>
+    <text x="-95" y="730" fill="var(--orb)" transform="rotate(-90 -95 730)">~490: gear → tập trung</text>
+  </g>
+</svg><figcaption>Màn hình trận vẽ đúng tỉ lệ. Địch đi 730 px từ mép trên tới tường. Lính ta đi khoảng 490 px từ giữa bàn gear lên điểm tập trung.</figcaption></figure>
+    <div class="tw"><table class="compact">
+      <tr><th>Chỉ số</th><th>Đơn vị</th><th>Hình dung</th></tr>
+      <tr><td>Tốc chạy</td><td>px mỗi giây</td><td>55 = đi hơn nửa ô gear mỗi giây, mất 13 giây từ mép trên sân tới tường</td></tr>
+      <tr><td>Hồi chiêu</td><td>giây giữa 2 đòn</td><td>1,0 = mỗi giây một đòn, 60 đòn/phút</td></tr>
+      <tr><td>Tầm đánh</td><td>px, tính từ tâm lính</td><td>34 = phải đứng sát; 230 = gần 2,5 ô gear, một phần ba chiều ngang màn hình</td></tr>
+      <tr><td>Tầm phát hiện</td><td>px</td><td>Địch trong vòng này thì lính bỏ đường, quay sang đánh</td></tr>
+      <tr><td>Giây/lính</td><td>giây</td><td>Gear bậc 1 chạm cầu truyền động ở 1 mặt ra 1 lính sau bấy nhiêu giây; chạm 2 mặt thì nhanh gấp đôi</td></tr>
+      <tr><td>Tối đa mỗi gear</td><td>lính</td><td>Gear đủ số lính còn sống thì ngừng sinh tới khi có lính chết</td></tr>
+      <tr><td>Bán kính kỹ năng</td><td>px</td><td>Bom 70 = vòng rộng 1,4 ô gear, trùm cả một cụm lính đứng dồn</td></tr>
+      <tr><td>Chí mạng</td><td>% và hệ số</td><td>15% ×2 = khoảng 1 đòn trong 7 đòn gây gấp đôi</td></tr>
+      <tr><td>Máu, sát thương</td><td>điểm</td><td>Chiến binh 85 máu chịu 17 đòn Nông dân (5), mất khoảng 15 giây</td></tr>
+    </table></div>
+  </div>
+
+  <h3>Tốc chạy đổi ra thời gian</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Lính</th><th class="n">Tốc chạy (px/giây)</th><th class="n">Đi 1 ô gear</th><th class="n">Gear → điểm tập trung</th><th class="n">Mép trên sân → tường</th><th class="n">Trên điện thoại</th></tr>
+    <tr><td>Hiệp sĩ khiên</td><td class="n">48</td><td class="n">2,1 giây</td><td class="n">10,2 giây</td><td class="n">15,2 giây</td><td class="n">0,5 cm/giây</td></tr>
+    <tr><td>Pháo thủ</td><td class="n">50</td><td class="n">2,0 giây</td><td class="n">9,8 giây</td><td class="n">14,6 giây</td><td class="n">0,5 cm/giây</td></tr>
+    <tr><td>Chiến binh, Cung thủ, Cung lửa, Đầu bếp</td><td class="n">55</td><td class="n">1,8 giây</td><td class="n">8,9 giây</td><td class="n">13,3 giây</td><td class="n">0,6 cm/giây</td></tr>
+    <tr><td>Tu sĩ</td><td class="n">58</td><td class="n">1,7 giây</td><td class="n">8,4 giây</td><td class="n">12,6 giây</td><td class="n">0,6 cm/giây</td></tr>
+    <tr><td>Thợ mỏ</td><td class="n">60</td><td class="n">1,7 giây</td><td class="n">8,2 giây</td><td class="n">12,2 giây</td><td class="n">0,6 cm/giây</td></tr>
+    <tr><td>Thợ rèn, Tướng quân</td><td class="n">62</td><td class="n">1,6 giây</td><td class="n">7,9 giây</td><td class="n">11,8 giây</td><td class="n">0,6 cm/giây</td></tr>
+    <tr><td>Nông dân</td><td class="n">78</td><td class="n">1,3 giây</td><td class="n">6,3 giây</td><td class="n">9,4 giây</td><td class="n">0,8 cm/giây</td></tr>
+    <tr><td>Kỵ thương</td><td class="n">95</td><td class="n">1,1 giây</td><td class="n">5,2 giây</td><td class="n">7,7 giây</td><td class="n">0,9 cm/giây</td></tr>
+    <tr><td>Sát thủ</td><td class="n">115</td><td class="n">0,9 giây</td><td class="n">4,3 giây</td><td class="n">6,3 giây</td><td class="n">1,1 cm/giây</td></tr>
+  </table></div>
+  <p class="cap">Cột cuối lấy 100 px ≈ 1 cm trên màn hình điện thoại rộng khoảng 7 cm. Địch cùng loại chạy cùng tốc độ.</p>
+
+  <h3>Hồi chiêu đổi ra nhịp đánh</h3>
+  <div class="grid2">
+    <div class="tw"><table class="compact">
+      <tr><th>Lính</th><th class="n">Hồi chiêu</th><th class="n">Đòn mỗi phút</th></tr>
+      <tr><td>Sát thủ</td><td class="n">0,7 giây</td><td class="n">86</td></tr>
+    <tr><td>Nông dân</td><td class="n">0,9 giây</td><td class="n">67</td></tr>
+    <tr><td>Chiến binh, Thợ mỏ, Tướng quân</td><td class="n">1,0 giây</td><td class="n">60</td></tr>
+    <tr><td>Kỵ thương, Thợ rèn</td><td class="n">1,1 giây</td><td class="n">55</td></tr>
+    <tr><td>Hiệp sĩ khiên</td><td class="n">1,2 giây</td><td class="n">50</td></tr>
+    <tr><td>Cung thủ</td><td class="n">1,3 giây</td><td class="n">46</td></tr>
+    <tr><td>Cung lửa</td><td class="n">1,4 giây</td><td class="n">43</td></tr>
+    <tr><td>Tu sĩ (hồi máu)</td><td class="n">1,8 giây</td><td class="n">33</td></tr>
+    <tr><td>Pháo thủ</td><td class="n">2,4 giây</td><td class="n">25</td></tr>
+    </table></div>
+    <div class="box">
+      <h4>Một đòn diễn ra thế nào</h4>
+      <ol>
+        <li>Lính tới trong tầm đánh thì bắt đầu động tác đánh.</li>
+        <li>Sát thương trúng ở khoảng giữa động tác (55% thời lượng hoạt ảnh). Với cung và bom, lúc đó mũi tên hoặc quả bom mới bay đi: tên bay 560 px/giây, bom 300 px/giây theo đường vòng cung.</li>
+        <li>Hồi chiêu tính từ lúc bắt đầu động tác. Hết hồi chiêu mới đánh đòn sau.</li>
+      </ol>
+      <p><b>Sát thương mỗi giây (DPS)</b> = sát thương ÷ hồi chiêu × hệ số chí mạng trung bình. Ví dụ Kỵ thương: 14 ÷ 1,1 × 1,11 ≈ 14,1.</p>
+    </div>
+  </div>
+
+  <h3>Thước tầm đánh (đúng tỉ lệ)</h3>
+  <figure><svg viewBox="0 0 720 300" role="img" aria-label="Thước tầm đánh vẽ đúng tỉ lệ quanh một lính">
+  <g stroke="var(--line)" stroke-width="1.5"><line x1="60" y1="10" x2="60" y2="280"/><line x1="160" y1="10" x2="160" y2="280"/><line x1="260" y1="10" x2="260" y2="280"/><line x1="360" y1="10" x2="360" y2="280"/><line x1="460" y1="10" x2="460" y2="280"/><line x1="560" y1="10" x2="560" y2="280"/><line x1="660" y1="10" x2="660" y2="280"/><line x1="20" y1="80" x2="700" y2="80"/><line x1="20" y1="180" x2="700" y2="180"/><line x1="20" y1="280" x2="700" y2="280"/></g>
+  <path d="M 336 280 A 24 24 0 0 1 384 280" fill="none" stroke="var(--muted)" stroke-width="3"/><path d="M 312 280 A 48 48 0 0 1 408 280" fill="none" stroke="var(--red)" stroke-width="3"/><path d="M 290 280 A 70 70 0 0 1 430 280" fill="none" stroke="var(--orb)" stroke-width="3"/><path d="M 250 280 A 110 110 0 0 1 470 280" fill="none" stroke="var(--green)" stroke-width="3"/><path d="M 200 280 A 160 160 0 0 1 520 280" fill="none" stroke="var(--gold)" stroke-width="3"/><path d="M 150 280 A 210 210 0 0 1 570 280" fill="none" stroke="var(--muted)" stroke-width="3"/><path d="M 116 280 A 244 244 0 0 1 604 280" fill="none" stroke="var(--blue)" stroke-width="3"/>
+  <circle cx="360" cy="280" r="12" fill="var(--blue)"/>
+  <g font-family="Be Vietnam Pro, sans-serif" font-size="13" fill="var(--ink)">
+    <text x="335.2153903091735" y="268" text-anchor="end" fill="var(--muted)" display="none">24</text><text x="315.7438127386196" y="253.8573263192787" text-anchor="end" fill="var(--red)" display="none">48</text><text x="299.3688103937537" y="238.85503233952687" text-anchor="end" fill="var(--orb)" >70</text><text x="270.51394423973323" y="210.77475698451786" text-anchor="end" fill="var(--green)" >110</text><text x="237.09682792361696" y="172.93910298258265" text-anchor="end" fill="var(--gold)" >160</text><text x="207.50757595082504" y="131.50757595082501" text-anchor="end" fill="var(--muted)" >210</text><text x="192.7321320484386" y="98.6726625835158" text-anchor="end" fill="var(--blue)" >244</text>
+  </g>
+</svg>
+    <figcaption>Lính xanh ở giữa đáy, lưới nền mỗi ô 100 px (bằng 1 ô gear). Từ trong ra: 24 khoảng cách hai lính đứng cạnh nhau · 48 cận chiến · 70 bom · 110 rèn giáp · 160 hiệu lệnh · 210 phát hiện địch · 244 tầm bắn Cung thủ. Tầm thực tế cộng thêm 14 px cho thân mục tiêu.</figcaption></figure>
+
+  <p class="note">Mẹo cho người thiết kế: tăng tốc chạy làm lính tới giao tranh sớm hơn và <b>chịu đòn trước</b>, không phải lúc nào cũng tốt. Muốn lính đánh nhiều hơn thì giảm hồi chiêu. Muốn lính đứng xa an toàn hơn thì tăng tầm đánh. Muốn lính đông hơn thì giảm giây/lính.</p>
+
+  <div class="grid2">
+    <div class="box"><h4>Cách có lính</h4>
+      <ul>
+        <li>Có sẵn: Nông dân, Chiến binh, Cung thủ.</li>
+        <li>Quà qua màn lần đầu: màn 1 Kỵ thương, 2 Tu sĩ, 3 Thợ mỏ, 5 Hiệp sĩ khiên, 7 Cung lửa, 12 Thợ rèn, 15 Sát thủ.</li>
+        <li>Thẻ lính từ rương. Thẻ đầu tiên của lính chưa có sẽ mở khoá luôn (hiện "MỚI!").</li>
+        <li>Tỉ lệ độ hiếm của thẻ: 64% · 32% · 3,6% · 0,4%.</li>
+      </ul></div>
+    <div class="box"><h4>Đội hình</h4>
+      <ul>
+        <li>Chỉ lính trong đội mới xuất hiện trong shop trận.</li>
+        <li>Số ô đội theo cấp thành: 3 ô (cấp 1), 4 ô (cấp 3), 5 ô (cấp 6).</li>
+        <li>Tab Lính: đội hình cố định ở trên, bộ sưu tập cuộn ở dưới. Kéo thẻ thả vào ô đội để thay lính.</li>
+        <li>Phải có ít nhất 1 lính trong đội mới vào trận được.</li>
+      </ul></div>
+  </div>
+
+  <div class="shots">
+    <figure><img src="img/menu_troop_detail.png" alt="Popup chi tiết Tướng quân với tốc chạy và chí mạng"><figcaption>Popup lính: máu, sát thương, tầm, hồi chiêu, tốc chạy, chí mạng.</figcaption></figure>
+  </div>
+
+  <h3>Nâng cấp lính</h3>
+  <div class="formula">chỉ số trong trận = gốc × (1 + 0,08 × (cấp − 1)) × 1,2^(sao − 1) × 1,75^(bậc_gear − 1)
+giá lên cấp L→L+1 = round(50 × 1,35^(L − 1)) vàng       trần cấp = sao × 10
+lên sao: 1★→2★ cần 10 thẻ, 2★→3★ cần 30 thẻ            thẻ thừa khi đã 3★ = 20 vàng</div>
+  <div class="tw"><table class="compact">
+    <tr><th>Lên cấp</th><th class="n">1→2</th><th class="n">2→3</th><th class="n">3→4</th><th class="n">4→5</th><th class="n">5→6</th><th class="n">6→7</th><th class="n">7→8</th><th class="n">8→9</th><th class="n">9→10</th></tr>
+    <tr><td>Vàng</td><td class="n">50</td><td class="n">68</td><td class="n">91</td><td class="n">123</td><td class="n">166</td><td class="n">224</td><td class="n">303</td><td class="n">409</td><td class="n">552</td></tr>
+  </table></div>
+</section>
+
+<!-- ========================================================= 7 -->
+<section id="tuong">
+  <h2><span class="no">7</span>Tướng</h2>
+  <p>Người chơi chọn <b>1 tướng dẫn đội</b>. Tướng cho cả đội một buff suốt trận và ra trận đánh như một lính lớn. Tướng dùng lại hình lính có sẵn, đổi màu giáp bằng shader, to gấp 1,5 lần, có áo choàng màu riêng bay khi chạy, vòng hào quang theo độ hiếm và thanh máu vàng. Tướng Huyền thoại đội vương miện.</p>
+  <div class="tw"><table class="compact">
+    <tr><th>Tướng</th><th>Độ hiếm</th><th>Đánh như</th><th>Buff ở cấp 1, 1 sao</th></tr>
+    <tr><td><b>Hiệp Sĩ Bạch Kim</b></td><td><span class="pill r3">Huyền thoại</span></td><td>Chiến binh</td><td>+20% máu cho mọi lính</td></tr>
+    <tr><td><b>Thương Thần Bão Tố</b></td><td><span class="pill r3">Huyền thoại</span></td><td>Kỵ thương</td><td>+18% sát thương cho mọi lính</td></tr>
+    <tr><td><b>Xạ Thủ Hoả Ngục</b></td><td><span class="pill r2">Sử thi</span></td><td>Cung lửa</td><td>+12% tốc độ sinh lính</td></tr>
+    <tr><td><b>Hiền Giả Lục Diệp</b></td><td><span class="pill r2">Sử thi</span></td><td>Tu sĩ</td><td>+2 thịt thu nhập mỗi đợt</td></tr>
+    <tr><td><b>Đội Trưởng Thép</b> (có sẵn)</td><td><span class="pill r1">Hiếm</span></td><td>Hiệp sĩ khiên</td><td>+15% máu thành</td></tr>
+    <tr><td><b>Sát Thủ Bóng Đêm</b></td><td><span class="pill r1">Hiếm</span></td><td>Sát thủ</td><td>+8% sát thương cho mọi lính</td></tr>
+  </table></div>
+  <div class="formula">máu tướng       = máu lính gốc × (4,5 + 0,3 × (cấp − 1)) × (1 + 0,3 × (sao − 1))
+sát thương      = sát thương gốc × (2,5 + 0,15 × (cấp − 1)) × (1 + 0,3 × (sao − 1))
+buff            = buff gốc × (1 + 0,25 × (sao − 1)) + tăng mỗi cấp × (cấp − 1)
+giá lên cấp     = round(200 × 1,22^(cấp − 1)) vàng, trần cấp = sao × 10
+lên sao         = 10 / 20 / 40 / 80 mảnh, tối đa 5 sao
+mở khoá         = 30 mảnh; ra tướng đã có thì đổi thành 20 mảnh</div>
+
+  <h3>Sự kiện Triệu hồi Tướng quân</h3>
+  <div class="grid2">
+    <div class="tw"><table class="compact">
+      <tr><th>Kết quả mỗi lượt</th><th class="n">Tỉ lệ</th></tr>
+      <tr><td>Tướng nổi bật</td><td class="n">1,5%</td></tr>
+      <tr><td>Tướng Huyền thoại khác</td><td class="n">1%</td></tr>
+      <tr><td>Tướng Sử thi</td><td class="n">6%</td></tr>
+      <tr><td>Tướng Hiếm</td><td class="n">15%</td></tr>
+      <tr><td>5 mảnh tướng nổi bật</td><td class="n">8%</td></tr>
+      <tr><td>3 mảnh tướng ngẫu nhiên</td><td class="n">20%</td></tr>
+      <tr><td>250 vàng</td><td class="n">48,5%</td></tr>
+    </table></div>
+    <div class="box">
+      <ul>
+        <li><b>Tướng nổi bật</b> đổi mỗi tuần, xoay vòng: Thương Thần → Xạ Thủ → Hiệp Sĩ → Hiền Giả. Có đồng hồ đếm ngược.</li>
+        <li>Giá: 30 kim cương 1 lượt, 270 cho 10 lượt. 1 lượt miễn phí mỗi ngày.</li>
+        <li><b>Bảo hiểm:</b> 50 lượt chưa ra tướng nổi bật thì lượt kế chắc chắn ra. Gói 10 lượt luôn có ít nhất 1 tướng.</li>
+        <li>Hoạt ảnh: vòng triệu hồi, tia sáng theo màu độ hiếm, lật thẻ, chữ lớn khi ra Huyền thoại.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="shots">
+    <figure><img src="img/menu_heroes.png" alt="Tab Tướng"><figcaption>Tab Tướng: chọn tướng dẫn đội, lên cấp, lên sao.</figcaption></figure>
+    <figure><img src="img/menu_summon.png" alt="Trang triệu hồi"><figcaption>Sự kiện triệu hồi với tướng nổi bật của tuần.</figcaption></figure>
+    <figure><img src="img/menu_summon_done.png" alt="Kết quả triệu hồi"><figcaption>Kết quả gói 10 lượt.</figcaption></figure>
+  </div>
+</section>
+
+<!-- ========================================================= 8 -->
+<section id="man" class="chapter">
+  <h2><span class="no">8</span>Màn chơi và địch</h2>
+  <p>Địch dùng chính 13 loại lính (áo đỏ/đen), có đủ kỹ năng như lính ta. Mỗi màn là một danh sách đợt; mỗi đợt gồm các nhóm lính, có thể có tinh nhuệ. Tướng quân địch là trùm màn 10.</p>
+  <div class="tw"><table class="compact">
+    <tr><th class="n">#</th><th>Màn</th><th class="n">Đợt</th><th class="n">Địch</th><th class="n">Tinh nhuệ</th><th class="n">Sức mạnh</th><th class="n">Máu thành</th><th class="n">Thịt đầu</th><th>Điểm nhấn thiết kế</th><th>Quà lần đầu</th></tr>
+    <tr><td class="n">1</td><td>Đồng Cỏ</td><td class="n">4</td><td class="n">41</td><td class="n">1</td><td class="n">0,9</td><td class="n">100</td><td class="n">6</td><td>Mua gear, đặt cạnh cầu truyền động</td><td>Kỵ thương</td></tr>
+    <tr><td class="n">2</td><td>Đồi Đá</td><td class="n">5</td><td class="n">65</td><td class="n">1</td><td class="n">1,4</td><td class="n">100</td><td class="n">7</td><td>Ghép 2 gear lên bậc 2; Kỵ thương địch</td><td>Tu sĩ</td></tr>
+    <tr><td class="n">3</td><td>Pháo Đài Đỏ</td><td class="n">6</td><td class="n">89</td><td class="n">3</td><td class="n">1,5</td><td class="n">120</td><td class="n">8</td><td>Nối chuỗi qua gear khác; Tu sĩ địch</td><td>Thợ mỏ</td></tr>
+    <tr><td class="n">4</td><td>Rừng Thông</td><td class="n">6</td><td class="n">97</td><td class="n">1</td><td class="n">1,9</td><td class="n">120</td><td class="n">9</td><td>Để dành thịt ăn lãi</td><td></td></tr>
+    <tr><td class="n">5</td><td>Hẻm Núi</td><td class="n">6</td><td class="n">102</td><td class="n">2</td><td class="n">2,2</td><td class="n">120</td><td class="n">10</td><td>Thợ mỏ địch chịu tên: cần cận chiến</td><td>Hiệp sĩ khiên</td></tr>
+    <tr><td class="n">6</td><td>Làng Bỏ Hoang</td><td class="n">7</td><td class="n">138</td><td class="n">2</td><td class="n">2,3</td><td class="n">130</td><td class="n">11</td><td>Cung lửa địch; khoá shop giữ gear hiếm</td><td></td></tr>
+    <tr><td class="n">7</td><td>Đầm Lầy</td><td class="n">7</td><td class="n">136</td><td class="n">3</td><td class="n">2,5</td><td class="n">130</td><td class="n">12</td><td>Sát thủ địch săn lính bắn xa</td><td>Cung lửa</td></tr>
+    <tr><td class="n">8</td><td>Thành Đá Đen</td><td class="n">7</td><td class="n">147</td><td class="n">3</td><td class="n">2,4</td><td class="n">140</td><td class="n">13</td><td>Đầu bếp, Thợ rèn, Pháo thủ địch</td><td></td></tr>
+    <tr><td class="n">9</td><td>Cổng Pháo Đài</td><td class="n">8</td><td class="n">171</td><td class="n">4</td><td class="n">2,6</td><td class="n">140</td><td class="n">14</td><td>Tổng hợp: 8 đợt, cần gear bậc 3</td><td></td></tr>
+    <tr><td class="n">10</td><td><b>Vua Đỏ</b></td><td class="n">8</td><td class="n">198</td><td class="n">4</td><td class="n">2,7</td><td class="n">150</td><td class="n">15</td><td><b>Trùm:</b> Tướng quân địch</td><td></td></tr>
+    <tr><td class="n">11</td><td>Bến Cảng</td><td class="n">8</td><td class="n">191</td><td class="n">3</td><td class="n">2,9</td><td class="n">150</td><td class="n">15</td><td>2 ô đá cạnh cầu; màn "thở" sau trùm</td><td></td></tr>
+    <tr><td class="n">12</td><td>Rừng Sương</td><td class="n">8</td><td class="n">158</td><td class="n">2</td><td class="n">3,1</td><td class="n">150</td><td class="n">15</td><td>3 ô đá; Hiệp sĩ khiên số đông</td><td>Thợ rèn</td></tr>
+    <tr><td class="n">13</td><td>Đồi Cừu</td><td class="n">8</td><td class="n">183</td><td class="n">3</td><td class="n">3,6</td><td class="n">155</td><td class="n">16</td><td>3 ô vàng + 1 ô đá; Sát thủ săn hậu tuyến</td><td></td></tr>
+    <tr><td class="n">14</td><td>Mỏ Vàng</td><td class="n">8</td><td class="n">176</td><td class="n">3</td><td class="n">3,7</td><td class="n">155</td><td class="n">16</td><td>3 ô rỉ sét + 2 ô vàng; Kỵ thương dồn dập</td><td></td></tr>
+    <tr><td class="n">15</td><td><b>Cầu Đá</b></td><td class="n">8</td><td class="n">182</td><td class="n">4</td><td class="n">4,4</td><td class="n">160</td><td class="n">17</td><td><b>Trùm nhỏ:</b> 2 ô băng + 2 ô đá</td><td>Sát thủ</td></tr>
+  </table></div>
+
+  <h3>Nguyên tắc thiết kế màn</h3>
+  <ul>
+    <li><b>Mỗi màn dạy đúng một điều mới.</b> Cơ chế mới xuất hiện ở màn dễ trước, rồi mới được thử thách ở màn sau.</li>
+    <li><b>Đường khó răng cưa.</b> Độ khó tăng dần, đạt đỉnh ở trùm (màn 10, 20…) và trùm nhỏ (15, 25…), rồi hạ xuống ở màn ngay sau để người chơi "thở".</li>
+    <li><b>Đợt đầu nhẹ, đợt cuối nặng.</b> Đợt đầu chỉ vài loại lính yếu để người chơi xếp bàn; đợt cuối có tinh nhuệ.</li>
+    <li><b>Địch khắc chế lối chơi quen.</b> Thợ mỏ chịu tên phạt đội toàn cung; Sát thủ săn hậu tuyến; Hiệp sĩ khiên buộc dồn sát thương.</li>
+  </ul>
+
+  <h3>Kế hoạch 50 màn</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Giai đoạn</th><th>Màn</th><th>Mục tiêu</th><th>Trùm</th></tr>
+    <tr><td><b>1 · Làm quen</b></td><td>1–10</td><td>Học cơ chế cốt lõi: mua, đặt cạnh cầu, ghép, nối chuỗi, lãi</td><td>10 Vua Đỏ</td></tr>
+    <tr><td><b>2 · Mở rộng cơ chế</b></td><td>11–20</td><td>Mỗi màn một biến thể lưới (ô đặc biệt) hoặc kiểu địch mới</td><td>15 Cầu Đá · 20 Pháo Đài Đen</td></tr>
+    <tr><td><b>3 · Tăng thử thách</b></td><td>21–30</td><td>Siết tài nguyên: thành ít máu, cầu quay chậm, đợt đôi</td><td>25 Đèo Hiểm · 30 Vua Đỏ Trở Lại</td></tr>
+    <tr><td><b>4 · Biến thể phức tạp</b></td><td>31–40</td><td>Hai cầu truyền động, ô đảo chiều, địch tấn công hai hướng</td><td>35 Cổng Sắt · 40 Quân Đoàn Đen</td></tr>
+    <tr><td><b>5 · Thử thách cao</b></td><td>41–50</td><td>Tổng hợp mọi cơ chế, trùm nhiều giai đoạn</td><td>45 Cổng Địa Ngục · 50 Vua Đen</td></tr>
+  </table></div>
+  <p class="cap">Màn 1–15 đã có trong game. Màn 16–50 là kế hoạch; bảng chi tiết 50 màn nằm trong file bang_tien_trinh_50_level.xlsx và báo cáo thiết kế level.</p>
+
+  <div class="shots">
+    <figure><img src="img/level_01.png" alt="Tranh màn 1"><figcaption>Màn 1 · Đồng Cỏ</figcaption></figure>
+    <figure><img src="img/level_05.png" alt="Tranh màn 5"><figcaption>Màn 5 · Hẻm Núi</figcaption></figure>
+    <figure><img src="img/level_10.png" alt="Tranh màn 10"><figcaption>Màn 10 · Vua Đỏ (trùm)</figcaption></figure>
+    <figure><img src="img/level_13.png" alt="Tranh màn 13"><figcaption>Màn 13 · Đồi Cừu</figcaption></figure>
+    <figure><img src="img/level_15.png" alt="Tranh màn 15"><figcaption>Màn 15 · Cầu Đá</figcaption></figure>
+  </div>
+</section>
+
+<!-- ========================================================= 9 -->
+<section id="meta" class="chapter">
+  <h2><span class="no">9</span>Sảnh và tiến trình</h2>
+  <p>Sảnh có thanh tài nguyên ở trên (ảnh đại diện, vàng, kim cương, cài đặt) và thanh 5 tab ở dưới. <b>CHIẾN ĐẤU</b> ở giữa, to nhất và là tab mặc định.</p>
+  <div class="tw"><table>
+    <tr><th>Tab</th><th>Nội dung</th><th>Chấm đỏ khi</th></tr>
+    <tr><td><b>Cửa hàng</b></td><td>Rương Gỗ, Bạc, Vàng; đổi kim cương lấy vàng</td><td>Có rương miễn phí</td></tr>
+    <tr><td><b>Lính</b></td><td>Đội hình (cố định ở trên), bộ sưu tập cuộn được, chi tiết và nâng cấp lính</td><td>Có lính đủ vàng hoặc thẻ để nâng</td></tr>
+    <tr><td><b>CHIẾN ĐẤU</b></td><td>Chọn màn bằng vuốt trái phải, xem trước địch và thưởng, nút CHƠI; nút Sự kiện (tuần tra, triệu hồi)</td><td>Có màn mới; kho tuần tra đầy nửa; còn lượt triệu hồi miễn phí</td></tr>
+    <tr><td><b>Thành</b></td><td>Cấp thành, Xưởng 3 nâng cấp, sơ đồ ô gear đã mở</td><td>Đủ vàng nâng thành</td></tr>
+    <tr><td><b>Tướng</b></td><td>Danh sách tướng, chọn tướng dẫn đội, lên cấp, lên sao</td><td>Có tướng nâng được</td></tr>
+  </table></div>
+
+  <div class="grid2">
+    <div>
+      <h3>Cấp thành</h3>
+      <div class="tw"><table class="compact">
+        <tr><th class="n">Cấp</th><th class="n">Máu thành</th><th class="n">Trần thịt</th><th class="n">Ô gear</th><th class="n">Ô đội</th><th class="n">Giá (vàng)</th></tr>
+        <tr><td class="n">1</td><td class="n">×1,00</td><td class="n">20</td><td class="n">12</td><td class="n">3</td><td class="n">—</td></tr>
+        <tr><td class="n">2</td><td class="n">×1,15</td><td class="n">20</td><td class="n">14</td><td class="n">3</td><td class="n">150</td></tr>
+        <tr><td class="n">3</td><td class="n">×1,30</td><td class="n">22</td><td class="n">16</td><td class="n">4</td><td class="n">250</td></tr>
+        <tr><td class="n">4</td><td class="n">×1,50</td><td class="n">22</td><td class="n">18</td><td class="n">4</td><td class="n">400</td></tr>
+        <tr><td class="n">5</td><td class="n">×1,70</td><td class="n">24</td><td class="n">20</td><td class="n">4</td><td class="n">600</td></tr>
+        <tr><td class="n">6</td><td class="n">×1,95</td><td class="n">24</td><td class="n">22</td><td class="n">5</td><td class="n">850</td></tr>
+        <tr><td class="n">7</td><td class="n">×2,20</td><td class="n">26</td><td class="n">23</td><td class="n">5</td><td class="n">1.200</td></tr>
+        <tr><td class="n">8</td><td class="n">×2,50</td><td class="n">26</td><td class="n">23</td><td class="n">5</td><td class="n">1.650</td></tr>
+        <tr><td class="n">9</td><td class="n">×2,85</td><td class="n">28</td><td class="n">23</td><td class="n">5</td><td class="n">2.200</td></tr>
+        <tr><td class="n">10</td><td class="n">×3,20</td><td class="n">30</td><td class="n">23</td><td class="n">5</td><td class="n">3.000</td></tr>
+      </table></div>
+      <p class="cap">Máu thành là hệ số nhân với máu gốc của từng màn.</p>
+    </div>
+    <div style="display:grid;gap:12px;align-content:start">
+      <h3>Xưởng</h3>
+      <div class="tw"><table class="compact">
+        <tr><th>Nâng cấp</th><th>Mỗi cấp</th><th class="n">Tối đa</th><th>Giá cấp n</th></tr>
+        <tr><td><b>Lò thịt</b></td><td>+1 thịt thu nhập mỗi đợt</td><td class="n">5</td><td>120 × 1,6ⁿ</td></tr>
+        <tr><td><b>Kho dự trữ</b></td><td>+1 thịt khi vào trận</td><td class="n">4</td><td>100 × 1,8ⁿ</td></tr>
+        <tr><td><b>Bánh răng tổng</b></td><td>Gear sinh lính nhanh hơn 5%</td><td class="n">5</td><td>150 × 1,6ⁿ</td></tr>
+      </table></div>
+      <h3>Cửa hàng rương</h3>
+      <div class="tw"><table class="compact">
+        <tr><th>Rương</th><th>Giá</th><th>Nội dung</th></tr>
+        <tr><td><b>Gỗ</b></td><td>Miễn phí mỗi 4 giờ</td><td>3 thẻ + 50–100 vàng</td></tr>
+        <tr><td><b>Bạc</b></td><td>600 vàng</td><td>8 thẻ</td></tr>
+        <tr><td><b>Vàng</b></td><td>120 kim cương</td><td>25 thẻ, ít nhất 3 Hiếm; lần thứ 10 chắc chắn có Sử thi</td></tr>
+        <tr><td><b>Chiến thắng</b></td><td>Sau mỗi trận thắng</td><td>2 thẻ (+1 nếu 3★)</td></tr>
+      </table></div>
+      <p class="cap">Đổi 20 kim cương lấy 500 vàng. Người chơi mới có 30 kim cương.</p>
+    </div>
+  </div>
+
+  <h3>Mở rương</h3>
+  <p>Phần thưởng được cộng ngay khi bấm mở, trước hoạt ảnh, nên bỏ qua hay tắt game giữa chừng không mất đồ. Hoạt ảnh gồm: rương rơi và nảy, chờ chạm (khe nắp sáng theo độ hiếm cao nhất bên trong), bật nắp, lật từng thẻ, dừng lâu hơn cho thẻ Sử thi và lính mới, rồi bảng tổng kết. Có nút BỎ QUA và tuỳ chọn "Mở rương nhanh" trong cài đặt.</p>
+
+  <h3>Thưởng sau trận</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Trường hợp</th><th>Thưởng</th><th class="n">Màn 1</th><th class="n">Màn 5</th><th class="n">Màn 10</th></tr>
+    <tr><td>Thắng 3★</td><td>60 + 40 × số màn + 20 × số sao (vàng)</td><td class="n">160</td><td class="n">320</td><td class="n">520</td></tr>
+    <tr><td>Lần đầu qua màn</td><td>Vàng ×2, mở màn sau, quà lính (nếu có)</td><td class="n">320</td><td class="n">640</td><td class="n">1.040</td></tr>
+    <tr><td>3★ lần đầu</td><td>+10 kim cương</td><td colspan="3"></td></tr>
+    <tr><td>Thua</td><td>15 vàng × số đợt đã qua</td><td colspan="3"></td></tr>
+  </table></div>
+
+  <div class="shots">
+    <figure><img src="img/menu_battle.png" alt="Tab chiến đấu"><figcaption>CHIẾN ĐẤU: chọn màn, xem trước địch.</figcaption></figure>
+    <figure><img src="img/menu_troops.png" alt="Tab lính"><figcaption>Lính: đội hình ở trên, bộ sưu tập ở dưới.</figcaption></figure>
+    <figure><img src="img/menu_troops_drag.png" alt="Kéo thẻ vào đội"><figcaption>Kéo thẻ lính thả vào ô đội.</figcaption></figure>
+    <figure><img src="img/menu_castle.png" alt="Tab thành"><figcaption>Thành: cấp thành, xưởng, sơ đồ ô.</figcaption></figure>
+    <figure><img src="img/menu_shop.png" alt="Tab cửa hàng"><figcaption>Cửa hàng: 3 loại rương.</figcaption></figure>
+    <figure><img src="img/menu_chest_legend.png" alt="Mở rương ra thẻ hiếm"><figcaption>Mở rương: lật thẻ độ hiếm cao.</figcaption></figure>
+  </div>
+</section>
+
+<!-- ========================================================= 10 -->
+<section id="giu-chan">
+  <h2><span class="no">10</span>Giữ chân người chơi</h2>
+  <div class="grid2">
+    <div class="box"><h4>Quà đăng nhập 7 ngày</h4>
+      <div class="tw"><table class="compact">
+        <tr><th class="n">Ngày</th><th>Quà</th></tr>
+        <tr><td class="n">1</td><td>300 vàng</td></tr><tr><td class="n">2</td><td>20 kim cương</td></tr><tr><td class="n">3</td><td>8 thẻ lính</td></tr>
+        <tr><td class="n">4</td><td>10 mảnh tướng nổi bật</td></tr><tr><td class="n">5</td><td>50 kim cương</td></tr><tr><td class="n">6</td><td>1.500 vàng</td></tr>
+        <tr><td class="n">7</td><td><b>Tướng Hiền Giả Lục Diệp</b> (Sử thi)</td></tr>
+      </table></div>
+      <p class="cap">Bỏ lỡ một ngày không mất chuỗi. Xong 7 ngày thì mở khung ảnh Vàng và chuỗi bắt đầu lại.</p>
+    </div>
+    <div class="box"><h4>Nhiệm vụ ngày (làm mới lúc 0h)</h4>
+      <div class="tw"><table class="compact">
+        <tr><th>Nhiệm vụ</th><th>Thưởng</th></tr>
+        <tr><td>Đăng nhập</td><td>100 vàng</td></tr><tr><td>Thắng 2 trận</td><td>300 vàng</td></tr><tr><td>Mở 1 rương</td><td>5 kim cương</td></tr>
+        <tr><td>Nâng cấp lính hoặc tướng 2 lần</td><td>200 vàng</td></tr><tr><td>Thu hoạch tuần tra</td><td>150 vàng</td></tr><tr><td>Triệu hồi tướng 1 lần</td><td>10 kim cương</td></tr>
+      </table></div>
+      <p class="cap">Mỗi nhiệm vụ +20 điểm năng động. Mốc 40 điểm: 400 vàng · 80: 20 kim cương · 120: 5 mảnh tướng nổi bật.</p>
+    </div>
+    <div class="box"><h4>Tuần tra</h4>
+      <ul>
+        <li>Vàng tích theo giờ thực, kể cả khi tắt game: <code>60 + 60 × số màn đã qua</code> vàng/giờ.</li>
+        <li>Kho chứa tối đa 8 giờ.</li>
+        <li>Tuần tra nhanh: nhận ngay 2 giờ vàng, 2 lượt miễn phí mỗi ngày, sau đó 20 kim cương.</li>
+      </ul></div>
+    <div class="box"><h4>Hồ sơ và ảnh đại diện</h4>
+      <ul>
+        <li>Chạm ảnh đại diện để đổi tên, ảnh, khung và xem thành tích.</li>
+        <li>25 ảnh: 2 hàng mở sẵn, hàng 3/4/5 mở khi qua 3/6/9 màn. Chân dung tướng đã có cũng dùng được.</li>
+        <li>Khung: Gỗ (mặc định), Bạc (qua 3 màn), Vàng (đủ quà 7 ngày), Hoàng gia (có tướng Huyền thoại).</li>
+      </ul></div>
+  </div>
+  <div class="shots">
+    <figure><img src="img/menu_events.png" alt="Bảng sự kiện"><figcaption>Sự kiện: tuần tra và triệu hồi.</figcaption></figure>
+    <figure><img src="img/menu_login.png" alt="Quà 7 ngày"><figcaption>Quà đăng nhập 7 ngày.</figcaption></figure>
+    <figure><img src="img/menu_quests.png" alt="Nhiệm vụ ngày"><figcaption>Nhiệm vụ ngày và mốc điểm.</figcaption></figure>
+    <figure><img src="img/menu_profile.png" alt="Hồ sơ"><figcaption>Hồ sơ, ảnh đại diện, khung.</figcaption></figure>
+  </div>
+</section>
+
+<!-- ========================================================= 11 -->
+<section id="kinh-te" class="chapter">
+  <h2><span class="no">11</span>Kinh tế tổng</h2>
+  <div class="tw"><table>
+    <tr><th>Tiền tệ</th><th>Nguồn</th><th>Chỗ tiêu</th></tr>
+    <tr><td><b>Vàng</b></td><td>Thắng, thua trận; tuần tra; rương Gỗ; nhiệm vụ; quà 7 ngày; triệu hồi ra vàng; đổi từ kim cương</td><td>Lên cấp lính, lên cấp tướng, nâng thành, Xưởng, rương Bạc</td></tr>
+    <tr><td><b>Kim cương</b></td><td>30 lúc bắt đầu; 3★ lần đầu; nhiệm vụ và mốc điểm; quà 7 ngày</td><td>Rương Vàng, triệu hồi tướng, tuần tra nhanh thêm, đổi vàng</td></tr>
+    <tr><td><b>Thẻ lính</b></td><td>Rương, thưởng trận, quà qua màn, quà 7 ngày</td><td>Mở khoá lính, lên sao lính; thừa thì đổi 20 vàng</td></tr>
+    <tr><td><b>Mảnh tướng</b></td><td>Triệu hồi, quà 7 ngày, mốc nhiệm vụ, tướng trùng (20 mảnh)</td><td>Mở khoá tướng (30), lên sao tướng</td></tr>
+    <tr><td><b>Thịt</b> (chỉ trong trận)</td><td>Thịt đầu trận, thu nhập đợt, lãi, giết địch, Đầu bếp, bán gear</td><td>Mua gear, đổi shop</td></tr>
+  </table></div>
+  <p>Không có thể lực giới hạn số trận. Game không có quảng cáo hay gói nạp; kim cương chỉ đến từ việc chơi.</p>
+  <h3>Nhịp mục tiêu 30 phút đầu</h3>
+  <ul>
+    <li>Qua màn 1–3, nhận Kỵ thương, Tu sĩ, Thợ mỏ.</li>
+    <li>Mở khoảng 6 rương, nâng thành lên cấp 3–4 (đội 4 ô, 16–18 ô gear).</li>
+    <li>2–3 lính chính đạt cấp 4–5.</li>
+    <li>Nhận quà ngày 1, hoàn thành 3–4 nhiệm vụ, thử triệu hồi miễn phí.</li>
+  </ul>
+</section>
+
+<!-- ========================================================= 12 -->
+<section id="ui">
+  <h2><span class="no">12</span>Giao diện và hướng dẫn</h2>
+  <h3>Luồng màn hình</h3>
+  <div class="loop">
+    <span class="step">Mở game</span><span class="arr">→</span><span class="step hot">Sảnh · tab CHIẾN ĐẤU</span><span class="arr">→</span><span class="step">Chọn màn · CHƠI</span><span class="arr">→</span><span class="step hot">Trận</span><span class="arr">→</span><span class="step">Bảng kết quả</span><span class="arr">→</span><span class="step">Về sảnh / Chơi lại / Màn tiếp</span>
+  </div>
+  <p class="cap">Từ sảnh: 5 tab ở dưới; ảnh đại diện mở Hồ sơ; nút Sự kiện, Quà 7 ngày, Nhiệm vụ mở popup; cài đặt có âm thanh và "Mở rương nhanh".</p>
+
+  <h3>Hướng dẫn người mới (màn 1)</h3>
+  <ol>
+    <li>Mua gear trong shop.</li>
+    <li>Gear chạm quả cầu cam mới quay; chỉ gear đang quay mới sinh lính.</li>
+    <li>Ghép 2 gear giống nhau.</li>
+    <li>Bấm SẴN SÀNG.</li>
+    <li>Hết đợt: nhận thịt và lãi.</li>
+  </ol>
+  <p>Mỗi bước có mũi tên và khung sáng chỉ đúng chỗ, bỏ qua được bất cứ lúc nào. Save cũ đã qua màn 1 thì coi như đã xong hướng dẫn.</p>
+
+  <h3>Nguyên tắc giao diện</h3>
+  <ul>
+    <li>Chơi một tay: nút quan trọng (SẴN SÀNG, CHƠI, tab CHIẾN ĐẤU) nằm ở nửa dưới màn hình.</li>
+    <li>Không đủ thịt thì thẻ shop mờ và giá đỏ; bàn đầy thì báo "Bàn đầy, hãy ghép hoặc bán".</li>
+    <li>Mọi phần thưởng có hiệu ứng số chạy lên hoặc vật phẩm bay về thanh tài nguyên.</li>
+    <li>Chữ tiếng Việt dùng font Paytone One; ký hiệu ★ ◀ ▶ lấy từ DejaVu Sans để không hiện ô vuông.</li>
+  </ul>
+</section>
+
+<!-- ========================================================= 13 -->
+<section id="art">
+  <h2><span class="no">13</span>Hình ảnh và âm thanh</h2>
+  <div class="grid2">
+    <div class="box"><h4>Phong cách hình</h4>
+      <ul>
+        <li>Pixel art <b>Tiny Swords</b> (Pixel Frog): lính, nhà, cây, UI giấy và gỗ.</li>
+        <li><b>Ngôn ngữ màu:</b> phe ta xanh, phe địch đỏ/đen, không bao giờ đổi. Bậc gear đổi màu áo lính ta. Độ hiếm: xám, xanh dương, tím, vàng cam.</li>
+        <li><b>Hình dáng khác trước, màu khác sau:</b> hai lính cùng sprite phải khác rõ ở đồ cầm, cỡ người hoặc hiệu ứng.</li>
+        <li>Tướng đổi màu bằng shader (chỉ đổi vùng màu đội, giữ da, tóc, kim loại), thêm áo choàng và hào quang vẽ bằng code.</li>
+        <li>Rương, bánh răng, ổ khoá, hoa văn ô đặc biệt được vẽ bằng code.</li>
+        <li>Mỗi màn có nền riêng: cỏ, đá, nước, cây thông lay nhẹ.</li>
+      </ul></div>
+    <div class="box"><h4>Âm thanh</h4>
+      <ul>
+        <li>Toàn bộ hiệu ứng âm thanh được <b>tổng hợp bằng code</b> (sóng sine, vuông, răng cưa, tam giác, nhiễu) lúc mở game, không dùng file âm thanh.</li>
+        <li>Khoảng 25 âm: chém, tên bay, chết, hồi máu, đánh tường, đặt gear, ghép, mua, bán, đổi shop, xu, mở rương, lật thẻ, Sử thi, Huyền thoại, tướng xuất trận, bắt đầu đợt, thắng, thua, nhảy mừng…</li>
+        <li>Mỗi âm có khoảng nghỉ tối thiểu để trận đông lính không bị ồn.</li>
+        <li>Chưa có nhạc nền (mục 16).</li>
+      </ul></div>
+  </div>
+</section>
+
+<!-- ========================================================= 14 -->
+<section id="ky-thuat" class="chapter">
+  <h2><span class="no">14</span>Kỹ thuật</h2>
+  <div class="grid2">
+    <div class="box"><h4>Nền tảng</h4>
+      <ul>
+        <li>Godot 4.7.2, GDScript, màn hình dọc 720×1280, co giãn theo cửa sổ.</li>
+        <li>Bản Windows (.exe + .pck) và bản Web (WebAssembly, không luồng, WebGL2).</li>
+        <li>Lưu game trong <code>user://save.json</code>: ghi ra file tạm rồi đổi tên để không hỏng save khi tắt đột ngột.</li>
+      </ul></div>
+    <div class="box"><h4>Dữ liệu điều khiển cân bằng</h4>
+      <ul>
+        <li>Mọi công thức và con số nằm trong <code>game/data/balance.json</code>, tính bằng một bộ đọc công thức riêng.</li>
+        <li>Lính là file <code>troops/*.tres</code>, màn là <code>levels/*.tres</code>.</li>
+        <li>Bảng Admin (chỉ có ở bản debug) sửa số trực tiếp, có biểu đồ và mô phỏng. Tab Lính có ô Tốc chạy, Tỉ lệ chí mạng, Sát thương chí mạng; DPS và sức mạnh đội đã tính cả chí mạng.</li>
+      </ul></div>
+  </div>
+  <div class="tw"><table class="compact">
+    <tr><th>Thư mục</th><th>Nội dung</th></tr>
+    <tr><td><code>game/battle/</code></td><td>Battle (pha nghỉ/đánh, shop, thưởng), GearBoard (lưới, truyền động, kéo thả, ghép), Gear, Unit (AI lính, kỹ năng), WaveDirector, Projectile, ShopRoller, Background</td></tr>
+    <tr><td><code>game/core/</code></td><td>PlayerData (save, tiền, lính, đội, thành, tướng, nhiệm vụ), Economy, Balance, FormulaEngine, Heroes, Meta, SoundLib, SpriteLib, Content</td></tr>
+    <tr><td><code>game/menu/</code></td><td>Home (thanh tài nguyên, 5 tab), các trang, popup sự kiện, quà, nhiệm vụ, hồ sơ</td></tr>
+    <tr><td><code>game/ui/</code></td><td>HUD trận, UiKit (theme, nút, font), Coach (hướng dẫn), ChestOpening, SummonOpening, shader đổi màu</td></tr>
+    <tr><td><code>game/admin/</code></td><td>Bảng Admin, Bot tự chơi, SimRunner</td></tr>
+    <tr><td><code>tests/</code></td><td>Kiểm thử chạy không cửa sổ và cảnh chụp ảnh, quay video</td></tr>
+  </table></div>
+  <h3>Kiểm thử tự động</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Bài test</th><th>Kiểm tra</th><th>Kết quả gần nhất</th></tr>
+    <tr><td>BalanceTest</td><td>Công thức, giá, thu nhập, lãi, hoàn tiền, bảng tỉ lệ, kỹ năng lính, chí mạng</td><td class="ok">565/565</td></tr>
+    <tr><td>MetaTest</td><td>Tướng, triệu hồi, bảo hiểm, quà 7 ngày, nhiệm vụ, avatar</td><td class="ok">52/52</td></tr>
+    <tr><td>TileTest</td><td>Luật 4 loại ô đặc biệt</td><td class="ok">14/14</td></tr>
+    <tr><td>JitterTest</td><td>Lính đứng gần nhau không giật, không chồng lên nhau</td><td class="ok">Đạt</td></tr>
+    <tr><td>SoundCheck</td><td>Mọi âm không câm, không vỡ tiếng</td><td class="ok">Đạt</td></tr>
+  </table></div>
+  <p class="cap">Mọi test chạy trên hồ sơ tạm, không ghi vào save thật.</p>
+</section>
+
+<!-- ========================================================= 15 -->
+<section id="can-bang">
+  <h2><span class="no">15</span>Cân bằng và số liệu</h2>
+  <p>Chưa có người chơi thật, nên cân bằng dùng <b>bot tự chơi</b>. Bot mua món ghép được trước, rồi món hiếm nhất mua nổi, giữ 5 thịt để ăn lãi từ đợt 3, và ghép ngay khi có thể. Mỗi màn 1–10 chạy 4 lần với hồ sơ người chơi hợp lý ở giai đoạn đó (cấp thành, cấp lính, đội hình).</p>
+  <div class="bars" aria-label="Tỉ lệ thắng của bot theo màn">
+    <div class="bar"><span>Màn 1</span><div class="track"><div class="fill" style="width:100%"></div></div><span>4/4 · 1:14</span></div>
+    <div class="bar"><span>Màn 2</span><div class="track"><div class="fill" style="width:100%"></div></div><span>4/4 · 1:42</span></div>
+    <div class="bar"><span>Màn 3</span><div class="track"><div class="fill" style="width:100%"></div></div><span>4/4 · 2:18</span></div>
+    <div class="bar"><span>Màn 4</span><div class="track"><div class="fill" style="width:100%"></div></div><span>4/4 · 2:21</span></div>
+    <div class="bar"><span>Màn 5</span><div class="track"><div class="fill" style="width:100%"></div></div><span>4/4 · 2:35</span></div>
+    <div class="bar"><span>Màn 6</span><div class="track"><div class="fill" style="width:100%"></div></div><span>4/4 · 3:27</span></div>
+    <div class="bar"><span>Màn 7</span><div class="track"><div class="fill" style="width:100%"></div></div><span>4/4 · 4:06</span></div>
+    <div class="bar"><span>Màn 8</span><div class="track"><div class="fill mid" style="width:50%"></div></div><span>2/4 · 4:00</span></div>
+    <div class="bar"><span>Màn 9</span><div class="track"><div class="fill mid" style="width:50%"></div></div><span>2/4 · 4:45</span></div>
+    <div class="bar"><span>Màn 10</span><div class="track"><div class="fill mid" style="width:50%"></div></div><span>2/4 · 3:25</span></div>
+  </div>
+  <p class="cap">Tỉ lệ thắng và thời gian trung bình mỗi trận, sau vòng chỉnh sức mạnh địch.</p>
+  <div class="tw"><table class="compact">
+    <tr><th>Màn</th><th class="n">Sức mạnh cũ</th><th class="n">Sức mạnh mới</th><th>Thắng trước → sau</th><th>Lý do</th></tr>
+    <tr><td>2</td><td class="n">2,0</td><td class="n">1,4</td><td>4/4 → 4/4</td><td>Khó hơn màn 3 (1,5): gai độ khó sai chỗ</td></tr>
+    <tr><td>8</td><td class="n">2,8</td><td class="n">2,4</td><td>1/4 → 2/4</td><td>Bậc khó đột ngột sau màn 7</td></tr>
+    <tr><td>9</td><td class="n">3,0</td><td class="n">2,6</td><td>0/4 → 2/4</td><td>Bot thua ngay đợt 1</td></tr>
+    <tr><td>10</td><td class="n">3,0</td><td class="n">2,7</td><td>0/4 → 2/4</td><td>Trùm quá sức, giờ đúng mục tiêu 40–60%</td></tr>
+  </table></div>
+  <h3>Kiểm tra lại sau khi thêm chí mạng</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Phương án</th><th>Màn 1–4</th><th>Màn 5</th><th>Màn 6</th><th>Màn 7</th><th>Màn 8</th><th>Màn 9</th><th>Màn 10</th></tr>
+    <tr><td>Chưa có chí mạng</td><td>4/4</td><td>4/4</td><td>4/4</td><td>4/4</td><td>2/4</td><td>2/4</td><td>2/4</td></tr>
+    <tr><td>Hai phe đều chí mạng</td><td>4/4</td><td class="bad">3/4</td><td class="bad">2/4</td><td class="bad">3/4</td><td class="bad">1/4</td><td class="bad">0/4</td><td class="bad">1/4</td></tr>
+    <tr><td><b>Chỉ lính ta chí mạng (đang dùng)</b></td><td>4/4</td><td>4/4</td><td>4/4</td><td>4/4</td><td>2/4</td><td>1/4</td><td>2/4</td></tr>
+  </table></div>
+  <p class="cap">Mỗi ô là số trận thắng trên 4 trận của bot. Với 4 trận mỗi màn, chênh 1 trận (màn 9) nằm trong sai số.</p>
+
+  <h3>Mục tiêu và việc còn lại</h3>
+  <ul>
+    <li>Mục tiêu tỉ lệ thắng: màn dễ 70–90%, màn vừa 40–60%, trùm 10–30% ở lần đầu, tăng dần khi người chơi nâng cấp.</li>
+    <li>Màn 2–7 đang <b>dễ hơn mục tiêu</b> với bot. Người thật chơi chậm hơn bot nên có thể vẫn hợp lý; cần thử với người thật.</li>
+    <li>Màn 8–9 vẫn <b>khó hơn mục tiêu</b> và còn lượt thua ngay đợt 1. Vòng chỉnh sau: làm đợt 1 của màn 8–10 nhẹ hơn thay vì hạ sức mạnh cả màn.</li>
+    <li>Bot ghép ngay lập tức nên chơi giỏi hơn người mới. Số liệu này là giới hạn trên, không thay được thử nghiệm với người chơi.</li>
+  </ul>
+  <h3>Chỉ số sẽ đo khi có người chơi</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Chỉ số</th><th>Định nghĩa</th><th>Dùng để</th></tr>
+    <tr><td>Reach</td><td>% người chơi tới được màn N</td><td>Tìm màn làm người chơi dừng</td></tr>
+    <tr><td>Churn</td><td>% người bỏ game sau màn N</td><td>Tìm gai độ khó hoặc màn nhàm</td></tr>
+    <tr><td>Win rate</td><td>Số lần thắng ÷ số lần chơi màn N</td><td>So với mục tiêu theo độ khó</td></tr>
+    <tr><td>Thời gian chơi</td><td>Thời gian trung bình một trận</td><td>Giữ trận trong 3–5 phút</td></tr>
+  </table></div>
+</section>
+
+<!-- ========================================================= 16 -->
+<section id="lo-trinh" class="chapter">
+  <h2><span class="no">16</span>Lộ trình phát triển</h2>
+  <div class="tw"><table>
+    <tr><th>Đợt</th><th>Nội dung</th><th>Vì sao</th></tr>
+    <tr><td><b>1</b> <span class="pill ok">Đã xong</span></td><td>4 loại ô đặc biệt, màn 11–15, hướng dẫn người mới</td><td>Làm sâu cơ chế bánh răng mà không cần hình mới</td></tr>
+    <tr><td><b>2</b></td><td>Chọn 1 trong 3 buff giữa đợt; cộng hưởng lính (3 lính cận chiến, 2 lính bắn xa…)</td><td>Thêm quyết định trong trận, tăng khả năng chơi lại</td></tr>
+    <tr><td><b>3</b></td><td>Kỹ năng chủ động của tướng (nút bấm, hồi chiêu); địch mới; trùm nhiều giai đoạn</td><td>Cho người chơi một khoảnh khắc chủ động mỗi đợt</td></tr>
+    <tr><td><b>4</b></td><td>Chế độ vô tận, thử thách ngày, sự kiện theo mùa</td><td>Nội dung lặp lại không cần làm màn mới</td></tr>
+    <tr><td><b>Sau đó</b></td><td>Màn 16–50 theo kế hoạch ở mục 8; nhạc nền; tiếng Anh</td><td>Đủ nội dung cho bản hoàn chỉnh</td></tr>
+  </table></div>
+  <h3>Rủi ro đã biết</h3>
+  <ul>
+    <li><b>Hình:</b> bộ Tiny Swords miễn phí chỉ có 5 loại người. Hướng xử lý: đổi đồ cầm, shader đổi màu, hiệu ứng vẽ bằng code; về lâu dài mua bản đầy đủ (có phe Goblin) cho địch.</li>
+    <li><b>Độ khó màn 8–10</b> chưa đạt mục tiêu (mục 15).</li>
+    <li><b>Bản web</b> nặng khoảng 43 MB lần tải đầu.</li>
+    <li><b>Cân bằng dựa trên bot</b>, chưa có dữ liệu người chơi thật.</li>
+  </ul>
+</section>
+
+<!-- ========================================================= A -->
+<section id="phu-luc">
+  <h2><span class="no">A</span>Phụ lục</h2>
+  <h3>Công thức trong balance.json</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Tên</th><th>Công thức</th></tr>
+    <tr><td>Giá lên cấp lính</td><td class="mono">round(50 × 1,35^(level − 1))</td></tr>
+    <tr><td>Hệ số lính</td><td class="mono">(1 + 0,08 × (level − 1)) × 1,2^(stars − 1)</td></tr>
+    <tr><td>Hệ số bậc gear</td><td class="mono">1,75^(tier − 1)</td></tr>
+    <tr><td>Giây sinh 1 lính</td><td class="mono">base × 0,92^(tier − 1) ÷ (1 + master_bonus), tối thiểu 0,2</td></tr>
+    <tr><td>Thu nhập đợt</td><td class="mono">5 + wave + bonus</td></tr>
+    <tr><td>Lãi</td><td class="mono">min(floor(meat ÷ 5), 3)</td></tr>
+    <tr><td>Sát thương trung bình có chí mạng</td><td class="mono">damage × (1 + crit_chance × (crit_mult − 1))</td></tr>
+    <tr><td>Hệ số địch</td><td class="mono">power × (1 + 0,2 × wave)</td></tr>
+    <tr><td>Sát thương vào thành</td><td class="mono">damage × 0,35</td></tr>
+    <tr><td>Giá Xưởng</td><td class="mono">round(base × growth^level)</td></tr>
+    <tr><td>Vàng thắng</td><td class="mono">60 + 40 × (level + 1) + 20 × stars</td></tr>
+    <tr><td>Vàng thua</td><td class="mono">15 × waves</td></tr>
+    <tr><td>Vàng tuần tra / giờ</td><td class="mono">60 + 60 × cleared</td></tr>
+    <tr><td>Sao cuối trận</td><td class="mono">1 + (hp ≥ 45%) + (hp ≥ 80%)</td></tr>
+  </table></div>
+  <h3>Thuật ngữ</h3>
+  <div class="tw"><table class="compact">
+    <tr><th>Từ</th><th>Nghĩa</th></tr>
+    <tr><td>Gear</td><td>Bánh răng trên bàn; mỗi gear gắn với một loại lính và có bậc 1–5</td></tr>
+    <tr><td>Cầu truyền động</td><td>Quả cầu cam ở ô (2,1), nguồn quay của mọi gear</td></tr>
+    <tr><td>Bậc</td><td>Cấp của gear trong trận, tăng khi ghép</td></tr>
+    <tr><td>Cấp, sao (lính)</td><td>Nâng cấp ngoài sảnh bằng vàng và thẻ</td></tr>
+    <tr><td>Thịt</td><td>Tiền trong trận</td></tr>
+    <tr><td>Chí mạng</td><td>Đòn đánh gây sát thương nhân hệ số, xảy ra theo tỉ lệ riêng của từng lính</td></tr>
+    <tr><td>Tốc chạy</td><td>Quãng đường lính chạy mỗi giây (điểm ảnh)</td></tr>
+    <tr><td>Tinh nhuệ</td><td>Địch có máu ×5, sát thương ×1,8, cho 3 thịt khi hạ</td></tr>
+    <tr><td>Lượt nghỉ / lượt đánh</td><td>Hai pha xen kẽ trong một màn</td></tr>
+    <tr><td>Bảo hiểm (pity)</td><td>Bảo đảm ra phần thưởng hiếm sau một số lần mở hoặc triệu hồi</td></tr>
+  </table></div>
+  <p class="cap">Tài liệu liên quan: báo cáo thiết kế level (bao_cao_thiet_ke_level.pdf), bảng 50 màn (.xlsx), video gameplay, bản chơi Windows và Web trong thư mục nộp.</p>
+</section>
+
+</main>
+</body></html>

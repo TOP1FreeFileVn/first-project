@@ -1,0 +1,25 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "miner"
+display_name = "Thợ mỏ"
+description = "Cầm cuốc, da dày. Đứng mũi chịu tên cho cả đội."
+rarity = 0
+unit_key = "PawnPickaxe"
+building = "House2"
+role = 0
+max_hp = 60.0
+damage = 6.0
+attack_range = 34.0
+attack_cooldown = 1.0
+move_speed = 60.0
+aggro_range = 200.0
+spawn_interval = 3.6
+max_alive = 3
+summon_weight = 1.1
+ability = 1
+ability_text = "Đào hầm: chịu ít hơn 50% sát thương từ tên và bom."
+ability_value = 0.5

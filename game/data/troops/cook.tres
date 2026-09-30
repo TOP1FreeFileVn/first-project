@@ -1,0 +1,29 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "cook"
+display_name = "Đầu bếp"
+description = "Không cầm vũ khí. Đứng sau nướng thịt cho bánh răng tổng."
+rarity = 2
+unit_key = "PawnMeat"
+building = "House1"
+role = 3
+max_hp = 40.0
+damage = 0.0
+attack_range = 0.0
+attack_cooldown = 1.0
+move_speed = 55.0
+aggro_range = 0.0
+spawn_interval = 7.0
+max_alive = 1
+summon_weight = 0.6
+ability = 6
+ability_text = "Nấu thịt: 6 giây một lần +1 thịt khi còn sống. (Đầu bếp địch hồi máu cho quân xung quanh.)"
+ability_value = 1.0
+ability_cooldown = 6.0
+ability_radius = 150.0
+crit_chance = 0.0
+crit_mult = 1.5

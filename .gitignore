@@ -1,0 +1,15 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Build outputs
+/Build/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local secrets / logs / backups
+.env
+debug.log
+*.godot-mcp-backup-*

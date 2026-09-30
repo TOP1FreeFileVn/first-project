@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://game/data/LevelData.gd" id="1_level"]
+
+[resource]
+script = ExtResource("1_level")
+display_name = "Màn 13 · Đồi Cừu"
+start_meat = 16.0
+core_hp = 155.0
+enemy_power = 3.6
+prep_time = 14.0
+waves = [{
+"gap": 12.0,
+"groups": [{"troop": "pawn", "count": 14, "interval": 1.5, "start": 0.0}, {"troop": "archer", "count": 6, "interval": 1.5, "start": 2.0}]
+}, {
+"gap": 14.0,
+"groups": [{"troop": "warrior", "count": 11, "interval": 1.4, "start": 0.0}, {"troop": "lancer", "count": 6, "interval": 1.4, "start": 2.0}]
+}, {
+"gap": 16.0,
+"groups": [{"troop": "assassin", "count": 5, "interval": 1.3, "start": 0.0}, {"troop": "warrior", "count": 10, "interval": 1.3, "start": 2.0}, {"troop": "archer", "count": 6, "interval": 1.3, "start": 4.0}]
+}, {
+"gap": 18.0,
+"groups": [{"troop": "lancer", "count": 12, "interval": 1.3, "start": 0.0}, {"troop": "monk", "count": 4, "interval": 1.3, "start": 2.0}]
+}, {
+"gap": 20.0,
+"groups": [{"troop": "warrior", "count": 12, "interval": 1.2, "start": 0.0}, {"troop": "assassin", "count": 6, "interval": 1.2, "start": 2.0}, {"troop": "lancer", "count": 1, "interval": 1.0, "start": 7.2, "elite": true}]
+}, {
+"gap": 22.0,
+"groups": [{"troop": "pawn", "count": 20, "interval": 1.1, "start": 0.0}, {"troop": "fire_archer", "count": 8, "interval": 1.1, "start": 2.0}, {"troop": "guard", "count": 4, "interval": 1.1, "start": 4.0}]
+}, {
+"gap": 24.0,
+"groups": [{"troop": "lancer", "count": 12, "interval": 1.0, "start": 0.0}, {"troop": "assassin", "count": 6, "interval": 1.0, "start": 2.0}, {"troop": "monk", "count": 4, "interval": 1.0, "start": 4.0}]
+}, {
+"gap": 26.0,
+"groups": [{"troop": "warrior", "count": 16, "interval": 0.9, "start": 0.0}, {"troop": "lancer", "count": 12, "interval": 0.9, "start": 2.0}, {"troop": "assassin", "count": 6, "interval": 0.9, "start": 4.0}, {"troop": "warrior", "count": 1, "interval": 1.0, "start": 8.1, "elite": true}, {"troop": "assassin", "count": 1, "interval": 1.0, "start": 8.1, "elite": true}]
+}]
+tiles = {"gold": [Vector2i(0, 1), Vector2i(4, 1), Vector2i(2, 3)], "rock": [Vector2i(3, 1)]}

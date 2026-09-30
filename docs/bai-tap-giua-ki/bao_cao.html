@@ -1,0 +1,742 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><title>Báo cáo thiết kế màn chơi – Gear Defenders</title><style>
+@font-face { font-family: Paytone; src: url('../../game/ui/fonts/PaytoneOne-Regular.ttf'); }
+@page { size: A4; margin: 14mm 13mm 16mm 13mm; }
+* { box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; color: #1f2a33; font-size: 10.6pt; line-height: 1.45; margin: 0; }
+h1, h2, h3, .title { font-family: Paytone, 'Segoe UI', sans-serif; font-weight: 400; }
+h2 { font-size: 20pt; color: #0d47a1; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; }
+h2 .num { display: inline-grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #e53935; color: #fff; font-size: 17pt; }
+h3 { font-size: 13pt; color: #263238; margin: 14px 0 6px; }
+.page { page-break-after: always; }
+.page:last-child { page-break-after: auto; }
+p { margin: 5px 0; }
+table { width: 100%; border-collapse: collapse; margin: 6px 0 10px; font-size: 9.2pt; }
+th { background: #0d47a1; color: #fff; padding: 5px 6px; text-align: left; font-weight: 600; }
+td { border-bottom: 1px solid #e0e6eb; padding: 4px 6px; vertical-align: top; }
+tr:nth-child(even) td { background: #f6f9fb; }
+table.small { font-size: 8.8pt; }
+table.small td, table.small th { text-align: center; } table.small td:first-child { text-align: left; font-weight: 600; }
+.t50 { font-size: 7.6pt; } .t50 td, .t50 th { padding: 2.5px 4px; }
+.t50 tr.b-boss td { background: #fff3e0; font-weight: 600; } .t50 tr.b-mini td { background: #fffde7; }
+.planned { font-style: italic; color: #607d8b; }
+.dots { color: #e53935; letter-spacing: 1px; white-space: nowrap; } .dots .off { color: #d7dde2; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.shot { width: 100%; border-radius: 10px; border: 2px solid #263238; }
+/* Phone screenshots: shrink to fit, never crop. */
+.short .shot { height: 330px; width: auto; max-width: 100%; display: block; margin: 0 auto; object-fit: contain; }
+.grid2 .shot { max-height: 470px; width: auto; max-width: 100%; display: block; margin: 0 auto; }
+/* On screen, show the report as A4 sheets like the PDF. */
+@media screen {
+  html { background: #dfe6ec; }
+  body { width: 210mm; margin: 16px auto; }
+  section.page { background: #fff; padding: 14mm 13mm 16mm; margin-bottom: 16px; min-height: 297mm; box-shadow: 0 2px 12px rgba(0,0,0,.18); }
+}
+figure { margin: 0; } figcaption { font-size: 8.6pt; color: #546e7a; text-align: center; margin-top: 3px; }
+.card { border: 1px solid #cfd8dc; border-radius: 12px; padding: 10px 12px; background: #fafcfd; }
+.card h4 { margin: 0 0 4px; font-size: 11pt; color: #0d47a1; }
+.tag { display: inline-block; background: #e3f2fd; color: #0d47a1; border-radius: 10px; padding: 1px 8px; margin: 2px 3px 2px 0; font-size: 9pt; font-weight: 600; }
+.note { background: #fff8e1; border-left: 5px solid #ffb300; padding: 8px 12px; border-radius: 6px; margin: 8px 0; }
+.warn { background: #ffebee; border-left: 5px solid #e53935; padding: 8px 12px; border-radius: 6px; margin: 8px 0; }
+.cover { height: 265mm; border: 4px double #111; padding: 14mm 12mm 10mm; display: flex; flex-direction: column; align-items: center;
+  text-align: center; font-family: 'Times New Roman', Times, serif; color: #111; }
+.cover .school { font-weight: 700; font-size: 13pt; line-height: 1.35; }
+.cover .logo { width: 150px; margin: 34px 0 44px; }
+.cover .kind { font-weight: 700; font-size: 26pt; letter-spacing: .5px; }
+.cover .topic { color: #e00000; font-weight: 700; font-size: 20pt; line-height: 1.3; margin: 18px 0 30px; }
+.cover .info { font-size: 13pt; line-height: 1.75; text-align: left; border-collapse: collapse; width: auto; margin: 0; }
+.cover .info td { border: 0; padding: 0 0 0 0; background: none !important; }
+.cover .info td:first-child { font-weight: 700; padding-right: 60px; }
+.cover .place { margin-top: auto; font-weight: 700; font-size: 13pt; }
+.brief { border: 1px solid #cfd8dc; border-radius: 12px; overflow: hidden; margin-bottom: 10px; page-break-inside: avoid; }
+.bhead { color: #fff; font-family: Paytone, sans-serif; font-size: 12pt; padding: 5px 12px; display: flex; justify-content: space-between; align-items: center; }
+.bhead .dots { color: #fff; } .bhead .dots .off { color: rgba(255,255,255,.35); }
+.bhead span { font-family: 'Segoe UI', sans-serif; font-size: 9pt; }
+.bbody { display: grid; grid-template-columns: 190px 1fr; gap: 10px; padding: 8px 10px; font-size: 8.8pt; }
+.bbody img { width: 190px; border-radius: 8px; border: 1px solid #90a4ae; }
+.bbody p { margin: 2px 0; }
+.kv span { display: inline-block; background: #eceff1; border-radius: 8px; padding: 0 6px; margin: 1px 3px 1px 0; }
+.waves { margin: 3px 0 3px 16px; padding: 0; } .waves li { margin: 0; }
+.toc li { margin: 4px 0; font-size: 11.5pt; }
+.phase { border-radius: 12px; padding: 8px 10px; color: #fff; font-size: 9pt; }
+.phase b { font-size: 11pt; display: block; }
+
+.ldd { font-size: 8.7pt; }
+.ldd h4 { margin: 6px 0 3px; font-size: 10pt; color: #0d47a1; }
+.ldd ul, .ldd ol { margin: 0 0 0 16px; padding: 0; } .ldd li { margin: 1px 0; }
+.lhead { color: #fff; font-family: Paytone, sans-serif; font-size: 15pt; padding: 6px 12px; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; }
+.lhead .tagbox { font-family: 'Segoe UI', sans-serif; font-size: 9.5pt; font-weight: 700; background: rgba(255,255,255,.2); border-radius: 8px; padding: 2px 8px; }
+.facts { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
+.facts span { background: #eceff1; border-radius: 8px; padding: 1px 7px; font-size: 8.2pt; }
+.lrow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+.statement { font-style: italic; font-size: 10.5pt; background: #fff8e1; border-left: 4px solid #ffb300; padding: 6px 10px; border-radius: 6px; }
+.ldd .art { width: 100%; height: 170px; object-fit: cover; border-radius: 8px; border: 1px solid #90a4ae; }
+table.core, table.kv2 { font-size: 8.3pt; margin: 0; }
+table.core th, table.kv2 th { background: #e3f2fd; color: #0d47a1; width: 34%; text-align: left; font-weight: 700; }
+.mapbox svg { max-height: 190px; }
+.legend { display: flex; flex-wrap: wrap; gap: 3px 10px; font-size: 7.6pt; color: #455a64; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 3px; vertical-align: -1px; }
+.flow { display: flex; align-items: center; gap: 4px; }
+.flow div { flex: 1; background: #f1f8e9; border: 1px solid #c5e1a5; border-radius: 8px; padding: 3px 6px; font-size: 8pt; text-align: center; }
+.flow div b { display: block; color: #33691e; }
+.flow .arrow { color: #90a4ae; }
+.ldd .waves { font-size: 8pt; }
+.tight table { font-size: 8pt; } .tight td, .tight th { padding: 2px 5px; }
+table.mech { font-size: 7.9pt; } table.mech td { padding: 3px 5px; }
+table.metrics td { text-align: center; }
+.ok { color: #2e7d32; font-weight: 700; } .ok-hi { color: #f57c00; font-weight: 700; } .bad { color: #c62828; font-weight: 700; }
+.compact h3 { margin: 8px 0 4px; } .compact p { margin: 3px 0; } .compact table { margin: 4px 0 6px; }
+</style></head><body>
+
+<section class="page"><div class="cover">
+  <div class="school">HỌC VIỆN CÔNG NGHỆ BƯU CHÍNH VIỄN THÔNG<br>VIỆN CÔNG NGHỆ THÔNG TIN VÀ TRUYỀN THÔNG CDIT</div>
+  <img class="logo" src="img/ptit_logo.png">
+  <div class="kind">BÁO CÁO BÀI TẬP GIỮA KÌ</div>
+  <div class="topic">Thiết kế màn chơi và cơ chế game<br>Gear Defenders</div>
+  <table class="info">
+    <tr><td>Giảng viên hướng dẫn:</td><td>ThS. Trần Duy Hiếu</td></tr>
+    <tr><td>Sinh viên thực hiện:</td><td>Nguyễn Đình Cường Quốc</td></tr>
+    <tr><td>Mã sinh viên:</td><td>B24DCGA124</td></tr>
+    <tr><td>Lớp:</td><td>D24CQGA04-B</td></tr>
+  </table>
+  <div class="place">HÀ NỘI - 2026</div>
+</div></section>
+
+<section class="page">
+  <h2>Mục lục</h2>
+  <ol class="toc">
+    <li>Giới thiệu game: tổng quan, USP, gameplay cơ bản, đối tượng và thị trường</li>
+    <li>Tiến trình 50 level: giai đoạn, level curve, bảng tiến trình, thư viện cơ chế</li>
+    <li>Level brief chi tiết level 1–10: chỉ số playtest và One-page Level Design Document cho từng level</li>
+    <li>Tổng kết và hướng phát triển</li>
+  </ol>
+  <h3>Tóm tắt</h3>
+  <p><b>Gear Defenders</b> là game thủ thành kết hợp ghép đồ (merge) trên điện thoại, màn hình dọc. Người chơi không điều khiển lính mà điều khiển <b>bộ máy bánh răng</b>: mỗi bánh răng (gear) là một doanh trại lính; gear chỉ sinh lính khi đang <b>quay</b>, và chỉ quay khi được trục cam trung tâm đẩy trực tiếp hoặc qua một chuỗi bánh răng ăn khớp. Giữa các đợt địch có <b>lượt nghỉ</b> để mua gear, xếp lại lưới và ghép hai gear giống nhau lên bậc cao hơn.</p>
+  <p>Bản demo có <b>15 level chơi được</b>, 13 loại lính, 6 tướng, làm bằng Godot 4 với bộ hình Tiny Swords. Tài liệu trình bày thiết kế cho <b>50 level</b>: 15 level đầu dùng số liệu thật từ dữ liệu game, các level sau là lộ trình dự kiến. Mỗi level trong 10 level đầu được viết theo khung <b>Purpose → Player/Mechanic → Dominant Feature → Goal → Challenge → Space → Encounter → Support → Outcome → Reward</b> của môn học, và được kiểm chứng bằng bot tự chơi (win rate, thời gian chơi).</p>
+  <div class="grid3" style="margin-top:12px">
+    <div class="card"><h4>Thể loại</h4>Tower defense + merge + auto-battler</div>
+    <div class="card"><h4>Nền tảng</h4>Android / iOS · dọc 720×1280 · bản web</div>
+    <div class="card"><h4>Phiên chơi</h4>1–5 phút mỗi màn · 4–8 đợt địch</div>
+  </div>
+  <h3>Điểm khác biệt (USP)</h3>
+  <p><span class="tag">Sinh lính bằng chuyển động bánh răng</span><span class="tag">Xếp xích truyền động như giải đố</span><span class="tag">Ghép gear lên bậc</span><span class="tag">Shop giữa đợt có chiến thuật kinh tế</span><span class="tag">Ô đặc biệt trên lưới</span></p>
+</section>
+
+<section class="page compact">
+  <h2><span class="num">1</span>Giới thiệu game</h2>
+  <div class="grid2">
+    <div>
+      <table>
+        <tr><td><b>Tên game</b></td><td>Gear Defenders</td></tr>
+        <tr><td><b>Thể loại</b></td><td>Thủ thành + ghép đồ (merge) + lính tự đánh</td></tr>
+        <tr><td><b>Bối cảnh</b></td><td>Vương quốc trung cổ bị Quân Đỏ và Quân Đen xâm lược; người chơi là kỹ sư vận hành cỗ máy bánh răng cổ giữ thành</td></tr>
+        <tr><td><b>Trải nghiệm cốt lõi</b></td><td>Cảm giác "lắp máy cho khéo": bánh răng ăn khớp và lính tuôn ra</td></tr>
+        <tr><td><b>Nền tảng</b></td><td>Mobile, màn hình dọc, chơi một tay; có bản chạy trên trình duyệt</td></tr>
+        <tr><td><b>Engine / đồ hoạ</b></td><td>Godot 4.7 · pixel art Tiny Swords · font Paytone One</td></tr>
+      </table>
+      <h3>Đối tượng người chơi</h3>
+      <table>
+        <tr><td><b>Casual–midcore, 13–35 tuổi</b></td><td>Học sinh, sinh viên, nhân viên văn phòng; chơi lúc rảnh 3–10 phút</td></tr>
+        <tr><td><b>Mobile first</b></td><td>Dọc, một tay, không cần phản xạ nhanh</td></tr>
+        <tr><td><b>Thích xếp cho khéo</b></td><td>Thích merge, giải đố không gian, tối ưu</td></tr>
+        <tr><td><b>Thích sưu tầm</b></td><td>13 lính, 6 tướng, rương, nâng cấp giữa các trận</td></tr>
+      </table>
+      <h3>Key values</h3>
+      <p><span class="tag">Dễ học – khó giỏi</span><span class="tag">Cảm giác cơ khí thỏa mãn</span><span class="tag">Nhiều level, nhiều cơ chế mới</span><span class="tag">Thưởng thường xuyên</span><span class="tag">Phiên ngắn</span></p>
+      <h3>Tham khảo thị trường</h3>
+      <table class="small" style="text-align:left">
+        <tr><th>Nhóm game</th><th>Học hỏi</th><th>Khác biệt</th></tr>
+        <tr><td>Merge TD (kiểu Rush Royale)</td><td>Ghép cùng loại, shop ngẫu nhiên</td><td>Vị trí có ý nghĩa nhờ xích bánh răng</td></tr>
+        <tr><td>Auto-battler (kiểu TFT)</td><td>Lượt nghỉ mua sắm, lãi</td><td>1 người, phiên ngắn</td></tr>
+      </table>
+    </div>
+    <div><div class="grid2 "><figure><img class="shot" src="img/battle_shop.png"><figcaption>Lượt nghỉ: shop 5 món, lưới gear, trục cam ở giữa</figcaption></figure><figure><img class="shot" src="img/battle_fight.png"><figcaption>Đợt địch: gear quay sinh lính, tướng dẫn đội</figcaption></figure></div></div>
+  </div>
+</section>
+
+<section class="page compact">
+  <h2><span class="num">1</span>Gameplay cơ bản</h2>
+  <svg viewBox="0 0 900 250" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial">
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#263238"/></marker></defs>
+  <g><rect x="20" y="20" width="200" height="62" rx="14" fill="#2196f3" stroke="#263238" stroke-width="2"/>
+    <text x="120" y="46" text-anchor="middle" font-weight="800" font-size="15" fill="#fff">LƯỢT NGHỈ (SHOP)</text>
+    <text x="120" y="66" text-anchor="middle" font-size="11.5" fill="#fff">Mua gear · đổi shop · khoá shop</text></g>
+  <g><rect x="350" y="20" width="200" height="62" rx="14" fill="#9c27b0" stroke="#263238" stroke-width="2"/>
+    <text x="450" y="46" text-anchor="middle" font-weight="800" font-size="15" fill="#fff">XẾP & GHÉP GEAR</text>
+    <text x="450" y="66" text-anchor="middle" font-size="11.5" fill="#fff">Nối xích tới trục cam · ghép lên bậc</text></g>
+  <g><rect x="680" y="20" width="200" height="62" rx="14" fill="#f44336" stroke="#263238" stroke-width="2"/>
+    <text x="780" y="46" text-anchor="middle" font-weight="800" font-size="15" fill="#fff">ĐỢT ĐỊCH (FIGHT)</text>
+    <text x="780" y="66" text-anchor="middle" font-size="11.5" fill="#fff">Gear quay → sinh lính tự đánh</text></g>
+  <g><rect x="680" y="168" width="200" height="62" rx="14" fill="#ff9800" stroke="#263238" stroke-width="2"/>
+    <text x="780" y="194" text-anchor="middle" font-weight="800" font-size="15" fill="#fff">HẾT ĐỢT</text>
+    <text x="780" y="214" text-anchor="middle" font-size="11.5" fill="#fff">Thu nhập 5 + đợt + lãi (≤3)</text></g>
+  <g><rect x="350" y="168" width="200" height="62" rx="14" fill="#4caf50" stroke="#263238" stroke-width="2"/>
+    <text x="450" y="194" text-anchor="middle" font-weight="800" font-size="15" fill="#fff">THẮNG / THUA</text>
+    <text x="450" y="214" text-anchor="middle" font-size="11.5" fill="#fff">Sao theo % máu thành</text></g>
+  <g><rect x="20" y="168" width="200" height="62" rx="14" fill="#607d8b" stroke="#263238" stroke-width="2"/>
+    <text x="120" y="194" text-anchor="middle" font-weight="800" font-size="15" fill="#fff">SẢNH (META)</text>
+    <text x="120" y="214" text-anchor="middle" font-size="11.5" fill="#fff">Rương · nâng lính · thành · tướng</text></g>
+  <line x1="222" y1="51" x2="346" y2="51" stroke="#263238" stroke-width="3" marker-end="url(#a)"/><line x1="552" y1="51" x2="676" y2="51" stroke="#263238" stroke-width="3" marker-end="url(#a)"/><line x1="780" y1="84" x2="780" y2="164" stroke="#263238" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M676 199 C 600 140, 300 140, 222 60" fill="none" stroke="#263238" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#a)"/>
+  <text x="450" y="128" text-anchor="middle" font-size="12" fill="#263238">còn đợt → quay lại lượt nghỉ</text>
+  <line x1="676" y1="199" x2="554" y2="199" stroke="#263238" stroke-width="3" marker-end="url(#a)"/><line x1="346" y1="199" x2="224" y2="199" stroke="#263238" stroke-width="3" marker-end="url(#a)"/>
+  <path d="M120 166 L120 86" stroke="#263238" stroke-width="3" marker-end="url(#a)"/>
+  <text x="128" y="130" font-size="12" fill="#263238">chơi màn tiếp</text>
+  </svg>
+  <div class="grid2">
+    <div>
+      <h3>Điều khiển</h3>
+      <table>
+        <tr><td><b>Mua</b></td><td>Chạm món trong shop (tốn thịt) → gear vào ô trống</td></tr>
+        <tr><td><b>Di chuyển</b></td><td>Kéo gear sang ô khác; thả lên gear khác để đổi chỗ</td></tr>
+        <tr><td><b>Ghép</b></td><td>Thả gear lên gear <i>cùng lính, cùng bậc</i> → lên bậc (tối đa 5)</td></tr>
+        <tr><td><b>Bán</b></td><td>Kéo gear vào nút BÁN → hoàn 75% giá</td></tr>
+        <tr><td><b>Shop</b></td><td>Đổi 5 món (lần đầu miễn phí), khoá để giữ món</td></tr>
+      </table>
+      <h3>Thắng / thua / sao</h3>
+      <p><b>Thắng:</b> sống qua mọi đợt. <b>Thua:</b> thành hết máu. <b>Sao:</b> theo % máu thành còn lại.</p>
+    </div>
+    <div>
+      <h3>Cơ chế truyền động</h3>
+      <p>Trục cam ở giữa lưới quay liên tục; cần gạt của nó đẩy từng răng của gear kề bên. Gear chạm gear đang quay sẽ quay theo, tạo <b>chuỗi truyền động</b>. <b>Chỉ gear đang quay mới sinh lính</b>, mỗi răng quay là 3 giây sản xuất.</p>
+      <h3>Kinh tế trong trận</h3>
+      <p>Thu nhập mỗi đợt = <b>5 + số đợt</b>, cộng <b>lãi</b> 1 thịt cho mỗi 5 thịt để dành (tối đa 3). Giá: Thường 2 · Hiếm 3 · Sử thi 4 · Huyền thoại 6.</p>
+      <h3>Ngoài trận</h3>
+      <p>Vàng và thẻ lính nâng cấp lính (cấp +8%, sao ×1,2), nâng thành (thêm ô lưới, ô đội hình), mở tướng; quà 7 ngày, nhiệm vụ, sự kiện.</p>
+    </div>
+  </div>
+  <h3>Lính (13 loại)</h3>
+  <table class="small" style="text-align:left"><tr><td style="font-weight:700">Thường</td><td>Nông dân · Chiến binh · Cung thủ · Thợ mỏ · Thợ rèn</td></tr><tr><td style="font-weight:700">Hiếm</td><td>Kỵ thương · Sát thủ · Hiệp sĩ khiên · Cung lửa</td></tr><tr><td style="font-weight:700">Sử thi</td><td>Tu sĩ · Đầu bếp · Pháo thủ</td></tr><tr><td style="font-weight:700">Huyền thoại</td><td>Tướng quân</td></tr></table>
+</section>
+
+<section class="page">
+  <h2><span class="num">2</span>Tiến trình 50 level</h2>
+  <div class="grid3" style="grid-template-columns:repeat(5,1fr);gap:8px">
+    <div class="phase" style="background:#4caf50"><b>GĐ1 (1–10)</b>Làm quen<br><span style="opacity:.92">Học cơ chế cốt lõi: mua gear, đặt cạnh trục, ghép gear, xích truyền động, kinh tế lãi.</span></div><div class="phase" style="background:#2196f3"><b>GĐ2 (11–20)</b>Mở rộng cơ chế<br><span style="opacity:.92">Mỗi màn thêm một biến thể của lưới gear hoặc một kiểu địch mới.</span></div><div class="phase" style="background:#ff9800"><b>GĐ3 (21–30)</b>Tăng thử thách<br><span style="opacity:.92">Siết tài nguyên (thịt, máu thành, tốc độ trục) để buộc người chơi tối ưu.</span></div><div class="phase" style="background:#f44336"><b>GĐ4 (31–40)</b>Biến thể phức tạp<br><span style="opacity:.92">Lưới gear nhiều trục, bánh răng đảo chiều, địch tấn công hai hướng.</span></div><div class="phase" style="background:#9c27b0"><b>GĐ5 (41–50)</b>Thử thách cao<br><span style="opacity:.92">Tổng hợp mọi cơ chế, trùm nhiều giai đoạn, màn 50 là trùm cuối.</span></div>
+  </div>
+  <h3>Đường cong độ khó (level curve)</h3>
+  <svg viewBox="0 0 900 330" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial" font-size="11"><rect x="48" y="34" width="159.20000000000002" height="256" fill="#4caf50" opacity="0.08"/><text x="127.60000000000001" y="24" text-anchor="middle" font-weight="700" fill="#4caf50">GĐ1 · Làm quen</text><rect x="207.2" y="34" width="159.2" height="256" fill="#2196f3" opacity="0.08"/><text x="286.79999999999995" y="24" text-anchor="middle" font-weight="700" fill="#2196f3">GĐ2 · Mở rộng cơ chế</text><rect x="366.4" y="34" width="159.20000000000005" height="256" fill="#ff9800" opacity="0.08"/><text x="446" y="24" text-anchor="middle" font-weight="700" fill="#ff9800">GĐ3 · Tăng thử thách</text><rect x="525.5999999999999" y="34" width="159.20000000000016" height="256" fill="#f44336" opacity="0.08"/><text x="605.2" y="24" text-anchor="middle" font-weight="700" fill="#f44336">GĐ4 · Biến thể phức tạp</text><rect x="684.8" y="34" width="159.20000000000005" height="256" fill="#9c27b0" opacity="0.08"/><text x="764.4" y="24" text-anchor="middle" font-weight="700" fill="#9c27b0">GĐ5 · Thử thách cao</text><line x1="48" x2="844" y1="238.8" y2="238.8" stroke="#ddd"/><text x="40" y="242.8" text-anchor="end" fill="#555">1</text><line x1="48" x2="844" y1="187.6" y2="187.6" stroke="#ddd"/><text x="40" y="191.6" text-anchor="end" fill="#555">2</text><line x1="48" x2="844" y1="136.4" y2="136.4" stroke="#ddd"/><text x="40" y="140.4" text-anchor="end" fill="#555">3</text><line x1="48" x2="844" y1="85.19999999999999" y2="85.19999999999999" stroke="#ddd"/><text x="40" y="89.19999999999999" text-anchor="end" fill="#555">4</text><line x1="48" x2="844" y1="34" y2="34" stroke="#ddd"/><text x="40" y="38" text-anchor="end" fill="#555">5</text><rect x="50.388" y="238.8" width="11.144" height="51.19999999999999" rx="2" fill="#4caf50" opacity="0.95"/><rect x="66.30799999999999" y="187.6" width="11.144" height="102.4" rx="2" fill="#4caf50" opacity="0.95"/><rect x="82.22800000000001" y="238.8" width="11.144" height="51.19999999999999" rx="2" fill="#4caf50" opacity="0.95"/><rect x="98.148" y="187.6" width="11.144" height="102.4" rx="2" fill="#4caf50" opacity="0.95"/><rect x="114.068" y="187.6" width="11.144" height="102.4" rx="2" fill="#4caf50" opacity="0.95"/><rect x="129.988" y="187.6" width="11.144" height="102.4" rx="2" fill="#4caf50" opacity="0.95"/><rect x="145.90800000000002" y="136.4" width="11.144" height="153.6" rx="2" fill="#4caf50" opacity="0.95"/><rect x="161.82799999999997" y="136.4" width="11.144" height="153.6" rx="2" fill="#4caf50" opacity="0.95"/><rect x="177.74800000000002" y="136.4" width="11.144" height="153.6" rx="2" fill="#4caf50" opacity="0.95"/><rect x="193.668" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#4caf50" opacity="0.95"/><text x="199.24" y="80.19999999999999" text-anchor="middle" font-size="12">👑</text><rect x="209.588" y="187.6" width="11.144" height="102.4" rx="2" fill="#2196f3" opacity="0.95"/><rect x="225.508" y="187.6" width="11.144" height="102.4" rx="2" fill="#2196f3" opacity="0.95"/><rect x="241.428" y="136.4" width="11.144" height="153.6" rx="2" fill="#2196f3" opacity="0.95"/><rect x="257.348" y="136.4" width="11.144" height="153.6" rx="2" fill="#2196f3" opacity="0.95"/><rect x="273.268" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#2196f3" opacity="0.95"/><text x="278.84" y="80.19999999999999" text-anchor="middle" font-size="12">★</text><rect x="289.188" y="136.4" width="11.144" height="153.6" rx="2" fill="#2196f3" opacity="0.6"/><rect x="305.108" y="136.4" width="11.144" height="153.6" rx="2" fill="#2196f3" opacity="0.6"/><rect x="321.02799999999996" y="136.4" width="11.144" height="153.6" rx="2" fill="#2196f3" opacity="0.6"/><rect x="336.948" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#2196f3" opacity="0.6"/><rect x="352.868" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#2196f3" opacity="0.6"/><text x="358.44" y="80.19999999999999" text-anchor="middle" font-size="12">👑</text><rect x="368.78799999999995" y="136.4" width="11.144" height="153.6" rx="2" fill="#ff9800" opacity="0.6"/><rect x="384.70799999999997" y="136.4" width="11.144" height="153.6" rx="2" fill="#ff9800" opacity="0.6"/><rect x="400.628" y="136.4" width="11.144" height="153.6" rx="2" fill="#ff9800" opacity="0.6"/><rect x="416.548" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#ff9800" opacity="0.6"/><rect x="432.468" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#ff9800" opacity="0.6"/><text x="438.04" y="80.19999999999999" text-anchor="middle" font-size="12">★</text><rect x="448.388" y="136.4" width="11.144" height="153.6" rx="2" fill="#ff9800" opacity="0.6"/><rect x="464.308" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#ff9800" opacity="0.6"/><rect x="480.228" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#ff9800" opacity="0.6"/><rect x="496.14799999999997" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#ff9800" opacity="0.6"/><rect x="512.068" y="34" width="11.144" height="256" rx="2" fill="#ff9800" opacity="0.6"/><text x="517.64" y="29" text-anchor="middle" font-size="12">👑</text><rect x="527.9879999999999" y="136.4" width="11.144" height="153.6" rx="2" fill="#f44336" opacity="0.6"/><rect x="543.908" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#f44336" opacity="0.6"/><rect x="559.828" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#f44336" opacity="0.6"/><rect x="575.748" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#f44336" opacity="0.6"/><rect x="591.668" y="34" width="11.144" height="256" rx="2" fill="#f44336" opacity="0.6"/><text x="597.24" y="29" text-anchor="middle" font-size="12">★</text><rect x="607.588" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#f44336" opacity="0.6"/><rect x="623.508" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#f44336" opacity="0.6"/><rect x="639.428" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#f44336" opacity="0.6"/><rect x="655.348" y="34" width="11.144" height="256" rx="2" fill="#f44336" opacity="0.6"/><rect x="671.268" y="34" width="11.144" height="256" rx="2" fill="#f44336" opacity="0.6"/><text x="676.84" y="29" text-anchor="middle" font-size="12">👑</text><rect x="687.188" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="703.108" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="719.028" y="34" width="11.144" height="256" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="734.948" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="750.868" y="34" width="11.144" height="256" rx="2" fill="#9c27b0" opacity="0.6"/><text x="756.44" y="29" text-anchor="middle" font-size="12">★</text><rect x="766.788" y="85.19999999999999" width="11.144" height="204.8" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="782.7080000000001" y="34" width="11.144" height="256" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="798.6279999999999" y="34" width="11.144" height="256" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="814.548" y="34" width="11.144" height="256" rx="2" fill="#9c27b0" opacity="0.6"/><rect x="830.468" y="34" width="11.144" height="256" rx="2" fill="#9c27b0" opacity="0.6"/><text x="836.04" y="29" text-anchor="middle" font-size="12">👑</text><polyline points="55.96,290 71.88,249.5115175140723 87.80000000000001,240.49918592295506 103.72,226.03501624183338 119.64,217.20457734688574 135.56,205.24213909643507 151.48000000000002,202.15687029189087 167.39999999999998,203.82334374614166 183.32000000000002,193.44950953977752 199.24,188.27541690645012 215.16,186.68460993399077 231.08,192.20122114014558 247,180.3759006570653 262.92,180.8963641375796 278.84,173.0446481690389 294.76,165.32104511396875 310.68,161.2224773353885 326.59999999999997,153.40082417311694 342.52,149.42108379975267 358.44,141.78698553351168 374.35999999999996,147.9189993117617 390.28,140.55153126468124 406.2,136.72831128358615 422.12,134.1059285094813 438.04,127.72182427042924 453.96,122.93691957927811 469.88,119.08991355891709 485.8,116.56961879849277 501.71999999999997,112.74699360422508 517.64,105.12809907311558 533.56,111.13086440765855 549.48,103.85803637348891 565.4,100.08474969508347 581.32,93.25703516276448 597.24,86.96184135146083 613.16,86.9595491679473 629.08,83.28850657909075 645,80.64727221515471 660.92,77.00880483028689 676.84,69.17823727905463 692.76,75.3619688182043 708.68,64.13890318526069 724.6,60.48000134272942 740.52,57.89395808706183 756.44,51.63186327106527 772.36,51.5544699544441 788.2800000000001,48.009519662064065 804.1999999999999,45.30966326340749 820.12,41.785526666173524 836.04,34" fill="none" stroke="#263238" stroke-width="2"/><circle cx="55.96" cy="290" r="3" fill="#263238" stroke="#263238"/><circle cx="71.88" cy="249.5115175140723" r="3" fill="#263238" stroke="#263238"/><circle cx="87.80000000000001" cy="240.49918592295506" r="3" fill="#263238" stroke="#263238"/><circle cx="103.72" cy="226.03501624183338" r="3" fill="#263238" stroke="#263238"/><circle cx="119.64" cy="217.20457734688574" r="3" fill="#263238" stroke="#263238"/><circle cx="135.56" cy="205.24213909643507" r="3" fill="#263238" stroke="#263238"/><circle cx="151.48000000000002" cy="202.15687029189087" r="3" fill="#263238" stroke="#263238"/><circle cx="167.39999999999998" cy="203.82334374614166" r="3" fill="#263238" stroke="#263238"/><circle cx="183.32000000000002" cy="193.44950953977752" r="3" fill="#263238" stroke="#263238"/><circle cx="199.24" cy="188.27541690645012" r="3" fill="#263238" stroke="#263238"/><circle cx="215.16" cy="186.68460993399077" r="3" fill="#263238" stroke="#263238"/><circle cx="231.08" cy="192.20122114014558" r="3" fill="#263238" stroke="#263238"/><circle cx="247" cy="180.3759006570653" r="3" fill="#263238" stroke="#263238"/><circle cx="262.92" cy="180.8963641375796" r="3" fill="#263238" stroke="#263238"/><circle cx="278.84" cy="173.0446481690389" r="3" fill="#263238" stroke="#263238"/><circle cx="294.76" cy="165.32104511396875" r="2" fill="#fff" stroke="#263238"/><circle cx="310.68" cy="161.2224773353885" r="2" fill="#fff" stroke="#263238"/><circle cx="326.59999999999997" cy="153.40082417311694" r="2" fill="#fff" stroke="#263238"/><circle cx="342.52" cy="149.42108379975267" r="2" fill="#fff" stroke="#263238"/><circle cx="358.44" cy="141.78698553351168" r="2" fill="#fff" stroke="#263238"/><circle cx="374.35999999999996" cy="147.9189993117617" r="2" fill="#fff" stroke="#263238"/><circle cx="390.28" cy="140.55153126468124" r="2" fill="#fff" stroke="#263238"/><circle cx="406.2" cy="136.72831128358615" r="2" fill="#fff" stroke="#263238"/><circle cx="422.12" cy="134.1059285094813" r="2" fill="#fff" stroke="#263238"/><circle cx="438.04" cy="127.72182427042924" r="2" fill="#fff" stroke="#263238"/><circle cx="453.96" cy="122.93691957927811" r="2" fill="#fff" stroke="#263238"/><circle cx="469.88" cy="119.08991355891709" r="2" fill="#fff" stroke="#263238"/><circle cx="485.8" cy="116.56961879849277" r="2" fill="#fff" stroke="#263238"/><circle cx="501.71999999999997" cy="112.74699360422508" r="2" fill="#fff" stroke="#263238"/><circle cx="517.64" cy="105.12809907311558" r="2" fill="#fff" stroke="#263238"/><circle cx="533.56" cy="111.13086440765855" r="2" fill="#fff" stroke="#263238"/><circle cx="549.48" cy="103.85803637348891" r="2" fill="#fff" stroke="#263238"/><circle cx="565.4" cy="100.08474969508347" r="2" fill="#fff" stroke="#263238"/><circle cx="581.32" cy="93.25703516276448" r="2" fill="#fff" stroke="#263238"/><circle cx="597.24" cy="86.96184135146083" r="2" fill="#fff" stroke="#263238"/><circle cx="613.16" cy="86.9595491679473" r="2" fill="#fff" stroke="#263238"/><circle cx="629.08" cy="83.28850657909075" r="2" fill="#fff" stroke="#263238"/><circle cx="645" cy="80.64727221515471" r="2" fill="#fff" stroke="#263238"/><circle cx="660.92" cy="77.00880483028689" r="2" fill="#fff" stroke="#263238"/><circle cx="676.84" cy="69.17823727905463" r="2" fill="#fff" stroke="#263238"/><circle cx="692.76" cy="75.3619688182043" r="2" fill="#fff" stroke="#263238"/><circle cx="708.68" cy="64.13890318526069" r="2" fill="#fff" stroke="#263238"/><circle cx="724.6" cy="60.48000134272942" r="2" fill="#fff" stroke="#263238"/><circle cx="740.52" cy="57.89395808706183" r="2" fill="#fff" stroke="#263238"/><circle cx="756.44" cy="51.63186327106527" r="2" fill="#fff" stroke="#263238"/><circle cx="772.36" cy="51.5544699544441" r="2" fill="#fff" stroke="#263238"/><circle cx="788.2800000000001" cy="48.009519662064065" r="2" fill="#fff" stroke="#263238"/><circle cx="804.1999999999999" cy="45.30966326340749" r="2" fill="#fff" stroke="#263238"/><circle cx="820.12" cy="41.785526666173524" r="2" fill="#fff" stroke="#263238"/><circle cx="836.04" cy="34" r="2" fill="#fff" stroke="#263238"/><text x="55.96" y="306" text-anchor="middle" fill="#555">1</text><text x="199.24" y="306" text-anchor="middle" fill="#555">10</text><text x="358.44" y="306" text-anchor="middle" fill="#555">20</text><text x="517.64" y="306" text-anchor="middle" fill="#555">30</text><text x="676.84" y="306" text-anchor="middle" fill="#555">40</text><text x="836.04" y="306" text-anchor="middle" fill="#555">50</text><text x="446" y="326" text-anchor="middle" fill="#333">Level</text><text transform="translate(14 162) rotate(-90)" text-anchor="middle" fill="#333">Độ khó cảm nhận (cột, 1–5)</text><text transform="translate(888 162) rotate(90)" text-anchor="middle" fill="#263238">Chỉ số sức ép địch (đường, thang log)</text></svg>
+  <p><b>Cột</b>: độ khó cảm nhận 1–5 theo thiết kế, dạng răng cưa (theo Scott Kim): tăng trong mỗi giai đoạn, đỉnh ở <b>trùm nhỏ</b> (★, level x5) và <b>trùm lớn</b> (👑, level x0), rồi <b>hạ ngay sau trùm</b> để người chơi thở. <b>Đường</b>: chỉ số sức ép địch = số quân × sức mạnh địch ÷ máu thành, tính từ dữ liệu. Chấm đặc: level có trong demo.</p>
+  <h3>Nguyên tắc tiến trình</h3>
+  <ul>
+    <li><b>Một level, một ý tưởng chính</b>; 2–3 level sau kết hợp ý đó với ý cũ (giới thiệu → luyện → kết hợp → áp lực → thành thạo).</li>
+    <li>Tăng khó bằng <b>Context / Combination / Constraint</b>: ô đặc biệt, tổ hợp địch, giới hạn thịt, không chỉ tăng máu địch.</li>
+    <li>Sức ép địch tăng ~7%/level từ level 11; người chơi bù bằng nâng cấp và ô lưới.</li>
+    <li>Cơ chế mở khoá: quà lần đầu (lính mới ở level 1, 2, 3, 5, 7, 12, 15), kim cương và tướng ở trùm.</li>
+  </ul>
+</section>
+
+<section class="page">
+  <h2><span class="num">2</span>Bảng tiến trình 50 level (1–25)</h2>
+  <table class="t50"><thead><tr><th>Lv</th><th>Tên màn</th><th>Đợt</th><th>Quân</th><th>Tinh nhuệ</th><th>Sức mạnh địch</th><th>Ô gear</th><th>Cơ chế / trọng tâm</th><th>Độ khó</th><th>Thưởng 3★</th></tr></thead><tbody><tr class=""><td style="border-left:5px solid #4caf50">1</td><td class="">Đồng Cỏ</td>
+      <td>4</td><td>41</td><td>1</td><td>0,90</td><td>12</td>
+      <td>Mua gear, đặt cạnh trục cam, bánh răng quay thì sinh lính</td><td><span class="dots">●<span class="off">●●●●</span></span></td><td>160<br><small>Mở khoá Kỵ thương</small></td></tr><tr class=""><td style="border-left:5px solid #4caf50">2</td><td class="">Đồi Đá</td>
+      <td>5</td><td>65</td><td>1</td><td>1,40</td><td>12</td>
+      <td>Ghép 2 gear giống nhau lên bậc 2; Kỵ thương địch xuất hiện</td><td><span class="dots">●●<span class="off">●●●</span></span></td><td>200<br><small>Mở khoá Tu sĩ</small></td></tr><tr class=""><td style="border-left:5px solid #4caf50">3</td><td class="">Pháo Đài Đỏ</td>
+      <td>6</td><td>89</td><td>3</td><td>1,50</td><td>14</td>
+      <td>Xích truyền động qua gear khác; Tu sĩ địch hồi máu</td><td><span class="dots">●<span class="off">●●●●</span></span></td><td>240<br><small>Mở khoá Thợ mỏ</small></td></tr><tr class=""><td style="border-left:5px solid #4caf50">4</td><td class="">Rừng Thông</td>
+      <td>6</td><td>97</td><td>1</td><td>1,90</td><td>14</td>
+      <td>Kinh tế: để dành thịt để nhận lãi (tối đa +3/đợt)</td><td><span class="dots">●●<span class="off">●●●</span></span></td><td>280</td></tr><tr class=""><td style="border-left:5px solid #4caf50">5</td><td class="">Hẻm Núi</td>
+      <td>6</td><td>102</td><td>2</td><td>2,20</td><td>16</td>
+      <td>Thợ mỏ địch chịu tên: cần cận chiến; mở khoá Hiệp sĩ khiên</td><td><span class="dots">●●<span class="off">●●●</span></span></td><td>320<br><small>Mở khoá Hiệp sĩ khiên</small></td></tr><tr class=""><td style="border-left:5px solid #4caf50">6</td><td class="">Làng Bỏ Hoang</td>
+      <td>7</td><td>138</td><td>2</td><td>2,30</td><td>16</td>
+      <td>Cung lửa địch đốt lính; khoá shop giữ gear hiếm</td><td><span class="dots">●●<span class="off">●●●</span></span></td><td>360</td></tr><tr class=""><td style="border-left:5px solid #4caf50">7</td><td class="">Đầm Lầy</td>
+      <td>7</td><td>136</td><td>3</td><td>2,50</td><td>18</td>
+      <td>Sát thủ địch săn lính bắn xa; Hiệp sĩ khiên địch</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>400<br><small>Mở khoá Cung lửa</small></td></tr><tr class=""><td style="border-left:5px solid #4caf50">8</td><td class="">Thành Đá Đen</td>
+      <td>7</td><td>147</td><td>3</td><td>2,40</td><td>18</td>
+      <td>Đầu bếp, Thợ rèn, Pháo thủ địch: dàn lính tản ra</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>440</td></tr><tr class=""><td style="border-left:5px solid #4caf50">9</td><td class="">Cổng Pháo Đài</td>
+      <td>8</td><td>171</td><td>4</td><td>2,60</td><td>20</td>
+      <td>Kiểm tra tổng hợp: 8 đợt, 4 tinh nhuệ, gear bậc 3</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>480</td></tr><tr class="b-boss"><td style="border-left:5px solid #4caf50">10</td><td class="">Vua Đỏ</td>
+      <td>8</td><td>198</td><td>4</td><td>2,70</td><td>20</td>
+      <td>TRÙM: Tướng quân địch (Huyền thoại)</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>520</td></tr><tr class=""><td style="border-left:5px solid #2196f3">11</td><td class="">Bến Cảng</td>
+      <td>8</td><td>191</td><td>3</td><td>2,90</td><td>22</td>
+      <td>Ô đá chắn cạnh trục cam: phải nối xích đi vòng</td><td><span class="dots">●●<span class="off">●●●</span></span></td><td>560</td></tr><tr class=""><td style="border-left:5px solid #2196f3">12</td><td class="">Rừng Sương</td>
+      <td>8</td><td>158</td><td>2</td><td>3,10</td><td>22</td>
+      <td>Nhiều Hiệp sĩ khiên địch + ô đá: cần sát thương dồn</td><td><span class="dots">●●<span class="off">●●●</span></span></td><td>600<br><small>Mở khoá Thợ rèn</small></td></tr><tr class=""><td style="border-left:5px solid #2196f3">13</td><td class="">Đồi Cừu</td>
+      <td>8</td><td>183</td><td>3</td><td>3,60</td><td>22</td>
+      <td>Ô vàng: gear đặt lên sinh lính nhanh hơn 50%</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>640</td></tr><tr class=""><td style="border-left:5px solid #2196f3">14</td><td class="">Mỏ Vàng</td>
+      <td>8</td><td>176</td><td>3</td><td>3,70</td><td>22</td>
+      <td>Ô rỉ sét: gear chỉ truyền động, không sinh lính; kỵ thương dồn dập</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>680</td></tr><tr class="b-mini"><td style="border-left:5px solid #2196f3">15</td><td class="">Cầu Đá</td>
+      <td>8</td><td>182</td><td>4</td><td>4,40</td><td>22</td>
+      <td>Ô băng: gear chỉ quay khi chạm trục; trùm nhỏ Thợ rèn + khiên tinh nhuệ</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>720<br><small>Mở khoá Sát thủ</small></td></tr><tr class=""><td style="border-left:5px solid #2196f3">16</td><td class="planned">Trại Lính</td>
+      <td>8</td><td>218</td><td>5</td><td>4,50</td><td>22</td>
+      <td>Đầu bếp địch đi theo nhóm, hồi máu liên tục</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>760</td></tr><tr class=""><td style="border-left:5px solid #2196f3">17</td><td class="planned">Bãi Lau</td>
+      <td>8</td><td>223</td><td>5</td><td>4,82</td><td>22</td>
+      <td>Sương mù: không xem trước đợt địch kế tiếp</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>800</td></tr><tr class=""><td style="border-left:5px solid #2196f3">18</td><td class="planned">Tháp Canh</td>
+      <td>9</td><td>256</td><td>5</td><td>5,15</td><td>22</td>
+      <td>Shop chỉ còn 4 ô: chọn lọc kỹ hơn</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>840</td></tr><tr class=""><td style="border-left:5px solid #2196f3">19</td><td class="planned">Thung Lũng Gió</td>
+      <td>9</td><td>261</td><td>5</td><td>5,52</td><td>23</td>
+      <td>Hai tinh nhuệ mỗi đợt</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>880</td></tr><tr class="b-boss"><td style="border-left:5px solid #2196f3">20</td><td class="planned">Pháo Đài Đen</td>
+      <td>9</td><td>266</td><td>6</td><td>6,61</td><td>23</td>
+      <td>TRÙM: Tướng quân Đen + cận vệ khiên</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>920<br><small>50 kim cương + Pháo thủ</small></td></tr><tr class=""><td style="border-left:5px solid #ff9800">21</td><td class="planned">Làng Cháy</td>
+      <td>9</td><td>270</td><td>6</td><td>5,68</td><td>23</td>
+      <td>Thành bắt đầu với 70% máu</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>960</td></tr><tr class=""><td style="border-left:5px solid #ff9800">22</td><td class="planned">Cối Xay Gỉ</td>
+      <td>9</td><td>275</td><td>6</td><td>6,76</td><td>23</td>
+      <td>Trục cam quay chậm hơn 20%</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>1.000</td></tr><tr class=""><td style="border-left:5px solid #ff9800">23</td><td class="planned">Doanh Trại Pháo</td>
+      <td>9</td><td>280</td><td>6</td><td>7,23</td><td>23</td>
+      <td>Pháo thủ địch bắn vào bàn gear: gear trúng bom ngừng quay 3 giây</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>1.040</td></tr><tr class=""><td style="border-left:5px solid #ff9800">24</td><td class="planned">Mê Cung Đá</td>
+      <td>9</td><td>285</td><td>6</td><td>7,74</td><td>23</td>
+      <td>Ô lưới khoá luân phiên mỗi đợt</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.080</td></tr><tr class="b-mini"><td style="border-left:5px solid #ff9800">25</td><td class="planned">Đèo Hiểm</td>
+      <td>9</td><td>290</td><td>7</td><td>8,77</td><td>23</td>
+      <td>Trùm nhỏ: Sát thủ Bóng Đêm địch săn lính bắn xa</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.120<br><small>Rương Vàng</small></td></tr></tbody></table>
+</section>
+
+<section class="page">
+  <h2><span class="num">2</span>Bảng tiến trình 50 level (26–50)</h2>
+  <table class="t50"><thead><tr><th>Lv</th><th>Tên màn</th><th>Đợt</th><th>Quân</th><th>Tinh nhuệ</th><th>Sức mạnh địch</th><th>Ô gear</th><th>Cơ chế / trọng tâm</th><th>Độ khó</th><th>Thưởng 3★</th></tr></thead><tbody><tr class=""><td style="border-left:5px solid #ff9800">26</td><td class="planned">Chiến Hào</td>
+      <td>10</td><td>328</td><td>7</td><td>8,86</td><td>23</td>
+      <td>Đợt đôi: hai đợt liền nhau không có lượt nghỉ</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>1.160</td></tr><tr class=""><td style="border-left:5px solid #ff9800">27</td><td class="planned">Kho Lương Trống</td>
+      <td>10</td><td>334</td><td>7</td><td>9,48</td><td>23</td>
+      <td>Thịt khởi đầu thấp, lãi tiết kiệm tăng</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.200</td></tr><tr class=""><td style="border-left:5px solid #ff9800">28</td><td class="planned">Tu Viện Đen</td>
+      <td>10</td><td>339</td><td>7</td><td>10,14</td><td>23</td>
+      <td>Tu sĩ địch hồi sinh đồng đội một lần</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.240</td></tr><tr class=""><td style="border-left:5px solid #ff9800">29</td><td class="planned">Tường Thành Cổ</td>
+      <td>10</td><td>345</td><td>7</td><td>10,85</td><td>23</td>
+      <td>Tổng hợp giai đoạn 3</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.280</td></tr><tr class="b-boss"><td style="border-left:5px solid #ff9800">30</td><td class="planned">Vua Đỏ Trở Lại</td>
+      <td>10</td><td>350</td><td>8</td><td>13,00</td><td>23</td>
+      <td>TRÙM 2 giai đoạn: khi còn 50% máu gọi thêm quân</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>1.320<br><small>80 kim cương + 10 mảnh tướng</small></td></tr><tr class=""><td style="border-left:5px solid #f44336">31</td><td class="planned">Nhà Máy Bánh Răng</td>
+      <td>10</td><td>356</td><td>8</td><td>11,18</td><td>23</td>
+      <td>Hai trục cam: hai chuỗi truyền động riêng</td><td><span class="dots">●●●<span class="off">●●</span></span></td><td>1.360</td></tr><tr class=""><td style="border-left:5px solid #f44336">32</td><td class="planned">Xưởng Đảo Chiều</td>
+      <td>10</td><td>361</td><td>8</td><td>13,29</td><td>23</td>
+      <td>Ô đảo chiều: gear quay ngược thì không sinh lính</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.400</td></tr><tr class=""><td style="border-left:5px solid #f44336">33</td><td class="planned">Sông Băng</td>
+      <td>10</td><td>367</td><td>8</td><td>14,22</td><td>23</td>
+      <td>Địch làm chậm lính ta khi đánh trúng</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.440</td></tr><tr class=""><td style="border-left:5px solid #f44336">34</td><td class="planned">Ngã Ba</td>
+      <td>11</td><td>409</td><td>8</td><td>15,22</td><td>23</td>
+      <td>Địch tấn công hai hướng: trái và phải</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.480</td></tr><tr class="b-mini"><td style="border-left:5px solid #f44336">35</td><td class="planned">Cổng Sắt</td>
+      <td>11</td><td>415</td><td>9</td><td>17,26</td><td>23</td>
+      <td>Trùm nhỏ: Hiệp sĩ Thép miễn tên</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>1.520<br><small>Rương Vàng</small></td></tr><tr class=""><td style="border-left:5px solid #f44336">36</td><td class="planned">Chợ Đen</td>
+      <td>11</td><td>421</td><td>9</td><td>17,42</td><td>23</td>
+      <td>Giới hạn 3 lần đổi shop cả màn</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.560</td></tr><tr class=""><td style="border-left:5px solid #f44336">37</td><td class="planned">Tháp Cung</td>
+      <td>11</td><td>427</td><td>9</td><td>18,64</td><td>23</td>
+      <td>Địch miễn sát thương tên trong 2 đợt</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.600</td></tr><tr class=""><td style="border-left:5px solid #f44336">38</td><td class="planned">Hẻm Chật</td>
+      <td>11</td><td>433</td><td>9</td><td>19,95</td><td>23</td>
+      <td>Số lính tối đa trên sân giảm còn 40</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.640</td></tr><tr class=""><td style="border-left:5px solid #f44336">39</td><td class="planned">Thành Lũy Kép</td>
+      <td>11</td><td>439</td><td>9</td><td>21,34</td><td>23</td>
+      <td>Tổng hợp giai đoạn 4</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>1.680</td></tr><tr class="b-boss"><td style="border-left:5px solid #f44336">40</td><td class="planned">Quân Đoàn Đen</td>
+      <td>11</td><td>446</td><td>10</td><td>25,58</td><td>23</td>
+      <td>TRÙM: 3 tinh nhuệ + Tướng quân Đen cùng lúc</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>1.720<br><small>100 kim cương + Tướng Sử thi</small></td></tr><tr class=""><td style="border-left:5px solid #9c27b0">41</td><td class="planned">Vực Thẳm</td>
+      <td>11</td><td>452</td><td>10</td><td>21,99</td><td>23</td>
+      <td>Mọi đợt có tinh nhuệ</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.760</td></tr><tr class=""><td style="border-left:5px solid #9c27b0">42</td><td class="planned">Rừng Chết</td>
+      <td>12</td><td>499</td><td>10</td><td>26,15</td><td>23</td>
+      <td>Sương mù + đợt đôi</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.800</td></tr><tr class=""><td style="border-left:5px solid #9c27b0">43</td><td class="planned">Pháo Đài Lửa</td>
+      <td>12</td><td>506</td><td>10</td><td>27,98</td><td>23</td>
+      <td>Cung lửa và Pháo thủ địch số đông</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>1.840</td></tr><tr class=""><td style="border-left:5px solid #9c27b0">44</td><td class="planned">Đại Lộ Máu</td>
+      <td>12</td><td>512</td><td>10</td><td>29,93</td><td>23</td>
+      <td>Thành 60% máu + trục chậm</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.880</td></tr><tr class="b-mini"><td style="border-left:5px solid #9c27b0">45</td><td class="planned">Cổng Địa Ngục</td>
+      <td>12</td><td>519</td><td>11</td><td>33,95</td><td>23</td>
+      <td>Trùm nhỏ: hai Tướng quân địch</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>1.920<br><small>Rương Vàng x2</small></td></tr><tr class=""><td style="border-left:5px solid #9c27b0">46</td><td class="planned">Tháp Đồng Hồ</td>
+      <td>12</td><td>526</td><td>11</td><td>34,27</td><td>23</td>
+      <td>Hai trục cam + ô khoá luân phiên</td><td><span class="dots">●●●●<span class="off">●</span></span></td><td>1.960</td></tr><tr class=""><td style="border-left:5px solid #9c27b0">47</td><td class="planned">Hầm Mộ</td>
+      <td>12</td><td>532</td><td>11</td><td>36,67</td><td>23</td>
+      <td>Địch hồi sinh + hồi máu</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>2.000</td></tr><tr class=""><td style="border-left:5px solid #9c27b0">48</td><td class="planned">Lâu Đài Gió</td>
+      <td>12</td><td>539</td><td>11</td><td>39,24</td><td>23</td>
+      <td>Tấn công hai hướng + shop 4 ô</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>2.040</td></tr><tr class=""><td style="border-left:5px solid #9c27b0">49</td><td class="planned">Ngai Vàng</td>
+      <td>12</td><td>545</td><td>11</td><td>41,98</td><td>23</td>
+      <td>Tổng hợp mọi cơ chế</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>2.080</td></tr><tr class="b-boss"><td style="border-left:5px solid #9c27b0">50</td><td class="planned">Vua Đen</td>
+      <td>12</td><td>552</td><td>12</td><td>50,31</td><td>23</td>
+      <td>TRÙM CUỐI 3 giai đoạn</td><td><span class="dots">●●●●●<span class="off"></span></span></td><td>2.120<br><small>200 kim cương + Tướng Huyền thoại</small></td></tr></tbody></table>
+  <p style="font-size:8pt;color:#546e7a">Tên in nghiêng xám: level dự kiến. Sức mạnh địch: hệ số nhân máu và sát thương quân địch. Ô gear: số ô lưới ở cấp thành khuyến nghị. Nền cam: trùm lớn; nền vàng: trùm nhỏ. Bảng dạng Excel: <b>bang_tien_trinh_50_level.xlsx</b>.</p>
+</section>
+
+<section class="page">
+  <h2><span class="num">2</span>Thư viện cơ chế</h2>
+  <p>Mỗi cơ chế ghi rõ level mở, luật, ràng buộc khi thiết kế và các sai lầm thường gặp, để level designer và lập trình viên hiểu giống nhau (theo mẫu Block Library của các file level design).</p>
+  <table class="mech"><thead><tr><th>Cơ chế</th><th>Mở ở</th><th>Luật</th><th>Ràng buộc thiết kế</th><th>Sai lầm người chơi</th><th>Sai lầm designer cần tránh</th></tr></thead><tbody><tr><td><b>Trục cam + xích truyền động</b></td><td>L1 / L3</td><td>Gear kề trục (hoặc kề gear đang quay) mới quay; mỗi răng quay = 3 giây sản xuất</td><td>Lưới mở dần theo cấp thành, từ tâm ra ngoài</td><td>Đặt gear ở ô không quay</td><td>Mở ô xa trục trước khi người chơi hiểu chuỗi</td></tr><tr><td><b>Ghép gear (merge)</b></td><td>L2</td><td>2 gear cùng lính, cùng bậc → bậc +1 (tối đa 5); mạnh gấp đôi</td><td>Shop phải thường xuyên có món ghép được ở giai đoạn đầu</td><td>Để lưới đầy gear bậc 1</td><td>Shop quá ngẫu nhiên, không có cặp để ghép</td></tr><tr><td><b>Kinh tế lãi + khoá shop</b></td><td>L4 / L6</td><td>Hết đợt: 5 + số đợt; lãi +1/5 thịt để dành (tối đa +3); khoá giữ món</td><td>Giá: Thường 2, Hiếm 3, Sử thi 4, Huyền thoại 6</td><td>Tiêu hết thịt mỗi lượt</td><td>Thu nhập quá cao làm lãi vô nghĩa</td></tr><tr><td><b>Tinh nhuệ</b></td><td>L1</td><td>Máu x5, sát thương x1,8; thưởng 3 thịt khi hạ</td><td>≤1 tinh nhuệ/đợt ở giai đoạn 1</td><td>Không để dành gear mạnh cho đợt cuối</td><td>Dồn nhiều tinh nhuệ cùng lúc quá sớm</td></tr><tr><td><b>Địch khắc chế</b></td><td>L5 / L7 / L8</td><td>Thợ mỏ chịu tên; Sát thủ săn hậu tuyến; Đầu bếp, Thợ rèn hỗ trợ</td><td>Mỗi màn chỉ nhấn một kiểu khắc chế mới</td><td>Giữ một đội hình cho mọi màn</td><td>Khắc chế mà không cho xem trước đợt kế</td></tr><tr><td><b>Trùm</b></td><td>L10 (mỗi 10 màn)</td><td>Đơn vị Huyền thoại, thanh máu lớn, đòn diện rộng</td><td>Đặt ở đợt cuối, sau màn "thở"</td><td>Không dồn sát thương vào trùm</td><td>Trùm không có dấu hiệu báo trước</td></tr><tr><td><b>Ô đá</b></td><td>L11</td><td>Không đặt gear được</td><td>Không chặn cả 4 mặt trục</td><td>Quên đi đường vòng</td><td>Chặn đến mức không còn lời giải</td></tr><tr><td><b>Ô vàng</b></td><td>L13</td><td>Gear trên ô sinh lính nhanh hơn 50%</td><td>Đặt xa trục để thưởng cho chuỗi dài</td><td>Để trống ô vàng</td><td>Đặt ô vàng ngay cạnh trục (quá dễ)</td></tr><tr><td><b>Ô rỉ sét</b></td><td>L14</td><td>Gear quay, truyền động nhưng không sinh lính</td><td>Dùng làm "cổng" bắt buộc để đi ra xa</td><td>Đặt gear đắt lên ô rỉ</td><td>Rỉ sét cả 4 mặt trục ngay khi giới thiệu</td></tr><tr><td><b>Ô băng</b></td><td>L15</td><td>Gear không ăn khớp gear nào, chỉ quay khi chạm trục</td><td>Cắt chuỗi ở vị trí quan trọng</td><td>Nối chuỗi qua ô băng</td><td>Băng ở mọi mặt trục, không còn chuỗi</td></tr><tr><td><b>Tướng dẫn đội</b></td><td>Meta</td><td>Buff cả trận và ra trận như đơn vị mạnh; ngã thì trở lại đợt sau</td><td>Buff 8–20% để không phá cân bằng</td><td>Không nâng tướng</td><td>Tướng quá mạnh thay thế việc xếp gear</td></tr></tbody></table>
+</section>
+
+<section class="page compact">
+  <h2><span class="num">3</span>Level brief level 1–10: tổng quan và chỉ số</h2>
+  <div class="tight"><table><thead><tr><th>Lv</th><th>Tên</th><th>Mục tiêu &amp; cơ chế chính</th><th>Không gian</th><th>Số đợt</th><th>Số quân</th><th>Độ khó (1–5)</th><th>Thưởng</th></tr></thead><tbody><tr><td>1</td><td>Đồng Cỏ</td><td>Mua gear, đặt cạnh trục cam, bánh răng quay thì sinh lính</td><td>12 ô (thành 1)</td><td>4</td><td>41</td>
+    <td>1</td><td>160<br><small>Mở khoá Kỵ thương</small></td></tr><tr><td>2</td><td>Đồi Đá</td><td>Ghép 2 gear giống nhau lên bậc 2; Kỵ thương địch xuất hiện</td><td>12 ô (thành 1)</td><td>5</td><td>65</td>
+    <td>2</td><td>200<br><small>Mở khoá Tu sĩ</small></td></tr><tr><td>3</td><td>Pháo Đài Đỏ</td><td>Xích truyền động qua gear khác; Tu sĩ địch hồi máu</td><td>14 ô (thành 2)</td><td>6</td><td>89</td>
+    <td>1</td><td>240<br><small>Mở khoá Thợ mỏ</small></td></tr><tr><td>4</td><td>Rừng Thông</td><td>Kinh tế: để dành thịt để nhận lãi (tối đa +3/đợt)</td><td>14 ô (thành 2)</td><td>6</td><td>97</td>
+    <td>2</td><td>280</td></tr><tr><td>5</td><td>Hẻm Núi</td><td>Thợ mỏ địch chịu tên: cần cận chiến; mở khoá Hiệp sĩ khiên</td><td>16 ô (thành 3)</td><td>6</td><td>102</td>
+    <td>2</td><td>320<br><small>Mở khoá Hiệp sĩ khiên</small></td></tr><tr><td>6</td><td>Làng Bỏ Hoang</td><td>Cung lửa địch đốt lính; khoá shop giữ gear hiếm</td><td>16 ô (thành 3)</td><td>7</td><td>138</td>
+    <td>2</td><td>360</td></tr><tr><td>7</td><td>Đầm Lầy</td><td>Sát thủ địch săn lính bắn xa; Hiệp sĩ khiên địch</td><td>18 ô (thành 4)</td><td>7</td><td>136</td>
+    <td>3</td><td>400<br><small>Mở khoá Cung lửa</small></td></tr><tr><td>8</td><td>Thành Đá Đen</td><td>Đầu bếp, Thợ rèn, Pháo thủ địch: dàn lính tản ra</td><td>18 ô (thành 4)</td><td>7</td><td>147</td>
+    <td>3</td><td>440</td></tr><tr><td>9</td><td>Cổng Pháo Đài</td><td>Kiểm tra tổng hợp: 8 đợt, 4 tinh nhuệ, gear bậc 3</td><td>20 ô (thành 5)</td><td>8</td><td>171</td>
+    <td>3</td><td>480</td></tr><tr><td>10</td><td>Vua Đỏ</td><td>TRÙM: Tướng quân địch (Huyền thoại)</td><td>20 ô (thành 5)</td><td>8</td><td>198</td>
+    <td>4</td><td>520</td></tr></tbody></table></div>
+  <h3>Chỉ số playtest (bot tự chơi)</h3>
+  <p>Mỗi level chơi 4 lượt bằng bot dùng đúng thao tác kéo thả thật, với hồ sơ người chơi hợp lý khi tới level đó (cấp thành theo gợi ý, lính cấp 1→10, đội hình chỉ gồm lính đã mở). Win rate mục tiêu theo độ khó: Normal 75–100%, Hard 45–80%, Super Hard 30–50%.</p>
+  <table class="small metrics"><thead><tr><th>Lv</th><th>Tên</th><th>Tag</th><th>Win rate mục tiêu</th><th>Win rate (bot)</th><th>Máu thành còn</th><th>Thời gian TB</th><th>Đánh giá</th></tr></thead><tbody><tr><td>1</td><td style="text-align:left">Đồng Cỏ</td><td>Normal</td><td>90%–100%</td><td>100% (4/4)</td><td>100%</td><td>1:14</td><td><span class="ok">Trong mục tiêu</span></td></tr><tr><td>2</td><td style="text-align:left">Đồi Đá</td><td>Normal</td><td>75%–95%</td><td>100% (4/4)</td><td>94%</td><td>1:43</td><td><span class="ok-hi">Dễ hơn mục tiêu</span></td></tr><tr><td>3</td><td style="text-align:left">Pháo Đài Đỏ</td><td>Normal</td><td>90%–100%</td><td>100% (4/4)</td><td>100%</td><td>2:19</td><td><span class="ok">Trong mục tiêu</span></td></tr><tr><td>4</td><td style="text-align:left">Rừng Thông</td><td>Normal</td><td>75%–95%</td><td>100% (4/4)</td><td>88%</td><td>2:22</td><td><span class="ok-hi">Dễ hơn mục tiêu</span></td></tr><tr><td>5</td><td style="text-align:left">Hẻm Núi</td><td>Normal</td><td>75%–95%</td><td>100% (4/4)</td><td>45%</td><td>2:35</td><td><span class="ok-hi">Dễ hơn mục tiêu</span></td></tr><tr><td>6</td><td style="text-align:left">Làng Bỏ Hoang</td><td>Normal</td><td>75%–95%</td><td>100% (4/4)</td><td>97%</td><td>3:27</td><td><span class="ok-hi">Dễ hơn mục tiêu</span></td></tr><tr><td>7</td><td style="text-align:left">Đầm Lầy</td><td>Hard</td><td>60%–80%</td><td>100% (4/4)</td><td>88%</td><td>4:06</td><td><span class="ok-hi">Dễ hơn mục tiêu</span></td></tr><tr><td>8</td><td style="text-align:left">Thành Đá Đen</td><td>Hard</td><td>60%–80%</td><td>50% (2/4)</td><td>28%</td><td>4:01</td><td><span class="bad">Khó hơn mục tiêu</span></td></tr><tr><td>9</td><td style="text-align:left">Cổng Pháo Đài</td><td>Hard</td><td>60%–80%</td><td>50% (2/4)</td><td>30%</td><td>4:45</td><td><span class="bad">Khó hơn mục tiêu</span></td></tr><tr><td>10</td><td style="text-align:left">Vua Đỏ</td><td>Hard</td><td>45%–65%</td><td>50% (2/4)</td><td>95%</td><td>3:26</td><td><span class="ok">Trong mục tiêu</span></td></tr></tbody></table>
+</section>
+
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 1 · ĐỒNG CỎ</span><span class="tagbox">Normal · độ khó 1/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>4 đợt · 41 quân · 1 tinh nhuệ</span><span>Sức mạnh địch 0,9</span><span>Máu thành 100 · thịt đầu 6</span><span>Lưới 12 ô (thành cấp 1)</span><span>Thời gian dự kiến 1:14</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Mua gear, đặt sát quả cầu cam để bánh răng quay và gửi lính ra giữ thành.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Level hướng dẫn: dạy vòng lặp cốt lõi mua → đặt → quay → sinh lính.</li><li>Cho người chơi thắng dễ để tin vào cơ chế trước khi bị thử thách.</li><li>Giới thiệu khái niệm tinh nhuệ ở đợt cuối.</li></ul>
+    </div>
+    <img class="art" src="img/level_01.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Mua gear trong shop, kéo thả gear trên lưới</td></tr><tr><th>Dominant Feature</th><td>Trục cam + gear đầu tiên (hướng dẫn từng bước)</td></tr><tr><th>Goal</th><td>Giữ thành qua 4 đợt địch</td></tr><tr><th>Challenge</th><td>Rất nhẹ: 41 quân yếu; đợt 4 có tinh nhuệ Chiến binh đầu tiên</td></tr><tr><th>Space</th><td>Lưới 12 ô; 4 ô kề trục cam phát sáng vàng</td></tr><tr><th>Support</th><td>Hướng dẫn 5 bước có mũi tên, ô "quay được" phát sáng, nút SẴN SÀNG to</td></tr><tr><th>Outcome</th><td>Thắng: giữ thành (sao theo % máu). Thua: thành hết máu, gần như không xảy ra</td></tr><tr><th>Reward</th><td>160 vàng (x2 lần đầu) · Mở khoá Kỵ thương · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="97" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 97 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="73" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M75 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="165" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M167 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="79" cy="99" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="125" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Mua gear đầu</div><span class="arrow">➜</span><div><b>2</b>Thấy gear quay, lính ra</div><span class="arrow">➜</span><div><b>3</b>Mua thêm, ghép thử</div><span class="arrow">➜</span><div><b>4</b>Bấm SẴN SÀNG</div><span class="arrow">➜</span><div><b>5</b>Hạ tinh nhuệ đợt 4</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (5): 5 Nông dân</li><li><b>Đợt 2</b> (8): 6 Nông dân, 2 Chiến binh</li><li><b>Đợt 3</b> (11): 4 Chiến binh, 3 Cung thủ, 4 Nông dân</li><li><b>Đợt 4</b> (17): 8 Nông dân, 5 Chiến binh, 3 Cung thủ, 1 Chiến binh <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>90%–100% (Normal)</td></tr>
+        <tr><th>Win rate bot</th><td>100% (4/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>100%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 4 (tinh nhuệ) nếu chỉ có 1 gear đang quay</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Gear không chạm trục thì đứng yên: vị trí quan trọng không kém loại lính.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Mua 2 Chiến binh, đặt vào 2 ô sáng kề trục.</li><li>Mua Cung thủ đặt phía dưới trục để bắn qua đầu tiền tuyến.</li><li>Có 2 gear giống thì kéo thả lên nhau để ghép.</li><li>Bấm SẴN SÀNG, lặp lại ở mỗi lượt nghỉ.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Gần như zero-fail: đo tỉ lệ người chơi bỏ hướng dẫn giữa chừng.</li><li>Theo dõi số gear đặt ở ô không quay (dấu hiệu chưa hiểu luật).</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 2 · ĐỒI ĐÁ</span><span class="tagbox">Normal · độ khó 2/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>5 đợt · 65 quân · 1 tinh nhuệ</span><span>Sức mạnh địch 1,4</span><span>Máu thành 100 · thịt đầu 7</span><span>Lưới 12 ô (thành cấp 1)</span><span>Thời gian dự kiến 1:43</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Ghép hai gear giống nhau thành một gear bậc 2 mạnh gấp đôi để chặn Kỵ thương.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Dạy cơ chế ghép gear (merge) và lợi ích giải phóng ô.</li><li>Giới thiệu kẻ địch gây sát thương cao (Kỵ thương).</li></ul>
+    </div>
+    <img class="art" src="img/level_02.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Kéo gear thả lên gear cùng lính, cùng bậc</td></tr><tr><th>Dominant Feature</th><td>Ghép gear lên bậc 2</td></tr><tr><th>Goal</th><td>Giữ thành qua 5 đợt</td></tr><tr><th>Challenge</th><td>Kỵ thương địch sát thương 14 buộc phải có gear bậc 2</td></tr><tr><th>Space</th><td>Lưới 12 ô: chỗ ít, ghép để có chỗ mua thêm</td></tr><tr><th>Support</th><td>Nhãn "GHÉP ĐƯỢC" trên thẻ shop; thông báo "Có 2 gear giống nhau!"</td></tr><tr><th>Outcome</th><td>Thắng: giữ thành. Thua: Kỵ thương phá thành ở đợt 3–5</td></tr><tr><th>Reward</th><td>200 vàng (x2 lần đầu) · Mở khoá Tu sĩ · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="97" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 97 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="73" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M75 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="165" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M167 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="79" cy="99" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="171" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="125" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Mua 2 gear giống</div><span class="arrow">➜</span><div><b>2</b>Ghép lên bậc 2</div><span class="arrow">➜</span><div><b>3</b>Gặp Kỵ thương</div><span class="arrow">➜</span><div><b>4</b>Giữ ô trống để mua</div><span class="arrow">➜</span><div><b>5</b>Đợt 5: tinh nhuệ Kỵ thương</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (8): 6 Nông dân, 2 Kỵ thương</li><li><b>Đợt 2</b> (9): 5 Chiến binh, 4 Cung thủ</li><li><b>Đợt 3</b> (13): 5 Kỵ thương, 8 Nông dân</li><li><b>Đợt 4</b> (14): 6 Chiến binh, 5 Cung thủ, 3 Kỵ thương</li><li><b>Đợt 5</b> (21): 10 Nông dân, 6 Chiến binh, 4 Cung thủ, 1 Kỵ thương <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>75%–95% (Normal)</td></tr>
+        <tr><th>Win rate bot</th><td>100% (4/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>94%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 3 (13 quân, 5 Kỵ thương) nếu chưa có gear bậc 2</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Hai gear yếu thành một gear mạnh, và còn trả lại một ô trống.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Ưu tiên mua món có nhãn "GHÉP ĐƯỢC".</li><li>Ghép ngay khi có cặp để lên bậc 2.</li><li>Đặt Kỵ thương (quà màn 1) cạnh trục.</li><li>Để dành 1–2 thịt cho lượt sau nếu shop không có món ghép.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Đã sửa gai độ khó: sức mạnh địch hạ từ 2,0 xuống 1,4 (thấp hơn màn 3).</li><li>Kiểm tra số lần ghép trung bình mỗi trận.</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 3 · PHÁO ĐÀI ĐỎ</span><span class="tagbox">Normal · độ khó 1/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>6 đợt · 89 quân · 3 tinh nhuệ</span><span>Sức mạnh địch 1,5</span><span>Máu thành 120 · thịt đầu 8</span><span>Lưới 14 ô (thành cấp 2)</span><span>Thời gian dự kiến 2:19</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Nối các gear thành chuỗi để một trục cam nuôi cả đội quân.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Dạy xích truyền động: gear chạm gear đang quay cũng quay.</li><li>Mở rộng lưới lên 14 ô, các ô xa trục chỉ có ích khi nối chuỗi.</li><li>Giới thiệu địch hồi máu (Tu sĩ).</li></ul>
+    </div>
+    <img class="art" src="img/level_03.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Xếp gear kề nhau thành chuỗi truyền động</td></tr><tr><th>Dominant Feature</th><td>Xích truyền động nhiều gear</td></tr><tr><th>Goal</th><td>Giữ thành qua 6 đợt</td></tr><tr><th>Challenge</th><td>Tu sĩ địch hồi máu; 3 tinh nhuệ dồn ở đợt 4 và 6</td></tr><tr><th>Space</th><td>Lưới 14 ô, 2 ô mới ở rìa phải chỉ quay qua chuỗi</td></tr><tr><th>Support</th><td>Ô trống quay được phát sáng; gear mới tự vào ô quay được</td></tr><tr><th>Outcome</th><td>Thắng: giữ thành. Thua: tinh nhuệ đợt 6 phá thành</td></tr><tr><th>Reward</th><td>240 vàng (x2 lần đầu) · Mở khoá Thợ mỏ · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="73" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M75 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="165" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M167 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="171" cy="53" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="217" cy="53" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="217" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="79" cy="99" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="171" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="125" cy="145" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span><span><i style="background:#9b5de5"></i>M = Tu sĩ</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Kín 4 ô kề trục</div><span class="arrow">➜</span><div><b>2</b>Nối chuỗi sang rìa</div><span class="arrow">➜</span><div><b>3</b>Gặp Tu sĩ địch</div><span class="arrow">➜</span><div><b>4</b>Tinh nhuệ đợt 4</div><span class="arrow">➜</span><div><b>5</b>3 tinh nhuệ đợt 6</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (6): 5 Chiến binh, 1 Tu sĩ</li><li><b>Đợt 2</b> (10): 5 Kỵ thương, 4 Cung thủ, 1 Tu sĩ</li><li><b>Đợt 3</b> (19): 12 Nông dân, 5 Chiến binh, 2 Tu sĩ</li><li><b>Đợt 4</b> (13): 6 Kỵ thương, 6 Cung thủ, 1 Chiến binh <em>tinh nhuệ</em></li><li><b>Đợt 5</b> (20): 8 Chiến binh, 5 Kỵ thương, 2 Tu sĩ, 5 Cung thủ</li><li><b>Đợt 6</b> (21): 1 Chiến binh <em>tinh nhuệ</em>, 1 Kỵ thương <em>tinh nhuệ</em>, 10 Nông dân, 6 Cung thủ, 3 Tu sĩ</li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>90%–100% (Normal)</td></tr>
+        <tr><th>Win rate bot</th><td>100% (4/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>100%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 6 (21 quân, 3 tinh nhuệ)</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Gear xa trục vẫn quay nếu có một gear khác làm cầu nối.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Lấp các ô kề trục trước.</li><li>Kéo chuỗi ngang hàng trên sang phải: 2,0 → 3,0 → 4,0.</li><li>Dùng Cung thủ hạ Tu sĩ địch trước.</li><li>Có gear bậc 2 trước đợt 6.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Mở khoá Thợ mỏ khi thắng lần đầu.</li><li>Đo tỉ lệ gear "đứng yên" (không nằm trong chuỗi) ở cuối trận.</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 4 · RỪNG THÔNG</span><span class="tagbox">Normal · độ khó 2/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>6 đợt · 97 quân · 1 tinh nhuệ</span><span>Sức mạnh địch 1,9</span><span>Máu thành 120 · thịt đầu 9</span><span>Lưới 14 ô (thành cấp 2)</span><span>Thời gian dự kiến 2:22</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Để dành thịt giữa các đợt để nhận lãi, rồi mua gear hiếm vào đúng lúc.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Dạy kinh tế: lãi 1 thịt cho mỗi 5 thịt để dành (tối đa +3).</li><li>Dạy khoá shop để giữ món tốt sang lượt sau.</li></ul>
+    </div>
+    <img class="art" src="img/level_04.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Để dành thịt, khoá shop</td></tr><tr><th>Dominant Feature</th><td>Lãi tiết kiệm</td></tr><tr><th>Goal</th><td>Giữ thành qua 6 đợt</td></tr><tr><th>Challenge</th><td>97 quân, đợt 4–6 dày Chiến binh; tiêu hết sớm sẽ thiếu thịt cuối trận</td></tr><tr><th>Space</th><td>Lưới 14 ô</td></tr><tr><th>Support</th><td>Dòng "Hết đợt nhận +X thịt · lãi +Y" trong shop</td></tr><tr><th>Outcome</th><td>Thắng: giữ thành. Thua: đợt 5–6 thiếu gear bậc cao</td></tr><tr><th>Reward</th><td>280 vàng (x2 lần đầu) · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="73" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M75 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="165" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M167 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="171" cy="53" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="79" cy="99" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="171" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="125" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="79" cy="53" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="79" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span><span><i style="background:#9b5de5"></i>M = Tu sĩ</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Mua đủ ô kề trục</div><span class="arrow">➜</span><div><b>2</b>Để dành ≥5 thịt</div><span class="arrow">➜</span><div><b>3</b>Nhận lãi +1…+3</div><span class="arrow">➜</span><div><b>4</b>Mua gear Hiếm</div><span class="arrow">➜</span><div><b>5</b>Đợt 6 tinh nhuệ</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (9): 4 Kỵ thương, 4 Cung thủ, 1 Tu sĩ</li><li><b>Đợt 2</b> (18): 9 Nông dân, 5 Chiến binh, 4 Kỵ thương</li><li><b>Đợt 3</b> (15): 10 Nông dân, 5 Chiến binh</li><li><b>Đợt 4</b> (16): 10 Chiến binh, 6 Cung thủ</li><li><b>Đợt 5</b> (20): 9 Kỵ thương, 11 Nông dân</li><li><b>Đợt 6</b> (19): 9 Chiến binh, 7 Cung thủ, 2 Tu sĩ, 1 Chiến binh <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>75%–95% (Normal)</td></tr>
+        <tr><th>Win rate bot</th><td>100% (4/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>88%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 5 (20 quân) nếu không có gear bậc 2 nào</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Không mua gì ở lượt này có thể giúp mua gear Hiếm ở lượt sau.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Lượt 1–2 mua đủ gear cơ bản.</li><li>Từ lượt 3 giữ lại ít nhất 5 thịt.</li><li>Khoá shop khi thấy Kỵ thương hoặc Tu sĩ.</li><li>Ghép Kỵ thương lên bậc 2 trước đợt 5.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Không có quà mở khoá: bù bằng vàng.</li><li>Đo lượng thịt để dành trung bình mỗi lượt.</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 5 · HẺM NÚI</span><span class="tagbox">Normal · độ khó 2/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>6 đợt · 102 quân · 2 tinh nhuệ</span><span>Sức mạnh địch 2,2</span><span>Máu thành 120 · thịt đầu 10</span><span>Lưới 16 ô (thành cấp 3)</span><span>Thời gian dự kiến 2:35</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Thợ mỏ địch chịu tên: đội hình cần tiền tuyến cận chiến.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Dạy khắc chế: Thợ mỏ giảm 50% sát thương tên và bom.</li><li>Lưới lên 16 ô, cho phép 4 lính trong đội.</li></ul>
+    </div>
+    <img class="art" src="img/level_05.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Chọn loại gear theo quân địch</td></tr><tr><th>Dominant Feature</th><td>Thợ mỏ địch (chống tên)</td></tr><tr><th>Goal</th><td>Giữ thành qua 6 đợt</td></tr><tr><th>Challenge</th><td>102 quân; Thợ mỏ làm đội toàn cung thủ mất tác dụng</td></tr><tr><th>Space</th><td>Lưới 16 ô</td></tr><tr><th>Support</th><td>Shop xem trước quân địch đợt kế (biểu tượng và số lượng)</td></tr><tr><th>Outcome</th><td>Thắng: mở khoá Hiệp sĩ khiên. Thua: Thợ mỏ lọt qua tuyến tên</td></tr><tr><th>Reward</th><td>320 vàng (x2 lần đầu) · Mở khoá Hiệp sĩ khiên · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="73" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M75 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="165" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M167 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="79" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="79" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="171" cy="53" r="15" fill="#795548" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">N</text><circle cx="79" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="171" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="125" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#795548"></i>N = Thợ mỏ</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Xem trước đợt kế</div><span class="arrow">➜</span><div><b>2</b>Nhận ra Thợ mỏ</div><span class="arrow">➜</span><div><b>3</b>Đổi sang cận chiến</div><span class="arrow">➜</span><div><b>4</b>Tinh nhuệ đợt 4</div><span class="arrow">➜</span><div><b>5</b>Đợt 6 dày</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (16): 8 Nông dân, 5 Chiến binh, 3 Kỵ thương</li><li><b>Đợt 2</b> (13): 8 Thợ mỏ, 5 Chiến binh</li><li><b>Đợt 3</b> (15): 9 Chiến binh, 6 Cung thủ</li><li><b>Đợt 4</b> (20): 9 Kỵ thương, 10 Nông dân, 1 Kỵ thương <em>tinh nhuệ</em></li><li><b>Đợt 5</b> (17): 8 Chiến binh, 7 Cung thủ, 2 Tu sĩ</li><li><b>Đợt 6</b> (21): 9 Kỵ thương, 9 Cung thủ, 2 Tu sĩ, 1 Chiến binh <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>75%–95% (Normal)</td></tr>
+        <tr><th>Win rate bot</th><td>100% (4/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>45%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 4–5 nhiều Thợ mỏ</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Đội toàn cung thủ bị chặn: cần tiền tuyến cận chiến.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Nhìn dòng "Quân địch" trong shop trước khi mua.</li><li>Ưu tiên Chiến binh và Kỵ thương.</li><li>Giữ 1–2 Cung thủ để hạ Tu sĩ.</li><li>Ghép Chiến binh lên bậc 3 nếu kịp.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Bot thua 1/3 lượt ở bản trước: theo dõi thêm.</li><li>Hiệp sĩ khiên là quà: báo trước trên thẻ màn ("Lần đầu: ...").</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 6 · LÀNG BỎ HOANG</span><span class="tagbox">Normal · độ khó 2/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>7 đợt · 138 quân · 2 tinh nhuệ</span><span>Sức mạnh địch 2,3</span><span>Máu thành 130 · thịt đầu 11</span><span>Lưới 16 ô (thành cấp 3)</span><span>Thời gian dự kiến 3:27</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Quản lý shop qua 7 đợt dài: đổi shop, khoá shop, chống lính bị đốt.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Kiểm tra quản lý shop trong trận dài.</li><li>Giới thiệu sát thương theo thời gian (Cung lửa đốt).</li></ul>
+    </div>
+    <img class="art" src="img/level_06.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Đổi shop (lần đầu miễn phí), khoá shop</td></tr><tr><th>Dominant Feature</th><td>Cung lửa địch đốt lính</td></tr><tr><th>Goal</th><td>Giữ thành qua 7 đợt</td></tr><tr><th>Challenge</th><td>138 quân, đợt 6 có 18 Nông dân + Cung lửa</td></tr><tr><th>Space</th><td>Lưới 16 ô</td></tr><tr><th>Support</th><td>Nút ĐỔI SHOP ghi rõ "miễn phí"; lính cháy có lửa trên đầu</td></tr><tr><th>Outcome</th><td>Thắng: giữ thành. Thua: lính ít máu cháy hết ở đợt 6</td></tr><tr><th>Reward</th><td>360 vàng (x2 lần đầu) · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="73" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M75 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="165" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M167 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#607d8b" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">G</text><circle cx="79" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="79" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="171" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="79" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="171" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="125" cy="145" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="79" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="79" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#607d8b"></i>G = Hiệp sĩ khiên</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span><span><i style="background:#9b5de5"></i>M = Tu sĩ</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Lấp lưới</div><span class="arrow">➜</span><div><b>2</b>Đổi shop tìm Hiếm</div><span class="arrow">➜</span><div><b>3</b>Khoá món tốt</div><span class="arrow">➜</span><div><b>4</b>Chống Cung lửa</div><span class="arrow">➜</span><div><b>5</b>Đợt 7</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (13): 9 Nông dân, 4 Chiến binh</li><li><b>Đợt 2</b> (13): 8 Chiến binh, 5 Cung thủ</li><li><b>Đợt 3</b> (16): 8 Kỵ thương, 8 Thợ mỏ</li><li><b>Đợt 4</b> (16): 8 Chiến binh, 5 Cung lửa, 2 Tu sĩ, 1 Kỵ thương <em>tinh nhuệ</em></li><li><b>Đợt 5</b> (20): 9 Kỵ thương, 9 Cung thủ, 2 Tu sĩ</li><li><b>Đợt 6</b> (32): 16 Nông dân, 10 Chiến binh, 6 Kỵ thương</li><li><b>Đợt 7</b> (28): 18 Nông dân, 9 Chiến binh, 1 Chiến binh <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>75%–95% (Normal)</td></tr>
+        <tr><th>Win rate bot</th><td>100% (4/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>97%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 6 (Cung lửa + số đông)</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Khoá shop để giữ món Hiếm sang lượt sau khi chưa đủ thịt.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Dùng lượt đổi shop miễn phí mỗi lượt nghỉ.</li><li>Đặt Hiệp sĩ khiên ở giữa hàng đầu.</li><li>Tu sĩ phía sau hồi máu cho lính bị đốt.</li><li>Giữ lãi +2 trở lên từ đợt 3.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Không có quà mở khoá.</li><li>Đo số lần đổi shop mỗi trận.</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 7 · ĐẦM LẦY</span><span class="tagbox">Hard · độ khó 3/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>7 đợt · 136 quân · 3 tinh nhuệ</span><span>Sức mạnh địch 2,5</span><span>Máu thành 130 · thịt đầu 12</span><span>Lưới 18 ô (thành cấp 4)</span><span>Thời gian dự kiến 4:06</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Giữ an toàn cho hậu tuyến khi Sát thủ địch lao thẳng vào lính bắn xa.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Giới thiệu địch bỏ qua tiền tuyến (Sát thủ).</li><li>Giới thiệu địch miễn sát thương ngắn (Hiệp sĩ khiên địch).</li></ul>
+    </div>
+    <img class="art" src="img/level_07.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Sắp xếp tiền tuyến và hậu tuyến</td></tr><tr><th>Dominant Feature</th><td>Sát thủ địch săn lính bắn xa và hồi máu</td></tr><tr><th>Goal</th><td>Giữ thành qua 7 đợt</td></tr><tr><th>Challenge</th><td>136 quân, 3 tinh nhuệ; Sát thủ nhát đầu x2,5 sát thương</td></tr><tr><th>Space</th><td>Lưới 18 ô</td></tr><tr><th>Support</th><td>Thông báo khi tinh nhuệ xuất hiện</td></tr><tr><th>Outcome</th><td>Thắng: mở khoá Cung lửa. Thua: mất Tu sĩ, tiền tuyến sụp</td></tr><tr><th>Reward</th><td>400 vàng (x2 lần đầu) · Mở khoá Cung lửa · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#607d8b" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">G</text><circle cx="79" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="79" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="171" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="79" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="171" cy="99" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="125" cy="145" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="79" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="79" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="171" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="171" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#607d8b"></i>G = Hiệp sĩ khiên</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span><span><i style="background:#9b5de5"></i>M = Tu sĩ</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Tiền tuyến dày</div><span class="arrow">➜</span><div><b>2</b>Sát thủ xuất hiện</div><span class="arrow">➜</span><div><b>3</b>Bảo vệ Tu sĩ</div><span class="arrow">➜</span><div><b>4</b>Khiên địch</div><span class="arrow">➜</span><div><b>5</b>3 tinh nhuệ</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (12): 7 Chiến binh, 5 Cung thủ</li><li><b>Đợt 2</b> (13): 7 Kỵ thương, 6 Sát thủ</li><li><b>Đợt 3</b> (15): 7 Chiến binh, 6 Cung thủ, 2 Tu sĩ</li><li><b>Đợt 4</b> (19): 8 Kỵ thương, 8 Cung thủ, 2 Tu sĩ, 1 Kỵ thương <em>tinh nhuệ</em></li><li><b>Đợt 5</b> (26): 15 Nông dân, 5 Hiệp sĩ khiên, 6 Kỵ thương</li><li><b>Đợt 6</b> (25): 17 Nông dân, 8 Chiến binh</li><li><b>Đợt 7</b> (26): 15 Chiến binh, 9 Cung thủ, 1 Chiến binh <em>tinh nhuệ</em>, 1 Kỵ thương <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>60%–80% (Hard)</td></tr>
+        <tr><th>Win rate bot</th><td>100% (4/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>88%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 5–7 (Sát thủ + tinh nhuệ)</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Tiền tuyến dày giữ cho Tu sĩ sống.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Nhiều cận chiến hơn bắn xa.</li><li>Hiệp sĩ khiên chịu đòn ở giữa.</li><li>Ghép Tu sĩ lên bậc 2 để hồi nhiều hơn.</li><li>Để dành cho đợt 7.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Cung lửa là quà: kết nối với màn 8.</li><li>Đo tỉ lệ lính bắn xa chết trước tiền tuyến.</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 8 · THÀNH ĐÁ ĐEN</span><span class="tagbox">Hard · độ khó 3/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>7 đợt · 147 quân · 3 tinh nhuệ</span><span>Sức mạnh địch 2,4</span><span>Máu thành 140 · thịt đầu 13</span><span>Lưới 18 ô (thành cấp 4)</span><span>Thời gian dự kiến 4:01</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Hạ các đơn vị hỗ trợ của địch trước khi chúng biến đạo quân thành bất khả xâm phạm.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Dạy ưu tiên mục tiêu: Đầu bếp hồi máu, Thợ rèn bọc giáp, Pháo thủ bom lan.</li><li>Dạy dàn lính tản ra để tránh bom.</li></ul>
+    </div>
+    <img class="art" src="img/level_08.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Chọn gear khắc chế, lên bậc 3</td></tr><tr><th>Dominant Feature</th><td>Đội hỗ trợ của địch</td></tr><tr><th>Goal</th><td>Giữ thành qua 7 đợt</td></tr><tr><th>Challenge</th><td>147 quân; bom lan quét cụm lính</td></tr><tr><th>Space</th><td>Lưới 18 ô</td></tr><tr><th>Support</th><td>Hiệu ứng giáp và hồi máu nhìn rõ trên địch</td></tr><tr><th>Outcome</th><td>Thắng: giữ thành. Thua: địch được hồi và bọc giáp liên tục</td></tr><tr><th>Reward</th><td>440 vàng (x2 lần đầu) · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="51" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 51 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="143" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 143 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="79" cy="53" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="79" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="171" cy="53" r="15" fill="#607d8b" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">G</text><circle cx="79" cy="99" r="15" fill="#ef6c00" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">F</text><circle cx="171" cy="99" r="15" fill="#ef6c00" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">F</text><circle cx="125" cy="145" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="79" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="79" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="171" cy="145" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="171" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span><span><i style="background:#607d8b"></i>G = Hiệp sĩ khiên</span><span><i style="background:#ef6c00"></i>F = Cung lửa</span><span><i style="background:#9b5de5"></i>M = Tu sĩ</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Gặp Đầu bếp</div><span class="arrow">➜</span><div><b>2</b>Gặp Thợ rèn</div><span class="arrow">➜</span><div><b>3</b>Gặp Pháo thủ</div><span class="arrow">➜</span><div><b>4</b>Hạ hỗ trợ trước</div><span class="arrow">➜</span><div><b>5</b>Đợt 7</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (15): 7 Kỵ thương, 8 Nông dân</li><li><b>Đợt 2</b> (15): 7 Chiến binh, 6 Cung thủ, 2 Tu sĩ</li><li><b>Đợt 3</b> (18): 8 Kỵ thương, 8 Cung thủ, 2 Đầu bếp</li><li><b>Đợt 4</b> (26): 10 Thợ rèn, 9 Chiến binh, 6 Kỵ thương, 1 Kỵ thương <em>tinh nhuệ</em></li><li><b>Đợt 5</b> (24): 16 Nông dân, 8 Chiến binh</li><li><b>Đợt 6</b> (19): 14 Chiến binh, 5 Pháo thủ</li><li><b>Đợt 7</b> (30): 13 Kỵ thương, 15 Nông dân, 1 Chiến binh <em>tinh nhuệ</em>, 1 Kỵ thương <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>60%–80% (Hard)</td></tr>
+        <tr><th>Win rate bot</th><td>50% (2/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>28%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt khi Đầu bếp và Thợ rèn đi cùng nhau</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Hạ hỗ trợ trước, rồi đội quân còn lại dễ xử lý.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Cung lửa đốt cả nhóm hỗ trợ.</li><li>Kỵ thương sát thương cao hạ Đầu bếp.</li><li>Không dồn lính một chỗ.</li><li>Có ít nhất một gear bậc 3.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Sau khi hạ sức mạnh địch 2,8 → 2,4: win rate bot 25% → 50%, còn dưới mục tiêu.</li><li>Có lượt thua ngay đợt 1: làm đợt 1 nhẹ hơn là vòng chỉnh tiếp theo.</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 9 · CỔNG PHÁO ĐÀI</span><span class="tagbox">Hard · độ khó 3/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>8 đợt · 171 quân · 4 tinh nhuệ</span><span>Sức mạnh địch 2,6</span><span>Máu thành 140 · thịt đầu 14</span><span>Lưới 20 ô (thành cấp 5)</span><span>Thời gian dự kiến 4:45</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Bài kiểm tra tổng hợp trước trùm: 8 đợt, 171 quân, 4 tinh nhuệ.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Kiểm tra mọi kỹ năng đã học trước màn trùm.</li><li>Lưới lên 20 ô: chuỗi dài và gear bậc 3.</li></ul>
+    </div>
+    <img class="art" src="img/level_09.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Mọi cơ chế đã học</td></tr><tr><th>Dominant Feature</th><td>Nhịp 8 đợt với 4 tinh nhuệ</td></tr><tr><th>Goal</th><td>Giữ thành qua 8 đợt</td></tr><tr><th>Challenge</th><td>Sức ép lớn nhất giai đoạn 1 trước màn trùm</td></tr><tr><th>Space</th><td>Lưới 20 ô</td></tr><tr><th>Support</th><td>Xem trước đợt kế; lãi tối đa +3</td></tr><tr><th>Outcome</th><td>Thắng: vào màn trùm. Thua: hết chỗ trên lưới, gear bậc thấp</td></tr><tr><th>Reward</th><td>480 vàng (x2 lần đầu) · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="79" cy="53" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="79" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="171" cy="53" r="15" fill="#607d8b" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">G</text><circle cx="217" cy="53" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="217" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text><circle cx="79" cy="99" r="15" fill="#ef6c00" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">F</text><circle cx="171" cy="99" r="15" fill="#ef6c00" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">F</text><circle cx="125" cy="145" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="79" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="79" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="171" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="171" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="33" cy="99" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="33" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span><span><i style="background:#607d8b"></i>G = Hiệp sĩ khiên</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span><span><i style="background:#ef6c00"></i>F = Cung lửa</span><span><i style="background:#9b5de5"></i>M = Tu sĩ</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>Mở đầu nhanh</div><span class="arrow">➜</span><div><b>2</b>Kinh tế giữa trận</div><span class="arrow">➜</span><div><b>3</b>Gear bậc 3</div><span class="arrow">➜</span><div><b>4</b>Tinh nhuệ dồn</div><span class="arrow">➜</span><div><b>5</b>Đợt 8</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (13): 6 Chiến binh, 5 Cung thủ, 2 Tu sĩ</li><li><b>Đợt 2</b> (16): 7 Kỵ thương, 7 Cung thủ, 2 Tu sĩ</li><li><b>Đợt 3</b> (26): 13 Nông dân, 8 Chiến binh, 5 Kỵ thương</li><li><b>Đợt 4</b> (22): 15 Nông dân, 7 Chiến binh</li><li><b>Đợt 5</b> (20): 13 Chiến binh, 6 Cung lửa, 1 Kỵ thương <em>tinh nhuệ</em></li><li><b>Đợt 6</b> (22): 13 Kỵ thương, 9 Sát thủ</li><li><b>Đợt 7</b> (20): 7 Hiệp sĩ khiên, 10 Cung thủ, 3 Tu sĩ</li><li><b>Đợt 8</b> (32): 13 Kỵ thương, 13 Cung thủ, 3 Tu sĩ, 1 Chiến binh <em>tinh nhuệ</em>, 1 Kỵ thương <em>tinh nhuệ</em>, 1 Tu sĩ <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>60%–80% (Hard)</td></tr>
+        <tr><th>Win rate bot</th><td>50% (2/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>30%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 7–8 (4 tinh nhuệ)</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Ghép mạnh tay để giải phóng ô: lưới đầy là tín hiệu phải ghép.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Giữ lãi +3 từ đợt 3.</li><li>Ghép đến bậc 3 cho Kỵ thương.</li><li>Chuỗi dài hàng trên nuôi 4–5 gear.</li><li>Bán gear lẻ không ghép được để lấy chỗ.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Sau khi hạ sức mạnh địch 3,0 → 2,6: win rate bot 0% → 50%.</li><li>Màn dài 5–6 phút: cân nhắc bớt 1 đợt.</li></ul></div>
+  </div>
+</section>
+<section class="page ldd">
+  <div class="lhead" style="background:#4caf50"><span>LEVEL 10 · VUA ĐỎ 👑</span><span class="tagbox">Hard · độ khó 4/5</span></div>
+  <div class="facts"><span>Loại: Tower defense + merge</span><span>8 đợt · 198 quân · 4 tinh nhuệ</span><span>Sức mạnh địch 2,7</span><span>Máu thành 150 · thịt đầu 15</span><span>Lưới 20 ô (thành cấp 5)</span><span>Thời gian dự kiến 3:26</span></div>
+  <div class="lrow">
+    <div>
+      <div class="statement">“Hạ Tướng quân địch, trùm đầu tiên, giữa một đạo quân 198 lính.”</div>
+      <h4>Purpose &amp; context</h4><ul><li>Màn trùm cuối giai đoạn 1: tạo đỉnh cảm xúc.</li><li>Mở ra giai đoạn 2 (ô đặc biệt trên lưới).</li></ul>
+    </div>
+    <img class="art" src="img/level_10.png">
+  </div>
+  <div class="lrow">
+    <table class="core"><tr><th>Player / Mechanic</th><td>Dồn sát thương vào một mục tiêu, tướng dẫn đội</td></tr><tr><th>Dominant Feature</th><td>Trùm Tướng quân (chém lan, xoay kiếm, +30% sát thương đồng đội)</td></tr><tr><th>Goal</th><td>Giữ thành qua 8 đợt, hạ trùm ở đợt cuối</td></tr><tr><th>Challenge</th><td>Trùm và 3 tinh nhuệ ở đợt 8, kèm 44 lính thường</td></tr><tr><th>Space</th><td>Lưới 20 ô</td></tr><tr><th>Support</th><td>Thông báo trùm xuất hiện; thanh máu lớn trên trùm</td></tr><tr><th>Outcome</th><td>Thắng: 520 vàng (x2 lần đầu), rương, mở giai đoạn 2. Thua: đợt trùm phá thành</td></tr><tr><th>Reward</th><td>520 vàng (x2 lần đầu) · rương chiến thắng</td></tr></table>
+    <div class="mapbox"><h4>Level map (lưới gear, bố trí gợi ý)</h4><svg viewBox="0 0 296 224" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial"><rect x="10" y="4" width="276" height="14" rx="4" fill="#b0bec5"/><text x="148" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#263238">TƯỜNG THÀNH · địch tràn xuống từ phía trên</text><rect x="12" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="32" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><circle cx="125" cy="99" r="14" fill="#f08a24" stroke="#5b3a1e" stroke-width="2"/><rect x="125" y="96" width="16" height="6" rx="2" fill="#f08a24" stroke="#5b3a1e"/><rect x="150" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="78" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="58" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="242" y="124" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="12" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="27" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M29 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="58" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="104" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="150" y="170" width="42" height="42" rx="6" fill="#e8f0e0" stroke="#90a4ae"/><rect x="196" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="211" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M213 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><rect x="242" y="170" width="42" height="42" rx="6" fill="#37474f" stroke="#90a4ae"/><rect x="257" y="189" width="12" height="9" rx="2" fill="#cfd8dc"/><path d="M259 189 v-3 a4 4 0 0 1 8 0 v3" fill="none" stroke="#cfd8dc" stroke-width="2"/><circle cx="125" cy="53" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="125" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="79" cy="53" r="15" fill="#d9534f" stroke="#263238" stroke-width="2"/><text x="79" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">L</text><circle cx="171" cy="53" r="15" fill="#607d8b" stroke="#263238" stroke-width="2"/><text x="171" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">G</text><circle cx="217" cy="53" r="15" fill="#607d8b" stroke="#263238" stroke-width="2"/><text x="217" y="57" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">G</text><circle cx="79" cy="99" r="15" fill="#ef6c00" stroke="#263238" stroke-width="2"/><text x="79" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">F</text><circle cx="171" cy="99" r="15" fill="#ef6c00" stroke="#263238" stroke-width="2"/><text x="171" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">F</text><circle cx="125" cy="145" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="125" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="79" cy="145" r="15" fill="#9b5de5" stroke="#263238" stroke-width="2"/><text x="79" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">M</text><circle cx="171" cy="145" r="15" fill="#2e9e5b" stroke="#263238" stroke-width="2"/><text x="171" y="149" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">A</text><circle cx="33" cy="99" r="15" fill="#3f7fd9" stroke="#263238" stroke-width="2"/><text x="33" y="103" text-anchor="middle" font-size="12" font-weight="800" fill="#fff">W</text></svg><div class="legend"><span><i style="background:#f08a24"></i>Trục cam</span><span><i style="background:#e8f0e0;border:1px solid #90a4ae"></i>Ô mở</span><span><i style="background:#37474f"></i>Ô khoá</span><span><i style="background:#d9534f"></i>L = Kỵ thương</span><span><i style="background:#607d8b"></i>G = Hiệp sĩ khiên</span><span><i style="background:#ef6c00"></i>F = Cung lửa</span><span><i style="background:#9b5de5"></i>M = Tu sĩ</span><span><i style="background:#2e9e5b"></i>A = Cung thủ</span><span><i style="background:#3f7fd9"></i>W = Chiến binh</span></div></div>
+  </div>
+  <h4>Flow</h4>
+  <div class="flow"><div><b>1</b>7 đợt tích luỹ</div><span class="arrow">➜</span><div><b>2</b>Chuẩn bị gear bậc 3</div><span class="arrow">➜</span><div><b>3</b>Trùm xuất hiện</div><span class="arrow">➜</span><div><b>4</b>Dồn sát thương</div><span class="arrow">➜</span><div><b>5</b>Chiến thắng</div></div>
+  <div class="lrow">
+    <div><h4>Challenges &amp; encounters (các đợt)</h4><ul class="waves"><li><b>Đợt 1</b> (16): 7 Kỵ thương, 7 Cung thủ, 2 Tu sĩ</li><li><b>Đợt 2</b> (26): 13 Nông dân, 8 Chiến binh, 5 Kỵ thương</li><li><b>Đợt 3</b> (21): 14 Nông dân, 7 Chiến binh</li><li><b>Đợt 4</b> (20): 12 Chiến binh, 8 Cung thủ</li><li><b>Đợt 5</b> (23): 12 Kỵ thương, 10 Thợ mỏ, 1 Kỵ thương <em>tinh nhuệ</em></li><li><b>Đợt 6</b> (23): 11 Chiến binh, 9 Cung thủ, 3 Tu sĩ</li><li><b>Đợt 7</b> (21): 12 Kỵ thương, 6 Pháo thủ, 3 Tu sĩ</li><li><b>Đợt 8</b> (48): 22 Nông dân, 13 Chiến binh, 9 Kỵ thương, 1 Tướng quân, 1 Chiến binh <em>tinh nhuệ</em>, 1 Kỵ thương <em>tinh nhuệ</em>, 1 Tu sĩ <em>tinh nhuệ</em></li></ul></div>
+    <div>
+      <h4>Chỉ số &amp; khoảnh khắc chính</h4>
+      <table class="kv2">
+        <tr><th>Win rate mục tiêu</th><td>45%–65% (Hard)</td></tr>
+        <tr><th>Win rate bot</th><td>50% (2/4 lượt)</td></tr>
+        <tr><th>Máu thành còn (khi thắng)</th><td>95%</td></tr>
+        <tr><th>Điểm tắc</th><td>Đợt 8 (trùm + 3 tinh nhuệ)</td></tr>
+        <tr><th>Khoảnh khắc Aha</th><td>Dồn sát thương đơn mục tiêu lên trùm; tướng dẫn đội gánh tiền tuyến.</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="lrow">
+    <div><h4>Walkthrough (lời giải gợi ý)</h4><ol><li>Tích luỹ lãi để có gear bậc 3–4 trước đợt 8.</li><li>Hiệp sĩ khiên chặn chém lan của trùm.</li><li>Kỵ thương bậc cao dồn sát thương lên trùm.</li><li>Tướng dẫn đội ra trận lại ở đầu đợt 8.</li></ol></div>
+    <div><h4>Notes / TBD</h4><ul><li>Sau khi hạ sức mạnh địch 3,0 → 2,7: win rate bot 0% → 50%, đúng mục tiêu màn trùm.</li><li>Còn lượt thua sau 29 giây ở đợt 1: đợt mở màn cần nhẹ hơn.</li></ul></div>
+  </div>
+</section>
+
+<section class="page compact">
+  <h2><span class="num">4</span>Tổng kết và hướng phát triển</h2>
+  <h3>Điều đã kiểm chứng</h3>
+  <ul>
+    <li>Vòng lặp mua → xếp → quay → sinh lính dễ hiểu: level 1–7 đạt win rate 100% với bot, level 1 xong trong khoảng 1 phút rưỡi.</li>
+    <li>Cơ chế bánh răng tạo được bài toán không gian: các level 11–15 dùng ô đá, ô vàng, ô rỉ sét, ô băng mà không cần hình mới.</li>
+    <li>Số liệu giúp tìm và sửa gai độ khó (level 2, level 8–10) trước khi có người chơi thật.</li>
+  </ul>
+  <h3>Vòng chỉnh sửa theo số liệu</h3>
+  <p>Chỉ số playtest ở mục 3 cho thấy tác dụng của vòng này. Lần đo đầu cho thấy <b>gai độ khó ở level 8–10</b>: level 7 thắng 4/4 nhưng level 8 chỉ 1/4, level 9–10 thua cả 4 lượt, có lượt thua ngay ở đợt 1 sau 27 giây. <b>Giả thuyết:</b> sức mạnh địch tăng nhanh hơn sức mạnh người chơi ở mức nâng cấp vừa phải. <b>Chỉnh:</b> hạ sức mạnh địch level 8/9/10 và level 2 (gai đã thấy từ trước). <b>Đo lại:</b></p>
+  <table class="small metrics"><thead><tr><th>Lv</th><th>Tên</th><th>Win rate trước</th><th>Win rate sau</th><th>Thời gian TB sau</th></tr></thead><tbody><tr><td>2</td><td style="text-align:left">Đồi Đá</td><td>100% (4/4)</td><td>100% (4/4)</td><td>1:43</td></tr><tr><td>8</td><td style="text-align:left">Thành Đá Đen</td><td>25% (1/4)</td><td>50% (2/4)</td><td>4:01</td></tr><tr><td>9</td><td style="text-align:left">Cổng Pháo Đài</td><td>0% (0/4)</td><td>50% (2/4)</td><td>4:45</td></tr><tr><td>10</td><td style="text-align:left">Vua Đỏ</td><td>0% (0/4)</td><td>50% (2/4)</td><td>3:26</td></tr></tbody></table>
+  <p style="font-size:8.5pt;color:#546e7a">Sức mạnh địch đã chỉnh: level 2: 2,0 → 1,4; level 8: 2,8 → 2,4; level 9: 3,0 → 2,6; level 10: 3,0 → 2,7. Bot chơi đều tay hơn người thật, nên số liệu dùng để so sánh giữa các level; Reach Rate và Churn Rate sẽ đo khi có người chơi thật.</p>
+  <h3>Hạn chế</h3>
+  <ul>
+    <li>Win rate đo bằng bot, chưa có Reach / Churn thật; cần playtest với người chơi.</li>
+    <li>Level 7–10 dài 4–5 phút, hơi quá mục tiêu 2–4 phút; có thể bớt một đợt.</li>
+    <li>Bộ hình miễn phí có ít loại lính; kẻ địch mới dựa vào đổi màu và cơ chế.</li>
+  </ul>
+  <h3>Hướng phát triển</h3>
+  <table>
+    <tr><td><b>Giai đoạn 2 (11–20)</b></td><td>Đã làm 11–15 với ô đặc biệt; tiếp theo là địch hồi máu theo nhóm, sương mù, shop 4 ô, trùm level 20</td></tr>
+    <tr><td><b>Chọn buff giữa đợt</b></td><td>Hết mỗi đợt chọn 1 trong 3 thẻ buff: tăng tính chơi lại</td></tr>
+    <tr><td><b>Hệ phái lính</b></td><td>Thợ / Kỵ sĩ / Xạ thủ / Bóng tối: có 2–3 lính cùng hệ thì được buff</td></tr>
+    <tr><td><b>Kỹ năng tướng</b></td><td>Nút kỹ năng trong trận, hồi chiêu 20–30 giây</td></tr>
+    <tr><td><b>Chế độ và sự kiện</b></td><td>Vô tận, thử thách ngày, Boss Rush, tháp thử thách dạng giải đố</td></tr>
+    <tr><td><b>Đo lường</b></td><td>Ghi Level Start, Win/Lose, Play Time, thịt để dành mỗi lượt để tính Reach, Churn, Deep Metric</td></tr>
+  </table>
+  <h3>Sản phẩm nộp</h3>
+  <table>
+    <tr><td>Báo cáo PDF</td><td>bao_cao_thiet_ke_level.pdf (tài liệu này)</td></tr>
+    <tr><td>Slide tổng quan 1 trang</td><td>tong_quan_1_trang.png / .pdf</td></tr>
+    <tr><td>Bảng tiến trình 50 level</td><td>bang_tien_trinh_50_level.xlsx</td></tr>
+    <tr><td>Bản demo chơi được</td><td>GearDefenders_Demo_Windows.zip; bản web chạy trên trình duyệt</td></tr>
+    <tr><td>Video gameplay</td><td>GearDefenders_gameplay.mp4 (3 phút 27 giây)</td></tr>
+  </table>
+</section>
+
+</body></html>

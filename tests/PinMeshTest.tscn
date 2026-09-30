@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://tests/PinMeshTest.gd" id="1_pin"]
+
+[node name="PinMeshTest" type="Node"]
+script = ExtResource("1_pin")

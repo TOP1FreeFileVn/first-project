@@ -1,0 +1,2771 @@
+{
+  "battle_shop": {
+    "free_rerolls": 1.0,
+    "odds": [
+      {
+        "from": 1.0,
+        "weights": [
+          80.0,
+          20.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "from": 3.0,
+        "weights": [
+          60.0,
+          32.0,
+          8.0,
+          0.0
+        ]
+      },
+      {
+        "from": 5.0,
+        "weights": [
+          45.0,
+          35.0,
+          16.0,
+          4.0
+        ]
+      },
+      {
+        "from": 7.0,
+        "weights": [
+          35.0,
+          35.0,
+          22.0,
+          8.0
+        ]
+      }
+    ],
+    "prices": [
+      2.0,
+      3.0,
+      4.0,
+      6.0
+    ],
+    "reroll_cost": 1.0,
+    "sell_refund": 0.75,
+    "slots": 5.0,
+    "tier2_chance": 0.15,
+    "tier2_from_wave": 5.0,
+    "tier2_price_mult": 2.5
+  },
+  "castle": [
+    {
+      "cells": 12.0,
+      "cost": 0.0,
+      "hp": 1.0,
+      "meat": 20.0,
+      "team": 3.0
+    },
+    {
+      "cells": 14.0,
+      "cost": 150.0,
+      "hp": 1.15,
+      "meat": 20.0,
+      "team": 3.0
+    },
+    {
+      "cells": 16.0,
+      "cost": 250.0,
+      "hp": 1.3,
+      "meat": 22.0,
+      "team": 4.0
+    },
+    {
+      "cells": 18.0,
+      "cost": 400.0,
+      "hp": 1.5,
+      "meat": 22.0,
+      "team": 4.0
+    },
+    {
+      "cells": 20.0,
+      "cost": 600.0,
+      "hp": 1.7,
+      "meat": 24.0,
+      "team": 4.0
+    },
+    {
+      "cells": 22.0,
+      "cost": 850.0,
+      "hp": 1.95,
+      "meat": 24.0,
+      "team": 5.0
+    },
+    {
+      "cells": 23.0,
+      "cost": 1200.0,
+      "hp": 2.2,
+      "meat": 26.0,
+      "team": 5.0
+    },
+    {
+      "cells": 23.0,
+      "cost": 1650.0,
+      "hp": 2.5,
+      "meat": 26.0,
+      "team": 5.0
+    },
+    {
+      "cells": 23.0,
+      "cost": 2200.0,
+      "hp": 2.85,
+      "meat": 28.0,
+      "team": 5.0
+    },
+    {
+      "cells": 23.0,
+      "cost": 3000.0,
+      "hp": 3.2,
+      "meat": 30.0,
+      "team": 5.0
+    }
+  ],
+  "chests": {
+    "gold": {
+      "bonus_gold": [
+        0.0,
+        0.0
+      ],
+      "cards": 25.0,
+      "gems": 120.0,
+      "gold": 0.0,
+      "min_rare": 3.0,
+      "name": "Rương Vàng"
+    },
+    "silver": {
+      "bonus_gold": [
+        0.0,
+        0.0
+      ],
+      "cards": 8.0,
+      "gems": 0.0,
+      "gold": 600.0,
+      "min_rare": 0.0,
+      "name": "Rương Bạc"
+    },
+    "victory": {
+      "bonus_gold": [
+        0.0,
+        0.0
+      ],
+      "cards": 2.0,
+      "gems": 0.0,
+      "gold": 0.0,
+      "min_rare": 0.0,
+      "name": "Rương chiến thắng"
+    },
+    "wood": {
+      "bonus_gold": [
+        50.0,
+        100.0
+      ],
+      "cards": 3.0,
+      "gems": 0.0,
+      "gold": 0.0,
+      "min_rare": 0.0,
+      "name": "Rương Gỗ"
+    }
+  },
+  "heroes": [
+    {
+      "buff": "+20% máu cho mọi lính",
+      "id": "valor",
+      "name": "Hiệp Sĩ Bạch Kim",
+      "rarity": 3,
+      "troop": "warrior"
+    },
+    {
+      "buff": "+18% sát thương cho mọi lính",
+      "id": "storm",
+      "name": "Thương Thần Bão Tố",
+      "rarity": 3,
+      "troop": "lancer"
+    },
+    {
+      "buff": "+12% tốc độ sinh lính",
+      "id": "ember",
+      "name": "Xạ Thủ Hoả Ngục",
+      "rarity": 2,
+      "troop": "fire_archer"
+    },
+    {
+      "buff": "+2 thịt thu nhập mỗi đợt",
+      "id": "sage",
+      "name": "Hiền Giả Lục Diệp",
+      "rarity": 2,
+      "troop": "monk"
+    },
+    {
+      "buff": "+15% máu thành",
+      "id": "iron",
+      "name": "Đội Trưởng Thép",
+      "rarity": 1,
+      "troop": "guard"
+    },
+    {
+      "buff": "+8% sát thương cho mọi lính",
+      "id": "shadow",
+      "name": "Sát Thủ Bóng Đêm",
+      "rarity": 1,
+      "troop": "assassin"
+    }
+  ],
+  "levels": [
+    {
+      "core_hp": 100.0,
+      "elites": 1,
+      "enemies": 41,
+      "enemy_power": 0.9,
+      "gift": "lancer",
+      "gold_3star": 160,
+      "income_wave1": 6,
+      "index": 1,
+      "kinds": [
+        "pawn",
+        "warrior",
+        "archer"
+      ],
+      "name": "Màn 1 · Đồng Cỏ",
+      "start_meat": 6.0,
+      "waves": [
+        {
+          "count": 5,
+          "groups": [
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 8,
+          "groups": [
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 11,
+          "groups": [
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 17,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 100.0,
+      "elites": 1,
+      "enemies": 65,
+      "enemy_power": 1.4,
+      "gift": "monk",
+      "gold_3star": 200,
+      "income_wave1": 6,
+      "index": 2,
+      "kinds": [
+        "pawn",
+        "lancer",
+        "warrior",
+        "archer"
+      ],
+      "name": "Màn 2 · Đồi Đá",
+      "start_meat": 7.0,
+      "waves": [
+        {
+          "count": 8,
+          "groups": [
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 9,
+          "groups": [
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "groups": [
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 14,
+          "groups": [
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 120.0,
+      "elites": 3,
+      "enemies": 89,
+      "enemy_power": 1.5,
+      "gift": "miner",
+      "gold_3star": 240,
+      "income_wave1": 6,
+      "index": 3,
+      "kinds": [
+        "warrior",
+        "monk",
+        "lancer",
+        "archer",
+        "pawn"
+      ],
+      "name": "Màn 3 · Pháo Đài Đỏ",
+      "start_meat": 8.0,
+      "waves": [
+        {
+          "count": 6,
+          "groups": [
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 10,
+          "groups": [
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "groups": [
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 120.0,
+      "elites": 1,
+      "enemies": 97,
+      "enemy_power": 1.9,
+      "gift": "",
+      "gold_3star": 280,
+      "income_wave1": 6,
+      "index": 4,
+      "kinds": [
+        "lancer",
+        "archer",
+        "monk",
+        "pawn",
+        "warrior"
+      ],
+      "name": "Màn 4 · Rừng Thông",
+      "start_meat": 9.0,
+      "waves": [
+        {
+          "count": 9,
+          "groups": [
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 18,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 15,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 11,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 120.0,
+      "elites": 2,
+      "enemies": 102,
+      "enemy_power": 2.2,
+      "gift": "guard",
+      "gold_3star": 320,
+      "income_wave1": 6,
+      "index": 5,
+      "kinds": [
+        "pawn",
+        "warrior",
+        "lancer",
+        "miner",
+        "archer",
+        "monk"
+      ],
+      "name": "Màn 5 · Hẻm Núi",
+      "start_meat": 10.0,
+      "waves": [
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 15,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 17,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 130.0,
+      "elites": 2,
+      "enemies": 138,
+      "enemy_power": 2.3,
+      "gift": "",
+      "gold_3star": 360,
+      "income_wave1": 6,
+      "index": 6,
+      "kinds": [
+        "pawn",
+        "warrior",
+        "archer",
+        "lancer",
+        "miner",
+        "fire_archer",
+        "monk"
+      ],
+      "name": "Màn 6 · Làng Bỏ Hoang",
+      "start_meat": 11.0,
+      "waves": [
+        {
+          "count": 13,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "miner"
+            }
+          ]
+        },
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "fire_archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 32,
+          "groups": [
+            {
+              "count": 16,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 28,
+          "groups": [
+            {
+              "count": 18,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 130.0,
+      "elites": 3,
+      "enemies": 136,
+      "enemy_power": 2.5,
+      "gift": "fire_archer",
+      "gold_3star": 400,
+      "income_wave1": 6,
+      "index": 7,
+      "kinds": [
+        "warrior",
+        "archer",
+        "lancer",
+        "assassin",
+        "monk",
+        "pawn",
+        "guard"
+      ],
+      "name": "Màn 7 · Đầm Lầy",
+      "start_meat": 12.0,
+      "waves": [
+        {
+          "count": 12,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 13,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "assassin"
+            }
+          ]
+        },
+        {
+          "count": 15,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 26,
+          "groups": [
+            {
+              "count": 15,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 25,
+          "groups": [
+            {
+              "count": 17,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 26,
+          "groups": [
+            {
+              "count": 15,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 140.0,
+      "elites": 3,
+      "enemies": 147,
+      "enemy_power": 2.4,
+      "gift": "",
+      "gold_3star": 440,
+      "income_wave1": 6,
+      "index": 8,
+      "kinds": [
+        "lancer",
+        "pawn",
+        "warrior",
+        "archer",
+        "monk",
+        "cook",
+        "smith",
+        "bomber"
+      ],
+      "name": "Màn 8 · Thành Đá Đen",
+      "start_meat": 13.0,
+      "waves": [
+        {
+          "count": 15,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 15,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 18,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "cook"
+            }
+          ]
+        },
+        {
+          "count": 26,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "smith"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 24,
+          "groups": [
+            {
+              "count": 16,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "bomber"
+            }
+          ]
+        },
+        {
+          "count": 30,
+          "groups": [
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 15,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 140.0,
+      "elites": 4,
+      "enemies": 171,
+      "enemy_power": 2.6,
+      "gift": "",
+      "gold_3star": 480,
+      "income_wave1": 6,
+      "index": 9,
+      "kinds": [
+        "warrior",
+        "archer",
+        "monk",
+        "lancer",
+        "pawn",
+        "fire_archer",
+        "assassin",
+        "guard"
+      ],
+      "name": "Màn 9 · Cổng Pháo Đài",
+      "start_meat": 14.0,
+      "waves": [
+        {
+          "count": 13,
+          "groups": [
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 26,
+          "groups": [
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 22,
+          "groups": [
+            {
+              "count": 15,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "fire_archer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 22,
+          "groups": [
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "assassin"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 32,
+          "groups": [
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "monk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 150.0,
+      "elites": 4,
+      "enemies": 198,
+      "enemy_power": 2.7,
+      "gift": "",
+      "gold_3star": 520,
+      "income_wave1": 6,
+      "index": 10,
+      "kinds": [
+        "lancer",
+        "archer",
+        "monk",
+        "pawn",
+        "warrior",
+        "miner",
+        "bomber",
+        "general"
+      ],
+      "name": "Màn 10 · Vua Đỏ",
+      "start_meat": 15.0,
+      "waves": [
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 2,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 26,
+          "groups": [
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 23,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 23,
+          "groups": [
+            {
+              "count": 11,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "bomber"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 48,
+          "groups": [
+            {
+              "count": 22,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 13,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": false,
+              "troop": "general"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "monk"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 150.0,
+      "elites": 3,
+      "enemies": 191,
+      "enemy_power": 2.9,
+      "gift": "",
+      "gold_3star": 560,
+      "income_wave1": 6,
+      "index": 11,
+      "kinds": [
+        "pawn",
+        "warrior",
+        "archer",
+        "lancer",
+        "monk",
+        "miner",
+        "fire_archer",
+        "guard"
+      ],
+      "name": "Màn 11 · Bến Cảng",
+      "start_meat": 15.0,
+      "waves": [
+        {
+          "count": 18,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 17,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 9,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 23,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 32,
+          "groups": [
+            {
+              "count": 18,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "fire_archer"
+            }
+          ]
+        },
+        {
+          "count": 25,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 36,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "guard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 150.0,
+      "elites": 2,
+      "enemies": 158,
+      "enemy_power": 3.1,
+      "gift": "smith",
+      "gold_3star": 600,
+      "income_wave1": 6,
+      "index": 12,
+      "kinds": [
+        "guard",
+        "archer",
+        "warrior",
+        "monk",
+        "pawn",
+        "lancer",
+        "smith",
+        "fire_archer",
+        "general"
+      ],
+      "name": "Màn 12 · Rừng Sương",
+      "start_meat": 15.0,
+      "waves": [
+        {
+          "count": 12,
+          "groups": [
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 15,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "guard"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "guard"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "guard"
+            }
+          ]
+        },
+        {
+          "count": 22,
+          "groups": [
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "smith"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "fire_archer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 32,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "smith"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "guard"
+            },
+            {
+              "count": 1,
+              "elite": false,
+              "troop": "general"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 155.0,
+      "elites": 3,
+      "enemies": 183,
+      "enemy_power": 3.6,
+      "gift": "",
+      "gold_3star": 640,
+      "income_wave1": 6,
+      "index": 13,
+      "kinds": [
+        "pawn",
+        "archer",
+        "warrior",
+        "lancer",
+        "assassin",
+        "monk",
+        "fire_archer",
+        "guard"
+      ],
+      "name": "Màn 13 · Đồi Cừu",
+      "start_meat": 16.0,
+      "waves": [
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 17,
+          "groups": [
+            {
+              "count": 11,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 21,
+          "groups": [
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "assassin"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 16,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "assassin"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 32,
+          "groups": [
+            {
+              "count": 20,
+              "elite": false,
+              "troop": "pawn"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "fire_archer"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "guard"
+            }
+          ]
+        },
+        {
+          "count": 22,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "assassin"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 36,
+          "groups": [
+            {
+              "count": 16,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 6,
+              "elite": false,
+              "troop": "assassin"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "warrior"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "assassin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 155.0,
+      "elites": 3,
+      "enemies": 176,
+      "enemy_power": 3.7,
+      "gift": "",
+      "gold_3star": 680,
+      "income_wave1": 6,
+      "index": 14,
+      "kinds": [
+        "miner",
+        "pawn",
+        "lancer",
+        "archer",
+        "monk",
+        "bomber",
+        "warrior",
+        "cook"
+      ],
+      "name": "Màn 14 · Mỏ Vàng",
+      "start_meat": 16.0,
+      "waves": [
+        {
+          "count": 18,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "pawn"
+            }
+          ]
+        },
+        {
+          "count": 14,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 18,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 16,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 17,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "bomber"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "miner"
+            }
+          ]
+        },
+        {
+          "count": 26,
+          "groups": [
+            {
+              "count": 18,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "warrior"
+            }
+          ]
+        },
+        {
+          "count": 25,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "cook"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 39,
+          "groups": [
+            {
+              "count": 20,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "miner"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "bomber"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "miner"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "core_hp": 160.0,
+      "elites": 4,
+      "enemies": 182,
+      "enemy_power": 4.4,
+      "gift": "assassin",
+      "gold_3star": 720,
+      "income_wave1": 6,
+      "index": 15,
+      "kinds": [
+        "warrior",
+        "archer",
+        "smith",
+        "lancer",
+        "guard",
+        "monk",
+        "cook",
+        "bomber",
+        "fire_archer",
+        "assassin",
+        "general"
+      ],
+      "name": "Màn 15 · Cầu Đá",
+      "start_meat": 17.0,
+      "waves": [
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 7,
+              "elite": false,
+              "troop": "archer"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "smith"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "lancer"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "archer"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "monk"
+            }
+          ]
+        },
+        {
+          "count": 19,
+          "groups": [
+            {
+              "count": 12,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "smith"
+            },
+            {
+              "count": 3,
+              "elite": false,
+              "troop": "cook"
+            }
+          ]
+        },
+        {
+          "count": 20,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "bomber"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "smith"
+            }
+          ]
+        },
+        {
+          "count": 23,
+          "groups": [
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 8,
+              "elite": false,
+              "troop": "fire_archer"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "assassin"
+            }
+          ]
+        },
+        {
+          "count": 24,
+          "groups": [
+            {
+              "count": 14,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 5,
+              "elite": false,
+              "troop": "smith"
+            },
+            {
+              "count": 4,
+              "elite": false,
+              "troop": "monk"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "guard"
+            }
+          ]
+        },
+        {
+          "count": 39,
+          "groups": [
+            {
+              "count": 16,
+              "elite": false,
+              "troop": "warrior"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "guard"
+            },
+            {
+              "count": 10,
+              "elite": false,
+              "troop": "lancer"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "smith"
+            },
+            {
+              "count": 1,
+              "elite": true,
+              "troop": "guard"
+            },
+            {
+              "count": 1,
+              "elite": false,
+              "troop": "general"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "rarity_weights": [
+    64.0,
+    32.0,
+    3.6,
+    0.4
+  ],
+  "troops": [
+    {
+      "ability": "",
+      "cooldown": 0.9,
+      "damage": 5.0,
+      "description": "Rẻ, chạy nhanh, sinh liên tục. Đông mà yếu.",
+      "hp": 30.0,
+      "id": "pawn",
+      "name": "Nông dân",
+      "range": 34.0,
+      "rarity": 0,
+      "role": 0,
+      "spawn": 2.6
+    },
+    {
+      "ability": "",
+      "cooldown": 1.0,
+      "damage": 8.0,
+      "description": "Máu trâu, đỡ đòn và giữ tuyến cho đồng đội.",
+      "hp": 85.0,
+      "id": "warrior",
+      "name": "Chiến binh",
+      "range": 38.0,
+      "rarity": 0,
+      "role": 0,
+      "spawn": 4.5
+    },
+    {
+      "ability": "",
+      "cooldown": 1.3,
+      "damage": 9.0,
+      "description": "Bắn xa từ phía sau. Máu giấy, cần người che chắn.",
+      "hp": 28.0,
+      "id": "archer",
+      "name": "Cung thủ",
+      "range": 230.0,
+      "rarity": 0,
+      "role": 1,
+      "spawn": 4.5
+    },
+    {
+      "ability": "Đào hầm: chịu ít hơn 50% sát thương từ tên và bom.",
+      "cooldown": 1.0,
+      "damage": 6.0,
+      "description": "Cầm cuốc, da dày. Đứng mũi chịu tên cho cả đội.",
+      "hp": 60.0,
+      "id": "miner",
+      "name": "Thợ mỏ",
+      "range": 34.0,
+      "rarity": 0,
+      "role": 0,
+      "spawn": 3.6
+    },
+    {
+      "ability": "Rèn giáp: 5 giây một lần, đồng đội trong bán kính 110 chịu ít hơn 25% sát thương trong 3 giây.",
+      "cooldown": 1.1,
+      "damage": 6.0,
+      "description": "Cầm búa đi theo đội, rèn giáp cho đồng đội đứng gần.",
+      "hp": 45.0,
+      "id": "smith",
+      "name": "Thợ rèn",
+      "range": 34.0,
+      "rarity": 0,
+      "role": 0,
+      "spawn": 3.8
+    },
+    {
+      "ability": "",
+      "cooldown": 1.1,
+      "damage": 14.0,
+      "description": "Kỵ binh cầm giáo: nhanh, đánh đau, xông thẳng vào địch.",
+      "hp": 55.0,
+      "id": "lancer",
+      "name": "Kỵ thương",
+      "range": 52.0,
+      "rarity": 1,
+      "role": 0,
+      "spawn": 5.0
+    },
+    {
+      "ability": "Ám sát: ưu tiên địch bắn xa và hồi máu ở bất cứ đâu; nhát đầu gây x2.5 sát thương.",
+      "cooldown": 0.7,
+      "damage": 11.0,
+      "description": "Nhanh như gió, lách qua tuyến đầu để hạ cung thủ và tu sĩ địch.",
+      "hp": 38.0,
+      "id": "assassin",
+      "name": "Sát thủ",
+      "range": 32.0,
+      "rarity": 1,
+      "role": 0,
+      "spawn": 4.8
+    },
+    {
+      "ability": "Giơ khiên: 4 giây một lần, miễn nhiễm mọi sát thương trong 1.2 giây.",
+      "cooldown": 1.2,
+      "damage": 6.0,
+      "description": "Giáp nặng, khiên lớn. Giữ tuyến lâu hơn bất kỳ ai.",
+      "hp": 130.0,
+      "id": "guard",
+      "name": "Hiệp sĩ khiên",
+      "range": 38.0,
+      "rarity": 1,
+      "role": 0,
+      "spawn": 5.5
+    },
+    {
+      "ability": "Tên lửa: mục tiêu bị đốt 4 sát thương/giây trong 3 giây.",
+      "cooldown": 1.4,
+      "damage": 7.0,
+      "description": "Tên tẩm dầu: mỗi phát bắn đốt cháy mục tiêu.",
+      "hp": 30.0,
+      "id": "fire_archer",
+      "name": "Cung lửa",
+      "range": 230.0,
+      "rarity": 1,
+      "role": 1,
+      "spawn": 5.0
+    },
+    {
+      "ability": "",
+      "cooldown": 1.8,
+      "damage": 10.0,
+      "description": "Không đánh, chỉ hồi máu cho đồng đội bị thương gần nhất.",
+      "hp": 36.0,
+      "id": "monk",
+      "name": "Tu sĩ",
+      "range": 170.0,
+      "rarity": 2,
+      "role": 2,
+      "spawn": 6.0
+    },
+    {
+      "ability": "Nấu thịt: 6 giây một lần +1 thịt khi còn sống. (Đầu bếp địch hồi máu cho quân xung quanh.)",
+      "cooldown": 1.0,
+      "damage": 0.0,
+      "description": "Không cầm vũ khí. Đứng sau nướng thịt cho bánh răng tổng.",
+      "hp": 40.0,
+      "id": "cook",
+      "name": "Đầu bếp",
+      "range": 0.0,
+      "rarity": 2,
+      "role": 3,
+      "spawn": 7.0
+    },
+    {
+      "ability": "Bom: nổ trúng mọi địch trong bán kính 70.",
+      "cooldown": 2.4,
+      "damage": 12.0,
+      "description": "Vác túi thuốc nổ, ném bom trúng cả đám đông.",
+      "hp": 34.0,
+      "id": "bomber",
+      "name": "Pháo thủ",
+      "range": 210.0,
+      "rarity": 2,
+      "role": 1,
+      "spawn": 6.0
+    },
+    {
+      "ability": "Hiệu lệnh: đồng đội trong bán kính 160 gây thêm 30% sát thương. Mỗi nhát chém trúng mọi địch sát mục tiêu; 5 giây một lần xoay kiếm gây x1.5 sát thương quanh mình.",
+      "cooldown": 1.0,
+      "damage": 20.0,
+      "description": "Huyền thoại chiến trường. Một mình quét sạch tuyến đầu và hiệu triệu cả đội.",
+      "hp": 260.0,
+      "id": "general",
+      "name": "Tướng quân",
+      "range": 46.0,
+      "rarity": 3,
+      "role": 0,
+      "spawn": 10.0
+    }
+  ]
+}

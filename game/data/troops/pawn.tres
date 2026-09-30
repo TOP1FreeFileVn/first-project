@@ -1,0 +1,20 @@
+[gd_resource type="Resource" format=3 uid="uid://dmeihk7x5qiyc"]
+
+[ext_resource type="Script" uid="uid://yjtrdo1h3tku" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "pawn"
+display_name = "Nông dân"
+description = "Rẻ, chạy nhanh, sinh liên tục. Đông mà yếu."
+unit_key = "Pawn"
+building = "House1"
+max_hp = 30.0
+damage = 5.0
+attack_range = 34.0
+attack_cooldown = 0.9
+move_speed = 78.0
+aggro_range = 200.0
+spawn_interval = 2.6
+max_alive = 4
+summon_weight = 1.4
