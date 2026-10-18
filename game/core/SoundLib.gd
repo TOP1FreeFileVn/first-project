@@ -1,13 +1,17 @@
 extends Node
 
-# Every sound effect in the game, synthesised once at startup (the art packs ship no
-# audio): tones, noise bursts and little arpeggios in the style of 8-bit sfx tools, so no
-# files and no licences are needed. play("name") picks a free voice, jitters the pitch a
+# UI taps are short original WAVs; other effects keep their existing synthesis.
+# play("name") picks a free voice, jitters the pitch a
 # little so repeated sounds don't grate, and skips a sound that played a moment ago
 # (forty soldiers hitting at once would otherwise be a wall of noise).
 
 const RATE := 22050
 const VOICES := 16
+const UI_TAPS := [
+	preload("res://game/audio/ui/ui_tap_01.wav"),
+	preload("res://game/audio/ui/ui_tap_02.wav"),
+	preload("res://game/audio/ui/ui_tap_03.wav"),
+]
 ## Milliseconds before the same sound may play again.
 const MIN_GAP := {"hit": 55, "arrow": 60, "death": 70, "pop": 45, "jump": 60, "heal": 150,
 	"click": 30, "wall": 120, "place": 40, "flip": 40}
@@ -18,11 +22,14 @@ var _built := {}
 var _task := -1
 var _players: Array = []
 var _next := 0
+var _ui_tap_index := 0
 var _last := {}
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	# A button can sound immediately, while the battle/reward effects are built.
+	_streams["click"] = UI_TAPS[0]
 	for i in VOICES:
 		var player := AudioStreamPlayer.new()
 		add_child(player)
@@ -64,7 +71,12 @@ func play(name: String, volume_db := 0.0, jitter := 0.06) -> void:
 	if player == null:
 		player = _players[_next]
 		_next = (_next + 1) % _players.size()
-	player.stream = _streams[name]
+	if name == "click":
+		player.stream = UI_TAPS[_ui_tap_index]
+		_ui_tap_index = (_ui_tap_index + 1) % UI_TAPS.size()
+		jitter = minf(jitter, 0.018)
+	else:
+		player.stream = _streams[name]
 	player.volume_db = volume_db
 	player.pitch_scale = 1.0 + randf_range(-jitter, jitter)
 	player.play()
@@ -80,7 +92,7 @@ func has_sound(name: String) -> bool:
 func _build() -> Dictionary:
 	_built = {}
 	# UI
-	_add("click", _tone(0.045, 1400, 900, "square", 0.001, 2.0, 0.16))
+	_built["click"] = UI_TAPS[0]
 	_add("coin", _mix(_seq([[1319, 0.05], [1760, 0.16]], "sine", 0.32), _seq([[1319, 0.05], [1760, 0.16]], "tri", 0.12)))
 	_add("reward", _mix(_seq([[784, 0.06], [988, 0.06], [1319, 0.2]], "sine", 0.3), _seq([[1568, 0.06], [1976, 0.06], [2637, 0.2]], "sine", 0.08)))
 	# Battle shop and gears

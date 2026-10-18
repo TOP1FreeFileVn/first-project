@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "katana"
+display_name = "Mèo Katana"
+description = "Kiếm khách huyền thoại, chém liên hồi."
+rarity = 3
+unit_key = "art:katana"
+role = 0
+klass = 0
+max_hp = 399.0
+damage = 28.0
+attack_range = 38.0
+attack_cooldown = 0.8
+move_speed = 55.0
+aggro_range = 220.0
+crit_chance = 0.3
+crit_mult = 1.5
+spawn_interval = 9.0
+max_alive = 1

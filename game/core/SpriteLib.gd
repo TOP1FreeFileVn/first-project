@@ -46,6 +46,8 @@ func texture(path: String) -> Texture2D:
 
 
 func unit_frames(unit_key: String, color: String) -> SpriteFrames:
+	if is_cat(unit_key):
+		return _cat_frames(unit_key)
 	var key := unit_key + "/" + color
 	if _frames.has(key):
 		return _frames[key]
@@ -64,6 +66,8 @@ func unit_frames(unit_key: String, color: String) -> SpriteFrames:
 
 # Head-and-shoulders crop of a unit's first idle frame, for cards and buttons.
 func portrait(unit_key: String, color := "Blue") -> Texture2D:
+	if is_cat(unit_key):
+		return cat_texture(unit_key)
 	var key := "portrait/%s/%s" % [unit_key, color]
 	if _textures.has(key):
 		return _textures[key]
@@ -127,7 +131,84 @@ func player_color(tier: int) -> String:
 
 
 func foot_offset(unit_key: String) -> float:
+	if unit_key.begins_with("art:"):
+		return ART_SIZE.y / 2.0 - 4.0
+	if is_cat(unit_key):
+		return CAT_CANVAS.y / 2.0 - 2.0
 	return UNIT_ANIMS[unit_key]["foot"]
+
+
+# --- Cat soldiers ----------------------------------------------------------------------------
+# unit_key "cat:<coat>:<weapon>": the skin's cat (game/ui/skin/cat_<coat>.svg) holding its
+# weapon icon (icon_w_<weapon>), baked into one smooth texture. It has no drawn animation
+# frames; Unit.gd bobs and swings it instead. Draw it with linear filtering.
+
+const SKIN := "res://game/ui/skin/"
+const CAT_CANVAS := Vector2i(128, 104)
+const CAT_SIZE := Vector2i(107, 100)
+## Where the weapon's 64 px icon goes: hilt at the cat's right paw, blade up and out.
+const CAT_WEAPON_AT := Vector2i(62, 28)
+
+
+## Drawn units (cats, generals, monsters) rather than the pixel-art pack.
+static func is_cat(unit_key: String) -> bool:
+	return unit_key.begins_with("cat:") or unit_key.begins_with("art:") or unit_key.begins_with("icon:")
+
+
+## Size the drawn unit SVGs (256x240) are baked at.
+const ART_SIZE := Vector2i(128, 120)
+
+
+func cat_texture(unit_key: String) -> Texture2D:
+	var key := "tex/" + unit_key
+	if _textures.has(key):
+		return _textures[key]
+	if unit_key.begins_with("icon:"):
+		var face := ImageTexture.create_from_image(_skin_image("icon_" + unit_key.substr(5), Vector2i(112, 112)))
+		_textures[key] = face
+		return face
+	if unit_key.begins_with("art:"):
+		var art := ImageTexture.create_from_image(_skin_image("unit_" + unit_key.substr(4), ART_SIZE))
+		_textures[key] = art
+		return art
+	var parts := unit_key.split(":")
+	var canvas := Image.create_empty(CAT_CANVAS.x, CAT_CANVAS.y, false, Image.FORMAT_RGBA8)
+	var cat := _skin_image("cat_" + parts[1], CAT_SIZE)
+	canvas.blend_rect(cat, Rect2i(Vector2i.ZERO, cat.get_size()), Vector2i(0, CAT_CANVAS.y - CAT_SIZE.y))
+	if parts.size() > 2:
+		var weapon := _skin_image("icon_w_%s_64" % parts[2], Vector2i(64, 64))
+		canvas.blend_rect(weapon, Rect2i(Vector2i.ZERO, weapon.get_size()), CAT_WEAPON_AT)
+	var result := ImageTexture.create_from_image(canvas)
+	_textures[key] = result
+	return result
+
+
+func _skin_image(file: String, size: Vector2i) -> Image:
+	var image: Image = load(SKIN + file + ".svg").get_image()
+	if image.is_compressed():
+		image.decompress()
+	image.convert(Image.FORMAT_RGBA8)
+	if image.get_size() != size:
+		image.resize(size.x, size.y, Image.INTERPOLATE_LANCZOS)
+	return image
+
+
+## Same texture in every frame: idle and run loop, attack plays once (its length sets
+## when the hit lands, as for the pack's units).
+func _cat_frames(unit_key: String) -> SpriteFrames:
+	if _frames.has(unit_key):
+		return _frames[unit_key]
+	var tex := cat_texture(unit_key)
+	var frames := SpriteFrames.new()
+	frames.remove_animation("default")
+	for anim in [["idle", 1, 4.0, true], ["run", 4, 10.0, true], ["attack", 6, 12.0, false]]:
+		frames.add_animation(anim[0])
+		frames.set_animation_speed(anim[0], anim[2])
+		frames.set_animation_loop(anim[0], anim[3])
+		for i in anim[1]:
+			frames.add_frame(anim[0], tex)
+	_frames[unit_key] = frames
+	return frames
 
 
 ## A looping animation from a horizontal strip of square frames (trees, sheep, bushes...).

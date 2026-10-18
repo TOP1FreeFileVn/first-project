@@ -1,0 +1,12 @@
+{
+  "output": "docs/ui_review/2026-10-19/mcp-inspect",
+  "godot": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+  "calls": [
+    {"name": "godot_agent_instructions", "arguments": {"client": "codex", "workflow": "visual_check", "task": "Review existing game UI without changing gameplay or visual implementation", "detail": "short"}},
+    {"name": "godot_bridge_status", "arguments": {}},
+    {"name": "godot_doctor", "arguments": {}},
+    {"name": "godot_list_scenes", "arguments": {"folder": "game"}},
+    {"name": "godot_editor_scene_snapshot", "arguments": {"max_depth": 3}},
+    {"name": "godot_check_errors", "arguments": {"run_godot": false}}
+  ]
+}

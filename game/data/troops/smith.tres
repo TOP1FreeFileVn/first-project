@@ -5,10 +5,11 @@
 [resource]
 script = ExtResource("1_troop")
 id = "smith"
-display_name = "Thợ rèn"
+display_name = "Goblin Thợ Rèn"
+unit_key = "art:smith"
+klass = 2
 description = "Cầm búa đi theo đội, rèn giáp cho đồng đội đứng gần."
 rarity = 0
-unit_key = "PawnHammer"
 building = "House3"
 role = 0
 max_hp = 45.0

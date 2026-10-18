@@ -3,6 +3,7 @@ extends "res://game/menu/pages/MenuPage.gd"
 # Castle level (HP, max meat, open gear cells, team slots) and the three workshop upgrades.
 
 const GridPreview = preload("res://game/menu/widgets/GridPreview.gd")
+const CastleArt = preload("res://game/ui/skin/menu_castle.svg")
 
 
 func build() -> void:
@@ -13,7 +14,8 @@ func build() -> void:
 	var next: Dictionary = Economy.CASTLE[level] if level < max_level else now
 
 	var castle := panel(10)
-	var castle_art := UiKit.icon(SpriteLib.texture("Buildings/Blue Buildings/Castle.png"), 170)
+	var castle_art := UiKit.icon(CastleArt, 210)
+	castle_art.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	castle_art.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	castle.add_child(castle_art)
 	var heading := UiKit.label("Cấp thành %d / %d" % [level, max_level], 26, UiKit.GOLD_TEXT)
@@ -25,7 +27,7 @@ func build() -> void:
 	stats.add_theme_constant_override("h_separation", 30)
 	stats.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	_stat_row(stats, "Máu thành", "x%.2f" % now["hp"], "x%.2f" % next["hp"], level < max_level)
-	_stat_row(stats, "Kho thịt tối đa", str(now["meat"]), str(next["meat"]), level < max_level)
+	_stat_row(stats, "Túi xu tối đa", str(now["meat"]), str(next["meat"]), level < max_level)
 	_stat_row(stats, "Ô đặt gear", str(now["cells"]), str(next["cells"]), level < max_level)
 	_stat_row(stats, "Ô đội hình", str(Economy.team_slots(level)), str(Economy.team_slots(mini(level + 1, max_level))), level < max_level)
 	castle.add_child(stats)
@@ -47,7 +49,7 @@ func build() -> void:
 		upgrade.disabled = true
 	else:
 		upgrade.text = "NÂNG THÀNH  %s" % UiKit.format_number(cost)
-		upgrade.icon = SpriteLib.texture(UiKit.COIN)
+		upgrade.icon = UiKit.coin_texture()
 		upgrade.add_theme_constant_override("icon_max_width", 34)
 		upgrade.disabled = PlayerData.gold < cost
 	castle.add_child(upgrade)
@@ -89,7 +91,7 @@ func _workshop_row(id: String) -> void:
 		b.disabled = true
 	else:
 		b.text = UiKit.format_number(cost)
-		b.icon = SpriteLib.texture(UiKit.COIN)
+		b.icon = UiKit.coin_texture()
 		b.add_theme_constant_override("icon_max_width", 28)
 		b.disabled = PlayerData.gold < cost
 	row.add_child(b)

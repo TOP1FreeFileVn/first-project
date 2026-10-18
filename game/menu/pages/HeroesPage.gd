@@ -164,7 +164,7 @@ func _build_details() -> void:
 		level_button.disabled = true
 	else:
 		level_button.text = "CẤP  %s" % UiKit.format_number(level_cost)
-		level_button.icon = SpriteLib.texture(UiKit.COIN)
+		level_button.icon = UiKit.coin_texture()
 		level_button.add_theme_constant_override("icon_max_width", 28)
 		level_button.disabled = PlayerData.gold < level_cost
 	row.add_child(level_button)

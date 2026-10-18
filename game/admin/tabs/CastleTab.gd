@@ -3,7 +3,7 @@ extends "res://game/admin/tabs/AdminTab.gd"
 # The castle level table (HP multiplier, max meat, open gear cells, price) edited cell by
 # cell with a running gold total, and the workshop upgrades.
 
-const COLUMNS := [["hp", "Máu x", false], ["meat", "Thịt", true], ["cells", "Ô gear", true], ["team", "Ô đội", true], ["cost", "Giá", true]]
+const COLUMNS := [["hp", "Máu x", false], ["meat", "Xu", true], ["cells", "Ô gear", true], ["team", "Ô đội", true], ["cost", "Giá", true]]
 const MAX_TEAM := 5
 const MAX_CELLS := 23
 
@@ -16,7 +16,7 @@ func build() -> void:
 	grid.columns = 7
 	grid.add_theme_constant_override("h_separation", 8)
 	grid.add_theme_constant_override("v_separation", 6)
-	for h in ["Cấp", "Máu x", "Thịt", "Ô gear", "Ô đội", "Giá", "Tổng"]:
+	for h in ["Cấp", "Máu x", "Xu", "Ô gear", "Ô đội", "Giá", "Tổng"]:
 		grid.add_child(UiKit.label(h, 15, UiKit.GOLD_TEXT))
 	var total := 0
 	for i in castle.size():

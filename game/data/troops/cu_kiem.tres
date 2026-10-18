@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "cu_kiem"
+display_name = "Mèo Cự Kiếm"
+description = "Vác cự kiếm xông thẳng vào địch."
+rarity = 1
+unit_key = "art:cu_kiem"
+role = 0
+klass = 3
+max_hp = 153.0
+damage = 13.6
+attack_range = 43.0
+attack_cooldown = 1.49
+move_speed = 94.0
+aggro_range = 220.0
+crit_chance = 0.1
+crit_mult = 1.5
+spawn_interval = 5.14
+max_alive = 2

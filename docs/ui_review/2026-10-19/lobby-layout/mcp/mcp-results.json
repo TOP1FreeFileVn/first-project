@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "tests/ui_review/LobbyLayoutPreview.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nLOBBY_LAYOUT_USER_DIR C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/lobby-layout/mcp/profile/Godot/app_userdata/Gear Defenders\r\nLOBBY_LAYOUT_CAPTURE normal_lobby_720x1280 native=(720, 1280) locked=false\r\nLOBBY_LAYOUT_CAPTURE normal_locked_720x1280 native=(720, 1280) locked=true\r\nLOBBY_LAYOUT_CAPTURE stress_lobby_720x1280 native=(720, 1280) locked=false\r\nLOBBY_LAYOUT_CAPTURE stress_locked_720x1280 native=(720, 1280) locked=true\r\nLOBBY_LAYOUT_CAPTURE normal_lobby_360x640 native=(360, 640) locked=false\r\nLOBBY_LAYOUT_CAPTURE normal_locked_360x640 native=(360, 640) locked=true\r\nLOBBY_LAYOUT_CAPTURE stress_lobby_360x640 native=(360, 640) locked=false\r\nLOBBY_LAYOUT_CAPTURE stress_locked_360x640 native=(360, 640) locked=true\r\nLOBBY_LAYOUT_COMPLETE 8 screens; failures=0\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

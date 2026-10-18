@@ -5,10 +5,11 @@
 [resource]
 script = ExtResource("1_troop")
 id = "assassin"
-display_name = "Sát thủ"
+display_name = "Dơi Đêm"
+unit_key = "art:assassin"
+klass = 3
 description = "Nhanh như gió, lách qua tuyến đầu để hạ cung thủ và tu sĩ địch."
 rarity = 1
-unit_key = "PawnKnife"
 building = "House2"
 role = 0
 max_hp = 38.0

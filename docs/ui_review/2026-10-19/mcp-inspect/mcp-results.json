@@ -1,0 +1,397 @@
+[
+  {
+    "name": "godot_agent_instructions",
+    "result": {
+      "ok": true,
+      "serverVersion": "0.4.1",
+      "mode": "instruction_first",
+      "client": "codex",
+      "workflow": "visual_check",
+      "task": "Review existing game UI without changing gameplay or visual implementation",
+      "principle": "Instruction-first: the AI client owns planning, code/content decisions, and review. MCP JS tools are safe primitives, not the main source of project intelligence.",
+      "steps": [
+        "Run the scene or use the editor bridge.",
+        "Capture a screenshot.",
+        "Inspect placement, visibility, scale, material, clipping, and camera framing.",
+        "Fix and repeat if needed.",
+        "Report screenshot path or validation limitation."
+      ],
+      "toolChain": [
+        "godot_run_project/dry_run:false",
+        "godot_capture_screenshot",
+        "godot_stop_project"
+      ],
+      "readyPrompt": "Use instruction-first Godot MCP mode for codex. User task: Review existing game UI without changing gameplay or visual implementation. Plan and write the solution in the AI client. Use MCP tools only as safe primitives for project scan/read/write/import/generation jobs/runtime validation. Start with godot_doctor, godot_project_scan, and godot_check_errors, then follow the visual_check workflow."
+    }
+  },
+  {
+    "name": "godot_bridge_status",
+    "result": {
+      "ok": true,
+      "connected": true,
+      "host": "127.0.0.1",
+      "port": 8765,
+      "response": {
+        "edited_root": {
+          "child_count": 8,
+          "name": "Battle",
+          "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle",
+          "position": [
+            0,
+            0
+          ],
+          "rotation": 0,
+          "scale": [
+            1,
+            1
+          ],
+          "scene_file_path": "res://game/battle/Battle.tscn",
+          "script": "res://game/battle/Battle.gd",
+          "type": "Node2D"
+        },
+        "edited_scene": "res://game/battle/Battle.tscn",
+        "is_playing_scene": false,
+        "ok": true,
+        "playing_scene": "",
+        "port": 8765,
+        "running": true
+      }
+    }
+  },
+  {
+    "name": "godot_doctor",
+    "result": {
+      "ok": true,
+      "projectRoot": "C:\\Users\\dangp\\GodotProjects\\first-project",
+      "serverVersion": "0.4.1",
+      "nodeVersion": "v24.19.0",
+      "projectGodot": {
+        "exists": true,
+        "path": "res://project.godot"
+      },
+      "godotCli": {
+        "found": false
+      },
+      "bridge": {
+        "reachable": true,
+        "host": "127.0.0.1",
+        "port": 8765,
+        "status": {
+          "ok": true,
+          "connected": true,
+          "host": "127.0.0.1",
+          "port": 8765,
+          "response": {
+            "edited_root": {
+              "child_count": 8,
+              "name": "Battle",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle",
+              "position": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "res://game/battle/Battle.tscn",
+              "script": "res://game/battle/Battle.gd",
+              "type": "Node2D"
+            },
+            "edited_scene": "res://game/battle/Battle.tscn",
+            "is_playing_scene": false,
+            "ok": true,
+            "playing_scene": "",
+            "port": 8765,
+            "running": true
+          }
+        }
+      },
+      "env": {
+        "exists": false,
+        "path": "res://.env"
+      },
+      "providers": {
+        "image": {
+          "provider": "none",
+          "configured": false,
+          "missing": [],
+          "safeDefault": true
+        },
+        "model3d": {
+          "provider": "none",
+          "configured": false,
+          "missing": [],
+          "safeDefault": true
+        },
+        "chat": {
+          "provider": "none",
+          "configured": false,
+          "missing": [],
+          "safeDefault": true
+        }
+      },
+      "folders": {
+        "scenes": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://scenes"
+        },
+        "scripts": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://scripts"
+        },
+        "Assets": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://Assets"
+        },
+        "assets": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://assets"
+        },
+        "generation_jobs": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://generation_jobs"
+        }
+      },
+      "recommendations": [
+        "Install Godot 4.x CLI on PATH or set GODOT_CLI in .env.",
+        "Create .env from .env.example when you need Godot CLI or real provider settings.",
+        "Create scenes/ when that workflow is needed.",
+        "Create scripts/ when that workflow is needed.",
+        "Create Assets/ when that workflow is needed.",
+        "Create assets/ when that workflow is needed.",
+        "Create generation_jobs/ when that workflow is needed.",
+        "Generation providers are set to none; prompts will be saved as jobs instead of calling real services."
+      ]
+    }
+  },
+  {
+    "name": "godot_list_scenes",
+    "result": {
+      "ok": true,
+      "scenes": [
+        {
+          "path": "res://game/battle/Battle.tscn",
+          "format": "text",
+          "rootName": "Battle",
+          "rootType": "Node2D",
+          "nodeCount": 9
+        },
+        {
+          "path": "res://game/battle/Unit.tscn",
+          "format": "text",
+          "rootName": "Unit",
+          "rootType": "Node2D",
+          "nodeCount": 2
+        },
+        {
+          "path": "res://game/menu/Home.tscn",
+          "format": "text",
+          "rootName": "Home",
+          "rootType": "Control",
+          "nodeCount": 1
+        }
+      ]
+    }
+  },
+  {
+    "name": "godot_editor_scene_snapshot",
+    "result": {
+      "ok": true,
+      "connected": true,
+      "host": "127.0.0.1",
+      "port": 8765,
+      "response": {
+        "edited_scene": "res://game/battle/Battle.tscn",
+        "ok": true,
+        "open_scenes": [
+          "res://game/battle/Battle.tscn"
+        ],
+        "root": {
+          "child_count": 8,
+          "children": [
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "Background",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/Background",
+              "position": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "",
+              "scene_path": "Background",
+              "script": "res://game/battle/Background.gd",
+              "type": "Node2D"
+            },
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "Core",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/Core",
+              "position": [
+                310,
+                910
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "",
+              "scene_path": "Core",
+              "script": "res://game/battle/Core.gd",
+              "type": "Node2D"
+            },
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "Board",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/Board",
+              "position": [
+                60,
+                760
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "",
+              "scene_path": "Board",
+              "script": "res://game/battle/GearBoard.gd",
+              "type": "Node2D"
+            },
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "Units",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/Units",
+              "position": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "",
+              "scene_path": "Units",
+              "type": "Node2D"
+            },
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "Projectiles",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/Projectiles",
+              "position": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "",
+              "scene_path": "Projectiles",
+              "type": "Node2D"
+            },
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "Effects",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/Effects",
+              "position": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "",
+              "scene_path": "Effects",
+              "type": "Node2D"
+            },
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "WaveDirector",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/WaveDirector",
+              "scene_file_path": "",
+              "scene_path": "WaveDirector",
+              "script": "res://game/battle/WaveDirector.gd",
+              "type": "Node"
+            },
+            {
+              "child_count": 0,
+              "children": [],
+              "name": "HUD",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle/HUD",
+              "scene_file_path": "",
+              "scene_path": "HUD",
+              "script": "res://game/ui/HUD.gd",
+              "type": "CanvasLayer"
+            }
+          ],
+          "name": "Battle",
+          "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle",
+          "position": [
+            0,
+            0
+          ],
+          "rotation": 0,
+          "scale": [
+            1,
+            1
+          ],
+          "scene_file_path": "res://game/battle/Battle.tscn",
+          "scene_path": ".",
+          "script": "res://game/battle/Battle.gd",
+          "type": "Node2D"
+        },
+        "selected_nodes": []
+      }
+    }
+  },
+  {
+    "name": "godot_check_errors",
+    "result": {
+      "ok": true,
+      "warnings": [
+        "game/admin/tabs/BattleShopTab.gd: no top-level extends line found.",
+        "game/admin/tabs/CastleTab.gd: no top-level extends line found.",
+        "game/admin/tabs/FormulaTab.gd: no top-level extends line found.",
+        "game/admin/tabs/LevelTab.gd: no top-level extends line found.",
+        "game/admin/tabs/PlayerTab.gd: no top-level extends line found.",
+        "game/admin/tabs/ShopTab.gd: no top-level extends line found.",
+        "game/admin/tabs/SimTab.gd: no top-level extends line found.",
+        "game/admin/tabs/TroopTab.gd: no top-level extends line found.",
+        "game/menu/pages/BattlePage.gd: no top-level extends line found.",
+        "game/menu/pages/CastlePage.gd: no top-level extends line found.",
+        "game/menu/pages/HeroCatPage.gd: no top-level extends line found.",
+        "game/menu/pages/HeroesPage.gd: no top-level extends line found.",
+        "game/menu/pages/PatrolPage.gd: no top-level extends line found.",
+        "game/menu/pages/ShopPage.gd: no top-level extends line found.",
+        "game/menu/pages/SummonPage.gd: no top-level extends line found.",
+        "game/menu/pages/TroopsPage.gd: no top-level extends line found."
+      ],
+      "errors": [],
+      "details": {}
+    }
+  }
+]

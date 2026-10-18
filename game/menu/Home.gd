@@ -1,46 +1,50 @@
 extends Control
 
-# The lobby: resource bar on top (the avatar opens the profile), the selected page in the
-# middle and the five-tab nav bar at the bottom (Battle, in the middle, is the biggest and
-# the default tab). On the Battle tab, icons down the sides open the 7-day gift, the daily
-# quests, the events hub and the hero summon. Event pages (Patrol, Summon) open on top of
-# the tabs with a back button.
+# The lobby in the game skin (game/ui/Ui.gd): HUD on top (hero avatar opens the profile,
+# coin and gem pills that open the shop, settings), the selected page in the middle and the
+# five-tab nav at the bottom (Cửa hàng · Anh hùng · Chiến · Lính · Triệu hồi; Chiến, in the
+# middle, is the default). On the Chiến tab, side rails open the 7-day gift, the daily quests,
+# the events hub and the castle. Event pages open on top of the tabs with a back button.
 
 const UiKit = preload("res://game/ui/UiKit.gd")
-const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 const AdminGate = preload("res://game/admin/AdminGate.gd")
 const AdminPanel = preload("res://game/admin/AdminPanel.gd")
 const MetaPopups = preload("res://game/menu/popups/MetaPopups.gd")
 const SummonPage = preload("res://game/menu/pages/SummonPage.gd")
+const CastlePage = preload("res://game/menu/pages/CastlePage.gd")
 const PAGES := [
 	preload("res://game/menu/pages/ShopPage.gd"),
-	preload("res://game/menu/pages/TroopsPage.gd"),
+	preload("res://game/menu/pages/HeroCatPage.gd"),
 	preload("res://game/menu/pages/BattlePage.gd"),
-	preload("res://game/menu/pages/CastlePage.gd"),
-	preload("res://game/menu/pages/HeroesPage.gd"),
+	preload("res://game/menu/pages/TroopsPage.gd"),
+	SummonPage,
 ]
-const TAB_NAMES := ["Cửa hàng", "Lính", "CHIẾN ĐẤU", "Thành", "Tướng"]
+const TABS := [["tab_shop", "Cửa hàng"], ["tab_cat", "Anh hùng"], ["tab_battle", "Chiến"], ["tab_army", "Lính"], ["tab_summon", "Triệu hồi"]]
 const SHOP_TAB := 0
+const HERO_TAB := 1
 const BATTLE_TAB := 2
-const TOP_HEIGHT := 84.0
-const NAV_HEIGHT := 140.0
+const TROOPS_TAB := 3
+const SUMMON_TAB := 4
+const TOP_HEIGHT := 112.0
+const NAV_HEIGHT := 160.0
 const SCREEN := Vector2(720, 1280)
-const TAB_WIDTHS := [136.0, 136.0, 176.0, 136.0, 136.0]
-const CENTER_RAISE := 24.0
+const SKY := Color("6fa3e0")
+## The nav bar runs this far past the bottom edge (see Ui.bottom_nav).
+const NAV_BLEED := 18.0
 
 # Remembered across scene changes so returning from a battle lands on the same tab.
 static var last_tab := BATTLE_TAB
 
 var _content: Control
 var _pages: Array = []
-var _tabs: Array = []
-var _dots: Array = []
 var _current := -1
 var _gold_label: Label
 var _gem_label: Label
 var _cheat_label: Label
-var _avatar_button: Button
-## Icons beside the level select, and their alert dots by name.
+var _nav_holder: Control
+var _nav_key := ""
+## Side rails on the Chiến tab, and their alert dots by name.
 var _side: Control
 var _side_dots := {}
 ## An event page opened over the tabs, or null.
@@ -50,7 +54,13 @@ var _overlay_page: Control
 
 func _ready() -> void:
 	set_anchors_preset(Control.PRESET_FULL_RECT)
+	# Older pages still use the UiKit theme; the new chrome sets Ui.THEME on its own roots.
 	theme = UiKit.make_theme()
+	# The skin is smooth SVG art; pixel portraits set nearest on themselves.
+	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	var backdrop := Ui.pattern_bg(SKY)
+	add_child(backdrop)
+	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_content = Control.new()
 	_content.position = Vector2(0, TOP_HEIGHT)
 	_content.size = Vector2(SCREEN.x, SCREEN.y - TOP_HEIGHT - NAV_HEIGHT)
@@ -63,9 +73,13 @@ func _ready() -> void:
 		_content.add_child(page)
 		page.build()
 		_pages.append(page)
-	_build_side_icons()
+	_build_side_rails()
 	_build_top_bar()
-	_build_nav_bar()
+	_nav_holder = _skinned(Control.new())
+	_nav_holder.position = Vector2(0, SCREEN.y - NAV_HEIGHT)
+	_nav_holder.size = Vector2(SCREEN.x, NAV_HEIGHT)
+	_nav_holder.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_nav_holder)
 	PlayerData.changed.connect(_on_data_changed)
 	var timer := Timer.new()
 	timer.wait_time = 1.0
@@ -118,23 +132,21 @@ func _on_tick() -> void:
 ## Opens an event page (a MenuPage script) over the tabs, with a back button.
 func open_page(script) -> void:
 	close_page()
-	var holder := ColorRect.new()
-	holder.color = Color(0.05, 0.07, 0.1, 0.98)
+	var holder := Ui.pattern_bg(SKY)
 	holder.position = _content.position
 	holder.size = _content.size
 	holder.clip_contents = true
 	holder.mouse_filter = Control.MOUSE_FILTER_STOP
 	add_child(holder)
 	move_child(holder, _side.get_index() + 1)
-	# A strip with the back button above the page.
 	var page = script.new()
 	page.home = self
 	holder.add_child(page)
-	page.offset_top = 64
+	page.offset_top = 72
 	page.build()
-	var back := UiKit.button("◀  QUAY LẠI", Vector2(190, 52), close_page)
-	back.add_theme_font_size_override("font_size", 17)
-	back.position = Vector2(14, 8)
+	var back := _skinned(Ui.button("Quay lại", "Red", Vector2(190, 60), 20, "back"))
+	back.position = Vector2(14, 6)
+	back.pressed.connect(close_page)
 	holder.add_child(back)
 	_overlay = holder
 	_overlay_page = page
@@ -158,205 +170,161 @@ func close_page() -> void:
 func _update_header() -> void:
 	_gold_label.text = UiKit.format_number(PlayerData.gold)
 	_gem_label.text = UiKit.format_number(PlayerData.gems)
+	for amount in [_gold_label, _gem_label]:
+		var fit_value: Callable = amount.get_meta("fit_value")
+		fit_value.call()
 	_cheat_label.visible = PlayerData.cheated
-	for child in _avatar_button.get_children():
-		child.queue_free()
-	var picture := UiKit.avatar(62)
-	picture.position = Vector2(1, 1)
-	_avatar_button.add_child(picture)
 	_update_tabs()
 
 
 func _update_tabs() -> void:
-	for i in _tabs.size():
-		var selected := i == _current
-		var tab: Button = _tabs[i]
-		tab.add_theme_stylebox_override("normal", _tab_style(selected, i == BATTLE_TAB))
-		tab.add_theme_stylebox_override("hover", _tab_style(selected, i == BATTLE_TAB))
-		tab.add_theme_stylebox_override("pressed", _tab_style(true, i == BATTLE_TAB))
-		tab.get_meta("icon").scale = Vector2.ONE * (1.1 if selected else 1.0)
-		_dots[i].visible = _pages[i].has_alert() and not selected
+	if _nav_holder == null:
+		return
+	var badges := []
+	for i in _pages.size():
+		if i != _current and _pages[i].has_alert():
+			badges.append(i)
+	var key := "%d %s" % [_current, str(badges)]
+	if key != _nav_key:
+		_nav_key = key
+		_build_nav(badges)
 	_side.visible = _current == BATTLE_TAB and _overlay == null
 	_side_dots["login"].visible = PlayerData.login_can_claim()
 	_side_dots["quests"].visible = PlayerData.quest_alert()
 	_side_dots["events"].visible = PlayerData.patrol_alert()
-	_side_dots["summon"].visible = PlayerData.summon_free_ready()
+	_side_dots["castle"].visible = false
 
 
-func _draw() -> void:
-	var grass := SpriteLib.texture("Terrain/Tileset/Tilemap_color1.png")
-	for x in range(0, int(SCREEN.x), 64):
-		for y in range(0, int(SCREEN.y), 64):
-			draw_texture_rect_region(grass, Rect2(x, y, 64, 64), Rect2(64, 64, 64, 64))
-	draw_rect(Rect2(Vector2.ZERO, SCREEN), Color(0.04, 0.08, 0.07, 0.55))
+## Gives a chrome root the SVG skin and smooth filtering.
+func _skinned(control: Control) -> Control:
+	control.theme = Ui.THEME
+	control.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	return control
 
 
+## Makes a drawn piece tappable: a flat button laid over it.
+func _tap(content: Control, on_press: Callable) -> PanelContainer:
+	var wrap := PanelContainer.new()
+	wrap.add_child(content)
+	var hit := Button.new()
+	hit.flat = true
+	hit.focus_mode = Control.FOCUS_NONE
+	hit.pressed.connect(func(): SoundLib.play("click"))
+	hit.pressed.connect(on_press)
+	wrap.add_child(hit)
+	return wrap
+
+
+# One centered HUD row; the optional cheat marker never changes its layout.
 func _build_top_bar() -> void:
-	var bar := PanelContainer.new()
+	var bar := _skinned(Ui.margin(14, 12, 14, 16))
+	bar.name = "Header"
 	bar.position = Vector2.ZERO
 	bar.size = Vector2(SCREEN.x, TOP_HEIGHT)
-	var style := UiKit.dark_style(0)
-	style.set_border_width_all(0)
-	style.border_width_bottom = 3
-	style.content_margin_left = 16
-	style.content_margin_right = 16
-	bar.add_theme_stylebox_override("panel", style)
 	add_child(bar)
-	var row := UiKit.hbox(10)
+	var row := Ui.hbox(12, BoxContainer.ALIGNMENT_BEGIN)
+	row.name = "HeaderRow"
 	bar.add_child(row)
 
-	_avatar_button = Button.new()
-	_avatar_button.custom_minimum_size = Vector2(64, 64)
-	_avatar_button.focus_mode = Control.FOCUS_NONE
-	_avatar_button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	for state in ["normal", "hover", "pressed"]:
-		_avatar_button.add_theme_stylebox_override(state, StyleBoxEmpty.new())
-	_avatar_button.pressed.connect(func(): MetaPopups.open_profile(self))
-	row.add_child(_avatar_button)
-	row.add_child(UiKit.gap(6))
-	row.add_child(UiKit.icon(SpriteLib.texture(UiKit.COIN), 38))
-	_gold_label = UiKit.label("", 24)
-	_gold_label.custom_minimum_size.x = 96
-	row.add_child(_gold_label)
-	row.add_child(_plus_button())
-	row.add_child(UiKit.gap(12))
-	row.add_child(UiKit.drawn(DrawnIcon.Kind.GEM, 36))
-	_gem_label = UiKit.label("", 24)
-	_gem_label.custom_minimum_size.x = 64
-	row.add_child(_gem_label)
-	row.add_child(_plus_button())
-	row.add_child(UiKit.spacer())
-	_cheat_label = UiKit.label("CHEAT", 16, UiKit.WARN)
-	row.add_child(_cheat_label)
+	var frame := Ui.panel("AvatarFrame", Ui.center(Ui.image("cat_head_hero", Vector2(62, 50))))
+	frame.name = "AvatarFrame"
+	frame.custom_minimum_size = Vector2(80, 84)
+	var avatar := _tap(frame, func(): MetaPopups.open_profile(self))
+	avatar.name = "ProfileButton"
+	avatar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	row.add_child(avatar)
+
+	var gold := Ui._currency("coin", "", true)
+	gold.name = "CurrencyGold"
+	_gold_label = gold.get_node("CurrencyValue")
+	var gems := Ui._currency("gem", "", true)
+	gems.name = "CurrencyGems"
+	_gem_label = gems.get_node("CurrencyValue")
+	for pill in [gold, gems]:
+		var hit := _tap(pill, func(): select_tab(SHOP_TAB))
+		hit.name = "GoldButton" if pill == gold else "GemsButton"
+		hit.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		hit.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		row.add_child(hit)
+
+	var has_admin := AdminGate.available()
+	var tool_width := 174.0 if has_admin else 68.0
+	var tools := Control.new()
+	tools.name = "HeaderTools"
+	tools.custom_minimum_size = Vector2(tool_width, 84)
+	var tool_row := Ui.hbox(6)
+	tool_row.name = "HeaderActions"
 	# One tap opens the admin panel; the button only exists in debug / "admin" builds.
-	if AdminGate.available():
-		var admin := UiKit.button("ADMIN", Vector2(96, 52), open_admin, true)
-		admin.add_theme_font_size_override("font_size", 16)
-		row.add_child(admin)
-	var settings := UiKit.button("", Vector2(56, 52), _open_settings)
-	settings.icon = SpriteLib.texture(UiKit.UI + "Icons/Icon_10.png")
-	settings.expand_icon = true
-	row.add_child(settings)
+	if has_admin:
+		var admin := Ui.button("ADMIN", "Red", Vector2(100, 60), 16)
+		admin.name = "AdminButton"
+		admin.pressed.connect(open_admin)
+		tool_row.add_child(admin)
+	var settings := Ui.button("", "Tab", Vector2(68, 60), 0, "gear")
+	settings.name = "SettingsButton"
+	settings.pressed.connect(_open_settings)
+	tool_row.add_child(settings)
+	tools.add_child(tool_row)
+	tool_row.anchor_top = 0.5
+	tool_row.anchor_bottom = 0.5
+	tool_row.offset_top = -30
+	tool_row.offset_bottom = 30
+	tool_row.offset_right = tool_width
+	_cheat_label = Ui.label("CHEAT", "LabelTiny", 14)
+	_cheat_label.name = "CheatLabel"
+	_cheat_label.add_theme_color_override("font_color", UiKit.WARN)
+	_cheat_label.add_theme_constant_override("outline_size", 2)
+	Ui.pin(tools, _cheat_label, Vector2(0, 74)).size = Vector2(100 if has_admin else 68, 20)
+	row.add_child(tools)
 
 
-func _plus_button() -> Button:
-	return UiKit.plus_button(func(): select_tab(SHOP_TAB))
+## Rebuilt only when the selected tab or the alert dots change.
+func _build_nav(badges: Array) -> void:
+	for child in _nav_holder.get_children():
+		child.queue_free()
+	var bar := Ui.bottom_nav(TABS, _current, badges, NAV_BLEED)
+	_nav_holder.add_child(bar)
+	bar.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	bar.offset_left = 6
+	bar.offset_right = -6
+	bar.offset_bottom = NAV_BLEED
+	for i in bar.get_child_count():
+		var cell: Control = bar.get_child(i)
+		var hit := Button.new()
+		hit.flat = true
+		hit.focus_mode = Control.FOCUS_NONE
+		hit.pressed.connect(func(): SoundLib.play("click"))
+		hit.pressed.connect(select_tab.bind(i))
+		cell.add_child(hit)
 
 
-func _build_nav_bar() -> void:
-	var back := ColorRect.new()
-	back.color = Color(0.05, 0.09, 0.12, 0.96)
-	back.position = Vector2(0, SCREEN.y - NAV_HEIGHT)
-	back.size = Vector2(SCREEN.x, NAV_HEIGHT)
-	add_child(back)
-	var icons := [
-		SpriteLib.texture(UiKit.COIN),
-		SpriteLib.portrait("Warrior"),
-		SpriteLib.texture(UiKit.UI + "Icons/Icon_05.png"),
-		SpriteLib.texture("Buildings/Blue Buildings/Castle.png"),
-		SpriteLib.portrait("Warrior", "Yellow"),
-	]
-	var x := 0.0
-	for i in TAB_NAMES.size():
-		var big: bool = i == BATTLE_TAB
-		var width: float = TAB_WIDTHS[i]
-		var height := NAV_HEIGHT + (CENTER_RAISE if big else 0.0)
-		var tab := Button.new()
-		tab.focus_mode = Control.FOCUS_NONE
-		tab.position = Vector2(x + 4, SCREEN.y - height + 4)
-		tab.size = Vector2(width - 8, height - 8)
-		tab.pressed.connect(func(): SoundLib.play("click"))
-		tab.pressed.connect(select_tab.bind(i))
-		add_child(tab)
-
-		var column := UiKit.vbox(0)
-		column.set_anchors_preset(Control.PRESET_FULL_RECT)
-		column.alignment = BoxContainer.ALIGNMENT_CENTER
-		column.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		tab.add_child(column)
-		var icon := UiKit.icon(icons[i], 76.0 if big else 58.0)
-		icon.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		icon.pivot_offset = icon.custom_minimum_size / 2.0
-		column.add_child(icon)
-		var name_label := UiKit.label(TAB_NAMES[i], 20 if big else 16)
-		name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		column.add_child(name_label)
-		tab.set_meta("icon", icon)
-
-		var dot := UiKit.drawn(DrawnIcon.Kind.DOT, 22)
-		dot.position = Vector2(width - 34, 6)
-		dot.size = Vector2(22, 22)
-		tab.add_child(dot)
-		_tabs.append(tab)
-		_dots.append(dot)
-		x += width
-
-
-# Four icons in the side gutters of the Battle tab, beside the level card.
-func _build_side_icons() -> void:
-	_side = Control.new()
+# Equal shortcut columns outside the stage, with a clear gap between each target.
+func _build_side_rails() -> void:
+	_side = _skinned(Control.new())
 	_side.position = _content.position
 	_side.size = _content.size
 	_side.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_side)
-	var entries := [
-		["login", DrawnIcon.Kind.GIFT, "Quà 7 ngày", Vector2(4, 116), func(): MetaPopups.open_login(self)],
-		["quests", DrawnIcon.Kind.SCROLL, "Nhiệm vụ", Vector2(4, 206), func(): MetaPopups.open_quests(self)],
-		["events", DrawnIcon.Kind.FLAG, "Sự kiện", Vector2(SCREEN.x - 80, 116), func(): MetaPopups.open_events(self)],
-		["summon", DrawnIcon.Kind.PORTAL, "Triệu hồi", Vector2(SCREEN.x - 80, 206), func(): open_page(SummonPage)],
-	]
-	for entry in entries:
-		var button := Button.new()
-		button.focus_mode = Control.FOCUS_NONE
-		button.position = entry[3]
-		button.size = Vector2(76, 88)
-		for state in ["normal", "hover", "pressed"]:
-			button.add_theme_stylebox_override(state, StyleBoxEmpty.new())
-		button.pressed.connect(func(): SoundLib.play("click"))
-		button.pressed.connect(entry[4])
-		var disc := Panel.new()
-		var disc_style := StyleBoxFlat.new()
-		disc_style.bg_color = Color(0.05, 0.07, 0.1, 0.75)
-		disc_style.border_color = UiKit.FRAME_BROWN
-		disc_style.set_border_width_all(3)
-		disc_style.set_corner_radius_all(32)
-		disc.add_theme_stylebox_override("panel", disc_style)
-		disc.position = Vector2(6, 0)
-		disc.size = Vector2(64, 64)
-		disc.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		button.add_child(disc)
-		var icon := UiKit.drawn(entry[1], 50)
-		icon.position = Vector2(13, 7)
-		icon.size = Vector2(50, 50)
-		button.add_child(icon)
-		var text := UiKit.label(entry[2], 14)
-		text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		text.position = Vector2(-10, 62)
-		text.size = Vector2(96, 24)
-		text.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		button.add_child(text)
-		var dot := UiKit.drawn(DrawnIcon.Kind.DOT, 20)
-		dot.position = Vector2(54, 0)
-		dot.size = Vector2(20, 20)
-		button.add_child(dot)
-		_side_dots[entry[0]] = dot
-		_side.add_child(button)
-		# A gentle bob so the icons read as tappable.
-		icon.pivot_offset = Vector2(25, 25)
-		var bob := icon.create_tween().set_loops()
-		bob.tween_interval(randf_range(0.5, 2.5))
-		bob.tween_property(icon, "scale", Vector2(1.12, 1.12), 0.15)
-		bob.tween_property(icon, "scale", Vector2.ONE, 0.2).set_trans(Tween.TRANS_BACK)
+	var left := Ui.rail([
+		_rail_entry("login", "rail_checkin", "Quà 7 ngày", func(): MetaPopups.open_login(self)),
+		_rail_entry("quests", "rail_quest", "Nhiệm vụ", func(): MetaPopups.open_quests(self)),
+	])
+	Ui.pin(_side, left, Vector2(16, 140))
+	var right := Ui.rail([
+		_rail_entry("events", "rail_event", "Sự kiện", func(): MetaPopups.open_events(self)),
+		_rail_entry("castle", "rail_castle", "Thành", func(): open_page(CastlePage)),
+	])
+	Ui.pin(_side, right, Vector2(-16 - Ui.RAIL_ITEM_SIZE.x, 140), Control.PRESET_TOP_RIGHT)
 
 
-func _tab_style(selected: bool, big: bool) -> StyleBox:
-	if selected:
-		var style := UiKit.button_style("SmallBlueSquareButton_Regular.png")
-		style.set_content_margin_all(0)
-		return style
-	var flat := UiKit.dark_style(12, Color("2d4a52") if not big else Color("c9a14a"))
-	flat.bg_color = Color(0.1, 0.16, 0.2, 0.95)
-	return flat
+func _rail_entry(key: String, icon_name: String, text: String, on_press: Callable) -> Control:
+	var item := Ui.rail_item(icon_name, text)
+	var ic: Control = item.find_child("ShortcutIcon", true, false)
+	_side_dots[key] = Ui.dot(ic, Ui.SHORTCUT_BADGE_AT)
+	var shortcut := _tap(item, on_press)
+	shortcut.name = key.to_pascal_case() + "Shortcut"
+	shortcut.custom_minimum_size = Ui.RAIL_ITEM_SIZE
+	return shortcut
 
 
 # The panel lives on its own CanvasLayer so it always draws above the lobby.
@@ -397,19 +365,6 @@ func _open_settings() -> void:
 		PlayerData.set_sound(on)
 		SoundLib.play("click"))
 	box.add_child(sound)
-	var skin := CheckBox.new()
-	skin.text = "Giao diện Cozy (tắt = giao diện Tiny Swords)"
-	skin.button_pressed = UiKit.is_cozy()
-	skin.focus_mode = Control.FOCUS_NONE
-	for key in ["font_color", "font_pressed_color", "font_hover_color", "font_hover_pressed_color"]:
-		skin.add_theme_color_override(key, UiKit.INK)
-	skin.add_theme_constant_override("outline_size", 0)
-	skin.add_theme_font_size_override("font_size", 18)
-	# The skin is read while pages build, so switching reloads the lobby.
-	skin.toggled.connect(func(on):
-		PlayerData.set_ui_skin("cozy" if on else "swords")
-		get_tree().reload_current_scene())
-	box.add_child(skin)
 	var reset := UiKit.button("XOÁ DỮ LIỆU", Vector2(260, 60), func(): pass, true)
 	reset.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	# Two taps within a few seconds, so a stray tap can't wipe the save.

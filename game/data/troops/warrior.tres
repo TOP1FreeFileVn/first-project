@@ -5,7 +5,8 @@
 [resource]
 script = ExtResource("1_troop")
 id = "warrior"
-display_name = "Chiến binh"
+display_name = "Goblin Kiếm"
+unit_key = "art:warrior"
 description = "Máu trâu, đỡ đòn và giữ tuyến cho đồng đội."
 max_hp = 85.0
 damage = 8.0

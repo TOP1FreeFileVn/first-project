@@ -150,7 +150,7 @@ func _go(step: String) -> void:
 	match step:
 		"buy":
 			_gears_before = battle.board.gears.size()
-			_say("① Chạm một lính trong SHOP để mua gear. Mỗi món tốn thịt, giá ghi dưới thẻ.", CARD_Y, func(): return _card_rect())
+			_say("① Chạm một lính trong SHOP để mua gear. Mỗi món tốn xu, giá ghi dưới thẻ.", CARD_Y, func(): return _card_rect())
 			_next.visible = false
 		"turn":
 			_say("② Gear nằm cạnh QUẢ CẦU CAM (hoặc cạnh một gear đang quay) sẽ quay theo. Chỉ gear ĐANG QUAY mới sinh lính!", CARD_Y, func(): return _newest_gear_rect())
@@ -164,7 +164,7 @@ func _go(step: String) -> void:
 			_next.visible = false
 			_auto_hide = 6.0
 		"income":
-			_say("⑤ Hết đợt: nhận thịt thu nhập, cộng LÃI (mỗi 5 thịt để dành +1, tối đa +3). Mua thêm, ghép gear rồi tiếp tục!", CARD_Y, func(): return _card_rect())
+			_say("⑤ Hết đợt: nhận xu thu nhập, cộng LÃI (mỗi 5 xu để dành +1, tối đa +3). Mua thêm, ghép gear rồi tiếp tục!", CARD_Y, func(): return _card_rect())
 			_next.text = "ĐÃ HIỂU"
 
 

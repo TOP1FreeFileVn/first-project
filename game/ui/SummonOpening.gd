@@ -66,6 +66,9 @@ func attach(host: Node) -> void:
 
 
 func _ready() -> void:
+	# It lives on its own CanvasLayer, which does not inherit the lobby's smooth filtering;
+	# the SVG skin scaled up for the reveal would look jagged with the project's nearest.
+	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	theme = UiKit.make_theme()
@@ -430,26 +433,12 @@ func _make_card(result: Dictionary) -> Control:
 	card.pivot_offset = CARD_SIZE / 2.0
 	card.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-	var back := Panel.new()
-	back.name = "Back"
-	back.size = CARD_SIZE
-	var back_style := UiKit.card_style(Color("c9a14a"), Color("2a1650"))
-	back_style.set_border_width_all(4)
-	back.add_theme_stylebox_override("panel", back_style)
-	back.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var portal := UiKit.drawn(DrawnIcon.Kind.PORTAL, 70)
-	portal.position = CARD_SIZE / 2.0 - Vector2(35, 35)
-	portal.size = Vector2(70, 70)
-	back.add_child(portal)
-	card.add_child(back)
+	card.add_child(UiKit.card_back_face(CARD_SIZE, true))
 
 	var front := PanelContainer.new()
 	front.name = "Front"
 	front.size = CARD_SIZE
-	var style := UiKit.card_style(color, Color(0.1, 0.12, 0.17, 0.97) if rank < 3 else Color(0.22, 0.15, 0.05, 0.97))
-	style.set_border_width_all(4 if rank < 2 else 5)
-	style.set_content_margin_all(4)
-	front.add_theme_stylebox_override("panel", style)
+	front.add_theme_stylebox_override("panel", UiKit.rarity_card(rank))
 	front.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var column := UiKit.vbox(0)
 	column.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -457,19 +446,19 @@ func _make_card(result: Dictionary) -> Control:
 	match result["type"]:
 		"hero":
 			var hero: Dictionary = Heroes.HEROES[result["id"]]
-			column.add_child(_center(UiKit.label(Economy.RARITY_NAMES[rank], 13, color)))
-			column.add_child(_center(UiKit.hero_portrait(result["id"], 86)))
-			var name_label := UiKit.label(hero["name"], 13)
+			column.add_child(_center(UiKit.label(Economy.RARITY_NAMES[rank], 13)))
+			column.add_child(_center(UiKit.hero_portrait(result["id"], 64)))
+			var name_label := UiKit.label(hero["name"], 12)
 			name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 			name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			name_label.custom_minimum_size.x = CARD_SIZE.x - 10
+			name_label.custom_minimum_size.x = CARD_SIZE.x - 20
 			column.add_child(name_label)
-			column.add_child(_center(UiKit.label("MỚI!" if result["new"] else "+%d mảnh" % Heroes.DUPLICATE_SHARDS, 14, UiKit.WARN if result["new"] else UiKit.GOLD_TEXT)))
+			column.add_child(_center(UiKit.tag("Mới!") if result["new"] else UiKit.label("+%d mảnh" % Heroes.DUPLICATE_SHARDS, 13)))
 		"shards":
-			column.add_child(_center(UiKit.label("Mảnh tướng", 13, color)))
+			column.add_child(_center(UiKit.label("Mảnh tướng", 13)))
 			var icons := Control.new()
-			icons.custom_minimum_size = Vector2(90, 86)
-			var portrait := UiKit.hero_portrait(result["id"], 76)
+			icons.custom_minimum_size = Vector2(90, 76)
+			var portrait := UiKit.hero_portrait(result["id"], 68)
 			portrait.position = Vector2(0, 4)
 			icons.add_child(portrait)
 			var shard := UiKit.shard_icon(result["id"], 40)
@@ -477,11 +466,11 @@ func _make_card(result: Dictionary) -> Control:
 			shard.size = Vector2(40, 40)
 			icons.add_child(shard)
 			column.add_child(_center(icons))
-			column.add_child(_center(UiKit.label("x%d" % result["count"], 22, UiKit.GOLD_TEXT)))
+			column.add_child(_center(UiKit.label("x%d" % result["count"], 22)))
 		_:
-			column.add_child(_center(UiKit.label("Vàng", 13, color)))
-			column.add_child(_center(UiKit.icon(SpriteLib.texture(UiKit.COIN), 70)))
-			column.add_child(_center(UiKit.label(UiKit.format_number(result["amount"]), 22, UiKit.GOLD_TEXT)))
+			column.add_child(_center(UiKit.label("Vàng", 13)))
+			column.add_child(_center(UiKit.icon(UiKit.coin_texture(128), 62)))
+			column.add_child(_center(UiKit.label(UiKit.format_number(result["amount"]), 22)))
 	card.add_child(front)
 	_set_face(card, false)
 	return card

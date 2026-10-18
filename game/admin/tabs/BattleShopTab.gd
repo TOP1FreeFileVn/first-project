@@ -9,8 +9,9 @@ const SIM_COUNT := 1000
 # [key, label, min, max, step, is_int]
 const FIELDS := [
 	["slots", "Số ô trong shop", 1, 8, 1, true],
-	["reroll_cost", "Giá đổi shop (thịt)", 0, 20, 1, true],
+	["reroll_cost", "Giá đổi shop (xu)", 0, 20, 1, true],
 	["free_rerolls", "Lượt đổi miễn phí mỗi lượt nghỉ", 0, 10, 1, true],
+	["reroll_step", "Giá đổi tăng thêm mỗi lần", 0, 10, 1, true],
 	["sell_refund", "Bán gear: hoàn bao nhiêu phần giá trị", 0, 1, 0.05, false],
 	["tier2_from_wave", "Gear bậc 2 xuất hiện từ đợt", 1, 20, 1, true],
 	["tier2_chance", "Mỗi ô: xác suất là bậc 2", 0, 1, 0.05, false],
@@ -24,16 +25,16 @@ var _sim_text := ""
 func build() -> void:
 	var spec: Dictionary = Economy.BATTLE_SHOP
 	var box := section("Shop giữa các đợt")
-	note("Thu nhập mỗi đợt và lãi là 2 công thức 'round_income' và 'interest' ở tab Công thức. Kho thịt tối đa nằm ở bảng Thành.", box)
+	note("Thu nhập mỗi đợt và lãi là 2 công thức 'round_income' và 'interest' ở tab Công thức. Túi xu tối đa nằm ở bảng Thành.", box)
 	for f in FIELDS:
 		var key: String = f[0]
 		number(box, f[1], float(spec.get(key, 0)), f[2], f[3], f[4], f[5], false, func(v): _set_value(key, v))
 	var income := []
 	for wave in range(1, 9):
 		income.append("đợt %d: +%d" % [wave, Economy.round_income(wave, 0)])
-	note("Thu nhập (chưa tính Lò thịt, lãi): " + " · ".join(income), box, UiKit.GOLD_TEXT)
+	note("Thu nhập (chưa tính Két xu, lãi): " + " · ".join(income), box, UiKit.GOLD_TEXT)
 
-	var prices := section("Giá gear bậc 1 theo độ hiếm (thịt)")
+	var prices := section("Giá gear bậc 1 theo độ hiếm (xu)")
 	var price_list: Array = spec.get("prices", [2, 3, 4, 6])
 	for r in mini(price_list.size(), Economy.RARITY_NAMES.size()):
 		number(prices, Economy.RARITY_NAMES[r], price_list[r], 0, 100, 1, true, false, func(v):
@@ -126,7 +127,7 @@ func _simulate() -> void:
 		lines.append("%s: %.2f món/shop" % [PlayerData.TROOPS[id].display_name, by_troop.get(id, 0) / float(SIM_COUNT)])
 	lines.append("Gear bậc 2: %.1f%% số món" % (100.0 * tier2 / maxf(offers_total, 1)))
 	lines.append("Shop có ít nhất 1 Huyền thoại: %.1f%%" % (100.0 * shops_with_legend / SIM_COUNT))
-	lines.append("Mua hết 1 shop: TB %.1f thịt" % (cost / float(SIM_COUNT)))
+	lines.append("Mua hết 1 shop: TB %.1f xu" % (cost / float(SIM_COUNT)))
 	_sim_text = "\n".join(lines)
 	rebuild()
 

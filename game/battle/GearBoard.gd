@@ -61,12 +61,25 @@ var tiles := {}
 
 var _drag = null
 var _drag_from := NO_CELL
+var _slot_face: StyleBoxFlat
+var _locked_face: StyleBoxFlat
 
 
 func _ready() -> void:
+	_slot_face = _cell_face(Color("cbb893"), Color("a78b63"))
+	_locked_face = _cell_face(Color("b69d79"), Color("a78b63"))
 	var order := open_order()
 	for i in mini(PlayerData.unlocked_cells(), order.size()):
 		open_cells[order[i]] = true
+
+
+static func _cell_face(fill: Color, border: Color) -> StyleBoxFlat:
+	var face := StyleBoxFlat.new()
+	face.bg_color = fill
+	face.border_color = border
+	face.set_border_width_all(2)
+	face.set_corner_radius_all(16)
+	return face
 
 
 ## The order cells open in as the castle levels up: nearest to the master first, ties
@@ -403,17 +416,20 @@ func _draw() -> void:
 				continue
 			var center := cell_center(cell)
 			if not is_open(cell):
-				draw_rect(Rect2(center - Vector2(46, 46), Vector2(92, 92)), Color(0.05, 0.07, 0.06, 0.5))
+				draw_style_box(_locked_face, Rect2(center - Vector2(46, 46), Vector2(92, 92)))
 				DrawnIcon.draw_lock(self, center, 26.0)
 				continue
-			draw_rect(Rect2(center - Vector2(46, 46), Vector2(92, 92)), Color(0.08, 0.12, 0.08, 0.28))
+			draw_style_box(_slot_face, Rect2(center - Vector2(46, 46), Vector2(92, 92)))
 			if tiles.has(cell):
 				draw_tile(self, tiles[cell], center)
 			if gears.has(cell) or tile(cell) == "rock":
 				continue
 			# Empty cells that would mesh with the drive train glow, to guide placement.
 			var hot := _would_turn(cell)
-			draw_arc(center, 40.0, 0.0, TAU, 32, Color(1.0, 0.85, 0.35, 0.55) if hot else Color(1, 1, 1, 0.18), 2.0, true)
+			var mark := Color("806346") if hot else Color("a78b63")
+			draw_arc(center, 34.0, 0.0, TAU, 40, mark, 2.0, true)
+			draw_line(center - Vector2(8, 0), center + Vector2(8, 0), mark, 3.0, true)
+			draw_line(center - Vector2(0, 8), center + Vector2(0, 8), mark, 3.0, true)
 	if _drag == null:
 		return
 	for cell in gears:

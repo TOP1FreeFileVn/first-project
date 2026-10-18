@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "dua_phep"
+display_name = "Mèo Đũa Phép"
+description = "Pháp sư huyền thoại, phép liên tục."
+rarity = 3
+unit_key = "art:dua_phep"
+role = 1
+klass = 2
+max_hp = 238.0
+damage = 28.4
+attack_range = 255.0
+attack_cooldown = 1.0
+move_speed = 55.0
+aggro_range = 315.0
+crit_chance = 0.25
+crit_mult = 1.5
+spawn_interval = 9.0
+max_alive = 1

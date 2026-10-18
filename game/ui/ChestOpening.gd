@@ -110,6 +110,9 @@ func attach(host: Node) -> void:
 
 
 func _ready() -> void:
+	# It lives on its own CanvasLayer, which does not inherit the lobby's smooth filtering;
+	# the SVG skin scaled up for the reveal would look jagged with the project's nearest.
+	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	theme = UiKit.make_theme()
@@ -652,41 +655,16 @@ func _make_card(id: String, count: int, face_up: bool) -> Control:
 	card.pivot_offset = CARD_SIZE / 2.0
 	card.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
-	var back := PanelContainer.new()
-	back.name = "Back"
-	var back_style := UiKit.dark_style(14, Color("c9a14a"))
-	back_style.set_border_width_all(6)
-	back_style.bg_color = Color("26384a")
-	back.add_theme_stylebox_override("panel", back_style)
-	back.size = CARD_SIZE
-	back.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var inner := Panel.new()
-	var inner_style := StyleBoxFlat.new()
-	inner_style.bg_color = Color("1b2938")
-	inner_style.set_border_width_all(2)
-	inner_style.border_color = Color("c9a14a", 0.6)
-	inner_style.set_corner_radius_all(10)
-	inner.add_theme_stylebox_override("panel", inner_style)
-	inner.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	back.add_child(inner)
-	var mark := UiKit.label("?", 90, UiKit.GOLD_TEXT)
-	mark.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	mark.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	back.add_child(mark)
-	card.add_child(back)
+	card.add_child(UiKit.card_back_face(CARD_SIZE))
 
 	var front := PanelContainer.new()
 	front.name = "Front"
-	var style := UiKit.dark_style(14, Economy.RARITY_COLORS[rarity])
-	style.set_border_width_all(6 if rarity >= Economy.Rarity.EPIC else 4)
-	style.bg_color = Color(0.1, 0.13, 0.17, 0.97) if rarity < Economy.Rarity.LEGENDARY else Color(0.2, 0.14, 0.05, 0.97)
-	style.set_content_margin_all(8)
-	front.add_theme_stylebox_override("panel", style)
+	front.add_theme_stylebox_override("panel", UiKit.rarity_card(rarity))
 	front.size = CARD_SIZE
 	front.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var column := UiKit.vbox(2)
 	front.add_child(column)
-	var rarity_label := UiKit.label(Economy.RARITY_NAMES[rarity], 15, Economy.RARITY_COLORS[rarity])
+	var rarity_label := UiKit.label(Economy.RARITY_NAMES[rarity], 15)
 	rarity_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	column.add_child(rarity_label)
 	var portrait := UiKit.troop_portrait(troop, 100)
@@ -695,7 +673,7 @@ func _make_card(id: String, count: int, face_up: bool) -> Control:
 	var name_label := UiKit.label(troop.display_name, 19)
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	column.add_child(name_label)
-	var count_label := UiKit.label("x%d" % count, 24, UiKit.GOLD_TEXT)
+	var count_label := UiKit.label("x%d" % count, 24)
 	count_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	column.add_child(count_label)
 	var t: Dictionary = PlayerData.troop(id)
@@ -707,12 +685,8 @@ func _make_card(id: String, count: int, face_up: bool) -> Control:
 	column.add_child(bar)
 	card.add_child(front)
 	if _new_ids.has(id):
-		var badge := UiKit.label("MỚI", 16, Color.WHITE)
-		var badge_style := UiKit.dark_style(6, Color("e0586a"))
-		badge_style.bg_color = Color("c0392b")
-		badge_style.set_content_margin_all(4)
-		badge.add_theme_stylebox_override("normal", badge_style)
-		badge.position = Vector2(CARD_SIZE.x - 52, -10)
+		var badge := UiKit.tag("Mới")
+		badge.position = Vector2(CARD_SIZE.x - 58, -12)
 		card.add_child(badge)
 	_set_face(card, face_up)
 	return card
@@ -780,7 +754,7 @@ func _particles(texture: Texture2D, color: Color, amount: int, lifetime: float) 
 # Coins burst out of the chest, then a handful fly to the gold counter.
 func _coins() -> void:
 	SoundLib.play("coin")
-	var burst := _particles(SpriteLib.texture(UiKit.COIN), Color.WHITE, 26, 1.1)
+	var burst := _particles(UiKit.coin_texture(128), Color.WHITE, 26, 1.1)
 	burst.position = CHEST_AT + Vector2(0, -50)
 	burst.spread = 60.0
 	burst.initial_velocity_min = 450.0
@@ -788,7 +762,7 @@ func _coins() -> void:
 	burst.gravity = Vector2(0, 1300)
 	burst.color_ramp = null
 	for i in 6:
-		var coin := UiKit.icon(SpriteLib.texture(UiKit.COIN), 34)
+		var coin := UiKit.icon(UiKit.coin_texture(128), 34)
 		coin.position = CHEST_AT + Vector2(randf_range(-50, 50), -60)
 		add_child(coin)
 		var fly := coin.create_tween()

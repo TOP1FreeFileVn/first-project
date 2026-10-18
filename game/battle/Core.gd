@@ -11,7 +11,7 @@ const Gear = preload("res://game/battle/Gear.gd")
 
 const Economy = preload("res://game/core/Economy.gd")
 ## Radius of the pin's rounded tip; fits the gear's tooth gap where the tip travels.
-const PIN_TIP := 9.0
+const PIN_TIP := 2.5
 
 var board
 var max_hp := 100.0

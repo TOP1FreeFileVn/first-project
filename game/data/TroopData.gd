@@ -16,6 +16,10 @@ enum Role { MELEE, RANGED, HEALER, SUPPORT }
 ## COMMAND  allies within `radius` deal +`value` damage; every cooldown a whirlwind hits
 ##          all foes around it for `duration` x damage; normal swings also cleave
 enum Ability { NONE, TUNNEL, FORGE, ASSASSIN, SHIELD, BURN, COOK, BOMB, COMMAND }
+## Class ring (design sheet, Core battle): Tầm xa > Bộ binh > Pháp sư > Kỵ binh > Tầm xa,
+## the counter deals x2 damage (Economy.counter_mult).
+enum Klass { INFANTRY, RANGED, MAGE, CAVALRY }
+const KLASS_NAMES := ["Bộ binh", "Tầm xa", "Pháp sư", "Kỵ binh"]
 
 @export var id := ""
 @export var display_name := ""
@@ -27,6 +31,7 @@ enum Ability { NONE, TUNNEL, FORGE, ASSASSIN, SHIELD, BURN, COOK, BOMB, COMMAND 
 ## Gear art from "Buildings/Blue Buildings/" (without .png).
 @export var building := "Barracks"
 @export var role: Role = Role.MELEE
+@export var klass: Klass = Klass.INFANTRY
 ## Multiplies the unit's colours so look-alike troops (same sprite) stay distinct.
 @export var tint := Color.WHITE
 @export var sprite_scale := 1.0

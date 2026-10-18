@@ -1,26 +1,34 @@
 extends CanvasLayer
 
-# Battle HUD built in code: top status bar, the between-wave shop panel, the READY
-# button, toast messages and the end-of-level panel with rewards. Styled through UiKit.
+# Battle HUD in the game skin (game/ui/Ui.gd + the SVG theme): top status (leave, level plaque,
+# speed; castle HP bar, wave pill, coins), the between-wave shop sheet with rarity offer cards,
+# the sell zone and READY button along the bottom, a toast pill, and the result sheet.
+# Layout follows Figma UI-013 (field on top, board below). In battle, xu (the sheet's Coin)
+# buys gears; cá is the army's food: living cats fill the basket (the sheet's Population).
 
 const UiKit = preload("res://game/ui/UiKit.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const ChestOpening = preload("res://game/ui/ChestOpening.gd")
 const Coach = preload("res://game/ui/Coach.gd")
 
-const INFO := UiKit.INFO
-const WARN := UiKit.WARN
+const INFO := Color("fff2c2")
+const WARN := Color("ff9c8a")
 const LEAVE_CONFIRM_TIME := 2.0
 const SHOP_POS := Vector2(20, 150)
-const CARD_SIZE := Vector2(124, 196)
+const CARD_SIZE := Vector2(150, 200)
+## Rarity index → card tone.
+const TONES := ["green", "blue", "purple", "orange"]
 
 var battle
 
 var _hp_bar: ProgressBar
 var _hp_label: Label
 var _wave_label: Label
-var _meat_label: Label
-var _meat_bar: ProgressBar
+var _wave_bar: ProgressBar
+var _coin_label: Label
+var _coin_bar: ProgressBar
+var _fish_label: Label
 var _speed_button: Button
 var _ready_button: Button
 var _root: Control
@@ -30,6 +38,7 @@ var _shop_tween: Tween
 var _cards: Array = []
 var _shown_phase := ""
 var _sell_zone: PanelContainer
+var _message_box: PanelContainer
 var _message: Label
 var _message_tween: Tween
 var _end_panel: PanelContainer
@@ -42,7 +51,8 @@ func bind(p_battle) -> void:
 	var root := Control.new()
 	root.set_anchors_preset(Control.PRESET_FULL_RECT)
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	root.theme = UiKit.make_theme()
+	root.theme = Ui.THEME
+	root.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	add_child(root)
 	_root = root
 	_build_top_bar(root)
@@ -61,60 +71,72 @@ func show_message(text: String, color := INFO) -> void:
 	_message.add_theme_color_override("font_color", color)
 	if _message_tween:
 		_message_tween.kill()
-	_message.modulate.a = 1.0
+	_message_box.modulate.a = 1.0
 	_message_tween = create_tween()
 	_message_tween.tween_interval(2.6)
-	_message_tween.tween_property(_message, "modulate:a", 0.0, 0.5)
+	_message_tween.tween_property(_message_box, "modulate:a", 0.0, 0.5)
+
+
+## Pixel-art troop portrait kept crisp inside the smooth skin.
+func _portrait(troop: Resource, size: float, color := "Blue") -> TextureRect:
+	var p := UiKit.troop_portrait(troop, size, color)
+	if not SpriteLib.is_cat(troop.unit_key):
+		p.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	return p
+
+
+func _tone(rarity: int) -> String:
+	return TONES[clampi(rarity, 0, TONES.size() - 1)]
 
 
 ## `reward` comes from PlayerData.grant_battle_rewards().
 func show_end(won: bool, stars: int, detail: String, reward: Dictionary) -> void:
 	for child in _end_box.get_children():
 		child.queue_free()
-	var title := UiKit.ink("CHIẾN THẮNG!" if won else "THÀNH ĐÃ THẤT THỦ", 34)
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_end_box.add_child(title)
+	_end_box.add_child(Ui.center(Ui.title_plaque("CHIẾN THẮNG!" if won else "THÀNH THẤT THỦ", "", 28)))
 	if won:
-		var star_label := UiKit.label("★".repeat(stars) + "☆".repeat(3 - stars), 48, UiKit.GOLD_TEXT)
-		star_label.add_theme_color_override("font_outline_color", UiKit.INK)
-		star_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		_end_box.add_child(star_label)
-	var detail_label := UiKit.ink(detail, 18)
-	detail_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_end_box.add_child(detail_label)
+		var star_row := Ui.hbox(6)
+		for i in 3:
+			star_row.add_child(Ui.icon("star" if i < stars else "star_off", 64 if i == 1 else 52))
+		_end_box.add_child(star_row)
+	_end_box.add_child(Ui.label(detail, "LabelDark", 19))
 
-	var heading := UiKit.ink("Phần thưởng" + (" · Lần đầu x2!" if reward.get("first_clear", false) else ""), 20)
-	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	var heading := Ui.label("Phần thưởng" + (" · Lần đầu x2!" if reward.get("first_clear", false) else ""), "LabelDark", 21)
 	_end_box.add_child(heading)
-	var loot := UiKit.hbox(18)
-	loot.alignment = BoxContainer.ALIGNMENT_CENTER
-	loot.add_child(UiKit.price("gold", reward.get("gold", 0), 22, true))
-	if reward.get("gems", 0) > 0:
-		loot.add_child(UiKit.price("gems", reward["gems"], 22, true))
-	_end_box.add_child(loot)
+	var loot := Ui.hbox(22)
+	for item in [["coin", reward.get("gold", 0)], ["gem", reward.get("gems", 0)]]:
+		if item[1] > 0 or item[0] == "coin":
+			var c := Ui.hbox(6)
+			c.add_child(Ui.icon(item[0], 40))
+			c.add_child(Ui.label(UiKit.format_number(item[1]), "LabelDark", 24))
+			loot.add_child(c)
+	_end_box.add_child(Ui.panel("Well", loot))
 	var cards: Dictionary = reward.get("cards", {})
 	if not cards.is_empty():
-		var card_row := UiKit.hbox(10)
-		card_row.alignment = BoxContainer.ALIGNMENT_CENTER
+		var card_row := Ui.hbox(10)
 		for id in cards:
-			var card := UiKit.vbox(0)
-			card.add_child(UiKit.troop_portrait(PlayerData.TROOPS[id], 56))
-			var count := UiKit.ink("x%d" % cards[id], 16)
-			count.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			card.add_child(count)
+			var troop: Resource = PlayerData.TROOPS[id]
+			var card := Ui.panel("CardUnit" + _tone(troop.rarity).capitalize())
+			var col := Ui.vbox(0)
+			col.add_child(Ui.center(_portrait(troop, 60)))
+			col.add_child(Ui.label("x%d" % cards[id], "LabelSmall", 17))
+			card.add_child(col)
 			card_row.add_child(card)
 		_end_box.add_child(card_row)
 	if reward.get("gift", "") != "":
-		var gift := UiKit.ink("Mở khoá lính mới: %s!" % PlayerData.TROOPS[reward["gift"]].display_name, 18)
-		gift.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		_end_box.add_child(gift)
+		_end_box.add_child(Ui.label("Mở khoá lính mới: %s!" % PlayerData.TROOPS[reward["gift"]].display_name, "LabelDark", 19))
 
-	var buttons := UiKit.hbox(10)
-	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
-	buttons.add_child(UiKit.button("VỀ SẢNH", Vector2(150, 58), func(): battle.go_home(), true))
-	buttons.add_child(UiKit.button("CHƠI LẠI", Vector2(150, 58), func(): battle.restart()))
+	var buttons := Ui.hbox(10)
+	var home := Ui.button("Về sảnh", "Red", Vector2(160, 70), 22)
+	home.pressed.connect(func(): battle.go_home())
+	buttons.add_child(home)
+	var again := Ui.button("Chơi lại", "Blue", Vector2(160, 70), 22)
+	again.pressed.connect(func(): battle.restart())
+	buttons.add_child(again)
 	if won and PlayerData.has_next_level():
-		buttons.add_child(UiKit.button("MÀN TIẾP", Vector2(150, 58), func(): battle.next_level()))
+		var next := Ui.button("Màn tiếp", "Yellow", Vector2(170, 70), 22)
+		next.pressed.connect(func(): battle.next_level())
+		buttons.add_child(next)
 	_end_box.add_child(buttons)
 	_end_panel.visible = true
 	# The victory chest opens on top of the result panel; the simulator (no persist) and
@@ -132,19 +154,24 @@ func _process(_delta: float) -> void:
 	_hp_bar.max_value = core.max_hp
 	_hp_bar.value = core.hp
 	_hp_label.text = "%d" % ceili(core.hp)
-	_wave_label.text = "Đợt %d/%d" % [battle.wave_number(), battle.waves.total()]
+	var total: int = battle.waves.total()
+	_wave_label.text = "Đợt %d/%d" % [battle.wave_number(), total]
+	_wave_bar.value = float(battle.wave_number() - 1) / maxf(total, 1.0)
 	var whole := floori(core.meat)
-	_meat_label.text = "%d/%d" % [whole, core.max_meat]
-	_meat_bar.value = core.meat / maxf(core.max_meat, 1.0)
-	_sell_zone.modulate = Color(1.3, 1.3, 1.3) if battle.board.is_dragging() else Color(1, 1, 1, 0.7)
+	_coin_label.text = "%d/%d" % [whole, core.max_meat]
+	_coin_bar.value = core.meat / maxf(core.max_meat, 1.0)
+	var used: int = battle.fish_used()
+	_fish_label.text = "%d/%d" % [used, battle.fish_cap]
+	_fish_label.add_theme_color_override("font_color", UiKit.WARN if used >= battle.fish_cap else Color.WHITE)
+	_sell_zone.modulate = Color(1.25, 1.25, 1.25) if battle.board.is_dragging() else Color(1, 1, 1, 0.85)
 	if battle.phase == "shop":
-		_ready_button.text = "SẴN SÀNG ▶ ĐỢT %d" % battle.wave_number()
+		_ready_button.text = "Sẵn sàng  ▶  Đợt %d" % battle.wave_number()
 		_ready_button.disabled = false
 	elif battle.phase == "fight":
-		_ready_button.text = "ĐANG ĐÁNH · còn %d địch" % (battle.enemy_units.size() + battle.waves.pending())
+		_ready_button.text = "Đang đánh · còn %d địch" % (battle.enemy_units.size() + battle.waves.pending())
 		_ready_button.disabled = true
 	else:
-		_ready_button.text = "HẾT TRẬN"
+		_ready_button.text = "Hết trận"
 		_ready_button.disabled = true
 	if battle.phase != _shown_phase:
 		_shown_phase = battle.phase
@@ -164,100 +191,120 @@ func _on_leave_pressed() -> void:
 		show_message("Chạm lần nữa để rời trận (không nhận thưởng)", WARN)
 
 
+## Two rows on the field, no band: [leave · level plaque · speed], [castle HP · wave · coins].
 func _build_top_bar(root: Control) -> void:
-	var bar := PanelContainer.new()
-	bar.set_anchors_preset(Control.PRESET_TOP_WIDE)
-	bar.custom_minimum_size = Vector2(0, 104)
-	var style := UiKit.dark_style(0)
-	style.set_border_width_all(0)
-	style.border_width_bottom = 3
-	style.content_margin_top = 4
-	style.content_margin_bottom = 4
-	bar.add_theme_stylebox_override("panel", style)
-	root.add_child(bar)
-	var rows := UiKit.vbox(2)
-	bar.add_child(rows)
+	var rows := Ui.vbox(4)
+	rows.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	root.add_child(rows)
+	rows.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	rows.offset_left = 12
+	rows.offset_right = -12
+	rows.offset_top = 6
 
-	# Row 1: leave, level name, game speed.
-	var top := UiKit.hbox()
+	var top := Ui.hbox(8, BoxContainer.ALIGNMENT_BEGIN)
 	rows.add_child(top)
-	var leave := UiKit.button("", Vector2(48, 44), _on_leave_pressed)
-	leave.icon = SpriteLib.texture(UiKit.UI + "Icons/Icon_08.png")
-	leave.expand_icon = true
+	var leave := Ui.button("", "Red", Vector2(64, 56), 0, "back")
+	leave.pressed.connect(_on_leave_pressed)
 	top.add_child(leave)
-	top.add_child(UiKit.ribbon(battle.level.display_name, 18))
-	top.add_child(UiKit.spacer())
-	_speed_button = UiKit.button("x1", Vector2(64, 44), _toggle_speed)
+	var plaque := Ui.title_plaque(battle.level.display_name, "", 21)
+	top.add_child(plaque)
+	top.add_child(Ui.spacer())
+	_speed_button = Ui.button("x1", "Blue", Vector2(80, 56), 22)
+	_speed_button.pressed.connect(_toggle_speed)
 	top.add_child(_speed_button)
 
-	# Row 2: castle HP, wave, meat.
-	var stats := UiKit.hbox()
+	var stats := Ui.hbox(10, BoxContainer.ALIGNMENT_BEGIN)
 	rows.add_child(stats)
-	stats.add_child(UiKit.icon(SpriteLib.cozy(UiKit.COZY_HEART) if UiKit.is_cozy() else SpriteLib.texture("Buildings/Blue Buildings/Castle.png"), 34 if UiKit.is_cozy() else 40))
-	_hp_bar = UiKit.bar(Color("e2574c"), Vector2(170, 16))
-	stats.add_child(_hp_bar)
-	_hp_label = UiKit.label("", 18)
-	_hp_label.custom_minimum_size.x = 38
-	stats.add_child(_hp_label)
-	stats.add_child(UiKit.gap(4))
-	stats.add_child(UiKit.icon(SpriteLib.texture(UiKit.UI + "Icons/Icon_05.png"), 32))
-	_wave_label = UiKit.label("", 19)
-	_wave_label.custom_minimum_size.x = 92
-	stats.add_child(_wave_label)
-	stats.add_child(UiKit.gap(4))
-	stats.add_child(UiKit.icon(SpriteLib.texture(UiKit.MEAT), 36))
-	var meat_box := UiKit.vbox(2)
-	meat_box.alignment = BoxContainer.ALIGNMENT_CENTER
-	_meat_label = UiKit.label("", 19)
-	meat_box.add_child(_meat_label)
-	_meat_bar = UiKit.bar(Color("f2b35c"), Vector2(64, 7))
-	_meat_bar.max_value = 1.0
-	meat_box.add_child(_meat_bar)
-	stats.add_child(meat_box)
+	# Castle HP: heart + red bar with the number on it.
+	var hp := Ui.hbox(4)
+	hp.add_child(Ui.icon("heart", 40))
+	_hp_bar = ProgressBar.new()
+	_hp_bar.theme_type_variation = "BarHpRed"
+	_hp_bar.show_percentage = false
+	_hp_bar.custom_minimum_size = Vector2(170, 30)
+	_hp_bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_hp_label = Ui.label("", "LabelTiny", 17)
+	_hp_bar.add_child(_hp_label)
+	_hp_label.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	hp.add_child(_hp_bar)
+	stats.add_child(hp)
+	# Wave: crossed swords + "Đợt n/N" over a thin progress bar.
+	var wave := Ui.hbox(4)
+	wave.add_child(Ui.icon("tab_battle", 40))
+	var wave_col := Ui.vbox(2)
+	_wave_label = Ui.label("", "LabelSmall", 19)
+	wave_col.add_child(_wave_label)
+	_wave_bar = ProgressBar.new()
+	_wave_bar.theme_type_variation = "BarExp"
+	_wave_bar.show_percentage = false
+	_wave_bar.max_value = 1.0
+	_wave_bar.custom_minimum_size = Vector2(110, 12)
+	wave_col.add_child(_wave_bar)
+	wave.add_child(wave_col)
+	stats.add_child(wave)
+	stats.add_child(Ui.spacer())
+	# Coins (shop money) with how full the purse is.
+	var coin := Ui.hbox(4)
+	coin.add_child(Ui.icon("coin", 40))
+	var coin_col := Ui.vbox(2)
+	_coin_label = Ui.label("", "LabelSmall", 19)
+	coin_col.add_child(_coin_label)
+	_coin_bar = ProgressBar.new()
+	_coin_bar.theme_type_variation = "BarExp"
+	_coin_bar.show_percentage = false
+	_coin_bar.max_value = 1.0
+	_coin_bar.custom_minimum_size = Vector2(80, 12)
+	coin_col.add_child(_coin_bar)
+	coin.add_child(coin_col)
+	stats.add_child(coin)
+	# Fish basket: food eaten by the living cats / basket size.
+	var fish := Ui.hbox(4)
+	fish.add_child(Ui.icon("fish", 40))
+	_fish_label = Ui.label("", "LabelSmall", 19)
+	fish.add_child(_fish_label)
+	stats.add_child(fish)
 
 
 func _build_controls(root: Control) -> void:
 	var sell_rect: Rect2 = battle.SELL_RECT
+	var sell_box := Ui.vbox(0, BoxContainer.ALIGNMENT_CENTER)
+	sell_box.add_child(Ui.label("Bán", "", 22))
+	sell_box.add_child(Ui.label("kéo gear vào", "LabelTiny", 14))
 	_sell_zone = PanelContainer.new()
+	_sell_zone.add_theme_stylebox_override("panel", Ui.THEME.get_stylebox("normal", "BtnRed"))
+	_sell_zone.add_child(sell_box)
 	_sell_zone.position = sell_rect.position
 	_sell_zone.size = sell_rect.size
 	_sell_zone.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_sell_zone.add_theme_stylebox_override("panel", UiKit.button_style("SmallRedSquareButton_Regular.png"))
-	var sell_text := UiKit.label("BÁN\nkéo gear vào", 15)
-	sell_text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_sell_zone.add_child(sell_text)
 	root.add_child(_sell_zone)
 
-	_ready_button = UiKit.button("", Vector2(520, 80), func(): battle.start_wave())
-	_ready_button.position = Vector2(182, 1194)
-	_ready_button.add_theme_font_size_override("font_size", 26)
+	_ready_button = Ui.button("", "Yellow", Vector2(520, 80), 26)
+	_ready_button.position = Vector2(182, 1192)
+	_ready_button.size = Vector2(520, 80)
+	_ready_button.pressed.connect(func(): battle.start_wave())
 	root.add_child(_ready_button)
 
 
+## Toast: a dark translucent pill under the top bar.
 func _build_message(root: Control) -> void:
-	_message = UiKit.label("", 21)
-	_message.position = Vector2(30, 116)
-	_message.size = Vector2(660, 40)
-	_message.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_message = Ui.label("", "LabelSmall", 20)
 	_message.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	var style := UiKit.dark_style(8)
-	style.set_border_width_all(0)
-	style.content_margin_top = 4
-	style.content_margin_bottom = 6
-	_message.add_theme_stylebox_override("normal", style)
-	_message.modulate.a = 0.0
-	root.add_child(_message)
+	_message_box = Ui.panel("InfoStrip", _message)
+	_message_box.position = Vector2(30, 116)
+	_message_box.size = Vector2(660, 44)
+	_message_box.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_message_box.modulate.a = 0.0
+	root.add_child(_message_box)
 
 
 func _build_end_panel(root: Control) -> void:
-	_end_panel = PanelContainer.new()
-	_end_panel.custom_minimum_size = Vector2(560, 0)
-	_end_panel.add_theme_stylebox_override("panel", UiKit.paper_style())
+	_end_panel = Ui.panel("Sheet")
+	_end_panel.custom_minimum_size = Vector2(580, 0)
 	root.add_child(_end_panel)
 	_end_panel.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
 	_end_panel.grow_horizontal = Control.GROW_DIRECTION_BOTH
 	_end_panel.grow_vertical = Control.GROW_DIRECTION_BOTH
-	_end_box = UiKit.vbox(10)
+	_end_box = Ui.vbox(12)
 	_end_panel.add_child(_end_box)
 	_end_panel.visible = false
 
@@ -268,63 +315,49 @@ func _toggle_speed() -> void:
 
 # --- Between-wave shop ------------------------------------------------------------------
 
-## Called by Battle after a wave: shows what it paid, with the meat flying to the counter.
+## Called by Battle after a wave: shows what it paid, with the coins flying to the counter.
 func on_wave_cleared(index: int, income: int, interest: int) -> void:
-	show_message("Xong đợt %d! +%d thịt%s" % [index + 1, income, " (lãi +%d)" % interest if interest > 0 else ""])
-	var gain := UiKit.label("+%d" % (income + interest), 34, Color("ffd35c"))
-	gain.add_theme_constant_override("outline_size", 8)
+	show_message("Xong đợt %d! +%d xu%s" % [index + 1, income, " (lãi +%d)" % interest if interest > 0 else ""])
+	var gain := Ui.label("+%d" % (income + interest), "LabelTitle", 34)
+	gain.add_theme_color_override("font_color", Color("ffd35c"))
 	gain.position = Vector2(560, 150)
-	gain.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_root.add_child(gain)
 	var tween := gain.create_tween()
-	tween.tween_property(gain, "position", Vector2(600, 56), 0.6).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	tween.tween_property(gain, "position", Vector2(620, 70), 0.6).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	tween.parallel().tween_property(gain, "modulate:a", 0.0, 0.6).set_delay(0.3)
 	tween.tween_callback(gain.queue_free)
 
 
 func _build_shop(root: Control) -> void:
-	_shop_panel = PanelContainer.new()
-	var style: StyleBox
-	if UiKit.is_cozy():
-		style = UiKit.panel_style()
-	else:
-		var dark := UiKit.dark_style(16, Color("c9a14a"))
-		dark.set_border_width_all(3)
-		dark.bg_color = Color(0.05, 0.08, 0.11, 0.94)
-		style = dark
-	_shop_panel.add_theme_stylebox_override("panel", style)
+	_shop_panel = Ui.panel("Sheet")
 	_shop_panel.position = SHOP_POS
 	_shop_panel.size = Vector2(680, 0)
 	_shop_panel.custom_minimum_size = Vector2(680, 0)
 	root.add_child(_shop_panel)
-	_shop_box = UiKit.vbox(10)
+	_shop_box = Ui.vbox(10)
 	_shop_panel.add_child(_shop_box)
 	battle.shop_changed.connect(_refresh_shop)
 	_refresh_shop()
 
 
-# Rebuilt whenever the shop, the meat or the board's merge options change.
+# Rebuilt whenever the shop, the coins or the board's merge options change.
 func _refresh_shop() -> void:
 	for child in _shop_box.get_children():
 		_shop_box.remove_child(child)
 		child.queue_free()
 	var number: int = battle.wave_number()
-	var heading := UiKit.ribbon("LƯỢT NGHỈ · Đợt %d/%d sắp tới" % [number, battle.waves.total()], 20, UiKit.Ribbon.YELLOW)
-	_shop_box.add_child(heading)
+	_shop_box.add_child(Ui.center(Ui.title_plaque("Lượt nghỉ · Đợt %d/%d sắp tới" % [number, battle.waves.total()], "", 20)))
 
 	# Next wave preview.
-	var preview := UiKit.hbox(6)
-	preview.alignment = BoxContainer.ALIGNMENT_CENTER
-	preview.add_child(UiKit.label("Quân địch:", 16, UiKit.WARN))
+	var preview := Ui.hbox(8)
+	preview.add_child(Ui.label("Quân địch:", "LabelDark", 17))
 	var foes: Dictionary = battle.waves.preview(number - 1)
 	for id in foes:
-		var portrait := UiKit.troop_portrait(PlayerData.TROOPS[id], 40, "Black" if foes[id]["elite"] else "Red")
-		preview.add_child(portrait)
-		preview.add_child(UiKit.label("x%d%s" % [foes[id]["count"], "★" if foes[id]["elite"] else ""], 15))
-	_shop_box.add_child(preview)
+		preview.add_child(_portrait(PlayerData.TROOPS[id], 42, "Black" if foes[id]["elite"] else "Red"))
+		preview.add_child(Ui.label("x%d%s" % [foes[id]["count"], "★" if foes[id]["elite"] else ""], "LabelDark", 17))
+	_shop_box.add_child(Ui.panel("Well", preview))
 
-	var cards := UiKit.hbox(8)
-	cards.alignment = BoxContainer.ALIGNMENT_CENTER
+	var cards := Ui.hbox(10)
 	_cards.clear()
 	for slot in battle.shop.size():
 		var card := _shop_card(slot)
@@ -332,80 +365,76 @@ func _refresh_shop() -> void:
 		_cards.append(card)
 	_shop_box.add_child(cards)
 
-	var tools := UiKit.hbox(10)
-	tools.alignment = BoxContainer.ALIGNMENT_CENTER
+	var tools := Ui.hbox(12)
 	var cost: int = battle.reroll_cost()
-	var reroll := UiKit.button("ĐỔI SHOP  " + ("miễn phí" if cost == 0 else "%d thịt" % cost), Vector2(250, 60), func(): battle.reroll())
-	reroll.add_theme_font_size_override("font_size", 18)
+	var reroll := Ui.cost_button("Đổi shop", "Miễn phí" if cost == 0 else str(cost), "coin", "Blue", Vector2(250, 90))
+	reroll.pressed.connect(func(): battle.reroll())
 	reroll.disabled = not battle.core.can_afford(cost)
 	tools.add_child(reroll)
-	var lock := UiKit.button("ĐÃ KHOÁ" if battle.shop_locked else "KHOÁ SHOP", Vector2(190, 60), func(): battle.toggle_lock(), battle.shop_locked)
-	lock.add_theme_font_size_override("font_size", 18)
+	var lock := Ui.button("Đã khoá" if battle.shop_locked else "Khoá shop", "Red" if battle.shop_locked else "Tab", Vector2(200, 76), 21, "lock")
+	lock.pressed.connect(func(): battle.toggle_lock())
 	tools.add_child(lock)
 	_shop_box.add_child(tools)
 
 	var pay: Array = battle.income_preview()
-	var info := UiKit.label("Hết đợt nhận +%d thịt · lãi +%d (mỗi 5 thịt để dành = +1)" % [pay[0], pay[1]], 15, INFO)
-	info.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	var info := Ui.label("Hết đợt nhận +%d xu · lãi +%d (mỗi 5 xu để dành = +1)" % [pay[0], pay[1]], "LabelDark", 16)
 	info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_shop_box.add_child(info)
 
 
+## One offer: rarity card (same anatomy as every card: tier badge top, art, name, price).
 func _shop_card(slot: int) -> Button:
 	var offer: Dictionary = battle.shop[slot]
 	var troop: Resource = PlayerData.TROOPS[offer["id"]]
 	var card := Button.new()
 	card.custom_minimum_size = CARD_SIZE
 	card.focus_mode = Control.FOCUS_NONE
-	var style := UiKit.dark_style(12, Economy.RARITY_COLORS[troop.rarity])
-	style.set_border_width_all(4 if offer["tier"] > 1 else 3)
-	style.bg_color = Color(0.1, 0.13, 0.17, 0.97) if troop.rarity < 3 else Color(0.2, 0.14, 0.05, 0.97)
+	var face := Ui.THEME.get_stylebox("panel", "CardUnit" + _tone(troop.rarity).capitalize())
 	for state in ["normal", "hover", "pressed", "disabled"]:
-		card.add_theme_stylebox_override(state, style)
+		card.add_theme_stylebox_override(state, face)
 	card.pressed.connect(_on_card_pressed.bind(slot))
-	var column := UiKit.vbox(0)
-	column.set_anchors_preset(Control.PRESET_FULL_RECT)
-	column.alignment = BoxContainer.ALIGNMENT_CENTER
+	var column := Ui.vbox(0, BoxContainer.ALIGNMENT_CENTER)
 	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	card.add_child(column)
+	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	if offer["sold"]:
-		var sold := UiKit.label("ĐÃ MUA", 17, Color(1, 1, 1, 0.5))
-		sold.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		column.add_child(sold)
+		column.add_child(Ui.label("Đã mua", "LabelSmall", 18))
 		card.disabled = true
 		card.modulate = Color(1, 1, 1, 0.45)
 		return card
-	var rarity := UiKit.label(Economy.RARITY_NAMES[troop.rarity], 13, Economy.RARITY_COLORS[troop.rarity])
-	rarity.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	column.add_child(rarity)
-	var portrait := UiKit.troop_portrait(troop, 78, SpriteLib.player_color(offer["tier"]))
-	portrait.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	column.add_child(portrait)
-	var name_label := UiKit.label(troop.display_name, 15)
-	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	column.add_child(Ui.label(Economy.RARITY_NAMES[clampi(troop.rarity, 0, 3)], "LabelTiny", 14))
+	column.add_child(Ui.center(_portrait(troop, 76, SpriteLib.player_color(offer["tier"]))))
+	var name_label := Ui.label(troop.display_name, "LabelSmall", 16)
 	name_label.clip_text = true
 	column.add_child(name_label)
 	if offer["tier"] > 1:
-		var tier := UiKit.label("BẬC %d" % offer["tier"], 14, UiKit.GOLD_TEXT)
-		tier.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		column.add_child(tier)
+		column.add_child(Ui.label("Bậc %d" % offer["tier"], "LabelAccent", 15))
 	var affordable: bool = battle.core.can_afford(offer["price"])
-	var price := UiKit.hbox(4)
-	price.alignment = BoxContainer.ALIGNMENT_CENTER
+	var price := Ui.hbox(4)
 	price.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	price.add_child(UiKit.icon(SpriteLib.texture(UiKit.MEAT), 26))
-	price.add_child(UiKit.label(str(offer["price"]), 20, Color.WHITE if affordable else WARN))
+	price.add_child(Ui.icon("coin", 28))
+	var amount := Ui.label(str(offer["price"]), "", 21)
+	if not affordable:
+		amount.add_theme_color_override("font_color", WARN)
+	price.add_child(amount)
 	column.add_child(price)
 	if not affordable or battle.board.is_full():
-		card.modulate = Color(0.7, 0.7, 0.7)
+		card.modulate = Color(0.72, 0.72, 0.72)
 	if battle.offer_merges(slot):
-		var badge := UiKit.label("GHÉP ĐƯỢC", 12, Color("7fd66b"))
-		var badge_style := UiKit.dark_style(6, Color("7fd66b"))
-		badge_style.set_content_margin_all(3)
-		badge.add_theme_stylebox_override("normal", badge_style)
-		badge.position = Vector2(14, -12)
+		var pill := StyleBoxFlat.new()
+		pill.bg_color = Color("5fd03e")
+		pill.border_color = Color("583f21")
+		pill.set_border_width_all(3)
+		pill.set_corner_radius_all(14)
+		pill.content_margin_left = 8
+		pill.content_margin_right = 8
+		var badge := PanelContainer.new()
+		badge.add_theme_stylebox_override("panel", pill)
+		badge.add_child(Ui.label("Ghép được", "LabelTiny", 14))
 		badge.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		card.add_child(badge)
+		badge.position = Vector2(10, -14)
+		badge.size = Vector2(100, 28)
 	return card
 
 
@@ -416,9 +445,8 @@ func _on_card_pressed(slot: int) -> void:
 	if gear == null:
 		return
 	# A ghost of the portrait flies from the card down to the gear it became.
-	var ghost := UiKit.troop_portrait(troop, 78)
+	var ghost := _portrait(troop, 78)
 	ghost.position = from - Vector2(39, 39)
-	ghost.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_root.add_child(ghost)
 	var tween := ghost.create_tween()
 	tween.tween_property(ghost, "position", gear.global_position - Vector2(39, 39), 0.3).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)

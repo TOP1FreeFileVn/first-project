@@ -8,12 +8,13 @@ const CogDraw = preload("res://game/battle/CogDraw.gd")
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Economy = preload("res://game/core/Economy.gd")
 
-const METALS := [Color("c07a45"), Color("b9c3cc"), Color("e8b93c"), Color("a67be0"), Color("e0586a")]
-const IDLE_METAL := Color("6d7277")
-# Outer + inner radius = one cell (100px), so the tips of one gear reach the roots of its
-# neighbour and the teeth interlock. The tooth count must stay even for neighbours to mesh.
-const OUTER := 60.0
-const INNER := 40.0
+const METALS := [Color("ead5ac"), Color("80bfd7"), Color("b49cd6"), Color("eead6c"), Color("aec778")]
+const IDLE_METAL := Color("aaa995")
+# Short broad teeth sit on a 44px shoulder; the concave 36.5px notches leave painted
+# clearance for neighbouring teeth and the master pin on the 100px grid.
+# Multiples of four keep the same tooth/gap phase on all four sides of the master.
+const OUTER := 54.0
+const INNER := 36.5
 const TEETH := 8
 ## The master's hub: smaller than the gap to the gear tips, so only its pin arm touches
 ## the gears.
@@ -61,12 +62,34 @@ func tier_up() -> void:
 
 
 ## Adds `seconds` of production (the board converts rotation into seconds).
+## Hero skill gears (troop id "skill:<weapon>") charge for spawn_interval() seconds of
+## production, then the hero casts the weapon's skill; they never spawn units.
+func is_skill() -> bool:
+	return troop.id.begins_with("skill:")
+
+
 func produce(seconds: float, battle) -> void:
 	total_produced += seconds
+	if is_skill():
+		if not powered:
+			return
+		_clock += seconds
+		if _clock >= spawn_interval():
+			# A charged skill waits (full) until there is a fight to cast it in.
+			if battle.cast_hero_skill(self):
+				_clock -= spawn_interval()
+				_pop(1.25)
+			else:
+				_clock = spawn_interval()
+		return
 	_alive = _alive.filter(func(unit): return is_instance_valid(unit) and not unit.is_dead())
 	if not powered or _alive.size() >= troop.max_alive:
 		return
 	_clock += seconds
+	if _clock >= spawn_interval() and not battle.can_feed(troop):
+		# The fish basket is full: hold the finished unit until a cat falls.
+		_clock = spawn_interval()
+		return
 	if _clock >= spawn_interval():
 		# Keep a little overflow so a long shove isn't wasted, but never bank a second unit.
 		_clock = minf(_clock - spawn_interval(), spawn_interval() * 0.5)
@@ -77,6 +100,8 @@ func produce(seconds: float, battle) -> void:
 
 
 func _refresh_icon() -> void:
+	if SpriteLib.is_cat(troop.unit_key):
+		texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	_icon = SpriteLib.unit_frames(troop.unit_key, SpriteLib.player_color(tier)).get_frame_texture("idle", 0)
 
 
@@ -91,22 +116,21 @@ func _process(_delta: float) -> void:
 
 func _draw() -> void:
 	var metal: Color = METALS[tier - 1] if powered else IDLE_METAL
-	draw_circle(Vector2(0, 5), INNER, Color(0, 0, 0, 0.25))
-	CogDraw.draw_cog(self, Vector2.ZERO, OUTER, INNER, TEETH, angle, metal, metal.darkened(0.6))
+	CogDraw.draw_cog(self, Vector2.ZERO, OUTER, INNER, TEETH, angle, metal, Color("583f21"))
 
 	if powered:
-		var full: bool = _alive.size() >= troop.max_alive
+		var full: bool = not is_skill() and _alive.size() >= troop.max_alive
 		var progress := 1.0 if full else clampf(_clock / spawn_interval(), 0.0, 1.0)
-		draw_arc(Vector2.ZERO, 26.0, -PI / 2.0, -PI / 2.0 + TAU * progress, 32, Color(1, 1, 1, 0.35 if full else 0.85), 3.0, true)
+		draw_arc(Vector2.ZERO, 32.5, 0.0, TAU, 48, Color("583f21"), 2.0, true)
+		if progress > 0.0:
+			draw_arc(Vector2.ZERO, 32.5, -PI / 2.0, -PI / 2.0 + TAU * progress, 48, Color("dcebb5") if full else Color("fff2bf"), 3.0, true)
 
 	# The troop icon stays upright while the cog turns underneath it.
-	var icon_size := 112.0 * _icon.get_width() / 192.0
-	if troop.rarity >= 3:
-		draw_circle(Vector2(0, -3), 30.0, Color(1.0, 0.78, 0.25, 0.35 if powered else 0.15))
+	var icon_size := 62.0
 	var tint: Color = troop.tint * (Color.WHITE if powered else Color(0.6, 0.6, 0.6, 0.85))
 	draw_texture_rect(_icon, Rect2(Vector2(-icon_size, -icon_size - 6.0) / 2.0, Vector2(icon_size, icon_size)), false, tint)
 
-	var badge := Vector2(32, -32)
-	draw_circle(badge, 11.0, Color("3b2b1e"))
-	draw_circle(badge, 9.0, Color("ffd35c"))
-	draw_string(_font, badge + Vector2(-11, 5.5), str(tier), HORIZONTAL_ALIGNMENT_CENTER, 22, 15, Color("3b2b1e"))
+	var badge := Vector2(32, -34)
+	draw_circle(badge, 14.0, Color("583f21"))
+	draw_circle(badge, 11.0, Color("fff3d4"))
+	draw_string(_font, badge + Vector2(-13, 7), str(tier), HORIZONTAL_ALIGNMENT_CENTER, 26, 20, Color("583f21"))

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "giao"
+display_name = "Mèo Giáo"
+description = "Kỵ binh máu trâu, lao lên rất nhanh."
+rarity = 0
+unit_key = "art:giao"
+role = 0
+klass = 3
+max_hp = 101.0
+damage = 8.0
+attack_range = 43.0
+attack_cooldown = 1.3
+move_speed = 94.0
+aggro_range = 220.0
+crit_chance = 0.08
+crit_mult = 1.5
+spawn_interval = 4.5
+max_alive = 3

@@ -7,8 +7,9 @@ extends "res://game/menu/pages/MenuPage.gd"
 # new troop. Troops can also be dragged: drag a card and drop it on a slot, drag a slot
 # onto another to swap them, or drag one out of the team panel to bench it.
 
-const CARD_SIZE := Vector2(318, 200)
-const SLOT_SIZE := Vector2(124, 150)
+const Ui = preload("res://game/ui/Ui.gd")
+const CARD_SIZE := Vector2(326, 216)
+const SLOT_HEIGHT := 184.0
 const MAX_SLOTS := 5
 ## With a mouse a card picks up as soon as it moves. On a touch screen a vertical swipe
 ## scrolls the list, so a card picks up after being held this long, or when the finger
@@ -43,6 +44,8 @@ var _eat_press := false
 
 func _init() -> void:
 	super()
+	theme = Ui.THEME
+	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	# The team (and the filter) stay put; only the collection below scrolls.
 	_scroll = get_child(0)
 	var margin := MarginContainer.new()
@@ -52,7 +55,7 @@ func _init() -> void:
 	margin.add_theme_constant_override("margin_top", 16)
 	margin.add_theme_constant_override("margin_bottom", 4)
 	add_child(margin)
-	_top = UiKit.vbox(12)
+	_top = Ui.vbox(10)
 	margin.add_child(_top)
 	margin.resized.connect(func(): _scroll.offset_top = margin.size.y)
 
@@ -61,20 +64,19 @@ func build() -> void:
 	for child in _top.get_children():
 		_top.remove_child(child)
 		child.queue_free()
-	_top.add_child(UiKit.ribbon("Lính", 26, UiKit.Ribbon.BLUE))
+	_top.add_child(Ui.center(Ui.title_plaque("Lính", "", 26)))
 	_build_team()
 	_build_filter()
 	var grid := GridContainer.new()
 	grid.columns = 2
-	grid.add_theme_constant_override("h_separation", 16)
-	grid.add_theme_constant_override("v_separation", 16)
+	grid.add_theme_constant_override("h_separation", 14)
+	grid.add_theme_constant_override("v_separation", 22)
 	for id in PlayerData.TROOP_ORDER:
 		if _filter < 0 or PlayerData.rarity_of(id) == _filter:
 			grid.add_child(_card(id))
 	body.add_child(grid)
-	var hint := UiKit.label("Cấp tăng chỉ số bằng vàng · Sao nâng trần cấp bằng thẻ lính", 15, UiKit.INFO)
+	var hint := Ui.label("Cấp tăng chỉ số bằng vàng · Sao nâng trần cấp bằng thẻ lính", "LabelSmall", 18)
 	hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	body.add_child(hint)
 	if _detail_box != null and is_instance_valid(_detail_box):
 		_fill_detail()
@@ -204,35 +206,71 @@ func _slot_at(at: Vector2) -> int:
 
 # --- Team -------------------------------------------------------------------------------
 
+## Card tone per rarity, the same as the battle shop: Thường green, Hiếm blue, Sử thi
+## purple, Huyền thoại orange.
+static func tone(rarity: int) -> String:
+	return ["Green", "Blue", "Purple", "Orange"][clampi(rarity, 0, 3)]
+
+
+## A button drawn as a rarity card (CardUnit<tone>) in every state.
+static func card_button(rarity: int, min_size: Vector2) -> Button:
+	var b := Button.new()
+	b.custom_minimum_size = min_size
+	b.focus_mode = Control.FOCUS_NONE
+	var face := Ui.THEME.get_stylebox("panel", "CardUnit" + tone(rarity))
+	for state in ["normal", "hover", "pressed", "disabled"]:
+		b.add_theme_stylebox_override(state, face)
+	return b
+
+
+## Solid green "Trong đội" pill, as on the battle shop's "Ghép được".
+static func pill(text: String, color := Color("5fd03e")) -> PanelContainer:
+	var style := StyleBoxFlat.new()
+	style.bg_color = color
+	style.border_color = Color("583f21")
+	style.set_border_width_all(3)
+	style.set_corner_radius_all(13)
+	style.content_margin_left = 9
+	style.content_margin_right = 9
+	var p := PanelContainer.new()
+	p.add_theme_stylebox_override("panel", style)
+	var label := Ui.label(text, "LabelSmall", 18)
+	label.add_theme_constant_override("outline_size", 3)
+	p.add_child(label)
+	p.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	return p
+
+
 func _build_team() -> void:
-	_team_panel = PanelContainer.new()
-	_team_panel.add_theme_stylebox_override("panel", UiKit.panel_style())
+	_team_panel = Ui.panel("Board")
 	_top.add_child(_team_panel)
-	var box := UiKit.vbox(8)
+	var box := Ui.vbox(8)
 	_team_panel.add_child(box)
-	var head := UiKit.hbox(8)
-	head.add_child(UiKit.label("ĐỘI HÌNH", 22, UiKit.GOLD_TEXT))
-	head.add_child(UiKit.label("%d/%d" % [PlayerData.battle_team().size(), PlayerData.team_slots()], 18))
-	head.add_child(UiKit.spacer())
-	head.add_child(UiKit.label("Sức mạnh %s" % UiKit.format_number(PlayerData.team_power()), 18, UiKit.INFO))
+	var head := Ui.hbox(8, BoxContainer.ALIGNMENT_BEGIN)
+	head.add_child(Ui.label("Đội hình", "", 24))
+	head.add_child(Ui.label("%d/%d" % [PlayerData.battle_team().size(), PlayerData.team_slots()], "LabelAccent", 22))
+	head.add_child(Ui.spacer())
+	head.add_child(Ui.icon("star", 30))
+	head.add_child(Ui.label(UiKit.format_number(PlayerData.team_power()), "", 22))
 	box.add_child(head)
 	if _swap_id != "":
-		var swap := UiKit.hbox(8)
-		var text := UiKit.label("Chạm một ô để đưa %s vào đội" % PlayerData.TROOPS[_swap_id].display_name, 17, UiKit.GOLD_TEXT)
+		var swap := Ui.hbox(8)
+		var text := Ui.label("Chạm một ô để đưa %s vào đội" % PlayerData.TROOPS[_swap_id].display_name, "LabelDark", 18)
 		text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		swap.add_child(text)
-		swap.add_child(UiKit.button("HUỶ", Vector2(100, 48), func():
+		var cancel := Ui.button("Huỷ", "Red", Vector2(110, 56), 18)
+		cancel.pressed.connect(func():
 			_swap_id = ""
-			refresh(), true))
+			refresh())
+		swap.add_child(cancel)
 		box.add_child(swap)
 	else:
-		var hint := UiKit.label("Giữ lính rồi kéo vào ô để thay · kéo ra ngoài để bỏ khỏi đội", 14, Color(1, 1, 1, 0.7))
+		var hint := Ui.label("Giữ lính rồi kéo vào ô để thay · kéo ra ngoài để bỏ khỏi đội", "LabelDark", 18)
 		hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		box.add_child(hint)
 
-	var row := UiKit.hbox(8)
-	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	var row := Ui.hbox(8)
 	var team := PlayerData.battle_team()
 	_slots.clear()
 	for i in MAX_SLOTS:
@@ -242,66 +280,76 @@ func _build_team() -> void:
 			row.add_child(slot)
 		else:
 			row.add_child(_locked_slot(i))
+	# Divide the width left by the Board's real padding. Fixed 122px slots made the
+	# whole header 746px wide, moving the title and clipping the Board's right edge.
+	row.resized.connect(_fit_team_slots.bind(row))
 	box.add_child(row)
 
 
+func _fit_team_slots(row: HBoxContainer) -> void:
+	var gaps := row.get_theme_constant("separation") * (MAX_SLOTS - 1)
+	var width := floorf((row.size.x - gaps) / float(MAX_SLOTS))
+	if width <= 0.0:
+		return
+	for child in row.get_children():
+		var slot := child as Control
+		slot.custom_minimum_size = Vector2(width, SLOT_HEIGHT)
+
+
 func _team_slot(index: int, id: String) -> Button:
-	var slot := Button.new()
-	slot.custom_minimum_size = SLOT_SIZE
-	slot.focus_mode = Control.FOCUS_NONE
-	var border: Color = Economy.RARITY_COLORS[PlayerData.rarity_of(id)] if id != "" else Color("5d9d8d")
-	var style := UiKit.dark_style(12, border)
-	style.set_border_width_all(3 if id != "" else 2)
+	var slot: Button
 	if id == "":
-		style.bg_color = Color(0.05, 0.08, 0.1, 0.6)
-	for state in ["normal", "hover", "pressed"]:
-		slot.add_theme_stylebox_override(state, style)
+		slot = Button.new()
+		slot.custom_minimum_size = Vector2(0, SLOT_HEIGHT)
+		slot.focus_mode = Control.FOCUS_NONE
+		var face := Ui.THEME.get_stylebox("panel", "Well")
+		for state in ["normal", "hover", "pressed"]:
+			slot.add_theme_stylebox_override(state, face)
+	else:
+		slot = card_button(PlayerData.rarity_of(id), Vector2(0, SLOT_HEIGHT))
+	slot.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	slot.pressed.connect(_on_slot_pressed.bind(index, id))
 	if id != "":
 		slot.button_down.connect(_on_press.bind(id, index))
-	var column := UiKit.vbox(0)
-	column.set_anchors_preset(Control.PRESET_FULL_RECT)
-	column.alignment = BoxContainer.ALIGNMENT_CENTER
+	var column := Ui.vbox(4, BoxContainer.ALIGNMENT_CENTER)
+	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	column.offset_left = 6
+	column.offset_right = -6
+	column.offset_top = 6
+	column.offset_bottom = -10
 	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	slot.add_child(column)
 	if id == "":
-		var plus := UiKit.label("+", 44, Color(1, 1, 1, 0.5))
-		plus.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		column.add_child(plus)
-		var empty := UiKit.label("Trống", 14, Color(1, 1, 1, 0.5))
-		empty.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		column.add_child(empty)
+		column.add_child(Ui.center(Ui.icon("plus", 44)))
+		column.add_child(Ui.label("Trống", "LabelDark", 18))
 		return slot
 	var t: Dictionary = PlayerData.troop(id)
-	var portrait := UiKit.troop_portrait(PlayerData.TROOPS[id], 84, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
+	var portrait := UiKit.troop_portrait(PlayerData.TROOPS[id], 72, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
 	portrait.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	column.add_child(portrait)
-	var name_label := UiKit.label(PlayerData.TROOPS[id].display_name, 14)
-	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	name_label.clip_text = true
+	var name_label := Ui.label(PlayerData.TROOPS[id].display_name, "LabelSmall", 18)
+	# Paytone needs 58px for two 18px lines at this slot width.
+	name_label.custom_minimum_size.y = 58
+	name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	name_label.add_theme_constant_override("outline_size", 3)
 	column.add_child(name_label)
-	var level := UiKit.label("Cấp %d" % t["level"], 13, UiKit.GOLD_TEXT)
-	level.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	# White (outlined): the accent green vanished on green and orange cards (1.25:1).
+	var level := Ui.label("Cấp %d" % t["level"], "LabelSmall", 18)
+	level.add_theme_constant_override("outline_size", 3)
 	column.add_child(level)
 	return slot
 
 
 func _locked_slot(index: int) -> Control:
-	var slot := PanelContainer.new()
-	slot.custom_minimum_size = SLOT_SIZE
-	var style := UiKit.dark_style(12, Color(0.3, 0.3, 0.3))
-	style.bg_color = Color(0.03, 0.04, 0.05, 0.6)
-	slot.add_theme_stylebox_override("panel", style)
-	var column := UiKit.vbox(2)
-	column.alignment = BoxContainer.ALIGNMENT_CENTER
+	var slot := Ui.panel("Well")
+	slot.custom_minimum_size = Vector2(0, SLOT_HEIGHT)
+	slot.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	slot.modulate = Color(0.85, 0.85, 0.85)
+	var column := Ui.vbox(2, BoxContainer.ALIGNMENT_CENTER)
 	slot.add_child(column)
-	var lock := UiKit.drawn(UiKit.DrawnIcon.Kind.LOCK, 40)
-	lock.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	column.add_child(lock)
+	column.add_child(Ui.center(Ui.icon("lock", 44)))
 	var need := _castle_for_slot(index)
-	var text := UiKit.label("Thành %d" % need if need > 0 else "—", 14, Color(1, 1, 1, 0.6))
-	text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	column.add_child(text)
+	column.add_child(Ui.label("Thành %d" % need if need > 0 else "—", "LabelDark", 18))
 	return slot
 
 
@@ -327,10 +375,8 @@ func _on_slot_pressed(index: int, id: String) -> void:
 
 
 func _toast(text: String) -> void:
-	var note := UiKit.label(text, 18, UiKit.GOLD_TEXT)
-	note.add_theme_stylebox_override("normal", UiKit.dark_style(10))
-	note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	note.position = Vector2(60, 880)
+	var note := Ui.panel("InfoStrip", Ui.label(text, "LabelSmall", 18))
+	note.position = Vector2(60, 860)
 	note.size = Vector2(600, 56)
 	note.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(note)
@@ -341,18 +387,14 @@ func _toast(text: String) -> void:
 
 
 func _build_filter() -> void:
-	var row := UiKit.hbox(6)
-	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	var row := Ui.hbox(6)
 	var names := ["Tất cả"] + Array(Economy.RARITY_NAMES)
 	for i in names.size():
 		var rarity := i - 1
-		var b := UiKit.button(names[i], Vector2(120 if i == 4 else 100, 56), func():
+		var b := Ui.button(names[i], "Yellow" if rarity == _filter else "Tab", Vector2(150 if i == 4 else 124, 58), 18)
+		b.pressed.connect(func():
 			_filter = rarity
-			refresh(), false)
-		b.add_theme_font_size_override("font_size", 15)
-		b.modulate = Color.WHITE if rarity == _filter else Color(0.6, 0.6, 0.6)
-		if rarity >= 0:
-			b.add_theme_color_override("font_color", Economy.RARITY_COLORS[rarity])
+			refresh())
 		row.add_child(b)
 	_top.add_child(row)
 
@@ -364,63 +406,78 @@ func _card(id: String) -> Button:
 	var t: Dictionary = PlayerData.troop(id)
 	var unlocked: bool = t["unlocked"]
 	var rarity: int = troop.rarity
-	var card := Button.new()
-	card.custom_minimum_size = CARD_SIZE
-	card.focus_mode = Control.FOCUS_NONE
-	var style := UiKit.dark_style(12, Economy.RARITY_COLORS[rarity])
-	style.set_border_width_all(4 if rarity >= 3 else 3)
-	if rarity >= 3:
-		style.bg_color = Color(0.16, 0.12, 0.05, 0.92)
-	card.add_theme_stylebox_override("normal", style)
-	card.add_theme_stylebox_override("hover", style)
-	card.add_theme_stylebox_override("pressed", style)
+	var card := card_button(rarity, CARD_SIZE)
 	card.pressed.connect(_on_card_pressed.bind(id))
 	if unlocked:
 		card.button_down.connect(_on_press.bind(id, -1))
+	else:
+		card.self_modulate = Color(0.62, 0.62, 0.66)
 
-	var row := UiKit.hbox(10)
-	row.set_anchors_preset(Control.PRESET_FULL_RECT)
+	var row := Ui.hbox(8, BoxContainer.ALIGNMENT_BEGIN)
+	row.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	row.offset_left = 12
 	row.offset_right = -12
+	row.offset_bottom = -6
 	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	card.add_child(row)
-	var portrait := UiKit.troop_portrait(troop, 110, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
+	var portrait := UiKit.troop_portrait(troop, 104, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
+	portrait.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	if not unlocked:
-		portrait.modulate = Color(0.2, 0.2, 0.2)
+		portrait.modulate = Color(0.15, 0.15, 0.2, 0.85)
 	row.add_child(portrait)
 
-	var info := UiKit.vbox(4)
-	info.alignment = BoxContainer.ALIGNMENT_CENTER
+	var info := Ui.vbox(3, BoxContainer.ALIGNMENT_CENTER)
 	info.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	info.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	row.add_child(info)
-	info.add_child(UiKit.label(troop.display_name, 22))
-	info.add_child(UiKit.label(Economy.RARITY_NAMES[rarity], 15, Economy.RARITY_COLORS[rarity]))
+	var name_label := Ui.label(troop.display_name, "", 22)
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	name_label.custom_minimum_size.y = 32
+	name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	info.add_child(name_label)
+	var kind_text := ("%s\n%s" if rarity == 3 else "%s · %s") % [Economy.RARITY_NAMES[rarity], troop.KLASS_NAMES[troop.klass]]
+	var kind := Ui.label(kind_text, "LabelSmall", 18)
+	kind.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	kind.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	kind.add_theme_constant_override("outline_size", 3)
+	info.add_child(kind)
 	if not unlocked:
-		var locked := UiKit.label("Chưa mở khoá", 16, UiKit.WARN)
+		var locked := Ui.label("Chưa mở khoá", "LabelSmall", 18)
+		locked.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		locked.add_theme_color_override("font_color", Color("ffb0a0"))
 		info.add_child(locked)
-		info.add_child(UiKit.label("Cần 1 thẻ (rương)", 14))
+		var need_card := Ui.label("Cần 1 thẻ (rương)", "LabelSmall", 18)
+		need_card.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		need_card.add_theme_constant_override("outline_size", 3)
+		info.add_child(need_card)
+		Ui.pin(card, Ui.icon("lock", 40), Vector2(-46, 8), Control.PRESET_TOP_RIGHT)
 	else:
-		info.add_child(UiKit.label("★".repeat(t["stars"]) + "☆".repeat(Economy.MAX_STARS - t["stars"]), 20, UiKit.GOLD_TEXT))
-		info.add_child(UiKit.label("Cấp %d/%d" % [t["level"], PlayerData.level_cap(id)], 18))
+		var stars := Ui.hbox(1, BoxContainer.ALIGNMENT_BEGIN)
+		for i in Economy.MAX_STARS:
+			stars.add_child(Ui.icon("star" if i < t["stars"] else "star_off", 24))
+		info.add_child(stars)
+		var level := Ui.label("Cấp %d/%d" % [t["level"], PlayerData.level_cap(id)], "LabelSmall", 20)
+		level.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		info.add_child(level)
 		var need := PlayerData.star_up_cost(id)
-		var bar := UiKit.bar(Color("7fd66b") if need > 0 and t["cards"] >= need else Color("5aa9e6"), Vector2(150, 12))
+		var bar := ProgressBar.new()
+		bar.theme_type_variation = "BarItem"
+		bar.show_percentage = false
+		bar.custom_minimum_size = Vector2(150, 28)
 		bar.max_value = maxi(need, 1)
 		bar.value = t["cards"] if need > 0 else bar.max_value
+		var count := Ui.label("%d/%s" % [t["cards"], str(need) if need > 0 else "—"], "LabelSmall", 18)
+		count.add_theme_constant_override("outline_size", 3)
+		bar.add_child(count)
+		count.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 		info.add_child(bar)
-		info.add_child(UiKit.label("Thẻ %d/%s" % [t["cards"], str(need) if need > 0 else "—"], 14))
 
 	if unlocked and PlayerData.in_team(id):
-		var badge := UiKit.label("TRONG ĐỘI", 13, Color("7fd66b"))
-		badge.add_theme_stylebox_override("normal", UiKit.dark_style(6, Color("7fd66b")))
-		badge.position = Vector2(8, 8)
-		badge.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var badge := pill("Trong đội")
 		card.add_child(badge)
+		badge.position = Vector2(10, -12)
 	if PlayerData.can_improve(id):
-		var dot := UiKit.drawn(UiKit.DrawnIcon.Kind.DOT, 22)
-		dot.position = Vector2(CARD_SIZE.x - 30, 8)
-		dot.size = Vector2(22, 22)
-		card.add_child(dot)
+		Ui.dot(card, Vector2(-26, -8))
 	return card
 
 
@@ -517,7 +574,7 @@ func _fill_detail() -> void:
 		level_button.disabled = true
 	else:
 		level_button.text = "NÂNG CẤP  %s" % UiKit.format_number(level_cost)
-		level_button.icon = SpriteLib.texture(UiKit.COIN)
+		level_button.icon = UiKit.coin_texture()
 		level_button.add_theme_constant_override("icon_max_width", 30)
 		level_button.disabled = PlayerData.gold < level_cost
 	actions.add_child(level_button)

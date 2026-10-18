@@ -5,9 +5,9 @@
 [resource]
 script = ExtResource("1_troop")
 id = "pawn"
-display_name = "Nông dân"
+display_name = "Slime"
+unit_key = "art:pawn"
 description = "Rẻ, chạy nhanh, sinh liên tục. Đông mà yếu."
-unit_key = "Pawn"
 building = "House1"
 max_hp = 30.0
 damage = 5.0

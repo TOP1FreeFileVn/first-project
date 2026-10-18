@@ -4,7 +4,7 @@ extends "res://game/menu/pages/MenuPage.gd"
 # 8 hours of storage. Quick patrol pays 2 hours at once, free twice a day.
 
 const STAGE_SIZE := Vector2(620, 200)
-const PATROL_UNITS := ["Lancer", "Warrior", "Archer", "Pawn"]
+const PATROL_UNITS := ["art:giao", "art:kiem", "art:cung", "art:gay_phep"]
 
 var _stored_label: Label
 var _stored_bar: ProgressBar

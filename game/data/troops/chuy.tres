@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "chuy"
+display_name = "Mèo Chuỳ"
+description = "Chuỳ gai nặng, đập choáng tiền tuyến."
+rarity = 2
+unit_key = "art:chuy"
+role = 0
+klass = 3
+max_hp = 238.0
+damage = 21.6
+attack_range = 43.0
+attack_cooldown = 1.49
+move_speed = 94.0
+aggro_range = 220.0
+crit_chance = 0.1
+crit_mult = 1.5
+spawn_interval = 6.0
+max_alive = 2

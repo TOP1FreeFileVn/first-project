@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "kiem"
+display_name = "Mèo Kiếm"
+description = "Kiếm sĩ cân bằng, giữ hàng đầu."
+rarity = 0
+unit_key = "art:kiem"
+role = 0
+klass = 0
+max_hp = 84.0
+damage = 8.0
+attack_range = 38.0
+attack_cooldown = 1.0
+move_speed = 55.0
+aggro_range = 220.0
+crit_chance = 0.12
+crit_mult = 1.5
+spawn_interval = 4.5
+max_alive = 3

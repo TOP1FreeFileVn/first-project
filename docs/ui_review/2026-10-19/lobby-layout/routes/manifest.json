@@ -1,0 +1,186 @@
+{
+	"captures": [],
+	"failures": 0,
+	"output_dir": "res://docs/ui_review/2026-10-19/lobby-layout/routes",
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/lobby-layout/routes/mcp/profile/Godot/app_userdata/Gear Defenders",
+	"routes": [
+		{
+			"name": "events_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_paid_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_paid_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_shortcut_opens_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_back_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_paid_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_paid_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_shortcut_opens_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_back_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"routes_only": true
+}

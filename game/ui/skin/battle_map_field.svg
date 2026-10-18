@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280">
+
+<path fill="#c5d5a2" d="M0 0H720V740H0Z"/>
+<path fill="#b5cb92" d="M0 0H100Q64 66 83 136T62 284Q91 374 70 454T71 615L58 740H0Z"/>
+<path fill="#b5cb92" d="M720 0H634Q665 91 649 173T663 334Q636 424 655 511T653 658L666 740H720Z"/>
+<path fill="#d6ddb4" d="M282 0H439Q406 85 428 158T415 294Q393 365 410 433T395 570Q376 635 406 740H272Q294 639 291 577T306 438Q321 369 308 302T322 162Q335 86 282 0Z"/>
+<path fill="#c2a57d" d="M0 700H720V1280H0Z"/>
+<path fill="#d5bd92" d="M0 744Q171 722 360 739T720 744V1280H0Z"/>
+<rect x="34" y="736" width="652" height="440" rx="26" fill="#e8d5ad" stroke="#8d714d" stroke-width="4"/>
+<path d="M55 1192H665" fill="none" stroke="#b99d71" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(117 166) scale(1)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(552 206) scale(0.9)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(184 301) scale(0.8)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(592 357) scale(1)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(124 451) scale(0.9)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(530 509) scale(0.8)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(188 598) scale(1)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(594 607) scale(0.8)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(233 105) scale(0.7)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(488 107) scale(0.8)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(468 384) scale(0.7)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<path d="M-7 0L-9-6M0 0V-10M7 0L10-7" transform="translate(243 493) scale(0.7)" fill="none" stroke="#a9c18b" stroke-width="3" stroke-linecap="round"/>
+<ellipse cx="84" cy="348" rx="6" ry="3" fill="#b5bf92"/>
+<ellipse cx="631" cy="246" rx="5" ry="3" fill="#b5bf92"/>
+<ellipse cx="90" cy="570" rx="6" ry="4" fill="#b5bf92"/>
+<ellipse cx="628" cy="552" rx="7" ry="4" fill="#b5bf92"/>
+
+</svg>

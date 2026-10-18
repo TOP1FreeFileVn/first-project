@@ -5,9 +5,10 @@
 [resource]
 script = ExtResource("1_troop")
 id = "archer"
-display_name = "Cung thủ"
+display_name = "Goblin Cung"
+unit_key = "art:archer"
+klass = 1
 description = "Bắn xa từ phía sau. Máu giấy, cần người che chắn."
-unit_key = "Archer"
 building = "Archery"
 role = 1
 max_hp = 28.0

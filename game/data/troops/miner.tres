@@ -5,10 +5,10 @@
 [resource]
 script = ExtResource("1_troop")
 id = "miner"
-display_name = "Thợ mỏ"
+display_name = "Chuột Chũi"
+unit_key = "art:miner"
 description = "Cầm cuốc, da dày. Đứng mũi chịu tên cho cả đội."
 rarity = 0
-unit_key = "PawnPickaxe"
 building = "House2"
 role = 0
 max_hp = 60.0

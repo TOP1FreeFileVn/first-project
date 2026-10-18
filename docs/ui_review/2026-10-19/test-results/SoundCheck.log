@@ -1,0 +1,35 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+background synthesis ready after 745 ms (29 sounds / variants)
+  click        0.07s peak  28.0% 
+  coin         0.21s peak  32.1% 
+  reward       0.32s peak  32.7% 
+  buy          0.22s peak  29.7% 
+  sell         0.21s peak  28.1% 
+  reroll       0.20s peak  25.3% 
+  place        0.10s peak  59.9% 
+  merge        0.40s peak  18.7% 
+  wave         0.75s peak  28.1% 
+  hit          0.07s peak  44.9% 
+  arrow        0.14s peak  33.1% 
+  death        0.15s peak  17.6% 
+  pop          0.10s peak  44.2% 
+  explosion    0.60s peak  92.1% 
+  heal         0.28s peak  13.7% 
+  wall         0.12s peak  49.9% 
+  hero         0.75s peak  40.2% 
+  victory      1.20s peak  31.1% 
+  defeat       1.14s peak  31.3% 
+  jump         0.13s peak  19.1% 
+  thud         0.22s peak  86.1% 
+  chest_open   0.50s peak  55.8% 
+  flip         0.08s peak  20.7% 
+  rare         0.46s peak  23.5% 
+  epic         0.80s peak  33.4% 
+  legend       1.40s peak  46.8% 
+  charge       1.10s peak  17.5% 
+  click_variant_2 0.08s peak  28.0% 
+  click_variant_3 0.07s peak  28.0% 
+SoundCheck: 29 sounds / variants, 0 to check
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)

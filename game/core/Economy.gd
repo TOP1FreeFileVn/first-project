@@ -12,7 +12,7 @@ const RARITY_COLORS := [Color("b9c3cc"), Color("5aa9e6"), Color("c28bff"), Color
 const WORKSHOP_ORDER := ["meat_regen", "start_meat", "master_gear"]
 const CHEST_ORDER := ["wood", "silver", "gold"]
 # Troop card gifted on first clear of a level (level index -> troop id).
-const FIRST_CLEAR_GIFT := {0: "lancer", 1: "monk", 2: "miner", 4: "guard", 6: "fire_archer", 11: "smith", 14: "assassin"}
+const FIRST_CLEAR_GIFT := {0: "giao", 1: "riu", 2: "no", 4: "thuoc", 6: "cu_kiem", 11: "dao", 14: "sung"}
 # Team slots when a castle row predates the "team" column.
 const DEFAULT_TEAM_SLOTS := 3
 
@@ -42,6 +42,8 @@ static var ELITE_DAMAGE_MULT := 1.8
 static var KILL_MEAT := 0.35
 static var ELITE_KILL_MEAT := 3.0
 static var MAX_PLAYER_UNITS := 60
+## Fish the basket holds: every living cat soldier takes fish_cost() of it.
+static var FISH_CAP := 28
 
 
 static func refresh(balance) -> void:
@@ -70,6 +72,21 @@ static func refresh(balance) -> void:
 	KILL_MEAT = float(balance.value("kill_meat"))
 	ELITE_KILL_MEAT = float(balance.value("elite_kill_meat"))
 	MAX_PLAYER_UNITS = int(balance.value("max_player_units"))
+	FISH_CAP = int(balance.value("fish_cap"))
+
+
+## Class counter (Tầm xa > Bộ binh > Pháp sư > Kỵ binh > Tầm xa): x2 damage.
+const COUNTER_MULT := 2.0
+const BEATS := {1: 0, 0: 2, 2: 3, 3: 1}
+
+
+## Fish a living soldier of this rarity eats from the basket: Thường 1 ... Huyền thoại 4.
+static func fish_cost(rarity: int) -> int:
+	return rarity + 1
+
+
+static func counter_mult(attacker_klass: int, target_klass: int) -> float:
+	return COUNTER_MULT if BEATS.get(attacker_klass, -1) == target_klass else 1.0
 
 
 ## Troops the player can bring into a battle at a castle level (1-based).

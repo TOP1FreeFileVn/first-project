@@ -13,3 +13,8 @@ Thumbs.db
 .env
 debug.log
 *.godot-mcp-backup-*
+
+# Reference screenshots of commercial games (copyright) - kept local only
+docs/asset_reference/
+# Godot editor profiles/caches captured by review tools
+docs/**/Godot/

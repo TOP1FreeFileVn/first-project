@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/ui_review/BattleSurvey.gd" id="1"]
+
+[node name="BattleSurvey" type="Node"]
+script = ExtResource("1")

@@ -1,0 +1,22 @@
+{
+  "checks": {
+    "team_panel_margins": true,
+    "collection_names_visible": true,
+    "01_lobby_nav_bottom_inset": true,
+    "02_shop_nav_bottom_inset": true,
+    "03_hero_nav_bottom_inset": true,
+    "04_troops_nav_bottom_inset": true,
+    "05_summon_nav_bottom_inset": true,
+    "summon_cta_bounds": true,
+    "cog_svg_assets_valid": true
+  },
+  "all_passed": true,
+  "collection_names": 16,
+  "team_rect": [
+    24.0,
+    189.0,
+    672.0,
+    317.0
+  ],
+  "additional_environment_svgs_valid": 8
+}

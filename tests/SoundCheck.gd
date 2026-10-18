@@ -17,16 +17,19 @@ func _ready() -> void:
 	_out = out
 
 
-# SoundLib builds on a worker thread at startup; wait for it.
+# The UI click is ready immediately; wait for the remaining synthesised effects.
 func _process(_delta: float) -> void:
-	if SoundLib._streams.is_empty():
+	if not SoundLib.has_sound("legend"):
 		return
 	set_process(false)
 	var out := _out
-	print("background synthesis ready after %d ms (%d sounds)" % [Time.get_ticks_msec() - _start, SoundLib._streams.size()])
+	var sounds: Dictionary = SoundLib._streams.duplicate()
+	for i in range(1, SoundLib.UI_TAPS.size()):
+		sounds["click_variant_%d" % (i + 1)] = SoundLib.UI_TAPS[i]
+	print("background synthesis ready after %d ms (%d sounds / variants)" % [Time.get_ticks_msec() - _start, sounds.size()])
 	var failed := 0
-	for name in SoundLib._streams:
-		var stream: AudioStreamWAV = SoundLib._streams[name]
+	for name in sounds:
+		var stream: AudioStreamWAV = sounds[name]
 		var data := stream.data
 		var peak := 0
 		for i in range(0, data.size(), 2):
@@ -38,5 +41,5 @@ func _process(_delta: float) -> void:
 		print("  %-12s %.2fs peak %5.1f%% %s" % [name, seconds, peak * 100.0 / 32767.0, "" if ok else "<-- CHECK"])
 		if out != "":
 			stream.save_to_wav("%s/%s.wav" % [out, name])
-	print("SoundCheck: %d sounds, %d to check" % [SoundLib._streams.size(), failed])
+	print("SoundCheck: %d sounds / variants, %d to check" % [sounds.size(), failed])
 	get_tree().quit(1 if failed > 0 else 0)

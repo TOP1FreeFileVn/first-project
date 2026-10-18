@@ -5,6 +5,7 @@ extends RefCounted
 # its content after a claim or a choice.
 
 const UiKit = preload("res://game/ui/UiKit.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const Heroes = preload("res://game/core/Heroes.gd")
 const Meta = preload("res://game/core/Meta.gd")
@@ -49,66 +50,164 @@ static func got_text(got: Dictionary) -> String:
 
 
 # --- Events hub ---------------------------------------------------------------------------
+# Layout pattern UI-068 (layout.md): one main banner for the featured event, then a list of
+# the other timed events. Each row keeps the same columns: drawn icon | name + progress |
+# one action button (green "Nhận/Thu" when something is waiting, blue "Đi" otherwise).
+
+const EVENT_ICON := 76.0
+const EVENT_BUTTON := Vector2(140, 68)
+
 
 static func open_events(home: Control) -> void:
-	var box := UiKit.dark_popup(home, 660, "Sự kiện")
-	var featured := PlayerData.summon_featured()
-	var left := PlayerData.summon_seconds_left()
-	var summon_sub := "Nổi bật: %s · còn %d ngày" % [Heroes.HEROES[featured]["name"], left / 86400]
-	box.add_child(_event_row(DrawnIcon.Kind.PORTAL, "Triệu hồi Tướng Quân", summon_sub,
-		Color("c28bff"), PlayerData.summon_free_ready(), "MIỄN PHÍ" if PlayerData.summon_free_ready() else "", func():
+	var box := UiKit.sheet_popup(home, 660, "Sự kiện")
+	box.add_child(_summon_banner(home, box))
+	var heading := Ui.label("Sự kiện khác", "LabelDark", 20)
+	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	box.add_child(heading)
+
+	var stored := PlayerData.patrol_stored()
+	var capacity := PlayerData.patrol_capacity()
+	box.add_child(_event_row("rail_patrol", "Tuần tra", _value_bar("BarItem", stored, capacity, "coin"),
+		"Thu" if PlayerData.patrol_alert() else "Đi", PlayerData.patrol_alert(), func():
 			UiKit.close_popup(box)
-			home.open_page(SummonPage)))
-	var patrol_sub := "Kho: %s / %s vàng" % [UiKit.format_number(PlayerData.patrol_stored()), UiKit.format_number(PlayerData.patrol_capacity())]
-	box.add_child(_event_row(-1, "Tuần tra", patrol_sub, Color("5aa9e6"), PlayerData.patrol_alert(), "", func():
-		UiKit.close_popup(box)
-		home.open_page(PatrolPage)))
-	box.add_child(_event_row(DrawnIcon.Kind.GIFT, "Quà 7 ngày", "Ngày %d/7" % mini(PlayerData.login_progress() + 1, 7),
-		Color("ff7b7b"), PlayerData.login_can_claim(), "", func():
+			home.open_page(PatrolPage)))
+
+	box.add_child(_event_row("rail_checkin", "Quà 7 ngày", _login_track(),
+		"Nhận" if PlayerData.login_can_claim() else "Xem", PlayerData.login_can_claim(), func():
 			UiKit.close_popup(box)
 			open_login(home)))
-	box.add_child(_event_row(DrawnIcon.Kind.SCROLL, "Nhiệm vụ hằng ngày", "Điểm năng động %d" % PlayerData.quest_points(),
-		UiKit.GOLD_TEXT, PlayerData.quest_alert(), "", func():
+
+	var points := PlayerData.quest_points()
+	var goal: int = Meta.QUEST_MILESTONES.back()["points"]
+	for milestone in Meta.QUEST_MILESTONES:
+		if points < milestone["points"]:
+			goal = milestone["points"]
+			break
+	box.add_child(_event_row("rail_quest", "Nhiệm vụ hằng ngày", _value_bar("BarExp", points, goal, "star"),
+		"Nhận" if PlayerData.quest_alert() else "Đi", PlayerData.quest_alert(), func():
 			UiKit.close_popup(box)
 			open_quests(home)))
 
 
-static func _event_row(icon_kind: int, title: String, subtitle: String, color: Color, alert: bool, badge: String, on_press: Callable) -> Button:
-	var row := Button.new()
-	row.custom_minimum_size = Vector2(0, 104)
-	row.focus_mode = Control.FOCUS_NONE
-	var style := UiKit.card_style(color.darkened(0.2), Color(0.1, 0.12, 0.17, 0.95))
-	var hover := UiKit.card_style(color, Color(0.13, 0.16, 0.22, 0.95))
-	row.add_theme_stylebox_override("normal", style)
-	row.add_theme_stylebox_override("hover", hover)
-	row.add_theme_stylebox_override("pressed", hover)
-	row.pressed.connect(on_press)
-	var content := UiKit.hbox(14)
-	content.set_anchors_preset(Control.PRESET_FULL_RECT)
-	content.offset_left = 14
-	content.offset_right = -14
-	content.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	row.add_child(content)
-	var picture: Control = UiKit.troop_portrait(PlayerData.TROOPS["lancer"], 76) if icon_kind < 0 else UiKit.drawn(icon_kind, 72)
-	content.add_child(picture)
-	var text := UiKit.vbox(2)
-	text.alignment = BoxContainer.ALIGNMENT_CENTER
+## The featured event: a purple card as wide as the window, the featured hero on a glow at
+## the left, name + countdown in the middle, the summon button at the right.
+static func _summon_banner(home: Control, box: VBoxContainer) -> Control:
+	var featured := PlayerData.summon_featured()
+	var free := PlayerData.summon_free_ready()
+	var root := Control.new()
+	root.custom_minimum_size = Vector2(0, 196)
+	var card := Ui.panel("CardUnitPurple")
+	root.add_child(card)
+	card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var row := Ui.hbox(12, BoxContainer.ALIGNMENT_BEGIN)
+	card.add_child(row)
+
+	var stage := Control.new()
+	stage.custom_minimum_size = Vector2(128, 0)
+	var glow := Ui.icon("badge_flower", 128)
+	glow.modulate = Color(1, 1, 1, 0.35)
+	Ui.pin(stage, glow, Vector2(-64, -66), Control.PRESET_CENTER)
+	var hero := UiKit.hero_portrait(featured, 144)
+	Ui.pin(stage, hero, Vector2(-72, -84), Control.PRESET_CENTER)
+	row.add_child(stage)
+
+	var text := Ui.vbox(4, BoxContainer.ALIGNMENT_CENTER)
 	text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	text.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	text.add_child(UiKit.label(title, 24, color))
-	text.add_child(UiKit.label(subtitle, 16, UiKit.INFO))
-	content.add_child(text)
-	if badge != "":
-		var tag := UiKit.label(badge, 15, OK_GREEN)
-		tag.add_theme_stylebox_override("normal", UiKit.card_style(OK_GREEN, Color(0.05, 0.15, 0.05, 0.95)))
-		content.add_child(tag)
-	content.add_child(UiKit.label("▶", 26, color))
-	if alert:
-		var dot := UiKit.drawn(DrawnIcon.Kind.DOT, 22)
-		dot.position = Vector2(8, 8)
-		dot.size = Vector2(22, 22)
-		row.add_child(dot)
-	return row
+	var title := Ui.label("Triệu hồi Tướng Quân", "", 24)
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	title.custom_minimum_size.y = 36
+	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	text.add_child(title)
+	var star := Ui.label("Nổi bật: " + Heroes.HEROES[featured]["name"], "LabelSmall", 18)
+	star.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	star.custom_minimum_size.y = 27
+	star.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	star.add_theme_constant_override("outline_size", 3)
+	text.add_child(star)
+	var left := PlayerData.summon_seconds_left()
+	var clock := Ui.counter("rail_online", "Còn %dn %02d:%02d" % [left / 86400, (left / 3600) % 24, (left / 60) % 60])
+	clock.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	text.add_child(clock)
+	row.add_child(text)
+
+	var go: Button
+	if free:
+		go = Ui.cost_button("Triệu hồi", "Miễn phí", "tab_summon", "Yellow", Vector2(156, 104))
+	else:
+		go = Ui.button("Xem", "Yellow", Vector2(156, 84), 24)
+	go.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	go.pressed.connect(func():
+		UiKit.close_popup(box)
+		home.open_page(SummonPage))
+	row.add_child(go)
+	if free:
+		Ui.dot(go, Vector2(-22, -10))
+		go.ready.connect(func(): Ui.pulse(go, 0.04, 1.4))
+	var tag := UiKit.tag("Nổi bật", Color("ffb938"))
+	root.add_child(tag)
+	tag.position = Vector2(14, -14)
+	return root
+
+
+## One row: icon column, name + its progress, the action button column.
+static func _event_row(icon_name: String, title: String, progress: Control, action: String, ready: bool, on_press: Callable) -> Control:
+	var row := Ui.hbox(12, BoxContainer.ALIGNMENT_BEGIN)
+	var picture := Ui.icon(icon_name, EVENT_ICON)
+	picture.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	if ready:
+		Ui.dot(picture, Ui.RAIL_BADGE_AT)
+	row.add_child(picture)
+	var middle := Ui.vbox(6, BoxContainer.ALIGNMENT_CENTER)
+	middle.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var name_label := Ui.label(title, "", 22)
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	name_label.custom_minimum_size.y = 32
+	name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	middle.add_child(name_label)
+	progress.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	middle.add_child(progress)
+	row.add_child(middle)
+	var button := Ui.button(action, "Green" if ready else "Blue", EVENT_BUTTON, 22)
+	button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	button.pressed.connect(on_press)
+	row.add_child(button)
+	var panel := Ui.panel("Well", row)
+	panel.custom_minimum_size.y = 116
+	return panel
+
+
+## A bar with "value/max" on it and an icon in front.
+static func _value_bar(variation: String, value: int, maximum: int, icon_name: String) -> Control:
+	var line := Ui.hbox(6, BoxContainer.ALIGNMENT_BEGIN)
+	line.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	line.add_child(Ui.icon(icon_name, 28))
+	var bar := ProgressBar.new()
+	bar.theme_type_variation = variation
+	bar.show_percentage = false
+	bar.custom_minimum_size = Vector2(0, 28)
+	bar.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	bar.max_value = maxi(maximum, 1)
+	bar.value = mini(value, maximum)
+	var amount := Ui.label("%s/%s" % [UiKit.format_number(value), UiKit.format_number(maximum)], "LabelTiny", 16)
+	amount.add_theme_constant_override("outline_size", 3)
+	bar.add_child(amount)
+	amount.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	line.add_child(bar)
+	return line
+
+
+## Seven day marks: ticked days claimed, today's a star, the rest grey.
+static func _login_track() -> Control:
+	var line := Ui.hbox(4, BoxContainer.ALIGNMENT_BEGIN)
+	var claimed := PlayerData.login_progress()
+	for day in 7:
+		var mark: String = "badge_check" if day < claimed else ("star" if day == claimed and PlayerData.login_can_claim() else "star_off")
+		line.add_child(Ui.icon(mark, 28))
+	var day_label := Ui.label("Ngày %d/7" % mini(claimed + 1, 7), "LabelTiny", 16)
+	day_label.add_theme_constant_override("outline_size", 3)
+	line.add_child(day_label)
+	return line
 
 
 # --- 7-day login --------------------------------------------------------------------------
@@ -322,7 +421,7 @@ static func _go_to(home: Control, quest_id: String) -> void:
 		"chest":
 			home.select_tab(home.SHOP_TAB)
 		"upgrade":
-			home.select_tab(1)
+			home.select_tab(home.TROOPS_TAB)
 		"patrol":
 			home.open_page(PatrolPage)
 		"summon":

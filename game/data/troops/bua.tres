@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "bua"
+display_name = "Mèo Búa"
+description = "Búa chiến huyền thoại, trâu nhất đội."
+rarity = 3
+unit_key = "art:bua"
+role = 0
+klass = 3
+max_hp = 476.0
+damage = 46.4
+attack_range = 43.0
+attack_cooldown = 1.79
+move_speed = 94.0
+aggro_range = 220.0
+crit_chance = 0.3
+crit_mult = 1.5
+spawn_interval = 9.0
+max_alive = 1

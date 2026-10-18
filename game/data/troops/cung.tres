@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "cung"
+display_name = "Mèo Cung"
+description = "Bắn xa từ phía sau, máu giấy."
+rarity = 0
+unit_key = "art:cung"
+role = 1
+klass = 1
+max_hp = 42.0
+damage = 4.0
+attack_range = 230.0
+attack_cooldown = 1.0
+move_speed = 55.0
+aggro_range = 290.0
+crit_chance = 0.12
+crit_mult = 1.5
+spawn_interval = 4.5
+max_alive = 3

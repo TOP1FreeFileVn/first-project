@@ -1,0 +1,90 @@
+{
+	"captures": [
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"file": "battle_720x1280.png",
+			"nav": "battle_720x1280_nav.png",
+			"requested": [
+				720,
+				1280
+			],
+			"tab": "battle",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"file": "troops_720x1280.png",
+			"nav": "troops_720x1280_nav.png",
+			"requested": [
+				720,
+				1280
+			],
+			"tab": "troops",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"file": "battle_360x640.png",
+			"nav": "battle_360x640_nav.png",
+			"requested": [
+				360,
+				640
+			],
+			"tab": "battle",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"file": "troops_360x640.png",
+			"nav": "troops_360x640_nav.png",
+			"requested": [
+				360,
+				640
+			],
+			"tab": "troops",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/nav-icons/mcp/profile/Godot/app_userdata/Gear Defenders",
+	"sheet": {
+		"columns": [
+			32,
+			48,
+			64,
+			96,
+			128
+		],
+		"file": "icon_sizes_32_48_64_96_128.png",
+		"native_pixels": true,
+		"rows": [
+			"tab_battle",
+			"tab_army"
+		]
+	}
+}

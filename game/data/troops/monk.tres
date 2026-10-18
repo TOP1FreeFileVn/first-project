@@ -5,10 +5,11 @@
 [resource]
 script = ExtResource("1_troop")
 id = "monk"
-display_name = "Tu sĩ"
+display_name = "Nấm Thầy Thuốc"
+unit_key = "art:monk"
+klass = 2
 description = "Không đánh, chỉ hồi máu cho đồng đội bị thương gần nhất."
 rarity = 2
-unit_key = "Monk"
 building = "Monastery"
 role = 2
 max_hp = 36.0

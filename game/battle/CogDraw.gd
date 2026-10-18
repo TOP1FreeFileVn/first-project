@@ -1,26 +1,24 @@
 extends RefCounted
 
-# Procedural cogwheels and the master drive orb: the art pack has no gears, so they are
-# drawn as polygons.
+# Chunky flat disks with short broad teeth and an inset rim, in the cats' palette.
+const LINE := Color("583f21")
+const COG_DESIGN_OUTER := 54.0
+const PIN_INK_OUTSET := 1.0
+const COGS := {
+	"ead5ac": preload("res://game/ui/skin/battle_cog_tier_1.svg"),
+	"80bfd7": preload("res://game/ui/skin/battle_cog_tier_2.svg"),
+	"b49cd6": preload("res://game/ui/skin/battle_cog_tier_3.svg"),
+	"eead6c": preload("res://game/ui/skin/battle_cog_tier_4.svg"),
+	"aec778": preload("res://game/ui/skin/battle_cog_tier_5.svg"),
+	"aaa995": preload("res://game/ui/skin/battle_cog_idle.svg"),
+}
 
-static func draw_cog(ci: CanvasItem, center: Vector2, outer: float, inner: float, teeth: int, angle: float, fill: Color, rim: Color) -> void:
-	var points := PackedVector2Array()
-	var step := TAU / teeth
-	for i in teeth:
-		var a := angle + i * step
-		points.append(center + Vector2.from_angle(a) * inner)
-		points.append(center + Vector2.from_angle(a + step * 0.18) * outer)
-		points.append(center + Vector2.from_angle(a + step * 0.42) * outer)
-		points.append(center + Vector2.from_angle(a + step * 0.6) * inner)
-	ci.draw_colored_polygon(points, fill)
-	points.append(points[0])
-	ci.draw_polyline(points, rim, 2.0, true)
-	var hub := inner * 0.78
-	ci.draw_circle(center, hub, fill.darkened(0.3))
-	ci.draw_arc(center, hub, 0.0, TAU, 32, rim, 2.0, true)
-	# Bolts on the hub make the spin readable even when an icon covers the middle.
-	for k in 4:
-		ci.draw_circle(center + Vector2.from_angle(angle + k * TAU / 4.0) * hub * 0.82, 2.5, rim)
+static func draw_cog(ci: CanvasItem, center: Vector2, outer: float, _inner: float, _teeth: int, angle: float, fill: Color, _rim: Color) -> void:
+	var texture: Texture2D = COGS.get(fill.to_html(false), COGS["aaa995"])
+	var size := outer * 128.0 / COG_DESIGN_OUTER
+	ci.draw_set_transform(center, angle)
+	ci.draw_texture_rect(texture, Rect2(Vector2(-size, -size) * 0.5, Vector2(size, size)), false)
+	ci.draw_set_transform(Vector2.ZERO)
 
 
 ## The master drive: a round orange hub (not a cog) with one long tapered arm (a
@@ -39,16 +37,15 @@ static func draw_orb(ci: CanvasItem, center: Vector2, radius: float, angle: floa
 	var arm := PackedVector2Array([root - side * base_half, tip - side * tip_radius, tip + side * tip_radius, root + side * base_half])
 	var outline := arm.duplicate()
 	outline.append(arm[0])
-	ci.draw_circle(center + Vector2(0, radius * 0.1), radius, Color(0, 0, 0, 0.25))
-	ci.draw_colored_polygon(arm, Color("e9861b"))
-	ci.draw_polyline(outline, Color("8f4610"), 2.5, true)
-	ci.draw_circle(tip, tip_radius + 1.2, Color("8f4610"))
-	ci.draw_circle(tip, tip_radius - 0.2, Color("e9861b"))
-	# Lit edge along one side of the arm, stopping short of the tip.
-	ci.draw_line(root + side * base_half * 0.45, root.lerp(tip, 0.65) + side * lerpf(base_half, tip_radius, 0.65) * 0.35, Color("ffc75a"), 2.0, true)
-	ci.draw_circle(center, radius, Color("b85d12"))
-	ci.draw_circle(center, radius * 0.9, Color("e9861b"))
-	ci.draw_circle(center, radius * 0.72, Color("f7a526"))
-	# Soft highlight, top-left, fixed so the hub looks lit while it turns.
-	ci.draw_arc(center, radius * 0.55, PI * 1.05, PI * 1.45, 16, Color(1.0, 0.9, 0.6, 0.55), radius * 0.12, true)
-	ci.draw_circle(center, radius * 0.18, Color("b85d12"))
+	ci.draw_colored_polygon(arm, Color("e7a957"))
+	ci.draw_polyline(outline, LINE, 3.0, true)
+	ci.draw_circle(tip, tip_radius + PIN_INK_OUTSET, LINE)
+	ci.draw_circle(tip, tip_radius - 1.0, Color("f6ce66"))
+	ci.draw_circle(center, radius + 2.0, LINE)
+	ci.draw_circle(center, radius - 2.0, Color("f6ce66"))
+	ci.draw_arc(center, radius * 0.72, 0.0, TAU, 48, LINE, 2.5, true)
+	# A quiet paw medallion ties the drive to the cats; it stays upright as the pin turns.
+	var paw_scale := radius / 30.0
+	ci.draw_circle(center + Vector2(0, 5) * paw_scale, 7.0 * paw_scale, LINE)
+	for toe in [Vector2(-10, -4), Vector2(0, -10), Vector2(10, -4)]:
+		ci.draw_circle(center + toe * paw_scale, 4.0 * paw_scale, LINE)

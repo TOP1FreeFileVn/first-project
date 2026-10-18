@@ -25,7 +25,7 @@ const ABILITY_PROPS := [
 	["ability_cooldown", "Kỹ năng: hồi chiêu (giây)", 0, 120, 0.5],
 	["ability_radius", "Kỹ năng: bán kính (px · 100 = 1 ô gear)", 0, 1000, 5],
 ]
-const ABILITY_NAMES := ["Không", "Đào hầm", "Rèn giáp", "Ám sát", "Giơ khiên", "Tên lửa", "Nấu thịt", "Bom", "Hiệu lệnh"]
+const ABILITY_NAMES := ["Không", "Đào hầm", "Rèn giáp", "Ám sát", "Giơ khiên", "Tên lửa", "Nấu cá", "Bom", "Hiệu lệnh"]
 
 ## Sizes a designer can picture: a gear cell, and the enemies' walk from the top of the
 ## field to the wall (Battle.ENEMY_SPAWN_Y to Battle.WALL_Y).

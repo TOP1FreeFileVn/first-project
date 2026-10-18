@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "gay_phep"
+display_name = "Mèo Gậy Phép"
+description = "Phép thuật cơ bản, sát thương cao máu thấp."
+rarity = 0
+unit_key = "art:gay_phep"
+role = 1
+klass = 2
+max_hp = 50.0
+damage = 7.6
+attack_range = 255.0
+attack_cooldown = 1.2
+move_speed = 55.0
+aggro_range = 315.0
+crit_chance = 0.2
+crit_mult = 1.5
+spawn_interval = 4.5
+max_alive = 3

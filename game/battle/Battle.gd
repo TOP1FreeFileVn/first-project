@@ -23,16 +23,19 @@ const RALLY_Y := 470.0
 const FIELD_TOP := 110.0
 const FIELD_LEFT := 24.0
 const FIELD_RIGHT := 696.0
-const UNIT_MAX_Y := 1190.0
+## Units stay on the battlefield; the area below the wall belongs to draggable gears.
+const UNIT_MAX_Y := WALL_Y
+const DEPLOY_Y := WALL_Y - 36.0
 const ENEMY_SPAWN_Y := -30.0
 const SELL_RECT := Rect2(16, 1196, 152, 76)
 const Economy := preload("res://game/core/Economy.gd")
 const Heroes := preload("res://game/core/Heroes.gd")
+const HeroCat := preload("res://game/core/HeroCat.gd")
 const UiKit := preload("res://game/ui/UiKit.gd")
 ## Seconds of victory dance before the result panel.
 const VICTORY_DANCE_TIME := 1.8
-## Where the leading hero comes out: the middle of the wall.
-const HERO_AT := Vector2(360, 690)
+## Where the leading hero comes out: in front of the middle of the wall.
+const HERO_AT := Vector2(360, DEPLOY_Y)
 ## Milliseconds between two "CHÍ MẠNG!" texts.
 const CRIT_TEXT_GAP := 90
 
@@ -53,6 +56,8 @@ var enemy_units: Array = []
 var shop: Array = []
 var shop_locked := false
 var free_rerolls := 0
+## Paid rerolls this break: each one costs reroll_step more (design sheet: 5, then +5).
+var paid_rerolls := 0
 var _merge_hint_shown := false
 # The player's team; the shop only offers these.
 var _pool: Array = []
@@ -63,6 +68,13 @@ var _hero_hp := 1.0
 var _hero_damage := 1.0
 var _hero_unit = null
 var _last_crit_text := 0
+## Fish basket: living cat soldiers eat Economy.fish_cost() each (the general does not).
+var fish_cap := 28
+## The equipped weapon's skill (HeroCat.weapon_skill), cast by its gear on the board.
+var _skill := {}
+var _basket_warned := false
+## Skills cast this battle (tests read it).
+var skill_casts := 0
 
 
 func _ready() -> void:
@@ -85,7 +97,9 @@ func _ready() -> void:
 	waves.all_cleared.connect(_on_all_waves_cleared)
 	hud.bind(self)
 	board.setup_tiles(level)
+	fish_cap = Economy.FISH_CAP
 	board.place_new(_pool[0], 1)
+	_place_skill_gear()
 	_spawn_hero()
 	_open_shop()
 	var leader := PlayerData.leader()
@@ -109,7 +123,7 @@ func _spawn_hero() -> void:
 	unit.hero_id = id
 	unit.setup(self, troop, PLAYER, 1, Heroes.hp_mult(h["level"], h["stars"]) * _hero_hp, Heroes.damage_mult(h["level"], h["stars"]) * _hero_damage)
 	unit.position = HERO_AT
-	unit.rally = Vector2(FIELD_LEFT + (FIELD_RIGHT - FIELD_LEFT) / 2.0, RALLY_Y + (150.0 if troop.role != TroopData.Role.MELEE else 40.0))
+	unit.rally = deployment_point(Vector2(FIELD_LEFT + (FIELD_RIGHT - FIELD_LEFT) / 2.0, RALLY_Y + (150.0 if troop.role != TroopData.Role.MELEE else 40.0)))
 	units_layer.add_child(unit)
 	player_units.append(unit)
 	_hero_unit = unit
@@ -166,7 +180,7 @@ func buy(slot: int):
 		hud.show_message("Bàn đã đầy, hãy ghép hoặc bán bớt gear!", hud.WARN)
 		return null
 	if not core.can_afford(offer["price"]):
-		hud.show_message("Chưa đủ thịt (cần %d)." % offer["price"], hud.WARN)
+		hud.show_message("Chưa đủ xu (cần %d)." % offer["price"], hud.WARN)
 		return null
 	core.spend(offer["price"])
 	SoundLib.play("buy")
@@ -190,7 +204,7 @@ func offer_merges(slot: int) -> bool:
 
 
 func reroll_cost() -> int:
-	return 0 if free_rerolls > 0 else int(Economy.BATTLE_SHOP.get("reroll_cost", 1))
+	return 0 if free_rerolls > 0 else int(Economy.BATTLE_SHOP.get("reroll_cost", 1)) + paid_rerolls * int(Economy.BATTLE_SHOP.get("reroll_step", 0))
 
 
 func reroll() -> bool:
@@ -200,6 +214,7 @@ func reroll() -> bool:
 		free_rerolls -= 1
 	else:
 		core.spend(reroll_cost())
+		paid_rerolls += 1
 	shop_locked = false
 	_roll_shop()
 	SoundLib.play("reroll")
@@ -225,6 +240,7 @@ func _open_shop() -> void:
 	else:
 		_roll_shop()
 	free_rerolls = int(Economy.BATTLE_SHOP.get("free_rerolls", 1))
+	paid_rerolls = 0
 	shop_changed.emit()
 
 
@@ -233,11 +249,16 @@ func _roll_shop() -> void:
 
 
 func sell_gear(gear) -> void:
+	if gear.is_skill():
+		gear.position = board.cell_center(gear.cell)
+		gear.z_index = 0
+		hud.show_message("Bánh răng chiêu của anh hùng không bán được.", hud.WARN)
+		return
 	SoundLib.play("sell")
 	var refund := Economy.sell_refund(gear.troop.rarity, gear.tier)
 	core.add_meat(refund)
 	board.remove_gear(gear)
-	hud.show_message("Đã bán gear, hoàn %d thịt." % refund)
+	hud.show_message("Đã bán gear, hoàn %d xu." % refund)
 	shop_changed.emit()
 
 
@@ -248,13 +269,20 @@ func on_gear_merged(gear) -> void:
 	shop_changed.emit()
 
 
+## Preserve the source gear's column, but deploy its soldier on the field side of the wall.
+## Valid field positions are kept, including callers that already provide a rally point.
+static func deployment_point(source: Vector2) -> Vector2:
+	return Vector2(clampf(source.x, FIELD_LEFT + 30.0, FIELD_RIGHT - 30.0),
+		clampf(source.y, FIELD_TOP + 30.0, DEPLOY_Y))
+
+
 func spawn_player_unit(troop: Resource, tier: int, at: Vector2):
-	if player_units.size() >= Economy.MAX_PLAYER_UNITS:
+	if player_units.size() >= Economy.MAX_PLAYER_UNITS or not can_feed(troop):
 		return null
 	var mult: float = _tier_mult[tier - 1] * PlayerData.troop_multiplier(troop.id)
 	var unit = UnitScene.instantiate()
 	unit.setup(self, troop, PLAYER, tier, mult * _hero_hp, mult * _hero_damage)
-	unit.position = at
+	unit.position = deployment_point(at)
 	var hold_back := 0.0
 	match troop.role:
 		TroopData.Role.RANGED:
@@ -263,13 +291,113 @@ func spawn_player_unit(troop: Resource, tier: int, at: Vector2):
 			hold_back = 170.0
 		TroopData.Role.SUPPORT:
 			hold_back = 200.0
-	unit.rally = Vector2(randf_range(FIELD_LEFT + 30, FIELD_RIGHT - 30), RALLY_Y + hold_back + randf_range(-40, 40))
+	unit.rally = deployment_point(Vector2(randf_range(FIELD_LEFT + 30, FIELD_RIGHT - 30), RALLY_Y + hold_back + randf_range(-40, 40)))
 	units_layer.add_child(unit)
 	player_units.append(unit)
 	if troop.rarity >= 3:
-		spawn_effect("blast", at + Vector2(0, -20), 0.7)
+		spawn_effect("blast", unit.position + Vector2(0, -20), 0.7)
 		hud.show_message("%s xuất trận!" % troop.display_name)
 	return unit
+
+
+# --- Fish basket ------------------------------------------------------------------------
+
+func fish_used() -> int:
+	var used := 0
+	for unit in player_units:
+		if is_instance_valid(unit) and unit.hero_id == "":
+			used += Economy.fish_cost(unit.troop.rarity)
+	return used
+
+
+## True when the basket has room for one more of this troop. Warns once a wave when full.
+func can_feed(troop: Resource) -> bool:
+	if fish_used() + Economy.fish_cost(troop.rarity) <= fish_cap:
+		return true
+	if not _basket_warned and phase == "fight":
+		_basket_warned = true
+		hud.show_message("Giỏ cá đầy: mèo mới chờ tới khi có chỗ.", hud.WARN)
+	return false
+
+
+# --- Hero skill gear ------------------------------------------------------------------------
+
+## The equipped weapon brings its skill gear onto the board at the start (free, cannot be
+## sold or merged; move it like any gear).
+func _place_skill_gear() -> void:
+	_skill = HeroCat.weapon_skill(PlayerData.hero_cat)
+	if _skill.is_empty():
+		return
+	var gear_troop := TroopData.new()
+	gear_troop.id = "skill:" + _skill["weapon"]
+	gear_troop.display_name = _skill["name"]
+	gear_troop.rarity = 3
+	gear_troop.unit_key = "icon:" + _skill["icon"]
+	gear_troop.role = TroopData.Role.SUPPORT
+	gear_troop.spawn_interval = _skill["cooldown"]
+	gear_troop.max_alive = 0
+	board.place_new(gear_troop, 1)
+
+
+## The hero's attack from its equipment, times the skill's power and the gear's tier.
+func _skill_damage(gear) -> float:
+	var atk: float = PlayerData.hero_cat_stats().get("atk", 90)
+	return atk * float(_skill.get("power", 0.3)) * (1.0 + 0.25 * (gear.tier - 1))
+
+
+## Casts the weapon's skill; false (nothing cast) outside a fight or with no foe to hit.
+func cast_hero_skill(gear) -> bool:
+	if phase != "fight" or _skill.is_empty():
+		return false
+	var damage := _skill_damage(gear)
+	var foes: Array = enemy_units.filter(func(u): return is_instance_valid(u) and not u.is_dead())
+	if foes.is_empty():
+		return false
+	SoundLib.play("hero", -2.0, 0.0)
+	skill_casts += 1
+	hud.show_message("Anh hùng tung chiêu: %s!" % _skill["name"])
+	match _skill["kind"]:
+		"whirl":  # every foe near the front line of our cats
+			var center := Vector2((FIELD_LEFT + FIELD_RIGHT) / 2.0, RALLY_Y)
+			for u in foes:
+				if u.position.distance_to(center) < 220.0:
+					u.take_damage(damage)
+			spawn_effect("blast", center, 2.2)
+		"volley":  # eight arrows on random foes
+			for i in 8:
+				var u = foes.pick_random()
+				if is_instance_valid(u) and not u.is_dead():
+					u.take_damage(damage, true)
+					spawn_effect("blast", u.position + Vector2(0, -16), 0.5)
+		"meteor":  # one big blast on the thickest crowd
+			var best = foes[0]
+			var most := -1
+			for u in foes:
+				var near := 0
+				for v in foes:
+					if u.position.distance_to(v.position) < 120.0:
+						near += 1
+				if near > most:
+					most = near
+					best = u
+			var at: Vector2 = best.position
+			for u in foes:
+				if u.position.distance_to(at) < 120.0:
+					u.take_damage(damage, true)
+			spawn_effect("explosion", at + Vector2(0, -20), 1.6)
+		"fire":  # burn the five foes closest to the wall
+			foes.sort_custom(func(a, b): return a.position.y > b.position.y)
+			for u in foes.slice(0, 5):
+				u.take_damage(damage)
+				u.apply_burn(damage * 0.3, 3.0)
+				spawn_effect("blast", u.position + Vector2(0, -16), 0.6)
+		_:  # slash: a band across the field at the front-most foe
+			var front: float = foes.map(func(u): return u.position.y).max()
+			for u in foes:
+				if absf(u.position.y - front) < 70.0:
+					u.take_damage(damage)
+			spawn_effect("blast", Vector2((FIELD_LEFT + FIELD_RIGHT) / 2.0, front - 20.0), 2.6)
+	return true
 
 
 func on_unit_died(unit) -> void:
@@ -286,7 +414,7 @@ func on_unit_died(unit) -> void:
 	core.add_meat(Economy.ELITE_KILL_MEAT if unit.elite else Economy.KILL_MEAT)
 	if unit.elite:
 		spawn_effect("explosion", unit.position + Vector2(0, -30), 0.8)
-		hud.show_message("Hạ gục tinh nhuệ! +%d thịt" % Economy.ELITE_KILL_MEAT)
+		hud.show_message("Hạ gục tinh nhuệ! +%d xu" % Economy.ELITE_KILL_MEAT)
 	else:
 		spawn_effect("dust", unit.position + Vector2(0, -8), 1.1)
 
@@ -329,7 +457,8 @@ func spawn_arrow(shooter, target, amount: float, crit := false) -> void:
 ## A cook's meat flies from the cook to the master gear, then counts.
 func cook_meat(cook, amount: float) -> void:
 	var meat := Sprite2D.new()
-	meat.texture = SpriteLib.texture("Terrain/Resources/Meat/Meat Resource/Meat Resource.png")
+	meat.texture = UiKit.coin_texture()
+	meat.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	meat.position = cook.position + Vector2(0, -30)
 	meat.scale = Vector2(0.6, 0.6)
 	effects.add_child(meat)
@@ -418,6 +547,7 @@ func _spawn_enemy(troop_id: String, elite: bool) -> void:
 
 
 func _on_wave_started(index: int, total: int) -> void:
+	_basket_warned = false
 	SoundLib.play("wave", 0.0, 0.0)
 	hud.show_message("Đợt %d/%d đang tới!" % [index + 1, total], hud.WARN)
 	if PlayerData.leader() != "" and (_hero_unit == null or not is_instance_valid(_hero_unit) or _hero_unit.is_dead()):

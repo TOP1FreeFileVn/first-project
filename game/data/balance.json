@@ -34,16 +34,16 @@
 			"min": 0.2
 		},
 		"round_income": {
-			"label": "Thu nhập thịt sau mỗi đợt",
-			"used_in": "Hết đợt, trước lượt nghỉ; wave = đợt vừa xong (từ 1), bonus = Lò thịt",
+			"label": "Thu nhập xu sau mỗi đợt",
+			"used_in": "Hết đợt, trước lượt nghỉ; wave = đợt vừa xong (từ 1), bonus = Két xu",
 			"expr": "5 + wave + bonus",
 			"vars": ["wave", "bonus"],
 			"preview": {"x": "wave", "from": 1, "to": 8, "step": 1, "series": "bonus", "series_values": [0, 2, 5]},
 			"min": 0
 		},
 		"interest": {
-			"label": "Lãi thịt khi để dành",
-			"used_in": "Hết đợt, tính trên số thịt đang có trước khi cộng thu nhập",
+			"label": "Lãi xu khi để dành",
+			"used_in": "Hết đợt, tính trên số xu đang có trước khi cộng thu nhập",
 			"expr": "min(floor(meat / 5), 3)",
 			"vars": ["meat"],
 			"preview": {"x": "meat", "from": 0, "to": 20, "step": 1},
@@ -114,6 +114,7 @@
 		"elite_damage_mult": {"value": 1.8, "label": "Tinh nhuệ: hệ số sát thương", "min": 1, "max": 10, "step": 0.1},
 		"kill_meat": {"value": 0.35, "label": "Thịt nhận khi giết 1 địch", "min": 0, "max": 5, "step": 0.05},
 		"elite_kill_meat": {"value": 3.0, "label": "Thịt nhận khi giết tinh nhuệ", "min": 0, "max": 20, "step": 0.5},
+		"fish_cap": {"value": 28, "label": "Giỏ cá: khẩu phần nuôi quân mèo (Population trong sheet)", "min": 4, "max": 200, "step": 1},
 		"max_player_units": {"value": 60, "label": "Số lính ta tối đa trên sân", "min": 5, "max": 200, "step": 5},
 		"first_clear_gold_mult": {"value": 2, "label": "Hệ số vàng lần đầu qua màn", "min": 1, "max": 10, "step": 0.5},
 		"first_three_star_gems": {"value": 10, "label": "Kim cương khi đạt 3★ lần đầu", "min": 0, "max": 500, "step": 5},
@@ -142,15 +143,16 @@
 		{"hp": 3.20, "meat": 30, "cells": 23, "team": 5, "cost": 3000}
 	],
 	"workshop": {
-		"meat_regen": {"name": "Lò thịt", "desc": "+%d thịt thu nhập mỗi đợt", "max": 5, "base": 120, "growth": 1.6, "step": 1},
-		"start_meat": {"name": "Kho dự trữ", "desc": "+%d thịt khi vào trận", "max": 4, "base": 100, "growth": 1.8, "step": 1},
+		"meat_regen": {"name": "Két xu", "desc": "+%d xu thu nhập mỗi đợt", "max": 5, "base": 120, "growth": 1.6, "step": 1},
+		"start_meat": {"name": "Kho dự trữ", "desc": "+%d xu khi vào trận", "max": 4, "base": 100, "growth": 1.8, "step": 1},
 		"master_gear": {"name": "Bánh răng tổng", "desc": "Gear sinh lính nhanh hơn %d%%", "max": 5, "base": 150, "growth": 1.6, "step": 5}
 	},
 	"battle_shop": {
-		"slots": 5,
+		"slots": 4,
 		"prices": [2, 3, 4, 6],
 		"reroll_cost": 1,
-		"free_rerolls": 1,
+		"free_rerolls": 0,
+		"reroll_step": 1,
 		"sell_refund": 0.75,
 		"tier2_from_wave": 5,
 		"tier2_chance": 0.15,

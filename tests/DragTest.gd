@@ -15,9 +15,9 @@ func _ready() -> void:
 	PlayerData.persist = false
 	PlayerData._reset()
 	PlayerData.castle_level = 3
-	for id in ["lancer", "bomber", "general", "miner"]:
+	for id in ["giao", "dai_bac", "katana", "riu"]:
 		PlayerData.troops[id]["unlocked"] = true
-	PlayerData.team = ["warrior", "archer", "lancer", "general"]
+	PlayerData.team = ["kiem", "cung", "giao", "katana"]
 	_home = load("res://game/menu/Home.tscn").instantiate()
 	add_child(_home)
 
@@ -28,13 +28,13 @@ func _process(delta: float) -> void:
 		0:
 			if _t < 1.0:
 				return
-			_home.select_tab(1, false)
+			_home.select_tab(3, false)
 			_step = 1
 			_t = 0.0
 		1:
 			if _t < 0.5:
 				return
-			_page = _home._pages[1]
+			_page = _home._pages[3]
 			var card := _find_card("Thợ mỏ")
 			print("card: ", card, " slots: ", _page._slots.size())
 			_from = card.get_global_rect().get_center()

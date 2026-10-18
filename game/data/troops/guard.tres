@@ -5,13 +5,12 @@
 [resource]
 script = ExtResource("1_troop")
 id = "guard"
-display_name = "Hiệp sĩ khiên"
+display_name = "Lính Xương Khiên"
+unit_key = "art:guard"
 description = "Giáp nặng, khiên lớn. Giữ tuyến lâu hơn bất kỳ ai."
 rarity = 1
-unit_key = "Guard"
 building = "Barracks"
 role = 0
-tint = Color(0.82, 0.86, 0.95, 1)
 sprite_scale = 1.1
 max_hp = 130.0
 damage = 6.0

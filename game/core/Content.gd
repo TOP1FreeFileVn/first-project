@@ -3,8 +3,14 @@ extends RefCounted
 # Which troops and levels exist. Shared by PlayerData and Balance without either one
 # depending on the other.
 
-# Collection order: by rarity, then roughly by when the player meets them.
-const TROOP_ORDER := ["pawn", "warrior", "archer", "miner", "smith", "lancer", "assassin", "guard", "fire_archer", "monk", "cook", "bomber", "general"]
+# The player's cat soldiers (design sheet, "Solider (sửa)"): by class, then rarity.
+const TROOP_ORDER := [
+	"kiem", "riu", "dao", "katana", "cung", "no", "sung", "dai_bac",
+	"gay_phep", "thuoc", "sach_phep", "dua_phep", "giao", "cu_kiem", "chuy", "bua",
+]
+# The old human troops, now only met as enemies in the waves.
+const ENEMY_ORDER := ["pawn", "warrior", "archer", "miner", "smith", "lancer", "assassin", "guard", "fire_archer", "monk", "cook", "bomber", "general"]
+const ALL_TROOPS := TROOP_ORDER + ENEMY_ORDER
 const TROOP_PATH := "res://game/data/troops/%s.tres"
 const LEVELS := [
 	"res://game/data/levels/level_01.tres",

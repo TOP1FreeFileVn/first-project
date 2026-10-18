@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "tests/ui_review/BattleSurvey.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nBATTLE_REVIEW_USER_DIR C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/mcp-battle/profile/Godot/app_userdata/Gear Defenders\r\nBATTLE_REVIEW_CAPTURE 11_battle_shop (720, 1280) result=0 phase=shop enemies=0 allies=1\r\nBATTLE_REVIEW_CAPTURE 12_battle_fight (720, 1280) result=0 phase=fight enemies=5 allies=13\r\nBATTLE_REVIEW_COMPLETE\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

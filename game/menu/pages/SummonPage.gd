@@ -6,12 +6,14 @@ extends "res://game/menu/pages/MenuPage.gd"
 
 const Heroes = preload("res://game/core/Heroes.gd")
 const SummonOpening = preload("res://game/ui/SummonOpening.gd")
-const BANNER_SIZE := Vector2(672, 430)
+const BANNER_MIN_HEIGHT := 460.0
 
 var _countdown: Label
 
 
 func build() -> void:
+	fill_available_height()
+	body.add_theme_constant_override("separation", 16)
 	var featured := PlayerData.summon_featured()
 	var hero: Dictionary = Heroes.HEROES[featured]
 	var color: Color = Economy.RARITY_COLORS[hero["rarity"]]
@@ -19,23 +21,24 @@ func build() -> void:
 
 	var info := PanelContainer.new()
 	info.add_theme_stylebox_override("panel", UiKit.card_style())
-	var box := UiKit.vbox(6)
+	var box := UiKit.vbox(10)
 	info.add_child(box)
-	var pity := UiKit.label("Còn %d lượt chắc chắn nhận %s" % [PlayerData.summon_pity_left(), hero["name"]], 18, UiKit.GOLD_TEXT)
+	var pity := _secondary("Còn %d lượt chắc chắn nhận %s" % [PlayerData.summon_pity_left(), hero["name"]], 22, UiKit.GOLD_TEXT)
 	pity.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)
-	var bar := UiKit.bar(color, Vector2(560, 14))
-	bar.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	var bar := UiKit.bar(color, Vector2(0, 16))
+	bar.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	bar.max_value = Heroes.SUMMON_PITY
 	bar.value = PlayerData.summon_pity
 	box.add_child(bar)
-	var note := UiKit.label("Gói x10 chắc chắn có ít nhất 1 tướng · Trùng tướng đổi thành %d mảnh" % Heroes.DUPLICATE_SHARDS, 15, UiKit.INFO)
+	var note := _secondary("Gói x10 chắc chắn có ít nhất 1 tướng · Trùng tướng đổi thành %d mảnh" % Heroes.DUPLICATE_SHARDS, 22)
 	note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(note)
-	var rates := UiKit.button("XEM TỈ LỆ", Vector2(200, 52), _show_rates)
-	rates.add_theme_font_size_override("font_size", 16)
+	var rates := UiKit.button("XEM TỈ LỆ", Vector2(220, 64), _show_rates)
+	rates.add_theme_font_size_override("font_size", 20)
+	rates.add_theme_constant_override("outline_size", 3)
 	rates.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	box.add_child(rates)
 	body.add_child(info)
@@ -56,85 +59,106 @@ func tick() -> void:
 
 
 func _banner(featured: String, hero: Dictionary, color: Color) -> Control:
-	var banner := Control.new()
-	banner.custom_minimum_size = BANNER_SIZE
+	var banner := PanelContainer.new()
+	banner.custom_minimum_size.y = BANNER_MIN_HEIGHT
+	banner.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	banner.clip_contents = true
-	var back := Control.new()
-	back.size = BANNER_SIZE
-	back.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	# Night-purple gradient, turning rays in the hero's colour, a summoning circle.
-	back.draw.connect(func():
-		var t := Time.get_ticks_msec() / 1000.0
-		var w := BANNER_SIZE.x
-		var h := BANNER_SIZE.y
-		back.draw_polygon(PackedVector2Array([Vector2.ZERO, Vector2(w, 0), Vector2(w, h), Vector2(0, h)]),
-			PackedColorArray([Color("2a1244"), Color("2a1244"), Color("0d0a1c"), Color("0d0a1c")]))
-		var center := Vector2(w * 0.5, h * 0.62)
-		for i in 12:
-			var angle := t * 0.25 + i * TAU / 12.0
-			back.draw_colored_polygon(PackedVector2Array([center, center + Vector2.from_angle(angle - 0.09) * 700.0, center + Vector2.from_angle(angle + 0.09) * 700.0]), Color(color, 0.08))
-		back.draw_set_transform(center + Vector2(0, 70), 0.0, Vector2(1.0, 0.32))
-		back.draw_arc(Vector2.ZERO, 170.0, 0.0, TAU, 64, Color(color, 0.8), 6.0, true)
-		back.draw_arc(Vector2.ZERO, 140.0, t, t + TAU * 0.8, 48, Color(color.lightened(0.4), 0.7), 3.0, true)
-		back.draw_circle(Vector2.ZERO, 130.0, Color(color, 0.18))
-		back.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-		back.queue_redraw())
-	banner.add_child(back)
+	var frame_style := StyleBoxFlat.new()
+	frame_style.bg_color = Color("211133")
+	frame_style.border_color = color
+	frame_style.set_border_width_all(5)
+	frame_style.set_corner_radius_all(20)
+	frame_style.set_content_margin_all(18)
+	banner.add_theme_stylebox_override("panel", frame_style)
+	var column := UiKit.vbox(8)
+	banner.add_child(column)
+
+	var head := UiKit.vbox(2)
+	head.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	column.add_child(head)
+	var title := UiKit.label("TRIỆU HỒI TƯỚNG QUÂN", 30, UiKit.GOLD_TEXT)
+	title.add_theme_constant_override("outline_size", 5)
+	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	head.add_child(title)
+	_countdown = _secondary("", 22)
+	_countdown.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_countdown.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	head.add_child(_countdown)
+
+	# The scene receives spare height; the information and pull buttons stay together
+	# in the lower action area. A short viewport scrolls the same column.
+	var art := Control.new()
+	art.custom_minimum_size.y = 220
+	art.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	art.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	art.clip_contents = true
+	column.add_child(art)
 	var sprite := AnimatedSprite2D.new()
 	sprite.sprite_frames = SpriteLib.unit_frames(hero["unit"], "Blue")
 	sprite.material = UiKit.hero_material(featured)
 	sprite.offset = Vector2(0, -SpriteLib.foot_offset(hero["unit"]))
-	sprite.position = Vector2(BANNER_SIZE.x * 0.5, BANNER_SIZE.y * 0.62 + 70)
-	sprite.scale = Vector2(1.7, 1.7)
 	sprite.play("idle")
-	banner.add_child(sprite)
-	var frame := Panel.new()
-	frame.size = BANNER_SIZE
-	frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var frame_style := StyleBoxFlat.new()
-	frame_style.draw_center = false
-	frame_style.border_color = color
-	frame_style.set_border_width_all(5)
-	frame_style.set_corner_radius_all(20)
-	frame.add_theme_stylebox_override("panel", frame_style)
-	banner.add_child(frame)
-
-	var head := UiKit.vbox(0)
-	head.position = Vector2(0, 14)
-	head.size = Vector2(BANNER_SIZE.x, 0)
-	head.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	banner.add_child(head)
-	var title := UiKit.label("TRIỆU HỒI TƯỚNG QUÂN", 32, UiKit.GOLD_TEXT)
-	title.add_theme_constant_override("outline_size", 10)
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	head.add_child(title)
-	_countdown = UiKit.label("", 16, UiKit.INFO)
-	_countdown.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	head.add_child(_countdown)
+	art.add_child(sprite)
+	var crown: Control
+	if hero["rarity"] >= 3:
+		crown = UiKit.drawn(UiKit.DrawnIcon.Kind.CROWN, 56)
+		crown.size = Vector2(56, 56)
+		art.add_child(crown)
+	var natural_size := sprite.sprite_frames.get_frame_texture("idle", 0).get_size()
+	var fit_sprite := func():
+		var scale_factor := minf(art.size.x * 0.5 / natural_size.x, art.size.y * 0.76 / natural_size.y)
+		sprite.scale = Vector2.ONE * scale_factor
+		sprite.position = Vector2(art.size.x * 0.5, art.size.y * 0.82)
+		if crown != null:
+			crown.position = Vector2(sprite.position.x - 28, maxf(0, sprite.position.y - natural_size.y * scale_factor - 12))
+	art.resized.connect(fit_sprite)
+	art.ready.connect(fit_sprite)
+	# Turning rays and the circle follow the available scene bounds.
+	art.draw.connect(func():
+		var t := Time.get_ticks_msec() / 1000.0
+		var center := art.size * Vector2(0.5, 0.5)
+		var ray_length := maxf(art.size.x, art.size.y) * 1.5
+		for i in 12:
+			var angle := t * 0.25 + i * TAU / 12.0
+			art.draw_colored_polygon(PackedVector2Array([center, center + Vector2.from_angle(angle - 0.09) * ray_length, center + Vector2.from_angle(angle + 0.09) * ray_length]), Color(color, 0.08))
+		var radius := minf(art.size.x * 0.28, art.size.y * 0.52)
+		art.draw_set_transform(art.size * Vector2(0.5, 0.82), 0.0, Vector2(1.0, 0.32))
+		art.draw_arc(Vector2.ZERO, radius, 0.0, TAU, 64, Color(color, 0.8), 6.0, true)
+		art.draw_arc(Vector2.ZERO, radius * 0.82, t, t + TAU * 0.8, 48, Color(color.lightened(0.4), 0.7), 3.0, true)
+		art.draw_circle(Vector2.ZERO, radius * 0.76, Color(color, 0.18))
+		art.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+		art.queue_redraw())
 
 	var tag := PanelContainer.new()
 	tag.add_theme_stylebox_override("panel", UiKit.card_style(color, Color(0.05, 0.04, 0.1, 0.85)))
-	tag.position = Vector2(20, BANNER_SIZE.y - 96)
 	tag.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var tag_box := UiKit.vbox(0)
+	var tag_box := UiKit.vbox(2)
 	tag.add_child(tag_box)
-	tag_box.add_child(UiKit.label("%s · TỈ LỆ TĂNG!" % Economy.RARITY_NAMES[hero["rarity"]].to_upper(), 15, color))
-	tag_box.add_child(UiKit.label(hero["name"], 24))
-	tag_box.add_child(UiKit.label("✦ " + Heroes.bonus_text(featured, 1, 1), 15, Color("9ff0a0")))
-	banner.add_child(tag)
-	if hero["rarity"] >= 3:
-		var crown := UiKit.drawn(UiKit.DrawnIcon.Kind.CROWN, 56)
-		crown.position = Vector2(BANNER_SIZE.x * 0.5 - 28, 120)
-		crown.size = Vector2(56, 56)
-		banner.add_child(crown)
+	for caption in [
+		_secondary("%s · TỈ LỆ TĂNG!" % Economy.RARITY_NAMES[hero["rarity"]].to_upper(), 20, color),
+		UiKit.label(hero["name"], 28),
+		_secondary("✦ " + Heroes.bonus_text(featured, 1, 1), 20, Color("9ff0a0")),
+	]:
+		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		tag_box.add_child(caption)
+	column.add_child(tag)
 	return banner
+
+
+func _secondary(text: String, font_size: int, color := UiKit.INFO) -> Label:
+	var caption := UiKit.label(text, font_size, color)
+	caption.add_theme_constant_override("outline_size", 2)
+	return caption
 
 
 func _summon_button(count: int) -> Button:
 	var cost := PlayerData.summon_cost(count)
 	var text := "TRIỆU HỒI x%d\n" % count + ("MIỄN PHÍ" if cost == 0 else "◆ %d" % cost)
-	var b := UiKit.button(text, Vector2(300, 100), func(): _summon(count), count == 10)
-	b.add_theme_font_size_override("font_size", 22)
+	var b := UiKit.button(text, Vector2(300, 108), func(): _summon(count), count == 10)
+	b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	b.add_theme_font_size_override("font_size", 24)
 	b.disabled = not PlayerData.can_summon(count)
 	return b
 
@@ -162,11 +186,12 @@ func _show_rates() -> void:
 	grid.add_theme_constant_override("h_separation", 40)
 	grid.add_theme_constant_override("v_separation", 8)
 	for row in Heroes.SUMMON_TABLE:
-		var name_label := UiKit.label(names[row[0]], 18)
+		var name_label := UiKit.ink(names[row[0]], 22)
 		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		grid.add_child(name_label)
-		grid.add_child(UiKit.label(("%.1f%%" % row[1]).replace(".", ","), 18, UiKit.GOLD_TEXT))
+		grid.add_child(UiKit.ink(("%.1f%%" % row[1]).replace(".", ","), 22))
 	box.add_child(grid)
-	var pity := UiKit.label("Bảo hiểm: lượt thứ %d chắc chắn ra tướng nổi bật. Tính cả bảo hiểm, tỉ lệ nhận tướng nổi bật thực tế khoảng 2,9%%." % Heroes.SUMMON_PITY, 16, UiKit.INFO)
+	var pity := UiKit.ink("Bảo hiểm: lượt thứ %d chắc chắn ra tướng nổi bật. Tính cả bảo hiểm, tỉ lệ nhận tướng nổi bật thực tế khoảng 2,9%%." % Heroes.SUMMON_PITY, 22)
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)

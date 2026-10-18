@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "sung"
+display_name = "Mèo Súng"
+description = "Súng hoả mai, mỗi phát một nhát đau."
+rarity = 2
+unit_key = "art:sung"
+role = 1
+klass = 1
+max_hp = 90.0
+damage = 10.8
+attack_range = 230.0
+attack_cooldown = 1.2
+move_speed = 55.0
+aggro_range = 290.0
+crit_chance = 0.24
+crit_mult = 1.5
+spawn_interval = 6.0
+max_alive = 2

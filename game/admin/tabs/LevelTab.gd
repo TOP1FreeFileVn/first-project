@@ -32,7 +32,7 @@ func build() -> void:
 	name_edit.focus_exited.connect(commit_name)
 	name_row.add_child(name_edit)
 	info.add_child(name_row)
-	for p in [["core_hp", "Máu thành gốc", 10, 10000, 10], ["enemy_power", "Sức mạnh địch", 0.1, 50, 0.05], ["start_meat", "Thịt ở lượt nghỉ đầu tiên", 0, 60, 1]]:
+	for p in [["core_hp", "Máu thành gốc", 10, 10000, 10], ["enemy_power", "Sức mạnh địch", 0.1, 50, 0.05], ["start_meat", "Xu ở lượt nghỉ đầu tiên", 0, 60, 1]]:
 		var prop: String = p[0]
 		number(info, p[1], level.get(prop), p[2], p[3], p[4], false, level.get(prop) != Balance.level_default(_index, prop),
 			func(v): Balance.set_level_prop(_index, prop, v))
@@ -115,10 +115,10 @@ func _group_row(w: int, g: int, group: Dictionary) -> HBoxContainer:
 	var troop := OptionButton.new()
 	troop.custom_minimum_size = Vector2(150, 40)
 	troop.focus_mode = Control.FOCUS_NONE
-	for id in PlayerData.TROOP_ORDER:
+	for id in PlayerData.ENEMY_ORDER:
 		troop.add_item(PlayerData.TROOPS[id].display_name)
-	troop.select(PlayerData.TROOP_ORDER.find(group["troop"]))
-	troop.item_selected.connect(func(i): _set_group(w, g, "troop", PlayerData.TROOP_ORDER[i]))
+	troop.select(PlayerData.ENEMY_ORDER.find(group["troop"]))
+	troop.item_selected.connect(func(i): _set_group(w, g, "troop", PlayerData.ENEMY_ORDER[i]))
 	row.add_child(troop)
 	row.add_child(cell(group["count"], func(v): _set_group(w, g, "count", maxi(1, v)), 76, true))
 	row.add_child(cell(group.get("interval", 1.0), func(v): _set_group(w, g, "interval", maxf(0.05, v)), 90))

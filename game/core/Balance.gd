@@ -37,7 +37,7 @@ var _levels := {}
 
 func _ready() -> void:
 	defaults = load(DEFAULTS_PATH).data.duplicate(true)
-	for id in Content.TROOP_ORDER:
+	for id in Content.ALL_TROOPS:
 		var troop: Resource = load(Content.TROOP_PATH % id)
 		_troops[id] = troop
 		var snapshot := {}

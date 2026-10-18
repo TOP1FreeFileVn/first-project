@@ -10,6 +10,7 @@ const Economy = preload("res://game/core/Economy.gd")
 const Content = preload("res://game/core/Content.gd")
 const Heroes = preload("res://game/core/Heroes.gd")
 const Meta = preload("res://game/core/Meta.gd")
+const HeroCat = preload("res://game/core/HeroCat.gd")
 
 const SAVE_PATH := "user://save.json"
 const LEGACY_SAVE_PATH := "user://progress.cfg"
@@ -17,7 +18,8 @@ const SAVE_VERSION := 1
 
 const LEVELS := Content.LEVELS
 const TROOP_ORDER := Content.TROOP_ORDER
-const STARTER_TROOPS := ["pawn", "warrior", "archer"]
+const ENEMY_ORDER := Content.ENEMY_ORDER
+const STARTER_TROOPS := ["kiem", "cung", "gay_phep"]
 
 ## id -> TroopData, filled from Content.TROOP_ORDER (the same instances Balance edits).
 var TROOPS := {}
@@ -50,6 +52,8 @@ var sound_on := true
 var tutorial_done := false
 ## Special board cells the player has already been shown (see GearBoard.TILE_INFO).
 var seen_tiles: Array = []
+## The hero cat's equipment (HeroCat.new_state() layout).
+var hero_cat: Dictionary = {}
 ## Set once any admin cheat touched this save, so balance feedback can be discounted.
 var cheated := false
 ## Heroes: id -> {"owned", "level", "stars", "shards"}. `hero` leads the team.
@@ -75,7 +79,7 @@ var frame := "wood"
 
 
 func _init() -> void:
-	for id in TROOP_ORDER:
+	for id in Content.ALL_TROOPS:
 		TROOPS[id] = load(Content.TROOP_PATH % id)
 
 
@@ -1034,6 +1038,7 @@ func _reset() -> void:
 	frame = "wood"
 	tutorial_done = false
 	seen_tiles = []
+	hero_cat = HeroCat.new_state()
 
 
 func set_ui_skin(skin: String) -> void:
@@ -1069,6 +1074,31 @@ func commit_cheat() -> void:
 	_commit()
 
 
+# --- Hero cat equipment (HeroCat.gd) ----------------------------------------------------
+
+func hero_cat_stats() -> Dictionary:
+	return HeroCat.total_stats(hero_cat)
+
+
+## Wears `uid` in its slot; what was there goes back to the bag.
+func hero_cat_equip(uid: String) -> void:
+	var d := HeroCat.def(hero_cat, uid)
+	if d.is_empty():
+		return
+	hero_cat["equipped"][d["slot"]] = uid
+	_commit()
+
+
+func hero_cat_upgrade(uid: String) -> bool:
+	var cost := HeroCat.upgrade_cost(hero_cat, uid)
+	if cost < 0 or gold < cost:
+		return false
+	gold -= cost
+	hero_cat["bag"][uid]["level"] += 1
+	_commit()
+	return true
+
+
 func _commit() -> void:
 	changed.emit()
 	if persist:
@@ -1096,6 +1126,7 @@ func to_dict() -> Dictionary:
 		"quests": {"day": quest_day, "progress": quest_progress, "claimed": quest_claimed, "milestones": quest_milestones},
 		"profile": {"name": player_name, "avatar": avatar, "frame": frame},
 		"tutorial": {"done": tutorial_done, "seen_tiles": seen_tiles},
+		"hero_cat": hero_cat,
 	}.duplicate(true)
 
 
@@ -1127,7 +1158,9 @@ func from_dict(data: Dictionary) -> void:
 	# Saves from before teams existed get the strongest troops they own.
 	team = []
 	for id in data.get("team", []):
-		team.append(str(id))
+		# Saves from before the cat soldiers name human troops; drop those.
+		if str(id) in TROOP_ORDER and troops[str(id)]["unlocked"]:
+			team.append(str(id))
 	if team.is_empty():
 		team = auto_team()
 	for id in data.get("workshop", {}):
@@ -1183,6 +1216,11 @@ func from_dict(data: Dictionary) -> void:
 	seen_tiles = []
 	for kind in tutorial.get("seen_tiles", []):
 		seen_tiles.append(str(kind))
+	var saved_cat = data.get("hero_cat", null)
+	if saved_cat is Dictionary and saved_cat.has("bag") and saved_cat.has("equipped"):
+		hero_cat = saved_cat.duplicate(true)
+		for uid in hero_cat["bag"]:
+			hero_cat["bag"][uid]["level"] = int(hero_cat["bag"][uid]["level"])
 
 
 func _save() -> void:

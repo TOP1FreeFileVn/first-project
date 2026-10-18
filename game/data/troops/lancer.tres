@@ -5,10 +5,11 @@
 [resource]
 script = ExtResource("1_troop")
 id = "lancer"
-display_name = "Kỵ thương"
+display_name = "Kỵ Sĩ Xương"
+unit_key = "art:lancer"
+klass = 3
 description = "Kỵ binh cầm giáo: nhanh, đánh đau, xông thẳng vào địch."
 rarity = 1
-unit_key = "Lancer"
 building = "Tower"
 max_hp = 55.0
 damage = 14.0

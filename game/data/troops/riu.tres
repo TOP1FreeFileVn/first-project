@@ -1,0 +1,23 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "riu"
+display_name = "Mèo Rìu"
+description = "Bổ rìu nặng, chí mạng cao."
+rarity = 1
+unit_key = "art:riu"
+role = 0
+klass = 0
+max_hp = 126.0
+damage = 17.2
+attack_range = 38.0
+attack_cooldown = 1.49
+move_speed = 55.0
+aggro_range = 220.0
+crit_chance = 0.24
+crit_mult = 1.5
+spawn_interval = 5.14
+max_alive = 2

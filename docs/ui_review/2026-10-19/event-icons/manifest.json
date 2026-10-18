@@ -1,0 +1,400 @@
+{
+	"captures": [
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"file": "lobby_720x1280.png",
+			"nav": "lobby_720x1280_nav.png",
+			"page": "lobby",
+			"requested": [
+				720,
+				1280
+			],
+			"state": {
+				"login_can_claim": true,
+				"login_claimed": 3,
+				"summon_free_ready": true
+			},
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"file": "events_720x1280.png",
+			"nav": "events_720x1280_nav.png",
+			"page": "events",
+			"requested": [
+				720,
+				1280
+			],
+			"state": {
+				"login_can_claim": true,
+				"login_claimed": 3,
+				"summon_free_ready": true
+			},
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"file": "events_paid_720x1280.png",
+			"nav": "events_paid_720x1280_nav.png",
+			"page": "events_paid",
+			"requested": [
+				720,
+				1280
+			],
+			"state": {
+				"login_can_claim": false,
+				"login_claimed": 7,
+				"summon_free_ready": false
+			},
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"file": "shop_720x1280.png",
+			"nav": "shop_720x1280_nav.png",
+			"page": "shop",
+			"requested": [
+				720,
+				1280
+			],
+			"state": {
+				"login_can_claim": true,
+				"login_claimed": 3,
+				"summon_free_ready": true
+			},
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"file": "lobby_360x640.png",
+			"nav": "lobby_360x640_nav.png",
+			"page": "lobby",
+			"requested": [
+				360,
+				640
+			],
+			"state": {
+				"login_can_claim": true,
+				"login_claimed": 3,
+				"summon_free_ready": true
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"file": "events_360x640.png",
+			"nav": "events_360x640_nav.png",
+			"page": "events",
+			"requested": [
+				360,
+				640
+			],
+			"state": {
+				"login_can_claim": true,
+				"login_claimed": 3,
+				"summon_free_ready": true
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"file": "events_paid_360x640.png",
+			"nav": "events_paid_360x640_nav.png",
+			"page": "events_paid",
+			"requested": [
+				360,
+				640
+			],
+			"state": {
+				"login_can_claim": false,
+				"login_claimed": 7,
+				"summon_free_ready": false
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"file": "shop_360x640.png",
+			"nav": "shop_360x640_nav.png",
+			"page": "shop",
+			"requested": [
+				360,
+				640
+			],
+			"state": {
+				"login_can_claim": true,
+				"login_claimed": 3,
+				"summon_free_ready": true
+			},
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"comparison": {
+		"columns": [
+			"before",
+			"after"
+		],
+		"file": "before_after_icons.png",
+		"native_size": 128,
+		"rows": [
+			"tab_shop",
+			"rail_checkin",
+			"rail_quest",
+			"rail_event",
+			"rail_castle",
+			"rail_patrol",
+			"rail_online",
+			"rail_limited"
+		]
+	},
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/event-icons/mcp/profile/Godot/app_userdata/Gear Defenders",
+	"routes": [
+		{
+			"name": "events_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_paid_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_paid_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_shortcut_opens_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_back_returns_to_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_paid_shortcut_opens_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_paid_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_shortcut_opens_popup",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_close_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_shortcut_opens_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_back_returns_to_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"sheet": {
+		"columns": [
+			32,
+			48,
+			64,
+			96,
+			128
+		],
+		"file": "icon_sizes_32_48_64_96_128.png",
+		"native_pixels": true,
+		"rows": [
+			"tab_shop",
+			"rail_checkin",
+			"rail_quest",
+			"rail_event",
+			"rail_castle",
+			"rail_patrol",
+			"rail_online",
+			"rail_limited"
+		]
+	}
+}

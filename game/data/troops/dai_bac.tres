@@ -1,0 +1,26 @@
+[gd_resource type="Resource" format=3]
+
+[ext_resource type="Script" path="res://game/data/TroopData.gd" id="1_troop"]
+
+[resource]
+script = ExtResource("1_troop")
+id = "dai_bac"
+display_name = "Mèo Đại Bác"
+description = "Đại bác chậm nhưng nổ lan cả đám."
+rarity = 3
+unit_key = "art:dai_bac"
+role = 1
+klass = 1
+max_hp = 179.0
+damage = 52.0
+attack_range = 230.0
+attack_cooldown = 3.03
+move_speed = 47.0
+aggro_range = 290.0
+crit_chance = 0.3
+crit_mult = 1.5
+spawn_interval = 9.0
+max_alive = 1
+ability = 7
+ability_text = "Đạn nổ trúng mọi địch quanh điểm rơi."
+ability_radius = 70.0

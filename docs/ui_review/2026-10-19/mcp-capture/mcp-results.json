@@ -1,0 +1,205 @@
+[
+  {
+    "name": "godot_doctor",
+    "result": {
+      "ok": true,
+      "projectRoot": "C:\\Users\\dangp\\GodotProjects\\first-project",
+      "serverVersion": "0.4.1",
+      "nodeVersion": "v24.19.0",
+      "projectGodot": {
+        "exists": true,
+        "path": "res://project.godot"
+      },
+      "godotCli": {
+        "found": true,
+        "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe"
+      },
+      "bridge": {
+        "reachable": true,
+        "host": "127.0.0.1",
+        "port": 8765,
+        "status": {
+          "ok": true,
+          "connected": true,
+          "host": "127.0.0.1",
+          "port": 8765,
+          "response": {
+            "edited_root": {
+              "child_count": 8,
+              "name": "Battle",
+              "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle",
+              "position": [
+                0,
+                0
+              ],
+              "rotation": 0,
+              "scale": [
+                1,
+                1
+              ],
+              "scene_file_path": "res://game/battle/Battle.tscn",
+              "script": "res://game/battle/Battle.gd",
+              "type": "Node2D"
+            },
+            "edited_scene": "res://game/battle/Battle.tscn",
+            "is_playing_scene": false,
+            "ok": true,
+            "playing_scene": "",
+            "port": 8765,
+            "running": true
+          }
+        }
+      },
+      "env": {
+        "exists": false,
+        "path": "res://.env"
+      },
+      "providers": {
+        "image": {
+          "provider": "none",
+          "configured": false,
+          "missing": [],
+          "safeDefault": true
+        },
+        "model3d": {
+          "provider": "none",
+          "configured": false,
+          "missing": [],
+          "safeDefault": true
+        },
+        "chat": {
+          "provider": "none",
+          "configured": false,
+          "missing": [],
+          "safeDefault": true
+        }
+      },
+      "folders": {
+        "scenes": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://scenes"
+        },
+        "scripts": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://scripts"
+        },
+        "Assets": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://Assets"
+        },
+        "assets": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://assets"
+        },
+        "generation_jobs": {
+          "exists": false,
+          "isDirectory": false,
+          "path": "res://generation_jobs"
+        }
+      },
+      "recommendations": [
+        "Create .env from .env.example when you need Godot CLI or real provider settings.",
+        "Create scenes/ when that workflow is needed.",
+        "Create scripts/ when that workflow is needed.",
+        "Create Assets/ when that workflow is needed.",
+        "Create assets/ when that workflow is needed.",
+        "Create generation_jobs/ when that workflow is needed.",
+        "Generation providers are set to none; prompts will be saved as jobs instead of calling real services."
+      ]
+    }
+  },
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "tests/ui_review/RuntimeSurvey.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nUI_REVIEW_USER_DIR C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/mcp-capture/profile/Godot/app_userdata/Gear Defenders\r\nUI_REVIEW_CAPTURE 01_lobby (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 02_shop (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 03_hero (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 04_troops (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 05_summon (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 06_equipment_detail (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 07_equipment_compare (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 08_troop_detail (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 09_events (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 09_login (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 09_quests (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 10_locked_stage (720, 1280) result=0\r\nUI_REVIEW_CAPTURE 13_castle (720, 1280) result=0\r\nUI_REVIEW_COMPLETE 13 screens\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": {
+        "ok": true,
+        "connected": true,
+        "host": "127.0.0.1",
+        "port": 8765,
+        "response": {
+          "edited_root": {
+            "child_count": 8,
+            "name": "Battle",
+            "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle",
+            "position": [
+              0,
+              0
+            ],
+            "rotation": 0,
+            "scale": [
+              1,
+              1
+            ],
+            "scene_file_path": "res://game/battle/Battle.tscn",
+            "script": "res://game/battle/Battle.gd",
+            "type": "Node2D"
+          },
+          "edited_scene": "res://game/battle/Battle.tscn",
+          "is_playing_scene": false,
+          "ok": true,
+          "playing_scene": "",
+          "port": 8765,
+          "running": true
+        }
+      }
+    }
+  },
+  {
+    "name": "godot_bridge_status",
+    "result": {
+      "ok": true,
+      "connected": true,
+      "host": "127.0.0.1",
+      "port": 8765,
+      "response": {
+        "edited_root": {
+          "child_count": 8,
+          "name": "Battle",
+          "path": "/root/@EditorNode@19513/@Panel@14/@VBoxContainer@15/DockVSplitMain/DockHSplitMain/@VBoxContainer@37/DockVSplitCenter/@VSplitContainer@101/@VBoxContainer@102/@EditorMainScreen@160/MainScreen/@CanvasItemEditor@10138/@VSplitContainer@9897/@HSplitContainer@9899/@HSplitContainer@9901/@Control@9902/@SubViewportContainer@9903/@SubViewport@9904/Battle",
+          "position": [
+            0,
+            0
+          ],
+          "rotation": 0,
+          "scale": [
+            1,
+            1
+          ],
+          "scene_file_path": "res://game/battle/Battle.tscn",
+          "script": "res://game/battle/Battle.gd",
+          "type": "Node2D"
+        },
+        "edited_scene": "res://game/battle/Battle.tscn",
+        "is_playing_scene": false,
+        "ok": true,
+        "playing_scene": "",
+        "port": 8765,
+        "running": true
+      }
+    }
+  }
+]

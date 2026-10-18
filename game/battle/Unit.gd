@@ -45,6 +45,9 @@ var max_hp := 1.0
 var hp := 1.0
 var damage := 1.0
 var rally := Vector2.ZERO
+## Cat soldiers are one baked texture; _animate_cat bobs and swings it.
+var _cat := false
+var _cat_clock := randf() * 10.0
 ## Set for the leading hero: fights like its troop, looks like the hero.
 var hero_id := ""
 # Behind the sprite (which itself draws behind this node): the hero's aura and cape.
@@ -95,8 +98,11 @@ func setup(p_battle, p_troop: Resource, p_team: int, p_tier: int, hp_mult: float
 
 
 func _ready() -> void:
-	sprite.sprite_frames = SpriteLib.unit_frames(troop.unit_key, _sprite_color())
-	sprite.offset = Vector2(0, -SpriteLib.foot_offset(troop.unit_key))
+	# A general fights with its base troop's numbers but always looks like itself (the base
+	# troops are now monsters, so borrowing their art turned the general into a skeleton).
+	var look: String = Heroes.HEROES[hero_id]["unit"] if hero_id != "" else troop.unit_key
+	sprite.sprite_frames = SpriteLib.unit_frames(look, _sprite_color())
+	sprite.offset = Vector2(0, -SpriteLib.foot_offset(look))
 	var s: float = BASE_SCALE * troop.sprite_scale * (1.0 + 0.07 * (tier - 1)) * (1.35 if elite else 1.0)
 	_tint = troop.tint
 	if hero_id != "":
@@ -111,6 +117,9 @@ func _ready() -> void:
 	sprite.scale = Vector2(s, s)
 	sprite.flip_h = randf() < 0.5
 	sprite.modulate = _tint
+	if SpriteLib.is_cat(look):
+		_cat = true
+		sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	sprite.play("idle")
 	_retarget = randf() * RETARGET_INTERVAL
 	_ability_clock = troop.ability_cooldown * randf_range(0.3, 0.7)
@@ -235,7 +244,31 @@ func _process(delta: float) -> void:
 				_settle_goal = goal
 			_play("idle")
 	_separate(delta)
+	if _cat:
+		_animate_cat(delta)
 	queue_redraw()
+
+
+## The baked cat texture moves instead of changing frames: a hop while running, a lean
+## back then a lunge forward through the attack, a slow breath while idle.
+func _animate_cat(delta: float) -> void:
+	_cat_clock += delta
+	var facing := -1.0 if sprite.flip_h else 1.0
+	match sprite.animation:
+		"run":
+			sprite.position.y = -absf(sin(_cat_clock * 13.0)) * 5.0
+			sprite.rotation = sin(_cat_clock * 13.0) * 0.07
+			sprite.scale.y = sprite.scale.x
+		"attack":
+			var count := sprite.sprite_frames.get_frame_count("attack")
+			var t := (sprite.frame + sprite.frame_progress) / float(count)
+			var swing := -0.3 + 0.75 * smoothstep(0.35, 0.6, t) - 0.45 * smoothstep(0.6, 1.0, t)
+			sprite.rotation = swing * facing
+			sprite.position.y = 0.0
+		_:
+			sprite.position.y = 0.0
+			sprite.rotation = 0.0
+			sprite.scale.y = sprite.scale.x * (1.0 + sin(_cat_clock * 3.0) * 0.025)
 
 
 func _tick_effects(delta: float) -> void:
@@ -475,6 +508,9 @@ func _resolve_hit() -> void:
 		amount *= troop.ability_value
 		_first_hit = false
 	# Only our troops land critical hits: enemies are tuned by their level's power alone.
+	# Class counter ring: x2 against the class this one beats.
+	if _alive(_attack_target):
+		amount *= Economy.counter_mult(troop.klass, _attack_target.troop.klass)
 	var crit: bool = team == PLAYER and troop.role != Role.HEALER and troop.crit_chance > 0.0 and randf() < troop.crit_chance
 	if crit:
 		amount *= troop.crit_mult

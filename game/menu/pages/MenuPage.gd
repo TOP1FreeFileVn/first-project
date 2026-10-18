@@ -50,6 +50,15 @@ func has_alert() -> bool:
 
 
 # Helpers shared by pages.
+## Opt in when a short page should fill the viewport. The scroll container still
+## grows past the viewport when its content needs more room.
+func fill_available_height(bottom_padding := 24) -> void:
+	var margin := body.get_parent() as MarginContainer
+	margin.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	margin.add_theme_constant_override("margin_bottom", bottom_padding)
+	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
+
+
 func title(text: String, color := UiKit.Ribbon.BLUE) -> void:
 	body.add_child(UiKit.ribbon(text, 26, color))
 

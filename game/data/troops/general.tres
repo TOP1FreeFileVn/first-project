@@ -5,10 +5,10 @@
 [resource]
 script = ExtResource("1_troop")
 id = "general"
-display_name = "Tướng quân"
+display_name = "Vua Orc"
+unit_key = "art:general"
 description = "Huyền thoại chiến trường. Một mình quét sạch tuyến đầu và hiệu triệu cả đội."
 rarity = 3
-unit_key = "General"
 building = "Castle"
 role = 0
 sprite_scale = 1.4

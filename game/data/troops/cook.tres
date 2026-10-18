@@ -5,10 +5,11 @@
 [resource]
 script = ExtResource("1_troop")
 id = "cook"
-display_name = "Đầu bếp"
-description = "Không cầm vũ khí. Đứng sau nướng thịt cho bánh răng tổng."
+display_name = "Orc Đầu Bếp"
+unit_key = "art:cook"
+klass = 2
+description = "Không cầm vũ khí. Đứng sau nướng cá cho bánh răng tổng."
 rarity = 2
-unit_key = "PawnMeat"
 building = "House1"
 role = 3
 max_hp = 40.0
@@ -21,7 +22,7 @@ spawn_interval = 7.0
 max_alive = 1
 summon_weight = 0.6
 ability = 6
-ability_text = "Nấu thịt: 6 giây một lần +1 thịt khi còn sống. (Đầu bếp địch hồi máu cho quân xung quanh.)"
+ability_text = "Bán cá nướng: 6 giây một lần +1 xu khi còn sống. (Đầu bếp địch hồi máu cho quân xung quanh.)"
 ability_value = 1.0
 ability_cooldown = 6.0
 ability_radius = 150.0

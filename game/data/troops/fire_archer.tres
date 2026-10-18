@@ -5,13 +5,13 @@
 [resource]
 script = ExtResource("1_troop")
 id = "fire_archer"
-display_name = "Cung lửa"
+display_name = "Xương Nỏ Lửa"
+unit_key = "art:fire_archer"
+klass = 1
 description = "Tên tẩm dầu: mỗi phát bắn đốt cháy mục tiêu."
 rarity = 1
-unit_key = "Archer"
 building = "Archery"
 role = 1
-tint = Color(1, 0.72, 0.55, 1)
 max_hp = 30.0
 damage = 7.0
 attack_range = 230.0

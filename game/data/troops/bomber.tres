@@ -5,10 +5,11 @@
 [resource]
 script = ExtResource("1_troop")
 id = "bomber"
-display_name = "Pháo thủ"
+display_name = "Goblin Bom"
+unit_key = "art:bomber"
+klass = 1
 description = "Vác túi thuốc nổ, ném bom trúng cả đám đông."
 rarity = 2
-unit_key = "PawnBomb"
 building = "Tower"
 role = 1
 max_hp = 34.0

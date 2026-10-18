@@ -6,18 +6,17 @@ extends Node
 
 const ChestOpening = preload("res://game/ui/ChestOpening.gd")
 # A fixed chest so the shots always show a new legendary and an epic.
-const FAKE_LOOT := {"cards": {"pawn": 5, "archer": 3, "fire_archer": 2, "bomber": 1, "general": 1}, "gold": 80}
-const FAKE_NEW := ["fire_archer", "general"]
+const FAKE_LOOT := {"cards": {"gay_phep": 5, "cung": 3, "sung": 2, "dai_bac": 1, "katana": 1}, "gold": 80}
+const FAKE_NEW := ["sung", "katana"]
 
 const STEPS := [
 	["tab", 2], ["shot", "battle"],
 	["level", -1], ["wait", 0.4], ["shot", "battle_prev"], ["level", 1], ["wait", 0.4], ["level", 1], ["wait", 0.4], ["shot", "battle_locked"],
-	["tab", 1], ["shot", "troops"],
-	["swap", "bomber"], ["shot", "troops_swap"], ["unswap"],
-	["scroll", 400], ["drag", "bomber", 1], ["wait", 0.3], ["shot", "troops_drag"], ["drop", 1], ["wait", 0.3], ["shot", "troops_dropped"],
+	["tab", 3], ["shot", "troops"],
+	["swap", "dai_bac"], ["shot", "troops_swap"], ["unswap"],
+	["scroll", 400], ["drag", "dai_bac", 1], ["wait", 0.3], ["shot", "troops_drag"], ["drop", 1], ["wait", 0.3], ["shot", "troops_dropped"],
 	["filter", 3], ["shot", "troops_legend"], ["filter", -1],
-	["detail", "general"], ["shot", "troop_detail"], ["close"],
-	["tab", 3], ["shot", "castle"],
+	["detail", "katana"], ["shot", "troop_detail"], ["close"],
 	["tab", 0], ["shot", "shop"],
 	["fake_chest"], ["wait", 1.3], ["shot", "chest_wait"],
 	["tap"], ["wait", 0.5], ["shot", "chest_windup"], ["wait", 0.42], ["shot", "chest_open"],
@@ -25,7 +24,7 @@ const STEPS := [
 	["last_card"], ["wait", 0.55], ["shot", "chest_tease"], ["wait", 0.75], ["shot", "chest_legend"],
 	["skip"], ["wait", 0.8], ["shot", "chest_summary"], ["close_chest"],
 	["chest", "gold"], ["wait", 1.0], ["tap"], ["tap"], ["tap"], ["skip"], ["wait", 0.6], ["shot", "chest_real"], ["close_chest"],
-	["tab", 4], ["shot", "heroes"],
+	["tab", 1], ["shot", "heroes"], ["hero_item", "weapon"], ["wait", 0.3], ["shot", "hero_item"], ["close"], ["hero_item", "bag"], ["wait", 0.3], ["shot", "hero_compare"], ["close"],
 	["tab", 2], ["popup", "login"], ["shot", "login"], ["close"],
 	["popup", "quests"], ["shot", "quests"], ["close"],
 	["popup", "events"], ["shot", "events"], ["close"],
@@ -54,13 +53,13 @@ func _ready() -> void:
 	PlayerData.unlocked_levels = 3
 	PlayerData.level_stars = {0: 3, 1: 2}
 	PlayerData.castle_level = 3
-	PlayerData.troops["warrior"]["level"] = 6
-	PlayerData.troops["warrior"]["cards"] = 12
-	for id in ["lancer", "bomber", "general", "miner"]:
+	PlayerData.troops["kiem"]["level"] = 6
+	PlayerData.troops["kiem"]["cards"] = 12
+	for id in ["giao", "dai_bac", "katana", "riu"]:
 		PlayerData.troops[id]["unlocked"] = true
-	PlayerData.troops["lancer"]["stars"] = 2
-	PlayerData.troops["lancer"]["level"] = 12
-	PlayerData.team = ["warrior", "archer", "lancer", "general"]
+	PlayerData.troops["giao"]["stars"] = 2
+	PlayerData.troops["giao"]["level"] = 12
+	PlayerData.team = ["kiem", "cung", "giao", "katana"]
 	PlayerData.workshop = {"meat_regen": 2, "start_meat": 1}
 	PlayerData.patrol_last_claim = PlayerData.now() - 3 * 3600
 	PlayerData.heroes["storm"]["owned"] = true
@@ -91,7 +90,7 @@ func _process(delta: float) -> void:
 	var step: Array = STEPS[_step]
 	_step += 1
 	_wait = 0.4
-	var troops_page = _home._pages[1]
+	var troops_page = _home._pages[3]
 	match step[0]:
 		"level":
 			_home._pages[2]._go(step[1])
@@ -120,6 +119,12 @@ func _process(delta: float) -> void:
 			troops_page.refresh()
 		"detail":
 			troops_page._open_detail(step[1])
+		"hero_item":
+			# The worn weapon, or the best spare item (compared with what is worn).
+			var state: Dictionary = PlayerData.hero_cat
+			var hero_cat_script = load("res://game/core/HeroCat.gd")
+			var uid: String = hero_cat_script.equipped_uid(state, "weapon") if step[1] == "weapon" else hero_cat_script.spare(state)[0]
+			_home._pages[1]._open_detail(uid)
 		"chest":
 			_home._pages[0]._open(step[1])
 		"fake_chest":
