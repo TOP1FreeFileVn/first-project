@@ -1,5 +1,23 @@
 # Lobby layout review
 
+The header now uses one shared centre line (y=54) for avatar, currency and tools.
+CHEAT is positioned independently, so toggling it does not shift the row. Both
+currency roots remain 201px wide in the debug fixture; long balances reserve room
+for the currency icon and plus button and fit their font as needed.
+
+Four independent 108×128 shortcut cards add pastel icon fields, cream caption
+bands and the game's brown outlines. Their 16px captions have a 96px usable width;
+the longest, “Quà 7 ngày”, measures 92px. Left/right gutters and vertical gaps match.
+Rewards and battle action form one group with a 16px gap. The button centres its
+swords and text together with a 12px gap.
+
+Reference: [Figma layout page 3505:2](https://www.figma.com/design/wMtwWaYIiKUchUdq5YdTm5/?node-id=3505-2),
+including lobby examples 3505:17 and 3505:103. The common header alignment, grouped
+feature shortcuts and reward/action grouping informed the layout; the project's
+cat artwork, palette and outlines remain its own.
+
+![Before and after, with large-balance header](overview.png)
+
 `tests/ui_review/LobbyLayoutPreview.tscn` renders the real production Home with an
 isolated profile and `PlayerData.persist = false`. It changes only the in-memory fixture.
 
@@ -25,3 +43,13 @@ screenshots and icon sheets. It preserves the previous `event-icons` review arti
 
 The `before/` folder preserves the latest native normal lobby captures immediately
 before this header, shortcut-frame, and battle-action-spacing revision.
+
+Verified results: 8/8 native captures and all geometry checks pass; normal/stress
+header rectangles match and there are no peer overlaps. The route manifest records
+22/22 successful actual-click checks at the two sizes. PopupCloseTest passes and
+UiTapRoutingTest passes 9/9 checks (rerun during the chest-layout follow-up).
+Windows logs the existing certificate-store error; UiTapRoutingTest also retains
+its existing exit cleanup warnings (2 objects and 1 resource). These are recorded
+in `../test-results/`, separate from the passing interaction results.
+
+Generate the montage with `python tools/review/build_layout_overviews.py`.

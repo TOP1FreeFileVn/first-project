@@ -1,0 +1,17 @@
+{
+  "id": "dua_phep",
+  "model": "gpt-image-2.5-sunburst",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "22:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt": "prompts/dua_phep.txt",
+  "raw": "raw/dua_phep.png",
+  "reference": "approved v4 sword iteration2 / v6 nine-px",
+  "reference_mode": "text brief informed by visually inspected accepted assets; no image-input conditioning",
+  "status": "generated_visual_qa_passed_pending_palette_and_stroke_normalization",
+  "suggested_grip_source": [512, 747],
+  "source_bbox_xyxy": [223, 45, 799, 962],
+  "suggested_held_height": 110,
+  "qa": "Clean broad five-point star silhouette, purple exposed grip, gold socket and pommel; slight source gradients require flattening. Face clearance requires head outside cheek."
+}

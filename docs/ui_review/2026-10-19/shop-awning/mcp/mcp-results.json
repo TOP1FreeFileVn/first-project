@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "docs/ui_review/2026-10-19/shop-awning/ShopAwningPreview.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nSHOP_AWNING_USER_DIR C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/shop-awning/mcp/profile/Godot/app_userdata/Gear Defenders\r\nSHOP_AWNING_CHECK awning_hidden_on_initial_battle PASS\r\nSHOP_AWNING_CHECK battle_450x800_native_size PASS\r\nSHOP_AWNING_CAPTURE battle_450x800 native=(450, 800)\r\nSHOP_AWNING_CHECK battle_motion_01_450x800_native_size PASS\r\nSHOP_AWNING_CAPTURE battle_motion_01_450x800 native=(450, 800)\r\nSHOP_AWNING_CHECK motion_1_geometry_static PASS\r\nSHOP_AWNING_CHECK battle_motion_02_450x800_native_size PASS\r\nSHOP_AWNING_CAPTURE battle_motion_02_450x800 native=(450, 800)\r\nSHOP_AWNING_CHECK motion_2_geometry_static PASS\r\nSHOP_AWNING_CHECK battle_motion_03_450x800_native_size PASS\r\nSHOP_AWNING_CAPTURE battle_motion_03_450x800 native=(450, 800)\r\nSHOP_AWNING_CHECK motion_3_geometry_static PASS\r\nSHOP_AWNING_CHECK real_time_sky_moves_over_three_seconds PASS\r\nSHOP_AWNING_CHECK nav_shop_450 PASS\r\nSHOP_AWNING_CHECK nav_shop_450_awning_visibility PASS\r\nSHOP_AWNING_CHECK nav_shop_450_background_visibility PASS\r\nSHOP_AWNING_CHECK shop_450x800_native_size PASS\r\nSHOP_AWNING_CHECK shop_450x800_shop_has_no_vertical_scroll PASS\r\nSHOP_AWNING_CHECK shop_450x800_awning_below_header PASS\r\nSHOP_AWNING_CHECK shop_450x800_awning_above_first_offer PASS\r\nSHOP_AWNING_CHECK shop_450x800_awning_inside_canvas PASS\r\nSHOP_AWNING_CHECK shop_450x800_offer_0_inside_content PASS\r\nSHOP_AWNING_CHECK shop_450x800_offer_1_inside_content PASS\r\nSHOP_AWNING_CHECK shop_450x800_offer_2_inside_content PASS\r\nSHOP_AWNING_CHECK shop_450x800_offer_3_inside_content PASS\r\nSHOP_AWNING_CAPTURE shop_450x800 native=(450, 800)\r\nSHOP_AWNING_CHECK nav_battle_450 PASS\r\nSHOP_AWNING_CHECK nav_battle_450_awning_visibility PASS\r\nSHOP_AWNING_CHECK nav_battle_450_background_visibility PASS\r\nSHOP_AWNING_CHECK nav_shop_360 PASS\r\nSHOP_AWNING_CHECK nav_shop_360_awning_visibility PASS\r\nSHOP_AWNING_CHECK nav_shop_360_background_visibility PASS\r\nSHOP_AWNING_CHECK shop_360x640_native_size PASS\r\nSHOP_AWNING_CHECK shop_360x640_shop_has_no_vertical_scroll PASS\r\nSHOP_AWNING_CHECK shop_360x640_awning_below_header PASS\r\nSHOP_AWNING_CHECK shop_360x640_awning_above_first_offer PASS\r\nSHOP_AWNING_CHECK shop_360x640_awning_inside_canvas PASS\r\nSHOP_AWNING_CHECK shop_360x640_offer_0_inside_content PASS\r\nSHOP_AWNING_CHECK shop_360x640_offer_1_inside_content PASS\r\nSHOP_AWNING_CHECK shop_360x640_offer_2_inside_content PASS\r\nSHOP_AWNING_CHECK shop_360x640_offer_3_inside_content PASS\r\nSHOP_AWNING_CAPTURE shop_360x640 native=(360, 640)\r\nSHOP_AWNING_CHECK free_chest_actual_click_opens_summary PASS\r\nSHOP_AWNING_CHECK free_chest_grants_expected_cards_once PASS\r\nSHOP_AWNING_CHECK free_chest_grants_gold_in_range PASS\r\nSHOP_AWNING_CHECK free_chest_keeps_gems PASS\r\nSHOP_AWNING_CHECK free_chest_sets_cooldown PASS\r\nSHOP_AWNING_CHECK chest_done_actual_click_closes PASS\r\nSHOP_AWNING_CHECK chest_done_keeps_granted_rewards PASS\r\nSHOP_AWNING_CHECK exchange_actual_click_spends_gems PASS\r\nSHOP_AWNING_CHECK exchange_actual_click_grants_gold PASS\r\nSHOP_AWNING_CHECK exchange_preserves_cards PASS\r\nSHOP_AWNING_CHECK nav_battle_360 PASS\r\nSHOP_AWNING_CHECK nav_battle_360_awning_visibility PASS\r\nSHOP_AWNING_CHECK nav_battle_360_background_visibility PASS\r\nSHOP_AWNING_COMPLETE 6 native captures; 49 checks; failures=0\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

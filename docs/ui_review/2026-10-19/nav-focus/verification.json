@@ -1,0 +1,95 @@
+{
+  "captures_checked": 10,
+  "checks": [
+    {
+      "capture": "shop_720x1280.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "hero_720x1280.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "battle_720x1280.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "troops_720x1280.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "summon_720x1280.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "shop_360x640.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "hero_360x640.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "battle_360x640.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "troops_360x640.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    },
+    {
+      "capture": "summon_360x640.png",
+      "cells_unchanged": true,
+      "caption_fits": true,
+      "caption_visible": true,
+      "caption_outline_zero": true,
+      "caption_color": "583f21ff",
+      "caption_y_delta_design": 2.0
+    }
+  ]
+}

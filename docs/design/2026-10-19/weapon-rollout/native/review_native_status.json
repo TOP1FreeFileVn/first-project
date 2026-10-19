@@ -1,0 +1,292 @@
+{
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"expected": 16,
+	"failures": [],
+	"items": [
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "kiem",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "riu",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "dao",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "katana",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "cung",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "no",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "sung",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "dai_bac",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "gay_phep",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "thuoc",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "sach_phep",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "dua_phep",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "giao",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "cu_kiem",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "chuy",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		},
+		{
+			"icon_canvas": [
+				48,
+				48
+			],
+			"icon_loaded": true,
+			"id": "bua",
+			"unit_canvas": [
+				768,
+				720
+			],
+			"unit_loaded": true,
+			"unit_native_resize": [
+				128,
+				120
+			]
+		}
+	],
+	"loaded": 16,
+	"production_modified": false,
+	"screenshot": "native/review_godot_preview.png"
+}

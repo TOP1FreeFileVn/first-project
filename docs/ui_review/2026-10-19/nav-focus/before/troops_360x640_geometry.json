@@ -1,0 +1,232 @@
+{
+	"actual": [
+		360,
+		640
+	],
+	"bar": {
+		"design_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"minimum_size": [
+			510.0,
+			166.0
+		],
+		"name": "@HBoxContainer@1823",
+		"path": "@Control@546/@HBoxContainer@1823",
+		"render_rect": [
+			3.0,
+			560.0,
+			354.0,
+			89.0
+		],
+		"type": "HBoxContainer",
+		"visible": true
+	},
+	"caption": {
+		"design_rect": [
+			406.0,
+			1226.0,
+			174.0,
+			34.0
+		],
+		"fits_width": true,
+		"font_color": "ffffffff",
+		"font_outline_color": "2e1c1cff",
+		"font_size": 24,
+		"minimum_size": [
+			54.0,
+			34.0
+		],
+		"name": "@Label@1816",
+		"outline_size": 7,
+		"path": "@Control@546/@HBoxContainer@1823/@PanelContainer@1818/@VBoxContainer@1813/@Label@1816",
+		"render_rect": [
+			203.0,
+			613.0,
+			87.0,
+			17.0
+		],
+		"text": "Lính",
+		"text_width": 54.0,
+		"type": "Label",
+		"visible": true
+	},
+	"cells": [
+		{
+			"design_rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1802",
+			"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1802",
+			"render_rect": [
+				3.0,
+				560.0,
+				66.5,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				139.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1807",
+			"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1807",
+			"render_rect": [
+				69.5,
+				560.0,
+				67.0,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				273.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1812",
+			"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1812",
+			"render_rect": [
+				136.5,
+				560.0,
+				66.5,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				406.0,
+				1120.0,
+				174.0,
+				178.0
+			],
+			"minimum_size": [
+				54.0,
+				166.0
+			],
+			"name": "@PanelContainer@1818",
+			"path": "@Control@546/@HBoxContainer@1823/@PanelContainer@1818",
+			"render_rect": [
+				203.0,
+				560.0,
+				87.0,
+				89.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1822",
+			"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1822",
+			"render_rect": [
+				290.0,
+				560.0,
+				67.0,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		}
+	],
+	"file": "troops_360x640.png",
+	"footer": {
+		"missing": true
+	},
+	"index": 3,
+	"nav": "troops_360x640_nav.png",
+	"nav_holder": {
+		"design_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"minimum_size": [
+			0.0,
+			0.0
+		],
+		"name": "@Control@546",
+		"path": "@Control@546",
+		"render_rect": [
+			0.0,
+			560.0,
+			360.0,
+			80.0
+		],
+		"type": "Control",
+		"visible": true
+	},
+	"render_scale": [
+		0.5,
+		0.5
+	],
+	"requested": [
+		360,
+		640
+	],
+	"selected_cell": {
+		"design_rect": [
+			406.0,
+			1120.0,
+			174.0,
+			178.0
+		],
+		"minimum_size": [
+			54.0,
+			166.0
+		],
+		"name": "@PanelContainer@1818",
+		"path": "@Control@546/@HBoxContainer@1823/@PanelContainer@1818",
+		"render_rect": [
+			203.0,
+			560.0,
+			87.0,
+			89.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"tab": "troops",
+	"window": [
+		360,
+		640
+	]
+}

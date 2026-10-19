@@ -1,0 +1,1077 @@
+{
+  "generator": "tools/ui/make_units.py::cat_soldier (weapon monkeypatched in memory)",
+  "production_changed": false,
+  "geometry_and_colors_preserved": true,
+  "target_outer_stroke_unit_px": 9.0,
+  "tail_dark_stroke_unit_px": 31.0,
+  "tail_color_stroke_unit_px": 13.0,
+  "native_scale": 3,
+  "items": [
+    {
+      "id": "kiem",
+      "class": 0,
+      "rarity": 0,
+      "source": "cat_kiem.svg",
+      "raster": "cat_kiem.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "4f3cb6bb30604037277560e6737e6e2f96b9fc3f731e47c40b5182fd94f341fc",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        92,
+        34,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "riu",
+      "class": 0,
+      "rarity": 1,
+      "source": "cat_riu.svg",
+      "raster": "cat_riu.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "ebd33a67fe7d43e0298194b09b974e54cd453cb327d74bec3e22356fccca4cc8",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        92,
+        34,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "dao",
+      "class": 0,
+      "rarity": 2,
+      "source": "cat_dao.svg",
+      "raster": "cat_dao.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "912fca1ec1196b09ccf4a3eaf1c8416d18f1ecf9d0905d88ed8f2c2d06a0f6ee",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        92,
+        34,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "katana",
+      "class": 0,
+      "rarity": 3,
+      "source": "cat_katana.svg",
+      "raster": "cat_katana.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "56c7b9e4d9670f38987b6ed3aeb97a05704e0b48628ace9bcf94f1bc30dc1e37",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        70,
+        34,
+        744,
+        719
+      ]
+    },
+    {
+      "id": "cung",
+      "class": 1,
+      "rarity": 0,
+      "source": "cat_cung.svg",
+      "raster": "cat_cung.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 5.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "36f6c7ded7f99235f4a43385ab617e23203df630fda11e05ca02a30957b97caf",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        91,
+        34,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "no",
+      "class": 1,
+      "rarity": 1,
+      "source": "cat_no.svg",
+      "raster": "cat_no.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 5.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "8176edcb10f3d39f95c98378af477e4cd373862f6e2145d83fdcbbd50b4e91a1",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        91,
+        34,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "sung",
+      "class": 1,
+      "rarity": 2,
+      "source": "cat_sung.svg",
+      "raster": "cat_sung.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 5.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "dc2402e116c5654d5b72009a20e6a6af95941c12c75c89dd0ad9f25de2b4c200",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        91,
+        34,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "dai_bac",
+      "class": 1,
+      "rarity": 3,
+      "source": "cat_dai_bac.svg",
+      "raster": "cat_dai_bac.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 5.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "f5c71c3b3ae0db91730e08d235fcddb7b4f59c32de799286217f265a569f0049",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        70,
+        34,
+        744,
+        719
+      ]
+    },
+    {
+      "id": "gay_phep",
+      "class": 2,
+      "rarity": 0,
+      "source": "cat_gay_phep.svg",
+      "raster": "cat_gay_phep.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "f84e626c8bbad0944281369be887a21e9ba2f8a32076e4bc04d52fcac3c1efd2",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        86,
+        0,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "thuoc",
+      "class": 2,
+      "rarity": 1,
+      "source": "cat_thuoc.svg",
+      "raster": "cat_thuoc.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "cd75cbb5aa5b9adf73629f9f1bb4a1167d4bcf8852cf588b640a432a605c898f",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        86,
+        0,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "sach_phep",
+      "class": 2,
+      "rarity": 2,
+      "source": "cat_sach_phep.svg",
+      "raster": "cat_sach_phep.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "97c2bb7aad658c44bbb09aae71a702e3716c83b08568c47dfbbcf1100507f747",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        86,
+        0,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "dua_phep",
+      "class": 2,
+      "rarity": 3,
+      "source": "cat_dua_phep.svg",
+      "raster": "cat_dua_phep.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "7b0dcfd965ccf9d6834f7d205e4d0ccf552f861e6747280714f4881bc20b4cbc",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        70,
+        0,
+        744,
+        719
+      ]
+    },
+    {
+      "id": "giao",
+      "class": 3,
+      "rarity": 0,
+      "source": "cat_giao.svg",
+      "raster": "cat_giao.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 9.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "e1fddc5dfe5cfb1edc24b8bc569fe1073642353b1871c35181f3b1d1d8320698",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        112,
+        0,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "cu_kiem",
+      "class": 3,
+      "rarity": 1,
+      "source": "cat_cu_kiem.svg",
+      "raster": "cat_cu_kiem.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 9.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "81aef0d228abb0f7a51f8ae7ed68f7db2b4b34a77bf6f53d8429e6f1e033b6b6",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        112,
+        0,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "chuy",
+      "class": 3,
+      "rarity": 2,
+      "source": "cat_chuy.svg",
+      "raster": "cat_chuy.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 9.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "64f7d8e9b2851f3585a494ddb1e983c6fcf792399273b1d2c7fda47e53a30e63",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        112,
+        0,
+        744,
+        711
+      ]
+    },
+    {
+      "id": "bua",
+      "class": 3,
+      "rarity": 3,
+      "source": "cat_bua.svg",
+      "raster": "cat_bua.png",
+      "canvas": [
+        256,
+        240
+      ],
+      "raster_size": [
+        768,
+        720
+      ],
+      "weapon_embedded": false,
+      "brown_strokes": [
+        {
+          "from": 30.0,
+          "to": 31.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 10.0,
+          "to": 9.0
+        },
+        {
+          "from": 6.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 9.0,
+          "to": 9.0
+        },
+        {
+          "from": 12.0,
+          "to": 9.0
+        },
+        {
+          "from": 13.0,
+          "to": 9.0
+        }
+      ],
+      "sha256": "450285a9c94c7ef3bf640a71b3d20e3c46e440c7d73a3f097918b356342d8ade",
+      "rendered_png_verified": true,
+      "alpha_bbox_px": [
+        70,
+        0,
+        744,
+        719
+      ]
+    }
+  ],
+  "front_paw": {
+    "svg": "front-paw.svg",
+    "png": "front-paw.png",
+    "source": "docs\\design\\2026-10-19\\weapon-redesign\\v6-nine-px\\sources\\front-paw.svg"
+  },
+  "native_render_verified": true,
+  "approved_v6_baseline_pixel_identical": [
+    "cat_kiem",
+    "front-paw"
+  ]
+}

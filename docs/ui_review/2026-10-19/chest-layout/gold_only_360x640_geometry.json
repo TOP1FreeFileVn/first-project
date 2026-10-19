@@ -1,0 +1,247 @@
+{
+	"actual": [
+		360,
+		640
+	],
+	"cards": [],
+	"controls": {
+		"ChestDoneButton": {
+			"design_rect": [
+				235.0,
+				696.0,
+				250.0,
+				88.0
+			],
+			"disabled": false,
+			"minimum_size": [
+				250.0,
+				88.0
+			],
+			"name": "ChestDoneButton",
+			"render_rect": [
+				117.5,
+				348.0,
+				125.0,
+				44.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"text": "XONG",
+			"type": "Button",
+			"visible": true
+		},
+		"ChestRewardGrid": {
+			"missing": true
+		},
+		"ChestSummary": {
+			"design_rect": [
+				30.0,
+				495.0,
+				660.0,
+				289.0
+			],
+			"minimum_size": [
+				660.0,
+				289.0
+			],
+			"name": "ChestSummary",
+			"render_rect": [
+				15.0,
+				247.5,
+				330.0,
+				144.5
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryButtons": {
+			"design_rect": [
+				30.0,
+				696.0,
+				660.0,
+				88.0
+			],
+			"minimum_size": [
+				250.0,
+				88.0
+			],
+			"name": "ChestSummaryButtons",
+			"render_rect": [
+				15.0,
+				348.0,
+				330.0,
+				44.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryFresh": {
+			"missing": true
+		},
+		"ChestSummaryGold": {
+			"design_rect": [
+				30.0,
+				636.0,
+				660.0,
+				40.0
+			],
+			"minimum_size": [
+				75.0,
+				40.0
+			],
+			"name": "ChestSummaryGold",
+			"render_rect": [
+				15.0,
+				318.0,
+				330.0,
+				20.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryHost": {
+			"design_rect": [
+				30.0,
+				70.0,
+				660.0,
+				1140.0
+			],
+			"minimum_size": [
+				660.0,
+				289.0
+			],
+			"name": "ChestSummaryHost",
+			"render_rect": [
+				15.0,
+				35.0,
+				330.0,
+				570.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		"ChestSummaryRewards": {
+			"design_rect": [
+				30.0,
+				636.0,
+				660.0,
+				40.0
+			],
+			"minimum_size": [
+				75.0,
+				40.0
+			],
+			"name": "ChestSummaryRewards",
+			"render_rect": [
+				15.0,
+				318.0,
+				330.0,
+				20.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryScroll": {
+			"design_rect": [
+				30.0,
+				636.0,
+				660.0,
+				40.0
+			],
+			"minimum_size": [
+				75.0,
+				40.0
+			],
+			"name": "ChestSummaryScroll",
+			"render_rect": [
+				15.0,
+				318.0,
+				330.0,
+				20.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"scroll_vertical": 0,
+			"type": "ScrollContainer",
+			"vertical_max": 40.0,
+			"vertical_page": 40.0,
+			"visible": true
+		},
+		"ChestTitle": {
+			"design_rect": [
+				200.0,
+				495.0,
+				320.0,
+				49.0
+			],
+			"minimum_size": [
+				320.0,
+				49.0
+			],
+			"name": "ChestTitle",
+			"render_rect": [
+				100.0,
+				247.5,
+				160.0,
+				24.5
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		"ChestViewTroopsButton": {
+			"missing": true
+		}
+	},
+	"file": "gold_only_360x640.png",
+	"layout_checks": {
+		"ChestDoneButton_inside_viewport": true,
+		"ChestSummaryButtons_inside_viewport": true,
+		"ChestSummary_inside_viewport": true,
+		"callback_button_matches_setup": true,
+		"card_count_matches_loot": true,
+		"summary_horizontal_center": true,
+		"summary_vertical_center": true
+	},
+	"requested": [
+		360,
+		640
+	],
+	"scenario": {
+		"action": "done",
+		"callback": false,
+		"cards": {},
+		"fast": true,
+		"gold": 83,
+		"name": "gold_only",
+		"new_ids": []
+	},
+	"stage": "summary"
+}

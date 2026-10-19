@@ -75,6 +75,7 @@ var twinkle := 0.0
 
 var _hint: Label
 var _skip: Button
+var _title: Control
 var _chest: Node2D
 var _front: Control
 var _card: Control
@@ -127,11 +128,12 @@ func _ready() -> void:
 	_hint.size = Vector2(SCREEN.x, 40)
 	_hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_hint)
-	var title := UiKit.ribbon(_chest_name, 26, UiKit.Ribbon.YELLOW)
-	title.position = Vector2(200, 70)
-	title.custom_minimum_size.x = 320
-	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	add_child(title)
+	_title = UiKit.ribbon(_chest_name, 26, UiKit.Ribbon.YELLOW)
+	_title.name = "ChestTitle"
+	_title.position = Vector2(200, 70)
+	_title.custom_minimum_size.x = 320
+	_title.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_title)
 	_skip = UiKit.button("BỎ QUA ≫", Vector2(170, 64), skip)
 	_skip.position = Vector2(530, 150)
 	add_child(_skip)
@@ -462,33 +464,67 @@ func _show_summary() -> void:
 	halo = 0.0
 	sweep = -1.0
 	twinkle = 0.0
-	ray_center = Vector2(360, 560)
 	ray_color = Economy.RARITY_COLORS[_best]
 	var fade := create_tween()
 	fade.tween_property(self, "ray_alpha", 0.45, 0.3)
 	fade.parallel().tween_property(self, "dim", 0.92, 0.3)
 
-	var box := UiKit.vbox(16)
-	box.position = Vector2(30, 190)
-	box.size = Vector2(SCREEN.x - 60, 0)
+	# Centre the whole result, including its title and actions. A short reward list
+	# should read as one celebration rather than a tiny row stranded at the top.
+	var host := CenterContainer.new()
+	host.name = "ChestSummaryHost"
+	host.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(host)
+	host.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	host.offset_left = 30
+	host.offset_right = -30
+	host.offset_top = 70
+	host.offset_bottom = -70
+	var box := UiKit.vbox(20)
+	box.name = "ChestSummary"
 	box.custom_minimum_size.x = SCREEN.x - 60
-	add_child(box)
-	var heading := UiKit.label("Nhận được", 30, UiKit.GOLD_TEXT)
+	box.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	host.add_child(box)
+	_title.reparent(box)
+	var heading := UiKit.label("Nhận được", 36, UiKit.GOLD_TEXT)
 	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	heading.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	box.add_child(heading)
+	# Only the rewards scroll when the list is long; actions stay visible below it.
+	var scroll := ScrollContainer.new()
+	scroll.name = "ChestSummaryScroll"
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	scroll.follow_focus = true
+	box.add_child(scroll)
+	var rewards := UiKit.vbox(18)
+	rewards.name = "ChestSummaryRewards"
+	rewards.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	rewards.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	scroll.add_child(rewards)
 	var grid := GridContainer.new()
-	grid.columns = 4 if _order.size() <= 8 else 5
-	grid.add_theme_constant_override("h_separation", 12)
-	grid.add_theme_constant_override("v_separation", 12)
+	grid.name = "ChestRewardGrid"
+	grid.columns = clampi(_order.size(), 1, 4)
+	grid.add_theme_constant_override("h_separation", 16)
+	grid.add_theme_constant_override("v_separation", 16)
 	grid.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	box.add_child(grid)
+	grid.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	# Leave room for the "Mới" tags above the card silhouettes.
+	if not _order.is_empty():
+		rewards.add_child(UiKit.gap(0, 14))
+		rewards.add_child(grid)
+	else:
+		grid.free()
+		grid = null
 	var ordered := _order.duplicate()
 	ordered.reverse()
-	var small := 0.62 if grid.columns == 4 else 0.56
+	var small := 1.12 if _order.size() <= 3 else 0.86
 	var delay := 0.0
 	for id in ordered:
 		var holder := Control.new()
+		holder.name = "Reward_" + id
 		holder.custom_minimum_size = CARD_SIZE * small
+		holder.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		grid.add_child(holder)
 		var card := _make_card(id, _loot["cards"][id], true)
 		card.scale = Vector2(small, small) * 0.2
@@ -498,23 +534,51 @@ func _show_summary() -> void:
 		delay += 0.05
 	if _loot.get("gold", 0) > 0:
 		var gold := UiKit.price("gold", _loot["gold"], 28)
-		box.add_child(gold)
+		gold.name = "ChestSummaryGold"
+		rewards.add_child(gold)
 	if not _new_ids.is_empty():
 		var names := []
 		for id in _new_ids:
 			names.append(PlayerData.TROOPS[id].display_name)
 		var fresh := UiKit.label("Lính mới: " + ", ".join(names), 20, UiKit.WARN)
+		fresh.name = "ChestSummaryFresh"
 		fresh.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		fresh.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		box.add_child(fresh)
+		fresh.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		rewards.add_child(fresh)
 	var buttons := UiKit.hbox(14)
+	buttons.name = "ChestSummaryButtons"
 	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
+	buttons.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	if _on_view_troops.is_valid():
-		buttons.add_child(UiKit.button("XEM LÍNH", Vector2(220, 76), func():
+		var view := UiKit.button("XEM LÍNH", Vector2(250, 88), func():
 			_close()
-			_on_view_troops.call(), true))
-	buttons.add_child(UiKit.button("XONG", Vector2(220, 76), _close))
+			_on_view_troops.call(), true)
+		view.name = "ChestViewTroopsButton"
+		buttons.add_child(view)
+	var done := UiKit.button("XONG", Vector2(250, 88), _close)
+	done.name = "ChestDoneButton"
+	buttons.add_child(done)
 	box.add_child(buttons)
+	var fit := func():
+		var fixed_height := _title.get_combined_minimum_size().y + heading.get_combined_minimum_size().y + buttons.get_combined_minimum_size().y + 60.0
+		var available := maxf(0.0, host.size.y - fixed_height)
+		var height := minf(rewards.get_combined_minimum_size().y, available)
+		if not is_equal_approx(scroll.custom_minimum_size.y, height):
+			scroll.custom_minimum_size.y = height
+	host.resized.connect(fit)
+	rewards.minimum_size_changed.connect(fit)
+	fit.call_deferred()
+	# Keep the celebration centred on the visible cards, also after container sorting.
+	var sync_light := func():
+		var focus: Control = grid if is_instance_valid(grid) else rewards
+		var visible_rewards := focus.get_global_rect().intersection(scroll.get_global_rect())
+		ray_center = visible_rewards.get_center() - global_position
+	box.item_rect_changed.connect(sync_light)
+	scroll.item_rect_changed.connect(sync_light)
+	rewards.item_rect_changed.connect(sync_light)
+	if is_instance_valid(grid):
+		grid.item_rect_changed.connect(sync_light)
 
 
 func _close() -> void:

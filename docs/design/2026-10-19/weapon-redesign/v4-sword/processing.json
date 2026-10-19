@@ -1,0 +1,36 @@
+{
+  "status": "awaiting_user_review",
+  "selected_iteration": 2,
+  "user_feedback": "8/10 on iteration 2",
+  "production_changed": false,
+  "background": "connected exterior near-white extraction",
+  "colors": "five flat material fields",
+  "contour": "original generated contour; no added dilation",
+  "placement": {
+    "angle_degrees": -32,
+    "unrotated_height_unit_px": 175,
+    "source_grip": [
+      512,
+      794
+    ],
+    "unit_grip": [
+      160,
+      166
+    ],
+    "front_paw_occlusion": true,
+    "weapon_bounds_unit_px": [
+      133.0,
+      50.67,
+      236.0,
+      197.67
+    ]
+  },
+  "user_scale_request": "Larger whole weapon to fit the cat contour; 175 vs previous 115 unit height (+52.2%)",
+  "source_cat": "../v3-ai/held-sources/cat_kiem.png",
+  "outputs": [
+    "processed/kiem.png",
+    "processed/unit_kiem.png",
+    "processed/unit_kiem_128.png",
+    "sword-v4-review.png"
+  ]
+}

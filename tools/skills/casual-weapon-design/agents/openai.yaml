@@ -1,0 +1,4 @@
+interface:
+  display_name: "Casual Weapon Design"
+  short_description: "Design casual-game weapons and wearable equipment"
+  default_prompt: "Use $casual-weapon-design to redesign these weapons or equipment for the game's style and show them on the character at their actual display size."

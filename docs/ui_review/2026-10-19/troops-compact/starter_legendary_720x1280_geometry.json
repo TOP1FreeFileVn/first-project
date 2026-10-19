@@ -1,0 +1,654 @@
+{
+	"cards": [
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					59.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					59.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					24.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_katana",
+				"native_rect": [
+					24.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"visible": true
+			},
+			"id": "katana",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					32.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 24.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					32.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"outline_design": 0,
+				"text": "Katana",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					230.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					230.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					195.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_dai_bac",
+				"native_rect": [
+					195.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"visible": true
+			},
+			"id": "dai_bac",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					203.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 24.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					203.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"outline_design": 0,
+				"text": "Đại Bác",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					401.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					401.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					366.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_dua_phep",
+				"native_rect": [
+					366.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"visible": true
+			},
+			"id": "dua_phep",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					374.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 24.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					374.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"outline_design": 0,
+				"text": "Đũa Phép",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					572.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					572.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					537.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_bua",
+				"native_rect": [
+					537.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"visible": true
+			},
+			"id": "bua",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					545.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 24.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					545.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"outline_design": 0,
+				"text": "Búa",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": false
+		}
+	],
+	"castle": 1,
+	"file": "starter_legendary_720x1280.png",
+	"filter": 3,
+	"grid": {
+		"design_rect": [
+			24.0,
+			528.0,
+			672.0,
+			240.0
+		],
+		"name": "TroopGrid",
+		"native_rect": [
+			24.0,
+			528.0,
+			672.0,
+			240.0
+		],
+		"visible": true
+	},
+	"key": "starter_legendary_720x1280",
+	"native_size": [
+		720,
+		1280
+	],
+	"slots": 3,
+	"team": [
+		"gay_phep",
+		"cung",
+		"chuy"
+	],
+	"team_slots": [
+		{
+			"design_rect": [
+				40.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_0",
+			"native_rect": [
+				40.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				169.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_1",
+			"native_rect": [
+				169.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				299.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_2",
+			"native_rect": [
+				299.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				428.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_3",
+			"native_rect": [
+				428.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				558.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_4",
+			"native_rect": [
+				558.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"visible": true
+		}
+	],
+	"top_labels": [
+		{
+			"design_rect": [
+				24.0,
+				128.0,
+				672.0,
+				46.0
+			],
+			"font_size_design": 32,
+			"font_size_native": 32.0,
+			"line_count": 1,
+			"name": "@Label@1014",
+			"native_rect": [
+				24.0,
+				128.0,
+				672.0,
+				46.0
+			],
+			"outline_design": 0,
+			"text": "Lính",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				40.0,
+				198.0,
+				158.0,
+				32.0
+			],
+			"font_size_design": 26,
+			"font_size_native": 26.0,
+			"line_count": 1,
+			"name": "@Label@1017",
+			"native_rect": [
+				40.0,
+				198.0,
+				158.0,
+				32.0
+			],
+			"outline_design": 0,
+			"text": "Đội hình 3/3",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				634.0,
+				199.0,
+				46.0,
+				29.0
+			],
+			"font_size_design": 24,
+			"font_size_native": 24.0,
+			"line_count": 1,
+			"name": "@Label@1020",
+			"native_rect": [
+				634.0,
+				199.0,
+				46.0,
+				29.0
+			],
+			"outline_design": 0,
+			"text": "724",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				46.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1024",
+			"native_rect": [
+				46.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"outline_design": 0,
+			"text": "Gậy Phép",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				46.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1025",
+			"native_rect": [
+				46.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				175.0,
+				309.0,
+				110.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1028",
+			"native_rect": [
+				175.0,
+				309.0,
+				110.0,
+				28.0
+			],
+			"outline_design": 0,
+			"text": "Cung",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				175.0,
+				337.0,
+				110.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1029",
+			"native_rect": [
+				175.0,
+				337.0,
+				110.0,
+				24.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				305.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1032",
+			"native_rect": [
+				305.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"outline_design": 0,
+			"text": "Chuỳ",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				305.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1033",
+			"native_rect": [
+				305.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				436.0,
+				316.0,
+				106.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1037",
+			"native_rect": [
+				436.0,
+				316.0,
+				106.0,
+				24.0
+			],
+			"outline_design": 0,
+			"text": "Thành 3",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				566.0,
+				316.0,
+				106.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1041",
+			"native_rect": [
+				566.0,
+				316.0,
+				106.0,
+				24.0
+			],
+			"outline_design": 0,
+			"text": "Thành 6",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				40.0,
+				380.0,
+				640.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 20.0,
+			"line_count": 1,
+			"name": "@Label@1043",
+			"native_rect": [
+				40.0,
+				380.0,
+				640.0,
+				24.0
+			],
+			"outline_design": 0,
+			"text": "Chạm xem chi tiết · Giữ và kéo để đổi đội",
+			"visible": true,
+			"visible_line_count": 1
+		}
+	]
+}

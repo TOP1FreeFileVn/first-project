@@ -1,0 +1,73 @@
+{
+  "native_size": [
+    450,
+    800
+  ],
+  "gif": "lobby_motion.gif",
+  "gif_frames": 32,
+  "gif_duration_ms": 4000,
+  "requested_fps": 8,
+  "real_time_source_frames": 32,
+  "real_time_first_ms": 26,
+  "real_time_last_ms": 3872,
+  "background_0_to_5": {
+    "changed_pixels": 13086,
+    "changed_percent": 3.635,
+    "mean_absolute_rgb_difference": [
+      0.47383888888888887,
+      0.3139194444444444,
+      0.17171666666666666
+    ],
+    "bounding_box": [
+      0,
+      52,
+      450,
+      799
+    ]
+  },
+  "background_5_to_10": {
+    "changed_pixels": 12257,
+    "changed_percent": 3.4047,
+    "mean_absolute_rgb_difference": [
+      0.39115555555555553,
+      0.28444444444444444,
+      0.20434166666666667
+    ],
+    "bounding_box": [
+      0,
+      53,
+      450,
+      800
+    ]
+  },
+  "real_time_first_to_last": {
+    "changed_pixels": 8883,
+    "changed_percent": 2.4675,
+    "mean_absolute_rgb_difference": [
+      0.2926916666666667,
+      0.21704166666666666,
+      0.15741388888888888
+    ],
+    "bounding_box": [
+      0,
+      53,
+      450,
+      800
+    ]
+  },
+  "foreground_sha256_at_0_5_10": [
+    "b712f9ec815c6790ca2181a2e5d1aafb18ff259a95ce24a79762de2dced5a8a1",
+    "b712f9ec815c6790ca2181a2e5d1aafb18ff259a95ce24a79762de2dced5a8a1",
+    "b712f9ec815c6790ca2181a2e5d1aafb18ff259a95ce24a79762de2dced5a8a1"
+  ],
+  "castle_background_difference_from_lobby_at_5": {
+    "changed_pixels": 0,
+    "changed_percent": 0.0,
+    "mean_absolute_rgb_difference": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "bounding_box": null
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "scope": "4 carry references and 5 fixed modular equipment layers",
+  "production_modified": false,
+  "attack_animation_implemented": false,
+  "failures": [
+    "melee: mouth has 11 covered source ink pixels"
+  ],
+  "poses": [
+    {
+      "id": "melee",
+      "face": {
+        "brows": {
+          "source_ink_pixels": 4276,
+          "covered_ink_pixels": 0
+        },
+        "eyes": {
+          "source_ink_pixels": 5028,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "source_ink_pixels": 3263,
+          "covered_ink_pixels": 11
+        }
+      },
+      "edge_pixels": 0,
+      "fixed_layer_reconstruction_mismatch_pixels": 0,
+      "weapon_bounds_unit_px": [
+        129.0,
+        54.666666666666664,
+        244.0,
+        201.0
+      ],
+      "target_grip": [
+        160,
+        166
+      ],
+      "sprite_alpha_bbox_source_px": [
+        52,
+        5,
+        744,
+        719
+      ]
+    },
+    {
+      "id": "ranged",
+      "face": {
+        "brows": {
+          "source_ink_pixels": 4276,
+          "covered_ink_pixels": 0
+        },
+        "eyes": {
+          "source_ink_pixels": 5028,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "source_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "edge_pixels": 0,
+      "fixed_layer_reconstruction_mismatch_pixels": 0,
+      "weapon_bounds_unit_px": [
+        146.33333333333334,
+        111.66666666666667,
+        195.33333333333334,
+        218.66666666666666
+      ],
+      "target_grip": [
+        160,
+        166
+      ],
+      "sprite_alpha_bbox_source_px": [
+        52,
+        5,
+        744,
+        719
+      ]
+    },
+    {
+      "id": "magic",
+      "face": {
+        "brows": {
+          "source_ink_pixels": 4276,
+          "covered_ink_pixels": 0
+        },
+        "eyes": {
+          "source_ink_pixels": 5028,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "source_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "edge_pixels": 0,
+      "fixed_layer_reconstruction_mismatch_pixels": 0,
+      "weapon_bounds_unit_px": [
+        121.66666666666667,
+        97.0,
+        229.66666666666666,
+        203.33333333333334
+      ],
+      "target_grip": [
+        160,
+        166
+      ],
+      "sprite_alpha_bbox_source_px": [
+        52,
+        5,
+        744,
+        719
+      ]
+    },
+    {
+      "id": "heavy",
+      "face": {
+        "brows": {
+          "source_ink_pixels": 4276,
+          "covered_ink_pixels": 0
+        },
+        "eyes": {
+          "source_ink_pixels": 5028,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "source_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "edge_pixels": 0,
+      "fixed_layer_reconstruction_mismatch_pixels": 0,
+      "weapon_bounds_unit_px": [
+        120.0,
+        105.33333333333333,
+        252.66666666666666,
+        204.0
+      ],
+      "target_grip": [
+        160,
+        166
+      ],
+      "sprite_alpha_bbox_source_px": [
+        52,
+        5,
+        758,
+        719
+      ]
+    }
+  ],
+  "layers": [
+    {
+      "id": "helmet",
+      "canvas": [
+        768,
+        720
+      ],
+      "bbox_unit_px": [
+        38.666666666666664,
+        1.6666666666666667,
+        217.33333333333334,
+        77.0
+      ],
+      "sha256": "821aac3cb500083242726c7d358239b746929bafaeaeabb980a8c445b477312e",
+      "icon_alpha_bboxes": {
+        "48": [
+          3,
+          15,
+          45,
+          33
+        ],
+        "64": [
+          3,
+          20,
+          61,
+          44
+        ],
+        "96": [
+          3,
+          29,
+          93,
+          67
+        ]
+      }
+    },
+    {
+      "id": "armor",
+      "canvas": [
+        768,
+        720
+      ],
+      "bbox_unit_px": [
+        60.333333333333336,
+        129.66666666666666,
+        195.66666666666666,
+        209.33333333333334
+      ],
+      "sha256": "fd316fd2967eb95fc85f8df2f4541791bb93037860e6441bc51b5ae5a37480ed",
+      "icon_alpha_bboxes": {
+        "48": [
+          3,
+          11,
+          45,
+          36
+        ],
+        "64": [
+          3,
+          15,
+          61,
+          49
+        ],
+        "96": [
+          3,
+          21,
+          93,
+          74
+        ]
+      }
+    },
+    {
+      "id": "gloves",
+      "canvas": [
+        768,
+        720
+      ],
+      "bbox_unit_px": [
+        72.0,
+        144.0,
+        182.0,
+        187.66666666666666
+      ],
+      "sha256": "7f3c6c341d47b0d65a44d84fdc9d17e054ba285165229dbbb01c4d1aa62734ab",
+      "icon_alpha_bboxes": {
+        "48": [
+          3,
+          15,
+          45,
+          32
+        ],
+        "64": [
+          3,
+          20,
+          61,
+          43
+        ],
+        "96": [
+          3,
+          30,
+          93,
+          66
+        ]
+      }
+    },
+    {
+      "id": "boots",
+      "canvas": [
+        768,
+        720
+      ],
+      "bbox_unit_px": [
+        59.666666666666664,
+        191.0,
+        196.33333333333334,
+        227.66666666666666
+      ],
+      "sha256": "094674ec39c9221c2871fe770247f722f82713f02b09c4b6edc8922ea9634fd0",
+      "icon_alpha_bboxes": {
+        "48": [
+          3,
+          18,
+          45,
+          29
+        ],
+        "64": [
+          3,
+          24,
+          61,
+          40
+        ],
+        "96": [
+          3,
+          36,
+          93,
+          60
+        ]
+      }
+    },
+    {
+      "id": "amulet",
+      "canvas": [
+        768,
+        720
+      ],
+      "bbox_unit_px": [
+        113.33333333333333,
+        140.33333333333334,
+        142.66666666666666,
+        177.66666666666666
+      ],
+      "sha256": "6b472d777e95c31ee9f199dca664be152d55f176b3c4e120cd95859cee1d3ce6",
+      "icon_alpha_bboxes": {
+        "48": [
+          7,
+          3,
+          40,
+          45
+        ],
+        "64": [
+          9,
+          3,
+          55,
+          61
+        ],
+        "96": [
+          12,
+          3,
+          83,
+          93
+        ]
+      }
+    }
+  ],
+  "native": null,
+  "passed": false
+}

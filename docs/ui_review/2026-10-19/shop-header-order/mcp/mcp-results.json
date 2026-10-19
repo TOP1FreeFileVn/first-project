@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "docs/ui_review/2026-10-19/shop-header-order/ShopHeaderOrderPreview.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nSHOP_HEADER_ORDER_USER_DIR C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/shop-header-order/mcp/profile/Godot/app_userdata/Gear Defenders\r\nSHOP_HEADER_ORDER_CHECK nav_shop_450x800 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_450x800_header_position PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_450x800_roof_sign_visibility PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_450x800_content_position PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_native_size PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_header_below_roof PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_offers_keep_y307 PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_no_scrollbar PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_offer_0_fits PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_offer_1_fits PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_offer_2_fits PASS\r\nSHOP_HEADER_ORDER_CHECK shop_450x800_offer_3_fits PASS\r\nSHOP_HEADER_ORDER_CAPTURE shop_450x800 native=(450, 800)\r\nSHOP_HEADER_ORDER_CHECK profile_450x800_actual_hit_opens_popup PASS\r\nSHOP_HEADER_ORDER_CHECK profile_450x800_actual_close_returns_to_shop PASS\r\nSHOP_HEADER_ORDER_CHECK settings_450x800_actual_hit_opens_popup PASS\r\nSHOP_HEADER_ORDER_CHECK settings_450x800_actual_close_returns_to_shop PASS\r\nSHOP_HEADER_ORDER_CHECK GoldButton_shifted_hit_450x800 PASS\r\nSHOP_HEADER_ORDER_CHECK GemsButton_shifted_hit_450x800 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_450x800 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_450x800_header_position PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_450x800_roof_sign_visibility PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_450x800_content_position PASS\r\nSHOP_HEADER_ORDER_CHECK battle_450x800_native_size PASS\r\nSHOP_HEADER_ORDER_CAPTURE battle_450x800 native=(450, 800)\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_450x800 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_450x800_header_position PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_450x800_roof_sign_visibility PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_450x800_content_position PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_360x640 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_360x640_header_position PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_360x640_roof_sign_visibility PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_360x640_content_position PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_native_size PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_header_below_roof PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_offers_keep_y307 PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_no_scrollbar PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_offer_0_fits PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_offer_1_fits PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_offer_2_fits PASS\r\nSHOP_HEADER_ORDER_CHECK shop_360x640_offer_3_fits PASS\r\nSHOP_HEADER_ORDER_CAPTURE shop_360x640 native=(360, 640)\r\nSHOP_HEADER_ORDER_CHECK profile_360x640_actual_hit_opens_popup PASS\r\nSHOP_HEADER_ORDER_CHECK profile_360x640_actual_close_returns_to_shop PASS\r\nSHOP_HEADER_ORDER_CHECK settings_360x640_actual_hit_opens_popup PASS\r\nSHOP_HEADER_ORDER_CHECK settings_360x640_actual_close_returns_to_shop PASS\r\nSHOP_HEADER_ORDER_CHECK GoldButton_shifted_hit_360x640 PASS\r\nSHOP_HEADER_ORDER_CHECK GemsButton_shifted_hit_360x640 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_360x640 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_360x640_header_position PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_360x640_roof_sign_visibility PASS\r\nSHOP_HEADER_ORDER_CHECK nav_battle_360x640_content_position PASS\r\nSHOP_HEADER_ORDER_CHECK battle_360x640_native_size PASS\r\nSHOP_HEADER_ORDER_CAPTURE battle_360x640 native=(360, 640)\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_360x640 PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_360x640_header_position PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_360x640_roof_sign_visibility PASS\r\nSHOP_HEADER_ORDER_CHECK nav_shop_return_360x640_content_position PASS\r\nSHOP_HEADER_ORDER_COMPLETE 4 native images; 54 checks; failures=0\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

@@ -1,0 +1,5890 @@
+{
+	"actual": [
+		450,
+		800
+	],
+	"essential_bounds": {
+		"background": true,
+		"navigation": true
+	},
+	"file": "troops_450x800.png",
+	"footer": "troops_450x800_footer.png",
+	"geometry": {
+		"controls": {
+			"background": {
+				"children": [],
+				"minimum": [
+					0.0,
+					0.0
+				],
+				"name": "MenuBackground",
+				"rect": [
+					0.0,
+					0.0,
+					720.0,
+					1280.0
+				],
+				"type": "ColorRect",
+				"visible": true
+			},
+			"navigation": {
+				"children": [
+					{
+						"children": [
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1696",
+																"rect": [
+																	108.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1693",
+														"rect": [
+															22.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1694",
+												"rect": [
+													13.0,
+													1146.0,
+													119.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1695",
+										"rect": [
+											9.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1719",
+										"rect": [
+											9.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1697",
+								"rect": [
+									6.0,
+									1120.0,
+									133.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1701",
+																"rect": [
+																	242.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1698",
+														"rect": [
+															156.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1699",
+												"rect": [
+													146.0,
+													1146.0,
+													120.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1700",
+										"rect": [
+											142.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1720",
+										"rect": [
+											142.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1702",
+								"rect": [
+									139.0,
+									1120.0,
+									134.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1706",
+																"rect": [
+																	375.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1703",
+														"rect": [
+															289.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1704",
+												"rect": [
+													280.0,
+													1146.0,
+													119.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1705",
+										"rect": [
+											276.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1721",
+										"rect": [
+											276.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1707",
+								"rect": [
+									273.0,
+									1120.0,
+									133.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"minimum": [
+															94.0,
+															94.0
+														],
+														"name": "@TextureRect@1710",
+														"rect": [
+															446.0,
+															1134.0,
+															94.0,
+															94.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													0.0,
+													100.0
+												],
+												"name": "@Control@1709",
+												"rect": [
+													406.0,
+													1138.0,
+													174.0,
+													100.0
+												],
+												"type": "Control",
+												"visible": true
+											},
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"font_size": 24,
+																"minimum": [
+																	54.0,
+																	34.0
+																],
+																"name": "SelectedNavCaption",
+																"rect": [
+																	410.0,
+																	1240.0,
+																	166.0,
+																	34.0
+																],
+																"text": "Lính",
+																"text_width": 54.0,
+																"type": "Label",
+																"visible": true
+															},
+															{
+																"children": [],
+																"minimum": [
+																	0.0,
+																	24.0
+																],
+																"name": "@Control@1712",
+																"rect": [
+																	410.0,
+																	1274.0,
+																	166.0,
+																	24.0
+																],
+																"type": "Control",
+																"visible": true
+															}
+														],
+														"minimum": [
+															54.0,
+															58.0
+														],
+														"name": "@VBoxContainer@1711",
+														"rect": [
+															410.0,
+															1240.0,
+															166.0,
+															58.0
+														],
+														"type": "VBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													62.0,
+													60.0
+												],
+												"name": "SelectedNavFooter",
+												"rect": [
+													406.0,
+													1238.0,
+													174.0,
+													60.0
+												],
+												"type": "PanelContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											62.0,
+											160.0
+										],
+										"name": "@VBoxContainer@1708",
+										"rect": [
+											406.0,
+											1126.0,
+											174.0,
+											172.0
+										],
+										"type": "VBoxContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1722",
+										"rect": [
+											406.0,
+											1126.0,
+											174.0,
+											172.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									62.0,
+									166.0
+								],
+								"name": "@PanelContainer@1713",
+								"rect": [
+									406.0,
+									1120.0,
+									174.0,
+									178.0
+								],
+								"type": "PanelContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1714",
+														"rect": [
+															597.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1715",
+												"rect": [
+													587.0,
+													1146.0,
+													120.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1716",
+										"rect": [
+											583.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1723",
+										"rect": [
+											583.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1717",
+								"rect": [
+									580.0,
+									1120.0,
+									134.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							}
+						],
+						"minimum": [
+							518.0,
+							166.0
+						],
+						"name": "@HBoxContainer@1718",
+						"rect": [
+							6.0,
+							1120.0,
+							708.0,
+							178.0
+						],
+						"type": "HBoxContainer",
+						"visible": true
+					}
+				],
+				"minimum": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1282",
+				"rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			}
+		},
+		"kind": "troops",
+		"selected_tab": 3
+	},
+	"native_render": true,
+	"requested": [
+		450,
+		800
+	],
+	"visible_controls": [
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "Home",
+			"path": "/root/MenuPolishPreview/Home",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "MenuBackground",
+			"path": "/root/MenuPolishPreview/Home/MenuBackground",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "ColorRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@923",
+			"path": "/root/MenuPolishPreview/Home/@Control@923",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1161",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				720.0,
+				0.0
+			],
+			"name": "@ScrollContainer@1156",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156",
+			"rect": [
+				0.0,
+				522.0,
+				720.0,
+				598.0
+			],
+			"type": "ScrollContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				712.0,
+				1088.0
+			],
+			"name": "@MarginContainer@1157",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157",
+			"rect": [
+				0.0,
+				522.0,
+				712.0,
+				1088.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				664.0,
+				1002.0
+			],
+			"name": "@VBoxContainer@1158",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158",
+			"rect": [
+				24.0,
+				538.0,
+				664.0,
+				1002.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				664.0,
+				1002.0
+			],
+			"name": "TroopGrid",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid",
+			"rect": [
+				24.0,
+				538.0,
+				664.0,
+				1002.0
+			],
+			"type": "GridContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_kiem",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem",
+			"rect": [
+				24.0,
+				538.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				221.0
+			],
+			"name": "@VBoxContainer@1657",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657",
+			"rect": [
+				32.0,
+				546.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopRarityField",
+			"rect": [
+				32.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				32.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1658",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopRarityField/@CenterContainer@1658",
+			"rect": [
+				32.0,
+				572.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopRarityField/@CenterContainer@1658/TroopPortrait",
+			"rect": [
+				42.0,
+				576.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				63.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopCardDetails",
+			"rect": [
+				32.0,
+				704.0,
+				141.0,
+				63.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopCardDetails/TroopName",
+			"rect": [
+				32.0,
+				704.0,
+				141.0,
+				34.0
+			],
+			"text": "Kiếm",
+			"text_width": 64.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				29.0
+			],
+			"name": "TroopStars",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopCardDetails/TroopStars",
+			"rect": [
+				32.0,
+				738.0,
+				141.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "TroopStar_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/@VBoxContainer@1657/TroopCardDetails/TroopStars/TroopStar_1",
+			"rect": [
+				88.0,
+				738.0,
+				28.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				30.0
+			],
+			"name": "TroopLevelBadge",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/TroopLevelBadge",
+			"rect": [
+				93.0,
+				546.0,
+				80.0,
+				30.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				55.0,
+				29.0
+			],
+			"name": "TroopLevel",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/TroopLevelBadge/TroopLevel",
+			"rect": [
+				93.0,
+				546.0,
+				80.0,
+				30.0
+			],
+			"text": "Cấp 6",
+			"text_width": 55.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopInTeam",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/TroopInTeam",
+			"rect": [
+				32.0,
+				546.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopStarReady",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_kiem/TroopStarReady",
+			"rect": [
+				64.0,
+				546.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_riu",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu",
+			"rect": [
+				193.0,
+				538.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				221.0
+			],
+			"name": "@VBoxContainer@1659",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659",
+			"rect": [
+				201.0,
+				546.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopRarityField",
+			"rect": [
+				201.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				201.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1660",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopRarityField/@CenterContainer@1660",
+			"rect": [
+				201.0,
+				572.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopRarityField/@CenterContainer@1660/TroopPortrait",
+			"rect": [
+				211.0,
+				576.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				63.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopCardDetails",
+			"rect": [
+				201.0,
+				704.0,
+				141.0,
+				63.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopCardDetails/TroopName",
+			"rect": [
+				201.0,
+				704.0,
+				141.0,
+				34.0
+			],
+			"text": "Rìu",
+			"text_width": 40.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				29.0
+			],
+			"name": "TroopStars",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopCardDetails/TroopStars",
+			"rect": [
+				201.0,
+				738.0,
+				141.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "TroopStar_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/@VBoxContainer@1659/TroopCardDetails/TroopStars/TroopStar_1",
+			"rect": [
+				257.0,
+				738.0,
+				28.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				30.0
+			],
+			"name": "TroopLevelBadge",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/TroopLevelBadge",
+			"rect": [
+				262.0,
+				546.0,
+				80.0,
+				30.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "TroopLevel",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/TroopLevelBadge/TroopLevel",
+			"rect": [
+				262.0,
+				546.0,
+				80.0,
+				30.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopLevelReady",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_riu/TroopLevelReady",
+			"rect": [
+				201.0,
+				546.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_dao",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao",
+			"rect": [
+				362.0,
+				538.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1661",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661",
+			"rect": [
+				370.0,
+				546.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopRarityField",
+			"rect": [
+				370.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				370.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1662",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopRarityField/@CenterContainer@1662",
+			"rect": [
+				370.0,
+				572.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopRarityField/@CenterContainer@1662/TroopLockedPortrait",
+			"rect": [
+				380.0,
+				576.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopRarityField/@CenterContainer@1662/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				380.0,
+				576.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopRarityField/@CenterContainer@1662/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				380.0,
+				576.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopCardDetails",
+			"rect": [
+				370.0,
+				704.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dao/@VBoxContainer@1661/TroopCardDetails/TroopName",
+			"rect": [
+				370.0,
+				704.0,
+				141.0,
+				34.0
+			],
+			"text": "Đao",
+			"text_width": 50.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_katana",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana",
+			"rect": [
+				531.0,
+				538.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				221.0
+			],
+			"name": "@VBoxContainer@1663",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663",
+			"rect": [
+				539.0,
+				546.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopRarityField",
+			"rect": [
+				539.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				539.0,
+				546.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1665",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopRarityField/@CenterContainer@1665",
+			"rect": [
+				539.0,
+				572.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopRarityField/@CenterContainer@1665/TroopPortrait",
+			"rect": [
+				549.0,
+				576.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				36.0,
+				36.0
+			],
+			"name": "@Control@1664",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopRarityField/@CenterContainer@1665/TroopPortrait/@Control@1664",
+			"rect": [
+				592.200012207031,
+				573.599975585938,
+				36.0,
+				36.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				63.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopCardDetails",
+			"rect": [
+				539.0,
+				704.0,
+				141.0,
+				63.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopCardDetails/TroopName",
+			"rect": [
+				539.0,
+				704.0,
+				141.0,
+				34.0
+			],
+			"text": "Katana",
+			"text_width": 94.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				29.0
+			],
+			"name": "TroopStars",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopCardDetails/TroopStars",
+			"rect": [
+				539.0,
+				738.0,
+				141.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "TroopStar_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/@VBoxContainer@1663/TroopCardDetails/TroopStars/TroopStar_1",
+			"rect": [
+				595.0,
+				738.0,
+				28.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				30.0
+			],
+			"name": "TroopLevelBadge",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/TroopLevelBadge",
+			"rect": [
+				600.0,
+				546.0,
+				80.0,
+				30.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "TroopLevel",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/TroopLevelBadge/TroopLevel",
+			"rect": [
+				600.0,
+				546.0,
+				80.0,
+				30.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopLevelReady",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_katana/TroopLevelReady",
+			"rect": [
+				539.0,
+				546.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_cung",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung",
+			"rect": [
+				24.0,
+				792.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				221.0
+			],
+			"name": "@VBoxContainer@1666",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666",
+			"rect": [
+				32.0,
+				800.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopRarityField",
+			"rect": [
+				32.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				32.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1667",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopRarityField/@CenterContainer@1667",
+			"rect": [
+				32.0,
+				826.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopRarityField/@CenterContainer@1667/TroopPortrait",
+			"rect": [
+				42.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				63.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopCardDetails",
+			"rect": [
+				32.0,
+				958.0,
+				141.0,
+				63.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopCardDetails/TroopName",
+			"rect": [
+				32.0,
+				958.0,
+				141.0,
+				34.0
+			],
+			"text": "Cung",
+			"text_width": 62.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				29.0
+			],
+			"name": "TroopStars",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopCardDetails/TroopStars",
+			"rect": [
+				32.0,
+				992.0,
+				141.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "TroopStar_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/@VBoxContainer@1666/TroopCardDetails/TroopStars/TroopStar_1",
+			"rect": [
+				88.0,
+				992.0,
+				28.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				30.0
+			],
+			"name": "TroopLevelBadge",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/TroopLevelBadge",
+			"rect": [
+				93.0,
+				800.0,
+				80.0,
+				30.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "TroopLevel",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/TroopLevelBadge/TroopLevel",
+			"rect": [
+				93.0,
+				800.0,
+				80.0,
+				30.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopInTeam",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/TroopInTeam",
+			"rect": [
+				32.0,
+				800.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopLevelReady",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cung/TroopLevelReady",
+			"rect": [
+				64.0,
+				800.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_no",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no",
+			"rect": [
+				193.0,
+				792.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1668",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668",
+			"rect": [
+				201.0,
+				800.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopRarityField",
+			"rect": [
+				201.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				201.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1669",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopRarityField/@CenterContainer@1669",
+			"rect": [
+				201.0,
+				826.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopRarityField/@CenterContainer@1669/TroopLockedPortrait",
+			"rect": [
+				211.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopRarityField/@CenterContainer@1669/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				211.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopRarityField/@CenterContainer@1669/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				211.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopCardDetails",
+			"rect": [
+				201.0,
+				958.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_no/@VBoxContainer@1668/TroopCardDetails/TroopName",
+			"rect": [
+				201.0,
+				958.0,
+				141.0,
+				34.0
+			],
+			"text": "Nỏ",
+			"text_width": 33.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_sung",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung",
+			"rect": [
+				362.0,
+				792.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1670",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670",
+			"rect": [
+				370.0,
+				800.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopRarityField",
+			"rect": [
+				370.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				370.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1671",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopRarityField/@CenterContainer@1671",
+			"rect": [
+				370.0,
+				826.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopRarityField/@CenterContainer@1671/TroopLockedPortrait",
+			"rect": [
+				380.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopRarityField/@CenterContainer@1671/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				380.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopRarityField/@CenterContainer@1671/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				380.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopCardDetails",
+			"rect": [
+				370.0,
+				958.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sung/@VBoxContainer@1670/TroopCardDetails/TroopName",
+			"rect": [
+				370.0,
+				958.0,
+				141.0,
+				34.0
+			],
+			"text": "Súng",
+			"text_width": 62.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_dai_bac",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac",
+			"rect": [
+				531.0,
+				792.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1672",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672",
+			"rect": [
+				539.0,
+				800.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopRarityField",
+			"rect": [
+				539.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				539.0,
+				800.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1674",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopRarityField/@CenterContainer@1674",
+			"rect": [
+				539.0,
+				826.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopRarityField/@CenterContainer@1674/TroopLockedPortrait",
+			"rect": [
+				549.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopRarityField/@CenterContainer@1674/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				549.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				36.0,
+				36.0
+			],
+			"name": "@Control@1673",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopRarityField/@CenterContainer@1674/TroopLockedPortrait/TroopPortrait/@Control@1673",
+			"rect": [
+				592.200012207031,
+				827.599975585938,
+				36.0,
+				36.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopRarityField/@CenterContainer@1674/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				549.0,
+				830.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopCardDetails",
+			"rect": [
+				539.0,
+				958.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dai_bac/@VBoxContainer@1672/TroopCardDetails/TroopName",
+			"rect": [
+				539.0,
+				958.0,
+				141.0,
+				34.0
+			],
+			"text": "Đại Bác",
+			"text_width": 94.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_gay_phep",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep",
+			"rect": [
+				24.0,
+				1046.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				221.0
+			],
+			"name": "@VBoxContainer@1675",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675",
+			"rect": [
+				32.0,
+				1054.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopRarityField",
+			"rect": [
+				32.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				32.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1676",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopRarityField/@CenterContainer@1676",
+			"rect": [
+				32.0,
+				1080.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopRarityField/@CenterContainer@1676/TroopPortrait",
+			"rect": [
+				42.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				63.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopCardDetails",
+			"rect": [
+				32.0,
+				1212.0,
+				141.0,
+				63.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopCardDetails/TroopName",
+			"rect": [
+				32.0,
+				1212.0,
+				141.0,
+				34.0
+			],
+			"text": "Gậy Phép",
+			"text_width": 115.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				29.0
+			],
+			"name": "TroopStars",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopCardDetails/TroopStars",
+			"rect": [
+				32.0,
+				1246.0,
+				141.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "TroopStar_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/@VBoxContainer@1675/TroopCardDetails/TroopStars/TroopStar_1",
+			"rect": [
+				88.0,
+				1246.0,
+				28.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				30.0
+			],
+			"name": "TroopLevelBadge",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/TroopLevelBadge",
+			"rect": [
+				93.0,
+				1054.0,
+				80.0,
+				30.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "TroopLevel",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/TroopLevelBadge/TroopLevel",
+			"rect": [
+				93.0,
+				1054.0,
+				80.0,
+				30.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopLevelReady",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_gay_phep/TroopLevelReady",
+			"rect": [
+				32.0,
+				1054.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_thuoc",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc",
+			"rect": [
+				193.0,
+				1046.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				221.0
+			],
+			"name": "@VBoxContainer@1677",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677",
+			"rect": [
+				201.0,
+				1054.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopRarityField",
+			"rect": [
+				201.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				201.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1678",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopRarityField/@CenterContainer@1678",
+			"rect": [
+				201.0,
+				1080.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopRarityField/@CenterContainer@1678/TroopPortrait",
+			"rect": [
+				211.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				63.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopCardDetails",
+			"rect": [
+				201.0,
+				1212.0,
+				141.0,
+				63.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopCardDetails/TroopName",
+			"rect": [
+				201.0,
+				1212.0,
+				141.0,
+				34.0
+			],
+			"text": "Bình Thuốc",
+			"text_width": 135.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				29.0
+			],
+			"name": "TroopStars",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopCardDetails/TroopStars",
+			"rect": [
+				201.0,
+				1246.0,
+				141.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "TroopStar_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/@VBoxContainer@1677/TroopCardDetails/TroopStars/TroopStar_1",
+			"rect": [
+				257.0,
+				1246.0,
+				28.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				30.0
+			],
+			"name": "TroopLevelBadge",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/TroopLevelBadge",
+			"rect": [
+				262.0,
+				1054.0,
+				80.0,
+				30.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "TroopLevel",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/TroopLevelBadge/TroopLevel",
+			"rect": [
+				262.0,
+				1054.0,
+				80.0,
+				30.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopInTeam",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/TroopInTeam",
+			"rect": [
+				201.0,
+				1054.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopLevelReady",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_thuoc/TroopLevelReady",
+			"rect": [
+				233.0,
+				1054.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_sach_phep",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep",
+			"rect": [
+				362.0,
+				1046.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1679",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679",
+			"rect": [
+				370.0,
+				1054.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopRarityField",
+			"rect": [
+				370.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				370.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1680",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopRarityField/@CenterContainer@1680",
+			"rect": [
+				370.0,
+				1080.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopRarityField/@CenterContainer@1680/TroopLockedPortrait",
+			"rect": [
+				380.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopRarityField/@CenterContainer@1680/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				380.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopRarityField/@CenterContainer@1680/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				380.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopCardDetails",
+			"rect": [
+				370.0,
+				1212.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_sach_phep/@VBoxContainer@1679/TroopCardDetails/TroopName",
+			"rect": [
+				370.0,
+				1212.0,
+				141.0,
+				34.0
+			],
+			"text": "Sách Phép",
+			"text_width": 125.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_dua_phep",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep",
+			"rect": [
+				531.0,
+				1046.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1681",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681",
+			"rect": [
+				539.0,
+				1054.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopRarityField",
+			"rect": [
+				539.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				539.0,
+				1054.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1683",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopRarityField/@CenterContainer@1683",
+			"rect": [
+				539.0,
+				1080.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopRarityField/@CenterContainer@1683/TroopLockedPortrait",
+			"rect": [
+				549.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopRarityField/@CenterContainer@1683/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				549.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				36.0,
+				36.0
+			],
+			"name": "@Control@1682",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopRarityField/@CenterContainer@1683/TroopLockedPortrait/TroopPortrait/@Control@1682",
+			"rect": [
+				592.200012207031,
+				1081.59997558594,
+				36.0,
+				36.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopRarityField/@CenterContainer@1683/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				549.0,
+				1084.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopCardDetails",
+			"rect": [
+				539.0,
+				1212.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_dua_phep/@VBoxContainer@1681/TroopCardDetails/TroopName",
+			"rect": [
+				539.0,
+				1212.0,
+				141.0,
+				34.0
+			],
+			"text": "Đũa Phép",
+			"text_width": 117.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_giao",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao",
+			"rect": [
+				24.0,
+				1300.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				221.0
+			],
+			"name": "@VBoxContainer@1684",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684",
+			"rect": [
+				32.0,
+				1308.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopRarityField",
+			"rect": [
+				32.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				32.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1685",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopRarityField/@CenterContainer@1685",
+			"rect": [
+				32.0,
+				1334.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopRarityField/@CenterContainer@1685/TroopPortrait",
+			"rect": [
+				42.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				63.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopCardDetails",
+			"rect": [
+				32.0,
+				1466.0,
+				141.0,
+				63.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopCardDetails/TroopName",
+			"rect": [
+				32.0,
+				1466.0,
+				141.0,
+				34.0
+			],
+			"text": "Giáo",
+			"text_width": 56.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				29.0
+			],
+			"name": "TroopStars",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopCardDetails/TroopStars",
+			"rect": [
+				32.0,
+				1500.0,
+				141.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "TroopStar_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/@VBoxContainer@1684/TroopCardDetails/TroopStars/TroopStar_1",
+			"rect": [
+				88.0,
+				1500.0,
+				28.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				30.0
+			],
+			"name": "TroopLevelBadge",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/TroopLevelBadge",
+			"rect": [
+				93.0,
+				1308.0,
+				80.0,
+				30.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "TroopLevel",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/TroopLevelBadge/TroopLevel",
+			"rect": [
+				93.0,
+				1308.0,
+				80.0,
+				30.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopInTeam",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/TroopInTeam",
+			"rect": [
+				32.0,
+				1308.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				24.0,
+				24.0
+			],
+			"name": "TroopLevelReady",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_giao/TroopLevelReady",
+			"rect": [
+				64.0,
+				1308.0,
+				24.0,
+				24.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_cu_kiem",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem",
+			"rect": [
+				193.0,
+				1300.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1686",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686",
+			"rect": [
+				201.0,
+				1308.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopRarityField",
+			"rect": [
+				201.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				201.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1687",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopRarityField/@CenterContainer@1687",
+			"rect": [
+				201.0,
+				1334.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopRarityField/@CenterContainer@1687/TroopLockedPortrait",
+			"rect": [
+				211.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopRarityField/@CenterContainer@1687/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				211.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopRarityField/@CenterContainer@1687/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				211.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopCardDetails",
+			"rect": [
+				201.0,
+				1466.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_cu_kiem/@VBoxContainer@1686/TroopCardDetails/TroopName",
+			"rect": [
+				201.0,
+				1466.0,
+				141.0,
+				34.0
+			],
+			"text": "Cự Kiếm",
+			"text_width": 99.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_chuy",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy",
+			"rect": [
+				362.0,
+				1300.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1688",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688",
+			"rect": [
+				370.0,
+				1308.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopRarityField",
+			"rect": [
+				370.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				370.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1689",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopRarityField/@CenterContainer@1689",
+			"rect": [
+				370.0,
+				1334.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopRarityField/@CenterContainer@1689/TroopLockedPortrait",
+			"rect": [
+				380.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopRarityField/@CenterContainer@1689/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				380.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopRarityField/@CenterContainer@1689/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				380.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopCardDetails",
+			"rect": [
+				370.0,
+				1466.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_chuy/@VBoxContainer@1688/TroopCardDetails/TroopName",
+			"rect": [
+				370.0,
+				1466.0,
+				141.0,
+				34.0
+			],
+			"text": "Chuỳ",
+			"text_width": 62.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				157.0,
+				240.0
+			],
+			"name": "TroopCard_bua",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua",
+			"rect": [
+				531.0,
+				1300.0,
+				157.0,
+				240.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				192.0
+			],
+			"name": "@VBoxContainer@1690",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690",
+			"rect": [
+				539.0,
+				1308.0,
+				141.0,
+				222.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				154.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopRarityField",
+			"rect": [
+				539.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				539.0,
+				1308.0,
+				141.0,
+				154.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "@CenterContainer@1692",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopRarityField/@CenterContainer@1692",
+			"rect": [
+				539.0,
+				1334.0,
+				141.0,
+				128.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopLockedPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopRarityField/@CenterContainer@1692/TroopLockedPortrait",
+			"rect": [
+				549.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				120.0,
+				120.0
+			],
+			"name": "TroopPortrait",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopRarityField/@CenterContainer@1692/TroopLockedPortrait/TroopPortrait",
+			"rect": [
+				549.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				36.0,
+				36.0
+			],
+			"name": "@Control@1691",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopRarityField/@CenterContainer@1692/TroopLockedPortrait/TroopPortrait/@Control@1691",
+			"rect": [
+				592.200012207031,
+				1335.59997558594,
+				36.0,
+				36.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"font_size": 50,
+			"minimum": [
+				24.0,
+				71.0
+			],
+			"name": "TroopLockedQuestion",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopRarityField/@CenterContainer@1692/TroopLockedPortrait/TroopLockedQuestion",
+			"rect": [
+				549.0,
+				1338.0,
+				120.0,
+				120.0
+			],
+			"text": "?",
+			"text_width": 24.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopCardDetails",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopCardDetails",
+			"rect": [
+				539.0,
+				1466.0,
+				141.0,
+				34.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				1.0,
+				34.0
+			],
+			"name": "TroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@ScrollContainer@1156/@MarginContainer@1157/@VBoxContainer@1158/TroopGrid/TroopCard_bua/@VBoxContainer@1690/TroopCardDetails/TroopName",
+			"rect": [
+				539.0,
+				1466.0,
+				141.0,
+				34.0
+			],
+			"text": "Búa",
+			"text_width": 49.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				717.0,
+				410.0
+			],
+			"name": "@MarginContainer@1159",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				410.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				669.0,
+				390.0
+			],
+			"name": "@VBoxContainer@1160",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160",
+			"rect": [
+				24.0,
+				128.0,
+				672.0,
+				390.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 32,
+			"minimum": [
+				72.0,
+				46.0
+			],
+			"name": "@Label@1626",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@Label@1626",
+			"rect": [
+				24.0,
+				128.0,
+				672.0,
+				46.0
+			],
+			"text": "Lính",
+			"text_width": 72.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				669.0,
+				248.0
+			],
+			"name": "@PanelContainer@1627",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627",
+			"rect": [
+				24.0,
+				184.0,
+				672.0,
+				248.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				637.0,
+				216.0
+			],
+			"name": "@VBoxContainer@1628",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628",
+			"rect": [
+				40.0,
+				198.0,
+				640.0,
+				216.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				255.0,
+				37.0
+			],
+			"name": "@HBoxContainer@1633",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1633",
+			"rect": [
+				40.0,
+				198.0,
+				640.0,
+				37.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 26,
+			"minimum": [
+				161.0,
+				37.0
+			],
+			"name": "@Label@1629",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1633/@Label@1629",
+			"rect": [
+				40.0,
+				198.0,
+				161.0,
+				37.0
+			],
+			"text": "Đội hình 4/4",
+			"text_width": 161.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1630",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1633/@Control@1630",
+			"rect": [
+				209.0,
+				198.0,
+				385.0,
+				37.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1631",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1633/@TextureRect@1631",
+			"rect": [
+				602.0,
+				198.0,
+				30.0,
+				37.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				40.0,
+				34.0
+			],
+			"name": "@Label@1632",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1633/@Label@1632",
+			"rect": [
+				640.0,
+				199.0,
+				40.0,
+				34.0
+			],
+			"text": "559",
+			"text_width": 40.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				637.0,
+				138.0
+			],
+			"name": "@HBoxContainer@1654",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654",
+			"rect": [
+				40.0,
+				241.0,
+				640.0,
+				138.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_0",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0",
+			"rect": [
+				40.0,
+				241.0,
+				121.0,
+				138.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				55.0,
+				122.0
+			],
+			"name": "@VBoxContainer@1634",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0/@VBoxContainer@1634",
+			"rect": [
+				46.0,
+				247.0,
+				109.0,
+				122.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				64.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0/@VBoxContainer@1634/TroopRarityField",
+			"rect": [
+				46.0,
+				247.0,
+				109.0,
+				64.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0/@VBoxContainer@1634/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				46.0,
+				247.0,
+				109.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@CenterContainer@1636",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0/@VBoxContainer@1634/TroopRarityField/@CenterContainer@1636",
+			"rect": [
+				46.0,
+				247.0,
+				109.0,
+				64.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@TextureRect@1635",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0/@VBoxContainer@1634/TroopRarityField/@CenterContainer@1636/@TextureRect@1635",
+			"rect": [
+				68.0,
+				247.0,
+				64.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				1.0,
+				29.0
+			],
+			"name": "TeamTroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0/@VBoxContainer@1634/TeamTroopName",
+			"rect": [
+				46.0,
+				311.0,
+				109.0,
+				29.0
+			],
+			"text": "Kiếm",
+			"text_width": 54.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				55.0,
+				29.0
+			],
+			"name": "@Label@1637",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_0/@VBoxContainer@1634/@Label@1637",
+			"rect": [
+				46.0,
+				340.0,
+				109.0,
+				29.0
+			],
+			"text": "Cấp 6",
+			"text_width": 55.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1",
+			"rect": [
+				169.0,
+				241.0,
+				122.0,
+				138.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				52.0,
+				122.0
+			],
+			"name": "@VBoxContainer@1638",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1/@VBoxContainer@1638",
+			"rect": [
+				175.0,
+				247.0,
+				110.0,
+				122.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				64.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1/@VBoxContainer@1638/TroopRarityField",
+			"rect": [
+				175.0,
+				247.0,
+				110.0,
+				64.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1/@VBoxContainer@1638/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				175.0,
+				247.0,
+				110.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@CenterContainer@1640",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1/@VBoxContainer@1638/TroopRarityField/@CenterContainer@1640",
+			"rect": [
+				175.0,
+				247.0,
+				110.0,
+				64.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@TextureRect@1639",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1/@VBoxContainer@1638/TroopRarityField/@CenterContainer@1640/@TextureRect@1639",
+			"rect": [
+				198.0,
+				247.0,
+				64.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				1.0,
+				29.0
+			],
+			"name": "TeamTroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1/@VBoxContainer@1638/TeamTroopName",
+			"rect": [
+				175.0,
+				311.0,
+				110.0,
+				29.0
+			],
+			"text": "Cung",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "@Label@1641",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_1/@VBoxContainer@1638/@Label@1641",
+			"rect": [
+				175.0,
+				340.0,
+				110.0,
+				29.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_2",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2",
+			"rect": [
+				299.0,
+				241.0,
+				121.0,
+				138.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				52.0,
+				122.0
+			],
+			"name": "@VBoxContainer@1642",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2/@VBoxContainer@1642",
+			"rect": [
+				305.0,
+				247.0,
+				109.0,
+				122.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				64.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2/@VBoxContainer@1642/TroopRarityField",
+			"rect": [
+				305.0,
+				247.0,
+				109.0,
+				64.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2/@VBoxContainer@1642/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				305.0,
+				247.0,
+				109.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@CenterContainer@1644",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2/@VBoxContainer@1642/TroopRarityField/@CenterContainer@1644",
+			"rect": [
+				305.0,
+				247.0,
+				109.0,
+				64.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@TextureRect@1643",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2/@VBoxContainer@1642/TroopRarityField/@CenterContainer@1644/@TextureRect@1643",
+			"rect": [
+				327.0,
+				247.0,
+				64.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				1.0,
+				29.0
+			],
+			"name": "TeamTroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2/@VBoxContainer@1642/TeamTroopName",
+			"rect": [
+				305.0,
+				311.0,
+				109.0,
+				29.0
+			],
+			"text": "Giáo",
+			"text_width": 47.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "@Label@1645",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_2/@VBoxContainer@1642/@Label@1645",
+			"rect": [
+				305.0,
+				340.0,
+				109.0,
+				29.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_3",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3",
+			"rect": [
+				428.0,
+				241.0,
+				122.0,
+				138.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				52.0,
+				121.0
+			],
+			"name": "@VBoxContainer@1646",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3/@VBoxContainer@1646",
+			"rect": [
+				434.0,
+				247.0,
+				110.0,
+				122.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				64.0
+			],
+			"name": "TroopRarityField",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3/@VBoxContainer@1646/TroopRarityField",
+			"rect": [
+				434.0,
+				247.0,
+				110.0,
+				64.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "TroopRarityBackground",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3/@VBoxContainer@1646/TroopRarityField/TroopRarityBackground",
+			"rect": [
+				434.0,
+				247.0,
+				110.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@CenterContainer@1648",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3/@VBoxContainer@1646/TroopRarityField/@CenterContainer@1648",
+			"rect": [
+				434.0,
+				247.0,
+				110.0,
+				64.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@TextureRect@1647",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3/@VBoxContainer@1646/TroopRarityField/@CenterContainer@1648/@TextureRect@1647",
+			"rect": [
+				457.0,
+				247.0,
+				64.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 19,
+			"minimum": [
+				1.0,
+				28.0
+			],
+			"name": "TeamTroopName",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3/@VBoxContainer@1646/TeamTroopName",
+			"rect": [
+				434.0,
+				311.0,
+				110.0,
+				28.0
+			],
+			"text": "Bình Thuốc",
+			"text_width": 107.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				52.0,
+				29.0
+			],
+			"name": "@Label@1649",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_3/@VBoxContainer@1646/@Label@1649",
+			"rect": [
+				434.0,
+				339.0,
+				110.0,
+				29.0
+			],
+			"text": "Cấp 1",
+			"text_width": 52.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_4",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_4",
+			"rect": [
+				558.0,
+				241.0,
+				122.0,
+				138.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				82.0,
+				75.0
+			],
+			"name": "@VBoxContainer@1650",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_4/@VBoxContainer@1650",
+			"rect": [
+				566.0,
+				249.0,
+				106.0,
+				122.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				44.0
+			],
+			"name": "@CenterContainer@1652",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_4/@VBoxContainer@1650/@CenterContainer@1652",
+			"rect": [
+				566.0,
+				272.0,
+				106.0,
+				44.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				44.0
+			],
+			"name": "@TextureRect@1651",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_4/@VBoxContainer@1650/@CenterContainer@1652/@TextureRect@1651",
+			"rect": [
+				597.0,
+				272.0,
+				44.0,
+				44.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				82.0,
+				29.0
+			],
+			"name": "@Label@1653",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@HBoxContainer@1654/TeamSlot_4/@VBoxContainer@1650/@Label@1653",
+			"rect": [
+				566.0,
+				318.0,
+				106.0,
+				29.0
+			],
+			"text": "Thành 6",
+			"text_width": 82.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				398.0,
+				29.0
+			],
+			"name": "@Label@1655",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@PanelContainer@1627/@VBoxContainer@1628/@Label@1655",
+			"rect": [
+				40.0,
+				385.0,
+				640.0,
+				29.0
+			],
+			"text": "Chạm xem chi tiết · Giữ và kéo để đổi đội",
+			"text_width": 398.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				516.0,
+				76.0
+			],
+			"name": "@HBoxContainer@1656",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@HBoxContainer@1656",
+			"rect": [
+				24.0,
+				442.0,
+				672.0,
+				76.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 22,
+			"minimum": [
+				81.0,
+				76.0
+			],
+			"name": "TroopFilter_-1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@HBoxContainer@1656/TroopFilter_-1",
+			"rect": [
+				24.0,
+				442.0,
+				123.0,
+				76.0
+			],
+			"text": "Tất cả",
+			"text_width": 65.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 22,
+			"minimum": [
+				102.0,
+				76.0
+			],
+			"name": "TroopFilter_0",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@HBoxContainer@1656/TroopFilter_0",
+			"rect": [
+				153.0,
+				442.0,
+				124.0,
+				76.0
+			],
+			"text": "Thường",
+			"text_width": 86.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 22,
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "TroopFilter_1",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@HBoxContainer@1656/TroopFilter_1",
+			"rect": [
+				283.0,
+				442.0,
+				123.0,
+				76.0
+			],
+			"text": "Hiếm",
+			"text_width": 60.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 22,
+			"minimum": [
+				79.0,
+				76.0
+			],
+			"name": "TroopFilter_2",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@HBoxContainer@1656/TroopFilter_2",
+			"rect": [
+				412.0,
+				442.0,
+				124.0,
+				76.0
+			],
+			"text": "Sử thi",
+			"text_width": 63.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 22,
+			"minimum": [
+				154.0,
+				76.0
+			],
+			"name": "TroopFilter_3",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@1161/@MarginContainer@1159/@VBoxContainer@1160/@HBoxContainer@1656/TroopFilter_3",
+			"rect": [
+				542.0,
+				442.0,
+				154.0,
+				76.0
+			],
+			"text": "Huyền thoại",
+			"text_width": 138.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				406.0,
+				112.0
+			],
+			"name": "Header",
+			"path": "/root/MenuPolishPreview/Home/Header",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				112.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				378.0,
+				84.0
+			],
+			"name": "HeaderRow",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow",
+			"rect": [
+				14.0,
+				12.0,
+				692.0,
+				84.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				84.0
+			],
+			"name": "ProfileButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				84.0
+			],
+			"name": "AvatarFrame",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				50.0
+			],
+			"name": "@CenterContainer@1278",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame/@CenterContainer@1278",
+			"rect": [
+				22.0,
+				20.0,
+				64.0,
+				64.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				50.0
+			],
+			"name": "@TextureRect@1277",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame/@CenterContainer@1278/@TextureRect@1277",
+			"rect": [
+				23.0,
+				27.0,
+				62.0,
+				50.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1279",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/@Button@1279",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				52.0
+			],
+			"name": "GoldButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				52.0
+			],
+			"name": "CurrencyGold",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "CurrencyPill",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				1.0,
+				27.0
+			],
+			"name": "CurrencyValue",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyValue",
+			"rect": [
+				150.0,
+				36.0,
+				121.0,
+				36.0
+			],
+			"text": "2.400",
+			"text_width": 51.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "CurrencyPlus",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPlus",
+			"rect": [
+				277.0,
+				40.0,
+				28.0,
+				28.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				48.0,
+				48.0
+			],
+			"name": "CurrencyIcon",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyIcon",
+			"rect": [
+				104.0,
+				30.0,
+				48.0,
+				48.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1280",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/@Button@1280",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				52.0
+			],
+			"name": "GemsButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				52.0
+			],
+			"name": "CurrencyGems",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "CurrencyPill",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				1.0,
+				27.0
+			],
+			"name": "CurrencyValue",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyValue",
+			"rect": [
+				363.0,
+				36.0,
+				121.0,
+				36.0
+			],
+			"text": "260",
+			"text_width": 33.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "CurrencyPlus",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPlus",
+			"rect": [
+				490.0,
+				40.0,
+				28.0,
+				28.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				48.0,
+				48.0
+			],
+			"name": "CurrencyIcon",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyIcon",
+			"rect": [
+				317.0,
+				30.0,
+				48.0,
+				48.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1281",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/@Button@1281",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				174.0,
+				84.0
+			],
+			"name": "HeaderTools",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools",
+			"rect": [
+				532.0,
+				12.0,
+				174.0,
+				84.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				174.0,
+				60.0
+			],
+			"name": "HeaderActions",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions",
+			"rect": [
+				532.0,
+				24.0,
+				174.0,
+				60.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 16,
+			"minimum": [
+				100.0,
+				60.0
+			],
+			"name": "AdminButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions/AdminButton",
+			"rect": [
+				532.0,
+				24.0,
+				100.0,
+				60.0
+			],
+			"text": "ADMIN",
+			"text_width": 55.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				68.0,
+				60.0
+			],
+			"name": "SettingsButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions/SettingsButton",
+			"rect": [
+				638.0,
+				24.0,
+				68.0,
+				60.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1282",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282",
+			"rect": [
+				0.0,
+				1120.0,
+				720.0,
+				160.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				518.0,
+				166.0
+			],
+			"name": "@HBoxContainer@1718",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718",
+			"rect": [
+				6.0,
+				1120.0,
+				708.0,
+				178.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1697",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1697",
+			"rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1695",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1697/@PanelContainer@1695",
+			"rect": [
+				9.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1694",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1697/@PanelContainer@1695/@CenterContainer@1694",
+			"rect": [
+				13.0,
+				1146.0,
+				119.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1693",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1697/@PanelContainer@1695/@CenterContainer@1694/@TextureRect@1693",
+			"rect": [
+				22.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1696",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1697/@PanelContainer@1695/@CenterContainer@1694/@TextureRect@1693/@TextureRect@1696",
+			"rect": [
+				108.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1719",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1697/@Button@1719",
+			"rect": [
+				9.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1702",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1702",
+			"rect": [
+				139.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1700",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1702/@PanelContainer@1700",
+			"rect": [
+				142.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1699",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1702/@PanelContainer@1700/@CenterContainer@1699",
+			"rect": [
+				146.0,
+				1146.0,
+				120.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1698",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1702/@PanelContainer@1700/@CenterContainer@1699/@TextureRect@1698",
+			"rect": [
+				156.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1701",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1702/@PanelContainer@1700/@CenterContainer@1699/@TextureRect@1698/@TextureRect@1701",
+			"rect": [
+				242.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1720",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1702/@Button@1720",
+			"rect": [
+				142.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1707",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1707",
+			"rect": [
+				273.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1705",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1707/@PanelContainer@1705",
+			"rect": [
+				276.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1704",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1707/@PanelContainer@1705/@CenterContainer@1704",
+			"rect": [
+				280.0,
+				1146.0,
+				119.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1703",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1707/@PanelContainer@1705/@CenterContainer@1704/@TextureRect@1703",
+			"rect": [
+				289.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1706",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1707/@PanelContainer@1705/@CenterContainer@1704/@TextureRect@1703/@TextureRect@1706",
+			"rect": [
+				375.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1721",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1707/@Button@1721",
+			"rect": [
+				276.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				166.0
+			],
+			"name": "@PanelContainer@1713",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713",
+			"rect": [
+				406.0,
+				1120.0,
+				174.0,
+				178.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				160.0
+			],
+			"name": "@VBoxContainer@1708",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@VBoxContainer@1708",
+			"rect": [
+				406.0,
+				1126.0,
+				174.0,
+				172.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				100.0
+			],
+			"name": "@Control@1709",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@VBoxContainer@1708/@Control@1709",
+			"rect": [
+				406.0,
+				1138.0,
+				174.0,
+				100.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				94.0,
+				94.0
+			],
+			"name": "@TextureRect@1710",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@VBoxContainer@1708/@Control@1709/@TextureRect@1710",
+			"rect": [
+				446.0,
+				1134.0,
+				94.0,
+				94.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				60.0
+			],
+			"name": "SelectedNavFooter",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@VBoxContainer@1708/SelectedNavFooter",
+			"rect": [
+				406.0,
+				1238.0,
+				174.0,
+				60.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				54.0,
+				58.0
+			],
+			"name": "@VBoxContainer@1711",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@VBoxContainer@1708/SelectedNavFooter/@VBoxContainer@1711",
+			"rect": [
+				410.0,
+				1240.0,
+				166.0,
+				58.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				54.0,
+				34.0
+			],
+			"name": "SelectedNavCaption",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@VBoxContainer@1708/SelectedNavFooter/@VBoxContainer@1711/SelectedNavCaption",
+			"rect": [
+				410.0,
+				1240.0,
+				166.0,
+				34.0
+			],
+			"text": "Lính",
+			"text_width": 54.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				24.0
+			],
+			"name": "@Control@1712",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@VBoxContainer@1708/SelectedNavFooter/@VBoxContainer@1711/@Control@1712",
+			"rect": [
+				410.0,
+				1274.0,
+				166.0,
+				24.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1722",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@PanelContainer@1713/@Button@1722",
+			"rect": [
+				406.0,
+				1126.0,
+				174.0,
+				172.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1717",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1717",
+			"rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1716",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1717/@PanelContainer@1716",
+			"rect": [
+				583.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1715",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1717/@PanelContainer@1716/@CenterContainer@1715",
+			"rect": [
+				587.0,
+				1146.0,
+				120.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1714",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1717/@PanelContainer@1716/@CenterContainer@1715/@TextureRect@1714",
+			"rect": [
+				597.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1723",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1718/@MarginContainer@1717/@Button@1723",
+			"rect": [
+				583.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		}
+	]
+}

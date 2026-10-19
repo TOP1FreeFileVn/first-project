@@ -1,0 +1,28 @@
+{
+  "id": "amulet",
+  "model": "gpt-image-2.5-sunburst",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "29:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt": "prompts/amulet.txt",
+  "raw": "raw/amulet.png",
+  "reference": "cat-sprite-art hero contract / approved nine-px weapon set",
+  "reference_mode": "text brief informed by inspected local source; no image input conditioning",
+  "status": "generated_visual_qa_passed_pending_shared_processing",
+  "source_bbox_xyxy": [
+    186,
+    195,
+    838,
+    828
+  ],
+  "anchor_source": [
+    512,
+    456
+  ],
+  "pendant_center_source": [
+    512,
+    649
+  ],
+  "qa": "One plain coral oval in broad brass bezel and open short blue cord ends. No full necklace ring, extra beads or character. Mild generated gradients require shared flattening."
+}

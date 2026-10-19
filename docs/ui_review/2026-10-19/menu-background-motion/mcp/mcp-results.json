@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "docs/ui_review/2026-10-19/menu-background-motion/MenuBackgroundMotionPreview.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nMENU_BACKGROUND_MOTION_USER_DIR C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/menu-background-motion/mcp/profile/Godot/app_userdata/Gear Defenders\r\nMENU_BACKGROUND_MOTION_CAPTURE lobby_t00_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE background_t00_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE foreground_t00_450x800\r\nMENU_BACKGROUND_MOTION_CHECK layout_static_at_0 PASS\r\nMENU_BACKGROUND_MOTION_CAPTURE lobby_t05_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE background_t05_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE foreground_t05_450x800\r\nMENU_BACKGROUND_MOTION_CHECK foreground_static_at_5 PASS\r\nMENU_BACKGROUND_MOTION_CHECK layout_static_at_5 PASS\r\nMENU_BACKGROUND_MOTION_CAPTURE lobby_t10_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE background_t10_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE foreground_t10_450x800\r\nMENU_BACKGROUND_MOTION_CHECK foreground_static_at_10 PASS\r\nMENU_BACKGROUND_MOTION_CHECK layout_static_at_10 PASS\r\nMENU_BACKGROUND_MOTION_CHECK background_changes_0_to_5 PASS\r\nMENU_BACKGROUND_MOTION_CHECK background_changes_5_to_10 PASS\r\nMENU_BACKGROUND_MOTION_CHECK real_time_sequence_has_all_frames PASS\r\nMENU_BACKGROUND_MOTION_CHECK real_time_shader_moves PASS\r\nMENU_BACKGROUND_MOTION_CHECK actual_nav_opens_shop PASS\r\nMENU_BACKGROUND_MOTION_CHECK shop_shows_old_pattern PASS\r\nMENU_BACKGROUND_MOTION_CAPTURE shop_pattern_450x800\r\nMENU_BACKGROUND_MOTION_CHECK actual_nav_returns_to_sky PASS\r\nMENU_BACKGROUND_MOTION_CAPTURE lobby_return_t05_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE castle_overlay_t05_450x800\r\nMENU_BACKGROUND_MOTION_CAPTURE castle_background_t05_450x800\r\nMENU_BACKGROUND_MOTION_CHECK castle_overlay_background_matches_full_screen PASS\r\nMENU_BACKGROUND_MOTION_CHECK castle_actual_back_returns_to_lobby PASS\r\nMENU_BACKGROUND_MOTION_COMPLETE 13 captures; 14 checks; 32 real-time frames; failures=0\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

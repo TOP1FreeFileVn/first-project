@@ -1,0 +1,18 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+HERO_BASE_NATIVE_RENDERED hero-tail (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-cape (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-torso (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-body (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-head (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-head-noears (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-paws (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-base (768, 720)
+HERO_BASE_NATIVE_RENDERED hero-neutral (768, 720)
+HERO_BASE_NATIVE_COMPLETE 9
+ERROR: Failed to open 'user://logs/godot2026-10-19T23.54.32.log'.
+   at: copy (core/io/dir_access.cpp:429)
+ERROR: Failed to open log file for writing: user://logs/godot.log
+   at: rotate_file (core/io/logger.cpp:169)
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)

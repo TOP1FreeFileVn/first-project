@@ -1,0 +1,143 @@
+{
+  "canvas": [
+    256,
+    240
+  ],
+  "fixed_layers": [
+    "helmet",
+    "armor",
+    "gloves",
+    "boots",
+    "amulet"
+  ],
+  "main_outline": 9,
+  "outline_exceptions": {
+    "amulet": 4,
+    "bowstring": 1.5
+  },
+  "sockets": {
+    "left_paw": [
+      94,
+      166
+    ],
+    "right_paw": [
+      160,
+      166
+    ],
+    "helmet": [
+      128,
+      62
+    ],
+    "armor": [
+      128,
+      175
+    ],
+    "amulet": [
+      128,
+      159
+    ],
+    "boots": [
+      [
+        84,
+        211
+      ],
+      [
+        172,
+        211
+      ]
+    ]
+  },
+  "poses": {
+    "melee": {
+      "weapon": "kiem",
+      "label": "01 \u00b7 C\u1eadn chi\u1ebfn",
+      "grip": [
+        512,
+        794
+      ],
+      "scale": 0.17784552845528456,
+      "angle": -36,
+      "pad": 0,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        129.0,
+        54.666666666666664,
+        244.0,
+        201.0
+      ],
+      "clipped": false
+    },
+    "ranged": {
+      "weapon": "cung",
+      "label": "02 \u00b7 T\u1ea7m xa",
+      "grip": [
+        625,
+        515
+      ],
+      "scale": 0.09803921568627451,
+      "angle": 0,
+      "pad": 128,
+      "flip": true,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        146.33333333333334,
+        111.66666666666667,
+        195.33333333333334,
+        218.66666666666666
+      ],
+      "clipped": false
+    },
+    "magic": {
+      "weapon": "gay_phep",
+      "label": "03 \u00b7 Ph\u00e9p",
+      "grip": [
+        512,
+        660
+      ],
+      "scale": 0.1345707656612529,
+      "angle": -46,
+      "pad": 128,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        121.66666666666667,
+        97.0,
+        229.66666666666666,
+        203.33333333333334
+      ],
+      "clipped": false
+    },
+    "heavy": {
+      "weapon": "riu",
+      "label": "04 \u00b7 H\u1ea1ng n\u1eb7ng",
+      "grip": [
+        395,
+        680
+      ],
+      "scale": 0.11789473684210526,
+      "angle": -48,
+      "pad": 128,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        120.0,
+        105.33333333333333,
+        252.66666666666666,
+        204.0
+      ],
+      "clipped": false
+    }
+  },
+  "production_changed": false,
+  "attack_animation_implemented": false
+}

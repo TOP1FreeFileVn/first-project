@@ -1,0 +1,24 @@
+{
+  "id": "armor",
+  "model": "gpt-image-2.5-sunburst",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "25:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt": "prompts/armor.txt",
+  "raw": "raw/armor.png",
+  "reference": "cat-sprite-art hero contract / approved nine-px weapon set",
+  "reference_mode": "text brief informed by inspected local source; no image input conditioning",
+  "status": "generated_visual_qa_passed_pending_shared_processing",
+  "source_bbox_xyxy": [
+    71,
+    199,
+    953,
+    825
+  ],
+  "anchor_source": [
+    512,
+    473
+  ],
+  "qa": "Squat symmetric chestplate with shallow U-neck, round arm cutouts, blue collar and two brass clasps. No limbs or body. Mild generated gradients require shared flattening."
+}

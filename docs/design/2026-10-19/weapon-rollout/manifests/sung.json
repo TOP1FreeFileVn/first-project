@@ -1,0 +1,16 @@
+{
+  "id": "sung",
+  "status": "generated_raw_awaiting_placement",
+  "generation": {
+    "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+    "nodeId": "12:2",
+    "model": "gpt-image-2.5-sunburst",
+    "width": 1024,
+    "height": 1024
+  },
+  "route": "Figma generate_image; text brief informed by inspected sword iteration2 and V6; no image conditioning",
+  "prompt_file": "prompts/sung.txt",
+  "raw_file": "raw/sung.png",
+  "raw_untouched": true,
+  "export_format": "png"
+}

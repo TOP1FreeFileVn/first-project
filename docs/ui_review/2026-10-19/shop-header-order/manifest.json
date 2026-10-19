@@ -1,0 +1,846 @@
+{
+	"captures": [
+		{
+			"actual": [
+				450,
+				800
+			],
+			"controls": {
+				"GemsButton": {
+					"name": "GemsButton",
+					"rect": [
+						319.0,
+						132.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"GoldButton": {
+					"name": "GoldButton",
+					"rect": [
+						106.0,
+						132.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						104.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"ProfileButton": {
+					"name": "ProfileButton",
+					"rect": [
+						14.0,
+						116.0,
+						80.0,
+						84.0
+					],
+					"visible": true
+				},
+				"SettingsButton": {
+					"name": "SettingsButton",
+					"rect": [
+						638.0,
+						128.0,
+						68.0,
+						60.0
+					],
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						104.0
+					],
+					"visible": true
+				},
+				"ShopRates": {
+					"name": "ShopRates",
+					"rect": [
+						24.0,
+						224.0,
+						672.0,
+						67.0
+					],
+					"visible": true
+				},
+				"ShopSign": {
+					"name": "ShopSign",
+					"rect": [
+						0.0,
+						24.0,
+						720.0,
+						64.0
+					],
+					"visible": true
+				},
+				"content": {
+					"name": "@Control@20",
+					"rect": [
+						0.0,
+						216.0,
+						720.0,
+						904.0
+					],
+					"visible": true
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@462",
+						"rect": [
+							24.0,
+							307.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@471",
+						"rect": [
+							24.0,
+							507.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@479",
+						"rect": [
+							24.0,
+							707.0,
+							672.0,
+							233.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@488",
+						"rect": [
+							24.0,
+							956.0,
+							672.0,
+							148.0
+						],
+						"visible": true
+					}
+				],
+				"scroll": {
+					"max_value": 904.0,
+					"page": 904.0,
+					"value": 0.0,
+					"visible": false
+				}
+			},
+			"file": "shop_450x800.png",
+			"selected_tab": 0
+		},
+		{
+			"actual": [
+				450,
+				800
+			],
+			"controls": {
+				"GemsButton": {
+					"name": "GemsButton",
+					"rect": [
+						319.0,
+						28.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"GoldButton": {
+					"name": "GoldButton",
+					"rect": [
+						106.0,
+						28.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"ProfileButton": {
+					"name": "ProfileButton",
+					"rect": [
+						14.0,
+						12.0,
+						80.0,
+						84.0
+					],
+					"visible": true
+				},
+				"SettingsButton": {
+					"name": "SettingsButton",
+					"rect": [
+						638.0,
+						24.0,
+						68.0,
+						60.0
+					],
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						104.0
+					],
+					"visible": false
+				},
+				"ShopRates": {
+					"name": "ShopRates",
+					"rect": [
+						24.0,
+						120.0,
+						672.0,
+						67.0
+					],
+					"visible": false
+				},
+				"ShopSign": {
+					"name": "ShopSign",
+					"rect": [
+						0.0,
+						24.0,
+						720.0,
+						64.0
+					],
+					"visible": false
+				},
+				"content": {
+					"name": "@Control@20",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						1008.0
+					],
+					"visible": true
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@462",
+						"rect": [
+							24.0,
+							203.0,
+							672.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@471",
+						"rect": [
+							24.0,
+							403.0,
+							672.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@479",
+						"rect": [
+							24.0,
+							603.0,
+							672.0,
+							233.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@488",
+						"rect": [
+							24.0,
+							852.0,
+							672.0,
+							148.0
+						],
+						"visible": false
+					}
+				]
+			},
+			"file": "battle_450x800.png",
+			"selected_tab": 2
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"controls": {
+				"GemsButton": {
+					"name": "GemsButton",
+					"rect": [
+						319.0,
+						132.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"GoldButton": {
+					"name": "GoldButton",
+					"rect": [
+						106.0,
+						132.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						104.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"ProfileButton": {
+					"name": "ProfileButton",
+					"rect": [
+						14.0,
+						116.0,
+						80.0,
+						84.0
+					],
+					"visible": true
+				},
+				"SettingsButton": {
+					"name": "SettingsButton",
+					"rect": [
+						638.0,
+						128.0,
+						68.0,
+						60.0
+					],
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						104.0
+					],
+					"visible": true
+				},
+				"ShopRates": {
+					"name": "ShopRates",
+					"rect": [
+						24.0,
+						224.0,
+						672.0,
+						67.0
+					],
+					"visible": true
+				},
+				"ShopSign": {
+					"name": "ShopSign",
+					"rect": [
+						0.0,
+						24.0,
+						720.0,
+						64.0
+					],
+					"visible": true
+				},
+				"content": {
+					"name": "@Control@20",
+					"rect": [
+						0.0,
+						216.0,
+						720.0,
+						904.0
+					],
+					"visible": true
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@969",
+						"rect": [
+							24.0,
+							307.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@978",
+						"rect": [
+							24.0,
+							507.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@986",
+						"rect": [
+							24.0,
+							707.0,
+							672.0,
+							233.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@995",
+						"rect": [
+							24.0,
+							956.0,
+							672.0,
+							148.0
+						],
+						"visible": true
+					}
+				],
+				"scroll": {
+					"max_value": 904.0,
+					"page": 904.0,
+					"value": 0.0,
+					"visible": false
+				}
+			},
+			"file": "shop_360x640.png",
+			"selected_tab": 0
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"controls": {
+				"GemsButton": {
+					"name": "GemsButton",
+					"rect": [
+						319.0,
+						28.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"GoldButton": {
+					"name": "GoldButton",
+					"rect": [
+						106.0,
+						28.0,
+						201.0,
+						52.0
+					],
+					"visible": true
+				},
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"ProfileButton": {
+					"name": "ProfileButton",
+					"rect": [
+						14.0,
+						12.0,
+						80.0,
+						84.0
+					],
+					"visible": true
+				},
+				"SettingsButton": {
+					"name": "SettingsButton",
+					"rect": [
+						638.0,
+						24.0,
+						68.0,
+						60.0
+					],
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						104.0
+					],
+					"visible": false
+				},
+				"ShopRates": {
+					"name": "ShopRates",
+					"rect": [
+						24.0,
+						120.0,
+						672.0,
+						67.0
+					],
+					"visible": false
+				},
+				"ShopSign": {
+					"name": "ShopSign",
+					"rect": [
+						0.0,
+						24.0,
+						720.0,
+						64.0
+					],
+					"visible": false
+				},
+				"content": {
+					"name": "@Control@20",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						1008.0
+					],
+					"visible": true
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@969",
+						"rect": [
+							24.0,
+							203.0,
+							672.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@978",
+						"rect": [
+							24.0,
+							403.0,
+							672.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@986",
+						"rect": [
+							24.0,
+							603.0,
+							672.0,
+							233.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@995",
+						"rect": [
+							24.0,
+							852.0,
+							672.0,
+							148.0
+						],
+						"visible": false
+					}
+				]
+			},
+			"file": "battle_360x640.png",
+			"selected_tab": 2
+		}
+	],
+	"checks": [
+		{
+			"name": "nav_shop_450x800",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_450x800_header_position",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_450x800_roof_sign_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_450x800_content_position",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_native_size",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_header_below_roof",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offers_keep_y307",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_no_scrollbar",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_0_fits",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_1_fits",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_2_fits",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_3_fits",
+			"passed": true
+		},
+		{
+			"name": "profile_450x800_actual_hit_opens_popup",
+			"passed": true
+		},
+		{
+			"name": "profile_450x800_actual_close_returns_to_shop",
+			"passed": true
+		},
+		{
+			"name": "settings_450x800_actual_hit_opens_popup",
+			"passed": true
+		},
+		{
+			"name": "settings_450x800_actual_close_returns_to_shop",
+			"passed": true
+		},
+		{
+			"name": "GoldButton_shifted_hit_450x800",
+			"passed": true
+		},
+		{
+			"name": "GemsButton_shifted_hit_450x800",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_450x800",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_450x800_header_position",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_450x800_roof_sign_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_450x800_content_position",
+			"passed": true
+		},
+		{
+			"name": "battle_450x800_native_size",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_450x800",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_450x800_header_position",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_450x800_roof_sign_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_450x800_content_position",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_360x640",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_360x640_header_position",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_360x640_roof_sign_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_360x640_content_position",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_native_size",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_header_below_roof",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offers_keep_y307",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_no_scrollbar",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_0_fits",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_1_fits",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_2_fits",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_3_fits",
+			"passed": true
+		},
+		{
+			"name": "profile_360x640_actual_hit_opens_popup",
+			"passed": true
+		},
+		{
+			"name": "profile_360x640_actual_close_returns_to_shop",
+			"passed": true
+		},
+		{
+			"name": "settings_360x640_actual_hit_opens_popup",
+			"passed": true
+		},
+		{
+			"name": "settings_360x640_actual_close_returns_to_shop",
+			"passed": true
+		},
+		{
+			"name": "GoldButton_shifted_hit_360x640",
+			"passed": true
+		},
+		{
+			"name": "GemsButton_shifted_hit_360x640",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_360x640",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_360x640_header_position",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_360x640_roof_sign_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_360x640_content_position",
+			"passed": true
+		},
+		{
+			"name": "battle_360x640_native_size",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_360x640",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_360x640_header_position",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_360x640_roof_sign_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_return_360x640_content_position",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"native_render": true,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/shop-header-order/mcp/profile/Godot/app_userdata/Gear Defenders"
+}

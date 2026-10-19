@@ -1,0 +1,42 @@
+{
+  "id": "gloves",
+  "model": "gpt-image-2.5-sunburst",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "27:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt": "prompts/gloves.txt",
+  "raw": "raw/gloves.png",
+  "reference": "cat-sprite-art hero contract / approved nine-px weapon set",
+  "reference_mode": "text brief informed by inspected local source; no image input conditioning",
+  "status": "generated_visual_qa_passed_pending_shared_processing",
+  "source_bbox_xyxy": [
+    50,
+    279,
+    974,
+    740
+  ],
+  "pair_bbox_xyxy": [
+    [
+      50,
+      279,
+      465,
+      740
+    ],
+    [
+      559,
+      279,
+      974,
+      740
+    ]
+  ],
+  "anchor_source_left": [
+    257,
+    505
+  ],
+  "anchor_source_right": [
+    766,
+    505
+  ],
+  "qa": "Two separate mirrored squat round silver paw caps without individual fingers or human thumbs, blue cuffs and gold rims. Pair has broad white gap. Mild source gradients require shared flattening."
+}

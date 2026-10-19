@@ -1,0 +1,205 @@
+{
+  "font_names": [
+    "Paytone One"
+  ],
+  "vietnamese_chars": {
+    "í": {
+      "base_font_has_char": true,
+      "codepoint": 237,
+      "font_has_char": true
+    },
+    "ì": {
+      "base_font_has_char": true,
+      "codepoint": 236,
+      "font_has_char": true
+    },
+    "Đ": {
+      "base_font_has_char": true,
+      "codepoint": 272,
+      "font_has_char": true
+    },
+    "ộ": {
+      "base_font_has_char": true,
+      "codepoint": 7897,
+      "font_has_char": true
+    },
+    "é": {
+      "base_font_has_char": true,
+      "codepoint": 233,
+      "font_has_char": true
+    },
+    "ậ": {
+      "base_font_has_char": true,
+      "codepoint": 7853,
+      "font_has_char": true
+    },
+    "ấ": {
+      "base_font_has_char": true,
+      "codepoint": 7845,
+      "font_has_char": true
+    },
+    "ỳ": {
+      "base_font_has_char": true,
+      "codepoint": 7923,
+      "font_has_char": true
+    },
+    "à": {
+      "base_font_has_char": true,
+      "codepoint": 224,
+      "font_has_char": true
+    },
+    "đ": {
+      "base_font_has_char": true,
+      "codepoint": 273,
+      "font_has_char": true
+    },
+    "ạ": {
+      "base_font_has_char": true,
+      "codepoint": 7841,
+      "font_has_char": true
+    },
+    "ế": {
+      "base_font_has_char": true,
+      "codepoint": 7871,
+      "font_has_char": true
+    },
+    "ể": {
+      "base_font_has_char": true,
+      "codepoint": 7875,
+      "font_has_char": true
+    },
+    "ổ": {
+      "base_font_has_char": true,
+      "codepoint": 7893,
+      "font_has_char": true
+    },
+    "ữ": {
+      "base_font_has_char": true,
+      "codepoint": 7919,
+      "font_has_char": true
+    },
+    "ả": {
+      "base_font_has_char": true,
+      "codepoint": 7843,
+      "font_has_char": true
+    },
+    "ư": {
+      "base_font_has_char": true,
+      "codepoint": 432,
+      "font_has_char": true
+    },
+    "ờ": {
+      "base_font_has_char": true,
+      "codepoint": 7901,
+      "font_has_char": true
+    },
+    "ử": {
+      "base_font_has_char": true,
+      "codepoint": 7917,
+      "font_has_char": true
+    },
+    "ề": {
+      "base_font_has_char": true,
+      "codepoint": 7873,
+      "font_has_char": true
+    },
+    "ỏ": {
+      "base_font_has_char": true,
+      "codepoint": 7887,
+      "font_has_char": true
+    },
+    "ú": {
+      "base_font_has_char": true,
+      "codepoint": 250,
+      "font_has_char": true
+    },
+    "á": {
+      "base_font_has_char": true,
+      "codepoint": 225,
+      "font_has_char": true
+    },
+    "ố": {
+      "base_font_has_char": true,
+      "codepoint": 7889,
+      "font_has_char": true
+    },
+    "ũ": {
+      "base_font_has_char": true,
+      "codepoint": 361,
+      "font_has_char": true
+    },
+    "ự": {
+      "base_font_has_char": true,
+      "codepoint": 7921,
+      "font_has_char": true
+    }
+  },
+  "missing_base_chars": [],
+  "team_binh_thuoc": {
+    "base_font_name": "Paytone One",
+    "base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+    "design_rect": [
+      564,
+      311,
+      110,
+      28
+    ],
+    "font_class": "FontVariation",
+    "font_name": "Paytone One",
+    "font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+    "font_size_design": 19,
+    "font_size_native": 9.5,
+    "line_count": 1,
+    "name": "TeamTroopName",
+    "native_rect": [
+      282,
+      155.5,
+      55,
+      14
+    ],
+    "outline_design": 0,
+    "text": "Bình Thuốc",
+    "theme_type_variation": "LabelDark",
+    "vietnamese_chars": {
+      "ì": {
+        "base_font_has_char": true,
+        "codepoint": 236,
+        "font_has_char": true
+      },
+      "ố": {
+        "base_font_has_char": true,
+        "codepoint": 7889,
+        "font_has_char": true
+      }
+    },
+    "visible": true,
+    "visible_line_count": 1
+  },
+  "filters": [
+    {
+      "text": "Tất cả",
+      "width_design": 123,
+      "font_size_design": 22
+    },
+    {
+      "text": "Thường",
+      "width_design": 124,
+      "font_size_design": 22
+    },
+    {
+      "text": "Hiếm",
+      "width_design": 123,
+      "font_size_design": 22
+    },
+    {
+      "text": "Sử thi",
+      "width_design": 124,
+      "font_size_design": 22
+    },
+    {
+      "text": "Huyền thoại",
+      "width_design": 154,
+      "font_size_design": 22
+    }
+  ]
+}

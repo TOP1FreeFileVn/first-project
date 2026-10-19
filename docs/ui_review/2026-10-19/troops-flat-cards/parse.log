@@ -1,0 +1,10 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+SCRIPT ERROR: Compile Error: Identifier not found: PlayerData
+   at: GDScript::reload (res://game/menu/Home.gd:83)
+ERROR: Failed to load script "res://game/menu/Home.gd" with error "Compilation failed".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)
+SCRIPT ERROR: Parse Error: Identifier "UiKit" not declared in the current scope.
+   at: GDScript::reload (res://docs/ui_review/2026-10-19/troops-flat-cards/TroopsFlatReview.gd:190)
+ERROR: Failed to load script "res://docs/ui_review/2026-10-19/troops-flat-cards/TroopsFlatReview.gd" with error "Parse error".
+   at: load (modules/gdscript/gdscript_resource_format.cpp:46)

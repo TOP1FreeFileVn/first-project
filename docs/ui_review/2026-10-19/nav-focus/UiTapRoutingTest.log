@@ -1,0 +1,14 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+PASS: UI tap is ready before background synthesis
+PASS: Ui.button routes one tap
+PASS: UiKit.button routes one tap
+PASS: Home tab routes one tap
+PASS: tab action still selects the shop
+PASS: popup close routes one tap
+PASS: popup close action still runs
+PASS: saved sound toggle mutes UI taps
+PASS: duplicate signals in one frame produce one tap
+UiTapRoutingTest: 9 checks, 0 failures

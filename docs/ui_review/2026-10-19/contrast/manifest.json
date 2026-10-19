@@ -1,0 +1,2025 @@
+{
+	"captures": [
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"background": "lobby_720x1280_background.png",
+			"file": "lobby_720x1280.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@530/LobbyTitle/@PanelContainer@534/@HBoxContainer@533/@Label@532",
+					"render_font_size": 26.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						232.0,
+						198.0,
+						256.0,
+						37.0
+					],
+					"text": "Màn 3 · Pháo Đài Đỏ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@530/@MarginContainer@546/@AspectRatioContainer@539/LobbyStage/@PanelContainer@545/@Label@544",
+					"render_font_size": 18.0,
+					"render_outline_size": 6.0,
+					"render_rect": [
+						242.0,
+						351.801086425781,
+						236.0,
+						27.0
+					],
+					"text": "Lần đầu: x2 vàng + Mèo Nỏ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@530/BattleActionBlock/LobbyRewards/@Label@566",
+					"render_font_size": 20.0,
+					"render_outline_size": 6.0,
+					"render_rect": [
+						148.0,
+						879.0,
+						79.0,
+						29.0
+					],
+					"text": "Thưởng",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@530/BattleActionBlock/LobbyRewards/@PanelContainer@570/@HBoxContainer@569/@Label@568",
+					"render_font_size": 18.0,
+					"render_outline_size": 6.0,
+					"render_rect": [
+						287.0,
+						880.0,
+						35.0,
+						27.0
+					],
+					"text": "480",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@530/BattleActionBlock/LobbyRewards/@PanelContainer@574/@HBoxContainer@573/@Label@572",
+					"render_font_size": 18.0,
+					"render_outline_size": 6.0,
+					"render_rect": [
+						398.0,
+						880.0,
+						21.0,
+						27.0
+					],
+					"text": "10",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@530/BattleActionBlock/LobbyRewards/@PanelContainer@578/@HBoxContainer@577/@Label@576",
+					"render_font_size": 18.0,
+					"render_outline_size": 6.0,
+					"render_rect": [
+						495.0,
+						880.0,
+						61.0,
+						27.0
+					],
+					"text": "Rương",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 36,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@530/BattleActionBlock/@CenterContainer@583/LobbyBattleButton/@CenterContainer@580/LobbyBattleContent/@Label@582",
+					"render_font_size": 36.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						294.0,
+						950.0,
+						190.0,
+						52.0
+					],
+					"text": "Trận chiến",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@512/@VBoxContainer@511/LoginShortcut/@Control@505/ShortcutCaption",
+					"render_font_size": 16.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						22.0,
+						340.0,
+						96.0,
+						28.0
+					],
+					"text": "Quà 7 ngày",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@512/@VBoxContainer@511/QuestsShortcut/@Control@509/ShortcutCaption",
+					"render_font_size": 16.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						22.0,
+						484.0,
+						96.0,
+						28.0
+					],
+					"text": "Nhiệm vụ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@522/@VBoxContainer@521/EventsShortcut/@Control@515/ShortcutCaption",
+					"render_font_size": 16.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						602.0,
+						340.0,
+						96.0,
+						28.0
+					],
+					"text": "Sự kiện",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@522/@VBoxContainer@521/CastleShortcut/@Control@519/ShortcutCaption",
+					"render_font_size": 16.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						602.0,
+						484.0,
+						96.0,
+						28.0
+					],
+					"text": "Thành",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "Header/HeaderRow/GoldButton/CurrencyGold/CurrencyValue",
+					"render_font_size": 18.0,
+					"render_outline_size": 3.0,
+					"render_rect": [
+						150.0,
+						36.0,
+						121.0,
+						36.0
+					],
+					"text": "2.400",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "Header/HeaderRow/GemsButton/CurrencyGems/CurrencyValue",
+					"render_font_size": 18.0,
+					"render_outline_size": 3.0,
+					"render_rect": [
+						363.0,
+						36.0,
+						121.0,
+						36.0
+					],
+					"text": "260",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "Header/HeaderRow/HeaderTools/HeaderActions/AdminButton",
+					"render_font_size": 16.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						532.0,
+						24.0,
+						100.0,
+						60.0
+					],
+					"text": "ADMIN",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@Control@528/@HBoxContainer@610/@PanelContainer@600/@VBoxContainer@595/@Label@598",
+					"render_font_size": 24.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						273.0,
+						1226.0,
+						173.0,
+						34.0
+					],
+					"text": "Chiến",
+					"type": "Label"
+				}
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"background": "castle_720x1280_background.png",
+			"file": "castle_720x1280.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@624/@Label@623",
+					"render_font_size": 26.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						313.0,
+						204.0,
+						86.0,
+						37.0
+					],
+					"text": "Thành",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffd35cff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@Label@628",
+					"render_font_size": 26.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						507.0,
+						608.0,
+						37.0
+					],
+					"text": "Cấp thành 3 / 10",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@629",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						221.0,
+						554.0,
+						115.0,
+						28.0
+					],
+					"text": "Máu thành",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@630",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						366.0,
+						554.0,
+						125.0,
+						28.0
+					],
+					"text": "x1.30  →  x1.50",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@631",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						221.0,
+						586.0,
+						115.0,
+						28.0
+					],
+					"text": "Túi xu tối đa",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@632",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						366.0,
+						586.0,
+						125.0,
+						28.0
+					],
+					"text": "22.0",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@633",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						221.0,
+						618.0,
+						115.0,
+						28.0
+					],
+					"text": "Ô đặt gear",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@634",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						366.0,
+						618.0,
+						125.0,
+						28.0
+					],
+					"text": "16.0  →  18.0",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@635",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						221.0,
+						650.0,
+						115.0,
+						28.0
+					],
+					"text": "Ô đội hình",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@636",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						366.0,
+						650.0,
+						125.0,
+						28.0
+					],
+					"text": "4",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 14,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@Label@639",
+					"render_font_size": 14.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						874.0,
+						608.0,
+						20.0
+					],
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@Button@640",
+					"render_font_size": 24.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						176.0,
+						904.0,
+						360.0,
+						80.0
+					],
+					"text": "NÂNG THÀNH  400",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 22,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@642/@Label@641",
+					"render_font_size": 22.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						320.0,
+						1034.0,
+						72.0,
+						32.0
+					],
+					"text": "Xưởng",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@643/@VBoxContainer@644/@HBoxContainer@645/@VBoxContainer@648/@Label@646",
+					"render_font_size": 21.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						1112.0,
+						426.0,
+						8.0
+					],
+					"text": "Két xu  (0/5)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@643/@VBoxContainer@644/@HBoxContainer@645/@Button@649",
+					"render_font_size": 20.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						490.0,
+						1112.0,
+						170.0,
+						8.0
+					],
+					"text": "120",
+					"type": "Button"
+				}
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"background": "castle_workshop_720x1280_background.png",
+			"file": "castle_workshop_720x1280.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@633",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						221.0,
+						184.0,
+						115.0,
+						19.0
+					],
+					"text": "Ô đặt gear",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@634",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						366.0,
+						184.0,
+						125.0,
+						19.0
+					],
+					"text": "16.0  →  18.0",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@635",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						221.0,
+						207.0,
+						115.0,
+						28.0
+					],
+					"text": "Ô đội hình",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@GridContainer@637/@Label@636",
+					"render_font_size": 19.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						366.0,
+						207.0,
+						125.0,
+						28.0
+					],
+					"text": "4",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 14,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@Label@639",
+					"render_font_size": 14.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						431.0,
+						608.0,
+						20.0
+					],
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@625/@VBoxContainer@626/@Button@640",
+					"render_font_size": 24.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						176.0,
+						461.0,
+						360.0,
+						80.0
+					],
+					"text": "NÂNG THÀNH  400",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 22,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@642/@Label@641",
+					"render_font_size": 22.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						320.0,
+						591.0,
+						72.0,
+						32.0
+					],
+					"text": "Xưởng",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@643/@VBoxContainer@644/@HBoxContainer@645/@VBoxContainer@648/@Label@646",
+					"render_font_size": 21.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						669.0,
+						426.0,
+						30.0
+					],
+					"text": "Két xu  (0/5)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@643/@VBoxContainer@644/@HBoxContainer@645/@VBoxContainer@648/@Label@647",
+					"render_font_size": 16.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						701.0,
+						426.0,
+						23.0
+					],
+					"text": "+0 xu thu nhập mỗi đợt  →  +1 xu thu nhập mỗi đợt",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@643/@VBoxContainer@644/@HBoxContainer@645/@Button@649",
+					"render_font_size": 20.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						490.0,
+						669.0,
+						170.0,
+						64.0
+					],
+					"text": "120",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@650/@VBoxContainer@651/@HBoxContainer@652/@VBoxContainer@655/@Label@653",
+					"render_font_size": 21.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						803.0,
+						426.0,
+						30.0
+					],
+					"text": "Kho dự trữ  (0/4)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@650/@VBoxContainer@651/@HBoxContainer@652/@VBoxContainer@655/@Label@654",
+					"render_font_size": 16.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						835.0,
+						426.0,
+						23.0
+					],
+					"text": "+0 xu khi vào trận  →  +1 xu khi vào trận",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@650/@VBoxContainer@651/@HBoxContainer@652/@Button@656",
+					"render_font_size": 20.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						490.0,
+						803.0,
+						170.0,
+						64.0
+					],
+					"text": "100",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@657/@VBoxContainer@658/@HBoxContainer@659/@VBoxContainer@662/@Label@660",
+					"render_font_size": 21.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						937.0,
+						426.0,
+						30.0
+					],
+					"text": "Bánh răng tổng  (0/5)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@657/@VBoxContainer@658/@HBoxContainer@659/@VBoxContainer@662/@Label@661",
+					"render_font_size": 16.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						52.0,
+						969.0,
+						426.0,
+						49.0
+					],
+					"text": "Gear sinh lính nhanh hơn 0%  →  Gear sinh lính nhanh hơn 5%",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@616/@Control@622/@ScrollContainer@619/@MarginContainer@620/@VBoxContainer@621/@PanelContainer@657/@VBoxContainer@658/@HBoxContainer@659/@Button@663",
+					"render_font_size": 20.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						490.0,
+						945.0,
+						170.0,
+						64.0
+					],
+					"text": "150",
+					"type": "Button"
+				}
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"background": "chest_two_720x1280_background.png",
+			"file": "chest_two_720x1280.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestTitle/@Label@738",
+					"render_font_size": 26.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						230.0,
+						346.0,
+						260.0,
+						37.0
+					],
+					"text": "Rương Gỗ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffd35cff",
+					"font_size": 36,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/@Label@741",
+					"render_font_size": 36.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						30.0,
+						411.0,
+						660.0,
+						52.0
+					],
+					"text": "Nhận được",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 15,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_giao/@Control@754/Front/@VBoxContainer@748/@Label@749",
+					"render_font_size": 16.8000000715256,
+					"render_outline_size": 5.60000002384186,
+					"render_rect": [
+						170.960006713867,
+						523.960021972656,
+						172.479995727539,
+						24.6400146484375
+					],
+					"text": "Thường",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_giao/@Control@754/Front/@VBoxContainer@748/@Label@751",
+					"render_font_size": 21.2800000905991,
+					"render_outline_size": 5.60000002384186,
+					"render_rect": [
+						170.960006713867,
+						665.080017089844,
+						172.479995727539,
+						31.3599853515625
+					],
+					"text": "Mèo Giáo",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_giao/@Control@754/Front/@VBoxContainer@748/@Label@752",
+					"render_font_size": 26.8800001144409,
+					"render_outline_size": 5.60000002384186,
+					"render_rect": [
+						170.960006713867,
+						698.680053710938,
+						172.479995727539,
+						38.0800170898438
+					],
+					"text": "x1",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 15,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_kiem/@Control@764/Front/@VBoxContainer@758/@Label@759",
+					"render_font_size": 16.8000000715256,
+					"render_outline_size": 5.60000002384186,
+					"render_rect": [
+						376.959991455078,
+						523.960021972656,
+						172.480010986328,
+						24.6400146484375
+					],
+					"text": "Thường",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_kiem/@Control@764/Front/@VBoxContainer@758/@Label@761",
+					"render_font_size": 21.2800000905991,
+					"render_outline_size": 5.60000002384186,
+					"render_rect": [
+						376.959991455078,
+						665.080017089844,
+						172.480010986328,
+						31.3599853515625
+					],
+					"text": "Mèo Kiếm",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_kiem/@Control@764/Front/@VBoxContainer@758/@Label@762",
+					"render_font_size": 26.8800001144409,
+					"render_outline_size": 5.60000002384186,
+					"render_rect": [
+						376.959991455078,
+						698.680053710938,
+						172.480010986328,
+						38.0800170898438
+					],
+					"text": "x2",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 28,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestSummaryGold/@Label@766",
+					"render_font_size": 28.0,
+					"render_outline_size": 5.0,
+					"render_rect": [
+						366.0,
+						790.0,
+						31.0,
+						40.0
+					],
+					"text": "83",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryButtons/ChestViewTroopsButton",
+					"render_font_size": 20.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						103.0,
+						850.0,
+						250.0,
+						88.0
+					],
+					"text": "XEM LÍNH",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@734/@Control@735/ChestSummaryHost/ChestSummary/ChestSummaryButtons/ChestDoneButton",
+					"render_font_size": 20.0,
+					"render_outline_size": 7.0,
+					"render_rect": [
+						367.0,
+						850.0,
+						250.0,
+						88.0
+					],
+					"text": "XONG",
+					"type": "Button"
+				}
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"background": "lobby_360x640_background.png",
+			"file": "lobby_360x640.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@767/LobbyTitle/@PanelContainer@771/@HBoxContainer@770/@Label@769",
+					"render_font_size": 13.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						116.0,
+						99.0,
+						128.0,
+						18.5
+					],
+					"text": "Màn 3 · Pháo Đài Đỏ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@767/@MarginContainer@783/@AspectRatioContainer@776/LobbyStage/@PanelContainer@782/@Label@781",
+					"render_font_size": 9.0,
+					"render_outline_size": 3.0,
+					"render_rect": [
+						121.0,
+						176.884460449219,
+						118.0,
+						13.5
+					],
+					"text": "Lần đầu: x2 vàng + Mèo Nỏ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@767/BattleActionBlock/LobbyRewards/@Label@803",
+					"render_font_size": 10.0,
+					"render_outline_size": 3.0,
+					"render_rect": [
+						74.0,
+						439.5,
+						39.5,
+						14.5
+					],
+					"text": "Thưởng",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@767/BattleActionBlock/LobbyRewards/@PanelContainer@807/@HBoxContainer@806/@Label@805",
+					"render_font_size": 9.0,
+					"render_outline_size": 3.0,
+					"render_rect": [
+						143.5,
+						440.0,
+						17.5,
+						13.5
+					],
+					"text": "480",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@767/BattleActionBlock/LobbyRewards/@PanelContainer@811/@HBoxContainer@810/@Label@809",
+					"render_font_size": 9.0,
+					"render_outline_size": 3.0,
+					"render_rect": [
+						199.0,
+						440.0,
+						10.5,
+						13.5
+					],
+					"text": "10",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@767/BattleActionBlock/LobbyRewards/@PanelContainer@815/@HBoxContainer@814/@Label@813",
+					"render_font_size": 9.0,
+					"render_outline_size": 3.0,
+					"render_rect": [
+						247.5,
+						440.0,
+						30.5,
+						13.5
+					],
+					"text": "Rương",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 36,
+					"outline": "2e1c1cff",
+					"path": "@Control@19/@Control@195/@VBoxContainer@767/BattleActionBlock/@CenterContainer@820/LobbyBattleButton/@CenterContainer@817/LobbyBattleContent/@Label@819",
+					"render_font_size": 18.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						147.0,
+						475.0,
+						95.0,
+						26.0
+					],
+					"text": "Trận chiến",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@512/@VBoxContainer@511/LoginShortcut/@Control@505/ShortcutCaption",
+					"render_font_size": 8.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						11.0,
+						170.0,
+						48.0,
+						14.0
+					],
+					"text": "Quà 7 ngày",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@512/@VBoxContainer@511/QuestsShortcut/@Control@509/ShortcutCaption",
+					"render_font_size": 8.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						11.0,
+						242.0,
+						48.0,
+						14.0
+					],
+					"text": "Nhiệm vụ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@522/@VBoxContainer@521/EventsShortcut/@Control@515/ShortcutCaption",
+					"render_font_size": 8.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						301.0,
+						170.0,
+						48.0,
+						14.0
+					],
+					"text": "Sự kiện",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "583f21ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@Control@502/@PanelContainer@522/@VBoxContainer@521/CastleShortcut/@Control@519/ShortcutCaption",
+					"render_font_size": 8.0,
+					"render_outline_size": 0.0,
+					"render_rect": [
+						301.0,
+						242.0,
+						48.0,
+						14.0
+					],
+					"text": "Thành",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "Header/HeaderRow/GoldButton/CurrencyGold/CurrencyValue",
+					"render_font_size": 9.0,
+					"render_outline_size": 1.5,
+					"render_rect": [
+						75.0,
+						18.0,
+						60.5,
+						18.0
+					],
+					"text": "2.400",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 18,
+					"outline": "2e1c1cff",
+					"path": "Header/HeaderRow/GemsButton/CurrencyGems/CurrencyValue",
+					"render_font_size": 9.0,
+					"render_outline_size": 1.5,
+					"render_rect": [
+						181.5,
+						18.0,
+						60.5,
+						18.0
+					],
+					"text": "260",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "Header/HeaderRow/HeaderTools/HeaderActions/AdminButton",
+					"render_font_size": 8.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						266.0,
+						12.0,
+						50.0,
+						30.0
+					],
+					"text": "ADMIN",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@Control@528/@HBoxContainer@847/@PanelContainer@837/@VBoxContainer@832/@Label@835",
+					"render_font_size": 12.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						136.5,
+						613.0,
+						86.5,
+						17.0
+					],
+					"text": "Chiến",
+					"type": "Label"
+				}
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"background": "castle_360x640_background.png",
+			"file": "castle_360x640.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@861/@Label@860",
+					"render_font_size": 13.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						156.5,
+						102.0,
+						43.0,
+						18.5
+					],
+					"text": "Thành",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffd35cff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@Label@865",
+					"render_font_size": 13.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						253.5,
+						304.0,
+						18.5
+					],
+					"text": "Cấp thành 3 / 10",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@866",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						110.5,
+						277.0,
+						57.5,
+						14.0
+					],
+					"text": "Máu thành",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@867",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						183.0,
+						277.0,
+						62.5,
+						14.0
+					],
+					"text": "x1.30  →  x1.50",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@868",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						110.5,
+						293.0,
+						57.5,
+						14.0
+					],
+					"text": "Túi xu tối đa",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@869",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						183.0,
+						293.0,
+						62.5,
+						14.0
+					],
+					"text": "22.0",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@870",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						110.5,
+						309.0,
+						57.5,
+						14.0
+					],
+					"text": "Ô đặt gear",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@871",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						183.0,
+						309.0,
+						62.5,
+						14.0
+					],
+					"text": "16.0  →  18.0",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@872",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						110.5,
+						325.0,
+						57.5,
+						14.0
+					],
+					"text": "Ô đội hình",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@873",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						183.0,
+						325.0,
+						62.5,
+						14.0
+					],
+					"text": "4",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 14,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@Label@876",
+					"render_font_size": 7.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						437.0,
+						304.0,
+						10.0
+					],
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@Button@877",
+					"render_font_size": 12.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						88.0,
+						452.0,
+						180.0,
+						40.0
+					],
+					"text": "NÂNG THÀNH  400",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 22,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@879/@Label@878",
+					"render_font_size": 11.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						160.0,
+						517.0,
+						36.0,
+						16.0
+					],
+					"text": "Xưởng",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@880/@VBoxContainer@881/@HBoxContainer@882/@VBoxContainer@885/@Label@883",
+					"render_font_size": 10.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						556.0,
+						213.0,
+						4.0
+					],
+					"text": "Két xu  (0/5)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@880/@VBoxContainer@881/@HBoxContainer@882/@Button@886",
+					"render_font_size": 10.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						245.0,
+						556.0,
+						85.0,
+						4.0
+					],
+					"text": "120",
+					"type": "Button"
+				}
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"background": "castle_workshop_360x640_background.png",
+			"file": "castle_workshop_360x640.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@870",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						110.5,
+						92.0,
+						57.5,
+						9.5
+					],
+					"text": "Ô đặt gear",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@871",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						183.0,
+						92.0,
+						62.5,
+						9.5
+					],
+					"text": "16.0  →  18.0",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@872",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						110.5,
+						103.5,
+						57.5,
+						14.0
+					],
+					"text": "Ô đội hình",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@GridContainer@874/@Label@873",
+					"render_font_size": 9.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						183.0,
+						103.5,
+						62.5,
+						14.0
+					],
+					"text": "4",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 14,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@Label@876",
+					"render_font_size": 7.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						215.5,
+						304.0,
+						10.0
+					],
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@862/@VBoxContainer@863/@Button@877",
+					"render_font_size": 12.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						88.0,
+						230.5,
+						180.0,
+						40.0
+					],
+					"text": "NÂNG THÀNH  400",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 22,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@879/@Label@878",
+					"render_font_size": 11.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						160.0,
+						295.5,
+						36.0,
+						16.0
+					],
+					"text": "Xưởng",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@880/@VBoxContainer@881/@HBoxContainer@882/@VBoxContainer@885/@Label@883",
+					"render_font_size": 10.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						334.5,
+						213.0,
+						15.0
+					],
+					"text": "Két xu  (0/5)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@880/@VBoxContainer@881/@HBoxContainer@882/@VBoxContainer@885/@Label@884",
+					"render_font_size": 8.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						350.5,
+						213.0,
+						11.5
+					],
+					"text": "+0 xu thu nhập mỗi đợt  →  +1 xu thu nhập mỗi đợt",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@880/@VBoxContainer@881/@HBoxContainer@882/@Button@886",
+					"render_font_size": 10.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						245.0,
+						334.5,
+						85.0,
+						32.0
+					],
+					"text": "120",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@887/@VBoxContainer@888/@HBoxContainer@889/@VBoxContainer@892/@Label@890",
+					"render_font_size": 10.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						401.5,
+						213.0,
+						15.0
+					],
+					"text": "Kho dự trữ  (0/4)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@887/@VBoxContainer@888/@HBoxContainer@889/@VBoxContainer@892/@Label@891",
+					"render_font_size": 8.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						417.5,
+						213.0,
+						11.5
+					],
+					"text": "+0 xu khi vào trận  →  +1 xu khi vào trận",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@887/@VBoxContainer@888/@HBoxContainer@889/@Button@893",
+					"render_font_size": 10.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						245.0,
+						401.5,
+						85.0,
+						32.0
+					],
+					"text": "100",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 21,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@894/@VBoxContainer@895/@HBoxContainer@896/@VBoxContainer@899/@Label@897",
+					"render_font_size": 10.5,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						468.5,
+						213.0,
+						15.0
+					],
+					"text": "Bánh răng tổng  (0/5)",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "fff2c2ff",
+					"font_size": 16,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@894/@VBoxContainer@895/@HBoxContainer@896/@VBoxContainer@899/@Label@898",
+					"render_font_size": 8.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						26.0,
+						484.5,
+						213.0,
+						24.5
+					],
+					"text": "Gear sinh lính nhanh hơn 0%  →  Gear sinh lính nhanh hơn 5%",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@ColorRect@853/@Control@859/@ScrollContainer@856/@MarginContainer@857/@VBoxContainer@858/@PanelContainer@894/@VBoxContainer@895/@HBoxContainer@896/@Button@900",
+					"render_font_size": 10.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						245.0,
+						472.5,
+						85.0,
+						32.0
+					],
+					"text": "150",
+					"type": "Button"
+				}
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"background": "chest_two_360x640_background.png",
+			"file": "chest_two_360x640.png",
+			"labels": [
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 26,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestTitle/@Label@975",
+					"render_font_size": 13.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						115.0,
+						173.0,
+						130.0,
+						18.5
+					],
+					"text": "Rương Gỗ",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffd35cff",
+					"font_size": 36,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/@Label@978",
+					"render_font_size": 18.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						15.0,
+						205.5,
+						330.0,
+						26.0
+					],
+					"text": "Nhận được",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 15,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_giao/@Control@991/Front/@VBoxContainer@985/@Label@986",
+					"render_font_size": 8.40000003576279,
+					"render_outline_size": 2.80000001192093,
+					"render_rect": [
+						85.4800033569336,
+						261.980010986328,
+						86.2399978637695,
+						12.3200073242188
+					],
+					"text": "Thường",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_giao/@Control@991/Front/@VBoxContainer@985/@Label@988",
+					"render_font_size": 10.6400000452995,
+					"render_outline_size": 2.80000001192093,
+					"render_rect": [
+						85.4800033569336,
+						332.540008544922,
+						86.2399978637695,
+						15.6799926757813
+					],
+					"text": "Mèo Giáo",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_giao/@Control@991/Front/@VBoxContainer@985/@Label@989",
+					"render_font_size": 13.4400000572205,
+					"render_outline_size": 2.80000001192093,
+					"render_rect": [
+						85.4800033569336,
+						349.340026855469,
+						86.2399978637695,
+						19.0400085449219
+					],
+					"text": "x1",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 15,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_kiem/@Control@1001/Front/@VBoxContainer@995/@Label@996",
+					"render_font_size": 8.40000003576279,
+					"render_outline_size": 2.80000001192093,
+					"render_rect": [
+						188.479995727539,
+						261.980010986328,
+						86.2400054931641,
+						12.3200073242188
+					],
+					"text": "Thường",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 19,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_kiem/@Control@1001/Front/@VBoxContainer@995/@Label@998",
+					"render_font_size": 10.6400000452995,
+					"render_outline_size": 2.80000001192093,
+					"render_rect": [
+						188.479995727539,
+						332.540008544922,
+						86.2400054931641,
+						15.6799926757813
+					],
+					"text": "Mèo Kiếm",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 24,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestRewardGrid/Reward_kiem/@Control@1001/Front/@VBoxContainer@995/@Label@999",
+					"render_font_size": 13.4400000572205,
+					"render_outline_size": 2.80000001192093,
+					"render_rect": [
+						188.479995727539,
+						349.340026855469,
+						86.2400054931641,
+						19.0400085449219
+					],
+					"text": "x2",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 28,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryScroll/ChestSummaryRewards/ChestSummaryGold/@Label@1003",
+					"render_font_size": 14.0,
+					"render_outline_size": 2.5,
+					"render_rect": [
+						183.0,
+						395.0,
+						15.5,
+						20.0
+					],
+					"text": "83",
+					"type": "Label"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryButtons/ChestViewTroopsButton",
+					"render_font_size": 10.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						51.5,
+						425.0,
+						125.0,
+						44.0
+					],
+					"text": "XEM LÍNH",
+					"type": "Button"
+				},
+				{
+					"disabled": false,
+					"fill": "ffffffff",
+					"font_size": 20,
+					"outline": "2e1c1cff",
+					"path": "@CanvasLayer@971/@Control@972/ChestSummaryHost/ChestSummary/ChestSummaryButtons/ChestDoneButton",
+					"render_font_size": 10.0,
+					"render_outline_size": 3.5,
+					"render_rect": [
+						183.5,
+						425.0,
+						125.0,
+						44.0
+					],
+					"text": "XONG",
+					"type": "Button"
+				}
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/contrast/mcp/profile/Godot/app_userdata/Gear Defenders"
+}

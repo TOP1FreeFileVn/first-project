@@ -1,0 +1,1216 @@
+{
+	"actual": [
+		360,
+		640
+	],
+	"cards": [
+		{
+			"card": {
+				"design_rect": [
+					40.0,
+					243.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1921",
+				"render_rect": [
+					20.0,
+					121.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				40.0,
+				243.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_bua",
+			"render_rect": [
+				20.0,
+				121.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					202.0,
+					243.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1934",
+				"render_rect": [
+					101.0,
+					121.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				202.0,
+				243.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_dua_phep",
+			"render_rect": [
+				101.0,
+				121.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					364.0,
+					243.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1947",
+				"render_rect": [
+					182.0,
+					121.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				364.0,
+				243.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_dai_bac",
+			"render_rect": [
+				182.0,
+				121.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					526.0,
+					243.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1960",
+				"render_rect": [
+					263.0,
+					121.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				526.0,
+				243.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_katana",
+			"render_rect": [
+				263.0,
+				121.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					40.0,
+					456.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1972",
+				"render_rect": [
+					20.0,
+					228.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				40.0,
+				456.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_chuy",
+			"render_rect": [
+				20.0,
+				228.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					202.0,
+					456.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1984",
+				"render_rect": [
+					101.0,
+					228.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				202.0,
+				456.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_sach_phep",
+			"render_rect": [
+				101.0,
+				228.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					364.0,
+					456.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1996",
+				"render_rect": [
+					182.0,
+					228.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				364.0,
+				456.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_sung",
+			"render_rect": [
+				182.0,
+				228.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					526.0,
+					456.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2008",
+				"render_rect": [
+					263.0,
+					228.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				526.0,
+				456.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_dao",
+			"render_rect": [
+				263.0,
+				228.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					40.0,
+					669.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2020",
+				"render_rect": [
+					20.0,
+					334.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				40.0,
+				669.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_cu_kiem",
+			"render_rect": [
+				20.0,
+				334.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					202.0,
+					669.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2032",
+				"render_rect": [
+					101.0,
+					334.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				202.0,
+				669.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_thuoc",
+			"render_rect": [
+				101.0,
+				334.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					364.0,
+					669.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2044",
+				"render_rect": [
+					182.0,
+					334.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				364.0,
+				669.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_no",
+			"render_rect": [
+				182.0,
+				334.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					526.0,
+					669.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2056",
+				"render_rect": [
+					263.0,
+					334.5,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				526.0,
+				669.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_riu",
+			"render_rect": [
+				263.0,
+				334.5,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					40.0,
+					882.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2068",
+				"render_rect": [
+					20.0,
+					441.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				40.0,
+				882.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_giao",
+			"render_rect": [
+				20.0,
+				441.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					202.0,
+					882.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2080",
+				"render_rect": [
+					101.0,
+					441.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				202.0,
+				882.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_gay_phep",
+			"render_rect": [
+				101.0,
+				441.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					364.0,
+					882.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2092",
+				"render_rect": [
+					182.0,
+					441.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				364.0,
+				882.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_cung",
+			"render_rect": [
+				182.0,
+				441.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"card": {
+				"design_rect": [
+					526.0,
+					882.0,
+					146.199996948242,
+					197.800003051758
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@2104",
+				"render_rect": [
+					263.0,
+					441.0,
+					73.0999984741211,
+					98.9000015258789
+				],
+				"scale": [
+					0.860000014305115,
+					0.860000014305115
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"card_scale": [
+				0.860000014305115,
+				0.860000014305115
+			],
+			"design_rect": [
+				526.0,
+				882.0,
+				146.199996948242,
+				197.800003051758
+			],
+			"minimum_size": [
+				146.199996948242,
+				197.800003051758
+			],
+			"name": "Reward_kiem",
+			"render_rect": [
+				263.0,
+				441.0,
+				73.0999984741211,
+				98.9000015258789
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "Control",
+			"visible": true
+		}
+	],
+	"controls": {
+		"ChestDoneButton": {
+			"design_rect": [
+				367.0,
+				1122.0,
+				250.0,
+				88.0
+			],
+			"disabled": false,
+			"minimum_size": [
+				250.0,
+				88.0
+			],
+			"name": "ChestDoneButton",
+			"render_rect": [
+				183.5,
+				561.0,
+				125.0,
+				44.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"text": "XONG",
+			"type": "Button",
+			"visible": true
+		},
+		"ChestRewardGrid": {
+			"design_rect": [
+				40.0,
+				243.0,
+				632.0,
+				836.0
+			],
+			"minimum_size": [
+				632.0,
+				836.0
+			],
+			"name": "ChestRewardGrid",
+			"render_rect": [
+				20.0,
+				121.5,
+				316.0,
+				418.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "GridContainer",
+			"visible": true
+		},
+		"ChestSummary": {
+			"design_rect": [
+				30.0,
+				70.0,
+				660.0,
+				1140.0
+			],
+			"minimum_size": [
+				660.0,
+				1140.0
+			],
+			"name": "ChestSummary",
+			"render_rect": [
+				15.0,
+				35.0,
+				330.0,
+				570.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryButtons": {
+			"design_rect": [
+				30.0,
+				1122.0,
+				660.0,
+				88.0
+			],
+			"minimum_size": [
+				514.0,
+				88.0
+			],
+			"name": "ChestSummaryButtons",
+			"render_rect": [
+				15.0,
+				561.0,
+				330.0,
+				44.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryFresh": {
+			"design_rect": [
+				30.0,
+				1155.0,
+				652.0,
+				125.0
+			],
+			"font_size": 20,
+			"minimum_size": [
+				1.0,
+				125.0
+			],
+			"name": "ChestSummaryFresh",
+			"render_rect": [
+				15.0,
+				577.5,
+				326.0,
+				62.5
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"text": "Lính mới: Mèo Kiếm, Mèo Rìu, Mèo Đao, Mèo Katana, Mèo Cung, Mèo Nỏ, Mèo Súng, Mèo Đại Bác, Mèo Gậy Phép, Mèo Bình Thuốc, Mèo Sách Phép, Mèo Đũa Phép, Mèo Giáo, Mèo Cự Kiếm, Mèo Chuỳ, Mèo Búa",
+			"type": "Label",
+			"visible": true
+		},
+		"ChestSummaryGold": {
+			"design_rect": [
+				30.0,
+				1097.0,
+				652.0,
+				40.0
+			],
+			"minimum_size": [
+				165.0,
+				40.0
+			],
+			"name": "ChestSummaryGold",
+			"render_rect": [
+				15.0,
+				548.5,
+				326.0,
+				20.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryHost": {
+			"design_rect": [
+				30.0,
+				70.0,
+				660.0,
+				1140.0
+			],
+			"minimum_size": [
+				660.0,
+				1140.0
+			],
+			"name": "ChestSummaryHost",
+			"render_rect": [
+				15.0,
+				35.0,
+				330.0,
+				570.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		"ChestSummaryRewards": {
+			"design_rect": [
+				30.0,
+				211.0,
+				652.0,
+				1069.0
+			],
+			"minimum_size": [
+				632.0,
+				1069.0
+			],
+			"name": "ChestSummaryRewards",
+			"render_rect": [
+				15.0,
+				105.5,
+				326.0,
+				534.5
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		"ChestSummaryScroll": {
+			"design_rect": [
+				30.0,
+				211.0,
+				660.0,
+				891.0
+			],
+			"minimum_size": [
+				640.0,
+				891.0
+			],
+			"name": "ChestSummaryScroll",
+			"render_rect": [
+				15.0,
+				105.5,
+				330.0,
+				445.5
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"scroll_vertical": 0,
+			"type": "ScrollContainer",
+			"vertical_max": 1069.0,
+			"vertical_page": 891.0,
+			"visible": true
+		},
+		"ChestTitle": {
+			"design_rect": [
+				200.0,
+				70.0,
+				320.0,
+				49.0
+			],
+			"minimum_size": [
+				320.0,
+				49.0
+			],
+			"name": "ChestTitle",
+			"render_rect": [
+				100.0,
+				35.0,
+				160.0,
+				24.5
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		"ChestViewTroopsButton": {
+			"design_rect": [
+				103.0,
+				1122.0,
+				250.0,
+				88.0
+			],
+			"disabled": false,
+			"minimum_size": [
+				250.0,
+				88.0
+			],
+			"name": "ChestViewTroopsButton",
+			"render_rect": [
+				51.5,
+				561.0,
+				125.0,
+				44.0
+			],
+			"scale": [
+				1.0,
+				1.0
+			],
+			"text": "XEM LÍNH",
+			"type": "Button",
+			"visible": true
+		}
+	},
+	"file": "many_new_360x640.png",
+	"layout_checks": {
+		"ChestDoneButton_inside_viewport": true,
+		"ChestSummaryButtons_inside_viewport": true,
+		"ChestSummary_inside_viewport": true,
+		"callback_button_matches_setup": true,
+		"card_count_matches_loot": true,
+		"summary_horizontal_center": true,
+		"summary_vertical_center": true
+	},
+	"requested": [
+		360,
+		640
+	],
+	"scenario": {
+		"action": "done",
+		"callback": true,
+		"cards": {
+			"bua": 16,
+			"chuy": 15,
+			"cu_kiem": 14,
+			"cung": 5,
+			"dai_bac": 8,
+			"dao": 3,
+			"dua_phep": 12,
+			"gay_phep": 9,
+			"giao": 13,
+			"katana": 4,
+			"kiem": 1,
+			"no": 6,
+			"riu": 2,
+			"sach_phep": 11,
+			"sung": 7,
+			"thuoc": 10
+		},
+		"fast": true,
+		"gold": 1234567,
+		"name": "many_new",
+		"new_ids": [
+			"kiem",
+			"riu",
+			"dao",
+			"katana",
+			"cung",
+			"no",
+			"sung",
+			"dai_bac",
+			"gay_phep",
+			"thuoc",
+			"sach_phep",
+			"dua_phep",
+			"giao",
+			"cu_kiem",
+			"chuy",
+			"bua"
+		]
+	},
+	"stage": "summary"
+}

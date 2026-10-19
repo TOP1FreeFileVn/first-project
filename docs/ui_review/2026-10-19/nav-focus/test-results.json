@@ -1,0 +1,20 @@
+[
+  {
+    "name": "UiTapRoutingTest",
+    "code": 0,
+    "timedOut": false,
+    "passed": true,
+    "summary": [
+      "PASS: UI tap is ready before background synthesis",
+      "PASS: Ui.button routes one tap",
+      "PASS: UiKit.button routes one tap",
+      "PASS: Home tab routes one tap",
+      "PASS: tab action still selects the shop",
+      "PASS: popup close routes one tap",
+      "PASS: popup close action still runs",
+      "PASS: saved sound toggle mutes UI taps",
+      "PASS: duplicate signals in one frame produce one tap",
+      "UiTapRoutingTest: 9 checks, 0 failures"
+    ]
+  }
+]

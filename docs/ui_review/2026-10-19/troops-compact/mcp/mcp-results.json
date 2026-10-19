@@ -1,0 +1,44 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "tests/ui_review/TroopsCompactReview.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nTROOPS_COMPACT_CAPTURE starter_all_720x1280\r\nTROOPS_COMPACT_CAPTURE starter_common_720x1280\r\nTROOPS_COMPACT_CAPTURE starter_rare_720x1280\r\nTROOPS_COMPACT_CAPTURE starter_epic_720x1280\r\nTROOPS_COMPACT_CAPTURE starter_legendary_720x1280\r\nTROOPS_COMPACT_CAPTURE starter_all_scrolled_720x1280\r\nTROOPS_COMPACT_CAPTURE late_all_720x1280\r\nTROOPS_COMPACT_CAPTURE late_common_720x1280\r\nTROOPS_COMPACT_CAPTURE late_rare_720x1280\r\nTROOPS_COMPACT_CAPTURE late_epic_720x1280\r\nTROOPS_COMPACT_CAPTURE late_legendary_720x1280\r\nTROOPS_COMPACT_CAPTURE late_all_scrolled_720x1280\r\nTROOPS_COMPACT_COMPLETE 12 native screens; 33 routes; failures=0\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "tests/ui_review/TroopsCompactReview360.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nTROOPS_COMPACT_CAPTURE starter_all_360x640\r\nTROOPS_COMPACT_CAPTURE starter_common_360x640\r\nTROOPS_COMPACT_CAPTURE starter_rare_360x640\r\nTROOPS_COMPACT_CAPTURE starter_epic_360x640\r\nTROOPS_COMPACT_CAPTURE starter_legendary_360x640\r\nTROOPS_COMPACT_CAPTURE starter_all_scrolled_360x640\r\nTROOPS_COMPACT_CAPTURE late_all_360x640\r\nTROOPS_COMPACT_CAPTURE late_common_360x640\r\nTROOPS_COMPACT_CAPTURE late_rare_360x640\r\nTROOPS_COMPACT_CAPTURE late_epic_360x640\r\nTROOPS_COMPACT_CAPTURE late_legendary_360x640\r\nTROOPS_COMPACT_CAPTURE late_all_scrolled_360x640\r\nTROOPS_COMPACT_COMPLETE 12 native screens; 33 routes; failures=0\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

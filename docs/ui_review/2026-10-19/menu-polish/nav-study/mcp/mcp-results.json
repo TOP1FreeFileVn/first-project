@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "docs/ui_review/2026-10-19/menu-polish/nav-study/NavStudy.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nNAV_STUDY_TRANSFORMS [X: (0.625, 0.0), Y: (0.0, 0.625), O: (0.0, 0.0)] global=[X: (1.0, 0.0), Y: (0.0, 1.0), O: (273.0, 1120.0)] rect=[P: (273.0, 1120.0), S: (173.0, 178.0)]\r\nNAV_STUDY_SNAP @PanelContainer@444 phase=0.0 margins=-0.60000002384186,0.40000000596046\r\nNAV_STUDY_SNAP SelectedNavFooter phase=0.0 margins=-0.60000002384186,0.40000000596046\r\nNAV_STUDY_SNAP @PanelContainer@444 phase=0.5 margins=0.20000000298023,-0.40000000596046\r\nNAV_STUDY_SNAP SelectedNavFooter phase=0.5 margins=0.20000000298023,-0.40000000596046\r\nNAV_STUDY_SNAP @PanelContainer@444 phase=0.0 margins=-0.60000002384186,0.40000000596046\r\nNAV_STUDY_SNAP SelectedNavFooter phase=0.0 margins=-0.60000002384186,0.40000000596046\r\nNAV_STUDY_SNAP @PanelContainer@444 phase=0.0 margins=0.0,0.0\r\nNAV_STUDY_SNAP SelectedNavFooter phase=0.0 margins=0.0,0.0\r\nNAV_STUDY_SNAP @PanelContainer@444 phase=0.0 margins=-1.0,0.0\r\nNAV_STUDY_SNAP SelectedNavFooter phase=0.0 margins=-1.0,0.0\r\nNAV_STUDY_COMPLETE\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

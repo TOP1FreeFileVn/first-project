@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "tests/ui_review/TroopsRowsProposal.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nTROOPS_ROWS_PROPOSAL_CAPTURE rows_720x1280 native=(720, 1280)\r\nTROOPS_ROWS_PROPOSAL_CAPTURE rows_360x640 native=(360, 640)\r\nTROOPS_ROWS_PROPOSAL_CAPTURE rows_360x640_scrolled native=(360, 640)\r\nTROOPS_ROWS_PROPOSAL_COMPLETE static mockup; production HUD and nav preserved\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

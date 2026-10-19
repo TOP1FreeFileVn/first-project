@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/ui_review/NavFooterCompactPreview.gd" id="1"]
+
+[node name="NavFooterCompactBefore" type="Node"]
+script = ExtResource("1")
+output_dir = "res://docs/ui_review/2026-10-19/nav-footer-compact/before"

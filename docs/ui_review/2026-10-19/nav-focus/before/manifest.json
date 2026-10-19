@@ -1,0 +1,2435 @@
+{
+	"captures": [
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					574.0,
+					166.0
+				],
+				"name": "@HBoxContainer@697",
+				"path": "@Control@546/@HBoxContainer@697",
+				"render_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					6.0,
+					1226.0,
+					173.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					118.0,
+					34.0
+				],
+				"name": "@Label@675",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677/@VBoxContainer@672/@Label@675",
+				"render_rect": [
+					6.0,
+					1226.0,
+					173.0,
+					34.0
+				],
+				"text": "Cửa hàng",
+				"text_width": 118.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						173.0,
+						178.0
+					],
+					"minimum_size": [
+						118.0,
+						166.0
+					],
+					"name": "@PanelContainer@677",
+					"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677",
+					"render_rect": [
+						6.0,
+						1120.0,
+						173.0,
+						178.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						179.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@682",
+					"path": "@Control@546/@HBoxContainer@697/@MarginContainer@682",
+					"render_rect": [
+						179.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						313.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@687",
+					"path": "@Control@546/@HBoxContainer@697/@MarginContainer@687",
+					"render_rect": [
+						313.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@692",
+					"path": "@Control@546/@HBoxContainer@697/@MarginContainer@692",
+					"render_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@696",
+					"path": "@Control@546/@HBoxContainer@697/@MarginContainer@696",
+					"render_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "shop_720x1280.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 0,
+			"nav": "shop_720x1280_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				1.0,
+				1.0
+			],
+			"requested": [
+				720,
+				1280
+			],
+			"selected_cell": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					173.0,
+					178.0
+				],
+				"minimum_size": [
+					118.0,
+					166.0
+				],
+				"name": "@PanelContainer@677",
+				"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677",
+				"render_rect": [
+					6.0,
+					1120.0,
+					173.0,
+					178.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "shop",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					575.0,
+					166.0
+				],
+				"name": "@HBoxContainer@848",
+				"path": "@Control@546/@HBoxContainer@848",
+				"render_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					139.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					119.0,
+					34.0
+				],
+				"name": "@Label@831",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@848/@PanelContainer@833/@VBoxContainer@828/@Label@831",
+				"render_rect": [
+					139.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"text": "Anh hùng",
+				"text_width": 119.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@827",
+					"path": "@Control@546/@HBoxContainer@848/@MarginContainer@827",
+					"render_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"minimum_size": [
+						119.0,
+						166.0
+					],
+					"name": "@PanelContainer@833",
+					"path": "@Control@546/@HBoxContainer@848/@PanelContainer@833",
+					"render_rect": [
+						139.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						313.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@838",
+					"path": "@Control@546/@HBoxContainer@848/@MarginContainer@838",
+					"render_rect": [
+						313.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@843",
+					"path": "@Control@546/@HBoxContainer@848/@MarginContainer@843",
+					"render_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@847",
+					"path": "@Control@546/@HBoxContainer@848/@MarginContainer@847",
+					"render_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "hero_720x1280.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 1,
+			"nav": "hero_720x1280_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				1.0,
+				1.0
+			],
+			"requested": [
+				720,
+				1280
+			],
+			"selected_cell": {
+				"design_rect": [
+					139.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"minimum_size": [
+					119.0,
+					166.0
+				],
+				"name": "@PanelContainer@833",
+				"path": "@Control@546/@HBoxContainer@848/@PanelContainer@833",
+				"render_rect": [
+					139.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "hero",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					525.0,
+					166.0
+				],
+				"name": "@HBoxContainer@934",
+				"path": "@Control@546/@HBoxContainer@934",
+				"render_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					273.0,
+					1226.0,
+					173.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					69.0,
+					34.0
+				],
+				"name": "@Label@922",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@934/@PanelContainer@924/@VBoxContainer@919/@Label@922",
+				"render_rect": [
+					273.0,
+					1226.0,
+					173.0,
+					34.0
+				],
+				"text": "Chiến",
+				"text_width": 69.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@913",
+					"path": "@Control@546/@HBoxContainer@934/@MarginContainer@913",
+					"render_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@918",
+					"path": "@Control@546/@HBoxContainer@934/@MarginContainer@918",
+					"render_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						273.0,
+						1120.0,
+						173.0,
+						178.0
+					],
+					"minimum_size": [
+						69.0,
+						166.0
+					],
+					"name": "@PanelContainer@924",
+					"path": "@Control@546/@HBoxContainer@934/@PanelContainer@924",
+					"render_rect": [
+						273.0,
+						1120.0,
+						173.0,
+						178.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@929",
+					"path": "@Control@546/@HBoxContainer@934/@MarginContainer@929",
+					"render_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@933",
+					"path": "@Control@546/@HBoxContainer@934/@MarginContainer@933",
+					"render_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "battle_720x1280.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 2,
+			"nav": "battle_720x1280_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				1.0,
+				1.0
+			],
+			"requested": [
+				720,
+				1280
+			],
+			"selected_cell": {
+				"design_rect": [
+					273.0,
+					1120.0,
+					173.0,
+					178.0
+				],
+				"minimum_size": [
+					69.0,
+					166.0
+				],
+				"name": "@PanelContainer@924",
+				"path": "@Control@546/@HBoxContainer@934/@PanelContainer@924",
+				"render_rect": [
+					273.0,
+					1120.0,
+					173.0,
+					178.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "battle",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					510.0,
+					166.0
+				],
+				"name": "@HBoxContainer@1199",
+				"path": "@Control@546/@HBoxContainer@1199",
+				"render_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					406.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					54.0,
+					34.0
+				],
+				"name": "@Label@1192",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@1199/@PanelContainer@1194/@VBoxContainer@1189/@Label@1192",
+				"render_rect": [
+					406.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"text": "Lính",
+				"text_width": 54.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1178",
+					"path": "@Control@546/@HBoxContainer@1199/@MarginContainer@1178",
+					"render_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1183",
+					"path": "@Control@546/@HBoxContainer@1199/@MarginContainer@1183",
+					"render_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						273.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1188",
+					"path": "@Control@546/@HBoxContainer@1199/@MarginContainer@1188",
+					"render_rect": [
+						273.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						406.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"minimum_size": [
+						54.0,
+						166.0
+					],
+					"name": "@PanelContainer@1194",
+					"path": "@Control@546/@HBoxContainer@1199/@PanelContainer@1194",
+					"render_rect": [
+						406.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1198",
+					"path": "@Control@546/@HBoxContainer@1199/@MarginContainer@1198",
+					"render_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "troops_720x1280.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 3,
+			"nav": "troops_720x1280_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				1.0,
+				1.0
+			],
+			"requested": [
+				720,
+				1280
+			],
+			"selected_cell": {
+				"design_rect": [
+					406.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"minimum_size": [
+					54.0,
+					166.0
+				],
+				"name": "@PanelContainer@1194",
+				"path": "@Control@546/@HBoxContainer@1199/@PanelContainer@1194",
+				"render_rect": [
+					406.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "troops",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				720,
+				1280
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					561.0,
+					166.0
+				],
+				"name": "@HBoxContainer@1252",
+				"path": "@Control@546/@HBoxContainer@1252",
+				"render_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					540.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					105.0,
+					34.0
+				],
+				"name": "@Label@1249",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@1252/@PanelContainer@1251/@VBoxContainer@1246/@Label@1249",
+				"render_rect": [
+					540.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"text": "Triệu hồi",
+				"text_width": 105.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1230",
+					"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1230",
+					"render_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1235",
+					"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1235",
+					"render_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						273.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1240",
+					"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1240",
+					"render_rect": [
+						273.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						406.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1245",
+					"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1245",
+					"render_rect": [
+						406.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						540.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"minimum_size": [
+						105.0,
+						166.0
+					],
+					"name": "@PanelContainer@1251",
+					"path": "@Control@546/@HBoxContainer@1252/@PanelContainer@1251",
+					"render_rect": [
+						540.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				}
+			],
+			"file": "summon_720x1280.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 4,
+			"nav": "summon_720x1280_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				1.0,
+				1.0
+			],
+			"requested": [
+				720,
+				1280
+			],
+			"selected_cell": {
+				"design_rect": [
+					540.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"minimum_size": [
+					105.0,
+					166.0
+				],
+				"name": "@PanelContainer@1251",
+				"path": "@Control@546/@HBoxContainer@1252/@PanelContainer@1251",
+				"render_rect": [
+					540.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "summon",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					574.0,
+					166.0
+				],
+				"name": "@HBoxContainer@1321",
+				"path": "@Control@546/@HBoxContainer@1321",
+				"render_rect": [
+					3.0,
+					560.0,
+					354.0,
+					89.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					6.0,
+					1226.0,
+					173.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					118.0,
+					34.0
+				],
+				"name": "@Label@1299",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@1321/@PanelContainer@1301/@VBoxContainer@1296/@Label@1299",
+				"render_rect": [
+					3.0,
+					613.0,
+					86.5,
+					17.0
+				],
+				"text": "Cửa hàng",
+				"text_width": 118.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						173.0,
+						178.0
+					],
+					"minimum_size": [
+						118.0,
+						166.0
+					],
+					"name": "@PanelContainer@1301",
+					"path": "@Control@546/@HBoxContainer@1321/@PanelContainer@1301",
+					"render_rect": [
+						3.0,
+						560.0,
+						86.5,
+						89.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						179.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1306",
+					"path": "@Control@546/@HBoxContainer@1321/@MarginContainer@1306",
+					"render_rect": [
+						89.5,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						313.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1311",
+					"path": "@Control@546/@HBoxContainer@1321/@MarginContainer@1311",
+					"render_rect": [
+						156.5,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1316",
+					"path": "@Control@546/@HBoxContainer@1321/@MarginContainer@1316",
+					"render_rect": [
+						223.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1320",
+					"path": "@Control@546/@HBoxContainer@1321/@MarginContainer@1320",
+					"render_rect": [
+						290.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "shop_360x640.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 0,
+			"nav": "shop_360x640_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					560.0,
+					360.0,
+					80.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				0.5,
+				0.5
+			],
+			"requested": [
+				360,
+				640
+			],
+			"selected_cell": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					173.0,
+					178.0
+				],
+				"minimum_size": [
+					118.0,
+					166.0
+				],
+				"name": "@PanelContainer@1301",
+				"path": "@Control@546/@HBoxContainer@1321/@PanelContainer@1301",
+				"render_rect": [
+					3.0,
+					560.0,
+					86.5,
+					89.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "shop",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					575.0,
+					166.0
+				],
+				"name": "@HBoxContainer@1472",
+				"path": "@Control@546/@HBoxContainer@1472",
+				"render_rect": [
+					3.0,
+					560.0,
+					354.0,
+					89.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					139.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					119.0,
+					34.0
+				],
+				"name": "@Label@1455",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457/@VBoxContainer@1452/@Label@1455",
+				"render_rect": [
+					69.5,
+					613.0,
+					87.0,
+					17.0
+				],
+				"text": "Anh hùng",
+				"text_width": 119.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1451",
+					"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1451",
+					"render_rect": [
+						3.0,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"minimum_size": [
+						119.0,
+						166.0
+					],
+					"name": "@PanelContainer@1457",
+					"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457",
+					"render_rect": [
+						69.5,
+						560.0,
+						87.0,
+						89.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						313.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1462",
+					"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1462",
+					"render_rect": [
+						156.5,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1467",
+					"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1467",
+					"render_rect": [
+						223.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1471",
+					"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1471",
+					"render_rect": [
+						290.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "hero_360x640.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 1,
+			"nav": "hero_360x640_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					560.0,
+					360.0,
+					80.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				0.5,
+				0.5
+			],
+			"requested": [
+				360,
+				640
+			],
+			"selected_cell": {
+				"design_rect": [
+					139.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"minimum_size": [
+					119.0,
+					166.0
+				],
+				"name": "@PanelContainer@1457",
+				"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457",
+				"render_rect": [
+					69.5,
+					560.0,
+					87.0,
+					89.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "hero",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					525.0,
+					166.0
+				],
+				"name": "@HBoxContainer@1558",
+				"path": "@Control@546/@HBoxContainer@1558",
+				"render_rect": [
+					3.0,
+					560.0,
+					354.0,
+					89.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					273.0,
+					1226.0,
+					173.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					69.0,
+					34.0
+				],
+				"name": "@Label@1546",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@1558/@PanelContainer@1548/@VBoxContainer@1543/@Label@1546",
+				"render_rect": [
+					136.5,
+					613.0,
+					86.5,
+					17.0
+				],
+				"text": "Chiến",
+				"text_width": 69.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1537",
+					"path": "@Control@546/@HBoxContainer@1558/@MarginContainer@1537",
+					"render_rect": [
+						3.0,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1542",
+					"path": "@Control@546/@HBoxContainer@1558/@MarginContainer@1542",
+					"render_rect": [
+						69.5,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						273.0,
+						1120.0,
+						173.0,
+						178.0
+					],
+					"minimum_size": [
+						69.0,
+						166.0
+					],
+					"name": "@PanelContainer@1548",
+					"path": "@Control@546/@HBoxContainer@1558/@PanelContainer@1548",
+					"render_rect": [
+						136.5,
+						560.0,
+						86.5,
+						89.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						446.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1553",
+					"path": "@Control@546/@HBoxContainer@1558/@MarginContainer@1553",
+					"render_rect": [
+						223.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1557",
+					"path": "@Control@546/@HBoxContainer@1558/@MarginContainer@1557",
+					"render_rect": [
+						290.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "battle_360x640.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 2,
+			"nav": "battle_360x640_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					560.0,
+					360.0,
+					80.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				0.5,
+				0.5
+			],
+			"requested": [
+				360,
+				640
+			],
+			"selected_cell": {
+				"design_rect": [
+					273.0,
+					1120.0,
+					173.0,
+					178.0
+				],
+				"minimum_size": [
+					69.0,
+					166.0
+				],
+				"name": "@PanelContainer@1548",
+				"path": "@Control@546/@HBoxContainer@1558/@PanelContainer@1548",
+				"render_rect": [
+					136.5,
+					560.0,
+					86.5,
+					89.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "battle",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					510.0,
+					166.0
+				],
+				"name": "@HBoxContainer@1823",
+				"path": "@Control@546/@HBoxContainer@1823",
+				"render_rect": [
+					3.0,
+					560.0,
+					354.0,
+					89.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					406.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					54.0,
+					34.0
+				],
+				"name": "@Label@1816",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@1823/@PanelContainer@1818/@VBoxContainer@1813/@Label@1816",
+				"render_rect": [
+					203.0,
+					613.0,
+					87.0,
+					17.0
+				],
+				"text": "Lính",
+				"text_width": 54.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1802",
+					"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1802",
+					"render_rect": [
+						3.0,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1807",
+					"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1807",
+					"render_rect": [
+						69.5,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						273.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1812",
+					"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1812",
+					"render_rect": [
+						136.5,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						406.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"minimum_size": [
+						54.0,
+						166.0
+					],
+					"name": "@PanelContainer@1818",
+					"path": "@Control@546/@HBoxContainer@1823/@PanelContainer@1818",
+					"render_rect": [
+						203.0,
+						560.0,
+						87.0,
+						89.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						580.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1822",
+					"path": "@Control@546/@HBoxContainer@1823/@MarginContainer@1822",
+					"render_rect": [
+						290.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				}
+			],
+			"file": "troops_360x640.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 3,
+			"nav": "troops_360x640_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					560.0,
+					360.0,
+					80.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				0.5,
+				0.5
+			],
+			"requested": [
+				360,
+				640
+			],
+			"selected_cell": {
+				"design_rect": [
+					406.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"minimum_size": [
+					54.0,
+					166.0
+				],
+				"name": "@PanelContainer@1818",
+				"path": "@Control@546/@HBoxContainer@1823/@PanelContainer@1818",
+				"render_rect": [
+					203.0,
+					560.0,
+					87.0,
+					89.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "troops",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"bar": {
+				"design_rect": [
+					6.0,
+					1120.0,
+					708.0,
+					178.0
+				],
+				"minimum_size": [
+					561.0,
+					166.0
+				],
+				"name": "@HBoxContainer@1876",
+				"path": "@Control@546/@HBoxContainer@1876",
+				"render_rect": [
+					3.0,
+					560.0,
+					354.0,
+					89.0
+				],
+				"type": "HBoxContainer",
+				"visible": true
+			},
+			"caption": {
+				"design_rect": [
+					540.0,
+					1226.0,
+					174.0,
+					34.0
+				],
+				"fits_width": true,
+				"font_color": "ffffffff",
+				"font_outline_color": "2e1c1cff",
+				"font_size": 24,
+				"minimum_size": [
+					105.0,
+					34.0
+				],
+				"name": "@Label@1873",
+				"outline_size": 7,
+				"path": "@Control@546/@HBoxContainer@1876/@PanelContainer@1875/@VBoxContainer@1870/@Label@1873",
+				"render_rect": [
+					270.0,
+					613.0,
+					87.0,
+					17.0
+				],
+				"text": "Triệu hồi",
+				"text_width": 105.0,
+				"type": "Label",
+				"visible": true
+			},
+			"cells": [
+				{
+					"design_rect": [
+						6.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1854",
+					"path": "@Control@546/@HBoxContainer@1876/@MarginContainer@1854",
+					"render_rect": [
+						3.0,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						139.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1859",
+					"path": "@Control@546/@HBoxContainer@1876/@MarginContainer@1859",
+					"render_rect": [
+						69.5,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						273.0,
+						1120.0,
+						133.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1864",
+					"path": "@Control@546/@HBoxContainer@1876/@MarginContainer@1864",
+					"render_rect": [
+						136.5,
+						560.0,
+						66.5,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						406.0,
+						1120.0,
+						134.0,
+						178.0
+					],
+					"minimum_size": [
+						114.0,
+						154.0
+					],
+					"name": "@MarginContainer@1869",
+					"path": "@Control@546/@HBoxContainer@1876/@MarginContainer@1869",
+					"render_rect": [
+						203.0,
+						560.0,
+						67.0,
+						89.0
+					],
+					"type": "MarginContainer",
+					"visible": true
+				},
+				{
+					"design_rect": [
+						540.0,
+						1120.0,
+						174.0,
+						178.0
+					],
+					"minimum_size": [
+						105.0,
+						166.0
+					],
+					"name": "@PanelContainer@1875",
+					"path": "@Control@546/@HBoxContainer@1876/@PanelContainer@1875",
+					"render_rect": [
+						270.0,
+						560.0,
+						87.0,
+						89.0
+					],
+					"type": "PanelContainer",
+					"visible": true
+				}
+			],
+			"file": "summon_360x640.png",
+			"footer": {
+				"missing": true
+			},
+			"index": 4,
+			"nav": "summon_360x640_nav.png",
+			"nav_holder": {
+				"design_rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"minimum_size": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@546",
+				"path": "@Control@546",
+				"render_rect": [
+					0.0,
+					560.0,
+					360.0,
+					80.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"render_scale": [
+				0.5,
+				0.5
+			],
+			"requested": [
+				360,
+				640
+			],
+			"selected_cell": {
+				"design_rect": [
+					540.0,
+					1120.0,
+					174.0,
+					178.0
+				],
+				"minimum_size": [
+					105.0,
+					166.0
+				],
+				"name": "@PanelContainer@1875",
+				"path": "@Control@546/@HBoxContainer@1876/@PanelContainer@1875",
+				"render_rect": [
+					270.0,
+					560.0,
+					87.0,
+					89.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"tab": "summon",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"design_size": [
+		720,
+		1280
+	],
+	"expect_selected_footer": false,
+	"failures": 0,
+	"native_render": true,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/nav-focus/before/mcp/profile/Godot/app_userdata/Gear Defenders",
+	"routes": [
+		{
+			"native_size": [
+				720,
+				1280
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 0,
+			"tab": "shop"
+		},
+		{
+			"native_size": [
+				720,
+				1280
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 1,
+			"tab": "hero"
+		},
+		{
+			"native_size": [
+				720,
+				1280
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 2,
+			"tab": "battle"
+		},
+		{
+			"native_size": [
+				720,
+				1280
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 3,
+			"tab": "troops"
+		},
+		{
+			"native_size": [
+				720,
+				1280
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 4,
+			"tab": "summon"
+		},
+		{
+			"native_size": [
+				360,
+				640
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 0,
+			"tab": "shop"
+		},
+		{
+			"native_size": [
+				360,
+				640
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 1,
+			"tab": "hero"
+		},
+		{
+			"native_size": [
+				360,
+				640
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 2,
+			"tab": "battle"
+		},
+		{
+			"native_size": [
+				360,
+				640
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 3,
+			"tab": "troops"
+		},
+		{
+			"native_size": [
+				360,
+				640
+			],
+			"passed": true,
+			"pressed_received": true,
+			"selected_index": 4,
+			"tab": "summon"
+		}
+	]
+}

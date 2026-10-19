@@ -1,0 +1,2381 @@
+{
+	"cards": [
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevel": {
+				"design_rect": [
+					32.0,
+					703.0,
+					141.0,
+					29.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopLevel",
+				"native_rect": [
+					16.0,
+					351.5,
+					70.5,
+					14.5
+				],
+				"outline_design": 0,
+				"text": "Cấp 10",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					58.0,
+					541.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					29.0,
+					270.5,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					32.0,
+					539.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					16.0,
+					269.5,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_green.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					32.0,
+					539.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 0,
+				"name": "TroopRarityField",
+				"native_rect": [
+					16.0,
+					269.5,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"design_rect": [
+					145.0,
+					536.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopStarReady",
+				"native_rect": [
+					72.5,
+					268.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_star_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"card": {
+				"design_rect": [
+					24.0,
+					528.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_kiem",
+				"native_rect": [
+					12.0,
+					264.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "kiem",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					32.0,
+					633.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					16.0,
+					316.5,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Kiếm",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 0,
+			"unlocked": true
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevel": {
+				"design_rect": [
+					201.0,
+					703.0,
+					141.0,
+					29.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopLevel",
+				"native_rect": [
+					100.5,
+					351.5,
+					70.5,
+					14.5
+				],
+				"outline_design": 0,
+				"text": "Cấp 1",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"TroopLevelReady": {
+				"design_rect": [
+					314.0,
+					536.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopLevelReady",
+				"native_rect": [
+					157.0,
+					268.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_up_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					227.0,
+					541.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					113.5,
+					270.5,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					201.0,
+					539.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					100.5,
+					269.5,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_blue.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					201.0,
+					539.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 1,
+				"name": "TroopRarityField",
+				"native_rect": [
+					100.5,
+					269.5,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					193.0,
+					528.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_riu",
+				"native_rect": [
+					96.5,
+					264.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "riu",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					201.0,
+					633.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					100.5,
+					316.5,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Rìu",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 1,
+			"unlocked": true
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					396.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					198.0,
+					272.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					370.0,
+					542.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					185.0,
+					271.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					370.0,
+					542.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					185.0,
+					271.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					362.0,
+					528.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_dao",
+				"native_rect": [
+					181.0,
+					264.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "dao",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					370.0,
+					636.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					185.0,
+					318.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Đao",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					565.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					282.5,
+					272.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					539.0,
+					542.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					269.5,
+					271.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_orange.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					539.0,
+					542.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 3,
+				"name": "TroopRarityField",
+				"native_rect": [
+					269.5,
+					271.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					531.0,
+					528.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_katana",
+				"native_rect": [
+					265.5,
+					264.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "katana",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					539.0,
+					636.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					269.5,
+					318.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Katana",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 3,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"design_rect": [
+					32.0,
+					790.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopInTeam",
+				"native_rect": [
+					16.0,
+					395.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_check_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopLevel": {
+				"design_rect": [
+					32.0,
+					957.0,
+					141.0,
+					29.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopLevel",
+				"native_rect": [
+					16.0,
+					478.5,
+					70.5,
+					14.5
+				],
+				"outline_design": 0,
+				"text": "Cấp 1",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"TroopLevelReady": {
+				"design_rect": [
+					145.0,
+					790.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopLevelReady",
+				"native_rect": [
+					72.5,
+					395.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_up_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					58.0,
+					795.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					29.0,
+					397.5,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					32.0,
+					793.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					16.0,
+					396.5,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_green.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					32.0,
+					793.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 0,
+				"name": "TroopRarityField",
+				"native_rect": [
+					16.0,
+					396.5,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					24.0,
+					782.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_cung",
+				"native_rect": [
+					12.0,
+					391.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "cung",
+			"in_team": true,
+			"name": {
+				"design_rect": [
+					32.0,
+					887.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					16.0,
+					443.5,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Cung",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 0,
+			"unlocked": true
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					227.0,
+					798.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					113.5,
+					399.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					201.0,
+					796.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					100.5,
+					398.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_blue.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					201.0,
+					796.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 1,
+				"name": "TroopRarityField",
+				"native_rect": [
+					100.5,
+					398.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					193.0,
+					782.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_no",
+				"native_rect": [
+					96.5,
+					391.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "no",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					201.0,
+					890.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					100.5,
+					445.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Nỏ",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 1,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					396.0,
+					798.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					198.0,
+					399.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					370.0,
+					796.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					185.0,
+					398.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					370.0,
+					796.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					185.0,
+					398.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					362.0,
+					782.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_sung",
+				"native_rect": [
+					181.0,
+					391.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "sung",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					370.0,
+					890.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					185.0,
+					445.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Súng",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					565.0,
+					798.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					282.5,
+					399.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					539.0,
+					796.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					269.5,
+					398.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_orange.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					539.0,
+					796.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 3,
+				"name": "TroopRarityField",
+				"native_rect": [
+					269.5,
+					398.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					531.0,
+					782.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_dai_bac",
+				"native_rect": [
+					265.5,
+					391.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "dai_bac",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					539.0,
+					890.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					269.5,
+					445.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Đại Bác",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 3,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"design_rect": [
+					32.0,
+					1044.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopInTeam",
+				"native_rect": [
+					16.0,
+					522.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_check_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopLevel": {
+				"design_rect": [
+					32.0,
+					1211.0,
+					141.0,
+					29.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopLevel",
+				"native_rect": [
+					16.0,
+					605.5,
+					70.5,
+					14.5
+				],
+				"outline_design": 0,
+				"text": "Cấp 1",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"TroopLevelReady": {
+				"design_rect": [
+					145.0,
+					1044.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopLevelReady",
+				"native_rect": [
+					72.5,
+					522.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_up_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					58.0,
+					1049.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					29.0,
+					524.5,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					32.0,
+					1047.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					16.0,
+					523.5,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_green.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					32.0,
+					1047.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 0,
+				"name": "TroopRarityField",
+				"native_rect": [
+					16.0,
+					523.5,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					24.0,
+					1036.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_gay_phep",
+				"native_rect": [
+					12.0,
+					518.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "gay_phep",
+			"in_team": true,
+			"name": {
+				"design_rect": [
+					32.0,
+					1141.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					16.0,
+					570.5,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Gậy Phép",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 0,
+			"unlocked": true
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					227.0,
+					1052.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					113.5,
+					526.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					201.0,
+					1050.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					100.5,
+					525.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_blue.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					201.0,
+					1050.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 1,
+				"name": "TroopRarityField",
+				"native_rect": [
+					100.5,
+					525.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					193.0,
+					1036.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_thuoc",
+				"native_rect": [
+					96.5,
+					518.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "thuoc",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					201.0,
+					1144.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					100.5,
+					572.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Bình Thuốc",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 1,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					396.0,
+					1052.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					198.0,
+					526.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					370.0,
+					1050.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					185.0,
+					525.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					370.0,
+					1050.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					185.0,
+					525.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					362.0,
+					1036.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_sach_phep",
+				"native_rect": [
+					181.0,
+					518.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "sach_phep",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					370.0,
+					1144.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					185.0,
+					572.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Sách Phép",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					565.0,
+					1052.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					282.5,
+					526.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					539.0,
+					1050.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					269.5,
+					525.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_orange.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					539.0,
+					1050.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 3,
+				"name": "TroopRarityField",
+				"native_rect": [
+					269.5,
+					525.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					531.0,
+					1036.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_dua_phep",
+				"native_rect": [
+					265.5,
+					518.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "dua_phep",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					539.0,
+					1144.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					269.5,
+					572.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Đũa Phép",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 3,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					58.0,
+					1306.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					29.0,
+					653.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					32.0,
+					1304.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					16.0,
+					652.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_green.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					32.0,
+					1304.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 0,
+				"name": "TroopRarityField",
+				"native_rect": [
+					16.0,
+					652.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					24.0,
+					1290.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_giao",
+				"native_rect": [
+					12.0,
+					645.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "giao",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					32.0,
+					1398.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					16.0,
+					699.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Giáo",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 0,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					227.0,
+					1306.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					113.5,
+					653.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					201.0,
+					1304.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					100.5,
+					652.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_blue.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					201.0,
+					1304.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 1,
+				"name": "TroopRarityField",
+				"native_rect": [
+					100.5,
+					652.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					193.0,
+					1290.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_cu_kiem",
+				"native_rect": [
+					96.5,
+					645.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "cu_kiem",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					201.0,
+					1398.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					100.5,
+					699.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Cự Kiếm",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 1,
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"design_rect": [
+					370.0,
+					1298.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopInTeam",
+				"native_rect": [
+					185.0,
+					649.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_check_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopLevel": {
+				"design_rect": [
+					370.0,
+					1465.0,
+					141.0,
+					29.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopLevel",
+				"native_rect": [
+					185.0,
+					732.5,
+					70.5,
+					14.5
+				],
+				"outline_design": 0,
+				"text": "Cấp 1",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"TroopLevelReady": {
+				"design_rect": [
+					483.0,
+					1298.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopLevelReady",
+				"native_rect": [
+					241.5,
+					649.0,
+					14.0,
+					14.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_up_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					396.0,
+					1303.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					198.0,
+					651.5,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					370.0,
+					1301.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					185.0,
+					650.5,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					370.0,
+					1301.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					185.0,
+					650.5,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					362.0,
+					1290.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_chuy",
+				"native_rect": [
+					181.0,
+					645.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "chuy",
+			"in_team": true,
+			"name": {
+				"design_rect": [
+					370.0,
+					1395.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					185.0,
+					697.5,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Chuỳ",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": true
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					565.0,
+					1306.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					282.5,
+					653.0,
+					44.0,
+					44.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					539.0,
+					1304.0,
+					141.0,
+					92.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					269.5,
+					652.0,
+					70.5,
+					46.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_orange.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					539.0,
+					1304.0,
+					141.0,
+					92.0
+				],
+				"meta_rarity": 3,
+				"name": "TroopRarityField",
+				"native_rect": [
+					269.5,
+					652.0,
+					70.5,
+					46.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					531.0,
+					1290.0,
+					157.0,
+					240.0
+				],
+				"name": "TroopCard_bua",
+				"native_rect": [
+					265.5,
+					645.0,
+					78.5,
+					120.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"id": "bua",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					539.0,
+					1398.0,
+					141.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					269.5,
+					699.0,
+					70.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Búa",
+				"theme_type_variation": "LabelDark",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 3,
+			"unlocked": false
+		}
+	],
+	"castle": 1,
+	"file": "starter_all_360x640.png",
+	"filter": -1,
+	"grid": {
+		"design_rect": [
+			24.0,
+			528.0,
+			664.0,
+			1002.0
+		],
+		"name": "TroopGrid",
+		"native_rect": [
+			12.0,
+			264.0,
+			332.0,
+			501.0
+		],
+		"theme_type_variation": "",
+		"visible": true
+	},
+	"key": "starter_all_360x640",
+	"native_size": [
+		360,
+		640
+	],
+	"slots": 3,
+	"team": [
+		"gay_phep",
+		"cung",
+		"chuy"
+	],
+	"team_slots": [
+		{
+			"design_rect": [
+				40.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_0",
+			"native_rect": [
+				20.0,
+				118.0,
+				60.5,
+				69.0
+			],
+			"theme_type_variation": "",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				169.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_1",
+			"native_rect": [
+				84.5,
+				118.0,
+				61.0,
+				69.0
+			],
+			"theme_type_variation": "",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				299.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_2",
+			"native_rect": [
+				149.5,
+				118.0,
+				60.5,
+				69.0
+			],
+			"theme_type_variation": "",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				428.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_3",
+			"native_rect": [
+				214.0,
+				118.0,
+				61.0,
+				69.0
+			],
+			"texture": "res://game/ui/skin/troop_card_locked.svg",
+			"theme_type_variation": "TroopCardLocked",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				558.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_4",
+			"native_rect": [
+				279.0,
+				118.0,
+				61.0,
+				69.0
+			],
+			"texture": "res://game/ui/skin/troop_card_locked.svg",
+			"theme_type_variation": "TroopCardLocked",
+			"visible": true
+		}
+	],
+	"top_labels": [
+		{
+			"design_rect": [
+				24.0,
+				128.0,
+				672.0,
+				46.0
+			],
+			"font_size_design": 32,
+			"font_size_native": 16.0,
+			"line_count": 1,
+			"name": "@Label@872",
+			"native_rect": [
+				12.0,
+				64.0,
+				336.0,
+				23.0
+			],
+			"outline_design": 0,
+			"text": "Lính",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				40.0,
+				198.0,
+				158.0,
+				32.0
+			],
+			"font_size_design": 26,
+			"font_size_native": 13.0,
+			"line_count": 1,
+			"name": "@Label@875",
+			"native_rect": [
+				20.0,
+				99.0,
+				79.0,
+				16.0
+			],
+			"outline_design": 0,
+			"text": "Đội hình 3/3",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				634.0,
+				199.0,
+				46.0,
+				29.0
+			],
+			"font_size_design": 24,
+			"font_size_native": 12.0,
+			"line_count": 1,
+			"name": "@Label@878",
+			"native_rect": [
+				317.0,
+				99.5,
+				23.0,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "724",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				46.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@883",
+			"native_rect": [
+				23.0,
+				154.5,
+				54.5,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Gậy Phép",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				46.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@884",
+			"native_rect": [
+				23.0,
+				168.5,
+				54.5,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				175.0,
+				309.0,
+				110.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@888",
+			"native_rect": [
+				87.5,
+				154.5,
+				55.0,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Cung",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				175.0,
+				337.0,
+				110.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@889",
+			"native_rect": [
+				87.5,
+				168.5,
+				55.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				305.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@893",
+			"native_rect": [
+				152.5,
+				154.5,
+				54.5,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Chuỳ",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				305.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@894",
+			"native_rect": [
+				152.5,
+				168.5,
+				54.5,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				436.0,
+				316.0,
+				106.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@898",
+			"native_rect": [
+				218.0,
+				158.0,
+				53.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Thành 3",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				566.0,
+				316.0,
+				106.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@902",
+			"native_rect": [
+				283.0,
+				158.0,
+				53.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Thành 6",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				40.0,
+				380.0,
+				640.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@904",
+			"native_rect": [
+				20.0,
+				190.0,
+				320.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Chạm xem chi tiết · Giữ và kéo để đổi đội",
+			"theme_type_variation": "LabelDark",
+			"visible": true,
+			"visible_line_count": 1
+		}
+	]
+}

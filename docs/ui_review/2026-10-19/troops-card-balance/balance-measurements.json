@@ -1,0 +1,48 @@
+{
+  "native_crop": true,
+  "images_resized": false,
+  "cards": [
+    {
+      "id": "kiem",
+      "state": "before",
+      "card_design_height": 240.0,
+      "field_design_height": 92.0,
+      "approx_cream_share_excluding_8px_top": 0.5833333333333334
+    },
+    {
+      "id": "kiem",
+      "state": "after",
+      "card_design_height": 240.0,
+      "field_design_height": 154.0,
+      "approx_cream_share_excluding_8px_top": 0.325
+    },
+    {
+      "id": "thuoc",
+      "state": "before",
+      "card_design_height": 240.0,
+      "field_design_height": 92.0,
+      "approx_cream_share_excluding_8px_top": 0.5833333333333334
+    },
+    {
+      "id": "thuoc",
+      "state": "after",
+      "card_design_height": 240.0,
+      "field_design_height": 154.0,
+      "approx_cream_share_excluding_8px_top": 0.325
+    },
+    {
+      "id": "sach_phep",
+      "state": "before",
+      "card_design_height": 240.0,
+      "field_design_height": 92.0,
+      "approx_cream_share_excluding_8px_top": 0.5833333333333334
+    },
+    {
+      "id": "sach_phep",
+      "state": "after",
+      "card_design_height": 240.0,
+      "field_design_height": 154.0,
+      "approx_cream_share_excluding_8px_top": 0.325
+    }
+  ]
+}

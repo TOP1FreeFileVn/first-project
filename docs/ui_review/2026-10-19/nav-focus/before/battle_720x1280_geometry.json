@@ -1,0 +1,232 @@
+{
+	"actual": [
+		720,
+		1280
+	],
+	"bar": {
+		"design_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"minimum_size": [
+			525.0,
+			166.0
+		],
+		"name": "@HBoxContainer@934",
+		"path": "@Control@546/@HBoxContainer@934",
+		"render_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"type": "HBoxContainer",
+		"visible": true
+	},
+	"caption": {
+		"design_rect": [
+			273.0,
+			1226.0,
+			173.0,
+			34.0
+		],
+		"fits_width": true,
+		"font_color": "ffffffff",
+		"font_outline_color": "2e1c1cff",
+		"font_size": 24,
+		"minimum_size": [
+			69.0,
+			34.0
+		],
+		"name": "@Label@922",
+		"outline_size": 7,
+		"path": "@Control@546/@HBoxContainer@934/@PanelContainer@924/@VBoxContainer@919/@Label@922",
+		"render_rect": [
+			273.0,
+			1226.0,
+			173.0,
+			34.0
+		],
+		"text": "Chiến",
+		"text_width": 69.0,
+		"type": "Label",
+		"visible": true
+	},
+	"cells": [
+		{
+			"design_rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@913",
+			"path": "@Control@546/@HBoxContainer@934/@MarginContainer@913",
+			"render_rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				139.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@918",
+			"path": "@Control@546/@HBoxContainer@934/@MarginContainer@918",
+			"render_rect": [
+				139.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				273.0,
+				1120.0,
+				173.0,
+				178.0
+			],
+			"minimum_size": [
+				69.0,
+				166.0
+			],
+			"name": "@PanelContainer@924",
+			"path": "@Control@546/@HBoxContainer@934/@PanelContainer@924",
+			"render_rect": [
+				273.0,
+				1120.0,
+				173.0,
+				178.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				446.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@929",
+			"path": "@Control@546/@HBoxContainer@934/@MarginContainer@929",
+			"render_rect": [
+				446.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@933",
+			"path": "@Control@546/@HBoxContainer@934/@MarginContainer@933",
+			"render_rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		}
+	],
+	"file": "battle_720x1280.png",
+	"footer": {
+		"missing": true
+	},
+	"index": 2,
+	"nav": "battle_720x1280_nav.png",
+	"nav_holder": {
+		"design_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"minimum_size": [
+			0.0,
+			0.0
+		],
+		"name": "@Control@546",
+		"path": "@Control@546",
+		"render_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"type": "Control",
+		"visible": true
+	},
+	"render_scale": [
+		1.0,
+		1.0
+	],
+	"requested": [
+		720,
+		1280
+	],
+	"selected_cell": {
+		"design_rect": [
+			273.0,
+			1120.0,
+			173.0,
+			178.0
+		],
+		"minimum_size": [
+			69.0,
+			166.0
+		],
+		"name": "@PanelContainer@924",
+		"path": "@Control@546/@HBoxContainer@934/@PanelContainer@924",
+		"render_rect": [
+			273.0,
+			1120.0,
+			173.0,
+			178.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"tab": "battle",
+	"window": [
+		720,
+		1280
+	]
+}

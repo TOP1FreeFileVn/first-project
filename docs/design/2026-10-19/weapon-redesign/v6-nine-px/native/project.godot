@@ -1,0 +1,9 @@
+config_version=5
+[application]
+config/name="Nine px isolated review"
+[display]
+window/size/viewport_width=1120
+window/size/viewport_height=820
+[rendering]
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.847,0.898,0.875,1)

@@ -1,0 +1,213 @@
+{
+  "canvas": [
+    256,
+    240
+  ],
+  "render_scale": 3,
+  "main": 9,
+  "secondary": [
+    4,
+    5
+  ],
+  "detail": [
+    2,
+    3
+  ],
+  "outer_ink": "#583f21",
+  "interior_ink": "#62656B",
+  "authored_boundaries": [
+    {
+      "item": "helmet",
+      "boundary": "crown-to-brim",
+      "role": "main",
+      "authored_width_unit_px": 9,
+      "centreline_pixels": 517
+    },
+    {
+      "item": "helmet",
+      "boundary": "plume-attachment",
+      "role": "main",
+      "authored_width_unit_px": 9,
+      "centreline_pixels": 77
+    },
+    {
+      "item": "helmet",
+      "boundary": "ear-inset",
+      "role": "secondary",
+      "authored_width_unit_px": 4.5,
+      "centreline_pixels": 476
+    },
+    {
+      "item": "armor",
+      "boundary": "overlapping-lower-plate",
+      "role": "main",
+      "authored_width_unit_px": 9,
+      "centreline_pixels": 364
+    },
+    {
+      "item": "armor",
+      "boundary": "blue-neck-trim",
+      "role": "secondary",
+      "authored_width_unit_px": 4.5,
+      "centreline_pixels": 211
+    },
+    {
+      "item": "armor",
+      "boundary": "clasp",
+      "role": "detail",
+      "authored_width_unit_px": 3.5,
+      "centreline_pixels": 138
+    },
+    {
+      "item": "armor",
+      "boundary": "clasp-trim",
+      "role": "detail",
+      "authored_width_unit_px": 3.5,
+      "centreline_pixels": 78
+    },
+    {
+      "item": "gloves",
+      "boundary": "cuff-to-mitten",
+      "role": "main",
+      "authored_width_unit_px": 9,
+      "centreline_pixels": 102
+    },
+    {
+      "item": "gloves",
+      "boundary": "cuff-to-mitten",
+      "role": "main",
+      "authored_width_unit_px": 9,
+      "centreline_pixels": 102
+    },
+    {
+      "item": "boots",
+      "boundary": "upper-to-sole",
+      "role": "main",
+      "authored_width_unit_px": 9,
+      "centreline_pixels": 131
+    },
+    {
+      "item": "boots",
+      "boundary": "shaft-panel",
+      "role": "secondary",
+      "authored_width_unit_px": 4.5,
+      "centreline_pixels": 89
+    },
+    {
+      "item": "boots",
+      "boundary": "upper-to-sole",
+      "role": "main",
+      "authored_width_unit_px": 9,
+      "centreline_pixels": 132
+    },
+    {
+      "item": "boots",
+      "boundary": "shaft-panel",
+      "role": "secondary",
+      "authored_width_unit_px": 4.5,
+      "centreline_pixels": 89
+    },
+    {
+      "item": "amulet",
+      "boundary": "inset-gem-setting",
+      "role": "detail",
+      "authored_width_unit_px": 2.5,
+      "centreline_pixels": 154
+    }
+  ],
+  "source": "../../2026-10-19/hero-equipment/raw",
+  "pipeline": "original generated silhouettes; material-plane flattening; vertical module reallocation; one authored shared boundary per role",
+  "production_changed": false,
+  "attack_animation_implemented": false,
+  "poses": {
+    "melee": {
+      "weapon": "kiem",
+      "label": "01 \u00b7 C\u1eadn chi\u1ebfn",
+      "grip": [
+        512,
+        794
+      ],
+      "scale": 0.17784552845528456,
+      "angle": -42,
+      "pad": 0,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        127.66666666666667,
+        62.666666666666664,
+        254.33333333333334,
+        200.0
+      ],
+      "clipped": false
+    },
+    "ranged": {
+      "weapon": "cung",
+      "label": "02 \u00b7 T\u1ea7m xa",
+      "grip": [
+        625,
+        515
+      ],
+      "scale": 0.09803921568627451,
+      "angle": 0,
+      "pad": 128,
+      "flip": true,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        146.33333333333334,
+        111.66666666666667,
+        195.33333333333334,
+        218.66666666666666
+      ],
+      "clipped": false
+    },
+    "magic": {
+      "weapon": "gay_phep",
+      "label": "03 \u00b7 Ph\u00e9p",
+      "grip": [
+        512,
+        660
+      ],
+      "scale": 0.1345707656612529,
+      "angle": -46,
+      "pad": 128,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        121.66666666666667,
+        97.0,
+        229.66666666666666,
+        203.33333333333334
+      ],
+      "clipped": false
+    },
+    "heavy": {
+      "weapon": "riu",
+      "label": "04 \u00b7 H\u1ea1ng n\u1eb7ng",
+      "grip": [
+        395,
+        680
+      ],
+      "scale": 0.11789473684210526,
+      "angle": -48,
+      "pad": 128,
+      "target_grip": [
+        160,
+        166
+      ],
+      "bounds": [
+        120.0,
+        105.33333333333333,
+        252.66666666666666,
+        204.0
+      ],
+      "clipped": false
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "awaiting_user_review",
+  "production_changed": false,
+  "weapon_changed": false,
+  "cat_change": "warm brown outline widths only",
+  "face_and_marks": "unchanged source geometry and facial strokes",
+  "placement": {
+    "angle_degrees": -32,
+    "unrotated_height_unit_px": 175,
+    "source_grip": [
+      512,
+      794
+    ],
+    "unit_grip": [
+      160,
+      166
+    ],
+    "front_paw_occlusion": true,
+    "weapon_bounds_unit_px": [
+      133.0,
+      50.67,
+      236.0,
+      197.67
+    ]
+  },
+  "measurement_file": "measurement.json"
+}

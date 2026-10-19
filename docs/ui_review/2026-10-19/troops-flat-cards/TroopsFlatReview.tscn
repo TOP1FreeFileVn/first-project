@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://docs/ui_review/2026-10-19/troops-flat-cards/TroopsFlatReview.gd" id="1"]
+
+[node name="TroopsFlatReview" type="Node"]
+script = ExtResource("1")
+native_width = 720

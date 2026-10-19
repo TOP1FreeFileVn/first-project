@@ -1,0 +1,28 @@
+[
+  {
+    "name": "godot_run_project",
+    "result": {
+      "status": "completed",
+      "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+      "args": [
+        "--path",
+        "C:\\Users\\dangp\\GodotProjects\\first-project",
+        "--scene",
+        "tests/ui_review/UiContrastPreview.tscn"
+      ],
+      "exitCode": 0,
+      "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nCONTRAST_CAPTURE lobby_720x1280 text controls=15\r\nCONTRAST_CAPTURE castle_720x1280 text controls=15\r\nCONTRAST_CAPTURE castle_workshop_720x1280 text controls=16\r\nCONTRAST_CAPTURE chest_two_720x1280 text controls=11\r\nCONTRAST_CAPTURE lobby_360x640 text controls=15\r\nCONTRAST_CAPTURE castle_360x640 text controls=15\r\nCONTRAST_CAPTURE castle_workshop_360x640 text controls=16\r\nCONTRAST_CAPTURE chest_two_360x640 text controls=11\r\nCONTRAST_COMPLETE 8 captures; failures=0\r\n",
+      "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+    }
+  },
+  {
+    "name": "godot_runtime_status",
+    "result": {
+      "ok": true,
+      "cli": {
+        "status": "not_running"
+      },
+      "bridge": null
+    }
+  }
+]

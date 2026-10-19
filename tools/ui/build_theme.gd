@@ -9,8 +9,9 @@ extends SceneTree
 #   Button:        BtnYellow (default) BtnGreen BtnBlue BtnRed BtnPurple BtnOrange BtnWhite BtnTab
 #                  (disabled = grey; pressed = the sunk art)
 #   PanelContainer: Board Well BluePanel Sheet TitlePlaque SectionPlaque InfoStrip HudPill Counter
-#                  HudBar AvatarFrame LvPlaque NavCell NavSelected
+#                  HudBar AvatarFrame LvPlaque NavCell NavSelected NavSelectedFooter
 #                  CardUnitOrange/Yellow/Blue/Purple/Red  CardItemCream/Blue/Orange/Red/Purple
+#                  TroopCardGreen/Blue/Purple/Orange/Locked
 #   ProgressBar:   BarHpRed BarHpBlue BarHpGreen BarHpYellow BarExp BarItem
 #   Label:         LabelTitle LabelSmall LabelTiny LabelDark LabelAccent
 
@@ -126,7 +127,12 @@ func _panels(theme: Theme) -> void:
 	_panel(theme, "AvatarFrame", "avatar_frame", [16, 16, 16, 20], [8, 8, 8, 12])
 	_panel(theme, "LvPlaque", "lv_plaque", [10, 10, 10, 10], [8, 0, 8, 2])
 	_panel(theme, "NavCell", "nav_cell", [24, 24, 24, 24], [4, 4, 4, 6])
-	_panel(theme, "NavSelected", "nav_selected", [26, 30, 26, 30], [0, 6, 0, 8])
+	_panel(theme, "NavSelected", "nav_selected", [26, 30, 26, 30], [0, 6, 0, 0])
+	_panel(theme, "NavSelectedFooter", "nav_selected_footer", [4, 2, 4, 0], [4, 2, 4, 0])
+	for tone in ["green", "blue", "purple", "orange", "locked"]:
+		_panel(theme, "TroopCard" + tone.capitalize(), "troop_card_" + tone, [14, 14, 14, 14], [8, 8, 8, 8])
+		if tone != "locked":
+			_panel(theme, "TroopCard" + tone.capitalize() + "Pressed", "troop_card_" + tone + "_pressed", [14, 14, 14, 14], [8, 8, 8, 8])
 	for tone in ["green", "blue", "purple", "orange", "grey"]:
 		_panel(theme, "GearBg" + tone.capitalize(), "gear_bg_" + tone, [26, 26, 26, 30], [0, 0, 0, 0])
 	_panel(theme, "Callout", "callout", [20, 14, 20, 22], [14, 4, 14, 16])

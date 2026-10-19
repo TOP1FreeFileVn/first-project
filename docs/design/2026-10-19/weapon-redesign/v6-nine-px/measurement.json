@@ -1,0 +1,11 @@
+{
+  "target_unit_px": 9.0,
+  "sword_body_unit_px": 8.99968117328232,
+  "cat_crown_unit_px": 9.011521907704767,
+  "difference_unit_px": 0.01184073442244582,
+  "sword_body_native_128_px": 4.49984058664116,
+  "cat_native_128_px": 4.505760953852383,
+  "method": "42 normal samples of blade body, plus antialias-aware crown coverage",
+  "tolerance_unit_px": 0.03,
+  "passed": true
+}

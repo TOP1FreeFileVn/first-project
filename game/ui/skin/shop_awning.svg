@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="112" viewBox="0 0 720 112">
+  <defs>
+    <clipPath id="canopy">
+      <path d="M48 18H672L716 65H4Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- The shallow wooden rail and broad cloth folds echo icon_tab_shop. -->
+  <rect x="44" y="6" width="632" height="16" rx="6" fill="#bd8f62" stroke="#5a4335" stroke-width="5"/>
+  <path d="M55 11H665" fill="none" stroke="#f5c565" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- A narrow, scalloped cast shadow keeps the cloth separate from the wall. -->
+  <path d="M4 70H716V89Q676.444 117 636.889 89Q597.333 117 557.778 89Q518.222 117 478.667 89Q439.111 117 399.556 89Q360 117 320.444 89Q280.889 117 241.333 89Q201.778 117 162.222 89Q122.667 117 83.111 89Q43.556 117 4 89Z" fill="#243f50" opacity="0.2"/>
+
+  <!-- Tapered roof stripes: the lighter blue belongs to the existing shop icon. -->
+  <g clip-path="url(#canopy)">
+    <path d="M48 18H117.333L83.111 65H4Z" fill="#679db7"/>
+    <path d="M117.333 18H186.667L162.222 65H83.111Z" fill="#a7ced8"/>
+    <path d="M186.667 18H256L241.333 65H162.222Z" fill="#679db7"/>
+    <path d="M256 18H325.333L320.444 65H241.333Z" fill="#a7ced8"/>
+    <path d="M325.333 18H394.667L399.556 65H320.444Z" fill="#679db7"/>
+    <path d="M394.667 18H464L478.667 65H399.556Z" fill="#a7ced8"/>
+    <path d="M464 18H533.333L557.778 65H478.667Z" fill="#679db7"/>
+    <path d="M533.333 18H602.667L636.889 65H557.778Z" fill="#a7ced8"/>
+    <path d="M602.667 18H672L716 65H636.889Z" fill="#679db7"/>
+    <path d="M48 18H672L679 26H41Z" fill="#ffffff" opacity="0.17"/>
+    <path d="M117.333 18L83.111 65M186.667 18L162.222 65M256 18L241.333 65M325.333 18L320.444 65M394.667 18L399.556 65M464 18L478.667 65M533.333 18L557.778 65M602.667 18L636.889 65" fill="none" stroke="#5a4335" stroke-width="1.6" opacity="0.2"/>
+  </g>
+
+  <!-- Rounded hanging panels share one consistent outline and baseline. -->
+  <g stroke="#5a4335" stroke-width="4.5" stroke-linejoin="round">
+    <path d="M4 65H83.111V83Q43.556 111 4 83Z" fill="#5489a5"/>
+    <path d="M83.111 65H162.222V83Q122.667 111 83.111 83Z" fill="#92bbc9"/>
+    <path d="M162.222 65H241.333V83Q201.778 111 162.222 83Z" fill="#5489a5"/>
+    <path d="M241.333 65H320.444V83Q280.889 111 241.333 83Z" fill="#92bbc9"/>
+    <path d="M320.444 65H399.556V83Q360 111 320.444 83Z" fill="#5489a5"/>
+    <path d="M399.556 65H478.667V83Q439.111 111 399.556 83Z" fill="#92bbc9"/>
+    <path d="M478.667 65H557.778V83Q518.222 111 478.667 83Z" fill="#5489a5"/>
+    <path d="M557.778 65H636.889V83Q597.333 111 557.778 83Z" fill="#92bbc9"/>
+    <path d="M636.889 65H716V83Q676.444 111 636.889 83Z" fill="#5489a5"/>
+  </g>
+  <path d="M4 65L48 18H672L716 65" fill="none" stroke="#5a4335" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M9 66H711" fill="none" stroke="#5a4335" stroke-width="5" stroke-linecap="round"/>
+</svg>

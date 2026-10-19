@@ -1,0 +1,451 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: Failed to read the root certificate store.
+   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)
+Unable to open Android 'build-tools' directory.
+[   0% ] first_scan_filesystem | Started Project initialization (5 steps)
+[   0% ] first_scan_filesystem | Scanning file structure...
+[  16% ] first_scan_filesystem | Loading global class names...
+[  33% ] first_scan_filesystem | Verifying GDExtensions...
+[  50% ] first_scan_filesystem | Creating autoload scripts...
+[  66% ] first_scan_filesystem | Initializing plugins...
+AI MCP Bridge plugin loaded. Look for the dock tab on the right side.
+[  83% ] first_scan_filesystem | Starting file scan...
+[ DONE ] first_scan_filesystem
+
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+Unicode parsing error, some characters were replaced with � (U+FFFD): Unexpected NUL character
+[   0% ] _update_scan_actions | Started Scanning actions... (411 steps)
+[   0% ] _update_scan_actions | shop_awning.svg
+[   0% ] _update_scan_actions | ._Archery.png
+[   0% ] _update_scan_actions | ._Barracks.png
+[   0% ] _update_scan_actions | ._Castle.png
+[   0% ] _update_scan_actions | ._House1.png
+[   1% ] _update_scan_actions | ._House2.png
+[   1% ] _update_scan_actions | ._House3.png
+[   1% ] _update_scan_actions | ._Monastery.png
+[   1% ] _update_scan_actions | ._Tower.png
+[   2% ] _update_scan_actions | ._Archery.png
+[   2% ] _update_scan_actions | ._Barracks.png
+[   2% ] _update_scan_actions | ._Castle.png
+[   2% ] _update_scan_actions | ._House1.png
+[   3% ] _update_scan_actions | ._House2.png
+[   3% ] _update_scan_actions | ._House3.png
+[   3% ] _update_scan_actions | ._Monastery.png
+[   3% ] _update_scan_actions | ._Tower.png
+[   4% ] _update_scan_actions | ._Archery.png
+[   4% ] _update_scan_actions | ._Barracks.png
+[   4% ] _update_scan_actions | ._Castle.png
+[   4% ] _update_scan_actions | ._House1.png
+[   5% ] _update_scan_actions | ._House2.png
+[   5% ] _update_scan_actions | ._House3.png
+[   5% ] _update_scan_actions | ._Monastery.png
+[   5% ] _update_scan_actions | ._Tower.png
+[   6% ] _update_scan_actions | ._Archery.png
+[   6% ] _update_scan_actions | ._Barracks.png
+[   6% ] _update_scan_actions | ._Castle.png
+[   6% ] _update_scan_actions | ._House1.png
+[   7% ] _update_scan_actions | ._House2.png
+[   7% ] _update_scan_actions | ._House3.png
+[   7% ] _update_scan_actions | ._Monastery.png
+[   7% ] _update_scan_actions | ._Tower.png
+[   8% ] _update_scan_actions | ._Archery.png
+[   8% ] _update_scan_actions | ._Barracks.png
+[   8% ] _update_scan_actions | ._Castle.png
+[   8% ] _update_scan_actions | ._House1.png
+[   8% ] _update_scan_actions | ._House2.png
+[   9% ] _update_scan_actions | ._House3.png
+[   9% ] _update_scan_actions | ._Monastery.png
+[   9% ] _update_scan_actions | ._Tower.png
+[   9% ] _update_scan_actions | ._Dust_01.png
+[  10% ] _update_scan_actions | ._Dust_02.png
+[  10% ] _update_scan_actions | ._Explosion_01.png
+[  10% ] _update_scan_actions | ._Explosion_02.png
+[  10% ] _update_scan_actions | ._Fire_01.png
+[  11% ] _update_scan_actions | ._Fire_02.png
+[  11% ] _update_scan_actions | ._Fire_03.png
+[  11% ] _update_scan_actions | ._Water Splash.png
+[  11% ] _update_scan_actions | ._Bushe1.png
+[  12% ] _update_scan_actions | ._Bushe2.png
+[  12% ] _update_scan_actions | ._Bushe3.png
+[  12% ] _update_scan_actions | ._Bushe4.png
+[  12% ] _update_scan_actions | ._Clouds_01.png
+[  13% ] _update_scan_actions | ._Clouds_02.png
+[  13% ] _update_scan_actions | ._Clouds_03.png
+[  13% ] _update_scan_actions | ._Clouds_04.png
+[  13% ] _update_scan_actions | ._Clouds_05.png
+[  14% ] _update_scan_actions | ._Clouds_06.png
+[  14% ] _update_scan_actions | ._Clouds_07.png
+[  14% ] _update_scan_actions | ._Clouds_08.png
+[  14% ] _update_scan_actions | ._Rock1.png
+[  15% ] _update_scan_actions | ._Rock2.png
+[  15% ] _update_scan_actions | ._Rock3.png
+[  15% ] _update_scan_actions | ._Rock4.png
+[  15% ] _update_scan_actions | ._Water Rocks_01.png
+[  16% ] _update_scan_actions | ._Water Rocks_02.png
+[  16% ] _update_scan_actions | ._Water Rocks_03.png
+[  16% ] _update_scan_actions | ._Water Rocks_04.png
+[  16% ] _update_scan_actions | ._Rubber duck.png
+[  16% ] _update_scan_actions | ._Gold_Resource.png
+[  17% ] _update_scan_actions | ._Gold_Resource_Highlight.png
+[  17% ] _update_scan_actions | ._Gold Stone 1.png
+[  17% ] _update_scan_actions | ._Gold Stone 1_Highlight.png
+[  17% ] _update_scan_actions | ._Gold Stone 2.png
+[  18% ] _update_scan_actions | ._Gold Stone 2_Highlight.png
+[  18% ] _update_scan_actions | ._Gold Stone 3.png
+[  18% ] _update_scan_actions | ._Gold Stone 3_Highlight.png
+[  18% ] _update_scan_actions | ._Gold Stone 4.png
+[  19% ] _update_scan_actions | ._Gold Stone 4_Highlight.png
+[  19% ] _update_scan_actions | ._Gold Stone 5.png
+[  19% ] _update_scan_actions | ._Gold Stone 5_Highlight.png
+[  19% ] _update_scan_actions | ._Gold Stone 6.png
+[  20% ] _update_scan_actions | ._Gold Stone 6_Highlight.png
+[  20% ] _update_scan_actions | ._Meat Resource.png
+[  20% ] _update_scan_actions | ._Sheep_Grass.png
+[  20% ] _update_scan_actions | ._Sheep_Idle.png
+[  21% ] _update_scan_actions | ._Sheep_Move.png
+[  21% ] _update_scan_actions | ._Tool_01.png
+[  21% ] _update_scan_actions | ._Tool_02.png
+[  21% ] _update_scan_actions | ._Tool_03.png
+[  22% ] _update_scan_actions | ._Tool_04.png
+[  22% ] _update_scan_actions | ._Stump 1.png
+[  22% ] _update_scan_actions | ._Stump 2.png
+[  22% ] _update_scan_actions | ._Stump 3.png
+[  23% ] _update_scan_actions | ._Stump 4.png
+[  23% ] _update_scan_actions | ._Tree1.png
+[  23% ] _update_scan_actions | ._Tree2.png
+[  23% ] _update_scan_actions | ._Tree3.png
+[  24% ] _update_scan_actions | ._Tree4.png
+[  24% ] _update_scan_actions | ._Wood Resource.png
+[  24% ] _update_scan_actions | ._Shadow.png
+[  24% ] _update_scan_actions | ._Tilemap_color1.png
+[  25% ] _update_scan_actions | ._Tilemap_color2.png
+[  25% ] _update_scan_actions | ._Tilemap_color3.png
+[  25% ] _update_scan_actions | ._Tilemap_color4.png
+[  25% ] _update_scan_actions | ._Tilemap_color5.png
+[  25% ] _update_scan_actions | ._Water Background color.png
+[  26% ] _update_scan_actions | ._Water Foam.png
+[  26% ] _update_scan_actions | ._Banner.png
+[  26% ] _update_scan_actions | ._Slots.png
+[  26% ] _update_scan_actions | ._Ribbon_Black.png
+[  27% ] _update_scan_actions | ._Ribbon_Blue.png
+[  27% ] _update_scan_actions | ._Ribbon_Purple.png
+[  27% ] _update_scan_actions | ._Ribbon_Red.png
+[  27% ] _update_scan_actions | ._Ribbon_Yellow.png
+[  28% ] _update_scan_actions | ._Banner.png
+[  28% ] _update_scan_actions | ._Banner_Slots.png
+[  28% ] _update_scan_actions | ._BigBar_Base.png
+[  28% ] _update_scan_actions | ._BigBar_Fill.png
+[  29% ] _update_scan_actions | ._SmallBar_Base.png
+[  29% ] _update_scan_actions | ._SmallBar_Fill.png
+[  29% ] _update_scan_actions | ._BigBlueButton_Pressed.png
+[  29% ] _update_scan_actions | ._BigBlueButton_Regular.png
+[  30% ] _update_scan_actions | ._BigRedButton_Pressed.png
+[  30% ] _update_scan_actions | ._BigRedButton_Regular.png
+[  30% ] _update_scan_actions | ._SmallBlueRoundButton_Pressed.png
+[  30% ] _update_scan_actions | ._SmallBlueRoundButton_Regular.png
+[  31% ] _update_scan_actions | ._SmallBlueSquareButton_Pressed.png
+[  31% ] _update_scan_actions | ._SmallBlueSquareButton_Regular.png
+[  31% ] _update_scan_actions | ._SmallRedRoundButton_Pressed.png
+[  31% ] _update_scan_actions | ._SmallRedRoundButton_Regular.png
+[  32% ] _update_scan_actions | ._SmallRedSquareButton_Pressed.png
+[  32% ] _update_scan_actions | ._SmallRedSquareButton_Regular.png
+[  32% ] _update_scan_actions | ._TinyRoundBlueButton.png
+[  32% ] _update_scan_actions | ._TinyRoundRedButton.png
+[  33% ] _update_scan_actions | ._TinySquareBlueButton.png
+[  33% ] _update_scan_actions | ._TinySquareRedButton.png
+[  33% ] _update_scan_actions | ._Cursor_01.png
+[  33% ] _update_scan_actions | ._Cursor_02.png
+[  33% ] _update_scan_actions | ._Cursor_03.png
+[  34% ] _update_scan_actions | ._Cursor_04.png
+[  34% ] _update_scan_actions | ._Avatars_01.png
+[  34% ] _update_scan_actions | ._Avatars_02.png
+[  34% ] _update_scan_actions | ._Avatars_03.png
+[  35% ] _update_scan_actions | ._Avatars_04.png
+[  35% ] _update_scan_actions | ._Avatars_05.png
+[  35% ] _update_scan_actions | ._Avatars_06.png
+[  35% ] _update_scan_actions | ._Avatars_07.png
+[  36% ] _update_scan_actions | ._Avatars_08.png
+[  36% ] _update_scan_actions | ._Avatars_09.png
+[  36% ] _update_scan_actions | ._Avatars_10.png
+[  36% ] _update_scan_actions | ._Avatars_11.png
+[  37% ] _update_scan_actions | ._Avatars_12.png
+[  37% ] _update_scan_actions | ._Avatars_13.png
+[  37% ] _update_scan_actions | ._Avatars_14.png
+[  37% ] _update_scan_actions | ._Avatars_15.png
+[  38% ] _update_scan_actions | ._Avatars_16.png
+[  38% ] _update_scan_actions | ._Avatars_17.png
+[  38% ] _update_scan_actions | ._Avatars_18.png
+[  38% ] _update_scan_actions | ._Avatars_19.png
+[  39% ] _update_scan_actions | ._Avatars_20.png
+[  39% ] _update_scan_actions | ._Avatars_21.png
+[  39% ] _update_scan_actions | ._Avatars_22.png
+[  39% ] _update_scan_actions | ._Avatars_23.png
+[  40% ] _update_scan_actions | ._Avatars_24.png
+[  40% ] _update_scan_actions | ._Avatars_25.png
+[  40% ] _update_scan_actions | ._Icon_01.png
+[  40% ] _update_scan_actions | ._Icon_02.png
+[  41% ] _update_scan_actions | ._Icon_03.png
+[  41% ] _update_scan_actions | ._Icon_04.png
+[  41% ] _update_scan_actions | ._Icon_05.png
+[  41% ] _update_scan_actions | ._Icon_06.png
+[  41% ] _update_scan_actions | ._Icon_07.png
+[  42% ] _update_scan_actions | ._Icon_08.png
+[  42% ] _update_scan_actions | ._Icon_09.png
+[  42% ] _update_scan_actions | ._Icon_10.png
+[  42% ] _update_scan_actions | ._Icon_11.png
+[  43% ] _update_scan_actions | ._Icon_12.png
+[  43% ] _update_scan_actions | ._RegularPaper.png
+[  43% ] _update_scan_actions | ._SpecialPaper.png
+[  43% ] _update_scan_actions | ._BigRibbons.png
+[  44% ] _update_scan_actions | ._SmallRibbons.png
+[  44% ] _update_scan_actions | ._Swords.png
+[  44% ] _update_scan_actions | ._WoodTable.png
+[  44% ] _update_scan_actions | ._WoodTable_Slots.png
+[  45% ] _update_scan_actions | ._Archer_Idle.png
+[  45% ] _update_scan_actions | ._Archer_Run.png
+[  45% ] _update_scan_actions | ._Archer_Shoot.png
+[  45% ] _update_scan_actions | ._Arrow.png
+[  46% ] _update_scan_actions | ._Lancer_DownRight_Attack.png
+[  46% ] _update_scan_actions | ._Lancer_DownRight_Defence.png
+[  46% ] _update_scan_actions | ._Lancer_Down_Attack.png
+[  46% ] _update_scan_actions | ._Lancer_Down_Defence.png
+[  47% ] _update_scan_actions | ._Lancer_Idle.png
+[  47% ] _update_scan_actions | ._Lancer_Right_Attack.png
+[  47% ] _update_scan_actions | ._Lancer_Right_Defence.png
+[  47% ] _update_scan_actions | ._Lancer_Run.png
+[  48% ] _update_scan_actions | ._Lancer_UpRight_Attack.png
+[  48% ] _update_scan_actions | ._Lancer_UpRight_Defence.png
+[  48% ] _update_scan_actions | ._Lancer_Up_Attack.png
+[  48% ] _update_scan_actions | ._Lancer_Up_Defence.png
+[  49% ] _update_scan_actions | ._Heal.png
+[  49% ] _update_scan_actions | ._Heal_Effect.png
+[  49% ] _update_scan_actions | ._Idle.png
+[  49% ] _update_scan_actions | ._Run.png
+[  50% ] _update_scan_actions | ._Pawn_Idle Axe.png
+[  50% ] _update_scan_actions | ._Pawn_Idle Gold.png
+[  50% ] _update_scan_actions | ._Pawn_Idle Hammer.png
+[  50% ] _update_scan_actions | ._Pawn_Idle Knife.png
+[  50% ] _update_scan_actions | ._Pawn_Idle Meat.png
+[  51% ] _update_scan_actions | ._Pawn_Idle Pickaxe.png
+[  51% ] _update_scan_actions | ._Pawn_Idle Wood.png
+[  51% ] _update_scan_actions | ._Pawn_Idle.png
+[  51% ] _update_scan_actions | ._Pawn_Interact Axe.png
+[  52% ] _update_scan_actions | ._Pawn_Interact Hammer.png
+[  52% ] _update_scan_actions | ._Pawn_Interact Knife.png
+[  52% ] _update_scan_actions | ._Pawn_Interact Pickaxe.png
+[  52% ] _update_scan_actions | ._Pawn_Run Axe.png
+[  53% ] _update_scan_actions | ._Pawn_Run Gold.png
+[  53% ] _update_scan_actions | ._Pawn_Run Hammer.png
+[  53% ] _update_scan_actions | ._Pawn_Run Knife.png
+[  53% ] _update_scan_actions | ._Pawn_Run Meat.png
+[  54% ] _update_scan_actions | ._Pawn_Run Pickaxe.png
+[  54% ] _update_scan_actions | ._Pawn_Run Wood.png
+[  54% ] _update_scan_actions | ._Pawn_Run.png
+[  54% ] _update_scan_actions | ._Warrior_Attack1.png
+[  55% ] _update_scan_actions | ._Warrior_Attack2.png
+[  55% ] _update_scan_actions | ._Warrior_Guard.png
+[  55% ] _update_scan_actions | ._Warrior_Idle.png
+[  55% ] _update_scan_actions | ._Warrior_Run.png
+[  56% ] _update_scan_actions | ._Archer_Idle.png
+[  56% ] _update_scan_actions | ._Archer_Run.png
+[  56% ] _update_scan_actions | ._Archer_Shoot.png
+[  56% ] _update_scan_actions | ._Arrow.png
+[  57% ] _update_scan_actions | ._Lancer_DownRight_Attack.png
+[  57% ] _update_scan_actions | ._Lancer_DownRight_Defence.png
+[  57% ] _update_scan_actions | ._Lancer_Down_Attack.png
+[  57% ] _update_scan_actions | ._Lancer_Down_Defence.png
+[  58% ] _update_scan_actions | ._Lancer_Idle.png
+[  58% ] _update_scan_actions | ._Lancer_Right_Attack.png
+[  58% ] _update_scan_actions | ._Lancer_Right_Defence.png
+[  58% ] _update_scan_actions | ._Lancer_Run.png
+[  58% ] _update_scan_actions | ._Lancer_UpRight_Attack.png
+[  59% ] _update_scan_actions | ._Lancer_UpRight_Defence.png
+[  59% ] _update_scan_actions | ._Lancer_Up_Attack.png
+[  59% ] _update_scan_actions | ._Lancer_Up_Defence.png
+[  59% ] _update_scan_actions | ._Heal.png
+[  60% ] _update_scan_actions | ._Heal_Effect.png
+[  60% ] _update_scan_actions | ._Idle.png
+[  60% ] _update_scan_actions | ._Run.png
+[  60% ] _update_scan_actions | ._Pawn_Idle Axe.png
+[  61% ] _update_scan_actions | ._Pawn_Idle Gold.png
+[  61% ] _update_scan_actions | ._Pawn_Idle Hammer.png
+[  61% ] _update_scan_actions | ._Pawn_Idle Knife.png
+[  61% ] _update_scan_actions | ._Pawn_Idle Meat.png
+[  62% ] _update_scan_actions | ._Pawn_Idle Pickaxe.png
+[  62% ] _update_scan_actions | ._Pawn_Idle Wood.png
+[  62% ] _update_scan_actions | ._Pawn_Idle.png
+[  62% ] _update_scan_actions | ._Pawn_Interact Axe.png
+[  63% ] _update_scan_actions | ._Pawn_Interact Hammer.png
+[  63% ] _update_scan_actions | ._Pawn_Interact Knife.png
+[  63% ] _update_scan_actions | ._Pawn_Interact Pickaxe.png
+[  63% ] _update_scan_actions | ._Pawn_Run Axe.png
+[  64% ] _update_scan_actions | ._Pawn_Run Gold.png
+[  64% ] _update_scan_actions | ._Pawn_Run Hammer.png
+[  64% ] _update_scan_actions | ._Pawn_Run Knife.png
+[  64% ] _update_scan_actions | ._Pawn_Run Meat.png
+[  65% ] _update_scan_actions | ._Pawn_Run Pickaxe.png
+[  65% ] _update_scan_actions | ._Pawn_Run Wood.png
+[  65% ] _update_scan_actions | ._Pawn_Run.png
+[  65% ] _update_scan_actions | ._Warrior_Attack1.png
+[  66% ] _update_scan_actions | ._Warrior_Attack2.png
+[  66% ] _update_scan_actions | ._Warrior_Guard.png
+[  66% ] _update_scan_actions | ._Warrior_Idle.png
+[  66% ] _update_scan_actions | ._Warrior_Run.png
+[  66% ] _update_scan_actions | ._Archer_Idle.png
+[  67% ] _update_scan_actions | ._Archer_Run.png
+[  67% ] _update_scan_actions | ._Archer_Shoot.png
+[  67% ] _update_scan_actions | ._Arrow.png
+[  67% ] _update_scan_actions | ._Lancer_DownRight_Attack.png
+[  68% ] _update_scan_actions | ._Lancer_DownRight_Defence.png
+[  68% ] _update_scan_actions | ._Lancer_Down_Attack.png
+[  68% ] _update_scan_actions | ._Lancer_Down_Defence.png
+[  68% ] _update_scan_actions | ._Lancer_Idle.png
+[  69% ] _update_scan_actions | ._Lancer_Right_Attack.png
+[  69% ] _update_scan_actions | ._Lancer_Right_Defence.png
+[  69% ] _update_scan_actions | ._Lancer_Run.png
+[  69% ] _update_scan_actions | ._Lancer_UpRight_Attack.png
+[  70% ] _update_scan_actions | ._Lancer_UpRight_Defence.png
+[  70% ] _update_scan_actions | ._Lancer_Up_Attack.png
+[  70% ] _update_scan_actions | ._Lancer_Up_Defence.png
+[  70% ] _update_scan_actions | ._Heal.png
+[  71% ] _update_scan_actions | ._Heal_Effect.png
+[  71% ] _update_scan_actions | ._Idle.png
+[  71% ] _update_scan_actions | ._Run.png
+[  71% ] _update_scan_actions | ._Pawn_Idle Axe.png
+[  72% ] _update_scan_actions | ._Pawn_Idle Gold.png
+[  72% ] _update_scan_actions | ._Pawn_Idle Hammer.png
+[  72% ] _update_scan_actions | ._Pawn_Idle Knife.png
+[  72% ] _update_scan_actions | ._Pawn_Idle Meat.png
+[  73% ] _update_scan_actions | ._Pawn_Idle Pickaxe.png
+[  73% ] _update_scan_actions | ._Pawn_Idle Wood.png
+[  73% ] _update_scan_actions | ._Pawn_Idle.png
+[  73% ] _update_scan_actions | ._Pawn_Interact Axe.png
+[  74% ] _update_scan_actions | ._Pawn_Interact Hammer.png
+[  74% ] _update_scan_actions | ._Pawn_Interact Knife.png
+[  74% ] _update_scan_actions | ._Pawn_Interact Pickaxe.png
+[  74% ] _update_scan_actions | ._Pawn_Run Axe.png
+[  75% ] _update_scan_actions | ._Pawn_Run Gold.png
+[  75% ] _update_scan_actions | ._Pawn_Run Hammer.png
+[  75% ] _update_scan_actions | ._Pawn_Run Knife.png
+[  75% ] _update_scan_actions | ._Pawn_Run Meat.png
+[  75% ] _update_scan_actions | ._Pawn_Run Pickaxe.png
+[  76% ] _update_scan_actions | ._Pawn_Run Wood.png
+[  76% ] _update_scan_actions | ._Pawn_Run.png
+[  76% ] _update_scan_actions | ._Warrior_Attack1.png
+[  76% ] _update_scan_actions | ._Warrior_Attack2.png
+[  77% ] _update_scan_actions | ._Warrior_Guard.png
+[  77% ] _update_scan_actions | ._Warrior_Idle.png
+[  77% ] _update_scan_actions | ._Warrior_Run.png
+[  77% ] _update_scan_actions | ._Archer_Idle.png
+[  78% ] _update_scan_actions | ._Archer_Run.png
+[  78% ] _update_scan_actions | ._Archer_Shoot.png
+[  78% ] _update_scan_actions | ._Arrow.png
+[  78% ] _update_scan_actions | ._Lancer_DownRight_Attack.png
+[  79% ] _update_scan_actions | ._Lancer_DownRight_Defence.png
+[  79% ] _update_scan_actions | ._Lancer_Down_Attack.png
+[  79% ] _update_scan_actions | ._Lancer_Down_Defence.png
+[  79% ] _update_scan_actions | ._Lancer_Idle.png
+[  80% ] _update_scan_actions | ._Lancer_Right_Attack.png
+[  80% ] _update_scan_actions | ._Lancer_Right_Defence.png
+[  80% ] _update_scan_actions | ._Lancer_Run.png
+[  80% ] _update_scan_actions | ._Lancer_UpRight_Attack.png
+[  81% ] _update_scan_actions | ._Lancer_UpRight_Defence.png
+[  81% ] _update_scan_actions | ._Lancer_Up_Attack.png
+[  81% ] _update_scan_actions | ._Lancer_Up_Defence.png
+[  81% ] _update_scan_actions | ._Heal.png
+[  82% ] _update_scan_actions | ._Heal_Effect.png
+[  82% ] _update_scan_actions | ._Idle.png
+[  82% ] _update_scan_actions | ._Run.png
+[  82% ] _update_scan_actions | ._Pawn_Idle Axe.png
+[  83% ] _update_scan_actions | ._Pawn_Idle Gold.png
+[  83% ] _update_scan_actions | ._Pawn_Idle Hammer.png
+[  83% ] _update_scan_actions | ._Pawn_Idle Knife.png
+[  83% ] _update_scan_actions | ._Pawn_Idle Meat.png
+[  83% ] _update_scan_actions | ._Pawn_Idle Pickaxe.png
+[  84% ] _update_scan_actions | ._Pawn_Idle Wood.png
+[  84% ] _update_scan_actions | ._Pawn_Idle.png
+[  84% ] _update_scan_actions | ._Pawn_Interact Axe.png
+[  84% ] _update_scan_actions | ._Pawn_Interact Hammer.png
+[  85% ] _update_scan_actions | ._Pawn_Interact Knife.png
+[  85% ] _update_scan_actions | ._Pawn_Interact Pickaxe.png
+[  85% ] _update_scan_actions | ._Pawn_Run Axe.png
+[  85% ] _update_scan_actions | ._Pawn_Run Gold.png
+[  86% ] _update_scan_actions | ._Pawn_Run Hammer.png
+[  86% ] _update_scan_actions | ._Pawn_Run Knife.png
+[  86% ] _update_scan_actions | ._Pawn_Run Meat.png
+[  86% ] _update_scan_actions | ._Pawn_Run Pickaxe.png
+[  87% ] _update_scan_actions | ._Pawn_Run Wood.png
+[  87% ] _update_scan_actions | ._Pawn_Run.png
+[  87% ] _update_scan_actions | ._Warrior_Attack1.png
+[  87% ] _update_scan_actions | ._Warrior_Attack2.png
+[  88% ] _update_scan_actions | ._Warrior_Guard.png
+[  88% ] _update_scan_actions | ._Warrior_Idle.png
+[  88% ] _update_scan_actions | ._Warrior_Run.png
+[  88% ] _update_scan_actions | ._Archer_Idle.png
+[  89% ] _update_scan_actions | ._Archer_Run.png
+[  89% ] _update_scan_actions | ._Archer_Shoot.png
+[  89% ] _update_scan_actions | ._Arrow.png
+[  89% ] _update_scan_actions | ._Lancer_DownRight_Attack.png
+[  90% ] _update_scan_actions | ._Lancer_DownRight_Defence.png
+[  90% ] _update_scan_actions | ._Lancer_Down_Attack.png
+[  90% ] _update_scan_actions | ._Lancer_Down_Defence.png
+[  90% ] _update_scan_actions | ._Lancer_Idle.png
+[  91% ] _update_scan_actions | ._Lancer_Right_Attack.png
+[  91% ] _update_scan_actions | ._Lancer_Right_Defence.png
+[  91% ] _update_scan_actions | ._Lancer_Run.png
+[  91% ] _update_scan_actions | ._Lancer_UpRight_Attack.png
+[  91% ] _update_scan_actions | ._Lancer_UpRight_Defence.png
+[  92% ] _update_scan_actions | ._Lancer_Up_Attack.png
+[  92% ] _update_scan_actions | ._Lancer_Up_Defence.png
+[  92% ] _update_scan_actions | ._Heal.png
+[  92% ] _update_scan_actions | ._Heal_Effect.png
+[  93% ] _update_scan_actions | ._Idle.png
+[  93% ] _update_scan_actions | ._Run.png
+[  93% ] _update_scan_actions | ._Pawn_Idle Axe.png
+[  93% ] _update_scan_actions | ._Pawn_Idle Gold.png
+[  94% ] _update_scan_actions | ._Pawn_Idle Hammer.png
+[  94% ] _update_scan_actions | ._Pawn_Idle Knife.png
+[  94% ] _update_scan_actions | ._Pawn_Idle Meat.png
+[  94% ] _update_scan_actions | ._Pawn_Idle Pickaxe.png
+[  95% ] _update_scan_actions | ._Pawn_Idle Wood.png
+[  95% ] _update_scan_actions | ._Pawn_Idle.png
+[  95% ] _update_scan_actions | ._Pawn_Interact Axe.png
+[  95% ] _update_scan_actions | ._Pawn_Interact Hammer.png
+[  96% ] _update_scan_actions | ._Pawn_Interact Knife.png
+[  96% ] _update_scan_actions | ._Pawn_Interact Pickaxe.png
+[  96% ] _update_scan_actions | ._Pawn_Run Axe.png
+[  96% ] _update_scan_actions | ._Pawn_Run Gold.png
+[  97% ] _update_scan_actions | ._Pawn_Run Hammer.png
+[  97% ] _update_scan_actions | ._Pawn_Run Knife.png
+[  97% ] _update_scan_actions | ._Pawn_Run Meat.png
+[  97% ] _update_scan_actions | ._Pawn_Run Pickaxe.png
+[  98% ] _update_scan_actions | ._Pawn_Run Wood.png
+[  98% ] _update_scan_actions | ._Pawn_Run.png
+[  98% ] _update_scan_actions | ._Warrior_Attack1.png
+[  98% ] _update_scan_actions | ._Warrior_Attack2.png
+[  99% ] _update_scan_actions | ._Warrior_Guard.png
+[  99% ] _update_scan_actions | ._Warrior_Idle.png
+[  99% ] _update_scan_actions | ._Warrior_Run.png
+[ DONE ] _update_scan_actions
+
+[   0% ] reimport | Started (Re)Importing Assets (1 steps)
+[   0% ] reimport | Preparing files to reimport...
+[   0% ] reimport | Executing pre-reimport operations...
+[   0% ] reimport | shop_awning.svg
+[  50% ] reimport | Finalizing Asset Import...
+[ DONE ] reimport
+
+[   0% ] reimport | Started (Re)Importing Assets (1 steps)
+[   0% ] reimport | Executing post-reimport operations...
+[ DONE ] reimport
+
+[   0% ] loading_editor_layout | Started Loading editor (5 steps)
+[   0% ] loading_editor_layout | Loading editor layout...
+[  16% ] loading_editor_layout | Loading docks...
+[  33% ] loading_editor_layout | Reopening scenes...
+[  50% ] loading_editor_layout | Loading central editor layout...
+[  66% ] loading_editor_layout | Loading plugin window layout...
+[  83% ] loading_editor_layout | Editor layout ready.
+[ DONE ] loading_editor_layout

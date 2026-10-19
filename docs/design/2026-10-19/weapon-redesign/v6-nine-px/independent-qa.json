@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "reviewer": "weapon_v2_art_review",
+  "diagonal_blade_measurement": {
+    "method": "22 normal cross-sections; antialias-aware bilinear ink coverage integral",
+    "median_unit_px": 8.9705,
+    "min_unit_px": 8.9448,
+    "max_unit_px": 9.0194,
+    "median_native_128_px": 4.4852
+  },
+  "visual_checks": {
+    "no_clipping": true,
+    "eyes_mouth_clear": true,
+    "grip_aligned": true,
+    "main_material_fields_preserved": true
+  },
+  "fringe_pixels_removed": 2069,
+  "notes": "Removed components are thin exterior fringe, not substantive material planes. Diagonal deviation from 9 is at most 0.056 unit px due to raster sampling and disk offset."
+}

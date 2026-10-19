@@ -23,8 +23,9 @@ two-tone faces, no gloss, no drop shadow. Don't mix the two.
 ## Style rules (measured from the "Asset bổ sung" Figma page)
 
 - **Flat fills only.** No shading, highlight or gradient anywhere on the cat.
-- **One line:** `#583f21`, even width ≈ 5% of the sprite height (12 px at 240 px), round caps
-  and joins. Small details (paws) use the same weight.
+- **Character line:** `#583f21`, round caps and joins. Legacy source uses an even width
+  ≈ 5% of sprite height (12 px at 240 px); new proposals use the accepted 9 px main line.
+  Equipment interior ink follows the current proposal contract below rather than this legacy color treatment.
 - **Head:** a wide mochi/bun shape, a bit wider than the body, overlapping the body's top.
 - **Ears:** triangles with rounded tips, pink inside (`#f6b8b0`), drawn *before* the head so
   the head covers their base.
@@ -40,7 +41,8 @@ two-tone faces, no gloss, no drop shadow. Don't mix the two.
   stripes `#8a8a8a`, white `#fdfaf5` with patches (calico `#f2a65a` / `#4a3a32`). Stripes and
   patches are clipped to the head/body shape.
 - **Outfits** (jacket, police uniform, sweater in the references) sit over the body as their own
-  flat shapes with the same line; paws stay on top of the clothes.
+  flat shapes with the character's exterior line; paws stay on top of the clothes. Use the
+  current equipment contract below for interior construction lines in new proposals.
 
 Draw order: tail → cape (if any) → body → stripes/patches → paws → scarf/clothes → ears (outer,
 then pink) → head fill → head marks → head outline → face → hat/crown.
@@ -113,3 +115,5 @@ size, 2.5 px min), open strokes as a dark stroke under a colour stroke, later pa
 earlier outlines, and every `gloss` raw (shine, blade light, sparkles, anything with opacity)
 dropped. Keep real details (wraps, rivets, runes, gems, hamon). make_units.py embeds the same
 flat drawing in the units' hands with `flat_svg(128, line=10/scale)`, so the held weapon carries a line as heavy as the cat's 12 px (an icon-weight line looks thin next to the cat).
+
+For new proposals, keep the user's accepted 9 px main-line target on the 256 x 240 canvas for cats and weapons, superseding legacy generator widths. After rejecting the equipment redraw's interior strokes and re-studying the reference, the user rated the new spear sample 9/10. Use [the accepted spear](../../../tools/skills/casual-weapon-design/references/accepted-spear.md) as the visual baseline; its straight shaft measures approximately 8.2 px after fitting, not exactly 9 px everywhere. Do not automatically make every component boundary 9 px or every interior gray. Distinguish silhouette edges (including holes), actual overlaps, surface seams/ornament and filled material planes. Surface ink responds to the material; secondary weights require review at fitted size. Follow [the re-studied stroke reference](../../../tools/skills/casual-weapon-design/references/internal-strokes.md) for observed examples and current decisions. Do not turn facets into lines, and do not infer that reference shading authorizes shading on the flat cats. Earlier hero-equipment prototypes remain unapproved; the accepted spear is a review asset and has not been integrated into production.

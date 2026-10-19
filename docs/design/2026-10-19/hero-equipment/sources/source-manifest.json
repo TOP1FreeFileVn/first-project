@@ -1,0 +1,45 @@
+{
+  "canvas": [
+    256,
+    240
+  ],
+  "render_scale": 3,
+  "png_size": [
+    768,
+    720
+  ],
+  "native_source": "tools/ui/make_svgs.py::cat_svg('hero')",
+  "outline": {
+    "color": "#583f21",
+    "main_width": 9,
+    "tail_understroke": 31,
+    "tail_coat": 13
+  },
+  "removed": [
+    "old back-mounted sword",
+    "old helmet including plume"
+  ],
+  "preserved": [
+    "ginger coat",
+    "white chest and muzzle",
+    "native face and brows",
+    "blue cape and gold hem/clasps",
+    "head and body silhouette"
+  ],
+  "restored": "native regular-cat ears in hero ginger, bases hidden by native head",
+  "helmet_layer": "Use hero-head-noears while helmet is worn; hero-head retains ears for the clean unhelmeted base",
+  "minor_safety_adjustment": "cape bottom control Q128248 -> Q128242, avoids 2.5 px lower-edge clipping",
+  "layers": [
+    "hero-tail",
+    "hero-cape",
+    "hero-torso",
+    "hero-body",
+    "hero-head",
+    "hero-head-noears",
+    "hero-paws",
+    "hero-base",
+    "hero-neutral"
+  ],
+  "paws": "separate native 9px hook-stroke layer; wear gloves on top at shared sockets (94,166)/(160,166)",
+  "registration": "All assets retain full canvas; never independently trim worn layers"
+}

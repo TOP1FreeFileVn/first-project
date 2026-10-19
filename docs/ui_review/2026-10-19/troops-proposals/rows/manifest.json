@@ -1,0 +1,27 @@
+{
+	"content_band_design": [
+		0,
+		112,
+		720,
+		1008
+	],
+	"native_body_font_360": 12,
+	"native_capture": true,
+	"native_name_font_360": 14,
+	"persist": false,
+	"production_edits": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/troops-proposals/rows/mcp/profile/Godot/app_userdata/Gear Defenders",
+	"proposal": "B — static one-column rows",
+	"row_design_height": 184,
+	"team": [
+		"gay_phep",
+		"cung",
+		"chuy"
+	],
+	"troops": [
+		"kiem",
+		"riu",
+		"dao",
+		"katana"
+	]
+}

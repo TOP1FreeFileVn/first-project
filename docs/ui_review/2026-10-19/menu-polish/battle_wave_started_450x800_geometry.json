@@ -1,0 +1,2846 @@
+{
+	"actual": [
+		450,
+		800
+	],
+	"essential_bounds": {
+		"ready": true,
+		"sell": true,
+		"shop": true,
+		"shop_lock": true
+	},
+	"file": "battle_wave_started_450x800.png",
+	"footer": "battle_wave_started_450x800_footer.png",
+	"geometry": {
+		"controls": {
+			"ready": {
+				"children": [],
+				"disabled": true,
+				"font_size": 26,
+				"minimum": [
+					520.0,
+					76.0
+				],
+				"name": "BattleReadyButton",
+				"rect": [
+					182.0,
+					1196.0,
+					520.0,
+					76.0
+				],
+				"text": "Đang đánh · còn 6 địch",
+				"text_width": 297.0,
+				"type": "Button",
+				"visible": true
+			},
+			"sell": {
+				"children": [
+					{
+						"children": [
+							{
+								"children": [],
+								"font_size": 22,
+								"minimum": [
+									46.0,
+									32.0
+								],
+								"name": "@Label@2030",
+								"rect": [
+									24.0,
+									1200.0,
+									136.0,
+									32.0
+								],
+								"text": "Bán",
+								"text_width": 46.0,
+								"type": "Label",
+								"visible": true
+							},
+							{
+								"children": [],
+								"font_size": 14,
+								"minimum": [
+									91.0,
+									20.0
+								],
+								"name": "@Label@2031",
+								"rect": [
+									24.0,
+									1232.0,
+									136.0,
+									20.0
+								],
+								"text": "kéo gear vào",
+								"text_width": 91.0,
+								"type": "Label",
+								"visible": true
+							}
+						],
+						"minimum": [
+							91.0,
+							52.0
+						],
+						"name": "SellCaption",
+						"rect": [
+							24.0,
+							1194.0,
+							136.0,
+							64.0
+						],
+						"type": "VBoxContainer",
+						"visible": true
+					}
+				],
+				"minimum": [
+					0.0,
+					0.0
+				],
+				"name": "BattleSellZone",
+				"rect": [
+					16.0,
+					1196.0,
+					152.0,
+					76.0
+				],
+				"type": "Panel",
+				"visible": true
+			},
+			"shop": {
+				"children": [
+					{
+						"children": [
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"font_size": 20,
+														"minimum": [
+															253.0,
+															29.0
+														],
+														"name": "@Label@2276",
+														"rect": [
+															233.0,
+															167.604690551758,
+															253.0,
+															29.0
+														],
+														"text": "Lượt nghỉ · Đợt 1/6 sắp tới",
+														"text_width": 253.0,
+														"type": "Label",
+														"visible": true
+													}
+												],
+												"minimum": [
+													253.0,
+													29.0
+												],
+												"name": "@HBoxContainer@2277",
+												"rect": [
+													233.0,
+													162.604690551758,
+													253.0,
+													39.0
+												],
+												"type": "HBoxContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											313.0,
+											51.0
+										],
+										"name": "@PanelContainer@2278",
+										"rect": [
+											203.0,
+											158.604690551758,
+											313.0,
+											51.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									}
+								],
+								"minimum": [
+									313.0,
+									51.0
+								],
+								"name": "@CenterContainer@2279",
+								"rect": [
+									40.0,
+									158.604690551758,
+									640.0,
+									51.0
+								],
+								"type": "CenterContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [],
+												"font_size": 17,
+												"minimum": [
+													94.0,
+													24.0
+												],
+												"name": "@Label@2280",
+												"rect": [
+													237.0,
+													244.604690551758,
+													94.0,
+													24.0
+												],
+												"text": "Quân địch:",
+												"text_width": 94.0,
+												"type": "Label",
+												"visible": true
+											},
+											{
+												"children": [],
+												"minimum": [
+													42.0,
+													42.0
+												],
+												"name": "@TextureRect@2281",
+												"rect": [
+													339.0,
+													235.604690551758,
+													42.0,
+													42.0
+												],
+												"type": "TextureRect",
+												"visible": true
+											},
+											{
+												"children": [],
+												"font_size": 17,
+												"minimum": [
+													19.0,
+													24.0
+												],
+												"name": "@Label@2282",
+												"rect": [
+													389.0,
+													244.604690551758,
+													19.0,
+													24.0
+												],
+												"text": "x5",
+												"text_width": 19.0,
+												"type": "Label",
+												"visible": true
+											},
+											{
+												"children": [],
+												"minimum": [
+													42.0,
+													42.0
+												],
+												"name": "@TextureRect@2283",
+												"rect": [
+													416.0,
+													235.604690551758,
+													42.0,
+													42.0
+												],
+												"type": "TextureRect",
+												"visible": true
+											},
+											{
+												"children": [],
+												"font_size": 17,
+												"minimum": [
+													17.0,
+													24.0
+												],
+												"name": "@Label@2284",
+												"rect": [
+													466.0,
+													244.604690551758,
+													17.0,
+													24.0
+												],
+												"text": "x1",
+												"text_width": 17.0,
+												"type": "Label",
+												"visible": true
+											}
+										],
+										"minimum": [
+											246.0,
+											42.0
+										],
+										"name": "@HBoxContainer@2285",
+										"rect": [
+											56.0,
+											235.604690551758,
+											608.0,
+											42.0
+										],
+										"type": "HBoxContainer",
+										"visible": true
+									}
+								],
+								"minimum": [
+									278.0,
+									74.0
+								],
+								"name": "@PanelContainer@2286",
+								"rect": [
+									40.0,
+									219.604690551758,
+									640.0,
+									74.0
+								],
+								"type": "PanelContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"font_size": 14,
+														"minimum": [
+															55.0,
+															20.0
+														],
+														"name": "@Label@2288",
+														"rect": [
+															45.0,
+															328.604675292969,
+															150.0,
+															20.0
+														],
+														"text": "Thường",
+														"text_width": 55.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	76.0,
+																	76.0
+																],
+																"name": "@TextureRect@2289",
+																"rect": [
+																	82.0,
+																	348.604675292969,
+																	76.0,
+																	76.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															76.0,
+															76.0
+														],
+														"name": "@CenterContainer@2290",
+														"rect": [
+															45.0,
+															348.604675292969,
+															150.0,
+															76.0
+														],
+														"type": "CenterContainer",
+														"visible": true
+													},
+													{
+														"children": [],
+														"font_size": 16,
+														"minimum": [
+															1.0,
+															23.0
+														],
+														"name": "@Label@2291",
+														"rect": [
+															45.0,
+															424.604675292969,
+															150.0,
+															23.0
+														],
+														"text": "Mèo Cung",
+														"text_width": 78.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	28.0,
+																	28.0
+																],
+																"name": "@TextureRect@2292",
+																"rect": [
+																	98.0,
+																	447.604675292969,
+																	28.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															},
+															{
+																"children": [],
+																"font_size": 21,
+																"minimum": [
+																	11.0,
+																	30.0
+																],
+																"name": "@Label@2293",
+																"rect": [
+																	130.0,
+																	447.604675292969,
+																	11.0,
+																	30.0
+																],
+																"text": "2",
+																"text_width": 11.0,
+																"type": "Label",
+																"visible": true
+															}
+														],
+														"minimum": [
+															43.0,
+															30.0
+														],
+														"name": "@HBoxContainer@2294",
+														"rect": [
+															45.0,
+															447.604675292969,
+															150.0,
+															30.0
+														],
+														"type": "HBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													76.0,
+													149.0
+												],
+												"name": "@VBoxContainer@2287",
+												"rect": [
+													45.0,
+													303.604675292969,
+													150.0,
+													200.0
+												],
+												"type": "VBoxContainer",
+												"visible": true
+											}
+										],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											150.0,
+											200.0
+										],
+										"name": "@Button@2295",
+										"rect": [
+											45.0,
+											303.604675292969,
+											150.0,
+											200.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									},
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"font_size": 14,
+														"minimum": [
+															55.0,
+															20.0
+														],
+														"name": "@Label@2297",
+														"rect": [
+															205.0,
+															328.604675292969,
+															150.0,
+															20.0
+														],
+														"text": "Thường",
+														"text_width": 55.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	76.0,
+																	76.0
+																],
+																"name": "@TextureRect@2298",
+																"rect": [
+																	242.0,
+																	348.604675292969,
+																	76.0,
+																	76.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															76.0,
+															76.0
+														],
+														"name": "@CenterContainer@2299",
+														"rect": [
+															205.0,
+															348.604675292969,
+															150.0,
+															76.0
+														],
+														"type": "CenterContainer",
+														"visible": true
+													},
+													{
+														"children": [],
+														"font_size": 16,
+														"minimum": [
+															1.0,
+															23.0
+														],
+														"name": "@Label@2300",
+														"rect": [
+															205.0,
+															424.604675292969,
+															150.0,
+															23.0
+														],
+														"text": "Mèo Cung",
+														"text_width": 78.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	28.0,
+																	28.0
+																],
+																"name": "@TextureRect@2301",
+																"rect": [
+																	258.0,
+																	447.604675292969,
+																	28.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															},
+															{
+																"children": [],
+																"font_size": 21,
+																"minimum": [
+																	11.0,
+																	30.0
+																],
+																"name": "@Label@2302",
+																"rect": [
+																	290.0,
+																	447.604675292969,
+																	11.0,
+																	30.0
+																],
+																"text": "2",
+																"text_width": 11.0,
+																"type": "Label",
+																"visible": true
+															}
+														],
+														"minimum": [
+															43.0,
+															30.0
+														],
+														"name": "@HBoxContainer@2303",
+														"rect": [
+															205.0,
+															447.604675292969,
+															150.0,
+															30.0
+														],
+														"type": "HBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													76.0,
+													149.0
+												],
+												"name": "@VBoxContainer@2296",
+												"rect": [
+													205.0,
+													303.604675292969,
+													150.0,
+													200.0
+												],
+												"type": "VBoxContainer",
+												"visible": true
+											}
+										],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											150.0,
+											200.0
+										],
+										"name": "@Button@2304",
+										"rect": [
+											205.0,
+											303.604675292969,
+											150.0,
+											200.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									},
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"font_size": 14,
+														"minimum": [
+															55.0,
+															20.0
+														],
+														"name": "@Label@2306",
+														"rect": [
+															365.0,
+															328.604675292969,
+															150.0,
+															20.0
+														],
+														"text": "Thường",
+														"text_width": 55.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	76.0,
+																	76.0
+																],
+																"name": "@TextureRect@2307",
+																"rect": [
+																	402.0,
+																	348.604675292969,
+																	76.0,
+																	76.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															76.0,
+															76.0
+														],
+														"name": "@CenterContainer@2308",
+														"rect": [
+															365.0,
+															348.604675292969,
+															150.0,
+															76.0
+														],
+														"type": "CenterContainer",
+														"visible": true
+													},
+													{
+														"children": [],
+														"font_size": 16,
+														"minimum": [
+															1.0,
+															23.0
+														],
+														"name": "@Label@2309",
+														"rect": [
+															365.0,
+															424.604675292969,
+															150.0,
+															23.0
+														],
+														"text": "Mèo Cung",
+														"text_width": 78.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	28.0,
+																	28.0
+																],
+																"name": "@TextureRect@2310",
+																"rect": [
+																	418.0,
+																	447.604675292969,
+																	28.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															},
+															{
+																"children": [],
+																"font_size": 21,
+																"minimum": [
+																	11.0,
+																	30.0
+																],
+																"name": "@Label@2311",
+																"rect": [
+																	450.0,
+																	447.604675292969,
+																	11.0,
+																	30.0
+																],
+																"text": "2",
+																"text_width": 11.0,
+																"type": "Label",
+																"visible": true
+															}
+														],
+														"minimum": [
+															43.0,
+															30.0
+														],
+														"name": "@HBoxContainer@2312",
+														"rect": [
+															365.0,
+															447.604675292969,
+															150.0,
+															30.0
+														],
+														"type": "HBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													76.0,
+													149.0
+												],
+												"name": "@VBoxContainer@2305",
+												"rect": [
+													365.0,
+													303.604675292969,
+													150.0,
+													200.0
+												],
+												"type": "VBoxContainer",
+												"visible": true
+											}
+										],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											150.0,
+											200.0
+										],
+										"name": "@Button@2313",
+										"rect": [
+											365.0,
+											303.604675292969,
+											150.0,
+											200.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									},
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"font_size": 14,
+														"minimum": [
+															55.0,
+															20.0
+														],
+														"name": "@Label@2315",
+														"rect": [
+															525.0,
+															328.604675292969,
+															150.0,
+															20.0
+														],
+														"text": "Thường",
+														"text_width": 55.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	76.0,
+																	76.0
+																],
+																"name": "@TextureRect@2316",
+																"rect": [
+																	562.0,
+																	348.604675292969,
+																	76.0,
+																	76.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															76.0,
+															76.0
+														],
+														"name": "@CenterContainer@2317",
+														"rect": [
+															525.0,
+															348.604675292969,
+															150.0,
+															76.0
+														],
+														"type": "CenterContainer",
+														"visible": true
+													},
+													{
+														"children": [],
+														"font_size": 16,
+														"minimum": [
+															1.0,
+															23.0
+														],
+														"name": "@Label@2318",
+														"rect": [
+															525.0,
+															424.604675292969,
+															150.0,
+															23.0
+														],
+														"text": "Mèo Cung",
+														"text_width": 78.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	28.0,
+																	28.0
+																],
+																"name": "@TextureRect@2319",
+																"rect": [
+																	578.0,
+																	447.604675292969,
+																	28.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															},
+															{
+																"children": [],
+																"font_size": 21,
+																"minimum": [
+																	11.0,
+																	30.0
+																],
+																"name": "@Label@2320",
+																"rect": [
+																	610.0,
+																	447.604675292969,
+																	11.0,
+																	30.0
+																],
+																"text": "2",
+																"text_width": 11.0,
+																"type": "Label",
+																"visible": true
+															}
+														],
+														"minimum": [
+															43.0,
+															30.0
+														],
+														"name": "@HBoxContainer@2321",
+														"rect": [
+															525.0,
+															447.604675292969,
+															150.0,
+															30.0
+														],
+														"type": "HBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													76.0,
+													149.0
+												],
+												"name": "@VBoxContainer@2314",
+												"rect": [
+													525.0,
+													303.604675292969,
+													150.0,
+													200.0
+												],
+												"type": "VBoxContainer",
+												"visible": true
+											}
+										],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											150.0,
+											200.0
+										],
+										"name": "@Button@2322",
+										"rect": [
+											525.0,
+											303.604675292969,
+											150.0,
+											200.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									630.0,
+									200.0
+								],
+								"name": "@HBoxContainer@2323",
+								"rect": [
+									40.0,
+									303.604675292969,
+									640.0,
+									200.0
+								],
+								"type": "HBoxContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"font_size": 26,
+														"minimum": [
+															115.0,
+															37.0
+														],
+														"name": "@Label@2327",
+														"rect": [
+															129.0,
+															519.604675292969,
+															250.0,
+															37.0
+														],
+														"text": "Đổi shop",
+														"text_width": 115.0,
+														"type": "Label",
+														"visible": true
+													},
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	26.0,
+																	26.0
+																],
+																"name": "@TextureRect@2325",
+																"rect": [
+																	233.0,
+																	556.604675292969,
+																	26.0,
+																	29.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															},
+															{
+																"children": [],
+																"font_size": 20,
+																"minimum": [
+																	9.0,
+																	29.0
+																],
+																"name": "@Label@2326",
+																"rect": [
+																	265.0,
+																	556.604675292969,
+																	9.0,
+																	29.0
+																],
+																"text": "1",
+																"text_width": 9.0,
+																"type": "Label",
+																"visible": true
+															}
+														],
+														"minimum": [
+															41.0,
+															29.0
+														],
+														"name": "@HBoxContainer@2328",
+														"rect": [
+															129.0,
+															556.604675292969,
+															250.0,
+															29.0
+														],
+														"type": "HBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													115.0,
+													66.0
+												],
+												"name": "@VBoxContainer@2324",
+												"rect": [
+													129.0,
+													513.604675292969,
+													250.0,
+													78.0
+												],
+												"type": "VBoxContainer",
+												"visible": true
+											}
+										],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											250.0,
+											90.0
+										],
+										"name": "@Button@2329",
+										"rect": [
+											129.0,
+											513.604675292969,
+											250.0,
+											90.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 21,
+										"minimum": [
+											200.0,
+											76.0
+										],
+										"name": "BattleShopLockButton",
+										"rect": [
+											391.0,
+											520.604675292969,
+											200.0,
+											76.0
+										],
+										"text": "Khoá shop",
+										"text_width": 114.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									462.0,
+									90.0
+								],
+								"name": "@HBoxContainer@2330",
+								"rect": [
+									40.0,
+									513.604675292969,
+									640.0,
+									90.0
+								],
+								"type": "HBoxContainer",
+								"visible": true
+							},
+							{
+								"children": [],
+								"font_size": 16,
+								"minimum": [
+									1.0,
+									23.0
+								],
+								"name": "@Label@2331",
+								"rect": [
+									40.0,
+									613.604675292969,
+									640.0,
+									23.0
+								],
+								"text": "Hết đợt nhận +6 xu · lãi +1 (mỗi 5 xu để dành = +1)",
+								"text_width": 387.0,
+								"type": "Label",
+								"visible": true
+							}
+						],
+						"minimum": [
+							630.0,
+							478.0
+						],
+						"name": "@VBoxContainer@2009",
+						"rect": [
+							40.0,
+							158.604690551758,
+							640.0,
+							478.0
+						],
+						"type": "VBoxContainer",
+						"visible": true
+					}
+				],
+				"minimum": [
+					680.0,
+					520.0
+				],
+				"name": "@PanelContainer@2008",
+				"rect": [
+					20.0,
+					140.604690551758,
+					680.0,
+					520.0
+				],
+				"type": "PanelContainer",
+				"visible": true
+			},
+			"shop_lock": {
+				"children": [],
+				"disabled": false,
+				"font_size": 21,
+				"minimum": [
+					200.0,
+					76.0
+				],
+				"name": "BattleShopLockButton",
+				"rect": [
+					391.0,
+					520.604675292969,
+					200.0,
+					76.0
+				],
+				"text": "Khoá shop",
+				"text_width": 114.0,
+				"type": "Button",
+				"visible": true
+			}
+		},
+		"kind": "battle",
+		"phase": "fight",
+		"shop_locked": false
+	},
+	"native_render": true,
+	"requested": [
+		450,
+		800
+	],
+	"visible_controls": [
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1980",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				619.0,
+				102.0
+			],
+			"name": "@VBoxContainer@1981",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981",
+			"rect": [
+				12.0,
+				6.0,
+				696.0,
+				102.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				438.0,
+				56.0
+			],
+			"name": "@HBoxContainer@1982",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1982",
+			"rect": [
+				12.0,
+				6.0,
+				696.0,
+				56.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				67.0,
+				56.0
+			],
+			"name": "@Button@1983",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1982/@Button@1983",
+			"rect": [
+				12.0,
+				6.0,
+				67.0,
+				56.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				267.0,
+				51.0
+			],
+			"name": "@PanelContainer@1986",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1982/@PanelContainer@1986",
+			"rect": [
+				87.0,
+				6.0,
+				267.0,
+				56.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				207.0,
+				30.0
+			],
+			"name": "@HBoxContainer@1985",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1982/@PanelContainer@1986/@HBoxContainer@1985",
+			"rect": [
+				117.0,
+				10.0,
+				207.0,
+				44.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				207.0,
+				30.0
+			],
+			"name": "@Label@1984",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1982/@PanelContainer@1986/@HBoxContainer@1985/@Label@1984",
+			"rect": [
+				117.0,
+				17.0,
+				207.0,
+				30.0
+			],
+			"text": "Màn 3 · Pháo Đài Đỏ",
+			"text_width": 207.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1987",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1982/@Control@1987",
+			"rect": [
+				362.0,
+				6.0,
+				258.0,
+				56.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 22,
+			"minimum": [
+				80.0,
+				56.0
+			],
+			"name": "@Button@1988",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1982/@Button@1988",
+			"rect": [
+				628.0,
+				6.0,
+				80.0,
+				56.0
+			],
+			"text": "x1",
+			"text_width": 22.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				619.0,
+				42.0
+			],
+			"name": "@HBoxContainer@1989",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989",
+			"rect": [
+				12.0,
+				66.0,
+				696.0,
+				42.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				214.0,
+				40.0
+			],
+			"name": "@HBoxContainer@1993",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1993",
+			"rect": [
+				12.0,
+				66.0,
+				214.0,
+				42.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				40.0,
+				40.0
+			],
+			"name": "@TextureRect@1990",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1993/@TextureRect@1990",
+			"rect": [
+				12.0,
+				66.0,
+				40.0,
+				42.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				170.0,
+				30.0
+			],
+			"name": "@ProgressBar@1992",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1993/@ProgressBar@1992",
+			"rect": [
+				56.0,
+				72.0,
+				170.0,
+				30.0
+			],
+			"type": "ProgressBar",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				29.0,
+				24.0
+			],
+			"name": "@Label@1991",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1993/@ProgressBar@1992/@Label@1991",
+			"rect": [
+				56.0,
+				72.0,
+				170.0,
+				30.0
+			],
+			"text": "207",
+			"text_width": 29.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				154.0,
+				42.0
+			],
+			"name": "@HBoxContainer@1998",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1998",
+			"rect": [
+				236.0,
+				66.0,
+				154.0,
+				42.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				40.0,
+				40.0
+			],
+			"name": "@TextureRect@1994",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1998/@TextureRect@1994",
+			"rect": [
+				236.0,
+				66.0,
+				40.0,
+				42.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				110.0,
+				42.0
+			],
+			"name": "@VBoxContainer@1997",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1998/@VBoxContainer@1997",
+			"rect": [
+				280.0,
+				66.0,
+				110.0,
+				42.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 19,
+			"minimum": [
+				67.0,
+				28.0
+			],
+			"name": "@Label@1995",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1998/@VBoxContainer@1997/@Label@1995",
+			"rect": [
+				280.0,
+				66.0,
+				110.0,
+				28.0
+			],
+			"text": "Đợt 1/6",
+			"text_width": 67.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				110.0,
+				12.0
+			],
+			"name": "@ProgressBar@1996",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@1998/@VBoxContainer@1997/@ProgressBar@1996",
+			"rect": [
+				280.0,
+				96.0,
+				110.0,
+				12.0
+			],
+			"type": "ProgressBar",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1999",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@Control@1999",
+			"rect": [
+				400.0,
+				66.0,
+				77.0,
+				42.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				42.0
+			],
+			"name": "@HBoxContainer@2004",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2004",
+			"rect": [
+				487.0,
+				66.0,
+				124.0,
+				42.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				40.0,
+				40.0
+			],
+			"name": "@TextureRect@2000",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2004/@TextureRect@2000",
+			"rect": [
+				487.0,
+				66.0,
+				40.0,
+				42.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				42.0
+			],
+			"name": "@VBoxContainer@2003",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2004/@VBoxContainer@2003",
+			"rect": [
+				531.0,
+				66.0,
+				80.0,
+				42.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 19,
+			"minimum": [
+				40.0,
+				28.0
+			],
+			"name": "@Label@2001",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2004/@VBoxContainer@2003/@Label@2001",
+			"rect": [
+				531.0,
+				66.0,
+				80.0,
+				28.0
+			],
+			"text": "9/22",
+			"text_width": 40.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				12.0
+			],
+			"name": "@ProgressBar@2002",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2004/@VBoxContainer@2003/@ProgressBar@2002",
+			"rect": [
+				531.0,
+				96.0,
+				80.0,
+				12.0
+			],
+			"type": "ProgressBar",
+			"visible": true
+		},
+		{
+			"minimum": [
+				87.0,
+				40.0
+			],
+			"name": "@HBoxContainer@2007",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2007",
+			"rect": [
+				621.0,
+				66.0,
+				87.0,
+				42.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				40.0,
+				40.0
+			],
+			"name": "@TextureRect@2005",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2007/@TextureRect@2005",
+			"rect": [
+				621.0,
+				66.0,
+				40.0,
+				42.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 19,
+			"minimum": [
+				43.0,
+				28.0
+			],
+			"name": "@Label@2006",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@VBoxContainer@1981/@HBoxContainer@1989/@HBoxContainer@2007/@Label@2006",
+			"rect": [
+				665.0,
+				73.0,
+				43.0,
+				28.0
+			],
+			"text": "0/28",
+			"text_width": 43.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				680.0,
+				520.0
+			],
+			"name": "@PanelContainer@2008",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008",
+			"rect": [
+				20.0,
+				123.110359191895,
+				680.0,
+				520.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				630.0,
+				478.0
+			],
+			"name": "@VBoxContainer@2009",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009",
+			"rect": [
+				40.0,
+				141.1103515625,
+				640.0,
+				478.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				313.0,
+				51.0
+			],
+			"name": "@CenterContainer@2279",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@CenterContainer@2279",
+			"rect": [
+				40.0,
+				141.1103515625,
+				640.0,
+				51.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				313.0,
+				51.0
+			],
+			"name": "@PanelContainer@2278",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@CenterContainer@2279/@PanelContainer@2278",
+			"rect": [
+				203.0,
+				141.1103515625,
+				313.0,
+				51.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				253.0,
+				29.0
+			],
+			"name": "@HBoxContainer@2277",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@CenterContainer@2279/@PanelContainer@2278/@HBoxContainer@2277",
+			"rect": [
+				233.0,
+				145.1103515625,
+				253.0,
+				39.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				253.0,
+				29.0
+			],
+			"name": "@Label@2276",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@CenterContainer@2279/@PanelContainer@2278/@HBoxContainer@2277/@Label@2276",
+			"rect": [
+				233.0,
+				150.1103515625,
+				253.0,
+				29.0
+			],
+			"text": "Lượt nghỉ · Đợt 1/6 sắp tới",
+			"text_width": 253.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				278.0,
+				74.0
+			],
+			"name": "@PanelContainer@2286",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@PanelContainer@2286",
+			"rect": [
+				40.0,
+				202.1103515625,
+				640.0,
+				74.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				246.0,
+				42.0
+			],
+			"name": "@HBoxContainer@2285",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@PanelContainer@2286/@HBoxContainer@2285",
+			"rect": [
+				56.0,
+				218.1103515625,
+				608.0,
+				42.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				94.0,
+				24.0
+			],
+			"name": "@Label@2280",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@PanelContainer@2286/@HBoxContainer@2285/@Label@2280",
+			"rect": [
+				237.0,
+				227.1103515625,
+				94.0,
+				24.0
+			],
+			"text": "Quân địch:",
+			"text_width": 94.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				42.0,
+				42.0
+			],
+			"name": "@TextureRect@2281",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@PanelContainer@2286/@HBoxContainer@2285/@TextureRect@2281",
+			"rect": [
+				339.0,
+				218.1103515625,
+				42.0,
+				42.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				19.0,
+				24.0
+			],
+			"name": "@Label@2282",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@PanelContainer@2286/@HBoxContainer@2285/@Label@2282",
+			"rect": [
+				389.0,
+				227.1103515625,
+				19.0,
+				24.0
+			],
+			"text": "x5",
+			"text_width": 19.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				42.0,
+				42.0
+			],
+			"name": "@TextureRect@2283",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@PanelContainer@2286/@HBoxContainer@2285/@TextureRect@2283",
+			"rect": [
+				416.0,
+				218.1103515625,
+				42.0,
+				42.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				17.0,
+				24.0
+			],
+			"name": "@Label@2284",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@PanelContainer@2286/@HBoxContainer@2285/@Label@2284",
+			"rect": [
+				466.0,
+				227.1103515625,
+				17.0,
+				24.0
+			],
+			"text": "x1",
+			"text_width": 17.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				630.0,
+				200.0
+			],
+			"name": "@HBoxContainer@2323",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323",
+			"rect": [
+				40.0,
+				286.1103515625,
+				640.0,
+				200.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				150.0,
+				200.0
+			],
+			"name": "@Button@2295",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295",
+			"rect": [
+				45.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				149.0
+			],
+			"name": "@VBoxContainer@2287",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287",
+			"rect": [
+				45.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 14,
+			"minimum": [
+				55.0,
+				20.0
+			],
+			"name": "@Label@2288",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287/@Label@2288",
+			"rect": [
+				45.0,
+				311.1103515625,
+				150.0,
+				20.0
+			],
+			"text": "Thường",
+			"text_width": 55.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@CenterContainer@2290",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287/@CenterContainer@2290",
+			"rect": [
+				45.0,
+				331.1103515625,
+				150.0,
+				76.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@TextureRect@2289",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287/@CenterContainer@2290/@TextureRect@2289",
+			"rect": [
+				82.0,
+				331.1103515625,
+				76.0,
+				76.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 16,
+			"minimum": [
+				1.0,
+				23.0
+			],
+			"name": "@Label@2291",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287/@Label@2291",
+			"rect": [
+				45.0,
+				407.1103515625,
+				150.0,
+				23.0
+			],
+			"text": "Mèo Cung",
+			"text_width": 78.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				43.0,
+				30.0
+			],
+			"name": "@HBoxContainer@2294",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287/@HBoxContainer@2294",
+			"rect": [
+				45.0,
+				430.1103515625,
+				150.0,
+				30.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "@TextureRect@2292",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287/@HBoxContainer@2294/@TextureRect@2292",
+			"rect": [
+				98.0,
+				430.1103515625,
+				28.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				11.0,
+				30.0
+			],
+			"name": "@Label@2293",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2295/@VBoxContainer@2287/@HBoxContainer@2294/@Label@2293",
+			"rect": [
+				130.0,
+				430.1103515625,
+				11.0,
+				30.0
+			],
+			"text": "2",
+			"text_width": 11.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				150.0,
+				200.0
+			],
+			"name": "@Button@2304",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304",
+			"rect": [
+				205.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				149.0
+			],
+			"name": "@VBoxContainer@2296",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296",
+			"rect": [
+				205.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 14,
+			"minimum": [
+				55.0,
+				20.0
+			],
+			"name": "@Label@2297",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296/@Label@2297",
+			"rect": [
+				205.0,
+				311.1103515625,
+				150.0,
+				20.0
+			],
+			"text": "Thường",
+			"text_width": 55.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@CenterContainer@2299",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296/@CenterContainer@2299",
+			"rect": [
+				205.0,
+				331.1103515625,
+				150.0,
+				76.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@TextureRect@2298",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296/@CenterContainer@2299/@TextureRect@2298",
+			"rect": [
+				242.0,
+				331.1103515625,
+				76.0,
+				76.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 16,
+			"minimum": [
+				1.0,
+				23.0
+			],
+			"name": "@Label@2300",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296/@Label@2300",
+			"rect": [
+				205.0,
+				407.1103515625,
+				150.0,
+				23.0
+			],
+			"text": "Mèo Cung",
+			"text_width": 78.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				43.0,
+				30.0
+			],
+			"name": "@HBoxContainer@2303",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296/@HBoxContainer@2303",
+			"rect": [
+				205.0,
+				430.1103515625,
+				150.0,
+				30.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "@TextureRect@2301",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296/@HBoxContainer@2303/@TextureRect@2301",
+			"rect": [
+				258.0,
+				430.1103515625,
+				28.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				11.0,
+				30.0
+			],
+			"name": "@Label@2302",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2304/@VBoxContainer@2296/@HBoxContainer@2303/@Label@2302",
+			"rect": [
+				290.0,
+				430.1103515625,
+				11.0,
+				30.0
+			],
+			"text": "2",
+			"text_width": 11.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				150.0,
+				200.0
+			],
+			"name": "@Button@2313",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313",
+			"rect": [
+				365.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				149.0
+			],
+			"name": "@VBoxContainer@2305",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305",
+			"rect": [
+				365.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 14,
+			"minimum": [
+				55.0,
+				20.0
+			],
+			"name": "@Label@2306",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305/@Label@2306",
+			"rect": [
+				365.0,
+				311.1103515625,
+				150.0,
+				20.0
+			],
+			"text": "Thường",
+			"text_width": 55.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@CenterContainer@2308",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305/@CenterContainer@2308",
+			"rect": [
+				365.0,
+				331.1103515625,
+				150.0,
+				76.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@TextureRect@2307",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305/@CenterContainer@2308/@TextureRect@2307",
+			"rect": [
+				402.0,
+				331.1103515625,
+				76.0,
+				76.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 16,
+			"minimum": [
+				1.0,
+				23.0
+			],
+			"name": "@Label@2309",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305/@Label@2309",
+			"rect": [
+				365.0,
+				407.1103515625,
+				150.0,
+				23.0
+			],
+			"text": "Mèo Cung",
+			"text_width": 78.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				43.0,
+				30.0
+			],
+			"name": "@HBoxContainer@2312",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305/@HBoxContainer@2312",
+			"rect": [
+				365.0,
+				430.1103515625,
+				150.0,
+				30.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "@TextureRect@2310",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305/@HBoxContainer@2312/@TextureRect@2310",
+			"rect": [
+				418.0,
+				430.1103515625,
+				28.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				11.0,
+				30.0
+			],
+			"name": "@Label@2311",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2313/@VBoxContainer@2305/@HBoxContainer@2312/@Label@2311",
+			"rect": [
+				450.0,
+				430.1103515625,
+				11.0,
+				30.0
+			],
+			"text": "2",
+			"text_width": 11.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				150.0,
+				200.0
+			],
+			"name": "@Button@2322",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322",
+			"rect": [
+				525.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				149.0
+			],
+			"name": "@VBoxContainer@2314",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314",
+			"rect": [
+				525.0,
+				286.1103515625,
+				150.0,
+				200.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 14,
+			"minimum": [
+				55.0,
+				20.0
+			],
+			"name": "@Label@2315",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314/@Label@2315",
+			"rect": [
+				525.0,
+				311.1103515625,
+				150.0,
+				20.0
+			],
+			"text": "Thường",
+			"text_width": 55.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@CenterContainer@2317",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314/@CenterContainer@2317",
+			"rect": [
+				525.0,
+				331.1103515625,
+				150.0,
+				76.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				76.0,
+				76.0
+			],
+			"name": "@TextureRect@2316",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314/@CenterContainer@2317/@TextureRect@2316",
+			"rect": [
+				562.0,
+				331.1103515625,
+				76.0,
+				76.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 16,
+			"minimum": [
+				1.0,
+				23.0
+			],
+			"name": "@Label@2318",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314/@Label@2318",
+			"rect": [
+				525.0,
+				407.1103515625,
+				150.0,
+				23.0
+			],
+			"text": "Mèo Cung",
+			"text_width": 78.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				43.0,
+				30.0
+			],
+			"name": "@HBoxContainer@2321",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314/@HBoxContainer@2321",
+			"rect": [
+				525.0,
+				430.1103515625,
+				150.0,
+				30.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "@TextureRect@2319",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314/@HBoxContainer@2321/@TextureRect@2319",
+			"rect": [
+				578.0,
+				430.1103515625,
+				28.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				11.0,
+				30.0
+			],
+			"name": "@Label@2320",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2323/@Button@2322/@VBoxContainer@2314/@HBoxContainer@2321/@Label@2320",
+			"rect": [
+				610.0,
+				430.1103515625,
+				11.0,
+				30.0
+			],
+			"text": "2",
+			"text_width": 11.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				462.0,
+				90.0
+			],
+			"name": "@HBoxContainer@2330",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330",
+			"rect": [
+				40.0,
+				496.1103515625,
+				640.0,
+				90.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				250.0,
+				90.0
+			],
+			"name": "@Button@2329",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330/@Button@2329",
+			"rect": [
+				129.0,
+				496.1103515625,
+				250.0,
+				90.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				115.0,
+				66.0
+			],
+			"name": "@VBoxContainer@2324",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330/@Button@2329/@VBoxContainer@2324",
+			"rect": [
+				129.0,
+				496.1103515625,
+				250.0,
+				78.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 26,
+			"minimum": [
+				115.0,
+				37.0
+			],
+			"name": "@Label@2327",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330/@Button@2329/@VBoxContainer@2324/@Label@2327",
+			"rect": [
+				129.0,
+				502.1103515625,
+				250.0,
+				37.0
+			],
+			"text": "Đổi shop",
+			"text_width": 115.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				41.0,
+				29.0
+			],
+			"name": "@HBoxContainer@2328",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330/@Button@2329/@VBoxContainer@2324/@HBoxContainer@2328",
+			"rect": [
+				129.0,
+				539.1103515625,
+				250.0,
+				29.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				26.0,
+				26.0
+			],
+			"name": "@TextureRect@2325",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330/@Button@2329/@VBoxContainer@2324/@HBoxContainer@2328/@TextureRect@2325",
+			"rect": [
+				233.0,
+				539.1103515625,
+				26.0,
+				29.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				9.0,
+				29.0
+			],
+			"name": "@Label@2326",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330/@Button@2329/@VBoxContainer@2324/@HBoxContainer@2328/@Label@2326",
+			"rect": [
+				265.0,
+				539.1103515625,
+				9.0,
+				29.0
+			],
+			"text": "1",
+			"text_width": 9.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 21,
+			"minimum": [
+				200.0,
+				76.0
+			],
+			"name": "BattleShopLockButton",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@HBoxContainer@2330/BattleShopLockButton",
+			"rect": [
+				391.0,
+				503.1103515625,
+				200.0,
+				76.0
+			],
+			"text": "Khoá shop",
+			"text_width": 114.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"font_size": 16,
+			"minimum": [
+				1.0,
+				23.0
+			],
+			"name": "@Label@2331",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2008/@VBoxContainer@2009/@Label@2331",
+			"rect": [
+				40.0,
+				596.1103515625,
+				640.0,
+				23.0
+			],
+			"text": "Hết đợt nhận +6 xu · lãi +1 (mỗi 5 xu để dành = +1)",
+			"text_width": 387.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "BattleSellZone",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/BattleSellZone",
+			"rect": [
+				16.0,
+				1196.0,
+				152.0,
+				76.0
+			],
+			"type": "Panel",
+			"visible": true
+		},
+		{
+			"minimum": [
+				91.0,
+				52.0
+			],
+			"name": "SellCaption",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/BattleSellZone/SellCaption",
+			"rect": [
+				24.0,
+				1194.0,
+				136.0,
+				64.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 22,
+			"minimum": [
+				46.0,
+				32.0
+			],
+			"name": "@Label@2030",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/BattleSellZone/SellCaption/@Label@2030",
+			"rect": [
+				24.0,
+				1200.0,
+				136.0,
+				32.0
+			],
+			"text": "Bán",
+			"text_width": 46.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 14,
+			"minimum": [
+				91.0,
+				20.0
+			],
+			"name": "@Label@2031",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/BattleSellZone/SellCaption/@Label@2031",
+			"rect": [
+				24.0,
+				1232.0,
+				136.0,
+				20.0
+			],
+			"text": "kéo gear vào",
+			"text_width": 91.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": true,
+			"font_size": 26,
+			"minimum": [
+				520.0,
+				76.0
+			],
+			"name": "BattleReadyButton",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/BattleReadyButton",
+			"rect": [
+				182.0,
+				1196.0,
+				520.0,
+				76.0
+			],
+			"text": "Đang đánh · còn 6 địch",
+			"text_width": 297.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				41.0,
+				37.0
+			],
+			"name": "@PanelContainer@2033",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2033",
+			"rect": [
+				30.0,
+				116.0,
+				660.0,
+				44.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				1.0,
+				29.0
+			],
+			"name": "@Label@2032",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@PanelContainer@2033/@Label@2032",
+			"rect": [
+				50.0,
+				123.0,
+				620.0,
+				29.0
+			],
+			"text": "Đợt 1/6 đang tới!",
+			"text_width": 167.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@2034",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@Control@2034",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@2041",
+			"path": "/root/MenuPolishPreview/Battle/HUD/@Control@1980/@Control@2034/@Control@2041",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "Control",
+			"visible": true
+		}
+	]
+}

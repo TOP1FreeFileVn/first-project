@@ -1,0 +1,10 @@
+{
+  "id": "cu_kiem", "model": "gpt-image-2.5-sunburst", "fileKey": "2uKzqvXeOSPQqfaow6s7TU", "nodeId": "20:2",
+  "width": 1024, "height": 1024, "prompt": "prompts/cu_kiem-iteration-2.txt", "raw": "raw/cu_kiem.png",
+  "reference": "approved v4 sword iteration2 / v6 nine-px", "reference_mode": "text brief informed by visually inspected accepted assets; no image-input conditioning",
+  "status": "generated_pending_visual_qa",
+  "iterations": [
+    {"nodeId":"17:2", "raw":"raw/cu_kiem-iteration-1.png", "prompt":"prompts/cu_kiem-iteration-1.txt", "status":"superseded_not_broad_enough"},
+    {"nodeId":"20:2", "raw":"raw/cu_kiem.png", "prompt":"prompts/cu_kiem-iteration-2.txt", "status":"selected_broad_flat_top_slab"}
+  ]
+}

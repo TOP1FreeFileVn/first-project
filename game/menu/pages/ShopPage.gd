@@ -12,20 +12,25 @@ var _offers: VBoxContainer
 
 
 func build() -> void:
-	fill_available_height()
+	fill_available_height(16)
+	var page_margin := body.get_parent() as MarginContainer
+	page_margin.add_theme_constant_override("margin_top", 8)
 	body.add_theme_constant_override("separation", 16)
-	title("Cửa hàng", UiKit.Ribbon.YELLOW)
 	var total := 0.0
 	for w in Economy.RARITY_WEIGHTS:
 		total += w
 	var parts := []
 	for i in Economy.RARITY_WEIGHTS.size():
 		parts.append("%s %s%%" % [Economy.RARITY_NAMES[i], str(snappedf(100.0 * Economy.RARITY_WEIGHTS[i] / maxf(total, 0.001), 0.1))])
-	var rates := UiKit.ink("Tỉ lệ thẻ: " + " · ".join(parts), 22)
+	var rates := UiKit.label("Tỉ lệ thẻ: " + " · ".join(parts), 22, UiKit.INFO)
+	rates.name = "ShopRates"
+	rates.add_theme_color_override("font_outline_color", UiKit.LINE)
+	rates.add_theme_constant_override("outline_size", 2)
 	rates.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	rates.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	body.add_child(rates)
 	_offers = UiKit.vbox(16)
+	_offers.name = "ShopOffers"
 	_offers.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	body.add_child(_offers)
 	for kind in Economy.CHEST_ORDER:

@@ -1,0 +1,17 @@
+{
+  "id": "chuy",
+  "model": "gpt-image-2.5-sunburst",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "23:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt": "prompts/chuy.txt",
+  "raw": "raw/chuy.png",
+  "reference": "approved v4 sword iteration2 / v6 nine-px",
+  "reference_mode": "text brief informed by visually inspected accepted assets; no image-input conditioning",
+  "status": "generated_visual_qa_passed_pending_palette_and_stroke_normalization",
+  "suggested_grip_source": [512, 755],
+  "source_bbox_xyxy": [272, 5, 752, 1019],
+  "suggested_held_height": 125,
+  "qa": "Distinct broad flanged steel head with center face and two blunt wings; exposed wood grip and brass pommel. Full silhouette visible but top margin only5px, so add transparent canvas padding before outline expansion. Mild source gradients require flattening. Keep large head outside cheek."
+}

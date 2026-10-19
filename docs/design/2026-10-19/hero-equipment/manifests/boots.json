@@ -1,0 +1,42 @@
+{
+  "id": "boots",
+  "model": "gpt-image-2.5-sunburst",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "28:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt": "prompts/boots.txt",
+  "raw": "raw/boots.png",
+  "reference": "cat-sprite-art hero contract / approved nine-px weapon set",
+  "reference_mode": "text brief informed by inspected local source; no image input conditioning",
+  "status": "generated_visual_qa_passed_pending_shared_processing",
+  "source_bbox_xyxy": [
+    60,
+    289,
+    964,
+    728
+  ],
+  "pair_bbox_xyxy": [
+    [
+      60,
+      289,
+      496,
+      728
+    ],
+    [
+      528,
+      289,
+      964,
+      728
+    ]
+  ],
+  "anchor_source_left": [
+    278,
+    576
+  ],
+  "anchor_source_right": [
+    746,
+    576
+  ],
+  "qa": "Two separate front-on short rounded silver cat boots, blue low cuffs, gold rims, broad warm-brown soles. No heel or human long legs. Flatten generated gradient on sole."
+}

@@ -1,0 +1,3665 @@
+{
+	"actual": [
+		450,
+		800
+	],
+	"essential_bounds": {
+		"background": true,
+		"navigation": true
+	},
+	"file": "hero_450x800.png",
+	"footer": "hero_450x800_footer.png",
+	"geometry": {
+		"controls": {
+			"background": {
+				"children": [],
+				"minimum": [
+					0.0,
+					0.0
+				],
+				"name": "MenuBackground",
+				"rect": [
+					0.0,
+					0.0,
+					720.0,
+					1280.0
+				],
+				"type": "ColorRect",
+				"visible": true
+			},
+			"navigation": {
+				"children": [
+					{
+						"children": [
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1598",
+																"rect": [
+																	108.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1595",
+														"rect": [
+															22.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1596",
+												"rect": [
+													13.0,
+													1146.0,
+													119.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1597",
+										"rect": [
+											9.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1621",
+										"rect": [
+											9.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1599",
+								"rect": [
+									6.0,
+									1120.0,
+									133.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"minimum": [
+															94.0,
+															94.0
+														],
+														"name": "@TextureRect@1602",
+														"rect": [
+															179.0,
+															1134.0,
+															94.0,
+															94.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													0.0,
+													100.0
+												],
+												"name": "@Control@1601",
+												"rect": [
+													139.0,
+													1138.0,
+													174.0,
+													100.0
+												],
+												"type": "Control",
+												"visible": true
+											},
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"font_size": 24,
+																"minimum": [
+																	119.0,
+																	34.0
+																],
+																"name": "SelectedNavCaption",
+																"rect": [
+																	143.0,
+																	1240.0,
+																	166.0,
+																	34.0
+																],
+																"text": "Anh hùng",
+																"text_width": 119.0,
+																"type": "Label",
+																"visible": true
+															},
+															{
+																"children": [],
+																"minimum": [
+																	0.0,
+																	24.0
+																],
+																"name": "@Control@1604",
+																"rect": [
+																	143.0,
+																	1274.0,
+																	166.0,
+																	24.0
+																],
+																"type": "Control",
+																"visible": true
+															}
+														],
+														"minimum": [
+															119.0,
+															58.0
+														],
+														"name": "@VBoxContainer@1603",
+														"rect": [
+															143.0,
+															1240.0,
+															166.0,
+															58.0
+														],
+														"type": "VBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													127.0,
+													60.0
+												],
+												"name": "SelectedNavFooter",
+												"rect": [
+													139.0,
+													1238.0,
+													174.0,
+													60.0
+												],
+												"type": "PanelContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											127.0,
+											160.0
+										],
+										"name": "@VBoxContainer@1600",
+										"rect": [
+											139.0,
+											1126.0,
+											174.0,
+											172.0
+										],
+										"type": "VBoxContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1622",
+										"rect": [
+											139.0,
+											1126.0,
+											174.0,
+											172.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									127.0,
+									166.0
+								],
+								"name": "@PanelContainer@1605",
+								"rect": [
+									139.0,
+									1120.0,
+									174.0,
+									178.0
+								],
+								"type": "PanelContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1609",
+																"rect": [
+																	415.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1606",
+														"rect": [
+															329.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1607",
+												"rect": [
+													320.0,
+													1146.0,
+													119.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1608",
+										"rect": [
+											316.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1623",
+										"rect": [
+											316.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1610",
+								"rect": [
+									313.0,
+									1120.0,
+									133.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1614",
+																"rect": [
+																	549.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1611",
+														"rect": [
+															463.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1612",
+												"rect": [
+													453.0,
+													1146.0,
+													120.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1613",
+										"rect": [
+											449.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1624",
+										"rect": [
+											449.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1615",
+								"rect": [
+									446.0,
+									1120.0,
+									134.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1616",
+														"rect": [
+															597.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1617",
+												"rect": [
+													587.0,
+													1146.0,
+													120.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1618",
+										"rect": [
+											583.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1625",
+										"rect": [
+											583.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1619",
+								"rect": [
+									580.0,
+									1120.0,
+									134.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							}
+						],
+						"minimum": [
+							583.0,
+							166.0
+						],
+						"name": "@HBoxContainer@1620",
+						"rect": [
+							6.0,
+							1120.0,
+							708.0,
+							178.0
+						],
+						"type": "HBoxContainer",
+						"visible": true
+					}
+				],
+				"minimum": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1282",
+				"rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			}
+		},
+		"kind": "hero",
+		"selected_tab": 1
+	},
+	"native_render": true,
+	"requested": [
+		450,
+		800
+	],
+	"visible_controls": [
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "Home",
+			"path": "/root/MenuPolishPreview/Home",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "MenuBackground",
+			"path": "/root/MenuPolishPreview/Home/MenuBackground",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "ColorRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@923",
+			"path": "/root/MenuPolishPreview/Home/@Control@923",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@973",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				638.0,
+				726.0
+			],
+			"name": "@VBoxContainer@1475",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475",
+			"rect": [
+				10.0,
+				116.0,
+				700.0,
+				978.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				626.0,
+				620.0
+			],
+			"name": "@PanelContainer@1542",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542",
+			"rect": [
+				10.0,
+				116.0,
+				700.0,
+				620.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				586.0,
+				578.0
+			],
+			"name": "@VBoxContainer@1476",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476",
+			"rect": [
+				30.0,
+				134.0,
+				660.0,
+				578.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				248.0,
+				396.0
+			],
+			"name": "@HBoxContainer@1515",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515",
+			"rect": [
+				30.0,
+				134.0,
+				660.0,
+				396.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				396.0
+			],
+			"name": "@VBoxContainer@1501",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501",
+			"rect": [
+				30.0,
+				134.0,
+				124.0,
+				396.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				124.0
+			],
+			"name": "@Control@1484",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484",
+			"rect": [
+				30.0,
+				134.0,
+				124.0,
+				124.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1477",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484/@PanelContainer@1477",
+			"rect": [
+				30.0,
+				134.0,
+				124.0,
+				124.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1478",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484/@PanelContainer@1477/@Control@1478",
+			"rect": [
+				38.0,
+				144.0,
+				108.0,
+				102.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				104.160003662109,
+				104.160003662109
+			],
+			"name": "@TextureRect@1479",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484/@PanelContainer@1477/@Control@1478/@TextureRect@1479",
+			"rect": [
+				39.9199981689453,
+				150.360000610352,
+				104.160003662109,
+				104.160003662109
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				32.2400016784668,
+				32.2400016784668
+			],
+			"name": "@TextureRect@1480",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484/@TextureRect@1480",
+			"rect": [
+				35.0,
+				139.0,
+				32.2400016784668,
+				32.2400016784668
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				32.0,
+				27.0
+			],
+			"name": "@Label@1481",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484/@Label@1481",
+			"rect": [
+				77.120002746582,
+				138.0,
+				68.879997253418,
+				29.7599983215332
+			],
+			"text": "Lv.1",
+			"text_width": 32.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				37.2000007629395,
+				37.2000007629395
+			],
+			"name": "@TextureRect@1482",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484/@TextureRect@1482",
+			"rect": [
+				116.800003051758,
+				218.320007324219,
+				37.2000007629395,
+				37.2000045776367
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1483",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1484/@Button@1483",
+			"rect": [
+				30.0,
+				134.0,
+				124.0,
+				124.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				124.0
+			],
+			"name": "@Control@1492",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492",
+			"rect": [
+				30.0,
+				270.0,
+				124.0,
+				124.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1485",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492/@PanelContainer@1485",
+			"rect": [
+				30.0,
+				270.0,
+				124.0,
+				124.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1486",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492/@PanelContainer@1485/@Control@1486",
+			"rect": [
+				38.0,
+				280.0,
+				108.0,
+				102.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				104.160003662109,
+				104.160003662109
+			],
+			"name": "@TextureRect@1487",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492/@PanelContainer@1485/@Control@1486/@TextureRect@1487",
+			"rect": [
+				39.9199981689453,
+				286.359985351563,
+				104.160003662109,
+				104.160003662109
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				32.2400016784668,
+				32.2400016784668
+			],
+			"name": "@TextureRect@1488",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492/@TextureRect@1488",
+			"rect": [
+				35.0,
+				275.0,
+				32.2400016784668,
+				32.2400016784668
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				32.0,
+				27.0
+			],
+			"name": "@Label@1489",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492/@Label@1489",
+			"rect": [
+				77.120002746582,
+				274.0,
+				68.879997253418,
+				29.7599983215332
+			],
+			"text": "Lv.1",
+			"text_width": 32.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				37.2000007629395,
+				37.2000007629395
+			],
+			"name": "@TextureRect@1490",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492/@TextureRect@1490",
+			"rect": [
+				116.800003051758,
+				354.320007324219,
+				37.2000007629395,
+				37.2000045776367
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1491",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1492/@Button@1491",
+			"rect": [
+				30.0,
+				270.0,
+				124.0,
+				124.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				124.0
+			],
+			"name": "@Control@1500",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500",
+			"rect": [
+				30.0,
+				406.0,
+				124.0,
+				124.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1493",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500/@PanelContainer@1493",
+			"rect": [
+				30.0,
+				406.0,
+				124.0,
+				124.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1494",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500/@PanelContainer@1493/@Control@1494",
+			"rect": [
+				38.0,
+				416.0,
+				108.0,
+				102.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				104.160003662109,
+				104.160003662109
+			],
+			"name": "@TextureRect@1495",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500/@PanelContainer@1493/@Control@1494/@TextureRect@1495",
+			"rect": [
+				39.9199981689453,
+				422.359985351563,
+				104.160003662109,
+				104.160003662109
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				32.2400016784668,
+				32.2400016784668
+			],
+			"name": "@TextureRect@1496",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500/@TextureRect@1496",
+			"rect": [
+				35.0,
+				411.0,
+				32.2400016784668,
+				32.2400016784668
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				32.0,
+				27.0
+			],
+			"name": "@Label@1497",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500/@Label@1497",
+			"rect": [
+				77.120002746582,
+				410.0,
+				68.879997253418,
+				29.7599983215332
+			],
+			"text": "Lv.1",
+			"text_width": 32.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				37.2000007629395,
+				37.2000007629395
+			],
+			"name": "@TextureRect@1498",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500/@TextureRect@1498",
+			"rect": [
+				116.800003051758,
+				490.320007324219,
+				37.2000007629395,
+				37.2000045776367
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1499",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1501/@Control@1500/@Button@1499",
+			"rect": [
+				30.0,
+				406.0,
+				124.0,
+				124.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				396.0
+			],
+			"name": "@Control@1504",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@Control@1504",
+			"rect": [
+				154.0,
+				134.0,
+				412.0,
+				396.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				230.0,
+				92.0
+			],
+			"name": "@TextureRect@1502",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@Control@1504/@TextureRect@1502",
+			"rect": [
+				245.0,
+				432.0,
+				230.0,
+				92.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				240.0,
+				225.0
+			],
+			"name": "@TextureRect@1503",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@Control@1504/@TextureRect@1503",
+			"rect": [
+				240.0,
+				259.010467529297,
+				240.0,
+				225.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				396.0
+			],
+			"name": "@VBoxContainer@1514",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514",
+			"rect": [
+				566.0,
+				134.0,
+				124.0,
+				396.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				124.0
+			],
+			"name": "@PanelContainer@1507",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1507",
+			"rect": [
+				566.0,
+				134.0,
+				124.0,
+				124.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				62.0
+			],
+			"name": "@CenterContainer@1506",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1507/@CenterContainer@1506",
+			"rect": [
+				582.0,
+				150.0,
+				92.0,
+				92.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				62.0
+			],
+			"name": "@TextureRect@1505",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1507/@CenterContainer@1506/@TextureRect@1505",
+			"rect": [
+				597.0,
+				165.0,
+				62.0,
+				62.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				124.0
+			],
+			"name": "@PanelContainer@1510",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1510",
+			"rect": [
+				566.0,
+				270.0,
+				124.0,
+				124.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				62.0
+			],
+			"name": "@CenterContainer@1509",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1510/@CenterContainer@1509",
+			"rect": [
+				582.0,
+				286.0,
+				92.0,
+				92.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				62.0
+			],
+			"name": "@TextureRect@1508",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1510/@CenterContainer@1509/@TextureRect@1508",
+			"rect": [
+				597.0,
+				301.0,
+				62.0,
+				62.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				124.0,
+				124.0
+			],
+			"name": "@PanelContainer@1513",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1513",
+			"rect": [
+				566.0,
+				406.0,
+				124.0,
+				124.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				62.0
+			],
+			"name": "@CenterContainer@1512",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1513/@CenterContainer@1512",
+			"rect": [
+				582.0,
+				422.0,
+				92.0,
+				92.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				62.0
+			],
+			"name": "@TextureRect@1511",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1515/@VBoxContainer@1514/@PanelContainer@1513/@CenterContainer@1512/@TextureRect@1511",
+			"rect": [
+				597.0,
+				437.0,
+				62.0,
+				62.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				168.0,
+				52.0
+			],
+			"name": "@CenterContainer@1520",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@CenterContainer@1520",
+			"rect": [
+				30.0,
+				538.0,
+				660.0,
+				52.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				168.0,
+				52.0
+			],
+			"name": "@PanelContainer@1519",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@CenterContainer@1520/@PanelContainer@1519",
+			"rect": [
+				276.0,
+				538.0,
+				168.0,
+				52.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				40.0
+			],
+			"name": "@HBoxContainer@1518",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@CenterContainer@1520/@PanelContainer@1519/@HBoxContainer@1518",
+			"rect": [
+				306.0,
+				542.0,
+				108.0,
+				40.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				38.0,
+				38.0
+			],
+			"name": "@TextureRect@1516",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@CenterContainer@1520/@PanelContainer@1519/@HBoxContainer@1518/@TextureRect@1516",
+			"rect": [
+				306.0,
+				542.0,
+				38.0,
+				40.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 28,
+			"minimum": [
+				64.0,
+				40.0
+			],
+			"name": "@Label@1517",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@CenterContainer@1520/@PanelContainer@1519/@HBoxContainer@1518/@Label@1517",
+			"rect": [
+				350.0,
+				542.0,
+				64.0,
+				40.0
+			],
+			"text": "3.172",
+			"text_width": 64.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				586.0,
+				40.0
+			],
+			"name": "@HBoxContainer@1533",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533",
+			"rect": [
+				30.0,
+				598.0,
+				660.0,
+				40.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				190.0,
+				40.0
+			],
+			"name": "@PanelContainer@1524",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1524",
+			"rect": [
+				67.0,
+				598.0,
+				190.0,
+				40.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				92.0,
+				32.0
+			],
+			"name": "@HBoxContainer@1523",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1524/@HBoxContainer@1523",
+			"rect": [
+				67.0,
+				598.0,
+				190.0,
+				40.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				32.0,
+				32.0
+			],
+			"name": "@TextureRect@1521",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1524/@HBoxContainer@1523/@TextureRect@1521",
+			"rect": [
+				116.0,
+				598.0,
+				32.0,
+				40.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				54.0,
+				30.0
+			],
+			"name": "@Label@1522",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1524/@HBoxContainer@1523/@Label@1522",
+			"rect": [
+				154.0,
+				603.0,
+				54.0,
+				30.0
+			],
+			"text": "1.580",
+			"text_width": 54.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				190.0,
+				40.0
+			],
+			"name": "@PanelContainer@1528",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1528",
+			"rect": [
+				265.0,
+				598.0,
+				190.0,
+				40.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				72.0,
+				32.0
+			],
+			"name": "@HBoxContainer@1527",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1528/@HBoxContainer@1527",
+			"rect": [
+				265.0,
+				598.0,
+				190.0,
+				40.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				32.0,
+				32.0
+			],
+			"name": "@TextureRect@1525",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1528/@HBoxContainer@1527/@TextureRect@1525",
+			"rect": [
+				324.0,
+				598.0,
+				32.0,
+				40.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				34.0,
+				30.0
+			],
+			"name": "@Label@1526",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1528/@HBoxContainer@1527/@Label@1526",
+			"rect": [
+				362.0,
+				603.0,
+				34.0,
+				30.0
+			],
+			"text": "130",
+			"text_width": 34.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				190.0,
+				40.0
+			],
+			"name": "@PanelContainer@1532",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1532",
+			"rect": [
+				463.0,
+				598.0,
+				190.0,
+				40.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				32.0
+			],
+			"name": "@HBoxContainer@1531",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1532/@HBoxContainer@1531",
+			"rect": [
+				463.0,
+				598.0,
+				190.0,
+				40.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				32.0,
+				32.0
+			],
+			"name": "@TextureRect@1529",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1532/@HBoxContainer@1531/@TextureRect@1529",
+			"rect": [
+				526.0,
+				598.0,
+				32.0,
+				40.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 21,
+			"minimum": [
+				26.0,
+				30.0
+			],
+			"name": "@Label@1530",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@HBoxContainer@1533/@PanelContainer@1532/@HBoxContainer@1531/@Label@1530",
+			"rect": [
+				564.0,
+				603.0,
+				26.0,
+				30.0
+			],
+			"text": "46",
+			"text_width": 26.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				346.0,
+				66.0
+			],
+			"name": "@PanelContainer@1541",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541",
+			"rect": [
+				30.0,
+				646.0,
+				660.0,
+				66.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				314.0,
+				34.0
+			],
+			"name": "@HBoxContainer@1540",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541/@HBoxContainer@1540",
+			"rect": [
+				46.0,
+				662.0,
+				628.0,
+				34.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				75.0,
+				24.0
+			],
+			"name": "@Label@1534",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541/@HBoxContainer@1540/@Label@1534",
+			"rect": [
+				46.0,
+				667.0,
+				75.0,
+				24.0
+			],
+			"text": "Hợp lính",
+			"text_width": 75.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				34.0,
+				34.0
+			],
+			"name": "@TextureRect@1535",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541/@HBoxContainer@1540/@TextureRect@1535",
+			"rect": [
+				129.0,
+				662.0,
+				34.0,
+				34.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				34.0,
+				34.0
+			],
+			"name": "@TextureRect@1536",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541/@HBoxContainer@1540/@TextureRect@1536",
+			"rect": [
+				171.0,
+				662.0,
+				34.0,
+				34.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				6.0,
+				27.0
+			],
+			"name": "@Label@1537",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541/@HBoxContainer@1540/@Label@1537",
+			"rect": [
+				213.0,
+				665.0,
+				6.0,
+				27.0
+			],
+			"text": "·",
+			"text_width": 6.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1538",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541/@HBoxContainer@1540/@TextureRect@1538",
+			"rect": [
+				227.0,
+				662.0,
+				30.0,
+				34.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				95.0,
+				24.0
+			],
+			"name": "@Label@1539",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@PanelContainer@1542/@VBoxContainer@1476/@PanelContainer@1541/@HBoxContainer@1540/@Label@1539",
+			"rect": [
+				265.0,
+				667.0,
+				95.0,
+				24.0
+			],
+			"text": "Chém xoáy",
+			"text_width": 95.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				638.0,
+				98.0
+			],
+			"name": "@VBoxContainer@1594",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594",
+			"rect": [
+				10.0,
+				744.0,
+				700.0,
+				350.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				264.0,
+				90.0
+			],
+			"name": "@PanelContainer@1546",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@PanelContainer@1546",
+			"rect": [
+				10.0,
+				744.0,
+				700.0,
+				90.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				208.0,
+				34.0
+			],
+			"name": "@HBoxContainer@1545",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@PanelContainer@1546/@HBoxContainer@1545",
+			"rect": [
+				38.0,
+				768.0,
+				644.0,
+				34.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				141.0,
+				34.0
+			],
+			"name": "@Label@1543",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@PanelContainer@1546/@HBoxContainer@1545/@Label@1543",
+			"rect": [
+				38.0,
+				768.0,
+				577.0,
+				34.0
+			],
+			"text": "Túi trang bị",
+			"text_width": 141.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				57.0,
+				27.0
+			],
+			"name": "@Label@1544",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@PanelContainer@1546/@HBoxContainer@1545/@Label@1544",
+			"rect": [
+				625.0,
+				771.0,
+				57.0,
+				27.0
+			],
+			"text": "6 món",
+			"text_width": 57.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				638.0,
+				0.0
+			],
+			"name": "@ScrollContainer@1593",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593",
+			"rect": [
+				10.0,
+				842.0,
+				700.0,
+				252.0
+			],
+			"type": "ScrollContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				638.0,
+				248.0
+			],
+			"name": "@CenterContainer@1592",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592",
+			"rect": [
+				10.0,
+				842.0,
+				700.0,
+				248.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				638.0,
+				248.0
+			],
+			"name": "@GridContainer@1591",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591",
+			"rect": [
+				41.0,
+				842.0,
+				638.0,
+				248.0
+			],
+			"type": "GridContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				118.0,
+				118.0
+			],
+			"name": "@Control@1555",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1555",
+			"rect": [
+				41.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1549",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1555/@PanelContainer@1549",
+			"rect": [
+				41.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1550",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1555/@PanelContainer@1549/@Control@1550",
+			"rect": [
+				49.0,
+				852.0,
+				102.0,
+				96.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				99.120002746582,
+				99.120002746582
+			],
+			"name": "@TextureRect@1551",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1555/@PanelContainer@1549/@Control@1550/@TextureRect@1551",
+			"rect": [
+				50.439998626709,
+				857.52001953125,
+				99.120002746582,
+				99.120002746582
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.6800003051758,
+				30.6800003051758
+			],
+			"name": "@TextureRect@1552",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1555/@TextureRect@1552",
+			"rect": [
+				46.0,
+				847.0,
+				30.6800003051758,
+				30.6800003051758
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				30.0,
+				24.0
+			],
+			"name": "@Label@1553",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1555/@Label@1553",
+			"rect": [
+				85.8399963378906,
+				846.0,
+				65.1600036621094,
+				28.3199996948242
+			],
+			"text": "Lv.1",
+			"text_width": 30.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1554",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1555/@Button@1554",
+			"rect": [
+				41.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				118.0,
+				118.0
+			],
+			"name": "@Control@1562",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1562",
+			"rect": [
+				171.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1556",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1562/@PanelContainer@1556",
+			"rect": [
+				171.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1557",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1562/@PanelContainer@1556/@Control@1557",
+			"rect": [
+				179.0,
+				852.0,
+				102.0,
+				96.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				99.120002746582,
+				99.120002746582
+			],
+			"name": "@TextureRect@1558",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1562/@PanelContainer@1556/@Control@1557/@TextureRect@1558",
+			"rect": [
+				180.440002441406,
+				857.52001953125,
+				99.120002746582,
+				99.120002746582
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.6800003051758,
+				30.6800003051758
+			],
+			"name": "@TextureRect@1559",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1562/@TextureRect@1559",
+			"rect": [
+				176.0,
+				847.0,
+				30.6800003051758,
+				30.6800003051758
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				30.0,
+				24.0
+			],
+			"name": "@Label@1560",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1562/@Label@1560",
+			"rect": [
+				215.839996337891,
+				846.0,
+				65.1600036621094,
+				28.3199996948242
+			],
+			"text": "Lv.1",
+			"text_width": 30.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1561",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1562/@Button@1561",
+			"rect": [
+				171.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				118.0,
+				118.0
+			],
+			"name": "@Control@1569",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1569",
+			"rect": [
+				301.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1563",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1569/@PanelContainer@1563",
+			"rect": [
+				301.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1564",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1569/@PanelContainer@1563/@Control@1564",
+			"rect": [
+				309.0,
+				852.0,
+				102.0,
+				96.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				99.120002746582,
+				99.120002746582
+			],
+			"name": "@TextureRect@1565",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1569/@PanelContainer@1563/@Control@1564/@TextureRect@1565",
+			"rect": [
+				310.440002441406,
+				857.52001953125,
+				99.120002746582,
+				99.120002746582
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.6800003051758,
+				30.6800003051758
+			],
+			"name": "@TextureRect@1566",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1569/@TextureRect@1566",
+			"rect": [
+				306.0,
+				847.0,
+				30.6800003051758,
+				30.6800003051758
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				30.0,
+				24.0
+			],
+			"name": "@Label@1567",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1569/@Label@1567",
+			"rect": [
+				345.839996337891,
+				846.0,
+				65.1600036621094,
+				28.3199996948242
+			],
+			"text": "Lv.1",
+			"text_width": 30.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1568",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1569/@Button@1568",
+			"rect": [
+				301.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				118.0,
+				118.0
+			],
+			"name": "@Control@1576",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1576",
+			"rect": [
+				431.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1570",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1576/@PanelContainer@1570",
+			"rect": [
+				431.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1571",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1576/@PanelContainer@1570/@Control@1571",
+			"rect": [
+				439.0,
+				852.0,
+				102.0,
+				96.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				99.120002746582,
+				99.120002746582
+			],
+			"name": "@TextureRect@1572",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1576/@PanelContainer@1570/@Control@1571/@TextureRect@1572",
+			"rect": [
+				440.440002441406,
+				857.52001953125,
+				99.120002746582,
+				99.120002746582
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.6800003051758,
+				30.6800003051758
+			],
+			"name": "@TextureRect@1573",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1576/@TextureRect@1573",
+			"rect": [
+				436.0,
+				847.0,
+				30.6800003051758,
+				30.6800003051758
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				30.0,
+				24.0
+			],
+			"name": "@Label@1574",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1576/@Label@1574",
+			"rect": [
+				475.839996337891,
+				846.0,
+				65.1600036621094,
+				28.3199996948242
+			],
+			"text": "Lv.1",
+			"text_width": 30.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1575",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1576/@Button@1575",
+			"rect": [
+				431.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				118.0,
+				118.0
+			],
+			"name": "@Control@1583",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1583",
+			"rect": [
+				561.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1577",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1583/@PanelContainer@1577",
+			"rect": [
+				561.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1578",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1583/@PanelContainer@1577/@Control@1578",
+			"rect": [
+				569.0,
+				852.0,
+				102.0,
+				96.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				99.120002746582,
+				99.120002746582
+			],
+			"name": "@TextureRect@1579",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1583/@PanelContainer@1577/@Control@1578/@TextureRect@1579",
+			"rect": [
+				570.440002441406,
+				857.52001953125,
+				99.120002746582,
+				99.120002746582
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.6800003051758,
+				30.6800003051758
+			],
+			"name": "@TextureRect@1580",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1583/@TextureRect@1580",
+			"rect": [
+				566.0,
+				847.0,
+				30.6800003051758,
+				30.6800003051758
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				30.0,
+				24.0
+			],
+			"name": "@Label@1581",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1583/@Label@1581",
+			"rect": [
+				605.839965820313,
+				846.0,
+				65.1600036621094,
+				28.3199996948242
+			],
+			"text": "Lv.1",
+			"text_width": 30.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1582",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1583/@Button@1582",
+			"rect": [
+				561.0,
+				842.0,
+				118.0,
+				118.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				118.0,
+				118.0
+			],
+			"name": "@Control@1590",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1590",
+			"rect": [
+				41.0,
+				972.0,
+				118.0,
+				118.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				16.0,
+				22.0
+			],
+			"name": "@PanelContainer@1584",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1590/@PanelContainer@1584",
+			"rect": [
+				41.0,
+				972.0,
+				118.0,
+				118.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1585",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1590/@PanelContainer@1584/@Control@1585",
+			"rect": [
+				49.0,
+				982.0,
+				102.0,
+				96.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				99.120002746582,
+				99.120002746582
+			],
+			"name": "@TextureRect@1586",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1590/@PanelContainer@1584/@Control@1585/@TextureRect@1586",
+			"rect": [
+				50.439998626709,
+				987.52001953125,
+				99.120002746582,
+				99.120002746582
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.6800003051758,
+				30.6800003051758
+			],
+			"name": "@TextureRect@1587",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1590/@TextureRect@1587",
+			"rect": [
+				46.0,
+				977.0,
+				30.6800003051758,
+				30.6800003051758
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"font_size": 17,
+			"minimum": [
+				30.0,
+				24.0
+			],
+			"name": "@Label@1588",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1590/@Label@1588",
+			"rect": [
+				85.8399963378906,
+				976.0,
+				65.1600036621094,
+				28.3199996948242
+			],
+			"text": "Lv.1",
+			"text_width": 30.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1589",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@973/@VBoxContainer@1475/@VBoxContainer@1594/@ScrollContainer@1593/@CenterContainer@1592/@GridContainer@1591/@Control@1590/@Button@1589",
+			"rect": [
+				41.0,
+				972.0,
+				118.0,
+				118.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				406.0,
+				112.0
+			],
+			"name": "Header",
+			"path": "/root/MenuPolishPreview/Home/Header",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				112.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				378.0,
+				84.0
+			],
+			"name": "HeaderRow",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow",
+			"rect": [
+				14.0,
+				12.0,
+				692.0,
+				84.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				84.0
+			],
+			"name": "ProfileButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				84.0
+			],
+			"name": "AvatarFrame",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				50.0
+			],
+			"name": "@CenterContainer@1278",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame/@CenterContainer@1278",
+			"rect": [
+				22.0,
+				20.0,
+				64.0,
+				64.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				50.0
+			],
+			"name": "@TextureRect@1277",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame/@CenterContainer@1278/@TextureRect@1277",
+			"rect": [
+				23.0,
+				27.0,
+				62.0,
+				50.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1279",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/@Button@1279",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				52.0
+			],
+			"name": "GoldButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				52.0
+			],
+			"name": "CurrencyGold",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "CurrencyPill",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				1.0,
+				27.0
+			],
+			"name": "CurrencyValue",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyValue",
+			"rect": [
+				150.0,
+				36.0,
+				121.0,
+				36.0
+			],
+			"text": "2.400",
+			"text_width": 51.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "CurrencyPlus",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPlus",
+			"rect": [
+				277.0,
+				40.0,
+				28.0,
+				28.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				48.0,
+				48.0
+			],
+			"name": "CurrencyIcon",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyIcon",
+			"rect": [
+				104.0,
+				30.0,
+				48.0,
+				48.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1280",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/@Button@1280",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				52.0
+			],
+			"name": "GemsButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				52.0
+			],
+			"name": "CurrencyGems",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "CurrencyPill",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				1.0,
+				27.0
+			],
+			"name": "CurrencyValue",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyValue",
+			"rect": [
+				363.0,
+				36.0,
+				121.0,
+				36.0
+			],
+			"text": "260",
+			"text_width": 33.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "CurrencyPlus",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPlus",
+			"rect": [
+				490.0,
+				40.0,
+				28.0,
+				28.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				48.0,
+				48.0
+			],
+			"name": "CurrencyIcon",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyIcon",
+			"rect": [
+				317.0,
+				30.0,
+				48.0,
+				48.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1281",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/@Button@1281",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				174.0,
+				84.0
+			],
+			"name": "HeaderTools",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools",
+			"rect": [
+				532.0,
+				12.0,
+				174.0,
+				84.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				174.0,
+				60.0
+			],
+			"name": "HeaderActions",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions",
+			"rect": [
+				532.0,
+				24.0,
+				174.0,
+				60.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 16,
+			"minimum": [
+				100.0,
+				60.0
+			],
+			"name": "AdminButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions/AdminButton",
+			"rect": [
+				532.0,
+				24.0,
+				100.0,
+				60.0
+			],
+			"text": "ADMIN",
+			"text_width": 55.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				68.0,
+				60.0
+			],
+			"name": "SettingsButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions/SettingsButton",
+			"rect": [
+				638.0,
+				24.0,
+				68.0,
+				60.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1282",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282",
+			"rect": [
+				0.0,
+				1120.0,
+				720.0,
+				160.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				583.0,
+				166.0
+			],
+			"name": "@HBoxContainer@1620",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620",
+			"rect": [
+				6.0,
+				1120.0,
+				708.0,
+				178.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1599",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1599",
+			"rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1597",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1599/@PanelContainer@1597",
+			"rect": [
+				9.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1596",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1599/@PanelContainer@1597/@CenterContainer@1596",
+			"rect": [
+				13.0,
+				1146.0,
+				119.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1595",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1599/@PanelContainer@1597/@CenterContainer@1596/@TextureRect@1595",
+			"rect": [
+				22.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1598",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1599/@PanelContainer@1597/@CenterContainer@1596/@TextureRect@1595/@TextureRect@1598",
+			"rect": [
+				108.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1621",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1599/@Button@1621",
+			"rect": [
+				9.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				127.0,
+				166.0
+			],
+			"name": "@PanelContainer@1605",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605",
+			"rect": [
+				139.0,
+				1120.0,
+				174.0,
+				178.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				127.0,
+				160.0
+			],
+			"name": "@VBoxContainer@1600",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@VBoxContainer@1600",
+			"rect": [
+				139.0,
+				1126.0,
+				174.0,
+				172.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				100.0
+			],
+			"name": "@Control@1601",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@VBoxContainer@1600/@Control@1601",
+			"rect": [
+				139.0,
+				1138.0,
+				174.0,
+				100.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				94.0,
+				94.0
+			],
+			"name": "@TextureRect@1602",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@VBoxContainer@1600/@Control@1601/@TextureRect@1602",
+			"rect": [
+				179.0,
+				1134.0,
+				94.0,
+				94.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				127.0,
+				60.0
+			],
+			"name": "SelectedNavFooter",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@VBoxContainer@1600/SelectedNavFooter",
+			"rect": [
+				139.0,
+				1238.0,
+				174.0,
+				60.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				119.0,
+				58.0
+			],
+			"name": "@VBoxContainer@1603",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@VBoxContainer@1600/SelectedNavFooter/@VBoxContainer@1603",
+			"rect": [
+				143.0,
+				1240.0,
+				166.0,
+				58.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				119.0,
+				34.0
+			],
+			"name": "SelectedNavCaption",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@VBoxContainer@1600/SelectedNavFooter/@VBoxContainer@1603/SelectedNavCaption",
+			"rect": [
+				143.0,
+				1240.0,
+				166.0,
+				34.0
+			],
+			"text": "Anh hùng",
+			"text_width": 119.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				24.0
+			],
+			"name": "@Control@1604",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@VBoxContainer@1600/SelectedNavFooter/@VBoxContainer@1603/@Control@1604",
+			"rect": [
+				143.0,
+				1274.0,
+				166.0,
+				24.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1622",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@PanelContainer@1605/@Button@1622",
+			"rect": [
+				139.0,
+				1126.0,
+				174.0,
+				172.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1610",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1610",
+			"rect": [
+				313.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1608",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1610/@PanelContainer@1608",
+			"rect": [
+				316.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1607",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1610/@PanelContainer@1608/@CenterContainer@1607",
+			"rect": [
+				320.0,
+				1146.0,
+				119.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1606",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1610/@PanelContainer@1608/@CenterContainer@1607/@TextureRect@1606",
+			"rect": [
+				329.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1609",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1610/@PanelContainer@1608/@CenterContainer@1607/@TextureRect@1606/@TextureRect@1609",
+			"rect": [
+				415.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1623",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1610/@Button@1623",
+			"rect": [
+				316.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1615",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1615",
+			"rect": [
+				446.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1613",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1615/@PanelContainer@1613",
+			"rect": [
+				449.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1612",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1615/@PanelContainer@1613/@CenterContainer@1612",
+			"rect": [
+				453.0,
+				1146.0,
+				120.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1611",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1615/@PanelContainer@1613/@CenterContainer@1612/@TextureRect@1611",
+			"rect": [
+				463.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1614",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1615/@PanelContainer@1613/@CenterContainer@1612/@TextureRect@1611/@TextureRect@1614",
+			"rect": [
+				549.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1624",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1615/@Button@1624",
+			"rect": [
+				449.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1619",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1619",
+			"rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1618",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1619/@PanelContainer@1618",
+			"rect": [
+				583.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1617",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1619/@PanelContainer@1618/@CenterContainer@1617",
+			"rect": [
+				587.0,
+				1146.0,
+				120.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1616",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1619/@PanelContainer@1618/@CenterContainer@1617/@TextureRect@1616",
+			"rect": [
+				597.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1625",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1620/@MarginContainer@1619/@Button@1625",
+			"rect": [
+				583.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		}
+	]
+}

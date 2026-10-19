@@ -1,0 +1,51 @@
+{
+	"captures": [
+		{
+			"file": "shop_without_title_450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "troops_current_450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "troops_v1_450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "troops_v2_top_450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "troops_v2_bottom_450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "troops_v2_bottom_360x640.png",
+			"size": [
+				360,
+				640
+			]
+		}
+	],
+	"persist": false,
+	"proposal_in_ram_only": true,
+	"skill": "casual-weapon-design",
+	"status": "awaiting_review",
+	"weapons": 16
+}

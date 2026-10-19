@@ -1,0 +1,251 @@
+{
+	"actual": [
+		720,
+		1280
+	],
+	"bar": {
+		"design_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"minimum_size": [
+			569.0,
+			166.0
+		],
+		"name": "@HBoxContainer@1252",
+		"path": "@Control@546/@HBoxContainer@1252",
+		"render_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"type": "HBoxContainer",
+		"visible": true
+	},
+	"caption": {
+		"design_rect": [
+			544.0,
+			1228.0,
+			166.0,
+			34.0
+		],
+		"fits_width": true,
+		"font_color": "583f21ff",
+		"font_outline_color": "2e1c1cff",
+		"font_size": 24,
+		"minimum_size": [
+			105.0,
+			34.0
+		],
+		"name": "SelectedNavCaption",
+		"outline_size": 0,
+		"path": "@Control@546/@HBoxContainer@1252/@PanelContainer@1251/@VBoxContainer@1246/SelectedNavFooter/@VBoxContainer@1249/SelectedNavCaption",
+		"render_rect": [
+			544.0,
+			1228.0,
+			166.0,
+			34.0
+		],
+		"text": "Triệu hồi",
+		"text_width": 105.0,
+		"type": "Label",
+		"visible": true
+	},
+	"cells": [
+		{
+			"design_rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1230",
+			"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1230",
+			"render_rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				139.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1235",
+			"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1235",
+			"render_rect": [
+				139.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				273.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1240",
+			"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1240",
+			"render_rect": [
+				273.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				406.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1245",
+			"path": "@Control@546/@HBoxContainer@1252/@MarginContainer@1245",
+			"render_rect": [
+				406.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				540.0,
+				1120.0,
+				174.0,
+				178.0
+			],
+			"minimum_size": [
+				113.0,
+				166.0
+			],
+			"name": "@PanelContainer@1251",
+			"path": "@Control@546/@HBoxContainer@1252/@PanelContainer@1251",
+			"render_rect": [
+				540.0,
+				1120.0,
+				174.0,
+				178.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		}
+	],
+	"file": "summon_720x1280.png",
+	"footer": {
+		"design_rect": [
+			540.0,
+			1226.0,
+			174.0,
+			72.0
+		],
+		"minimum_size": [
+			113.0,
+			72.0
+		],
+		"name": "SelectedNavFooter",
+		"path": "@Control@546/@HBoxContainer@1252/@PanelContainer@1251/@VBoxContainer@1246/SelectedNavFooter",
+		"render_rect": [
+			540.0,
+			1226.0,
+			174.0,
+			72.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"index": 4,
+	"nav": "summon_720x1280_nav.png",
+	"nav_holder": {
+		"design_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"minimum_size": [
+			0.0,
+			0.0
+		],
+		"name": "@Control@546",
+		"path": "@Control@546",
+		"render_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"type": "Control",
+		"visible": true
+	},
+	"render_scale": [
+		1.0,
+		1.0
+	],
+	"requested": [
+		720,
+		1280
+	],
+	"selected_cell": {
+		"design_rect": [
+			540.0,
+			1120.0,
+			174.0,
+			178.0
+		],
+		"minimum_size": [
+			113.0,
+			166.0
+		],
+		"name": "@PanelContainer@1251",
+		"path": "@Control@546/@HBoxContainer@1252/@PanelContainer@1251",
+		"render_rect": [
+			540.0,
+			1120.0,
+			174.0,
+			178.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"tab": "summon",
+	"window": [
+		720,
+		1280
+	]
+}

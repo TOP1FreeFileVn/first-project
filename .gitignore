@@ -16,5 +16,14 @@ debug.log
 
 # Reference screenshots of commercial games (copyright) - kept local only
 docs/asset_reference/
+# Same local-only policy for commercial art studies; keep notes and source IDs.
+docs/design/2026-10-19/weapon-redesign/reference-study/**/*.png
+docs/design/2026-10-19/weapon-redesign/reference-study/**/*.png.import
+docs/design/2026-10-20/stroke-reference-study/*.png
+docs/design/2026-10-20/stroke-reference-study/*.png.import
 # Godot editor profiles/caches captured by review tools
 docs/**/Godot/
+
+# Python runtime caches
+__pycache__/
+*.py[cod]

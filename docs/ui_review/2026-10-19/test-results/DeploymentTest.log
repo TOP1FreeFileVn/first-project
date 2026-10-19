@@ -33,3 +33,5 @@ PASS: movement bound prevents drift onto the gear board
 PASS: enemy attacker stays above the gear board
 PASS: enemy can damage the castle from the new movement boundary
 DeploymentTest: 29 checks, 0 failed
+WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)

@@ -1,0 +1,18 @@
+{
+  "fileKey": "wMtwWaYIiKUchUdq5YdTm5",
+  "pageId": "3539:2",
+  "rootId": "3606:2",
+  "url": "https://www.figma.com/design/wMtwWaYIiKUchUdq5YdTm5?node-id=3606-2",
+  "position": [6619, 0],
+  "size": [1120, 854],
+  "weaponNode": "3604:2",
+  "heldUnitNode": "3604:3",
+  "nativeSizePreviewNode": "3606:12",
+  "weaponImageHash": "68742cfafe2b4dfad86bbc93b8d7b55417f0d93b",
+  "heldUnitImageHash": "a1f7cde2300de3d5b3f39498b0751ab659933ffb",
+  "font": "Paytone One Regular",
+  "fontAssertion": true,
+  "visualValidation": "Passed live Plugin API screenshot at 1120x854 after correcting fixed text heights; REST screenshot returned stale pre-fix pixels",
+  "status": "awaiting_user_review",
+  "production_changed": false
+}

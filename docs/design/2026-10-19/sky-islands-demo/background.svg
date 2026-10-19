@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#91b5cf"/>
+      <stop offset="0.53" stop-color="#accbd5"/>
+      <stop offset="1" stop-color="#bed7d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="720" height="1280" fill="url(#sky)"/>
+
+  <!-- Distant cloud layer: broad, rounded shapes with a quiet middle. -->
+  <g fill="#edf1e5" opacity="0.38">
+    <path d="M-61 210 C-69 192 -54 174 -34 176 C-33 155 -10 141 11 148 C25 119 68 122 82 151 C109 139 139 155 140 180 C165 175 186 190 184 211 C180 222 163 226 144 226 H-37 C-50 226 -59 220 -61 210Z"/>
+    <path d="M491 151 C485 136 496 123 513 123 C515 101 539 90 560 102 C572 75 611 78 624 104 C646 98 667 112 668 131 C686 129 703 139 705 153 C703 167 690 172 672 172 H518 C504 172 493 165 491 151Z"/>
+    <path d="M612 309 C608 297 618 285 633 285 C638 264 665 260 681 276 C697 264 722 274 724 291 C742 289 756 297 755 311 C751 322 740 326 724 326 H637 C622 326 613 319 612 309Z" opacity="0.57"/>
+  </g>
+
+  <!-- Far islands share the stage's flat grass/stone shapes, with atmospheric colours. -->
+  <g transform="translate(612 553) scale(0.65)" opacity="0.62" stroke="#829fa6" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2 42 L88 30 L160 50 L140 77 L109 90 L97 115 L77 99 L57 103 L33 78 L10 66Z" fill="#98b0b8"/>
+    <path d="M88 48 L98 68 L90 99 L97 115 L109 90 L140 77 L160 50Z" fill="#88a4b1" stroke="none"/>
+    <path d="M2 42 L67 18 Q78 14 89 18 L160 50 L93 74 Q82 77 73 73Z" fill="#a8c6b7"/>
+    <path d="M2 42 L73 67 Q83 71 94 67 L160 45 L160 50 L93 74 Q82 77 73 73 L2 47Z" fill="#93b6a8" stroke="none"/>
+    <path d="M106 35 V12" fill="none"/>
+    <path d="M87 15 C82 8 88 -2 96 -2 C97 -15 115 -18 121 -5 C136 -7 143 9 132 17 Q111 26 87 15Z" fill="#95b9ad"/>
+    <path d="M42 32 Q42 21 52 21 Q58 14 66 21 Q78 19 78 31" fill="#a0bfb0" stroke="none"/>
+  </g>
+  <g transform="translate(-31 603) scale(0.96)" opacity="0.59" stroke="#87a5ac" stroke-width="2.7" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M2 38 L69 24 L144 41 L127 66 L105 73 L85 103 L67 85 L48 89 L28 64 L9 58Z" fill="#9bb5bb"/>
+    <path d="M81 54 L85 103 L105 73 L127 66 L144 41Z" fill="#8fadb6" stroke="none"/>
+    <path d="M2 38 L61 15 Q70 12 79 15 L144 41 L84 65 Q74 69 65 65Z" fill="#adc9ba"/>
+    <path d="M2 38 L66 59 Q76 63 85 59 L144 36 L144 41 L84 65 Q74 69 65 65 L2 44Z" fill="#98b9ad" stroke="none"/>
+    <path d="M58 32 V7" fill="none"/>
+    <path d="M37 10 C29 1 39 -12 49 -9 C53 -25 74 -23 79 -9 C91 -10 99 3 92 13 Q69 24 37 10Z" fill="#9bbdaf"/>
+    <path d="M96 37 Q96 27 105 26 Q111 18 120 26 Q131 24 133 35" fill="#a0c0b1" stroke="none"/>
+  </g>
+
+  <!-- Mid clouds frame the foreground island rather than crossing its silhouette. -->
+  <g fill="#e7eee2" opacity="0.39">
+    <path d="M-92 773 C-92 751 -72 739 -50 744 C-45 718 -17 703 9 714 C21 679 68 675 87 710 C113 698 145 715 146 741 C171 738 196 753 197 773 C193 790 178 796 153 796 H-62 C-80 796 -91 787 -92 773Z"/>
+    <path d="M581 680 C575 662 590 649 607 649 C609 623 639 607 662 621 C677 597 715 604 723 631 C745 626 766 643 765 663 C789 663 801 677 795 690 Q790 704 768 705 H610 C592 705 581 696 581 680Z" opacity="0.78"/>
+    <path d="M611 912 C610 893 626 880 645 883 C649 854 683 841 706 858 C723 829 765 838 773 869 C800 861 825 877 827 900 C850 900 860 913 855 926 C849 940 833 943 813 943 H641 C622 943 612 932 611 912Z" opacity="0.72"/>
+  </g>
+
+  <!-- A tiny distant islet makes the lower empty area part of the same world. -->
+  <g transform="translate(538 1044) scale(0.58)" opacity="0.40" stroke="#8eaaa9" stroke-width="2.8" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M0 20 L57 7 L115 26 L93 51 L77 57 L65 77 L48 61 L28 54 L13 35Z" fill="#a2b9b5"/>
+    <path d="M60 32 L65 77 L77 57 L93 51 L115 26Z" fill="#93aeaf" stroke="none"/>
+    <path d="M0 20 L48 0 Q57 -3 65 0 L115 26 L65 43 Q57 46 49 42Z" fill="#b2ccbb"/>
+    <path d="M55 15 V-6" fill="none"/>
+    <path d="M36 -3 C32 -12 40 -21 48 -19 C51 -33 68 -33 73 -20 C86 -21 92 -7 84 0 Q62 8 36 -3Z" fill="#a5c3b4"/>
+  </g>
+
+  <g fill="#e9eee0" opacity="0.34">
+    <path d="M-95 1152 C-102 1134 -86 1118 -65 1120 C-63 1089 -28 1074 -3 1089 C13 1055 59 1058 72 1092 C100 1083 128 1101 129 1127 C157 1123 179 1136 179 1156 Q175 1178 145 1178 H-62 Q-89 1178 -95 1152Z"/>
+    <path d="M287 1252 C278 1234 293 1214 316 1217 C319 1192 348 1179 368 1193 C383 1165 422 1168 433 1198 C461 1189 488 1207 488 1230 C509 1228 526 1240 526 1254 Q522 1273 496 1273 H317 Q295 1273 287 1252Z" opacity="0.7"/>
+  </g>
+</svg>

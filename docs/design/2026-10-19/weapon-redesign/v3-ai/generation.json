@@ -1,0 +1,47 @@
+{
+  "status": "rejected_style_and_stroke_experiment",
+  "model": "gpt-image-2.5-sunburst",
+  "generation_file": "2uKzqvXeOSPQqfaow6s7TU",
+  "destination_file": "wMtwWaYIiKUchUdq5YdTm5",
+  "destination_page": "3539:2",
+  "size": [
+    1024,
+    1024
+  ],
+  "items": [
+    {
+      "id": "kiem",
+      "name": "Kiếm",
+      "prompt": "Create ONE polished 2D hand-drawn casual mobile game weapon asset: a cheerful adventurer cat's SHORT SWORD. This is equipment for an existing game of very plump, soft bun-shaped cartoon cats with dot eyes, warm cream/ginger coats, flat silver kettle helmets, and thick rounded dark-brown outlines.\n\nArt direction: charming confident illustration, playful handmade forged construction, bold appealing silhouette, clean broad opaque flat color areas, soft rounded joins and corners. Use one consistent warm brown contour #583f21, approximately 4.5 percent of object height. Cool pale steel #d6e0e3, warm honey brass #e6b358, warm wood/leather #b77d51, a restrained coral cloth wrap #df786a. Render as flat illustrated sprite art, no gradients, no gloss, no lighting effects, no cast shadow, no 3D bevels, no photoreal texture. Rich character comes from the shape and craftsmanship rather than extra detail.\n\nDesign: a clearly straight double-edged short sword, broad strong tapered blade ending in a definite point, visibly straight central blade axis; short comfortable chunky wrapped grip; friendly curved brass crossguard with two small upward swept ends; small simple brass pommel. The metal blade is about twice as long as the handle, with one broad flat steel cutting-edge region and at most one large simple engraved notch. The blade must read as a SWORD, not a leaf, shovel or curved dao. An intentional slightly asymmetrical hand-crafted silhouette, broad open fill areas, restrained attractive shape rhythm. No mascot face, cat head, paw-print stamps or extra floating decorations.\n\nComposition: isolated single whole sword on a perfectly uniform pure white #ffffff background for easy sprite extraction; diagonal with grip bottom left and tip top right; object centered, occupies roughly 75 percent of square canvas, generous clear margin all sides, nothing clipped. No character or hand, no card frame, no scenery, no text, no watermark, no checkerboard. Must remain recognizable at 48 pixels and visually belong beside flat cat sprites.",
+      "node_id": "1:2"
+    },
+    {
+      "id": "riu",
+      "name": "Rìu",
+      "prompt": "Asset type: isolated 2D weapon sprite for a casual mobile game of plump cartoon cat defenders.\nStyle: simple confident hand-drawn FLAT cutout illustration with playful chunky proportions and warm dark-brown #583f21 rounded contours. Broad solid opaque color shapes. Every individual color region is uniform, absolutely no soft lighting, gradients, shiny highlights, glossy reflections, texture or cast shadows. All functional parts have clear clean outlines; interior marks are sparse and bold. Match cats with flat ginger/cream fur, dot eyes and broad brown outlines, flat silver helmets and plain colored clothing. This is cute friendly medieval adventure equipment, with convincing but simplified handmade construction.\nPalette: pale blue-grey steel #d6e0e3; steel edge #8b9fa8; honey brass #e6b358; chestnut wood #b77d51; brown leather; at most one coral or turquoise accent.\nComposition: ONE whole isolated object, clean side/profile view, optically centered, roughly 75% of a square canvas. Generous padding, full tip and grip visible. Perfectly uniform pure white background for extraction. No cat, hands, face, paw print, mascot head, scenery, UI card, text, labels, watermark, particles or extra floating ornaments. At 48 pixels the shape and grip must remain clear.\nSubject: a sturdy single-bladed adventurer HATCHET. Broad softly squared steel cutting head with a sloping top, convex sharpened cutting face and short stepped heel below, a large rounded brass eye attaching it to a gently bowed thick wooden shaft, short comfortable wrapped grip. One visible broad metal edge strip, one simple rivet. Distinct hand-crafted asymmetry and appealing balance, genuinely an axe rather than a crescent sword. Shaft runs diagonally lower left to upper right; blade projects toward the upper right. Keep the handle about the height of the head, not a long thin stick.",
+      "node_id": "2:2"
+    },
+    {
+      "id": "sung",
+      "name": "Súng",
+      "prompt": "Asset type: isolated 2D weapon sprite for a casual mobile game of plump cartoon cat defenders.\nStyle: simple confident hand-drawn FLAT cutout illustration with playful chunky proportions and warm dark-brown #583f21 rounded contours. Broad solid opaque color shapes. Every individual color region is uniform, absolutely no soft lighting, gradients, shiny highlights, glossy reflections, texture or cast shadows. All functional parts have clear clean outlines; interior marks are sparse and bold. Match cats with flat ginger/cream fur, dot eyes and broad brown outlines, flat silver helmets and plain colored clothing. This is cute friendly medieval adventure equipment, with convincing but simplified handmade construction.\nPalette: pale blue-grey steel #d6e0e3; steel edge #8b9fa8; honey brass #e6b358; chestnut wood #b77d51; brown leather; at most one coral or turquoise accent.\nComposition: ONE whole isolated object, clean side/profile view, optically centered, roughly 75% of a square canvas. Generous padding, full tip and grip visible. Perfectly uniform pure white background for extraction. No cat, hands, face, paw print, mascot head, scenery, UI card, text, labels, watermark, particles or extra floating ornaments. At 48 pixels the shape and grip must remain clear.\nSubject: a playful old-fashioned MATCHLOCK HAND CANNON in clean side profile. A short thick octagonal steel barrel, chunky honey-brass muzzle collar and dark visible round muzzle opening to the right; a smooth curved chestnut wooden pistol stock below and behind; one simple oversized steel lock hammer at the top, one broad brass barrel fastening, and an open readable brass trigger guard. Slightly oversized friendly crafted proportions, more personality than a rectangular gun symbol. Wood grip is obvious and comfortable, lower left. Whole gun points right and slightly upward. No modern tactical parts, bullets or smoke.",
+      "node_id": "3:2"
+    },
+    {
+      "id": "gay_phep",
+      "name": "Gậy phép",
+      "prompt": "Asset type: isolated 2D weapon sprite for a casual mobile game of plump cartoon cat defenders.\nStyle: simple confident hand-drawn FLAT cutout illustration with playful chunky proportions and warm dark-brown #583f21 rounded contours. Broad solid opaque color shapes. Every individual color region is uniform, absolutely no soft lighting, gradients, shiny highlights, glossy reflections, texture or cast shadows. All functional parts have clear clean outlines; interior marks are sparse and bold. Match cats with flat ginger/cream fur, dot eyes and broad brown outlines, flat silver helmets and plain colored clothing. This is cute friendly medieval adventure equipment, with convincing but simplified handmade construction.\nPalette: pale blue-grey steel #d6e0e3; steel edge #8b9fa8; honey brass #e6b358; chestnut wood #b77d51; brown leather; at most one coral or turquoise accent.\nComposition: ONE whole isolated object, clean side/profile view, optically centered, roughly 75% of a square canvas. Generous padding, full tip and grip visible. Perfectly uniform pure white background for extraction. No cat, hands, face, paw print, mascot head, scenery, UI card, text, labels, watermark, particles or extra floating ornaments. At 48 pixels the shape and grip must remain clear.\nSubject: a charming stout wooden MAGIC STAFF, a crooked shepherd-crook shape. Its thick naturally curved top hook curls around a single large round turquoise bead in an open pocket; keep a generous clean open gap around the bead. Warm wood stem with one brass collar at the neck and a short purple cloth grip near the bottom. Clear playful flowing silhouette, one small branch-knot detail at most. Staff leans gently toward upper right, handle lower left. Staff and round bead are bold flat opaque colors; no diamond tip, crescent metal head, five-point star, sparkles, glow or dangling charms.",
+      "node_id": "4:2"
+    }
+  ],
+  "review_reference": {
+    "file": "wMtwWaYIiKUchUdq5YdTm5",
+    "page": "3470:2",
+    "study": "../reference-study/README.md"
+  },
+  "rejection_notes": [
+    "Generated details differ from selected reference detail hierarchy",
+    "Uniform stroke dilation closes negative spaces and compresses material fills",
+    "Requires redesigned component proportions, spacing and line hierarchy"
+  ]
+}

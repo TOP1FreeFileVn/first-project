@@ -37,7 +37,7 @@ var _shop_box: VBoxContainer
 var _shop_tween: Tween
 var _cards: Array = []
 var _shown_phase := ""
-var _sell_zone: PanelContainer
+var _sell_zone: Panel
 var _message_box: PanelContainer
 var _message: Label
 var _message_tween: Tween
@@ -268,21 +268,42 @@ func _build_top_bar(root: Control) -> void:
 func _build_controls(root: Control) -> void:
 	var sell_rect: Rect2 = battle.SELL_RECT
 	var sell_box := Ui.vbox(0, BoxContainer.ALIGNMENT_CENTER)
+	sell_box.name = "SellCaption"
 	sell_box.add_child(Ui.label("Bán", "", 22))
 	sell_box.add_child(Ui.label("kéo gear vào", "LabelTiny", 14))
-	_sell_zone = PanelContainer.new()
+	# A Panel keeps the visible drop target inside SELL_RECT even when the two-line
+	# caption needs more room than the button skin's ordinary content margins.
+	_sell_zone = Panel.new()
+	_sell_zone.name = "BattleSellZone"
 	_sell_zone.add_theme_stylebox_override("panel", Ui.THEME.get_stylebox("normal", "BtnRed"))
 	_sell_zone.add_child(sell_box)
+	sell_box.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	sell_box.offset_left = 8
+	sell_box.offset_right = -8
+	sell_box.offset_top = -2
+	sell_box.offset_bottom = -14
 	_sell_zone.position = sell_rect.position
 	_sell_zone.size = sell_rect.size
 	_sell_zone.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(_sell_zone)
 
-	_ready_button = Ui.button("", "Yellow", Vector2(520, 80), 26)
-	_ready_button.position = Vector2(182, 1192)
-	_ready_button.size = Vector2(520, 80)
+	var ready_rect := Rect2(sell_rect.end.x + 14, sell_rect.position.y, 520, sell_rect.size.y)
+	_ready_button = Ui.button("", "Yellow", ready_rect.size, 26)
+	_ready_button.name = "BattleReadyButton"
+	_raise_button_caption(_ready_button)
+	_ready_button.position = ready_rect.position
+	_ready_button.size = ready_rect.size
 	_ready_button.pressed.connect(func(): battle.start_wave())
 	root.add_child(_ready_button)
+
+
+## The font's visible letters sit below its line-box centre. Raise native captions
+## two pixels while retaining the skin's six-pixel movement when pressed.
+func _raise_button_caption(button: Button) -> void:
+	for state in ["normal", "hover", "pressed", "hover_pressed", "disabled"]:
+		var face: StyleBox = Ui.THEME.get_stylebox(state, button.theme_type_variation).duplicate()
+		face.content_margin_top = maxf(0.0, face.content_margin_top - 4.0)
+		button.add_theme_stylebox_override(state, face)
 
 
 ## Toast: a dark translucent pill under the top bar.
@@ -372,6 +393,9 @@ func _refresh_shop() -> void:
 	reroll.disabled = not battle.core.can_afford(cost)
 	tools.add_child(reroll)
 	var lock := Ui.button("Đã khoá" if battle.shop_locked else "Khoá shop", "Red" if battle.shop_locked else "Tab", Vector2(200, 76), 21, "lock")
+	lock.name = "BattleShopLockButton"
+	lock.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	_raise_button_caption(lock)
 	lock.pressed.connect(func(): battle.toggle_lock())
 	tools.add_child(lock)
 	_shop_box.add_child(tools)

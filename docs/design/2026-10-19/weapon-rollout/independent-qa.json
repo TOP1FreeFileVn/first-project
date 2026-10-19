@@ -1,0 +1,842 @@
+{
+  "scope": "15 new weapons plus accepted sword baseline",
+  "method": "Compare original face-ink pixels against composed PNG at 3x source size; load all unit/icon PNGs; inspect native viewport screenshot separately.",
+  "production_modified": false,
+  "items": [
+    {
+      "id": "kiem",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 33
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": null,
+      "builder_clipping": null,
+      "accepted_baseline": true
+    },
+    {
+      "id": "riu",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        124.33,
+        72.0,
+        254.33,
+        218.67
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "dao",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        137.67,
+        49.0,
+        229.67,
+        191.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "katana",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        135.33,
+        41.67,
+        235.33,
+        198.67
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "cung",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        102.67,
+        120.33,
+        207.0,
+        181.0
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "no",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        108.0,
+        121.33,
+        212.0,
+        214.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "sung",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        140.0,
+        122.33,
+        236.0,
+        187.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "dai_bac",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        139.33,
+        136.33,
+        247.0,
+        227.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "gay_phep",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        121.67,
+        97.0,
+        229.67,
+        203.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "thuoc",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        139.0,
+        136.67,
+        202.67,
+        214.0
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "sach_phep",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        142.0,
+        124.67,
+        240.33,
+        194.0
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "dua_phep",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        131.33,
+        95.67,
+        232.33,
+        193.67
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "giao",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        133.67,
+        47.33,
+        219.67,
+        207.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "cu_kiem",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        135.0,
+        93.67,
+        249.33,
+        201.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "chuy",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        128.0,
+        84.33,
+        233.0,
+        201.0
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    },
+    {
+      "id": "bua",
+      "unit_size": [
+        768,
+        720
+      ],
+      "icon_size": [
+        48,
+        48
+      ],
+      "face_ink_coverage": {
+        "left_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "right_eye": {
+          "original_ink_pixels": 2186,
+          "covered_ink_pixels": 0
+        },
+        "mouth": {
+          "original_ink_pixels": 3263,
+          "covered_ink_pixels": 0
+        }
+      },
+      "new_opaque_pixels_on_canvas_edge": 0,
+      "placement_bounds_unit_px": [
+        125.33,
+        85.33,
+        250.67,
+        196.33
+      ],
+      "builder_clipping": false,
+      "accepted_baseline": false
+    }
+  ],
+  "failures": [],
+  "complete_items": 16,
+  "expected_items": 16,
+  "native_runtime": {
+    "engine": {
+      "build": "official",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (official)",
+      "timestamp": 0
+    },
+    "expected": 16,
+    "failures": [],
+    "items": [
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "kiem",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "riu",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "dao",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "katana",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "cung",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "no",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "sung",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "dai_bac",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "gay_phep",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "thuoc",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "sach_phep",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "dua_phep",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "giao",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "cu_kiem",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "chuy",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      },
+      {
+        "icon_canvas": [
+          48,
+          48
+        ],
+        "icon_loaded": true,
+        "id": "bua",
+        "unit_canvas": [
+          768,
+          720
+        ],
+        "unit_loaded": true,
+        "unit_native_resize": [
+          128,
+          120
+        ]
+      }
+    ],
+    "loaded": 16,
+    "production_modified": false,
+    "screenshot": "native/review_godot_preview.png"
+  },
+  "passed_geometry_and_face_audit": true
+}

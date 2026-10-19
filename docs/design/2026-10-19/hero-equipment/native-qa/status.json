@@ -1,0 +1,172 @@
+{
+	"asset_count": 19,
+	"attack_animation_implemented": false,
+	"engine": {
+		"build": "official",
+		"hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+		"hex": 263938,
+		"major": 4,
+		"minor": 7,
+		"patch": 2,
+		"status": "stable",
+		"string": "4.7.2-stable (official)",
+		"timestamp": 0
+	},
+	"expected_asset_count": 19,
+	"loaded_assets": [
+		{
+			"asset": "hero_melee",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "hero_ranged",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "hero_magic",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "hero_heavy",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "icon_helmet_96",
+			"rgba": true,
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"asset": "icon_helmet_48",
+			"rgba": true,
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"asset": "icon_armor_96",
+			"rgba": true,
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"asset": "icon_armor_48",
+			"rgba": true,
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"asset": "icon_gloves_96",
+			"rgba": true,
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"asset": "icon_gloves_48",
+			"rgba": true,
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"asset": "icon_boots_96",
+			"rgba": true,
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"asset": "icon_boots_48",
+			"rgba": true,
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"asset": "icon_amulet_96",
+			"rgba": true,
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"asset": "icon_amulet_48",
+			"rgba": true,
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"asset": "layer_helmet",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "layer_armor",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "layer_gloves",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "layer_boots",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		},
+		{
+			"asset": "layer_amulet",
+			"rgba": true,
+			"size": [
+				768,
+				720
+			]
+		}
+	],
+	"production_modified": false,
+	"screenshot": "native-qa/godot-preview.png"
+}

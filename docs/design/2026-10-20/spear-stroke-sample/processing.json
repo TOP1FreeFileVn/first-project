@@ -1,0 +1,103 @@
+{
+  "source": "raw/spear-iteration-3.png",
+  "palette_source_rgb": [
+    [
+      97.0,
+      68.0,
+      31.0
+    ],
+    [
+      208.0,
+      213.0,
+      217.0
+    ],
+    [
+      169.0,
+      175.0,
+      180.0
+    ],
+    [
+      225.0,
+      176.0,
+      67.0
+    ],
+    [
+      215.0,
+      125.0,
+      41.0
+    ],
+    [
+      247.0,
+      119.0,
+      83.0
+    ],
+    [
+      120.0,
+      51.0,
+      17.0
+    ]
+  ],
+  "palette_target_rgb": [
+    [
+      88,
+      63,
+      33
+    ],
+    [
+      214,
+      224,
+      227
+    ],
+    [
+      164,
+      182,
+      191
+    ],
+    [
+      223,
+      172,
+      88
+    ],
+    [
+      184,
+      123,
+      66
+    ],
+    [
+      231,
+      120,
+      91
+    ],
+    [
+      152,
+      78,
+      57
+    ]
+  ],
+  "cleanup": "Palette flattening and white-matte extraction only; no morphological line edits.",
+  "canvas": [
+    256,
+    240
+  ],
+  "render_scale": 3,
+  "scale": 0.24,
+  "angle": -24,
+  "source_grip": [
+    512,
+    720
+  ],
+  "target_grip": [
+    160,
+    166
+  ],
+  "held_bounds": [
+    122.0,
+    9.333333333333334,
+    240.66666666666666,
+    230.0
+  ],
+  "clipped": false,
+  "source_straight_shaft_main_width_px": 34,
+  "fitted_shaft_main_width_estimate": 8.16,
+  "main_width_note": "9 px design target; generated contour varies locally. Straight shaft is about 8.2 unit px, not certified as exactly 9 everywhere."
+}

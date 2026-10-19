@@ -1,0 +1,32 @@
+[
+  {
+    "name": "godot_capture_screenshot",
+    "result": {
+      "ok": true,
+      "command": {
+        "status": "completed",
+        "command": "C:/Users/dangp/OneDrive/Desktop/Godot_v4.7.2-stable_win64.exe",
+        "args": [
+          "--path",
+          "C:\\Users\\dangp\\GodotProjects\\first-project",
+          "--scene",
+          "docs/design/2026-10-19/sky-islands-demo/SkyIslandsLive.tscn",
+          "--write-movie",
+          "C:\\Users\\dangp\\GodotProjects\\first-project\\docs\\ui_review\\2026-10-19\\menu-background-motion\\live\\live.png",
+          "--quit-after",
+          "3"
+        ],
+        "exitCode": 0,
+        "stdout": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\r\nD3D12 12_0 - Forward+ - Using Device #0: NVIDIA - NVIDIA GeForce RTX 3050 Laptop GPU\r\n\r\nMovie Maker mode enabled, recording movie in 450×800 @ 60 FPS...\r\nSKY_ISLANDS_LIVE_READY\r\n--------------------------------------------------------------------------------\r\nDone recording movie at path: C:\\Users\\dangp\\GodotProjects\\first-project\\docs\\ui_review\\2026-10-19\\menu-background-motion\\live\\live.png\r\n3 frames at 60 FPS (movie length: 00:00:00:03), recorded in 00:00:06 (16% of real-time speed).\r\nCPU render time: 0.00 seconds (average: 0.12 ms/frame)\r\nGPU render time: 0.00 seconds (average: 0.38 ms/frame)\r\nEncoding time: 0.06 seconds (average: 19.84 ms/frame)\r\n--------------------------------------------------------------------------------\r\n",
+        "stderr": "ERROR: Failed to read the root certificate store.\r\n   at: get_system_ca_certificates (platform/windows/os_windows.cpp:2582)\r\n"
+      },
+      "requestedOutput": "res://docs/ui_review/2026-10-19/menu-background-motion/live/live.png",
+      "screenshots": [
+        "res://docs/ui_review/2026-10-19/menu-background-motion/live/live00000000.png",
+        "res://docs/ui_review/2026-10-19/menu-background-motion/live/live00000001.png",
+        "res://docs/ui_review/2026-10-19/menu-background-motion/live/live00000002.png"
+      ],
+      "report": "Screenshot capture completed."
+    }
+  }
+]

@@ -1,0 +1,339 @@
+{
+	"actual": [
+		720,
+		1280
+	],
+	"bar": {
+		"design_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"minimum_size": [
+			582.0,
+			166.0
+		],
+		"name": "@HBoxContainer@697",
+		"path": "@Control@546/@HBoxContainer@697",
+		"render_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"type": "HBoxContainer",
+		"visible": true
+	},
+	"caption": {
+		"design_rect": [
+			10.0,
+			1228.0,
+			165.0,
+			34.0
+		],
+		"fits_width": true,
+		"font_color": "583f21ff",
+		"font_outline_color": "2e1c1cff",
+		"font_size": 24,
+		"minimum_size": [
+			118.0,
+			34.0
+		],
+		"name": "SelectedNavCaption",
+		"outline_size": 0,
+		"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677/@VBoxContainer@672/SelectedNavFooter/@VBoxContainer@675/SelectedNavCaption",
+		"render_rect": [
+			10.0,
+			1228.0,
+			165.0,
+			34.0
+		],
+		"text": "Cửa hàng",
+		"text_width": 118.0,
+		"type": "Label",
+		"visible": true
+	},
+	"cells": [
+		{
+			"design_rect": [
+				6.0,
+				1120.0,
+				173.0,
+				178.0
+			],
+			"icon": {
+				"design_rect": [
+					45.5,
+					1134.0,
+					94.0,
+					94.0
+				],
+				"minimum_size": [
+					94.0,
+					94.0
+				],
+				"name": "@TextureRect@674",
+				"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677/@VBoxContainer@672/@Control@673/@TextureRect@674",
+				"render_rect": [
+					45.5,
+					1134.0,
+					94.0,
+					94.0
+				],
+				"type": "TextureRect",
+				"visible": true
+			},
+			"icon_holder": {
+				"design_rect": [
+					6.0,
+					1138.0,
+					173.0,
+					88.0
+				],
+				"minimum_size": [
+					0.0,
+					88.0
+				],
+				"name": "@Control@673",
+				"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677/@VBoxContainer@672/@Control@673",
+				"render_rect": [
+					6.0,
+					1138.0,
+					173.0,
+					88.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"minimum_size": [
+				126.0,
+				166.0
+			],
+			"name": "@PanelContainer@677",
+			"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677",
+			"render_rect": [
+				6.0,
+				1120.0,
+				173.0,
+				178.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				179.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@682",
+			"path": "@Control@546/@HBoxContainer@697/@MarginContainer@682",
+			"render_rect": [
+				179.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				313.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@687",
+			"path": "@Control@546/@HBoxContainer@697/@MarginContainer@687",
+			"render_rect": [
+				313.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				446.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@692",
+			"path": "@Control@546/@HBoxContainer@697/@MarginContainer@692",
+			"render_rect": [
+				446.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@696",
+			"path": "@Control@546/@HBoxContainer@697/@MarginContainer@696",
+			"render_rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		}
+	],
+	"file": "shop_720x1280.png",
+	"footer": {
+		"design_rect": [
+			6.0,
+			1226.0,
+			173.0,
+			72.0
+		],
+		"minimum_size": [
+			126.0,
+			72.0
+		],
+		"name": "SelectedNavFooter",
+		"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677/@VBoxContainer@672/SelectedNavFooter",
+		"render_rect": [
+			6.0,
+			1226.0,
+			173.0,
+			72.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"index": 0,
+	"nav": "shop_720x1280_nav.png",
+	"nav_holder": {
+		"design_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"minimum_size": [
+			0.0,
+			0.0
+		],
+		"name": "@Control@546",
+		"path": "@Control@546",
+		"render_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"type": "Control",
+		"visible": true
+	},
+	"render_scale": [
+		1.0,
+		1.0
+	],
+	"requested": [
+		720,
+		1280
+	],
+	"selected_cell": {
+		"design_rect": [
+			6.0,
+			1120.0,
+			173.0,
+			178.0
+		],
+		"icon": {
+			"design_rect": [
+				45.5,
+				1134.0,
+				94.0,
+				94.0
+			],
+			"minimum_size": [
+				94.0,
+				94.0
+			],
+			"name": "@TextureRect@674",
+			"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677/@VBoxContainer@672/@Control@673/@TextureRect@674",
+			"render_rect": [
+				45.5,
+				1134.0,
+				94.0,
+				94.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		"icon_holder": {
+			"design_rect": [
+				6.0,
+				1138.0,
+				173.0,
+				88.0
+			],
+			"minimum_size": [
+				0.0,
+				88.0
+			],
+			"name": "@Control@673",
+			"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677/@VBoxContainer@672/@Control@673",
+			"render_rect": [
+				6.0,
+				1138.0,
+				173.0,
+				88.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		"minimum_size": [
+			126.0,
+			166.0
+		],
+		"name": "@PanelContainer@677",
+		"path": "@Control@546/@HBoxContainer@697/@PanelContainer@677",
+		"render_rect": [
+			6.0,
+			1120.0,
+			173.0,
+			178.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"tab": "shop",
+	"window": [
+		720,
+		1280
+	]
+}

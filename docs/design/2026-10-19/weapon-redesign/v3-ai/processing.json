@@ -1,0 +1,104 @@
+{
+  "available": [
+    "kiem",
+    "riu",
+    "sung",
+    "gay_phep"
+  ],
+  "items": [
+    {
+      "id": "kiem",
+      "raw_size": [
+        1024,
+        1024
+      ],
+      "foreground_bbox": [
+        141,
+        102,
+        905,
+        916
+      ],
+      "output_size": [
+        768,
+        768
+      ],
+      "standalone_contour_total_px": 36,
+      "held_contour_unit_px": 10,
+      "alpha": "transparent",
+      "color_mode": "matte limited project palette"
+    },
+    {
+      "id": "riu",
+      "raw_size": [
+        1024,
+        1024
+      ],
+      "foreground_bbox": [
+        73,
+        117,
+        969,
+        913
+      ],
+      "output_size": [
+        768,
+        768
+      ],
+      "standalone_contour_total_px": 36,
+      "held_contour_unit_px": 10,
+      "alpha": "transparent",
+      "color_mode": "matte limited project palette"
+    },
+    {
+      "id": "sung",
+      "raw_size": [
+        1024,
+        1024
+      ],
+      "foreground_bbox": [
+        16,
+        192,
+        1013,
+        816
+      ],
+      "output_size": [
+        768,
+        768
+      ],
+      "standalone_contour_total_px": 36,
+      "held_contour_unit_px": 10,
+      "alpha": "transparent",
+      "color_mode": "matte limited project palette"
+    },
+    {
+      "id": "gay_phep",
+      "raw_size": [
+        1024,
+        1024
+      ],
+      "foreground_bbox": [
+        224,
+        34,
+        840,
+        989
+      ],
+      "output_size": [
+        768,
+        768
+      ],
+      "standalone_contour_total_px": 36,
+      "held_contour_unit_px": 10,
+      "alpha": "transparent",
+      "color_mode": "matte limited project palette"
+    }
+  ],
+  "production_changed": false,
+  "workflow": "connected white extraction + matte material mapping + outer-only contour",
+  "review_status": "rejected_stroke_experiment",
+  "issue_notes": [
+    "A uniform 10-unit contour band erases narrow material fills and closes functional openings.",
+    "Sword guard/pommel, axe grip, gun trigger gap and staff coil lose readable construction.",
+    "New reference source is Figma node 3470:2; study intentional material panels, mechanisms and cutouts.",
+    "Preserve these outputs as a rejected experiment; see the reference-study README for the new art contract."
+  ],
+  "reference_source": "https://www.figma.com/design/wMtwWaYIiKUchUdq5YdTm5/?node-id=3470-2"
+}

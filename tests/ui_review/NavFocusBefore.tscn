@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/ui_review/NavFocusPreview.gd" id="1"]
+
+[node name="NavFocusBefore" type="Node"]
+script = ExtResource("1")
+output_dir = "res://docs/ui_review/2026-10-19/nav-focus/before"
+expect_selected_footer = false

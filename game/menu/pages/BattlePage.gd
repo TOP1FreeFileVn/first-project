@@ -117,7 +117,8 @@ func _fill() -> void:
 	# ◀ page dots ▶
 	var pager := Ui.hbox(14)
 	pager.name = "LobbyPager"
-	var prev := Ui.button("", "Blue", Vector2(70, 62), 0, "back")
+	var prev := _page_arrow(false)
+	prev.name = "LobbyPrev"
 	prev.pressed.connect(func(): _go(-1))
 	prev.disabled = index == 0
 	pager.add_child(prev)
@@ -135,13 +136,8 @@ func _fill() -> void:
 		dot.add_theme_stylebox_override("panel", style)
 		dots.add_child(dot)
 	pager.add_child(dots)
-	var next := Ui.button("", "Blue", Vector2(70, 62))
-	var arrow := Ui.icon("back", 34)
-	arrow.flip_h = true
-	next.add_child(arrow)
-	arrow.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	arrow.offset_bottom = -8
-	arrow.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	var next := _page_arrow(true)
+	next.name = "LobbyNext"
 	next.pressed.connect(func(): _go(1))
 	next.disabled = index == PlayerData.LEVELS.size() - 1
 	pager.add_child(next)
@@ -177,20 +173,38 @@ func _fill() -> void:
 	content.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	play.add_child(content)
 	content.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	content.offset_bottom = -10
+	# Centre the row on the raised face, above the button's lower lip.
+	content.offset_top = -6
+	content.offset_bottom = -16
 	var row: HBoxContainer = content.get_child(0)
 	row.name = "LobbyBattleContent"
 	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	row.add_child(Ui.icon("lock" if locked else "tab_battle", 46))
 	row.add_child(Ui.label("Chưa mở" if locked else "Trận chiến", "", 36))
-	play.button_down.connect(func(): content.offset_top = 6; content.offset_bottom = -4)
-	play.button_up.connect(func(): content.offset_top = 0; content.offset_bottom = -10)
+	play.button_down.connect(func(): content.offset_top = 0; content.offset_bottom = -10)
+	play.button_up.connect(func(): content.offset_top = -6; content.offset_bottom = -16)
 	play.disabled = locked
 	play.pressed.connect(func(): home.start_battle(_selected))
 	action_block.add_child(Ui.center(play))
-	_column.add_child(_flex(0.12))
+	var bottom_gap := Control.new()
+	bottom_gap.custom_minimum_size.y = 16
+	_column.add_child(bottom_gap)
 	if not locked:
 		play.ready.connect(func(): Ui.pulse(play, 0.04, 1.4))
+
+
+## Both directions use the same fixed icon and face-centred layout.
+func _page_arrow(flip: bool) -> Button:
+	var button := Ui.button("", "Blue", Vector2(70, 62))
+	var arrow := Ui.icon("back", 34)
+	arrow.name = "LobbyPageArrow"
+	arrow.flip_h = flip
+	var content := Ui.center(arrow)
+	content.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	button.add_child(content)
+	content.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	content.offset_bottom = -8
+	return button
 
 
 ## Anchors a child of the stage to a box given in fractions of the island.

@@ -1,0 +1,1468 @@
+{
+	"cards": [
+		{
+			"TroopCardDetails": {
+				"design_rect": [
+					32.0,
+					704.0,
+					143.0,
+					63.0
+				],
+				"name": "TroopCardDetails",
+				"native_rect": [
+					16.0,
+					352.0,
+					71.5,
+					31.5
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					43.0,
+					576.0,
+					120.0,
+					120.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					21.5,
+					288.0,
+					60.0,
+					60.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					32.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					16.0,
+					273.0,
+					71.5,
+					77.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					32.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					16.0,
+					273.0,
+					71.5,
+					77.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					24.0,
+					538.0,
+					159.0,
+					240.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 26,
+				"font_size_native": 13.0,
+				"name": "TroopCard_dao",
+				"native_rect": [
+					12.0,
+					269.0,
+					79.5,
+					120.0
+				],
+				"text": "",
+				"theme_type_variation": "",
+				"vietnamese_chars": {},
+				"visible": true
+			},
+			"id": "dao",
+			"in_team": false,
+			"name": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					32.0,
+					704.0,
+					143.0,
+					34.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					16.0,
+					352.0,
+					71.5,
+					17.0
+				],
+				"outline_design": 0,
+				"text": "Đao",
+				"theme_type_variation": "LabelDark",
+				"vietnamese_chars": {
+					"Đ": {
+						"base_font_has_char": true,
+						"codepoint": 272,
+						"font_has_char": true
+					}
+				},
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": false
+		},
+		{
+			"TroopCardDetails": {
+				"design_rect": [
+					203.0,
+					704.0,
+					143.0,
+					63.0
+				],
+				"name": "TroopCardDetails",
+				"native_rect": [
+					101.5,
+					352.0,
+					71.5,
+					31.5
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					214.0,
+					576.0,
+					120.0,
+					120.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					107.0,
+					288.0,
+					60.0,
+					60.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					203.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					101.5,
+					273.0,
+					71.5,
+					77.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					203.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					101.5,
+					273.0,
+					71.5,
+					77.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					195.0,
+					538.0,
+					159.0,
+					240.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 26,
+				"font_size_native": 13.0,
+				"name": "TroopCard_sung",
+				"native_rect": [
+					97.5,
+					269.0,
+					79.5,
+					120.0
+				],
+				"text": "",
+				"theme_type_variation": "",
+				"vietnamese_chars": {},
+				"visible": true
+			},
+			"id": "sung",
+			"in_team": false,
+			"name": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					203.0,
+					704.0,
+					143.0,
+					34.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					101.5,
+					352.0,
+					71.5,
+					17.0
+				],
+				"outline_design": 0,
+				"text": "Súng",
+				"theme_type_variation": "LabelDark",
+				"vietnamese_chars": {
+					"ú": {
+						"base_font_has_char": true,
+						"codepoint": 250,
+						"font_has_char": true
+					}
+				},
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": false
+		},
+		{
+			"TroopCardDetails": {
+				"design_rect": [
+					374.0,
+					704.0,
+					143.0,
+					63.0
+				],
+				"name": "TroopCardDetails",
+				"native_rect": [
+					187.0,
+					352.0,
+					71.5,
+					31.5
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					385.0,
+					576.0,
+					120.0,
+					120.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					192.5,
+					288.0,
+					60.0,
+					60.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					374.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					187.0,
+					273.0,
+					71.5,
+					77.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					374.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					187.0,
+					273.0,
+					71.5,
+					77.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					366.0,
+					538.0,
+					159.0,
+					240.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 26,
+				"font_size_native": 13.0,
+				"name": "TroopCard_sach_phep",
+				"native_rect": [
+					183.0,
+					269.0,
+					79.5,
+					120.0
+				],
+				"text": "",
+				"theme_type_variation": "",
+				"vietnamese_chars": {},
+				"visible": true
+			},
+			"id": "sach_phep",
+			"in_team": false,
+			"name": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					374.0,
+					704.0,
+					143.0,
+					34.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					187.0,
+					352.0,
+					71.5,
+					17.0
+				],
+				"outline_design": 0,
+				"text": "Sách Phép",
+				"theme_type_variation": "LabelDark",
+				"vietnamese_chars": {
+					"á": {
+						"base_font_has_char": true,
+						"codepoint": 225,
+						"font_has_char": true
+					},
+					"é": {
+						"base_font_has_char": true,
+						"codepoint": 233,
+						"font_has_char": true
+					}
+				},
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": false
+		},
+		{
+			"TroopCardDetails": {
+				"design_rect": [
+					545.0,
+					704.0,
+					143.0,
+					63.0
+				],
+				"name": "TroopCardDetails",
+				"native_rect": [
+					272.5,
+					352.0,
+					71.5,
+					31.5
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopInTeam": {
+				"design_rect": [
+					545.0,
+					546.0,
+					24.0,
+					24.0
+				],
+				"name": "TroopInTeam",
+				"native_rect": [
+					272.5,
+					273.0,
+					12.0,
+					12.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_check_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopLevel": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					608.0,
+					546.0,
+					80.0,
+					30.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 20,
+				"font_size_native": 10.0,
+				"line_count": 1,
+				"name": "TroopLevel",
+				"native_rect": [
+					304.0,
+					273.0,
+					40.0,
+					15.0
+				],
+				"outline_design": 0,
+				"text": "Cấp 1",
+				"theme_type_variation": "LabelDark",
+				"vietnamese_chars": {
+					"ấ": {
+						"base_font_has_char": true,
+						"codepoint": 7845,
+						"font_has_char": true
+					}
+				},
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"TroopLevelReady": {
+				"design_rect": [
+					577.0,
+					546.0,
+					24.0,
+					24.0
+				],
+				"name": "TroopLevelReady",
+				"native_rect": [
+					288.5,
+					273.0,
+					12.0,
+					12.0
+				],
+				"texture": "res://game/ui/skin/icon_badge_up_32.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					556.0,
+					576.0,
+					120.0,
+					120.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					278.0,
+					288.0,
+					60.0,
+					60.0
+				],
+				"texture": "",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityBackground": {
+				"design_rect": [
+					545.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"name": "TroopRarityBackground",
+				"native_rect": [
+					272.5,
+					273.0,
+					71.5,
+					77.0
+				],
+				"texture": "res://game/ui/skin/troop_portrait_purple.svg",
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopRarityField": {
+				"design_rect": [
+					545.0,
+					546.0,
+					143.0,
+					154.0
+				],
+				"meta_rarity": 2,
+				"name": "TroopRarityField",
+				"native_rect": [
+					272.5,
+					273.0,
+					71.5,
+					77.0
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"TroopStars": {
+				"design_rect": [
+					545.0,
+					738.0,
+					143.0,
+					29.0
+				],
+				"name": "TroopStars",
+				"native_rect": [
+					272.5,
+					369.0,
+					71.5,
+					14.5
+				],
+				"theme_type_variation": "",
+				"visible": true
+			},
+			"card": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					537.0,
+					538.0,
+					159.0,
+					240.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 26,
+				"font_size_native": 13.0,
+				"name": "TroopCard_chuy",
+				"native_rect": [
+					268.5,
+					269.0,
+					79.5,
+					120.0
+				],
+				"text": "",
+				"theme_type_variation": "",
+				"vietnamese_chars": {},
+				"visible": true
+			},
+			"id": "chuy",
+			"in_team": true,
+			"name": {
+				"base_font_name": "Paytone One",
+				"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+				"design_rect": [
+					545.0,
+					704.0,
+					143.0,
+					34.0
+				],
+				"font_class": "FontVariation",
+				"font_name": "Paytone One",
+				"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					272.5,
+					352.0,
+					71.5,
+					17.0
+				],
+				"outline_design": 0,
+				"text": "Chuỳ",
+				"theme_type_variation": "LabelDark",
+				"vietnamese_chars": {
+					"ỳ": {
+						"base_font_has_char": true,
+						"codepoint": 7923,
+						"font_has_char": true
+					}
+				},
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"rarity": 2,
+			"unlocked": true
+		}
+	],
+	"castle": 1,
+	"file": "starter_epic_360x640.png",
+	"filter": 2,
+	"filters": [
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				24.0,
+				442.0,
+				123.0,
+				76.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 22,
+			"font_size_native": 11.0,
+			"name": "TroopFilter_-1",
+			"native_rect": [
+				12.0,
+				221.0,
+				61.5,
+				38.0
+			],
+			"text": "Tất cả",
+			"theme_type_variation": "",
+			"vietnamese_chars": {
+				"ả": {
+					"base_font_has_char": true,
+					"codepoint": 7843,
+					"font_has_char": true
+				},
+				"ấ": {
+					"base_font_has_char": true,
+					"codepoint": 7845,
+					"font_has_char": true
+				}
+			},
+			"visible": true
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				153.0,
+				442.0,
+				124.0,
+				76.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 22,
+			"font_size_native": 11.0,
+			"name": "TroopFilter_0",
+			"native_rect": [
+				76.5,
+				221.0,
+				62.0,
+				38.0
+			],
+			"text": "Thường",
+			"theme_type_variation": "",
+			"vietnamese_chars": {
+				"ư": {
+					"base_font_has_char": true,
+					"codepoint": 432,
+					"font_has_char": true
+				},
+				"ờ": {
+					"base_font_has_char": true,
+					"codepoint": 7901,
+					"font_has_char": true
+				}
+			},
+			"visible": true
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				283.0,
+				442.0,
+				123.0,
+				76.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 22,
+			"font_size_native": 11.0,
+			"name": "TroopFilter_1",
+			"native_rect": [
+				141.5,
+				221.0,
+				61.5,
+				38.0
+			],
+			"text": "Hiếm",
+			"theme_type_variation": "",
+			"vietnamese_chars": {
+				"ế": {
+					"base_font_has_char": true,
+					"codepoint": 7871,
+					"font_has_char": true
+				}
+			},
+			"visible": true
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				412.0,
+				442.0,
+				124.0,
+				76.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 22,
+			"font_size_native": 11.0,
+			"name": "TroopFilter_2",
+			"native_rect": [
+				206.0,
+				221.0,
+				62.0,
+				38.0
+			],
+			"text": "Sử thi",
+			"theme_type_variation": "",
+			"vietnamese_chars": {
+				"ử": {
+					"base_font_has_char": true,
+					"codepoint": 7917,
+					"font_has_char": true
+				}
+			},
+			"visible": true
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				542.0,
+				442.0,
+				154.0,
+				76.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 22,
+			"font_size_native": 11.0,
+			"name": "TroopFilter_3",
+			"native_rect": [
+				271.0,
+				221.0,
+				77.0,
+				38.0
+			],
+			"text": "Huyền thoại",
+			"theme_type_variation": "",
+			"vietnamese_chars": {
+				"ạ": {
+					"base_font_has_char": true,
+					"codepoint": 7841,
+					"font_has_char": true
+				},
+				"ề": {
+					"base_font_has_char": true,
+					"codepoint": 7873,
+					"font_has_char": true
+				}
+			},
+			"visible": true
+		}
+	],
+	"grid": {
+		"design_rect": [
+			24.0,
+			538.0,
+			672.0,
+			240.0
+		],
+		"name": "TroopGrid",
+		"native_rect": [
+			12.0,
+			269.0,
+			336.0,
+			120.0
+		],
+		"theme_type_variation": "",
+		"visible": true
+	},
+	"key": "starter_epic_360x640",
+	"native_size": [
+		360,
+		640
+	],
+	"slots": 3,
+	"team": [
+		"gay_phep",
+		"cung",
+		"chuy"
+	],
+	"team_slots": [
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				40.0,
+				241.0,
+				121.0,
+				138.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 26,
+			"font_size_native": 13.0,
+			"name": "TeamSlot_0",
+			"native_rect": [
+				20.0,
+				120.5,
+				60.5,
+				69.0
+			],
+			"text": "",
+			"theme_type_variation": "",
+			"vietnamese_chars": {},
+			"visible": true
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				169.0,
+				241.0,
+				122.0,
+				138.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 26,
+			"font_size_native": 13.0,
+			"name": "TeamSlot_1",
+			"native_rect": [
+				84.5,
+				120.5,
+				61.0,
+				69.0
+			],
+			"text": "",
+			"theme_type_variation": "",
+			"vietnamese_chars": {},
+			"visible": true
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				299.0,
+				241.0,
+				121.0,
+				138.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 26,
+			"font_size_native": 13.0,
+			"name": "TeamSlot_2",
+			"native_rect": [
+				149.5,
+				120.5,
+				60.5,
+				69.0
+			],
+			"text": "",
+			"theme_type_variation": "",
+			"vietnamese_chars": {},
+			"visible": true
+		},
+		{
+			"design_rect": [
+				428.0,
+				241.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_3",
+			"native_rect": [
+				214.0,
+				120.5,
+				61.0,
+				69.0
+			],
+			"texture": "res://game/ui/skin/troop_card_locked.svg",
+			"theme_type_variation": "TroopCardLocked",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				558.0,
+				241.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_4",
+			"native_rect": [
+				279.0,
+				120.5,
+				61.0,
+				69.0
+			],
+			"texture": "res://game/ui/skin/troop_card_locked.svg",
+			"theme_type_variation": "TroopCardLocked",
+			"visible": true
+		}
+	],
+	"top_labels": [
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				24.0,
+				128.0,
+				672.0,
+				46.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 32,
+			"font_size_native": 16.0,
+			"line_count": 1,
+			"name": "@Label@1066",
+			"native_rect": [
+				12.0,
+				64.0,
+				336.0,
+				23.0
+			],
+			"outline_design": 0,
+			"text": "Lính",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"í": {
+					"base_font_has_char": true,
+					"codepoint": 237,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				40.0,
+				198.0,
+				158.0,
+				37.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 26,
+			"font_size_native": 13.0,
+			"line_count": 1,
+			"name": "@Label@1069",
+			"native_rect": [
+				20.0,
+				99.0,
+				79.0,
+				18.5
+			],
+			"outline_design": 0,
+			"text": "Đội hình 3/3",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"ì": {
+					"base_font_has_char": true,
+					"codepoint": 236,
+					"font_has_char": true
+				},
+				"Đ": {
+					"base_font_has_char": true,
+					"codepoint": 272,
+					"font_has_char": true
+				},
+				"ộ": {
+					"base_font_has_char": true,
+					"codepoint": 7897,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				640.0,
+				199.0,
+				40.0,
+				34.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 24,
+			"font_size_native": 12.0,
+			"line_count": 1,
+			"name": "@Label@1072",
+			"native_rect": [
+				320.0,
+				99.5,
+				20.0,
+				17.0
+			],
+			"outline_design": 0,
+			"text": "724",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				46.0,
+				311.0,
+				109.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "TeamTroopName",
+			"native_rect": [
+				23.0,
+				155.5,
+				54.5,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Gậy Phép",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"é": {
+					"base_font_has_char": true,
+					"codepoint": 233,
+					"font_has_char": true
+				},
+				"ậ": {
+					"base_font_has_char": true,
+					"codepoint": 7853,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				46.0,
+				340.0,
+				109.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@1077",
+			"native_rect": [
+				23.0,
+				170.0,
+				54.5,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"ấ": {
+					"base_font_has_char": true,
+					"codepoint": 7845,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				175.0,
+				311.0,
+				110.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "TeamTroopName",
+			"native_rect": [
+				87.5,
+				155.5,
+				55.0,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Cung",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				175.0,
+				340.0,
+				110.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@1081",
+			"native_rect": [
+				87.5,
+				170.0,
+				55.0,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"ấ": {
+					"base_font_has_char": true,
+					"codepoint": 7845,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				305.0,
+				311.0,
+				109.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "TeamTroopName",
+			"native_rect": [
+				152.5,
+				155.5,
+				54.5,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Chuỳ",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"ỳ": {
+					"base_font_has_char": true,
+					"codepoint": 7923,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				305.0,
+				340.0,
+				109.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@1085",
+			"native_rect": [
+				152.5,
+				170.0,
+				54.5,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"ấ": {
+					"base_font_has_char": true,
+					"codepoint": 7845,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				436.0,
+				318.0,
+				106.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@1089",
+			"native_rect": [
+				218.0,
+				159.0,
+				53.0,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Thành 3",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"à": {
+					"base_font_has_char": true,
+					"codepoint": 224,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				566.0,
+				318.0,
+				106.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@1093",
+			"native_rect": [
+				283.0,
+				159.0,
+				53.0,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Thành 6",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"à": {
+					"base_font_has_char": true,
+					"codepoint": 224,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"base_font_name": "Paytone One",
+			"base_font_resource": "res://game/ui/fonts/PaytoneOne-Regular.ttf",
+			"design_rect": [
+				40.0,
+				385.0,
+				640.0,
+				29.0
+			],
+			"font_class": "FontVariation",
+			"font_name": "Paytone One",
+			"font_resource": "res://game/ui/skin/game_theme.tres::FontVariation_dqod3",
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@1095",
+			"native_rect": [
+				20.0,
+				192.5,
+				320.0,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "Chạm xem chi tiết · Giữ và kéo để đổi đội",
+			"theme_type_variation": "LabelDark",
+			"vietnamese_chars": {
+				"à": {
+					"base_font_has_char": true,
+					"codepoint": 224,
+					"font_has_char": true
+				},
+				"é": {
+					"base_font_has_char": true,
+					"codepoint": 233,
+					"font_has_char": true
+				},
+				"đ": {
+					"base_font_has_char": true,
+					"codepoint": 273,
+					"font_has_char": true
+				},
+				"ạ": {
+					"base_font_has_char": true,
+					"codepoint": 7841,
+					"font_has_char": true
+				},
+				"ế": {
+					"base_font_has_char": true,
+					"codepoint": 7871,
+					"font_has_char": true
+				},
+				"ể": {
+					"base_font_has_char": true,
+					"codepoint": 7875,
+					"font_has_char": true
+				},
+				"ổ": {
+					"base_font_has_char": true,
+					"codepoint": 7893,
+					"font_has_char": true
+				},
+				"ộ": {
+					"base_font_has_char": true,
+					"codepoint": 7897,
+					"font_has_char": true
+				},
+				"ữ": {
+					"base_font_has_char": true,
+					"codepoint": 7919,
+					"font_has_char": true
+				}
+			},
+			"visible": true,
+			"visible_line_count": 1
+		}
+	]
+}

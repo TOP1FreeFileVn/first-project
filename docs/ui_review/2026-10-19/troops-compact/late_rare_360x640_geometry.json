@@ -1,0 +1,735 @@
+{
+	"cards": [
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevel": {
+				"design_rect": [
+					32.0,
+					701.0,
+					143.0,
+					29.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopLevel",
+				"native_rect": [
+					16.0,
+					350.5,
+					71.5,
+					14.5
+				],
+				"outline_design": 0,
+				"text": "Cấp 1",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"TroopLevelReady": {
+				"design_rect": [
+					147.0,
+					536.0,
+					28.0,
+					28.0
+				],
+				"name": "TroopLevelReady",
+				"native_rect": [
+					73.5,
+					268.0,
+					14.0,
+					14.0
+				],
+				"visible": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					59.0,
+					541.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					29.5,
+					270.5,
+					44.0,
+					44.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					24.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_riu",
+				"native_rect": [
+					12.0,
+					264.0,
+					79.5,
+					120.0
+				],
+				"visible": true
+			},
+			"id": "riu",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					32.0,
+					631.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					16.0,
+					315.5,
+					71.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Rìu",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": true
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					230.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					115.0,
+					272.0,
+					44.0,
+					44.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					195.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_no",
+				"native_rect": [
+					97.5,
+					264.0,
+					79.5,
+					120.0
+				],
+				"visible": true
+			},
+			"id": "no",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					203.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					101.5,
+					317.0,
+					71.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Nỏ",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					401.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					200.5,
+					272.0,
+					44.0,
+					44.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					366.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_thuoc",
+				"native_rect": [
+					183.0,
+					264.0,
+					79.5,
+					120.0
+				],
+				"visible": true
+			},
+			"id": "thuoc",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					374.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					187.0,
+					317.0,
+					71.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Bình Thuốc",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": false
+		},
+		{
+			"TroopInTeam": {
+				"missing": true
+			},
+			"TroopLevelReady": {
+				"missing": true
+			},
+			"TroopPortrait": {
+				"design_rect": [
+					572.0,
+					544.0,
+					88.0,
+					88.0
+				],
+				"name": "TroopPortrait",
+				"native_rect": [
+					286.0,
+					272.0,
+					44.0,
+					44.0
+				],
+				"visible": true
+			},
+			"TroopStarReady": {
+				"missing": true
+			},
+			"card": {
+				"design_rect": [
+					537.0,
+					528.0,
+					159.0,
+					240.0
+				],
+				"name": "TroopCard_cu_kiem",
+				"native_rect": [
+					268.5,
+					264.0,
+					79.5,
+					120.0
+				],
+				"visible": true
+			},
+			"id": "cu_kiem",
+			"in_team": false,
+			"name": {
+				"design_rect": [
+					545.0,
+					634.0,
+					143.0,
+					68.0
+				],
+				"font_size_design": 24,
+				"font_size_native": 12.0,
+				"line_count": 1,
+				"name": "TroopName",
+				"native_rect": [
+					272.5,
+					317.0,
+					71.5,
+					34.0
+				],
+				"outline_design": 0,
+				"text": "Cự Kiếm",
+				"visible": true,
+				"visible_line_count": 1
+			},
+			"unlocked": false
+		}
+	],
+	"castle": 6,
+	"file": "late_rare_360x640.png",
+	"filter": 1,
+	"grid": {
+		"design_rect": [
+			24.0,
+			528.0,
+			672.0,
+			240.0
+		],
+		"name": "TroopGrid",
+		"native_rect": [
+			12.0,
+			264.0,
+			336.0,
+			120.0
+		],
+		"visible": true
+	},
+	"key": "late_rare_360x640",
+	"native_size": [
+		360,
+		640
+	],
+	"slots": 5,
+	"team": [
+		"gay_phep",
+		"cung",
+		"chuy",
+		"katana",
+		"dai_bac"
+	],
+	"team_slots": [
+		{
+			"design_rect": [
+				40.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_0",
+			"native_rect": [
+				20.0,
+				118.0,
+				60.5,
+				69.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				169.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_1",
+			"native_rect": [
+				84.5,
+				118.0,
+				61.0,
+				69.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				299.0,
+				236.0,
+				121.0,
+				138.0
+			],
+			"name": "TeamSlot_2",
+			"native_rect": [
+				149.5,
+				118.0,
+				60.5,
+				69.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				428.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_3",
+			"native_rect": [
+				214.0,
+				118.0,
+				61.0,
+				69.0
+			],
+			"visible": true
+		},
+		{
+			"design_rect": [
+				558.0,
+				236.0,
+				122.0,
+				138.0
+			],
+			"name": "TeamSlot_4",
+			"native_rect": [
+				279.0,
+				118.0,
+				61.0,
+				69.0
+			],
+			"visible": true
+		}
+	],
+	"top_labels": [
+		{
+			"design_rect": [
+				24.0,
+				128.0,
+				672.0,
+				46.0
+			],
+			"font_size_design": 32,
+			"font_size_native": 16.0,
+			"line_count": 1,
+			"name": "@Label@2175",
+			"native_rect": [
+				12.0,
+				64.0,
+				336.0,
+				23.0
+			],
+			"outline_design": 0,
+			"text": "Lính",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				40.0,
+				198.0,
+				158.0,
+				32.0
+			],
+			"font_size_design": 26,
+			"font_size_native": 13.0,
+			"line_count": 1,
+			"name": "@Label@2178",
+			"native_rect": [
+				20.0,
+				99.0,
+				79.0,
+				16.0
+			],
+			"outline_design": 0,
+			"text": "Đội hình 5/5",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				611.0,
+				199.0,
+				69.0,
+				29.0
+			],
+			"font_size_design": 24,
+			"font_size_native": 12.0,
+			"line_count": 1,
+			"name": "@Label@2181",
+			"native_rect": [
+				305.5,
+				99.5,
+				34.5,
+				14.5
+			],
+			"outline_design": 0,
+			"text": "1.834",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				46.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2185",
+			"native_rect": [
+				23.0,
+				154.5,
+				54.5,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Gậy Phép",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				46.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2186",
+			"native_rect": [
+				23.0,
+				168.5,
+				54.5,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				175.0,
+				309.0,
+				110.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2189",
+			"native_rect": [
+				87.5,
+				154.5,
+				55.0,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Cung",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				175.0,
+				337.0,
+				110.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2190",
+			"native_rect": [
+				87.5,
+				168.5,
+				55.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				305.0,
+				309.0,
+				109.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2193",
+			"native_rect": [
+				152.5,
+				154.5,
+				54.5,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Chuỳ",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				305.0,
+				337.0,
+				109.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2194",
+			"native_rect": [
+				152.5,
+				168.5,
+				54.5,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				434.0,
+				309.0,
+				110.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2198",
+			"native_rect": [
+				217.0,
+				154.5,
+				55.0,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Katana",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				434.0,
+				337.0,
+				110.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2199",
+			"native_rect": [
+				217.0,
+				168.5,
+				55.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				564.0,
+				309.0,
+				110.0,
+				28.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2203",
+			"native_rect": [
+				282.0,
+				154.5,
+				55.0,
+				14.0
+			],
+			"outline_design": 0,
+			"text": "Đại Bác",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				564.0,
+				337.0,
+				110.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2204",
+			"native_rect": [
+				282.0,
+				168.5,
+				55.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Cấp 1",
+			"visible": true,
+			"visible_line_count": 1
+		},
+		{
+			"design_rect": [
+				40.0,
+				380.0,
+				640.0,
+				24.0
+			],
+			"font_size_design": 20,
+			"font_size_native": 10.0,
+			"line_count": 1,
+			"name": "@Label@2206",
+			"native_rect": [
+				20.0,
+				190.0,
+				320.0,
+				12.0
+			],
+			"outline_design": 0,
+			"text": "Chạm xem chi tiết · Giữ và kéo để đổi đội",
+			"visible": true,
+			"visible_line_count": 1
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"isolated_project": true,
+	"native_size": [
+		128,
+		120
+	],
+	"preview_size": [
+		1024,
+		800
+	],
+	"production_changed": false,
+	"renderer": "NVIDIA GeForce RTX 3050 Laptop GPU",
+	"source_loaded": true,
+	"status": "passed"
+}

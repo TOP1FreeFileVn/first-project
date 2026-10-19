@@ -1,0 +1,529 @@
+{
+	"failures": 0,
+	"labels": [
+		{
+			"available": 672.0,
+			"fits": true,
+			"text": "Lính",
+			"width": 72.0
+		},
+		{
+			"available": 169.0,
+			"fits": true,
+			"text": "Đội hình 3/3",
+			"width": 169.0
+		},
+		{
+			"available": 43.0,
+			"fits": true,
+			"text": "724",
+			"width": 43.0
+		},
+		{
+			"available": 119.0,
+			"fits": true,
+			"text": "Gậy Phép",
+			"width": 96.0
+		},
+		{
+			"available": 119.0,
+			"fits": true,
+			"text": "Cấp 1",
+			"width": 64.0
+		},
+		{
+			"available": 119.0,
+			"fits": true,
+			"text": "Cung",
+			"width": 53.0
+		},
+		{
+			"available": 119.0,
+			"fits": true,
+			"text": "Cấp 1",
+			"width": 64.0
+		},
+		{
+			"available": 119.0,
+			"fits": true,
+			"text": "Chuỳ",
+			"width": 52.0
+		},
+		{
+			"available": 119.0,
+			"fits": true,
+			"text": "Cấp 1",
+			"width": 64.0
+		},
+		{
+			"available": 119.0,
+			"fits": true,
+			"text": "Thành 3",
+			"width": 82.0
+		},
+		{
+			"available": 120.0,
+			"fits": true,
+			"text": "Thành 6",
+			"width": 82.0
+		},
+		{
+			"available": 648.0,
+			"fits": true,
+			"text": "Chạm để xem · Giữ để đổi đội",
+			"width": 328.0
+		},
+		{
+			"available": 672.0,
+			"fits": true,
+			"text": "Bộ sưu tập",
+			"width": 146.0
+		},
+		{
+			"available": 110.0,
+			"fits": true,
+			"text": "Tất cả",
+			"width": 75.0
+		},
+		{
+			"available": 111.0,
+			"fits": true,
+			"text": "Thường",
+			"width": 90.0
+		},
+		{
+			"available": 111.0,
+			"fits": true,
+			"text": "Hiếm",
+			"width": 63.0
+		},
+		{
+			"available": 111.0,
+			"fits": true,
+			"text": "Sử thi",
+			"width": 69.0
+		},
+		{
+			"available": 145.0,
+			"fits": true,
+			"text": "Huyền thoại",
+			"width": 145.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Kiếm",
+			"width": 127.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thường · Bộ binh",
+			"width": 188.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Cấp 7/10",
+			"width": 109.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thẻ lên sao  7/10",
+			"width": 190.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "↑ Lên cấp bằng vàng",
+			"width": 234.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Rìu",
+			"width": 101.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Hiếm · Bộ binh",
+			"width": 163.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Cấp 1/10",
+			"width": 109.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thẻ lên sao  9/10",
+			"width": 190.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "↑ Lên cấp bằng vàng",
+			"width": 234.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Đao",
+			"width": 112.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Sử thi · Bộ binh",
+			"width": 169.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Katana",
+			"width": 159.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Huyền thoại · Bộ binh",
+			"width": 239.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 272.0,
+			"fits": true,
+			"text": "Mèo Cung",
+			"width": 125.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thường · Tầm xa",
+			"width": 186.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Cấp 1/10",
+			"width": 109.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thẻ lên sao  0/10",
+			"width": 190.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "↑ Lên cấp bằng vàng",
+			"width": 234.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Nỏ",
+			"width": 94.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Hiếm · Tầm xa",
+			"width": 161.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Súng",
+			"width": 125.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Sử thi · Tầm xa",
+			"width": 167.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Đại Bác",
+			"width": 159.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Huyền thoại · Tầm xa",
+			"width": 237.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 272.0,
+			"fits": true,
+			"text": "Mèo Gậy Phép",
+			"width": 182.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thường · Pháp sư",
+			"width": 191.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Cấp 1/10",
+			"width": 109.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thẻ lên sao  0/10",
+			"width": 190.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "↑ Lên cấp bằng vàng",
+			"width": 234.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Bình Thuốc",
+			"width": 204.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Hiếm · Pháp sư",
+			"width": 166.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Sách Phép",
+			"width": 193.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Sử thi · Pháp sư",
+			"width": 172.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Đũa Phép",
+			"width": 184.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Huyền thoại · Pháp sư",
+			"width": 242.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Giáo",
+			"width": 118.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thường · Kỵ binh",
+			"width": 186.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Cự Kiếm",
+			"width": 164.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Hiếm · Kỵ binh",
+			"width": 161.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		},
+		{
+			"available": 272.0,
+			"fits": true,
+			"text": "Mèo Chuỳ",
+			"width": 125.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Sử thi · Kỵ binh",
+			"width": 167.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Cấp 1/10",
+			"width": 109.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Thẻ lên sao  0/10",
+			"width": 190.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "↑ Lên cấp bằng vàng",
+			"width": 234.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Mèo Búa",
+			"width": 111.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Huyền thoại · Kỵ binh",
+			"width": 237.0
+		},
+		{
+			"available": 196.0,
+			"fits": true,
+			"text": "Chưa mở",
+			"width": 103.0
+		},
+		{
+			"available": 300.0,
+			"fits": true,
+			"text": "Nhận 1 thẻ để mở",
+			"width": 199.0
+		}
+	],
+	"persist": false,
+	"static_mockup": true
+}

@@ -1,0 +1,348 @@
+{
+  "fileKey": "wMtwWaYIiKUchUdq5YdTm5",
+  "pageId": "3539:2",
+  "rootNodeId": "3621:2",
+  "url": "https://www.figma.com/design/wMtwWaYIiKUchUdq5YdTm5?node-id=3621-2",
+  "reviewStatus": "complete_awaiting_user_art_review",
+  "productionChanged": false,
+  "mainOutlineUnitPx": 9,
+  "bowstringUnitPx": 1.5,
+  "unitCanvas": [
+    256,
+    240
+  ],
+  "nativePreview": [
+    128,
+    120
+  ],
+  "newWeapons": 15,
+  "acceptedSwordIncluded": true,
+  "cards": [
+    {
+      "id": "kiem",
+      "cardNodeId": "3621:6",
+      "isolatedNodeId": "3620:3",
+      "heldNodeId": "3620:5"
+    },
+    {
+      "id": "riu",
+      "cardNodeId": "3621:16",
+      "isolatedNodeId": "3620:2",
+      "heldNodeId": "3620:4"
+    },
+    {
+      "id": "dao",
+      "cardNodeId": "3621:26",
+      "isolatedNodeId": "3620:7",
+      "heldNodeId": "3620:8"
+    },
+    {
+      "id": "katana",
+      "cardNodeId": "3621:36",
+      "isolatedNodeId": "3620:6",
+      "heldNodeId": "3620:9"
+    },
+    {
+      "id": "cung",
+      "cardNodeId": "3621:47",
+      "isolatedNodeId": "3620:10",
+      "heldNodeId": "3620:12"
+    },
+    {
+      "id": "no",
+      "cardNodeId": "3621:57",
+      "isolatedNodeId": "3620:11",
+      "heldNodeId": "3620:13"
+    },
+    {
+      "id": "sung",
+      "cardNodeId": "3621:67",
+      "isolatedNodeId": "3620:14",
+      "heldNodeId": "3620:15"
+    },
+    {
+      "id": "dai_bac",
+      "cardNodeId": "3621:77",
+      "isolatedNodeId": "3620:17",
+      "heldNodeId": "3620:16"
+    },
+    {
+      "id": "gay_phep",
+      "cardNodeId": "3621:88",
+      "isolatedNodeId": "3620:18",
+      "heldNodeId": "3620:19"
+    },
+    {
+      "id": "thuoc",
+      "cardNodeId": "3621:98",
+      "isolatedNodeId": "3620:20",
+      "heldNodeId": "3620:21"
+    },
+    {
+      "id": "sach_phep",
+      "cardNodeId": "3621:108",
+      "isolatedNodeId": "3620:22",
+      "heldNodeId": "3620:23"
+    },
+    {
+      "id": "dua_phep",
+      "cardNodeId": "3621:118",
+      "isolatedNodeId": "3620:24",
+      "heldNodeId": "3620:25"
+    },
+    {
+      "id": "giao",
+      "cardNodeId": "3621:129",
+      "isolatedNodeId": "3620:26",
+      "heldNodeId": "3620:27"
+    },
+    {
+      "id": "cu_kiem",
+      "cardNodeId": "3621:139",
+      "isolatedNodeId": "3620:28",
+      "heldNodeId": "3620:29"
+    },
+    {
+      "id": "chuy",
+      "cardNodeId": "3621:149",
+      "isolatedNodeId": "3620:30",
+      "heldNodeId": "3620:31"
+    },
+    {
+      "id": "bua",
+      "cardNodeId": "3621:159",
+      "isolatedNodeId": "3620:32",
+      "heldNodeId": "3620:33"
+    }
+  ],
+  "assets": {
+    "bua-held": {
+      "success": true,
+      "imageHash": "4b934ea1cc0b9de43419ac472f414c55f78f8c69",
+      "sizeBytes": 97674,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:33"
+    },
+    "bua-isolated": {
+      "success": true,
+      "imageHash": "0ca31f0b41f5632276ae6efa41f865501141c093",
+      "sizeBytes": 9533,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:32"
+    },
+    "chuy-held": {
+      "success": true,
+      "imageHash": "b3bcf421e6ee3d0356b34a2435f33f15d432f958",
+      "sizeBytes": 102676,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:31"
+    },
+    "chuy-isolated": {
+      "success": true,
+      "imageHash": "7e58f4910230e83fb786d6541f39baa299f6584e",
+      "sizeBytes": 12120,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:30"
+    },
+    "cung-held": {
+      "success": true,
+      "imageHash": "2573b169cdad9c7574c45d9f02412489d4a72df4",
+      "sizeBytes": 89503,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:12"
+    },
+    "cung-isolated": {
+      "success": true,
+      "imageHash": "ca8c4e02260f4fca5ee051c32c9c43d3d5cd7a67",
+      "sizeBytes": 10987,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:10"
+    },
+    "cu_kiem-held": {
+      "success": true,
+      "imageHash": "8ff35567ea6b61ae3212826c92cb10d4b30e398b",
+      "sizeBytes": 92743,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:29"
+    },
+    "cu_kiem-isolated": {
+      "success": true,
+      "imageHash": "1878e36435de07fdfef34bdec31e9442a7dec392",
+      "sizeBytes": 9830,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:28"
+    },
+    "dai_bac-held": {
+      "success": true,
+      "imageHash": "0594a5b2eafac293d5cacdb5cba4feab90b5f4f4",
+      "sizeBytes": 98973,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:16"
+    },
+    "dai_bac-isolated": {
+      "success": true,
+      "imageHash": "490d4fc70f99438f97487b12e7bebc6ce9403f4e",
+      "sizeBytes": 18750,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:17"
+    },
+    "dao-held": {
+      "success": true,
+      "imageHash": "4ed9566280b13691e71342a611462ce9df7ec468",
+      "sizeBytes": 102019,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:8"
+    },
+    "dao-isolated": {
+      "success": true,
+      "imageHash": "3bc416a5c11644c3a9c2524d842b8748ef745b11",
+      "sizeBytes": 8469,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:7"
+    },
+    "dua_phep-held": {
+      "success": true,
+      "imageHash": "82c04de160b758b3cfc62cf7bede8b315645c3ff",
+      "sizeBytes": 98634,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:25"
+    },
+    "dua_phep-isolated": {
+      "success": true,
+      "imageHash": "2f7788939adf9611c983defd7a25342b73b182bd",
+      "sizeBytes": 11868,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:24"
+    },
+    "gay_phep-held": {
+      "success": true,
+      "imageHash": "00a5feff801eab78704349cd53e91a3b6e8ca600",
+      "sizeBytes": 101718,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:19"
+    },
+    "gay_phep-isolated": {
+      "success": true,
+      "imageHash": "62a8258656e4d226e16bd8bb980e9437579e66ee",
+      "sizeBytes": 9650,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:18"
+    },
+    "giao-held": {
+      "success": true,
+      "imageHash": "7b98012c31f3ac672aa7c0181849f14e765728b0",
+      "sizeBytes": 94486,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:27"
+    },
+    "giao-isolated": {
+      "success": true,
+      "imageHash": "d4efeaf1f0851e584effb1ebcff912895354543e",
+      "sizeBytes": 7307,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:26"
+    },
+    "katana-held": {
+      "success": true,
+      "imageHash": "fbf249547029c823d4e13999d8edb9d42eb4a300",
+      "sizeBytes": 105781,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:9"
+    },
+    "katana-isolated": {
+      "success": true,
+      "imageHash": "186dba9c4608d84f1c63e8834a3301739cc07437",
+      "sizeBytes": 5912,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:6"
+    },
+    "kiem-held": {
+      "success": true,
+      "imageHash": "51a3da8bface21c4f61b3f72026b430ac1ca4593",
+      "sizeBytes": 101405,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:5"
+    },
+    "kiem-isolated": {
+      "success": true,
+      "imageHash": "a3832ff54c3cfb902df937f798bb8321be641864",
+      "sizeBytes": 8180,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:3"
+    },
+    "no-held": {
+      "success": true,
+      "imageHash": "ecbf82a9a479ce20cb7b86616c251d4cbaeecb5c",
+      "sizeBytes": 91719,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:13"
+    },
+    "no-isolated": {
+      "success": true,
+      "imageHash": "eb0f97feef49c4133c62452828b5580325d90256",
+      "sizeBytes": 17739,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:11"
+    },
+    "riu-held": {
+      "success": true,
+      "imageHash": "86f2946845d5ddbbbf76280d46b3c4db3e882f42",
+      "sizeBytes": 109747,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:4"
+    },
+    "riu-isolated": {
+      "success": true,
+      "imageHash": "9430de3e90da8302635d0fc2564e78ecd11cd8cd",
+      "sizeBytes": 10867,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:2"
+    },
+    "sach_phep-held": {
+      "success": true,
+      "imageHash": "5f062baeb6d3f9e990f2edf5777825e62c970685",
+      "sizeBytes": 84398,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:23"
+    },
+    "sach_phep-isolated": {
+      "success": true,
+      "imageHash": "a11f55617a0c7b21e119b429e04aa16f7b11b73a",
+      "sizeBytes": 15361,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:22"
+    },
+    "sung-held": {
+      "success": true,
+      "imageHash": "297032eb94bacf8853b67755f08704dddcfa692a",
+      "sizeBytes": 98275,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:15"
+    },
+    "sung-isolated": {
+      "success": true,
+      "imageHash": "6c173668a3627494871cbfab0b61d7f275033ca3",
+      "sizeBytes": 16621,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:14"
+    },
+    "thuoc-held": {
+      "success": true,
+      "imageHash": "b4afefb434513dd9944de204f42dbf6ed07cf290",
+      "sizeBytes": 89542,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:21"
+    },
+    "thuoc-isolated": {
+      "success": true,
+      "imageHash": "1610eddd068e681b8ad4ea60c77215b5d9a6d568",
+      "sizeBytes": 17308,
+      "contentType": "image/png",
+      "placedOnNodeId": "3620:20"
+    }
+  },
+  "finalVisualCheck": "Plugin API root.screenshot after aspect-ratio fix; all32 image layers visible, all16 labels readable",
+  "nativeVerification": "native/review_native_status.json",
+  "independentVerification": "independent-qa.json",
+  "generationRoute": "Figma generate_image / gpt-image-2.5-sunburst; exact prompts in prompts/; raw provenance in manifests/"
+}

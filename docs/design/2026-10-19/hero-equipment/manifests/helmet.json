@@ -1,0 +1,24 @@
+{
+  "id": "helmet",
+  "model": "gpt-image-2.5-sunburst",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "26:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt": "prompts/helmet.txt",
+  "raw": "raw/helmet.png",
+  "reference": "cat-sprite-art hero contract / approved nine-px weapon set",
+  "reference_mode": "text brief informed by inspected local source; no image input conditioning",
+  "status": "generated_visual_qa_passed_pending_shared_processing",
+  "source_bbox_xyxy": [
+    29,
+    183,
+    995,
+    742
+  ],
+  "anchor_source": [
+    512,
+    643
+  ],
+  "qa": "Wide open-bottom silver crown with integrated metal cat-ear pockets, gold brow band and centered coral plume. No faceplate or cheek pieces; eye area remains open below. Mild gradients require shared flattening."
+}

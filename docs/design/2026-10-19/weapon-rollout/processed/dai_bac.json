@@ -1,0 +1,29 @@
+{
+  "processing": {
+    "padding_source": 128,
+    "outer_contour_target_unit_px": 9,
+    "radius_source_px": 88.1413043478261,
+    "palette": "shared matte material fields",
+    "source_artwork_preserved": true,
+    "original_raw_unchanged": true
+  },
+  "placement": {
+    "grip": [
+      200,
+      530
+    ],
+    "scale": 0.10210876803551609,
+    "angle": 0,
+    "paw": [
+      160,
+      185
+    ],
+    "weapon_bounds_unit_px": [
+      139.33,
+      136.33,
+      247.0,
+      227.33
+    ],
+    "clipping": false
+  }
+}

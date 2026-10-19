@@ -1,0 +1,339 @@
+{
+	"actual": [
+		360,
+		640
+	],
+	"bar": {
+		"design_rect": [
+			6.0,
+			1120.0,
+			708.0,
+			178.0
+		],
+		"minimum_size": [
+			583.0,
+			166.0
+		],
+		"name": "@HBoxContainer@1472",
+		"path": "@Control@546/@HBoxContainer@1472",
+		"render_rect": [
+			3.0,
+			560.0,
+			354.0,
+			89.0
+		],
+		"type": "HBoxContainer",
+		"visible": true
+	},
+	"caption": {
+		"design_rect": [
+			143.0,
+			1240.0,
+			166.0,
+			34.0
+		],
+		"fits_width": true,
+		"font_color": "583f21ff",
+		"font_outline_color": "2e1c1cff",
+		"font_size": 24,
+		"minimum_size": [
+			119.0,
+			34.0
+		],
+		"name": "SelectedNavCaption",
+		"outline_size": 0,
+		"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457/@VBoxContainer@1452/SelectedNavFooter/@VBoxContainer@1455/SelectedNavCaption",
+		"render_rect": [
+			71.5,
+			620.0,
+			83.0,
+			17.0
+		],
+		"text": "Anh hùng",
+		"text_width": 119.0,
+		"type": "Label",
+		"visible": true
+	},
+	"cells": [
+		{
+			"design_rect": [
+				6.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1451",
+			"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1451",
+			"render_rect": [
+				3.0,
+				560.0,
+				66.5,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				139.0,
+				1120.0,
+				174.0,
+				178.0
+			],
+			"icon": {
+				"design_rect": [
+					179.0,
+					1134.0,
+					94.0,
+					94.0
+				],
+				"minimum_size": [
+					94.0,
+					94.0
+				],
+				"name": "@TextureRect@1454",
+				"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457/@VBoxContainer@1452/@Control@1453/@TextureRect@1454",
+				"render_rect": [
+					89.5,
+					567.0,
+					47.0,
+					47.0
+				],
+				"type": "TextureRect",
+				"visible": true
+			},
+			"icon_holder": {
+				"design_rect": [
+					139.0,
+					1138.0,
+					174.0,
+					100.0
+				],
+				"minimum_size": [
+					0.0,
+					100.0
+				],
+				"name": "@Control@1453",
+				"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457/@VBoxContainer@1452/@Control@1453",
+				"render_rect": [
+					69.5,
+					569.0,
+					87.0,
+					50.0
+				],
+				"type": "Control",
+				"visible": true
+			},
+			"minimum_size": [
+				127.0,
+				166.0
+			],
+			"name": "@PanelContainer@1457",
+			"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457",
+			"render_rect": [
+				69.5,
+				560.0,
+				87.0,
+				89.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				313.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1462",
+			"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1462",
+			"render_rect": [
+				156.5,
+				560.0,
+				66.5,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				446.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1467",
+			"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1467",
+			"render_rect": [
+				223.0,
+				560.0,
+				67.0,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"design_rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"minimum_size": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1471",
+			"path": "@Control@546/@HBoxContainer@1472/@MarginContainer@1471",
+			"render_rect": [
+				290.0,
+				560.0,
+				67.0,
+				89.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		}
+	],
+	"file": "hero_360x640.png",
+	"footer": {
+		"design_rect": [
+			139.0,
+			1238.0,
+			174.0,
+			60.0
+		],
+		"minimum_size": [
+			127.0,
+			60.0
+		],
+		"name": "SelectedNavFooter",
+		"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457/@VBoxContainer@1452/SelectedNavFooter",
+		"render_rect": [
+			69.5,
+			619.0,
+			87.0,
+			30.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"index": 1,
+	"nav": "hero_360x640_nav.png",
+	"nav_holder": {
+		"design_rect": [
+			0.0,
+			1120.0,
+			720.0,
+			160.0
+		],
+		"minimum_size": [
+			0.0,
+			0.0
+		],
+		"name": "@Control@546",
+		"path": "@Control@546",
+		"render_rect": [
+			0.0,
+			560.0,
+			360.0,
+			80.0
+		],
+		"type": "Control",
+		"visible": true
+	},
+	"render_scale": [
+		0.5,
+		0.5
+	],
+	"requested": [
+		360,
+		640
+	],
+	"selected_cell": {
+		"design_rect": [
+			139.0,
+			1120.0,
+			174.0,
+			178.0
+		],
+		"icon": {
+			"design_rect": [
+				179.0,
+				1134.0,
+				94.0,
+				94.0
+			],
+			"minimum_size": [
+				94.0,
+				94.0
+			],
+			"name": "@TextureRect@1454",
+			"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457/@VBoxContainer@1452/@Control@1453/@TextureRect@1454",
+			"render_rect": [
+				89.5,
+				567.0,
+				47.0,
+				47.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		"icon_holder": {
+			"design_rect": [
+				139.0,
+				1138.0,
+				174.0,
+				100.0
+			],
+			"minimum_size": [
+				0.0,
+				100.0
+			],
+			"name": "@Control@1453",
+			"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457/@VBoxContainer@1452/@Control@1453",
+			"render_rect": [
+				69.5,
+				569.0,
+				87.0,
+				50.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		"minimum_size": [
+			127.0,
+			166.0
+		],
+		"name": "@PanelContainer@1457",
+		"path": "@Control@546/@HBoxContainer@1472/@PanelContainer@1457",
+		"render_rect": [
+			69.5,
+			560.0,
+			87.0,
+			89.0
+		],
+		"type": "PanelContainer",
+		"visible": true
+	},
+	"tab": "hero",
+	"window": [
+		360,
+		640
+	]
+}

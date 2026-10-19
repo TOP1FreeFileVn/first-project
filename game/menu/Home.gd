@@ -28,8 +28,9 @@ const TROOPS_TAB := 3
 const SUMMON_TAB := 4
 const TOP_HEIGHT := 112.0
 const NAV_HEIGHT := 160.0
+const SHOP_SKY := Color("4e78a3")
+const SHOP_AWNING_SIZE := Vector2(720, 104)
 const SCREEN := Vector2(720, 1280)
-const SKY := Color("6fa3e0")
 ## The nav bar runs this far past the bottom edge (see Ui.bottom_nav).
 const NAV_BLEED := 18.0
 
@@ -39,6 +40,9 @@ static var last_tab := BATTLE_TAB
 var _content: Control
 var _pages: Array = []
 var _current := -1
+var _sky_backdrop: ColorRect
+var _shop_backdrop: ColorRect
+var _header: Control
 var _gold_label: Label
 var _gem_label: Label
 var _cheat_label: Label
@@ -58,9 +62,19 @@ func _ready() -> void:
 	theme = UiKit.make_theme()
 	# The skin is smooth SVG art; pixel portraits set nearest on themselves.
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-	var backdrop := Ui.pattern_bg(SKY)
-	add_child(backdrop)
-	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_sky_backdrop = Ui.menu_bg()
+	add_child(_sky_backdrop)
+	_sky_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_shop_backdrop = Ui.pattern_bg(SHOP_SKY)
+	_shop_backdrop.name = "ShopBackground"
+	_shop_backdrop.visible = false
+	add_child(_shop_backdrop)
+	_shop_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var awning := Ui.image("shop_awning", SHOP_AWNING_SIZE)
+	awning.name = "ShopAwning"
+	awning.stretch_mode = TextureRect.STRETCH_SCALE
+	awning.size = SHOP_AWNING_SIZE
+	_shop_backdrop.add_child(awning)
 	_content = Control.new()
 	_content.position = Vector2(0, TOP_HEIGHT)
 	_content.size = Vector2(SCREEN.x, SCREEN.y - TOP_HEIGHT - NAV_HEIGHT)
@@ -97,6 +111,12 @@ func select_tab(index: int, animate := true) -> void:
 	var from := _current
 	_current = index
 	last_tab = index
+	_sky_backdrop.visible = index != SHOP_TAB
+	_shop_backdrop.visible = index == SHOP_TAB
+	# The shop canopy sits above the shared HUD row.
+	_header.position.y = SHOP_AWNING_SIZE.y if index == SHOP_TAB else 0.0
+	_content.position.y = TOP_HEIGHT + _header.position.y
+	_content.size.y = SCREEN.y - _content.position.y - NAV_HEIGHT
 	for i in _pages.size():
 		_pages[i].visible = i == index
 	var page: Control = _pages[index]
@@ -132,7 +152,7 @@ func _on_tick() -> void:
 ## Opens an event page (a MenuPage script) over the tabs, with a back button.
 func open_page(script) -> void:
 	close_page()
-	var holder := Ui.pattern_bg(SKY)
+	var holder := Ui.pattern_bg(SHOP_SKY) if _current == SHOP_TAB else Ui.menu_bg()
 	holder.position = _content.position
 	holder.size = _content.size
 	holder.clip_contents = true
@@ -218,6 +238,7 @@ func _tap(content: Control, on_press: Callable) -> PanelContainer:
 # One centered HUD row; the optional cheat marker never changes its layout.
 func _build_top_bar() -> void:
 	var bar := _skinned(Ui.margin(14, 12, 14, 16))
+	_header = bar
 	bar.name = "Header"
 	bar.position = Vector2.ZERO
 	bar.size = Vector2(SCREEN.x, TOP_HEIGHT)

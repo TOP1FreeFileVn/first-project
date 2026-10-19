@@ -208,23 +208,51 @@ def nav_cell():
 
 
 def nav_selected():
-    """Selected tab, our own look: a taller warm block (orange to deep orange, so the gold parts
-    of the tab icons and the white label stand out: 1.9-2.7:1 for gold, was 1.2), cat-brown outline,
-    faint paw prints, a light streak on top."""
-    # The outline is centred on the path: inset it by half its width (2) on every side, or the
-    # canvas clips half the left/right strokes and they look thinner than the top.
-    edge = "M2 136 L2 22 Q2 6 18 6 L134 6 Q150 6 150 22 L150 136"
-    d = edge + " Z"
-    defs = (f'<clipPath id="c"><path d="{d}"/></clipPath>'
-            '<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f07b2a"/>'
-            '<stop offset="1" stop-color="#d9562a"/></linearGradient>')
-    body = f'<path d="{d}" fill="url(#g)"/>'
-    body += '<g clip-path="url(#c)">'
-    for x, y in ((30, 40), (122, 64), (40, 112), (110, 126), (76, 88)):
-        body += paw_mark(x, y, 1.5, "#ffffff", 0.18)
-    body += '<rect x="16" y="10" width="120" height="6" rx="3" fill="#ffffff" fill-opacity="0.55"/></g>'
-    body += f'<path d="{edge}" fill="none" stroke="{CAT_LINE}" stroke-width="4" stroke-linejoin="round"/>'
-    return svg(152, 136, body, defs)
+    """Quiet selected tab: a matte peach field behind the icon and the cat-brown frame.
+    The caption has its own layout-bound cream footer, not a stretched SVG decoration."""
+    # Filled contours keep the complete 4px side strips inside the canvas. Both
+    # edges then have identical opaque texels for the StyleBoxTexture's 9-slice.
+    outer = "M0 136 V22 Q0 4 18 4 H134 Q152 4 152 22 V136 Z"
+    inner = "M4 136 V22 Q4 8 18 8 H134 Q148 8 148 22 V136 Z"
+    body = f'<path d="{outer}" fill="{CAT_LINE}"/>'
+    body += f'<path d="{inner}" fill="#e8c09a"/>'
+    return svg(152, 136, body)
+
+
+def nav_selected_footer():
+    """Caption band tied to the real label row; side strokes continue the outer frame."""
+    body = rect(0, 0, 152, 64, 0, "#fff0d3")
+    body += rect(4, 0, 144, 2, 0, "#bd986e")
+    body += rect(0, 0, 4, 64, 0, CAT_LINE)
+    body += rect(148, 0, 4, 64, 0, CAT_LINE)
+    return svg(152, 64, body)
+
+
+TROOP_CARD_RIMS = {"green": "#8fba72", "blue": "#79add0", "purple": "#b292cf",
+                   "orange": "#d4a36a", "locked": "#baaa90"}
+TROOP_PORTRAIT_FIELDS = {"green": "#86d46b", "blue": "#6cbbe8",
+                         "purple": "#b98be8", "orange": "#f7af6f"}
+
+
+def troop_card(tone, pressed=False):
+    """One continuous rarity field, including the name and earned-star row."""
+    face = TROOP_PORTRAIT_FIELDS.get(tone, TROOP_CARD_RIMS[tone])
+    if pressed:
+        face = mix(face, CAT_LINE, 0.13)
+    body = rect(2, 2, 152, 236, 12, TROOP_CARD_RIMS[tone])
+    body += f'<rect x="2" y="2" width="152" height="236" rx="12" fill="none" stroke="{CAT_LINE}" stroke-width="4"/>'
+    body += rect(8, 8, 140, 224, 7, face)
+    return svg(156, 240, body)
+
+
+def troop_portrait_field(tone):
+    """The portrait shares the full card's rarity field, without a pale footer."""
+    return svg(156, 100, rect(0, 0, 156, 100, 6, TROOP_PORTRAIT_FIELDS[tone]))
+
+
+def troop_state_backing():
+    """A quiet plate keeps green checks and gold stars legible on every rarity."""
+    return svg(32, 32, rect(0, 0, 32, 32, 8, "#fff0d3"))
 
 
 # --- Bars -------------------------------------------------------------------------------------
@@ -473,6 +501,23 @@ def star_pts(cx, cy, ro, ri, k=5):
              cy + math.sin(-math.pi / 2 + math.pi * i / k) * (ro if i % 2 == 0 else ri)) for i in range(k * 2)]
 
 
+def rounded_poly(pts, rounding=0.18):
+    """Round each corner with a quadratic turn; useful for small, soft game glyphs."""
+    turns = []
+    for i, point in enumerate(pts):
+        previous, following = pts[i - 1], pts[(i + 1) % len(pts)]
+        entry = tuple(point[j] + (previous[j] - point[j]) * rounding for j in (0, 1))
+        leave = tuple(point[j] + (following[j] - point[j]) * rounding for j in (0, 1))
+        turns.append((entry, point, leave))
+    start = turns[0][0]
+    d = f"M{n(start[0])} {n(start[1])}"
+    for i, (entry, point, leave) in enumerate(turns):
+        if i:
+            d += f" L{n(entry[0])} {n(entry[1])}"
+        d += f" Q{n(point[0])} {n(point[1])} {n(leave[0])} {n(leave[1])}"
+    return d + " Z"
+
+
 def gear_pts(cx, cy, r, teeth=8):
     pts, step = [], math.tau / teeth
     for i in range(teeth):
@@ -528,6 +573,12 @@ def make_icons():
         if name == "star":
             ic.shine(57, 42, 6.5)
         icons[name] = ic
+
+    # Earned troop stars are round and flat like the cats, with no grey placeholders,
+    # white glint, backing chip, or dimensional UI-icon lip.
+    ic = Icon()
+    ic.shape(rounded_poly(star_pts(64, 65, 55, 29)), "#ffd15a", "#ffd15a", 128)
+    icons["troop_star"] = ic
 
     ic = Icon()
     ic.shape(poly(gear_pts(64, 62, 52)), "#ffe14d", "#f7d541", 62)
@@ -1401,6 +1452,14 @@ def main():
     for tone in GEAR_TONES:
         save(f"gear_bg_{tone}", gear_card_bg(tone))
     save("nav_selected", nav_selected())
+    save("nav_selected_footer", nav_selected_footer())
+    for tone in TROOP_CARD_RIMS:
+        save(f"troop_card_{tone}", troop_card(tone))
+        if tone != "locked":
+            save(f"troop_card_{tone}_pressed", troop_card(tone, True))
+    for tone in TROOP_PORTRAIT_FIELDS:
+        save(f"troop_portrait_{tone}", troop_portrait_field(tone))
+    save("troop_state_backing", troop_state_backing())
     make_battle_cogs()
     save("bar_track_hp", bar_track(40, 28, 14, "#88776f", 3))
     save("bar_track_exp", bar_track(40, 14, 7, "#cab1a5", 2))
@@ -1427,7 +1486,7 @@ def main():
             # Things cats hold or wear (weapons, eq_* equipment) follow the cat style
             # (user rule, 2026-10-18), and so do the bottom-nav tab icons, next to the hero cat head;
             # other UI icons keep the icon style.
-            flat = prefix == "icon_w_" or name.startswith(("eq_", "tab_")) or name in FLAT_FEATURE_ICONS
+            flat = prefix == "icon_w_" or name.startswith(("eq_", "tab_")) or name in FLAT_FEATURE_ICONS or name == "troop_star"
             draw = ic.flat_svg if flat else ic.svg
             save(f"{prefix}{name}", draw(128))
             for size in ICON_SIZES[:-1]:

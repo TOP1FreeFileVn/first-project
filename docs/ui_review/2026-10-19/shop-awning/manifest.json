@@ -1,0 +1,990 @@
+{
+	"captures": [
+		{
+			"actual": [
+				450,
+				800
+			],
+			"controls": {
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"MenuBackground": {
+					"name": "MenuBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/menu_sky.gdshader",
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						104.0
+					],
+					"visible": false
+				},
+				"ShopBackground": {
+					"name": "ShopBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/pattern_scroll.gdshader",
+					"sky": "(0.3059, 0.4706, 0.6392, 1.0)",
+					"visible": false
+				},
+				"first_offer": {
+					"name": "@PanelContainer@27",
+					"rect": [
+						0.0,
+						112.0,
+						56.0,
+						184.0
+					],
+					"visible": false
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@27",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@36",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@44",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@53",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							148.0
+						],
+						"visible": false
+					}
+				],
+				"wood_button": {
+					"disabled": false,
+					"name": "@Button@35",
+					"rect": [
+						0.0,
+						112.0,
+						144.0,
+						78.0
+					],
+					"text": "MỞ",
+					"visible": false
+				}
+			},
+			"elapsed_ms": 7104,
+			"file": "battle_450x800.png",
+			"selected_tab": 2
+		},
+		{
+			"actual": [
+				450,
+				800
+			],
+			"controls": {
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"MenuBackground": {
+					"name": "MenuBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/menu_sky.gdshader",
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						104.0
+					],
+					"visible": false
+				},
+				"ShopBackground": {
+					"name": "ShopBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/pattern_scroll.gdshader",
+					"sky": "(0.3059, 0.4706, 0.6392, 1.0)",
+					"visible": false
+				},
+				"first_offer": {
+					"name": "@PanelContainer@27",
+					"rect": [
+						0.0,
+						112.0,
+						56.0,
+						184.0
+					],
+					"visible": false
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@27",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@36",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@44",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@53",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							148.0
+						],
+						"visible": false
+					}
+				],
+				"wood_button": {
+					"disabled": false,
+					"name": "@Button@35",
+					"rect": [
+						0.0,
+						112.0,
+						144.0,
+						78.0
+					],
+					"text": "MỞ",
+					"visible": false
+				}
+			},
+			"elapsed_ms": 8111,
+			"file": "battle_motion_01_450x800.png",
+			"selected_tab": 2
+		},
+		{
+			"actual": [
+				450,
+				800
+			],
+			"controls": {
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"MenuBackground": {
+					"name": "MenuBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/menu_sky.gdshader",
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						104.0
+					],
+					"visible": false
+				},
+				"ShopBackground": {
+					"name": "ShopBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/pattern_scroll.gdshader",
+					"sky": "(0.3059, 0.4706, 0.6392, 1.0)",
+					"visible": false
+				},
+				"first_offer": {
+					"name": "@PanelContainer@27",
+					"rect": [
+						0.0,
+						112.0,
+						56.0,
+						184.0
+					],
+					"visible": false
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@27",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@36",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@44",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@53",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							148.0
+						],
+						"visible": false
+					}
+				],
+				"wood_button": {
+					"disabled": false,
+					"name": "@Button@35",
+					"rect": [
+						0.0,
+						112.0,
+						144.0,
+						78.0
+					],
+					"text": "MỞ",
+					"visible": false
+				}
+			},
+			"elapsed_ms": 9114,
+			"file": "battle_motion_02_450x800.png",
+			"selected_tab": 2
+		},
+		{
+			"actual": [
+				450,
+				800
+			],
+			"controls": {
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"MenuBackground": {
+					"name": "MenuBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/menu_sky.gdshader",
+					"visible": true
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						104.0
+					],
+					"visible": false
+				},
+				"ShopBackground": {
+					"name": "ShopBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/pattern_scroll.gdshader",
+					"sky": "(0.3059, 0.4706, 0.6392, 1.0)",
+					"visible": false
+				},
+				"first_offer": {
+					"name": "@PanelContainer@27",
+					"rect": [
+						0.0,
+						112.0,
+						56.0,
+						184.0
+					],
+					"visible": false
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@27",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@36",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@44",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							184.0
+						],
+						"visible": false
+					},
+					{
+						"name": "@PanelContainer@53",
+						"rect": [
+							0.0,
+							112.0,
+							56.0,
+							148.0
+						],
+						"visible": false
+					}
+				],
+				"wood_button": {
+					"disabled": false,
+					"name": "@Button@35",
+					"rect": [
+						0.0,
+						112.0,
+						144.0,
+						78.0
+					],
+					"text": "MỞ",
+					"visible": false
+				}
+			},
+			"elapsed_ms": 10113,
+			"file": "battle_motion_03_450x800.png",
+			"selected_tab": 2
+		},
+		{
+			"actual": [
+				450,
+				800
+			],
+			"controls": {
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"MenuBackground": {
+					"name": "MenuBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/menu_sky.gdshader",
+					"visible": false
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						104.0
+					],
+					"visible": true
+				},
+				"ShopBackground": {
+					"name": "ShopBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/pattern_scroll.gdshader",
+					"sky": "(0.3059, 0.4706, 0.6392, 1.0)",
+					"visible": true
+				},
+				"first_offer": {
+					"name": "@PanelContainer@464",
+					"rect": [
+						24.0,
+						307.0,
+						672.0,
+						184.0
+					],
+					"visible": true
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@464",
+						"rect": [
+							24.0,
+							307.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@473",
+						"rect": [
+							24.0,
+							507.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@481",
+						"rect": [
+							24.0,
+							707.0,
+							672.0,
+							233.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@490",
+						"rect": [
+							24.0,
+							956.0,
+							672.0,
+							148.0
+						],
+						"visible": true
+					}
+				],
+				"scroll": {
+					"bar_visible": false,
+					"max_value": 1008.0,
+					"page": 1008.0,
+					"value": 0.0
+				},
+				"wood_button": {
+					"disabled": false,
+					"name": "@Button@472",
+					"rect": [
+						524.0,
+						356.0,
+						144.0,
+						78.0
+					],
+					"text": "MỞ",
+					"visible": true
+				}
+			},
+			"elapsed_ms": 10457,
+			"file": "shop_450x800.png",
+			"selected_tab": 0
+		},
+		{
+			"actual": [
+				360,
+				640
+			],
+			"controls": {
+				"Header": {
+					"name": "Header",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						112.0
+					],
+					"visible": true
+				},
+				"MenuBackground": {
+					"name": "MenuBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/menu_sky.gdshader",
+					"visible": false
+				},
+				"ShopAwning": {
+					"name": "ShopAwning",
+					"rect": [
+						0.0,
+						112.0,
+						720.0,
+						104.0
+					],
+					"visible": true
+				},
+				"ShopBackground": {
+					"name": "ShopBackground",
+					"rect": [
+						0.0,
+						0.0,
+						720.0,
+						1280.0
+					],
+					"shader": "res://game/ui/pattern_scroll.gdshader",
+					"sky": "(0.3059, 0.4706, 0.6392, 1.0)",
+					"visible": true
+				},
+				"first_offer": {
+					"name": "@PanelContainer@616",
+					"rect": [
+						24.0,
+						307.0,
+						672.0,
+						184.0
+					],
+					"visible": true
+				},
+				"nav": {
+					"name": "@Control@375",
+					"rect": [
+						0.0,
+						1120.0,
+						720.0,
+						160.0
+					],
+					"visible": true
+				},
+				"offers": [
+					{
+						"name": "@PanelContainer@616",
+						"rect": [
+							24.0,
+							307.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@625",
+						"rect": [
+							24.0,
+							507.0,
+							672.0,
+							184.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@633",
+						"rect": [
+							24.0,
+							707.0,
+							672.0,
+							233.0
+						],
+						"visible": true
+					},
+					{
+						"name": "@PanelContainer@642",
+						"rect": [
+							24.0,
+							956.0,
+							672.0,
+							148.0
+						],
+						"visible": true
+					}
+				],
+				"scroll": {
+					"bar_visible": false,
+					"max_value": 1008.0,
+					"page": 1008.0,
+					"value": 0.0
+				},
+				"wood_button": {
+					"disabled": false,
+					"name": "@Button@624",
+					"rect": [
+						524.0,
+						356.0,
+						144.0,
+						78.0
+					],
+					"text": "MỞ",
+					"visible": true
+				}
+			},
+			"elapsed_ms": 11093,
+			"file": "shop_360x640.png",
+			"selected_tab": 0
+		}
+	],
+	"checks": [
+		{
+			"name": "awning_hidden_on_initial_battle",
+			"passed": true
+		},
+		{
+			"name": "battle_450x800_native_size",
+			"passed": true
+		},
+		{
+			"name": "battle_motion_01_450x800_native_size",
+			"passed": true
+		},
+		{
+			"name": "motion_1_geometry_static",
+			"passed": true
+		},
+		{
+			"name": "battle_motion_02_450x800_native_size",
+			"passed": true
+		},
+		{
+			"name": "motion_2_geometry_static",
+			"passed": true
+		},
+		{
+			"name": "battle_motion_03_450x800_native_size",
+			"passed": true
+		},
+		{
+			"name": "motion_3_geometry_static",
+			"passed": true
+		},
+		{
+			"name": "real_time_sky_moves_over_three_seconds",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_450",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_450_awning_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_450_background_visibility",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_native_size",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_shop_has_no_vertical_scroll",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_awning_below_header",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_awning_above_first_offer",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_awning_inside_canvas",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_0_inside_content",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_1_inside_content",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_2_inside_content",
+			"passed": true
+		},
+		{
+			"name": "shop_450x800_offer_3_inside_content",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_450",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_450_awning_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_450_background_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_360",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_360_awning_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_shop_360_background_visibility",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_native_size",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_shop_has_no_vertical_scroll",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_awning_below_header",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_awning_above_first_offer",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_awning_inside_canvas",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_0_inside_content",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_1_inside_content",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_2_inside_content",
+			"passed": true
+		},
+		{
+			"name": "shop_360x640_offer_3_inside_content",
+			"passed": true
+		},
+		{
+			"name": "free_chest_actual_click_opens_summary",
+			"passed": true
+		},
+		{
+			"name": "free_chest_grants_expected_cards_once",
+			"passed": true
+		},
+		{
+			"name": "free_chest_grants_gold_in_range",
+			"passed": true
+		},
+		{
+			"name": "free_chest_keeps_gems",
+			"passed": true
+		},
+		{
+			"name": "free_chest_sets_cooldown",
+			"passed": true
+		},
+		{
+			"name": "chest_done_actual_click_closes",
+			"passed": true
+		},
+		{
+			"name": "chest_done_keeps_granted_rewards",
+			"passed": true
+		},
+		{
+			"name": "exchange_actual_click_spends_gems",
+			"passed": true
+		},
+		{
+			"name": "exchange_actual_click_grants_gold",
+			"passed": true
+		},
+		{
+			"name": "exchange_preserves_cards",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_360",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_360_awning_visibility",
+			"passed": true
+		},
+		{
+			"name": "nav_battle_360_background_visibility",
+			"passed": true
+		}
+	],
+	"design_size": [
+		720,
+		1280
+	],
+	"failures": 0,
+	"native_render": true,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/shop-awning/mcp/profile/Godot/app_userdata/Gear Defenders"
+}

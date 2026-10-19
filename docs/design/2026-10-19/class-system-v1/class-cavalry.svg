@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><circle cx="64" cy="67" r="56" fill="#c6a46c" stroke="#583f21" stroke-width="5"/><circle cx="64" cy="61" r="56" fill="#fff0c9" stroke="#583f21" stroke-width="5"/><circle cx="64" cy="61" r="47" fill="#f4e2bc"/><g transform="translate(8 5) scale(.875)">
+  <g stroke="#583f21" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- A broad, stepped mane gives the horse a distinct silhouette at badge size. -->
+    <path d="M52 32 Q34 34 27 51 L22 65 L29 68 L23 82 L31 84 L29 102 L42 110 L58 87 L61 44 Z" fill="#bd8f62"/>
+    <!-- Two ears, long muzzle, and a curved neck form one simple cream shape. -->
+    <path d="M39 110 L44 88 Q48 76 46 65 Q45 53 51 44 L49 27 L59 34 L65 19 L73 33 Q84 34 89 47 L106 63 L106 73 Q104 80 97 81 L86 77 L78 70 Q75 75 75 83 Q74 95 87 110 Z" fill="#fff0c9"/>
+    <!-- The bridle is one generous gold band, kept clear of the eye. -->
+    <path d="M88 48 L96 54 L88 78 L80 73 Z" fill="#f5c565"/>
+    <path d="M95 71 L105 72"/>
+  </g>
+  <circle cx="77" cy="49" r="3.7" fill="#583f21"/>
+</g></svg>

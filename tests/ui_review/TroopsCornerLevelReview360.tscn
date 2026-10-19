@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://tests/ui_review/TroopsCompactReview.gd" id="1"]
+
+[node name="TroopsCornerLevelReview360" type="Node"]
+script = ExtResource("1")
+native_width = 360
+output_dir = "res://docs/ui_review/2026-10-19/troops-corner-level"
+require_rarity_field = true
+scenario_name = "starter"
+level_in_corner = true

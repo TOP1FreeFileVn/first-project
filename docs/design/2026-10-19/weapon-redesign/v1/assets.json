@@ -1,0 +1,213 @@
+{
+  "status": "awaiting_review",
+  "items": [
+    {
+      "id": "kiem",
+      "name": "Kiếm",
+      "family": "Cận chiến",
+      "rarity": "Thường",
+      "rarity_index": 0,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "id": "riu",
+      "name": "Rìu",
+      "family": "Cận chiến",
+      "rarity": "Hiếm",
+      "rarity_index": 1,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "id": "dao",
+      "name": "Đao",
+      "family": "Cận chiến",
+      "rarity": "Sử thi",
+      "rarity_index": 2,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "id": "katana",
+      "name": "Katana",
+      "family": "Cận chiến",
+      "rarity": "Huyền thoại",
+      "rarity_index": 3,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "id": "cung",
+      "name": "Cung",
+      "family": "Tầm xa",
+      "rarity": "Thường",
+      "rarity_index": 0,
+      "held_pose": [
+        109,
+        111,
+        0.8,
+        7.5
+      ]
+    },
+    {
+      "id": "no",
+      "name": "Nỏ",
+      "family": "Tầm xa",
+      "rarity": "Hiếm",
+      "rarity_index": 1,
+      "held_pose": [
+        127,
+        97,
+        0.8,
+        8.0
+      ]
+    },
+    {
+      "id": "sung",
+      "name": "Súng",
+      "family": "Tầm xa",
+      "rarity": "Sử thi",
+      "rarity_index": 2,
+      "held_pose": [
+        149,
+        96,
+        0.8,
+        8.0
+      ]
+    },
+    {
+      "id": "dai_bac",
+      "name": "Đại bác",
+      "family": "Tầm xa",
+      "rarity": "Huyền thoại",
+      "rarity_index": 3,
+      "held_pose": [
+        130,
+        120,
+        0.85,
+        8.0
+      ]
+    },
+    {
+      "id": "gay_phep",
+      "name": "Gậy phép",
+      "family": "Phép thuật",
+      "rarity": "Thường",
+      "rarity_index": 0,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "id": "thuoc",
+      "name": "Bình thuốc",
+      "family": "Phép thuật",
+      "rarity": "Hiếm",
+      "rarity_index": 1,
+      "held_pose": [
+        132,
+        88,
+        0.85,
+        8.0
+      ]
+    },
+    {
+      "id": "sach_phep",
+      "name": "Sách phép",
+      "family": "Phép thuật",
+      "rarity": "Sử thi",
+      "rarity_index": 2,
+      "held_pose": [
+        143,
+        110,
+        0.8,
+        8.0
+      ]
+    },
+    {
+      "id": "dua_phep",
+      "name": "Đũa phép",
+      "family": "Phép thuật",
+      "rarity": "Huyền thoại",
+      "rarity_index": 3,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        8.0
+      ]
+    },
+    {
+      "id": "giao",
+      "name": "Giáo",
+      "family": "Giáo & vũ khí nặng",
+      "rarity": "Thường",
+      "rarity_index": 0,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "id": "cu_kiem",
+      "name": "Cự kiếm",
+      "family": "Giáo & vũ khí nặng",
+      "rarity": "Hiếm",
+      "rarity_index": 1,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "id": "chuy",
+      "name": "Chùy",
+      "family": "Giáo & vũ khí nặng",
+      "rarity": "Sử thi",
+      "rarity_index": 2,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        8.5
+      ]
+    },
+    {
+      "id": "bua",
+      "name": "Búa",
+      "family": "Giáo & vũ khí nặng",
+      "rarity": "Huyền thoại",
+      "rarity_index": 3,
+      "held_pose": [
+        130,
+        54,
+        1.0,
+        10.0
+      ]
+    }
+  ]
+}

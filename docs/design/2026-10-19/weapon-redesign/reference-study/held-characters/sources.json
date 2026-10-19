@@ -1,0 +1,349 @@
+{
+  "file_key": "wMtwWaYIiKUchUdq5YdTm5",
+  "page": "3443:2",
+  "records": [
+    {
+      "hero": "Hero1",
+      "variant": "1",
+      "figma_node": "3447:14026",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero1\\1.png",
+      "sha256": "3ead39112313a0fb8e9d3166ca1d141a87d9f1a8943e97569f2fb0ba8e7da838"
+    },
+    {
+      "hero": "Hero2",
+      "variant": "1",
+      "figma_node": "3447:14466",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero2\\1.png",
+      "sha256": "21f2a766f1f21eee39e318435e67aa49ef40d9781c4ba3e911dfc21c20a914c8"
+    },
+    {
+      "hero": "Hero3",
+      "variant": "1",
+      "figma_node": "3447:14586",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero3\\1.png",
+      "sha256": "86d9fdadfed38035470395ad73ba5adf2baf3f792ee07ab0422892d275ca927a"
+    },
+    {
+      "hero": "Hero4",
+      "variant": "1",
+      "figma_node": "3447:14626",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero4\\1.png",
+      "sha256": "35dd6a2e18fda7f29e763b72c9cdc3e70e5cd1d7ccea6a27a4e1788541536934"
+    },
+    {
+      "hero": "Hero5",
+      "variant": "1",
+      "figma_node": "3447:14666",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero5\\1.png",
+      "sha256": "3895f61825e8edcddf89c77e6fa285b4c627bd0ae0ab9c3ab621edae6ebce904"
+    },
+    {
+      "hero": "Hero6",
+      "variant": "1",
+      "figma_node": "3447:14706",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero6\\1.png",
+      "sha256": "b41a8907e05d6d9b8e71cfe101c1a3cdc8176ff2f6e1ac06388d1dba0c03bd09"
+    },
+    {
+      "hero": "Hero7",
+      "variant": "1",
+      "figma_node": "3447:14746",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero7\\1.png",
+      "sha256": "236331ce96462006867e3963e81f8d12448d28a6374af692b7d48219e05bc4cd"
+    },
+    {
+      "hero": "Hero8",
+      "variant": "1",
+      "figma_node": "3447:14786",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero8\\1.png",
+      "sha256": "03bc74cf1c7f915bd774ce66c9080e4538de40165395faefb97e5286309ac20c"
+    },
+    {
+      "hero": "Hero9",
+      "variant": "1",
+      "figma_node": "3447:14826",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero9\\1.png",
+      "sha256": "41f92bdca361a8eed31ef9cd434b27de6b5da5b0426f157895000507b8f06477"
+    },
+    {
+      "hero": "Hero10",
+      "variant": "1",
+      "figma_node": "3447:14066",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero10\\1.png",
+      "sha256": "448c3683e44a1e5ae5af756141f520cddbe9bec7e8f62e0513365c2cdc8b62bf"
+    },
+    {
+      "hero": "Hero11",
+      "variant": "1",
+      "figma_node": "3447:14106",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero11\\1.png",
+      "sha256": "88a8ac042336d066c1200c8b8271c70384abcea55c9bea6bebb0563bb7ed59fa"
+    },
+    {
+      "hero": "Hero12",
+      "variant": "1",
+      "figma_node": "3447:14146",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero12\\1.png",
+      "sha256": "e823f235970afb2ca23fab1c87796028046b12bb154fe3a9a91e71777ecec258"
+    },
+    {
+      "hero": "Hero13",
+      "variant": "1",
+      "figma_node": "3447:14186",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero13\\1.png",
+      "sha256": "791bc631ebf67b8fcaf0a495e552a97b7957680c6ed0dca77704e9940a5c38d8"
+    },
+    {
+      "hero": "Hero14",
+      "variant": "1",
+      "figma_node": "3447:14226",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero14\\1.png",
+      "sha256": "95030576d47fe127f949732f93fb888dfc8d2ee7bf81aae8557a503593edf1ed"
+    },
+    {
+      "hero": "Hero15",
+      "variant": "1",
+      "figma_node": "3447:14266",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero15\\1.png",
+      "sha256": "00f920497798338dc16d5166d7dec242b84eb47c70c751f28557966481214914"
+    },
+    {
+      "hero": "Hero16",
+      "variant": "1",
+      "figma_node": "3447:14306",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero16\\1.png",
+      "sha256": "3c9e4893d17ad05d659685829633fddb59332cb835a14b65173e47ab5a54d9aa"
+    },
+    {
+      "hero": "Hero17",
+      "variant": "1",
+      "figma_node": "3447:14346",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero17\\1.png",
+      "sha256": "4d5bb6ab166967ee78f80c59fb94a288aabdf317f1d6e997e687f2a6ab6b1116"
+    },
+    {
+      "hero": "Hero18",
+      "variant": "1",
+      "figma_node": "3447:14386",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero18\\1.png",
+      "sha256": "11778377eba3ce051a9e2e3011ddbfc72cc8888b99f2227a9469136c6ae6d678"
+    },
+    {
+      "hero": "Hero19",
+      "variant": "1",
+      "figma_node": "3447:14426",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero19\\1.png",
+      "sha256": "94781d48b268455519097ab8480865c15a6789c4053204b772f21bb66bd62aa7"
+    },
+    {
+      "hero": "Hero20",
+      "variant": "1",
+      "figma_node": "3447:14506",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero20\\1.png",
+      "sha256": "4d5bb6ab166967ee78f80c59fb94a288aabdf317f1d6e997e687f2a6ab6b1116"
+    },
+    {
+      "hero": "Hero21",
+      "variant": "1",
+      "figma_node": "3447:14546",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero21\\1.png",
+      "sha256": "ead1cf95f2e9e0a7d5d3bdb414500d52bb4759a0cb23539c4c479e5a04353a8b"
+    },
+    {
+      "hero": "Hero1",
+      "variant": "6",
+      "figma_node": "3447:14056",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero1\\6.png",
+      "sha256": "0082cad3e5c20e570f03f5a3f50787d22f1febd73e3454ed124dff96e655efbc"
+    },
+    {
+      "hero": "Hero2",
+      "variant": "6",
+      "figma_node": "3447:14496",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero2\\6.png",
+      "sha256": "783894c9f0e57b74ee83aca1633dc04668c1a6796744ba10505edb7202e5f0a9"
+    },
+    {
+      "hero": "Hero3",
+      "variant": "6",
+      "figma_node": "3447:14616",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero3\\6.png",
+      "sha256": "8e525a6906964a34ec98fd2623eeff67bb4879647e8c0d4b0ce7d663b75de9ff"
+    },
+    {
+      "hero": "Hero4",
+      "variant": "6",
+      "figma_node": "3447:14656",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero4\\6.png",
+      "sha256": "3824cd4a4e5260c1d1b460359bb4bfddbac29fa58ed4489ff0da5101adcf739f"
+    },
+    {
+      "hero": "Hero5",
+      "variant": "6",
+      "figma_node": "3447:14696",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero5\\6.png",
+      "sha256": "791b536a210345fec7c4e56eb4aac3a0d25a8679c23c59613f986731e005f007"
+    },
+    {
+      "hero": "Hero6",
+      "variant": "6",
+      "figma_node": "3447:14736",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero6\\6.png",
+      "sha256": "9945910e4ac9e781a6747c64b4bab92a80d77824b3611b72dad561dfc243a61e"
+    },
+    {
+      "hero": "Hero7",
+      "variant": "6",
+      "figma_node": "3447:14776",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero7\\6.png",
+      "sha256": "5383fa58069630dcb40264e7625c807c3578f67a6898ed565c42a66b73143649"
+    },
+    {
+      "hero": "Hero8",
+      "variant": "6",
+      "figma_node": "3447:14816",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero8\\6.png",
+      "sha256": "d504d4f0bdc7300ea32fcb718822a6be7df0836cf472cd40e3ce0a0d2f5e287a"
+    },
+    {
+      "hero": "Hero9",
+      "variant": "6",
+      "figma_node": "3447:14856",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero9\\6.png",
+      "sha256": "6e6ae32e8302b70ba66dc15407f35897372922ed08fbaa05235de3014cc353ef"
+    },
+    {
+      "hero": "Hero10",
+      "variant": "6",
+      "figma_node": "3447:14096",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero10\\6.png",
+      "sha256": "8ca379d5d5f63f9e94beef3d0bffa7552bb05494ecbaa842760350913a85c2eb"
+    },
+    {
+      "hero": "Hero11",
+      "variant": "6",
+      "figma_node": "3447:14136",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero11\\6.png",
+      "sha256": "ab6cd7ce968469eaba50c5715ab231e04559d070f9bc612fef4c222576b35e43"
+    },
+    {
+      "hero": "Hero12",
+      "variant": "6",
+      "figma_node": "3447:14176",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero12\\6.png",
+      "sha256": "f22c4437e429d9f23f549d0c1241d0b78f86f73115b85f52d929638c6966004b"
+    },
+    {
+      "hero": "Hero13",
+      "variant": "6",
+      "figma_node": "3447:14216",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero13\\6.png",
+      "sha256": "a8bd2b0a3f589aeb039fd29913dc237d46205fc8852244aefdabfe918b206f64"
+    },
+    {
+      "hero": "Hero14",
+      "variant": "6",
+      "figma_node": "3447:14256",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero14\\6.png",
+      "sha256": "a172668b0c5ad68ef7e596806978ca84400144c9b2ae8f27f5fee50c4865a7b8"
+    },
+    {
+      "hero": "Hero15",
+      "variant": "6",
+      "figma_node": "3447:14296",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero15\\6.png",
+      "sha256": "3fe74f849f0fa962bc4c822376f15499150c81b0b81b9373c1a01c97c822289f"
+    },
+    {
+      "hero": "Hero16",
+      "variant": "6",
+      "figma_node": "3447:14336",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero16\\6.png",
+      "sha256": "8c91ec184d5984c2817848ba6250d9906c16a96295652c7ef9664c1b93ad11b0"
+    },
+    {
+      "hero": "Hero17",
+      "variant": "6",
+      "figma_node": "3447:14376",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero17\\6.png",
+      "sha256": "dab629476f0ba9a4eef753838123a848d3c27cf7f2e9499260a325cbeed88c72"
+    },
+    {
+      "hero": "Hero18",
+      "variant": "6",
+      "figma_node": "3447:14416",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero18\\6.png",
+      "sha256": "ee97e81d15b969151bdc0f695d7c386e14c5b49869880374074afb2af0a67fe5"
+    },
+    {
+      "hero": "Hero19",
+      "variant": "6",
+      "figma_node": "3447:14456",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero19\\6.png",
+      "sha256": "9a08b6ac0d11dc8097c587ca78cd0d07daf22380abdf83ccd3e244d08b5ece03"
+    },
+    {
+      "hero": "Hero20",
+      "variant": "6",
+      "figma_node": "3447:14536",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero20\\6.png",
+      "sha256": "dab629476f0ba9a4eef753838123a848d3c27cf7f2e9499260a325cbeed88c72"
+    },
+    {
+      "hero": "Hero21",
+      "variant": "6",
+      "figma_node": "3447:14576",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero21\\6.png",
+      "sha256": "3c047e38fc94a864032f05a6ab847322da13eabb04ab34b62bfd969efe085281"
+    },
+    {
+      "hero": "Hero2",
+      "variant": "1",
+      "role": "Kiếm",
+      "figma_node": "3447:14466",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero2\\1.png",
+      "sha256": "21f2a766f1f21eee39e318435e67aa49ef40d9781c4ba3e911dfc21c20a914c8"
+    },
+    {
+      "hero": "Hero6",
+      "variant": "1",
+      "role": "Rìu",
+      "figma_node": "3447:14706",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero6\\1.png",
+      "sha256": "b41a8907e05d6d9b8e71cfe101c1a3cdc8176ff2f6e1ac06388d1dba0c03bd09"
+    },
+    {
+      "hero": "Hero4",
+      "variant": "6",
+      "role": "Giáo",
+      "figma_node": "3447:14656",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero4\\6.png",
+      "sha256": "3824cd4a4e5260c1d1b460359bb4bfddbac29fa58ed4489ff0da5101adcf739f"
+    },
+    {
+      "hero": "Hero8",
+      "variant": "6",
+      "role": "Gậy phép",
+      "figma_node": "3447:14816",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero8\\6.png",
+      "sha256": "d504d4f0bdc7300ea32fcb718822a6be7df0836cf472cd40e3ce0a0d2f5e287a"
+    },
+    {
+      "hero": "Hero9",
+      "variant": "4",
+      "role": "Nỏ",
+      "figma_node": "3447:14844",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero9\\4.png",
+      "sha256": "68da406297fd7332b12e74b7ae72e7e4ef6255740c616768cff6509bad16a686"
+    },
+    {
+      "hero": "Hero16",
+      "variant": "6",
+      "role": "Sách phép",
+      "figma_node": "3447:14336",
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\output\\gear-meow-full-png\\assets\\Standalone\\_GameProj\\GameRes\\Icon\\Unit\\Hero16\\6.png",
+      "sha256": "8c91ec184d5984c2817848ba6250d9906c16a96295652c7ef9664c1b93ad11b0"
+    }
+  ],
+  "source_art_modified": false
+}

@@ -1,0 +1,254 @@
+{
+  "method": "42 normal-to-edge samples on straight blade edges; center divider excluded",
+  "source_scale_to_unit": 0.17784552845528456,
+  "samples": [
+    {
+      "y": 260,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 276,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 292,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 308,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 324,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 340,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 356,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 372,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 388,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 404,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 420,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 436,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 452,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 468,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 484,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 500,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 516,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 532,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 548,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 564,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    },
+    {
+      "y": 580,
+      "left": [
+        394,
+        429
+      ],
+      "right": [
+        595,
+        630
+      ]
+    }
+  ],
+  "slopes": {
+    "left": -6.478361998891983e-16,
+    "right": -6.84358967077296e-16
+  },
+  "sword_unit_width_median": 6.224593495934959,
+  "sword_unit_width_min": 6.224593495934959,
+  "sword_unit_width_max": 6.224593495934959,
+  "native_128_width": 3.1122967479674797,
+  "cat_before_unit_width": 12,
+  "cat_after_svg_unit_width": 6.224593495934959,
+  "cat_rendered_crown_unit_width_median": 6.225405594775722,
+  "actual_difference_unit_px": 0.0008120988407629426,
+  "actual_difference_native_128_px": 0.0004060494203814713,
+  "match_tolerance_unit_px": 0.02,
+  "match_passed": true,
+  "cat_rendered_binary_threshold_width": 6.0,
+  "rendered_measurement": "ink coverage fraction along near-horizontal crown normal, including antialias alpha"
+}

@@ -1,0 +1,26 @@
+{
+  "changed_properties": [
+    "NavSelected/styles/panel",
+    "NavSelectedFooter/base_type",
+    "NavSelectedFooter/styles/panel",
+    "TroopCardBlue/base_type",
+    "TroopCardBlue/styles/panel",
+    "TroopCardBluePressed/base_type",
+    "TroopCardBluePressed/styles/panel",
+    "TroopCardGreen/base_type",
+    "TroopCardGreen/styles/panel",
+    "TroopCardGreenPressed/base_type",
+    "TroopCardGreenPressed/styles/panel",
+    "TroopCardLocked/base_type",
+    "TroopCardLocked/styles/panel",
+    "TroopCardOrange/base_type",
+    "TroopCardOrange/styles/panel",
+    "TroopCardOrangePressed/base_type",
+    "TroopCardOrangePressed/styles/panel",
+    "TroopCardPurple/base_type",
+    "TroopCardPurple/styles/panel",
+    "TroopCardPurplePressed/base_type",
+    "TroopCardPurplePressed/styles/panel"
+  ],
+  "other_theme_properties_unchanged": true
+}

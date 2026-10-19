@@ -1,0 +1,2395 @@
+{
+	"actual": [
+		450,
+		800
+	],
+	"essential_bounds": {
+		"background": true,
+		"navigation": true
+	},
+	"file": "shop_450x800.png",
+	"footer": "shop_450x800_footer.png",
+	"geometry": {
+		"controls": {
+			"background": {
+				"children": [],
+				"minimum": [
+					0.0,
+					0.0
+				],
+				"name": "MenuBackground",
+				"rect": [
+					0.0,
+					0.0,
+					720.0,
+					1280.0
+				],
+				"type": "ColorRect",
+				"visible": true
+			},
+			"navigation": {
+				"children": [
+					{
+						"children": [
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"minimum": [
+															94.0,
+															94.0
+														],
+														"name": "@TextureRect@1764",
+														"rect": [
+															45.5,
+															1134.0,
+															94.0,
+															94.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													0.0,
+													100.0
+												],
+												"name": "@Control@1763",
+												"rect": [
+													6.0,
+													1138.0,
+													173.0,
+													100.0
+												],
+												"type": "Control",
+												"visible": true
+											},
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"font_size": 24,
+																"minimum": [
+																	118.0,
+																	34.0
+																],
+																"name": "SelectedNavCaption",
+																"rect": [
+																	10.0,
+																	1240.0,
+																	165.0,
+																	34.0
+																],
+																"text": "Cửa hàng",
+																"text_width": 118.0,
+																"type": "Label",
+																"visible": true
+															},
+															{
+																"children": [],
+																"minimum": [
+																	0.0,
+																	24.0
+																],
+																"name": "@Control@1766",
+																"rect": [
+																	10.0,
+																	1274.0,
+																	165.0,
+																	24.0
+																],
+																"type": "Control",
+																"visible": true
+															}
+														],
+														"minimum": [
+															118.0,
+															58.0
+														],
+														"name": "@VBoxContainer@1765",
+														"rect": [
+															10.0,
+															1240.0,
+															165.0,
+															58.0
+														],
+														"type": "VBoxContainer",
+														"visible": true
+													}
+												],
+												"minimum": [
+													126.0,
+													60.0
+												],
+												"name": "SelectedNavFooter",
+												"rect": [
+													6.0,
+													1238.0,
+													173.0,
+													60.0
+												],
+												"type": "PanelContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											126.0,
+											160.0
+										],
+										"name": "@VBoxContainer@1762",
+										"rect": [
+											6.0,
+											1126.0,
+											173.0,
+											172.0
+										],
+										"type": "VBoxContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1788",
+										"rect": [
+											6.0,
+											1126.0,
+											173.0,
+											172.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									126.0,
+									166.0
+								],
+								"name": "@PanelContainer@1767",
+								"rect": [
+									6.0,
+									1120.0,
+									173.0,
+									178.0
+								],
+								"type": "PanelContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1771",
+																"rect": [
+																	282.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1768",
+														"rect": [
+															196.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1769",
+												"rect": [
+													186.0,
+													1146.0,
+													120.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1770",
+										"rect": [
+											182.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1789",
+										"rect": [
+											182.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1772",
+								"rect": [
+									179.0,
+									1120.0,
+									134.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1776",
+																"rect": [
+																	415.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1773",
+														"rect": [
+															329.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1774",
+												"rect": [
+													320.0,
+													1146.0,
+													119.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1775",
+										"rect": [
+											316.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1790",
+										"rect": [
+											316.0,
+											1142.0,
+											127.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1777",
+								"rect": [
+									313.0,
+									1120.0,
+									133.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [
+															{
+																"children": [],
+																"minimum": [
+																	30.0,
+																	30.0
+																],
+																"name": "@TextureRect@1781",
+																"rect": [
+																	549.0,
+																	1158.0,
+																	30.0,
+																	30.0
+																],
+																"type": "TextureRect",
+																"visible": true
+															}
+														],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1778",
+														"rect": [
+															463.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1779",
+												"rect": [
+													453.0,
+													1146.0,
+													120.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1780",
+										"rect": [
+											449.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1791",
+										"rect": [
+											449.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1782",
+								"rect": [
+									446.0,
+									1120.0,
+									134.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							},
+							{
+								"children": [
+									{
+										"children": [
+											{
+												"children": [
+													{
+														"children": [],
+														"minimum": [
+															100.0,
+															100.0
+														],
+														"name": "@TextureRect@1783",
+														"rect": [
+															597.0,
+															1158.0,
+															100.0,
+															100.0
+														],
+														"type": "TextureRect",
+														"visible": true
+													}
+												],
+												"minimum": [
+													100.0,
+													100.0
+												],
+												"name": "@CenterContainer@1784",
+												"rect": [
+													587.0,
+													1146.0,
+													120.0,
+													124.0
+												],
+												"type": "CenterContainer",
+												"visible": true
+											}
+										],
+										"minimum": [
+											108.0,
+											110.0
+										],
+										"name": "@PanelContainer@1785",
+										"rect": [
+											583.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"type": "PanelContainer",
+										"visible": true
+									},
+									{
+										"children": [],
+										"disabled": false,
+										"font_size": 26,
+										"minimum": [
+											44.0,
+											32.0
+										],
+										"name": "@Button@1792",
+										"rect": [
+											583.0,
+											1142.0,
+											128.0,
+											134.0
+										],
+										"text": "",
+										"text_width": 0.0,
+										"type": "Button",
+										"visible": true
+									}
+								],
+								"minimum": [
+									114.0,
+									154.0
+								],
+								"name": "@MarginContainer@1786",
+								"rect": [
+									580.0,
+									1120.0,
+									134.0,
+									178.0
+								],
+								"type": "MarginContainer",
+								"visible": true
+							}
+						],
+						"minimum": [
+							582.0,
+							166.0
+						],
+						"name": "@HBoxContainer@1787",
+						"rect": [
+							6.0,
+							1120.0,
+							708.0,
+							178.0
+						],
+						"type": "HBoxContainer",
+						"visible": true
+					}
+				],
+				"minimum": [
+					0.0,
+					0.0
+				],
+				"name": "@Control@1282",
+				"rect": [
+					0.0,
+					1120.0,
+					720.0,
+					160.0
+				],
+				"type": "Control",
+				"visible": true
+			}
+		},
+		"kind": "shop",
+		"selected_tab": 0
+	},
+	"native_render": true,
+	"requested": [
+		450,
+		800
+	],
+	"visible_controls": [
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "Home",
+			"path": "/root/MenuPolishPreview/Home",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "MenuBackground",
+			"path": "/root/MenuPolishPreview/Home/MenuBackground",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				1280.0
+			],
+			"type": "ColorRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@923",
+			"path": "/root/MenuPolishPreview/Home/@Control@923",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@929",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				546.0,
+				0.0
+			],
+			"name": "@ScrollContainer@926",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "ScrollContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				546.0,
+				985.0
+			],
+			"name": "@MarginContainer@927",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927",
+			"rect": [
+				0.0,
+				112.0,
+				720.0,
+				1008.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				498.0,
+				945.0
+			],
+			"name": "@VBoxContainer@928",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928",
+			"rect": [
+				24.0,
+				128.0,
+				672.0,
+				968.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				187.0,
+				49.0
+			],
+			"name": "@PanelContainer@1725",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@PanelContainer@1725",
+			"rect": [
+				266.0,
+				128.0,
+				187.0,
+				49.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 26,
+			"minimum": [
+				127.0,
+				37.0
+			],
+			"name": "@Label@1724",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@PanelContainer@1725/@Label@1724",
+			"rect": [
+				296.0,
+				132.0,
+				127.0,
+				37.0
+			],
+			"text": "Cửa hàng",
+			"text_width": 127.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 22,
+			"minimum": [
+				1.0,
+				67.0
+			],
+			"name": "@Label@1726",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@Label@1726",
+			"rect": [
+				24.0,
+				193.0,
+				672.0,
+				67.0
+			],
+			"text": "Tỉ lệ thẻ: Thường 64.0% · Hiếm 32.0% · Sử thi 3.6% · Huyền thoại 0.4%",
+			"text_width": 737.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				498.0,
+				797.0
+			],
+			"name": "@VBoxContainer@1727",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727",
+			"rect": [
+				24.0,
+				276.0,
+				672.0,
+				820.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				461.0,
+				184.0
+			],
+			"name": "@PanelContainer@1728",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728",
+			"rect": [
+				24.0,
+				276.0,
+				672.0,
+				184.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				405.0,
+				110.0
+			],
+			"name": "@VBoxContainer@1729",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729",
+			"rect": [
+				52.0,
+				300.0,
+				616.0,
+				128.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				405.0,
+				110.0
+			],
+			"name": "@HBoxContainer@1730",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729/@HBoxContainer@1730",
+			"rect": [
+				52.0,
+				300.0,
+				616.0,
+				128.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				104.0,
+				104.0
+			],
+			"name": "@Control@1731",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729/@HBoxContainer@1730/@Control@1731",
+			"rect": [
+				52.0,
+				312.0,
+				104.0,
+				104.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				125.0,
+				110.0
+			],
+			"name": "@VBoxContainer@1734",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729/@HBoxContainer@1730/@VBoxContainer@1734",
+			"rect": [
+				172.0,
+				309.0,
+				336.0,
+				110.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 26,
+			"minimum": [
+				125.0,
+				37.0
+			],
+			"name": "@Label@1732",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729/@HBoxContainer@1730/@VBoxContainer@1734/@Label@1732",
+			"rect": [
+				172.0,
+				309.0,
+				336.0,
+				37.0
+			],
+			"text": "Rương Gỗ",
+			"text_width": 125.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 22,
+			"minimum": [
+				1.0,
+				32.0
+			],
+			"name": "@Label@1733",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729/@HBoxContainer@1730/@VBoxContainer@1734/@Label@1733",
+			"rect": [
+				172.0,
+				352.0,
+				336.0,
+				32.0
+			],
+			"text": "3 thẻ lính + 50–100 vàng",
+			"text_width": 262.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				1.0,
+				29.0
+			],
+			"name": "@Label@1735",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729/@HBoxContainer@1730/@VBoxContainer@1734/@Label@1735",
+			"rect": [
+				172.0,
+				390.0,
+				336.0,
+				29.0
+			],
+			"text": "Miễn phí!",
+			"text_width": 95.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 24,
+			"minimum": [
+				144.0,
+				78.0
+			],
+			"name": "@Button@1736",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1728/@VBoxContainer@1729/@HBoxContainer@1730/@Button@1736",
+			"rect": [
+				524.0,
+				325.0,
+				144.0,
+				78.0
+			],
+			"text": "MỞ",
+			"text_width": 40.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				477.0,
+				184.0
+			],
+			"name": "@PanelContainer@1737",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737",
+			"rect": [
+				24.0,
+				476.0,
+				672.0,
+				184.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				421.0,
+				104.0
+			],
+			"name": "@VBoxContainer@1738",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737/@VBoxContainer@1738",
+			"rect": [
+				52.0,
+				500.0,
+				616.0,
+				128.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				421.0,
+				104.0
+			],
+			"name": "@HBoxContainer@1739",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737/@VBoxContainer@1738/@HBoxContainer@1739",
+			"rect": [
+				52.0,
+				500.0,
+				616.0,
+				128.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				104.0,
+				104.0
+			],
+			"name": "@Control@1740",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737/@VBoxContainer@1738/@HBoxContainer@1739/@Control@1740",
+			"rect": [
+				52.0,
+				512.0,
+				104.0,
+				104.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				141.0,
+				75.0
+			],
+			"name": "@VBoxContainer@1743",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737/@VBoxContainer@1738/@HBoxContainer@1739/@VBoxContainer@1743",
+			"rect": [
+				172.0,
+				526.0,
+				336.0,
+				75.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 26,
+			"minimum": [
+				141.0,
+				37.0
+			],
+			"name": "@Label@1741",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737/@VBoxContainer@1738/@HBoxContainer@1739/@VBoxContainer@1743/@Label@1741",
+			"rect": [
+				172.0,
+				526.0,
+				336.0,
+				37.0
+			],
+			"text": "Rương Bạc",
+			"text_width": 141.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 22,
+			"minimum": [
+				1.0,
+				32.0
+			],
+			"name": "@Label@1742",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737/@VBoxContainer@1738/@HBoxContainer@1739/@VBoxContainer@1743/@Label@1742",
+			"rect": [
+				172.0,
+				569.0,
+				336.0,
+				32.0
+			],
+			"text": "8 thẻ lính",
+			"text_width": 104.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 24,
+			"minimum": [
+				144.0,
+				78.0
+			],
+			"name": "@Button@1744",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1737/@VBoxContainer@1738/@HBoxContainer@1739/@Button@1744",
+			"rect": [
+				524.0,
+				525.0,
+				144.0,
+				78.0
+			],
+			"text": "600",
+			"text_width": 47.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				498.0,
+				233.0
+			],
+			"name": "@PanelContainer@1745",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745",
+			"rect": [
+				24.0,
+				676.0,
+				672.0,
+				233.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				442.0,
+				177.0
+			],
+			"name": "@VBoxContainer@1746",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746",
+			"rect": [
+				52.0,
+				700.0,
+				616.0,
+				177.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				442.0,
+				177.0
+			],
+			"name": "@HBoxContainer@1747",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746/@HBoxContainer@1747",
+			"rect": [
+				52.0,
+				700.0,
+				616.0,
+				177.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				104.0,
+				104.0
+			],
+			"name": "@Control@1748",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746/@HBoxContainer@1747/@Control@1748",
+			"rect": [
+				52.0,
+				736.0,
+				104.0,
+				104.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				162.0,
+				177.0
+			],
+			"name": "@VBoxContainer@1752",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746/@HBoxContainer@1747/@VBoxContainer@1752",
+			"rect": [
+				172.0,
+				700.0,
+				336.0,
+				177.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 26,
+			"minimum": [
+				162.0,
+				37.0
+			],
+			"name": "@Label@1749",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746/@HBoxContainer@1747/@VBoxContainer@1752/@Label@1749",
+			"rect": [
+				172.0,
+				700.0,
+				336.0,
+				37.0
+			],
+			"text": "Rương Vàng",
+			"text_width": 162.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 22,
+			"minimum": [
+				1.0,
+				67.0
+			],
+			"name": "@Label@1750",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746/@HBoxContainer@1747/@VBoxContainer@1752/@Label@1750",
+			"rect": [
+				172.0,
+				743.0,
+				336.0,
+				67.0
+			],
+			"text": "25 thẻ lính\nChắc chắn ≥ 3 thẻ Hiếm",
+			"text_width": 365.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 20,
+			"minimum": [
+				1.0,
+				61.0
+			],
+			"name": "@Label@1751",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746/@HBoxContainer@1747/@VBoxContainer@1752/@Label@1751",
+			"rect": [
+				172.0,
+				816.0,
+				336.0,
+				61.0
+			],
+			"text": "Còn 10 lần nữa chắc chắn có thẻ Sử thi",
+			"text_width": 376.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 24,
+			"minimum": [
+				144.0,
+				78.0
+			],
+			"name": "@Button@1753",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1745/@VBoxContainer@1746/@HBoxContainer@1747/@Button@1753",
+			"rect": [
+				524.0,
+				749.0,
+				144.0,
+				78.0
+			],
+			"text": "◆ 120",
+			"text_width": 62.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				486.0,
+				148.0
+			],
+			"name": "@PanelContainer@1754",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754",
+			"rect": [
+				24.0,
+				925.0,
+				672.0,
+				171.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				430.0,
+				78.0
+			],
+			"name": "@VBoxContainer@1755",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754/@VBoxContainer@1755",
+			"rect": [
+				52.0,
+				949.0,
+				616.0,
+				115.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				430.0,
+				78.0
+			],
+			"name": "@HBoxContainer@1756",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754/@VBoxContainer@1755/@HBoxContainer@1756",
+			"rect": [
+				52.0,
+				949.0,
+				616.0,
+				115.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				64.0,
+				64.0
+			],
+			"name": "@TextureRect@1757",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754/@VBoxContainer@1755/@HBoxContainer@1756/@TextureRect@1757",
+			"rect": [
+				52.0,
+				974.0,
+				64.0,
+				64.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				190.0,
+				75.0
+			],
+			"name": "@VBoxContainer@1760",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754/@VBoxContainer@1755/@HBoxContainer@1756/@VBoxContainer@1760",
+			"rect": [
+				132.0,
+				969.0,
+				376.0,
+				75.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 26,
+			"minimum": [
+				190.0,
+				37.0
+			],
+			"name": "@Label@1758",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754/@VBoxContainer@1755/@HBoxContainer@1756/@VBoxContainer@1760/@Label@1758",
+			"rect": [
+				132.0,
+				969.0,
+				376.0,
+				37.0
+			],
+			"text": "Đổi kim cương",
+			"text_width": 190.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"font_size": 22,
+			"minimum": [
+				1.0,
+				32.0
+			],
+			"name": "@Label@1759",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754/@VBoxContainer@1755/@HBoxContainer@1756/@VBoxContainer@1760/@Label@1759",
+			"rect": [
+				132.0,
+				1012.0,
+				376.0,
+				32.0
+			],
+			"text": "20 kim cương → 500 vàng",
+			"text_width": 277.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 24,
+			"minimum": [
+				144.0,
+				78.0
+			],
+			"name": "@Button@1761",
+			"path": "/root/MenuPolishPreview/Home/@Control@923/@Control@929/@ScrollContainer@926/@MarginContainer@927/@VBoxContainer@928/@VBoxContainer@1727/@PanelContainer@1754/@VBoxContainer@1755/@HBoxContainer@1756/@Button@1761",
+			"rect": [
+				524.0,
+				967.0,
+				144.0,
+				78.0
+			],
+			"text": "ĐỔI",
+			"text_width": 45.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				406.0,
+				112.0
+			],
+			"name": "Header",
+			"path": "/root/MenuPolishPreview/Home/Header",
+			"rect": [
+				0.0,
+				0.0,
+				720.0,
+				112.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				378.0,
+				84.0
+			],
+			"name": "HeaderRow",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow",
+			"rect": [
+				14.0,
+				12.0,
+				692.0,
+				84.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				84.0
+			],
+			"name": "ProfileButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				80.0,
+				84.0
+			],
+			"name": "AvatarFrame",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				50.0
+			],
+			"name": "@CenterContainer@1278",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame/@CenterContainer@1278",
+			"rect": [
+				22.0,
+				20.0,
+				64.0,
+				64.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				62.0,
+				50.0
+			],
+			"name": "@TextureRect@1277",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/AvatarFrame/@CenterContainer@1278/@TextureRect@1277",
+			"rect": [
+				23.0,
+				27.0,
+				62.0,
+				50.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1279",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/ProfileButton/@Button@1279",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				52.0
+			],
+			"name": "GoldButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				52.0
+			],
+			"name": "CurrencyGold",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "CurrencyPill",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				1.0,
+				27.0
+			],
+			"name": "CurrencyValue",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyValue",
+			"rect": [
+				150.0,
+				36.0,
+				121.0,
+				36.0
+			],
+			"text": "2.400",
+			"text_width": 51.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "CurrencyPlus",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPlus",
+			"rect": [
+				277.0,
+				40.0,
+				28.0,
+				28.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				48.0,
+				48.0
+			],
+			"name": "CurrencyIcon",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyIcon",
+			"rect": [
+				104.0,
+				30.0,
+				48.0,
+				48.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1280",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GoldButton/@Button@1280",
+			"rect": [
+				106.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				44.0,
+				52.0
+			],
+			"name": "GemsButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				52.0
+			],
+			"name": "CurrencyGems",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "CurrencyPill",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"font_size": 18,
+			"minimum": [
+				1.0,
+				27.0
+			],
+			"name": "CurrencyValue",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyValue",
+			"rect": [
+				363.0,
+				36.0,
+				121.0,
+				36.0
+			],
+			"text": "260",
+			"text_width": 33.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				28.0,
+				28.0
+			],
+			"name": "CurrencyPlus",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPlus",
+			"rect": [
+				490.0,
+				40.0,
+				28.0,
+				28.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				48.0,
+				48.0
+			],
+			"name": "CurrencyIcon",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyIcon",
+			"rect": [
+				317.0,
+				30.0,
+				48.0,
+				48.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1281",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/GemsButton/@Button@1281",
+			"rect": [
+				319.0,
+				28.0,
+				201.0,
+				52.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				174.0,
+				84.0
+			],
+			"name": "HeaderTools",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools",
+			"rect": [
+				532.0,
+				12.0,
+				174.0,
+				84.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				174.0,
+				60.0
+			],
+			"name": "HeaderActions",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions",
+			"rect": [
+				532.0,
+				24.0,
+				174.0,
+				60.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 16,
+			"minimum": [
+				100.0,
+				60.0
+			],
+			"name": "AdminButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions/AdminButton",
+			"rect": [
+				532.0,
+				24.0,
+				100.0,
+				60.0
+			],
+			"text": "ADMIN",
+			"text_width": 55.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				68.0,
+				60.0
+			],
+			"name": "SettingsButton",
+			"path": "/root/MenuPolishPreview/Home/Header/HeaderRow/HeaderTools/HeaderActions/SettingsButton",
+			"rect": [
+				638.0,
+				24.0,
+				68.0,
+				60.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				0.0
+			],
+			"name": "@Control@1282",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282",
+			"rect": [
+				0.0,
+				1120.0,
+				720.0,
+				160.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				582.0,
+				166.0
+			],
+			"name": "@HBoxContainer@1787",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787",
+			"rect": [
+				6.0,
+				1120.0,
+				708.0,
+				178.0
+			],
+			"type": "HBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				126.0,
+				166.0
+			],
+			"name": "@PanelContainer@1767",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767",
+			"rect": [
+				6.0,
+				1120.0,
+				173.0,
+				178.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				126.0,
+				160.0
+			],
+			"name": "@VBoxContainer@1762",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@VBoxContainer@1762",
+			"rect": [
+				6.0,
+				1126.0,
+				173.0,
+				172.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				100.0
+			],
+			"name": "@Control@1763",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@VBoxContainer@1762/@Control@1763",
+			"rect": [
+				6.0,
+				1138.0,
+				173.0,
+				100.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"minimum": [
+				94.0,
+				94.0
+			],
+			"name": "@TextureRect@1764",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@VBoxContainer@1762/@Control@1763/@TextureRect@1764",
+			"rect": [
+				45.5,
+				1134.0,
+				94.0,
+				94.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				126.0,
+				60.0
+			],
+			"name": "SelectedNavFooter",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@VBoxContainer@1762/SelectedNavFooter",
+			"rect": [
+				6.0,
+				1238.0,
+				173.0,
+				60.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				118.0,
+				58.0
+			],
+			"name": "@VBoxContainer@1765",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@VBoxContainer@1762/SelectedNavFooter/@VBoxContainer@1765",
+			"rect": [
+				10.0,
+				1240.0,
+				165.0,
+				58.0
+			],
+			"type": "VBoxContainer",
+			"visible": true
+		},
+		{
+			"font_size": 24,
+			"minimum": [
+				118.0,
+				34.0
+			],
+			"name": "SelectedNavCaption",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@VBoxContainer@1762/SelectedNavFooter/@VBoxContainer@1765/SelectedNavCaption",
+			"rect": [
+				10.0,
+				1240.0,
+				165.0,
+				34.0
+			],
+			"text": "Cửa hàng",
+			"text_width": 118.0,
+			"type": "Label",
+			"visible": true
+		},
+		{
+			"minimum": [
+				0.0,
+				24.0
+			],
+			"name": "@Control@1766",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@VBoxContainer@1762/SelectedNavFooter/@VBoxContainer@1765/@Control@1766",
+			"rect": [
+				10.0,
+				1274.0,
+				165.0,
+				24.0
+			],
+			"type": "Control",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1788",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@PanelContainer@1767/@Button@1788",
+			"rect": [
+				6.0,
+				1126.0,
+				173.0,
+				172.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1772",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1772",
+			"rect": [
+				179.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1770",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1772/@PanelContainer@1770",
+			"rect": [
+				182.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1769",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1772/@PanelContainer@1770/@CenterContainer@1769",
+			"rect": [
+				186.0,
+				1146.0,
+				120.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1768",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1772/@PanelContainer@1770/@CenterContainer@1769/@TextureRect@1768",
+			"rect": [
+				196.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1771",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1772/@PanelContainer@1770/@CenterContainer@1769/@TextureRect@1768/@TextureRect@1771",
+			"rect": [
+				282.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1789",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1772/@Button@1789",
+			"rect": [
+				182.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1777",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1777",
+			"rect": [
+				313.0,
+				1120.0,
+				133.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1775",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1777/@PanelContainer@1775",
+			"rect": [
+				316.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1774",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1777/@PanelContainer@1775/@CenterContainer@1774",
+			"rect": [
+				320.0,
+				1146.0,
+				119.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1773",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1777/@PanelContainer@1775/@CenterContainer@1774/@TextureRect@1773",
+			"rect": [
+				329.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1776",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1777/@PanelContainer@1775/@CenterContainer@1774/@TextureRect@1773/@TextureRect@1776",
+			"rect": [
+				415.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1790",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1777/@Button@1790",
+			"rect": [
+				316.0,
+				1142.0,
+				127.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1782",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1782",
+			"rect": [
+				446.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1780",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1782/@PanelContainer@1780",
+			"rect": [
+				449.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1779",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1782/@PanelContainer@1780/@CenterContainer@1779",
+			"rect": [
+				453.0,
+				1146.0,
+				120.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1778",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1782/@PanelContainer@1780/@CenterContainer@1779/@TextureRect@1778",
+			"rect": [
+				463.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"minimum": [
+				30.0,
+				30.0
+			],
+			"name": "@TextureRect@1781",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1782/@PanelContainer@1780/@CenterContainer@1779/@TextureRect@1778/@TextureRect@1781",
+			"rect": [
+				549.0,
+				1158.0,
+				30.0,
+				30.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1791",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1782/@Button@1791",
+			"rect": [
+				449.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		},
+		{
+			"minimum": [
+				114.0,
+				154.0
+			],
+			"name": "@MarginContainer@1786",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1786",
+			"rect": [
+				580.0,
+				1120.0,
+				134.0,
+				178.0
+			],
+			"type": "MarginContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				108.0,
+				110.0
+			],
+			"name": "@PanelContainer@1785",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1786/@PanelContainer@1785",
+			"rect": [
+				583.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"type": "PanelContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@CenterContainer@1784",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1786/@PanelContainer@1785/@CenterContainer@1784",
+			"rect": [
+				587.0,
+				1146.0,
+				120.0,
+				124.0
+			],
+			"type": "CenterContainer",
+			"visible": true
+		},
+		{
+			"minimum": [
+				100.0,
+				100.0
+			],
+			"name": "@TextureRect@1783",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1786/@PanelContainer@1785/@CenterContainer@1784/@TextureRect@1783",
+			"rect": [
+				597.0,
+				1158.0,
+				100.0,
+				100.0
+			],
+			"type": "TextureRect",
+			"visible": true
+		},
+		{
+			"disabled": false,
+			"font_size": 26,
+			"minimum": [
+				44.0,
+				32.0
+			],
+			"name": "@Button@1792",
+			"path": "/root/MenuPolishPreview/Home/@Control@1282/@HBoxContainer@1787/@MarginContainer@1786/@Button@1792",
+			"rect": [
+				583.0,
+				1142.0,
+				128.0,
+				134.0
+			],
+			"text": "",
+			"text_width": 0.0,
+			"type": "Button",
+			"visible": true
+		}
+	]
+}

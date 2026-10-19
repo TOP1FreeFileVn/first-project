@@ -1,0 +1,18 @@
+{
+  "status": "awaiting_user_review",
+  "model": "gpt-image-2.5-sunburst",
+  "route": "Figma generate_image in user-authorized draft",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "6:2",
+  "width": 1024,
+  "height": 1024,
+  "prompt_file": "prompt-iteration-2.txt",
+  "reference_mode": "text brief informed by visually inspected references; no image-input conditioning",
+  "production_changed": false,
+  "user_feedback": "8/10 for iteration 2; keep this direction",
+  "iterations": [
+    {"nodeId":"5:2","raw":"raw/kiem-iteration-1.png","prompt":"prompt.txt","status":"superseded_thin_contour"},
+    {"nodeId":"6:2","raw":"raw/kiem-iteration-2.png","prompt":"prompt-iteration-2.txt","status":"selected_user_rated_8_of_10"},
+    {"nodeId":"7:2","raw":"raw/kiem-iteration-3.png","prompt":"prompt-iteration-3.txt","status":"archived_unsolicited_alternative_already_running_when_rating_arrived"}
+  ]
+}

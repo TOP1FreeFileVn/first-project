@@ -8,6 +8,8 @@ extends RefCounted
 const THEME = preload("res://game/ui/skin/game_theme.tres")
 const SKIN := "res://game/ui/skin/"
 const PATTERN_SHADER = preload("res://game/ui/pattern_scroll.gdshader")
+const MENU_SKY_SHADER = preload("res://game/ui/menu_sky.gdshader")
+const AlignedNavPanel = preload("res://game/ui/AlignedNavPanel.gd")
 const DARK_TEXT := Color("4b4444")
 
 
@@ -94,7 +96,7 @@ static func center(child: Control) -> CenterContainer:
 	return c
 
 
-## Lobby backdrop: the sky colour with gears and cat paws drifting on a diagonal
+## Shop backdrop: the sky colour with gears and cat paws drifting on a diagonal
 ## (bg_tile.svg through pattern_scroll.gdshader). Put it first, full rect.
 static func pattern_bg(sky := Color("6fa3e0")) -> ColorRect:
 	var bg := ColorRect.new()
@@ -104,6 +106,23 @@ static func pattern_bg(sky := Color("6fa3e0")) -> ColorRect:
 	mat.shader = PATTERN_SHADER
 	mat.set_shader_parameter("tile", tex("bg_tile"))
 	mat.set_shader_parameter("sky", sky)
+	bg.material = mat
+	return bg
+
+
+## The shared animated sky uses screen coordinates so page overlays join the header
+## and navigation backdrop without compressing or restarting the scene.
+static func menu_bg() -> ColorRect:
+	var bg := ColorRect.new()
+	bg.name = "MenuBackground"
+	bg.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var mat := ShaderMaterial.new()
+	mat.shader = MENU_SKY_SHADER
+	mat.set_shader_parameter("sky_scene", tex("bg_sky_base"))
+	mat.set_shader_parameter("clouds_far", tex("bg_sky_clouds_far"))
+	mat.set_shader_parameter("clouds_near", tex("bg_sky_clouds_near"))
+	mat.set_shader_parameter("clouds_front", tex("bg_sky_clouds_front"))
+	mat.set_shader_parameter("distant_islands", tex("bg_sky_distant_islands"))
 	bg.material = mat
 	return bg
 
@@ -442,7 +461,7 @@ static func hud(level: int, energy: String, timer: String, gold: String, gems: S
 	return p
 
 
-## Big icons, with a label only on the selected orange tab. Keep the label above the
+## Big icons, with a label only on the selected warm tab. Keep the label above the
 ## bottom edge independently of the decorative background bleed. `badges` holds tab indexes
 ## that get a red dot. `bleed`: how far
 ## the caller lets the bar run past the screen's bottom edge, so the selected block sits
@@ -453,21 +472,34 @@ static func bottom_nav(tabs: Array, selected: int, badges := [], bleed := 0.0) -
 	for i in tabs.size():
 		var cell: Control
 		if i == selected:
-			var block := panel("NavSelected")
+			var block := AlignedNavPanel.new()
+			block.theme_type_variation = "NavSelected"
 			var body := vbox(0, BoxContainer.ALIGNMENT_END)
 			block.add_child(body)
 			# The icon sits inside the block: rising over its top edge tangled the two outlines.
 			var holder := Control.new()
-			holder.custom_minimum_size = Vector2(0, 88)
+			# Transfer 12px from the caption's bottom padding into the icon holder.
+			# Total height and icon position stay fixed; the visible cream band is about 27%.
+			holder.custom_minimum_size = Vector2(0, 100)
 			body.add_child(holder)
 			var ic := icon(tabs[i][0], 94)
 			pin(holder, ic, Vector2(-47, -4), Control.PRESET_CENTER_TOP)
 			if badges.has(i):
 				dot(ic, Vector2(-14, 2))
-			body.add_child(label(tabs[i][1], "", 24))
+			var footer := AlignedNavPanel.new()
+			footer.theme_type_variation = "NavSelectedFooter"
+			footer.name = "SelectedNavFooter"
+			var footer_body := vbox(0)
+			footer.add_child(footer_body)
+			var caption := label(tabs[i][1], "LabelDark", 24)
+			caption.name = "SelectedNavCaption"
+			caption.add_theme_color_override("font_color", Color("583f21"))
+			caption.add_theme_constant_override("outline_size", 0)
+			footer_body.add_child(caption)
 			var under := Control.new()
-			under.custom_minimum_size.y = bleed + 12.0
-			body.add_child(under)
+			under.custom_minimum_size.y = bleed + 6.0
+			footer_body.add_child(under)
+			body.add_child(footer)
 			cell = block
 		else:
 			cell = margin(3, 22, 3, 4 + int(bleed))
