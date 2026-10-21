@@ -1,0 +1,649 @@
+{
+	"captures": [
+		"roster-before_360x640.png",
+		"popup-fixed_360x640.png",
+		"popup-markers-hidden-reference_360x640.png",
+		"negative-control-raised-markers_360x640.png",
+		"popup-restored_360x640.png",
+		"popup-after-native-upgrade_360x640.png",
+		"roster-after_360x640.png",
+		"roster-before_450x800.png",
+		"popup-fixed_450x800.png",
+		"popup-markers-hidden-reference_450x800.png",
+		"negative-control-raised-markers_450x800.png",
+		"popup-restored_450x800.png",
+		"popup-after-native-upgrade_450x800.png",
+		"roster-after_450x800.png"
+	],
+	"checks": [
+		{
+			"key": "fixture_has_five_teamed_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "eight_upgrade_arrows_and_five_team_checks",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "roster_decorations_stay_on_card_layer_zero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_arrow_leads_team_check_and_crosses_card_top",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_roster-before_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_roster-before_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "dao_native_card_available",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_dao_card_opens_detail_popup",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "opaque_popup_panel_found",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "opaque_popup_covers_real_arrow_and_check_ink_regions",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-fixed_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-fixed_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-markers-hidden-reference_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-markers-hidden-reference_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "opaque_popup_pixels_identical_with_underlying_markers_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_negative-control-raised-markers_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_negative-control-raised-markers_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "negative_control_detects_old_markers_drawing_through_popup",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-restored_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-restored_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "restored_card_layers_again_match_opaque_popup_reference",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_level_upgrade_available_inside_popup",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_popup_upgrade_still_levels_once_and_spends_exact_cost",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-after-native-upgrade_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-after-native-upgrade_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_button_returns_to_roster",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "returned_roster_has_normal_layers_and_running_upgrade_hint",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_pulses_after_popup_upgrade_and_close",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_roster-after_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_roster-after_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "eight_upgrade_arrows_and_five_team_checks",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "roster_decorations_stay_on_card_layer_zero",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_arrow_leads_team_check_and_crosses_card_top",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_roster-before_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_roster-before_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "dao_native_card_available",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_dao_card_opens_detail_popup",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "opaque_popup_panel_found",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "opaque_popup_covers_real_arrow_and_check_ink_regions",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-fixed_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-fixed_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-markers-hidden-reference_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-markers-hidden-reference_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "opaque_popup_pixels_identical_with_underlying_markers_hidden",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_negative-control-raised-markers_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_negative-control-raised-markers_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "negative_control_detects_old_markers_drawing_through_popup",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-restored_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-restored_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "restored_card_layers_again_match_opaque_popup_reference",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_level_upgrade_available_inside_popup",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_popup_upgrade_still_levels_once_and_spends_exact_cost",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_popup-after-native-upgrade_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_popup-after-native-upgrade_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_button_returns_to_roster",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "returned_roster_has_normal_layers_and_running_upgrade_hint",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_pulses_after_popup_upgrade_and_close",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_roster-after_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_roster-after_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		}
+	],
+	"comparisons": [
+		{
+			"arrow_regions": 6,
+			"check_regions": 3,
+			"fixed_vs_hidden": {
+				"changed": 0,
+				"pixels": 3096
+			},
+			"logical_regions": [
+				[
+					235.0,
+					610.0,
+					24.0,
+					24.0
+				],
+				[
+					198.684356689453,
+					585.340270996094,
+					44.6312866210938,
+					44.6312866210938
+				],
+				[
+					404.0,
+					610.0,
+					24.0,
+					24.0
+				],
+				[
+					367.684356689453,
+					585.340270996094,
+					44.6312866210938,
+					44.6312866210938
+				],
+				[
+					536.684326171875,
+					585.340270996094,
+					44.6312866210938,
+					44.6312866210938
+				],
+				[
+					235.0,
+					886.0,
+					24.0,
+					24.0
+				],
+				[
+					198.684356689453,
+					861.340270996094,
+					44.6312866210938,
+					44.6312866210938
+				],
+				[
+					367.684356689453,
+					861.340270996094,
+					44.6312866210938,
+					44.6312866210938
+				],
+				[
+					536.684326171875,
+					861.340270996094,
+					44.6312866210938,
+					44.6312866210938
+				]
+			],
+			"raised_vs_hidden": {
+				"changed": 1647,
+				"pixels": 3096
+			},
+			"restored_vs_hidden": {
+				"changed": 0,
+				"pixels": 3096
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"arrow_regions": 6,
+			"check_regions": 3,
+			"fixed_vs_hidden": {
+				"changed": 0,
+				"pixels": 5016
+			},
+			"logical_regions": [
+				[
+					235.0,
+					610.0,
+					24.0,
+					24.0
+				],
+				[
+					198.343185424805,
+					584.835083007813,
+					45.3136444091797,
+					45.3136596679688
+				],
+				[
+					404.0,
+					610.0,
+					24.0,
+					24.0
+				],
+				[
+					367.343170166016,
+					584.835083007813,
+					45.3136291503906,
+					45.3136596679688
+				],
+				[
+					536.343200683594,
+					584.835083007813,
+					45.3136596679688,
+					45.3136596679688
+				],
+				[
+					235.0,
+					886.0,
+					24.0,
+					24.0
+				],
+				[
+					198.343185424805,
+					860.835083007813,
+					45.3136444091797,
+					45.3136596679688
+				],
+				[
+					367.343170166016,
+					860.835083007813,
+					45.3136291503906,
+					45.3136596679688
+				],
+				[
+					536.343200683594,
+					860.835083007813,
+					45.3136596679688,
+					45.3136596679688
+				]
+			],
+			"raised_vs_hidden": {
+				"changed": 2640,
+				"pixels": 5016
+			},
+			"restored_vs_hidden": {
+				"changed": 0,
+				"pixels": 5016
+			},
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/troop-popup-layering-qa-profile/roaming/Godot/app_userdata/Gear Defenders"
+}

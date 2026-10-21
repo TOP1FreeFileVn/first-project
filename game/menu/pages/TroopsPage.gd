@@ -551,7 +551,6 @@ func _card(id: String) -> Button:
 	if unlocked and PlayerData.in_team(id):
 		var badge := Ui.icon("badge_check", 24)
 		badge.name = "TroopInTeam"
-		badge.z_index = 1
 		# The upgrade arrow leads; team membership follows without moving the level.
 		_pin_state_badge(card, badge, Vector2(42 if has_upgrade else 8, 8))
 	if unlocked:
@@ -563,8 +562,8 @@ func _card(id: String) -> Button:
 			ready = UpgradeHint.new()
 			ready.name = "TroopLevelReady"
 		if ready != null:
-			# Keep the same leading corner, in front of the team marker on every card.
-			ready.z_index = 8
+			# Last child draws above the team marker without escaping the card's layer.
+			# Raising z_index here would also draw the arrow above later modal popups.
 			_pin_state_badge(card, ready, Vector2(4, -18))
 	return card
 
