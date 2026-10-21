@@ -105,5 +105,7 @@ func _collect(node: Node, output: Array) -> void:
 
 func _close_popup() -> void:
 	for child in _home.get_children():
-		if child is ColorRect and child.mouse_filter == Control.MOUSE_FILTER_STOP:
+		if child is CanvasLayer and child.name == "TroopUpgradeLayer":
+			child.queue_free()
+		elif child is ColorRect and child.mouse_filter == Control.MOUSE_FILTER_STOP:
 			child.queue_free()

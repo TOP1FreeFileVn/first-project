@@ -1,6 +1,6 @@
 extends Node
 
-# Screenshots every lobby tab, the team swap mode, the troop popup and each stage of a
+# Screenshots every lobby tab, the team swap mode, the troop upgrade screen and each stage of a
 # chest opening, on a throwaway profile (the real save is never touched).
 # Run (windowed): Godot --path . res://tests/MenuShots.tscn -- --shot-dir=C:/some/folder
 
@@ -152,9 +152,7 @@ func _process(delta: float) -> void:
 		"close_chest":
 			_opening().get_parent().queue_free()
 		"close":
-			var overlay = _home.get_child(_home.get_child_count() - 1)
-			if overlay is ColorRect:
-				overlay.queue_free()
+			_close_popup()
 		"popup":
 			match step[1]:
 				"login":
@@ -174,6 +172,18 @@ func _process(delta: float) -> void:
 		"skip_summon":
 			_opening().skip()
 			_wait = 0.0
+
+
+func _close_popup() -> void:
+	var children: Array[Node] = _home.get_children()
+	children.reverse()
+	for child in children:
+		if child is CanvasLayer and child.name == "TroopUpgradeLayer":
+			child.queue_free()
+			return
+		if child is ColorRect and child.mouse_filter == Control.MOUSE_FILTER_STOP:
+			child.queue_free()
+			return
 
 
 func _opening():

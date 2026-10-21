@@ -2,13 +2,14 @@ extends "res://game/menu/pages/MenuPage.gd"
 
 # Troop roster: the battle team pinned on top (slots grow with the castle), then the
 # collection with a rarity filter, which scrolls on its own. Tapping a card opens the
-# detail popup with stats, the ability, level-up / star-up and join / leave team. Joining
+# dedicated training screen with stats, skills, level-up / star-up and team actions. Joining
 # a full team enters "swap" mode: the team slots blink and the next slot tapped takes the
 # new troop. Troops can also be dragged: drag a card and drop it on a slot, drag a slot
 # onto another to swap them, or drag one out of the team panel to bench it.
 
 const Ui = preload("res://game/ui/Ui.gd")
 const UpgradeHint = preload("res://game/ui/UpgradeHint.gd")
+const TroopUpgradeScreen = preload("res://game/menu/popups/TroopUpgradeScreen.gd")
 const CARD_SIZE := Vector2(150, 240)
 const SLOT_HEIGHT := 138.0
 const MAX_SLOTS := 5
@@ -20,7 +21,7 @@ const MUTED_INK := Color("6b563b")
 const HOLD_TIME := 0.25
 const HOLD_SLOP := 14.0
 
-var _detail_box: VBoxContainer
+var _detail_screen: Control
 var _detail_id := ""
 ## Troop waiting for a team slot (swap mode), or "".
 var _swap_id := ""
@@ -86,8 +87,6 @@ func build() -> void:
 			grid.add_child(_card(id))
 	body.add_child(grid)
 	grid.resized.connect(_fit_roster_cards.bind(grid))
-	if _detail_box != null and is_instance_valid(_detail_box):
-		_fill_detail()
 
 
 func has_alert() -> bool:
@@ -95,7 +94,7 @@ func has_alert() -> bool:
 
 
 func _process(delta: float) -> void:
-	if not visible:
+	if not is_visible_in_tree():
 		_cancel_drag()
 		return
 	_watch_press(delta)
@@ -113,6 +112,8 @@ func _process(delta: float) -> void:
 
 
 func _input(event: InputEvent) -> void:
+	if not is_visible_in_tree():
+		return
 	if event is InputEventMouseMotion:
 		_pointer = event.position
 		if _ghost != null:
@@ -580,123 +581,32 @@ func _on_card_pressed(id: String) -> void:
 
 
 func _open_detail(id: String) -> void:
+	_cancel_drag()
+	_close_detail()
 	_detail_id = id
-	_detail_box = UiKit.popup(home, 600, PlayerData.TROOPS[id].display_name)
-	_fill_detail()
+	var screen := TroopUpgradeScreen.new()
+	_detail_screen = screen
+	screen.team_requested.connect(_join_team)
+	screen.tree_exited.connect(func():
+		if _detail_screen == screen:
+			_detail_screen = null)
+	screen.attach(home, id)
 
 
-# Everything under the popup header is rebuilt after each upgrade.
-func _fill_detail() -> void:
-	var box := _detail_box
-	while box.get_child_count() > 1:
-		var child := box.get_child(1)
-		box.remove_child(child)
-		child.queue_free()
-	var id := _detail_id
-	var troop: Resource = PlayerData.TROOPS[id]
-	var t: Dictionary = PlayerData.troop(id)
-
-	var top := UiKit.hbox(16)
-	top.add_child(_troop_art(troop, t, 150))
-	var info := UiKit.vbox(6)
-	info.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	var rarity_label := UiKit.label(Economy.RARITY_NAMES[troop.rarity], 18, Economy.RARITY_COLORS[troop.rarity])
-	rarity_label.add_theme_color_override("font_outline_color", UiKit.INK)
-	info.add_child(rarity_label)
-	if t["unlocked"]:
-		info.add_child(_earned_stars(t["stars"]))
-		info.add_child(UiKit.ink("Cấp %d / %d" % [t["level"], PlayerData.level_cap(id)], 20))
-	info.add_child(UiKit.ink("Thẻ: %d" % t["cards"], 18))
-	var desc := UiKit.ink(troop.description, 16)
-	desc.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	desc.custom_minimum_size.x = 340
-	info.add_child(desc)
-	top.add_child(info)
-	box.add_child(top)
-	if troop.ability_text != "":
-		var ability := UiKit.ink("✦ " + troop.ability_text, 16)
-		ability.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		ability.add_theme_color_override("font_color", Color("6b3fa0") if troop.rarity < 3 else Color("9a5a00"))
-		box.add_child(Ui.menu_section("troops", "Kỹ năng", ability))
-
-	if not t["unlocked"]:
-		box.add_child(UiKit.ink("Chưa mở khoá. Mở rương ở Cửa hàng để nhận thẻ %s." % troop.display_name, 18))
-		return
-
-	# Stats now and after the next level.
-	var mult: float = PlayerData.troop_multiplier(id)
-	var next_mult: float = Economy.troop_multiplier(t["level"] + 1, t["stars"])
-	var can_level := PlayerData.level_up_cost(id) >= 0
-	var stats := GridContainer.new()
-	stats.columns = 2
-	stats.add_theme_constant_override("h_separation", 24)
-	var entries := [["Máu", troop.max_hp]]
-	if troop.role != 3:
-		entries.append(["Hồi máu" if troop.role == 2 else "Sát thương", troop.damage])
-	for entry in entries:
-		stats.add_child(UiKit.ink(entry[0], 18))
-		var text := "%.1f" % (entry[1] * mult)
-		if can_level:
-			text += "  →  %.1f" % (entry[1] * next_mult)
-		stats.add_child(UiKit.ink(text, 18))
-	if troop.role != 3:
-		stats.add_child(UiKit.ink("Tầm đánh", 18))
-		stats.add_child(UiKit.ink("%d" % troop.attack_range, 18))
-		stats.add_child(UiKit.ink("Hồi chiêu", 18))
-		stats.add_child(UiKit.ink("%.1f giây" % troop.attack_cooldown, 18))
-	stats.add_child(UiKit.ink("Tốc chạy", 18))
-	stats.add_child(UiKit.ink("%d (%s)" % [troop.move_speed, speed_word(troop.move_speed)], 18))
-	if troop.crit_factor() > 1.0:
-		stats.add_child(UiKit.ink("Chí mạng", 18))
-		stats.add_child(UiKit.ink("%d%% · x%s sát thương" % [roundi(troop.crit_chance * 100.0), String.num(troop.crit_mult, 2)], 18))
-	stats.add_child(UiKit.ink("Sinh lính", 18))
-	stats.add_child(UiKit.ink("mỗi %.1f giây (tối đa %d)" % [troop.spawn_interval, troop.max_alive], 18))
-	box.add_child(Ui.menu_section("troops", "Chỉ số", stats))
-
-	var actions := UiKit.hbox(14)
-	actions.alignment = BoxContainer.ALIGNMENT_CENTER
-	var level_cost := PlayerData.level_up_cost(id)
-	var level_button := UiKit.button("", Vector2(250, 76), func(): PlayerData.level_up(id))
-	if level_cost < 0:
-		level_button.text = "Cần lên sao" if t["stars"] < Economy.MAX_STARS else "Cấp tối đa"
-		level_button.disabled = true
-	else:
-		level_button.text = "NÂNG CẤP  %s" % UiKit.format_number(level_cost)
-		level_button.icon = UiKit.coin_texture()
-		level_button.add_theme_constant_override("icon_max_width", 30)
-		level_button.disabled = PlayerData.gold < level_cost
-	actions.add_child(level_button)
-	var star_cost := PlayerData.star_up_cost(id)
-	var star_button := UiKit.button("", Vector2(250, 76), func(): PlayerData.star_up(id), true)
-	if star_cost < 0:
-		star_button.text = "Sao tối đa"
-		star_button.disabled = true
-	else:
-		star_button.text = "LÊN SAO  %d/%d thẻ" % [t["cards"], star_cost]
-		star_button.disabled = t["cards"] < star_cost
-	actions.add_child(star_button)
-	box.add_child(actions)
-
-	var team_button: Button
-	if PlayerData.in_team(id):
-		team_button = UiKit.button("RA KHỎI ĐỘI", Vector2(300, 66), func():
-			if not PlayerData.remove_from_team(id):
-				_toast("Đội phải còn ít nhất 1 lính."), true)
-		team_button.disabled = PlayerData.battle_team().size() <= 1
-	else:
-		team_button = UiKit.button("VÀO ĐỘI", Vector2(300, 66), func(): _join_team(id))
-	team_button.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	box.add_child(team_button)
+func _close_detail() -> void:
+	if is_instance_valid(_detail_screen):
+		_detail_screen.close()
+	_detail_screen = null
 
 
 func _join_team(id: String) -> void:
 	if PlayerData.add_to_team(id):
-		UiKit.close_popup(_detail_box)
+		_close_detail()
 		return
 	# Team full: pick the slot to replace.
 	_swap_id = id
 	_blink = 0.0
-	UiKit.close_popup(_detail_box)
+	_close_detail()
 	refresh()
 
 

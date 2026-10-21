@@ -291,51 +291,53 @@ func _check_marker(id: String, marker: String) -> void:
 func _detail_routes() -> void:
 	var received := await _tap(_page.find_child("TroopCard_kiem", true, false) as Button)
 	await _settle()
-	_record("tap_troop_opens_detail", received and is_instance_valid(_page._detail_box) and _page._detail_id == "kiem")
-	if is_instance_valid(_page._detail_box):
+	_record("tap_troop_opens_detail", received and is_instance_valid(_page._detail_screen) and _page._detail_id == "kiem")
+	if is_instance_valid(_page._detail_screen):
 		await get_tree().create_timer(0.14).timeout
 		var old_stars: int = PlayerData.troop("kiem")["stars"]
 		var old_cards: int = PlayerData.troop("kiem")["cards"]
 		var star_cost := PlayerData.star_up_cost("kiem")
-		var star := _button_text(_page._detail_box, "LÊN SAO", true)
-		var star_received := await _tap(star)
+		var star_tab_received := await _tap(_detail_button("TroopUpgradeStarTab"))
 		await _settle()
-		_record("detail_star_upgrade", star_received and PlayerData.troop("kiem")["stars"] == old_stars + 1
+		var star_received := await _tap(_detail_button("TroopUpgradePrimary"))
+		await _settle()
+		_record("detail_star_upgrade", star_tab_received and star_received and PlayerData.troop("kiem")["stars"] == old_stars + 1
 			and PlayerData.troop("kiem")["cards"] == old_cards - star_cost)
 		var old_level: int = PlayerData.troop("kiem")["level"]
 		var old_gold: int = PlayerData.gold
 		var level_cost := PlayerData.level_up_cost("kiem")
-		var level := _button_text(_page._detail_box, "NÂNG CẤP", true)
-		var level_received := await _tap(level)
+		var level_tab_received := await _tap(_detail_button("TroopUpgradeLevelTab"))
 		await _settle()
-		_record("detail_level_upgrade", level_received and PlayerData.troop("kiem")["level"] == old_level + 1
+		var level_received := await _tap(_detail_button("TroopUpgradePrimary"))
+		await _settle()
+		_record("detail_level_upgrade", level_tab_received and level_received and PlayerData.troop("kiem")["level"] == old_level + 1
 			and PlayerData.gold == old_gold - level_cost)
 		await _close_detail("upgrade_detail_close")
 	var locked_card := _page.find_child("TroopCard_dao", true, false) as Button
 	var locked_received := await _tap(locked_card)
 	await _settle()
-	_record("locked_troop_opens_detail", locked_received and is_instance_valid(_page._detail_box) and _page._detail_id == "dao")
-	if is_instance_valid(_page._detail_box):
+	_record("locked_troop_opens_detail", locked_received and is_instance_valid(_page._detail_screen) and _page._detail_id == "dao")
+	if is_instance_valid(_page._detail_screen):
 		await get_tree().create_timer(0.14).timeout
-		_record("locked_detail_has_no_upgrade", _button_text(_page._detail_box, "NÂNG CẤP", true) == null)
+		var primary := _detail_button("TroopUpgradePrimary")
+		_record("locked_detail_has_no_upgrade", primary != null and primary.disabled)
 		await _close_detail("locked_detail_close")
 
 
+func _detail_button(node_name: String) -> Button:
+	if not is_instance_valid(_page._detail_screen):
+		return null
+	return _page._detail_screen.find_child(node_name, true, false) as Button
+
+
 func _close_detail(route: String) -> void:
-	var box: Control = _page._detail_box
-	var overlay: Control = box.get_meta("overlay")
-	var close: Button
-	# The menu shell now contains a scroll between its content and frame.
-	# Find the actual thumb-sized close target without assuming that ancestry.
-	for candidate: Button in overlay.find_children("*", "Button", true, false):
-		if candidate.custom_minimum_size == Vector2(68, 68):
-			close = candidate
-			break
-	var received := await _tap(close)
+	var screen: Control = _page._detail_screen
+	var layer := screen.get_parent()
+	var received := await _tap(_detail_button("TroopUpgradeBack"))
 	await _settle()
-	_record(route, received and not is_instance_valid(overlay))
-	if is_instance_valid(overlay):
-		overlay.queue_free()
+	_record(route, received and not is_instance_valid(layer) and not is_instance_valid(_page._detail_screen))
+	if is_instance_valid(layer):
+		layer.queue_free()
 		await _settle()
 
 
@@ -354,7 +356,7 @@ func _drag_routes() -> void:
 	target = _page.find_child("TeamSlot_0", true, false) as Control
 	var roster_sent := await _drag(card, target)
 	_record("drag_roster_to_team_replaces", roster_sent and PlayerData.battle_team()[0] == "riu")
-	_record("drag_does_not_open_detail", not is_instance_valid(_page._detail_box))
+	_record("drag_does_not_open_detail", not is_instance_valid(_page._detail_screen))
 
 
 func _drag(source: Control, target: Control) -> bool:
@@ -375,7 +377,11 @@ func _drag(source: Control, target: Control) -> bool:
 
 func _scroll_to_end() -> void:
 	var at: Vector2 = _page._scroll.get_global_rect().get_center()
-	for i in range(10):
+	var bar: VScrollBar = _page._scroll.get_v_scroll_bar()
+	# The roster can grow as card spacing or the collection changes.
+	for i in range(40):
+		if _page._scroll.scroll_vertical >= bar.max_value - bar.page - 1:
+			break
 		for pressed in [true, false]:
 			var event := InputEventMouseButton.new()
 			event.button_index = MOUSE_BUTTON_WHEEL_DOWN
@@ -384,7 +390,6 @@ func _scroll_to_end() -> void:
 			event.global_position = at
 			get_viewport().push_input(event, true)
 		await get_tree().process_frame
-	var bar: VScrollBar = _page._scroll.get_v_scroll_bar()
 	var limit := bar.max_value - bar.page
 	_record("wheel_reaches_collection_end", limit > 0 and _page._scroll.scroll_vertical >= limit - 1)
 
