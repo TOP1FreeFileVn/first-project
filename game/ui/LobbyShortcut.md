@@ -1,6 +1,6 @@
 # Lobby shortcut feedback
 
-`LobbyShortcut.gd` is the persistent native Button used by Home's four side shortcuts: daily login, quests, events and castle. The button owns drawing and finite interaction tweens; Home owns alert refreshes, tap sound and destinations.
+`LobbyShortcut.gd` is the persistent native Button used by Home's three side shortcuts: daily login, quests and events. The button owns drawing and finite interaction tweens; Home owns alert refreshes, tap sound and destinations. The castle's speech bubble and illustration open its detail card, where its upgrade action and workshop remain available.
 
 - Press shrinks the face to 94% and depresses it 4 logical pixels in 60ms. Release returns with a 180ms spring. The 108×128 logical hit rectangle stays fixed.
 - Pointer hover and keyboard focus lift the face 3px and expose a warm rim. No continuous idle animation is used.

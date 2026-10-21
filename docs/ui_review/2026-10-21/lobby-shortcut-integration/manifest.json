@@ -2,8 +2,7 @@
 	"activations": [
 		4,
 		4,
-		3,
-		2
+		3
 	],
 	"captures": [
 		{
@@ -51,20 +50,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 0
@@ -78,11 +63,11 @@
 					"alert": true,
 					"animating": true,
 					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
+					"focus": 0.972222208976746,
 					"has_focus": true,
 					"holding": true,
 					"kind": 0,
-					"lift": 2.81595611572266,
+					"lift": 2.91666662693024,
 					"pointer_over": true,
 					"press": 1.0,
 					"visual_scale": 0.94
@@ -114,20 +99,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 0
@@ -140,15 +111,15 @@
 					"activation_blocked": false,
 					"alert": true,
 					"animating": true,
-					"effect_progress": 0.186965823173523,
+					"effect_progress": 0.22435899078846,
 					"focus": 1.0,
 					"has_focus": true,
 					"holding": false,
 					"kind": 0,
 					"lift": 3.0,
 					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
+					"press": -0.0929765701293945,
+					"visual_scale": 1.00557859420776
 				},
 				{
 					"activation_blocked": true,
@@ -173,20 +144,6 @@
 					"has_focus": false,
 					"holding": false,
 					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
 					"lift": 0.0,
 					"pointer_over": false,
 					"press": 0.0,
@@ -240,20 +197,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 1
@@ -281,11 +224,11 @@
 					"alert": true,
 					"animating": true,
 					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
+					"focus": 0.972222208976746,
 					"has_focus": true,
 					"holding": true,
 					"kind": 1,
-					"lift": 2.81595611572266,
+					"lift": 2.91666662693024,
 					"pointer_over": true,
 					"press": 1.0,
 					"visual_scale": 0.94
@@ -299,20 +242,6 @@
 					"has_focus": false,
 					"holding": false,
 					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
 					"lift": 0.0,
 					"pointer_over": false,
 					"press": 0.0,
@@ -343,15 +272,15 @@
 					"activation_blocked": false,
 					"alert": true,
 					"animating": true,
-					"effect_progress": 0.186965823173523,
+					"effect_progress": 0.22435899078846,
 					"focus": 1.0,
 					"has_focus": true,
 					"holding": false,
 					"kind": 1,
 					"lift": 3.0,
 					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
+					"press": -0.0929765701293945,
+					"visual_scale": 1.00557859420776
 				},
 				{
 					"activation_blocked": true,
@@ -362,20 +291,6 @@
 					"has_focus": false,
 					"holding": false,
 					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
 					"lift": 0.0,
 					"pointer_over": false,
 					"press": 0.0,
@@ -429,20 +344,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 1
@@ -484,28 +385,14 @@
 					"alert": false,
 					"animating": true,
 					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
+					"focus": 0.972222208976746,
 					"has_focus": true,
 					"holding": true,
 					"kind": 2,
-					"lift": 2.81595611572266,
+					"lift": 2.91666662693024,
 					"pointer_over": true,
 					"press": 1.0,
 					"visual_scale": 0.94
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 0
@@ -546,29 +433,15 @@
 					"activation_blocked": false,
 					"alert": false,
 					"animating": true,
-					"effect_progress": 0.186965823173523,
+					"effect_progress": 0.22435899078846,
 					"focus": 1.0,
 					"has_focus": true,
 					"holding": false,
 					"kind": 2,
 					"lift": 3.0,
 					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
+					"press": -0.0929765701293945,
+					"visual_scale": 1.00557859420776
 				}
 			],
 			"surface_count": 0
@@ -614,209 +487,6 @@
 					"has_focus": false,
 					"holding": false,
 					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				}
-			],
-			"surface_count": 1
-		},
-		{
-			"context": "battle",
-			"file": "press_castle_360x640.png",
-			"states": [
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 0,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 1,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": false,
-					"alert": false,
-					"animating": true,
-					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
-					"has_focus": true,
-					"holding": true,
-					"kind": 3,
-					"lift": 2.81595611572266,
-					"pointer_over": true,
-					"press": 1.0,
-					"visual_scale": 0.94
-				}
-			],
-			"surface_count": 0
-		},
-		{
-			"context": "battle",
-			"file": "feedback_castle_360x640.png",
-			"states": [
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 0,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 1,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": false,
-					"alert": false,
-					"animating": true,
-					"effect_progress": 0.186965823173523,
-					"focus": 1.0,
-					"has_focus": true,
-					"holding": false,
-					"kind": 3,
-					"lift": 3.0,
-					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
-				}
-			],
-			"surface_count": 0
-		},
-		{
-			"context": "castle",
-			"file": "destination_castle_360x640.png",
-			"states": [
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 0,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 1,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
 					"lift": 0.0,
 					"pointer_over": false,
 					"press": 0.0,
@@ -870,20 +540,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 0
@@ -897,11 +553,11 @@
 					"alert": true,
 					"animating": true,
 					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
+					"focus": 0.972222208976746,
 					"has_focus": true,
 					"holding": true,
 					"kind": 0,
-					"lift": 2.81595611572266,
+					"lift": 2.91666662693024,
 					"pointer_over": true,
 					"press": 1.0,
 					"visual_scale": 0.94
@@ -933,20 +589,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 0
@@ -959,15 +601,15 @@
 					"activation_blocked": false,
 					"alert": true,
 					"animating": true,
-					"effect_progress": 0.186965823173523,
+					"effect_progress": 0.22435899078846,
 					"focus": 1.0,
 					"has_focus": true,
 					"holding": false,
 					"kind": 0,
 					"lift": 3.0,
 					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
+					"press": -0.0929765701293945,
+					"visual_scale": 1.00557859420776
 				},
 				{
 					"activation_blocked": true,
@@ -992,20 +634,6 @@
 					"has_focus": false,
 					"holding": false,
 					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
 					"lift": 0.0,
 					"pointer_over": false,
 					"press": 0.0,
@@ -1059,20 +687,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 1
@@ -1100,11 +714,11 @@
 					"alert": true,
 					"animating": true,
 					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
+					"focus": 0.972222208976746,
 					"has_focus": true,
 					"holding": true,
 					"kind": 1,
-					"lift": 2.81595611572266,
+					"lift": 2.91666662693024,
 					"pointer_over": true,
 					"press": 1.0,
 					"visual_scale": 0.94
@@ -1118,20 +732,6 @@
 					"has_focus": false,
 					"holding": false,
 					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
 					"lift": 0.0,
 					"pointer_over": false,
 					"press": 0.0,
@@ -1162,15 +762,15 @@
 					"activation_blocked": false,
 					"alert": true,
 					"animating": true,
-					"effect_progress": 0.186965823173523,
+					"effect_progress": 0.22435899078846,
 					"focus": 1.0,
 					"has_focus": true,
 					"holding": false,
 					"kind": 1,
 					"lift": 3.0,
 					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
+					"press": -0.0929765701293945,
+					"visual_scale": 1.00557859420776
 				},
 				{
 					"activation_blocked": true,
@@ -1181,20 +781,6 @@
 					"has_focus": false,
 					"holding": false,
 					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
 					"lift": 0.0,
 					"pointer_over": false,
 					"press": 0.0,
@@ -1248,20 +834,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 1
@@ -1303,28 +875,14 @@
 					"alert": false,
 					"animating": true,
 					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
+					"focus": 0.972222208976746,
 					"has_focus": true,
 					"holding": true,
 					"kind": 2,
-					"lift": 2.81595611572266,
+					"lift": 2.91666662693024,
 					"pointer_over": true,
 					"press": 1.0,
 					"visual_scale": 0.94
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 0
@@ -1365,29 +923,15 @@
 					"activation_blocked": false,
 					"alert": false,
 					"animating": true,
-					"effect_progress": 0.186965823173523,
+					"effect_progress": 0.22435899078846,
 					"focus": 1.0,
 					"has_focus": true,
 					"holding": false,
 					"kind": 2,
 					"lift": 3.0,
 					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
+					"press": -0.0929765701293945,
+					"visual_scale": 1.00557859420776
 				}
 			],
 			"surface_count": 0
@@ -1437,209 +981,6 @@
 					"pointer_over": false,
 					"press": 0.0,
 					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				}
-			],
-			"surface_count": 1
-		},
-		{
-			"context": "battle",
-			"file": "press_castle_450x800.png",
-			"states": [
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 0,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 1,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": false,
-					"alert": false,
-					"animating": true,
-					"effect_progress": 1.0,
-					"focus": 0.938652038574219,
-					"has_focus": true,
-					"holding": true,
-					"kind": 3,
-					"lift": 2.81595611572266,
-					"pointer_over": true,
-					"press": 1.0,
-					"visual_scale": 0.94
-				}
-			],
-			"surface_count": 0
-		},
-		{
-			"context": "battle",
-			"file": "feedback_castle_450x800.png",
-			"states": [
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 0,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 1,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": false,
-					"alert": false,
-					"animating": true,
-					"effect_progress": 0.186965823173523,
-					"focus": 1.0,
-					"has_focus": true,
-					"holding": false,
-					"kind": 3,
-					"lift": 3.0,
-					"pointer_over": true,
-					"press": -0.0971118211746216,
-					"visual_scale": 1.00582670927048
-				}
-			],
-			"surface_count": 0
-		},
-		{
-			"context": "castle",
-			"file": "destination_castle_450x800.png",
-			"states": [
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 0,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": true,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 1,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 2,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
-				},
-				{
-					"activation_blocked": true,
-					"alert": false,
-					"animating": false,
-					"effect_progress": 1.0,
-					"focus": 0.0,
-					"has_focus": false,
-					"holding": false,
-					"kind": 3,
-					"lift": 0.0,
-					"pointer_over": false,
-					"press": 0.0,
-					"visual_scale": 1.0
 				}
 			],
 			"surface_count": 1
@@ -1671,15 +1012,7 @@
 			]
 		},
 		{
-			"key": "native_shortcut_created_castle",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "data_refresh_preserves_four_native_buttons",
+			"key": "data_refresh_preserves_three_native_buttons",
 			"passed": true,
 			"window": [
 				0,
@@ -1728,22 +1061,6 @@
 		},
 		{
 			"key": "badge_can_update_without_rebuild_events",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "live_badge_matches_data_castle",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "badge_can_update_without_rebuild_castle",
 			"passed": true,
 			"window": [
 				0,
@@ -2015,14 +1332,6 @@
 			]
 		},
 		{
-			"key": "native_target_at_least_44px_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
 			"key": "pointer_depresses_quests",
 			"passed": true,
 			"window": [
@@ -2143,14 +1452,6 @@
 			]
 		},
 		{
-			"key": "native_target_at_least_44px_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
 			"key": "pointer_depresses_events",
 			"passed": true,
 			"window": [
@@ -2264,142 +1565,6 @@
 		},
 		{
 			"key": "native_target_at_least_44px_events",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "pointer_depresses_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "press_does_not_route_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "capture_dimensions_press_castle_360x640",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "release_has_local_motion_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "destination_waits_for_feedback_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "capture_dimensions_feedback_castle_360x640",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "release_activates_once_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "opens_correct_destination_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "destination_preserves_shortcuts_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "capture_dimensions_destination_castle_360x640",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "native_close_restores_lobby_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "close_preserves_shortcuts_castle",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_login",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_quests",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_events",
-			"passed": true,
-			"window": [
-				360,
-				640
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_castle",
 			"passed": true,
 			"window": [
 				360,
@@ -2535,14 +1700,6 @@
 			]
 		},
 		{
-			"key": "native_target_at_least_44px_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
 			"key": "pointer_depresses_quests",
 			"passed": true,
 			"window": [
@@ -2656,14 +1813,6 @@
 		},
 		{
 			"key": "native_target_at_least_44px_events",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_castle",
 			"passed": true,
 			"window": [
 				450,
@@ -2791,142 +1940,6 @@
 			]
 		},
 		{
-			"key": "native_target_at_least_44px_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "pointer_depresses_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "press_does_not_route_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "capture_dimensions_press_castle_450x800",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "release_has_local_motion_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "destination_waits_for_feedback_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "capture_dimensions_feedback_castle_450x800",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "release_activates_once_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "opens_correct_destination_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "destination_preserves_shortcuts_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "capture_dimensions_destination_castle_450x800",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "native_close_restores_lobby_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "close_preserves_shortcuts_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_login",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_quests",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_events",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
-			"key": "native_target_at_least_44px_castle",
-			"passed": true,
-			"window": [
-				450,
-				800
-			]
-		},
-		{
 			"key": "capture_saved_idle_360x640",
 			"passed": true,
 			"window": [
@@ -3000,30 +2013,6 @@
 		},
 		{
 			"key": "capture_saved_destination_events_360x640",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "capture_saved_press_castle_360x640",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "capture_saved_feedback_castle_360x640",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "capture_saved_destination_castle_360x640",
 			"passed": true,
 			"window": [
 				0,
@@ -3109,39 +2098,14 @@
 				0,
 				0
 			]
-		},
-		{
-			"key": "capture_saved_press_castle_450x800",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "capture_saved_feedback_castle_450x800",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
-		},
-		{
-			"key": "capture_saved_destination_castle_450x800",
-			"passed": true,
-			"window": [
-				0,
-				0
-			]
 		}
 	],
 	"failures": 0,
 	"persist": false,
-	"profile": "C:/Users/dangp/GodotProjects/first-project/output/lobby-shortcut-integration-profile/roaming/Godot/app_userdata/Gear Defenders",
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/final-three-rail-test-profile/roaming/Godot/app_userdata/Gear Defenders",
 	"shortcut_ids": [
-		203591519333,
-		204061281391,
-		204698815625,
-		205151800467
+		204010949735,
+		204480711793,
+		205118246027
 	]
 }

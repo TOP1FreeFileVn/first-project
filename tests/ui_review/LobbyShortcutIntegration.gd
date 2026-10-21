@@ -3,12 +3,12 @@ extends Node
 # Production Home, native input, disposable profile. No claims, purchases or battle.
 const HOME = preload("res://game/menu/Home.tscn")
 const OUT := "res://docs/ui_review/2026-10-21/lobby-shortcut-integration"
-const KEYS := ["login", "quests", "events", "castle"]
+const KEYS := ["login", "quests", "events"]
 const SIZES := [Vector2i(360, 640), Vector2i(450, 800)]
 var _home
 var _buttons: Array[Button] = []
 var _ids: Array = []
-var _activations := [0, 0, 0, 0]
+var _activations := [0, 0, 0]
 var _checks: Array = []
 var _captures: Array = []
 var _images: Array = []
@@ -31,7 +31,7 @@ func _ready() -> void:
 	add_child(_home)
 	_home.select_tab(_home.BATTLE_TAB, false)
 	await _settle()
-	for index in 4:
+	for index in KEYS.size():
 		var button := _home._side.find_child(KEYS[index].to_pascal_case() + "Shortcut", true, false) as Button
 		_check(button != null and button.has_method("get_review_state"), "native_shortcut_created_" + KEYS[index])
 		if button == null or not button.has_method("get_review_state"):
@@ -48,7 +48,7 @@ func _ready() -> void:
 		get_window().size = requested
 		await _reset_lobby()
 		await _capture("idle", requested)
-		for index in 4:
+		for index in KEYS.size():
 			await _check_route(index, requested)
 	_finish()
 
@@ -62,7 +62,7 @@ func _state(index: int) -> Dictionary:
 
 
 func _same_buttons() -> bool:
-	for index in 4:
+	for index in KEYS.size():
 		if not is_instance_valid(_buttons[index]) or _buttons[index].get_instance_id() != _ids[index]:
 			return false
 		if _home._side_shortcuts.get(KEYS[index]) != _buttons[index]:
@@ -80,9 +80,7 @@ func _surfaces() -> Array:
 
 
 func _destination(index: int) -> bool:
-	if index == 3:
-		return _home._overlay_page != null and _home._overlay_page.get_script().resource_path.ends_with("CastlePage.gd")
-	var context: String = ["login", "quests", "events"][index]
+	var context: String = KEYS[index]
 	var matches := 0
 	for entry in _surfaces():
 		if entry.context == context:
@@ -114,12 +112,9 @@ func _check_route(index: int, requested: Vector2i) -> void:
 	_check(_same_buttons(), "destination_preserves_shortcuts_" + KEYS[index], requested)
 	await _capture("destination_" + KEYS[index], requested)
 	# Close through the native registered menu's close/back button, without claims.
-	if index == 3:
-		await _tap(_direct_button(_home._overlay))
-	else:
-		var entries := _surfaces()
-		if not entries.is_empty():
-			await _tap(_popup_close(entries[0].node))
+	var entries := _surfaces()
+	if not entries.is_empty():
+		await _tap(_popup_close(entries[0].node))
 	await _settle()
 	_check(_surfaces().is_empty() and _home._overlay == null and _home._side.is_visible_in_tree(), "native_close_restores_lobby_" + KEYS[index], requested)
 	_check(_same_buttons(), "close_preserves_shortcuts_" + KEYS[index], requested)
@@ -128,15 +123,15 @@ func _check_route(index: int, requested: Vector2i) -> void:
 
 func _check_refresh() -> void:
 	var states: Array = []
-	for index in 4:
+	for index in KEYS.size():
 		states.append(bool(_state(index).get("alert", false)))
 	PlayerData.gold += 1
 	PlayerData.changed.emit()
 	_home.call("_on_tick")
 	await get_tree().process_frame
-	_check(_same_buttons(), "data_refresh_preserves_four_native_buttons")
-	var expected := [PlayerData.login_can_claim(), PlayerData.quest_alert(), PlayerData.patrol_alert(), false]
-	for index in 4:
+	_check(_same_buttons(), "data_refresh_preserves_three_native_buttons")
+	var expected := [PlayerData.login_can_claim(), PlayerData.quest_alert(), PlayerData.patrol_alert()]
+	for index in KEYS.size():
 		_check(bool(_state(index).get("alert", false)) == expected[index], "live_badge_matches_data_" + KEYS[index])
 		_buttons[index].call("set_alert", not expected[index])
 		_check(bool(_state(index).get("alert", false)) != expected[index], "badge_can_update_without_rebuild_" + KEYS[index])
@@ -225,7 +220,7 @@ func _check_keyboard() -> void:
 
 func _check_bounds(requested: Vector2i) -> void:
 	var ratio := Vector2(requested) / get_viewport().get_visible_rect().size
-	for index in 4:
+	for index in KEYS.size():
 		var pixels := _buttons[index].get_global_rect().size * ratio
 		_check(pixels.x >= 44.0 and pixels.y >= 44.0, "native_target_at_least_44px_" + KEYS[index], requested)
 
@@ -239,15 +234,6 @@ func _reset_lobby() -> void:
 	for button in _buttons:
 		button.release_focus()
 	await _settle()
-
-
-func _direct_button(node: Node) -> Button:
-	if node == null:
-		return null
-	for child in node.get_children():
-		if child is Button:
-			return child
-	return null
 
 
 func _popup_close(node: Node) -> Button:
@@ -321,7 +307,7 @@ func _capture(key: String, requested: Vector2i) -> void:
 		return
 	_images.append({"image": image, "name": name})
 	var states: Array = []
-	for index in 4:
+	for index in KEYS.size():
 		var state := _state(index).duplicate(true)
 		state.erase("hit_rect")
 		states.append(state)

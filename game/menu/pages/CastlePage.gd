@@ -44,6 +44,7 @@ func build() -> void:
 
 	var cost := PlayerData.castle_upgrade_cost()
 	var upgrade := UiKit.button("", Vector2(360, 80), func(): PlayerData.upgrade_castle())
+	upgrade.name = "CastleDetailsUpgrade"
 	upgrade.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	upgrade.add_theme_font_size_override("font_size", 24)
 	if cost < 0:

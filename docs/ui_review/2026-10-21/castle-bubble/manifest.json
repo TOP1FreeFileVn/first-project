@@ -1,0 +1,1241 @@
+{
+	"captures": [
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "battle",
+			"cost": 400,
+			"file": "rich_360x640.png",
+			"gold": 2400,
+			"hint": {
+				"animating": true,
+				"bob": -2.99624268833138,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": true,
+				"visual_scale": 1.15967436632205
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "castle",
+			"cost": 400,
+			"file": "funded-review_360x640.png",
+			"gold": 2400,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 4,
+			"context": "battle",
+			"cost": 600,
+			"file": "upgraded_360x640.png",
+			"gold": 2000,
+			"hint": {
+				"animating": true,
+				"bob": -2.24989364288741,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": true,
+				"visual_scale": 1.09499078238358
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "battle",
+			"cost": 400,
+			"file": "no-funds_360x640.png",
+			"gold": 120,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": true
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 10,
+			"context": "battle",
+			"cost": -1,
+			"file": "max_360x640.png",
+			"gold": 100000,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": true
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 10,
+			"context": "castle",
+			"cost": -1,
+			"file": "castle-details_360x640.png",
+			"gold": 0,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "battle",
+			"cost": 400,
+			"file": "return-to-battle_360x640.png",
+			"gold": 2400,
+			"hint": {
+				"animating": true,
+				"bob": -2.12297703339848,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": true,
+				"visual_scale": 1.08399134289453
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "troops",
+			"cost": 400,
+			"file": "troops-hints_360x640.png",
+			"gold": 2400,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "battle",
+			"cost": 400,
+			"file": "rich_450x800.png",
+			"gold": 2400,
+			"hint": {
+				"animating": true,
+				"bob": -2.97585648559309,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": true,
+				"visual_scale": 1.15790756208473
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "castle",
+			"cost": 400,
+			"file": "funded-review_450x800.png",
+			"gold": 2400,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 4,
+			"context": "battle",
+			"cost": 600,
+			"file": "upgraded_450x800.png",
+			"gold": 2000,
+			"hint": {
+				"animating": true,
+				"bob": -2.24985406686467,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": true,
+				"visual_scale": 1.0949873524616
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "battle",
+			"cost": 400,
+			"file": "no-funds_450x800.png",
+			"gold": 120,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": true
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 10,
+			"context": "battle",
+			"cost": -1,
+			"file": "max_450x800.png",
+			"gold": 100000,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": true
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 10,
+			"context": "castle",
+			"cost": -1,
+			"file": "castle-details_450x800.png",
+			"gold": 0,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "battle",
+			"cost": 400,
+			"file": "return-to-battle_450x800.png",
+			"gold": 2400,
+			"hint": {
+				"animating": true,
+				"bob": -2.12312251950283,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": true,
+				"visual_scale": 1.08400395169025
+			},
+			"quiet_arrow_visible": false
+		},
+		{
+			"bubble_enabled": true,
+			"castle_level": 3,
+			"context": "troops",
+			"cost": 400,
+			"file": "troops-hints_450x800.png",
+			"gold": 2400,
+			"hint": {
+				"animating": false,
+				"bob": 0.0,
+				"pulse_seconds": 1.1,
+				"size": "(56.0, 56.0)",
+				"visible": false,
+				"visual_scale": 1.0
+			},
+			"quiet_arrow_visible": false
+		}
+	],
+	"checks": [
+		{
+			"key": "persistent_world_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_castle_bubble_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "animated_castle_hint_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "three_event_shortcuts_without_castle_rail",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_swipe_over_castle_changes_stage_without_details_before_upgrade",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_previous_restores_stage_before_upgrade",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_vertical_drag_does_not_open_castle_before_upgrade",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "funded_castle_bubble_enabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "funded_hint_visible_animated",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "hint_scale_changes_over_time",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "hint_does_not_take_pointer_or_clip",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "castle_bubble_native_target_at_least_44px",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_rich_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "bubble_pointer_down_does_not_spend_or_open",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bubble_release_opens_review_without_spending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "funded_review_upgrade_enabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_funded-review_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_review_upgrade_spends_exact_cost_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "live_castle_level_label_updates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "world_castle_level_updates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_preserves_world_actors_and_clock",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_preserves_native_control_identity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_upgraded_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "exact_funds_enable_bubble_hint",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "exact_funds_bubble_opens_without_spending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "exact_funds_review_upgrade_enabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "exact_funds_native_upgrade_leaves_zero_gold",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "spent_funds_disable_next_review_upgrade",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "spent_funds_keep_review_bubble_and_stop_hint_pulse",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "fixture_has_affordable_workshop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "unaffordable_castle_bubble_static_despite_workshop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_no-funds_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "unfunded_bubble_opens_disabled_review_without_spending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "disabled_native_review_upgrade_never_spends",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "funding_refresh_restores_same_hint_controls",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "pointer_drag_off_bubble_cancels_review_and_spend",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "max_level_keeps_static_review_bubble",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_max_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "max_level_bubble_opens_disabled_review_without_spending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "max_level_native_review_click_cannot_spend",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_castle_art_click_opens_details_at_max_without_gold",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "castle_art_details_preserve_workshop_access",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "details_hide_castle_bubble_and_stop_hint",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_castle-details_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_details_back_restores_persistent_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_swipe_over_castle_changes_stage_without_details_after_details",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_previous_restores_stage_after_details",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_vertical_drag_does_not_open_castle_after_details",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "shop_hides_castle_prompt_and_stops_motion",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "battle_return_resumes_same_castle_prompt_and_world",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_return-to-battle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "troop_upgrade_hints_created",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "troop_arrows_large_overflowing_and_pointer_passive",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_troops-hints_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_swipe_over_castle_changes_stage_without_details_before_upgrade",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_previous_restores_stage_before_upgrade",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_vertical_drag_does_not_open_castle_before_upgrade",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "funded_castle_bubble_enabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "funded_hint_visible_animated",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "hint_scale_changes_over_time",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "hint_does_not_take_pointer_or_clip",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "castle_bubble_native_target_at_least_44px",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_rich_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "bubble_pointer_down_does_not_spend_or_open",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bubble_release_opens_review_without_spending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "funded_review_upgrade_enabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_funded-review_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_review_upgrade_spends_exact_cost_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "live_castle_level_label_updates",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "world_castle_level_updates",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_preserves_world_actors_and_clock",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_preserves_native_control_identity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_upgraded_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "exact_funds_enable_bubble_hint",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "exact_funds_bubble_opens_without_spending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "exact_funds_review_upgrade_enabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "exact_funds_native_upgrade_leaves_zero_gold",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "spent_funds_disable_next_review_upgrade",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "spent_funds_keep_review_bubble_and_stop_hint_pulse",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "fixture_has_affordable_workshop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "unaffordable_castle_bubble_static_despite_workshop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_no-funds_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "unfunded_bubble_opens_disabled_review_without_spending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "disabled_native_review_upgrade_never_spends",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "funding_refresh_restores_same_hint_controls",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "pointer_drag_off_bubble_cancels_review_and_spend",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "max_level_keeps_static_review_bubble",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_max_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "max_level_bubble_opens_disabled_review_without_spending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "max_level_native_review_click_cannot_spend",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_castle_art_click_opens_details_at_max_without_gold",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "castle_art_details_preserve_workshop_access",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "details_hide_castle_bubble_and_stop_hint",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_castle-details_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_details_back_restores_persistent_lobby",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_swipe_over_castle_changes_stage_without_details_after_details",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_previous_restores_stage_after_details",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_vertical_drag_does_not_open_castle_after_details",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "shop_hides_castle_prompt_and_stops_motion",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "battle_return_resumes_same_castle_prompt_and_world",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_return-to-battle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "troop_upgrade_hints_created",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "troop_arrows_large_overflowing_and_pointer_passive",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_troops-hints_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_rich_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_funded-review_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_upgraded_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_no-funds_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_max_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_castle-details_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_return-to-battle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_troops-hints_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_rich_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_funded-review_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_upgraded_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_no-funds_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_max_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_castle-details_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_return-to-battle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_troops-hints_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/castle-upgrade-qa-profile/roaming/Godot/app_userdata/Gear Defenders"
+}

@@ -8,6 +8,7 @@ extends "res://game/menu/pages/MenuPage.gd"
 # onto another to swap them, or drag one out of the team panel to bench it.
 
 const Ui = preload("res://game/ui/Ui.gd")
+const UpgradeHint = preload("res://game/ui/UpgradeHint.gd")
 const CARD_SIZE := Vector2(150, 240)
 const SLOT_HEIGHT := 138.0
 const MAX_SLOTS := 5
@@ -50,6 +51,8 @@ func _init() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	# The team (and the filter) stay put; only the collection below scrolls.
 	_scroll = get_child(0)
+	# Upgrade prompts rise above the top card edge, including at maximum pulse.
+	(_scroll.get_child(0) as MarginContainer).add_theme_constant_override("margin_top", 28)
 	var margin := MarginContainer.new()
 	margin.set_anchors_preset(Control.PRESET_TOP_WIDE)
 	for side in ["left", "right"]:
@@ -77,7 +80,7 @@ func build() -> void:
 	grid.columns = 4
 	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	grid.add_theme_constant_override("h_separation", 12)
-	grid.add_theme_constant_override("v_separation", 14)
+	grid.add_theme_constant_override("v_separation", 36)
 	for id in PlayerData.TROOP_ORDER:
 		if _filter < 0 or PlayerData.rarity_of(id) == _filter:
 			grid.add_child(_card(id))
@@ -507,6 +510,14 @@ func _card(id: String) -> Button:
 	var t: Dictionary = PlayerData.troop(id)
 	var unlocked: bool = t["unlocked"]
 	var rarity: int = troop.rarity
+	var star_ready := false
+	var level_ready := false
+	if unlocked:
+		var star_cost := PlayerData.star_up_cost(id)
+		var level_cost := PlayerData.level_up_cost(id)
+		star_ready = star_cost >= 0 and t["cards"] >= star_cost
+		level_ready = level_cost >= 0 and PlayerData.gold >= level_cost
+	var has_upgrade := star_ready or level_ready
 	var card := card_button(rarity, CARD_SIZE)
 	card.name = "TroopCard_" + id
 	card.set_meta("troop_id", id)
@@ -540,20 +551,21 @@ func _card(id: String) -> Button:
 	if unlocked and PlayerData.in_team(id):
 		var badge := Ui.icon("badge_check", 24)
 		badge.name = "TroopInTeam"
-		_pin_state_badge(card, badge, Vector2(8, 8))
+		badge.z_index = 1
+		# The upgrade arrow leads; team membership follows without moving the level.
+		_pin_state_badge(card, badge, Vector2(42 if has_upgrade else 8, 8))
 	if unlocked:
-		var star_cost := PlayerData.star_up_cost(id)
-		var level_cost := PlayerData.level_up_cost(id)
-		var ready: TextureRect
-		if star_cost >= 0 and t["cards"] >= star_cost:
-			ready = Ui.icon("badge_up", 24)
+		var ready: Control
+		if star_ready:
+			ready = UpgradeHint.new()
 			ready.name = "TroopStarReady"
-		elif level_cost >= 0 and PlayerData.gold >= level_cost:
-			ready = Ui.icon("badge_up", 24)
+		elif level_ready:
+			ready = UpgradeHint.new()
 			ready.name = "TroopLevelReady"
 		if ready != null:
-			# Keep both state markers on the left, leaving the level alone on the right.
-			_pin_state_badge(card, ready, Vector2(40 if PlayerData.in_team(id) else 8, 8))
+			# Keep the same leading corner, in front of the team marker on every card.
+			ready.z_index = 8
+			_pin_state_badge(card, ready, Vector2(4, -18))
 	return card
 
 

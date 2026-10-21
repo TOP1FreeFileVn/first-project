@@ -9,6 +9,7 @@ var _selected := -1
 var _column: VBoxContainer
 var _stage: Control
 var _drag_from := -1.0
+var _drag_start := Vector2.ZERO
 var _sliding := false
 
 
@@ -178,10 +179,12 @@ func _on_stage_input(event: InputEvent) -> void:
 	if _sliding:
 		return
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		var at: Vector2 = _stage.get_global_transform() * event.position
 		if event.pressed:
-			_drag_from = event.position.x
+			_drag_from = at.x
+			_drag_start = at
 		elif _drag_from >= 0.0:
-			var moved: float = event.position.x - _drag_from
+			var moved: float = at.x - _drag_from
 			_drag_from = -1.0
 			if moved <= -SWIPE_DISTANCE:
 				_go(1)
@@ -189,9 +192,12 @@ func _on_stage_input(event: InputEvent) -> void:
 				_go(-1)
 			else:
 				_snap_back()
+				if at.distance_to(_drag_start) < 14.0:
+					home.open_castle_details_at(at)
 	elif event is InputEventMouseMotion and _drag_from >= 0.0:
 		# Keep the gesture local to this transparent region; courtyard actors stay in place.
-		var moved: float = event.position.x - _drag_from
+		var at: Vector2 = _stage.get_global_transform() * event.position
+		var moved: float = at.x - _drag_from
 		var at_end := (moved > 0.0 and _selected == 0) or (moved < 0.0 and _selected == PlayerData.LEVELS.size() - 1)
 		_stage.position.x = moved * (0.3 if at_end else 1.0)
 

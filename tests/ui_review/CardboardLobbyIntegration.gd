@@ -127,10 +127,9 @@ func _check_shop_round_trip(requested: Vector2i) -> void:
 
 
 func _check_castle_round_trip(requested: Vector2i) -> void:
-	var shortcut: Node = _home._side.find_child("CastleShortcut", true, false)
-	var tapped := await _tap(_direct_button(shortcut))
+	var tapped := await _tap_castle_art()
 	await _settle()
-	_check(tapped and _home._overlay != null and _home._overlay_page != null, "real_click_castle_rail", requested)
+	_check(tapped and _home._overlay != null and _home._overlay_page != null, "real_click_castle_illustration", requested)
 	if _home._overlay == null:
 		return
 	_check(not _state().get("active", true) and not _world.is_visible_in_tree(), "world_hidden_paused_under_castle_page", requested)
@@ -216,6 +215,28 @@ func _popup_close(node: Node) -> Button:
 		if found != null:
 			return found
 	return null
+
+
+func _tap_castle_art() -> bool:
+	var stage: Control = _home._pages[_home.BATTLE_TAB]._stage
+	var at := Vector2(360, 450)
+	if stage == null or not stage.is_visible_in_tree() or not stage.get_global_rect().has_point(at):
+		return false
+	var received := [false]
+	var observe := func(event: InputEvent):
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+			received[0] = true
+	stage.gui_input.connect(observe)
+	for pressed in [true, false]:
+		var event := InputEventMouseButton.new()
+		event.button_index = MOUSE_BUTTON_LEFT
+		event.pressed = pressed
+		event.position = at
+		event.global_position = at
+		get_viewport().push_input(event, true)
+		await get_tree().process_frame
+	stage.gui_input.disconnect(observe)
+	return received[0]
 
 
 func _tap(button: Button, point := Vector2(0.5, 0.5)) -> bool:

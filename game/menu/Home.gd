@@ -4,12 +4,13 @@ extends Control
 # coin and gem pills that open the shop, settings), the selected page in the middle and the
 # five-tab nav at the bottom (Cửa hàng · Anh hùng · Chiến · Lính · Triệu hồi; Chiến, in the
 # middle, is the default). On the Chiến tab, side rails open the 7-day gift, the daily quests,
-# the events hub and the castle. Event pages open on top of the tabs with a back button.
+# the events hub. The courtyard castle's speech bubble opens its details.
 
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const CartonNav = preload("res://game/ui/CartonNav.gd")
 const LobbyShortcut = preload("res://game/ui/LobbyShortcut.gd")
+const CastleBubble = preload("res://game/ui/CastleBubble.gd")
 const AdminGate = preload("res://game/admin/AdminGate.gd")
 const AdminPanel = preload("res://game/admin/AdminPanel.gd")
 const MetaPopups = preload("res://game/menu/popups/MetaPopups.gd")
@@ -56,6 +57,9 @@ var _side: Control
 var _side_shortcuts := {}
 var _shortcut_pending := false
 var _shortcut_epoch := 0
+var _castle_controls: Control
+var _castle_bubble: Button
+var _castle_upgrade_hint: Control
 ## An event page opened over the tabs, or null.
 var _overlay: Control
 var _overlay_page: Control
@@ -93,6 +97,7 @@ func _ready() -> void:
 		page.build()
 		_pages.append(page)
 	_build_side_rails()
+	_build_castle_controls()
 	_build_top_bar()
 	_nav_holder = _skinned(Control.new())
 	_nav_holder.position = Vector2(0, SCREEN.y - NAV_HEIGHT)
@@ -254,6 +259,7 @@ func _update_backdrop() -> void:
 	if _overlay != null:
 		_overlay.visible = not full_screen
 	_side.visible = context == "battle"
+	_castle_controls.visible = context == "battle"
 	_lobby_world.set_active(context == "battle")
 
 
@@ -283,7 +289,7 @@ func _update_tabs(animate := true) -> void:
 	_side_shortcuts["login"].set_alert(PlayerData.login_can_claim())
 	_side_shortcuts["quests"].set_alert(PlayerData.quest_alert())
 	_side_shortcuts["events"].set_alert(PlayerData.patrol_alert())
-	_side_shortcuts["castle"].set_alert(false)
+	_update_castle_controls()
 
 
 ## Gives a chrome root the SVG skin and smooth filtering.
@@ -393,7 +399,6 @@ func _build_side_rails() -> void:
 	Ui.pin(_side, left, Vector2(16, 140))
 	var right := Ui.rail([
 		_rail_entry("events", "rail_event", "Sự kiện", func(): MetaPopups.open_events(self)),
-		_rail_entry("castle", "rail_castle", "Thành", func(): open_page(CastlePage)),
 	])
 	Ui.pin(_side, right, Vector2(-16 - Ui.RAIL_ITEM_SIZE.x, 140), Control.PRESET_TOP_RIGHT)
 
@@ -423,6 +428,41 @@ func _activate_shortcut(shortcut: Button, on_press: Callable) -> void:
 	if _current != BATTLE_TAB or active_menu_context() != "battle" or not is_instance_valid(shortcut) or not shortcut.is_visible_in_tree():
 		return
 	on_press.call()
+
+
+func _build_castle_controls() -> void:
+	_castle_controls = _skinned(Control.new())
+	_castle_controls.name = "LobbyCastleControls"
+	_castle_controls.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_castle_controls)
+	_castle_controls.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_castle_bubble = CastleBubble.new()
+	_castle_bubble.name = "LobbyCastleBubble"
+	# Keep the bubble above the near ear, clear of the flag and stage title.
+	Ui.pin(_castle_controls, _castle_bubble, Vector2(270, 244))
+	_castle_bubble.pressed.connect(_open_castle_details)
+	_castle_upgrade_hint = _castle_bubble.find_child("CastleUpgradeHint", false, false)
+	_update_castle_controls()
+
+
+func _update_castle_controls() -> void:
+	var cost := PlayerData.castle_upgrade_cost()
+	_castle_bubble.configure(PlayerData.castle_level, cost >= 0 and PlayerData.gold >= cost)
+
+
+func _open_castle_details() -> void:
+	if _current != BATTLE_TAB or active_menu_context() != "battle":
+		return
+	SoundLib.play("click")
+	open_page(CastlePage)
+
+
+## A short tap on the illustration opens stats and the workshop; swipes stay in BattlePage.
+func open_castle_details_at(global_at: Vector2) -> bool:
+	if _current != BATTLE_TAB or active_menu_context() != "battle" or not Rect2(160, 345, 435, 300).has_point(global_at):
+		return false
+	_open_castle_details()
+	return true
 
 
 # The panel lives on its own CanvasLayer so it always draws above the lobby.

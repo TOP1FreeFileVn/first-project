@@ -114,8 +114,10 @@ func _surface_round_trip(context: String, over_shop: bool) -> void:
 			"login": MetaPopups.open_login(_home)
 			"quests": MetaPopups.open_quests(_home)
 			"events": MetaPopups.open_events(_home)
+	elif context == "castle":
+		_check(await _tap_castle_art(), "native_battle_illustration_to_castle")
 	else:
-		var names := {"castle": "CastleShortcut", "login": "LoginShortcut", "quests": "QuestsShortcut", "events": "EventsShortcut"}
+		var names := {"login": "LoginShortcut", "quests": "QuestsShortcut", "events": "EventsShortcut"}
 		_check(await _tap(_direct_button(_home._side.find_child(names[context], true, false))), "native_battle_rail_to_" + context)
 	await _settle()
 	_check_context(context, base + "_overlay_" + context)
@@ -346,6 +348,28 @@ func _row_button(scope: Node, title: String) -> Button:
 			if found != null:
 				return found
 	return null
+
+
+func _tap_castle_art() -> bool:
+	var stage: Control = _home._pages[_home.BATTLE_TAB]._stage
+	var at := Vector2(360, 450)
+	if stage == null or not stage.is_visible_in_tree() or not stage.get_global_rect().has_point(at):
+		return false
+	var received := [false]
+	var observe := func(event: InputEvent):
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+			received[0] = true
+	stage.gui_input.connect(observe)
+	for pressed in [true, false]:
+		var event := InputEventMouseButton.new()
+		event.button_index = MOUSE_BUTTON_LEFT
+		event.pressed = pressed
+		event.position = at
+		event.global_position = at
+		get_viewport().push_input(event, true)
+		await get_tree().process_frame
+	stage.gui_input.disconnect(observe)
+	return received[0]
 
 
 func _tap(button: Button) -> bool:
