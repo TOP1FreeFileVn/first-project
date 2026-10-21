@@ -1,0 +1,53 @@
+{
+	"captures": [
+		"idle.png",
+		"portal-open.png",
+		"invitation-open.png",
+		"focused.png",
+		"pressed.png",
+		"feedback-0.png",
+		"feedback-1.png",
+		"feedback-2.png",
+		"feedback-3.png",
+		"destination-0.png",
+		"destination-1.png",
+		"destination-2.png",
+		"destination-3.png"
+	],
+	"checks": [
+		{
+			"key": "native_pointer_depresses_0",
+			"passed": true
+		},
+		{
+			"key": "native_release_opens_destination_0",
+			"passed": true
+		},
+		{
+			"key": "native_pointer_depresses_1",
+			"passed": true
+		},
+		{
+			"key": "native_release_opens_destination_1",
+			"passed": true
+		},
+		{
+			"key": "native_pointer_depresses_2",
+			"passed": true
+		},
+		{
+			"key": "native_release_opens_destination_2",
+			"passed": true
+		},
+		{
+			"key": "native_pointer_depresses_3",
+			"passed": true
+		},
+		{
+			"key": "native_release_opens_destination_3",
+			"passed": true
+		}
+	],
+	"persist": false,
+	"proposal_only": true
+}

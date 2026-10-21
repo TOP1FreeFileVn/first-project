@@ -2,7 +2,8 @@ extends CanvasLayer
 
 # Battle HUD in the game skin (game/ui/Ui.gd + the SVG theme): top status (leave, level plaque,
 # speed; castle HP bar, wave pill, coins), the between-wave shop sheet with rarity offer cards,
-# the sell zone and READY button along the bottom, a toast pill, and the result sheet.
+# READY along the bottom, replaced by a sell drop target during a gear drag;
+# a toast pill and the result sheet.
 # Layout follows Figma UI-013 (field on top, board below). In battle, xu (the sheet's Coin)
 # buys gears; cá is the army's food: living cats fill the basket (the sheet's Population).
 
@@ -38,6 +39,11 @@ var _shop_tween: Tween
 var _cards: Array = []
 var _shown_phase := ""
 var _sell_zone: Panel
+var _sell_headline: Label
+var _sell_instruction: Label
+var _sell_refund: Label
+var _sell_face: StyleBoxFlat
+var _sell_hover_face: StyleBoxFlat
 var _message_box: PanelContainer
 var _message: Label
 var _message_tween: Tween
@@ -163,10 +169,10 @@ func _process(_delta: float) -> void:
 	var used: int = battle.fish_used()
 	_fish_label.text = "%d/%d" % [used, battle.fish_cap]
 	_fish_label.add_theme_color_override("font_color", UiKit.WARN if used >= battle.fish_cap else Color.WHITE)
-	_sell_zone.modulate = Color(1.25, 1.25, 1.25) if battle.board.is_dragging() else Color(1, 1, 1, 0.85)
+	_update_sell_target()
 	if battle.phase == "shop":
 		_ready_button.text = "Sẵn sàng  ▶  Đợt %d" % battle.wave_number()
-		_ready_button.disabled = false
+		_ready_button.disabled = battle.board.is_dragging()
 	elif battle.phase == "fight":
 		_ready_button.text = "Đang đánh · còn %d địch" % (battle.enemy_units.size() + battle.waves.pending())
 		_ready_button.disabled = true
@@ -267,27 +273,47 @@ func _build_top_bar(root: Control) -> void:
 
 func _build_controls(root: Control) -> void:
 	var sell_rect: Rect2 = battle.SELL_RECT
-	var sell_box := Ui.vbox(0, BoxContainer.ALIGNMENT_CENTER)
-	sell_box.name = "SellCaption"
-	sell_box.add_child(Ui.label("Bán", "", 22))
-	sell_box.add_child(Ui.label("kéo gear vào", "LabelTiny", 14))
-	# A Panel keeps the visible drop target inside SELL_RECT even when the two-line
-	# caption needs more room than the button skin's ordinary content margins.
+	# A flat receiving area, rather than a permanent raised button.
+	_sell_face = StyleBoxFlat.new()
+	_sell_face.bg_color = Color("a96e5a")
+	_sell_face.border_color = Color("583f21")
+	_sell_face.set_border_width_all(3)
+	_sell_face.set_corner_radius_all(20)
+	_sell_hover_face = _sell_face.duplicate()
+	_sell_hover_face.bg_color = Color("cd765c")
+	_sell_hover_face.border_color = Color("ffe08b")
 	_sell_zone = Panel.new()
 	_sell_zone.name = "BattleSellZone"
-	_sell_zone.add_theme_stylebox_override("panel", Ui.THEME.get_stylebox("normal", "BtnRed"))
-	_sell_zone.add_child(sell_box)
-	sell_box.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	sell_box.offset_left = 8
-	sell_box.offset_right = -8
-	sell_box.offset_top = -2
-	sell_box.offset_bottom = -14
+	_sell_zone.add_theme_stylebox_override("panel", _sell_face)
 	_sell_zone.position = sell_rect.position
 	_sell_zone.size = sell_rect.size
 	_sell_zone.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_sell_zone.visible = false
 	root.add_child(_sell_zone)
+	var center := Ui.center(Ui.hbox(22))
+	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_sell_zone.add_child(center)
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var row: HBoxContainer = center.get_child(0)
+	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var caption := Ui.vbox(0, BoxContainer.ALIGNMENT_CENTER)
+	caption.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_sell_headline = Ui.label("Kéo gear vào đây để bán", "", 24)
+	_sell_headline.name = "SellHeadline"
+	_sell_instruction = Ui.label("Thả ngoài vùng để giữ lại", "LabelTiny", 14)
+	_sell_instruction.name = "SellInstruction"
+	caption.add_child(_sell_headline)
+	caption.add_child(_sell_instruction)
+	row.add_child(caption)
+	var refund := Ui.hbox(6)
+	refund.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	refund.add_child(Ui.icon("coin", 34))
+	_sell_refund = Ui.label("", "", 24)
+	_sell_refund.name = "SellRefund"
+	refund.add_child(_sell_refund)
+	row.add_child(refund)
 
-	var ready_rect := Rect2(sell_rect.end.x + 14, sell_rect.position.y, 520, sell_rect.size.y)
+	var ready_rect := sell_rect
 	_ready_button = Ui.button("", "Yellow", ready_rect.size, 26)
 	_ready_button.name = "BattleReadyButton"
 	_raise_button_caption(_ready_button)
@@ -295,6 +321,24 @@ func _build_controls(root: Control) -> void:
 	_ready_button.size = ready_rect.size
 	_ready_button.pressed.connect(func(): battle.start_wave())
 	root.add_child(_ready_button)
+
+
+func _update_sell_target() -> void:
+	var gear = battle.board.dragged_gear()
+	var dragging: bool = gear != null
+	_ready_button.visible = not dragging
+	_sell_zone.visible = battle.accepts_input() and battle.board.drag_can_sell()
+	if not _sell_zone.visible:
+		return
+	var hovered: bool = battle.board.drag_over_sell_zone()
+	_sell_zone.add_theme_stylebox_override("panel", _sell_hover_face if hovered else _sell_face)
+	_sell_headline.text = "Thả để bán gear" if hovered else "Kéo gear vào đây để bán"
+	_sell_instruction.text = "Nhận lại xu ngay khi thả" if hovered else "Thả ngoài vùng để giữ lại"
+	var refund := Economy.sell_refund(gear.troop.rarity, gear.tier)
+	var received := floori(minf(battle.core.max_meat, battle.core.meat + refund)) - floori(battle.core.meat)
+	_sell_refund.text = "+%d xu" % received
+	if received < refund:
+		_sell_instruction.text = "Túi xu đầy · vẫn có thể dọn gear" if received == 0 else "Xu hoàn lại giới hạn theo túi xu"
 
 
 ## The font's visible letters sit below its line-box centre. Raise native captions

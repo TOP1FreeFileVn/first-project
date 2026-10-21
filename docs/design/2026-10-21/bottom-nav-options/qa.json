@@ -1,0 +1,16 @@
+{
+  "mode": "offline visual proposals only",
+  "production_files_changed": false,
+  "native_source": "docs\\ui_review\\2026-10-21\\menu-frame-rollout",
+  "icon_sources": [
+    "game/ui/skin/icon_tab_shop.svg",
+    "game/ui/skin/icon_tab_cat.svg",
+    "game/ui/skin/icon_tab_battle.svg",
+    "game/ui/skin/icon_tab_army.svg",
+    "game/ui/skin/icon_tab_summon.svg"
+  ],
+  "font": "game/ui/fonts/PaytoneOne-Regular.ttf",
+  "bar_height_px": 84,
+  "equal_slots": 5,
+  "states_rendered": 15
+}

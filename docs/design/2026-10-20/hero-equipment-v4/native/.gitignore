@@ -1,0 +1,5 @@
+.godot/
+profile-roaming/
+profile-local/
+override.cfg
+*.log

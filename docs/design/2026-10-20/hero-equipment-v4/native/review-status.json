@@ -1,0 +1,40 @@
+{
+	"board_size": [
+		1600,
+		1260
+	],
+	"engine_version": "4.7.2-stable (official)",
+	"heroes": [
+		{
+			"native": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-melee-128-godot.png",
+			"source": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-melee.png"
+		},
+		{
+			"native": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-ranged-128-godot.png",
+			"source": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-ranged.png"
+		},
+		{
+			"native": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-magic-128-godot.png",
+			"source": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-magic.png"
+		},
+		{
+			"native": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-heavy-128-godot.png",
+			"source": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/processed/hero-heavy.png"
+		}
+	],
+	"native_size": [
+		128,
+		120
+	],
+	"scope": "Isolated art compatibility review; not gameplay or equipped appearance integration.",
+	"source_size": [
+		768,
+		720
+	],
+	"status": "passed",
+	"user_data_dir": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/hero-equipment-v4/native/profile-roaming/StudioHeroV4",
+	"viewport_capture_size": [
+		1600,
+		1260
+	]
+}

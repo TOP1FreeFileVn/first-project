@@ -17,6 +17,8 @@ For that project's stroke treatment, use the [accepted spear sample](references/
 
 Choose the pipeline from the intended art and the user's direction. For new illustrated weapon concepts, image generation can establish expressive silhouettes faster than assembling geometry in code. Do not default to SVG merely because the previous assets are SVG. Use existing vector generators for native vector edits when that is the requested deliverable. A generated mockup is a proposal, not automatically a production-ready transparent asset.
 
+When the deliverable is native vector, draw it canvas-first: author paths in code on an HTML canvas, screenshot and inspect them on the unchanged character, then export the identical paths to SVG. This is the adopted route for vector art; Claude follows `.claude/skills/canvas-vector-art/SKILL.md` (see [references/canvas-first.md](references/canvas-first.md)).
+
 For a raster-generation workflow, inspect current character references, generate a few representative assets with one shared art brief, then review and extend the accepted direction. Preserve the original generated files and prompts. Clean backgrounds, alpha, palette and optical sizing without replacing the accepted generated silhouette with a crude geometric reconstruction. Use the available image-generation workflow; do not claim a model was used unless its run actually succeeded.
 
 ## Design the object before decorating it

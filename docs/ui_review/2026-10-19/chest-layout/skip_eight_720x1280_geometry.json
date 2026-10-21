@@ -16,7 +16,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@741",
+				"name": "@Control@528",
 				"render_rect": [
 					44.0,
 					415.0,
@@ -70,7 +70,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@752",
+				"name": "@Control@539",
 				"render_rect": [
 					206.0,
 					415.0,
@@ -124,7 +124,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@762",
+				"name": "@Control@549",
 				"render_rect": [
 					368.0,
 					415.0,
@@ -178,7 +178,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@772",
+				"name": "@Control@559",
 				"render_rect": [
 					530.0,
 					415.0,
@@ -232,7 +232,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@782",
+				"name": "@Control@569",
 				"render_rect": [
 					44.0,
 					628.0,
@@ -286,7 +286,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@792",
+				"name": "@Control@579",
 				"render_rect": [
 					206.0,
 					628.0,
@@ -340,7 +340,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@802",
+				"name": "@Control@589",
 				"render_rect": [
 					368.0,
 					628.0,
@@ -394,7 +394,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@812",
+				"name": "@Control@599",
 				"render_rect": [
 					530.0,
 					628.0,

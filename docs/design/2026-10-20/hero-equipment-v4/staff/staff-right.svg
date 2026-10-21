@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
+  <title>Hero staff: palm-centred right carry</title>
+  <desc>Grip is the leather centre (0,8), mapped to (160,166); 44 degree carry. Main9, material seams subordinate.</desc>
+  <defs>
+    <path id="staff-body" d="M-11 -80 L11 -80 L11 -14 Q12 -11 12 -7 L12 30 Q12 39 0 39 Q-12 39 -12 30 L-12 -7 Q-12 -11 -11 -14 Z"/>
+    <clipPath id="body-clip"><use href="#staff-body"/></clipPath>
+  </defs>
+  <g transform="translate(160 166) rotate(44) translate(0 -8)" stroke="#583f21" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#staff-body" fill="#b87b42" stroke="none"/>
+    <g clip-path="url(#body-clip)" stroke="none">
+      <path d="M-14 -81 L14 -81 L14 -60 L-14 -60 Z" fill="#dfac58"/>
+      <path d="M-14 -8 L14 -8 L14 24 L-14 24 Z" fill="#e7785b"/>
+      <path d="M-14 27 L14 27 L14 42 L-14 42 Z" fill="#dfac58"/>
+    </g>
+    <use href="#staff-body" fill="none"/>
+    <!-- Crystal bottom, brass socket and shaft all share local axis x=0. -->
+    <path d="M0 -118 Q2 -119 4 -116 L13 -99 Q16 -96 13 -93 L4 -76 Q0 -72 -3 -76 L-13 -94 Q-16 -97 -13 -100 L-3 -117 Z" fill="#71c8bc"/>
+    <path d="M0 -113 L0 -96 L9 -96 L1 -80 L-9 -97 Z" fill="#96dad1" stroke="none"/>
+    <path d="M-5 -65 L5 -65" fill="none" stroke="#af8039" stroke-width="2.2"/>
+    <path d="M-6 2 L7 -3 M-6 15 L7 10" fill="none" stroke="#984e39" stroke-width="2.3"/>
+  </g>
+</svg>

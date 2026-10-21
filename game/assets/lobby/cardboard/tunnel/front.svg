@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
+<g id="front" stroke-linecap="round" stroke-linejoin="round">
+  <!-- One U-shaped contour opens to ground. No closed sill crosses the actor. -->
+  <path d="M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z" fill="#e9bd7a"
+        stroke="#583f21" stroke-width="5"/>
+  <path d="M39 91 Q41 68 46 58 L67 78 Z" fill="#d8a762"/>
+  <path d="M185 78 L202 60 Q208 78 210 94 Z" fill="#d8a762"/>
+  <path d="M79 79 Q125 69 173 79" fill="none" stroke="#b58950" stroke-width="2.5"/>
+  <path d="M33 151 L48 151 L47 156 L50 160 L47 165 L50 169 L47 174 L33 174 Z"
+        fill="#fff0be"/>
+  <path d="M34 158 H44 M34 167 H44" fill="none" stroke="#d5b77b" stroke-width="2"/>
+  <path d="M52 194 V209 H64" fill="none" stroke="#b58950" stroke-width="2.5"/>
+  <path d="M198 151 V175" fill="none" stroke="#b58950" stroke-width="2.5"/>
+</g>
+</svg>

@@ -5,6 +5,7 @@ extends "res://game/menu/pages/MenuPage.gd"
 # buttons. Results play in SummonOpening.
 
 const Heroes = preload("res://game/core/Heroes.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 const SummonOpening = preload("res://game/ui/SummonOpening.gd")
 const BANNER_MIN_HEIGHT := 460.0
 
@@ -19,11 +20,8 @@ func build() -> void:
 	var color: Color = Economy.RARITY_COLORS[hero["rarity"]]
 	body.add_child(_banner(featured, hero, color))
 
-	var info := PanelContainer.new()
-	info.add_theme_stylebox_override("panel", UiKit.card_style())
 	var box := UiKit.vbox(10)
-	info.add_child(box)
-	var pity := _secondary("Còn %d lượt chắc chắn nhận %s" % [PlayerData.summon_pity_left(), hero["name"]], 22, UiKit.GOLD_TEXT)
+	var pity := UiKit.ink("Còn %d lượt chắc chắn nhận %s" % [PlayerData.summon_pity_left(), hero["name"]], 22)
 	pity.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)
@@ -32,7 +30,7 @@ func build() -> void:
 	bar.max_value = Heroes.SUMMON_PITY
 	bar.value = PlayerData.summon_pity
 	box.add_child(bar)
-	var note := _secondary("Gói x10 chắc chắn có ít nhất 1 tướng · Trùng tướng đổi thành %d mảnh" % Heroes.DUPLICATE_SHARDS, 22)
+	var note := UiKit.ink("Gói x10 chắc chắn có ít nhất 1 tướng · Trùng tướng đổi thành %d mảnh" % Heroes.DUPLICATE_SHARDS, 22)
 	note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(note)
@@ -41,7 +39,7 @@ func build() -> void:
 	rates.add_theme_constant_override("outline_size", 3)
 	rates.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	box.add_child(rates)
-	body.add_child(info)
+	body.add_child(Ui.menu_section("summon", "Bảo hiểm triệu hồi", box))
 
 	var buttons := UiKit.hbox(18)
 	buttons.alignment = BoxContainer.ALIGNMENT_CENTER

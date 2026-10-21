@@ -1,0 +1,5 @@
+capture/
+bed-preview/capture/
+native/.godot/
+native/profile/
+*.log

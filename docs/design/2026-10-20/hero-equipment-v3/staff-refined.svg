@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
+  <!-- Hand-authored refinement of generated concept 55:2; local grip at 0,0. -->
+  <g transform="translate(160 166) rotate(55)" stroke="#583f21" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-8 -68 L8 -68 L8 26 Q0 31 -8 26 Z" fill="#b87b42"/>
+    <!-- Upright crystal on a tilted socket; one exterior, no nested cage. -->
+    <g transform="rotate(-55 0 -86)">
+    <path d="M0 -109 Q2 -110 4 -107 L19 -88 Q21 -85 18 -82 L4 -64 Q0 -61 -4 -65 L-18 -83 Q-21 -86 -18 -89 L-3 -108 Z" fill="#71c8bc"/>
+    <path d="M0 -104 L0 -85 L14 -85 L1 -69 L-13 -86 Z" fill="#96dad1" stroke="none"/>
+    <path d="M-11 -76 L11 -76 L2 -66 Q0 -64 -2 -67 Z" fill="#dfac58" stroke="none"/>
+    <path d="M-3 -71 L4 -71" fill="none" stroke="#af8039" stroke-width="2.2"/>
+    </g>
+    <path d="M-9 -10 Q0 -13 10 -10 L11 26 Q0 30 -10 26 Z" fill="#e7785b"/>
+    <path d="M-9 28 Q0 31 11 28 L11 38 Q1 48 -9 38 Z" fill="#dfac58"/>
+    <path d="M-6 2 L7 -3 M-6 15 L7 10" fill="none" stroke="#984e39" stroke-width="2.3"/>
+  </g>
+</svg>

@@ -1,0 +1,65 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
+<title>Hero bow v4 - left grip and visible secondary string</title>
+<desc>Authored recurve bow. Continuous riser bounds148..172 centered160,166, joins151/181 symmetric. Main9, secondary string3, surface1.8 nativepixels. String ink #8a6240 before the single bright10 pass. Mirrored at x127 for left grip94,166. No added outlined grip pad.</desc>
+<defs><clipPath id="body-clip"><path d="M219 96
+ C204 94 186 98 173 108
+ C158 120 151 133 152 141
+ C152 146 150 149 148 151
+ L148 181
+ C150 183 152 186 152 191
+ C151 199 158 212 173 225
+ C187 233 204 234 219 231
+ C224 230 225 226 219 224
+ C206 221 195 216 187 207
+ C180 199 176 188 172 181
+ L172 151
+ C176 144 180 133 189 115
+ C199 105 211 103 220 103
+ C225 103 225 97 219 96 Z"/></clipPath></defs>
+<g transform="translate(254 0) scale(-1 1)">
+<g stroke-linejoin="round" stroke-linecap="round">
+ <path d="M222 97 L222 231" fill="none" stroke="#8a6240" stroke-width="3"/>
+ <path d="M219 96
+ C204 94 186 98 173 108
+ C158 120 151 133 152 141
+ C152 146 150 149 148 151
+ L148 181
+ C150 183 152 186 152 191
+ C151 199 158 212 173 225
+ C187 233 204 234 219 231
+ C224 230 225 226 219 224
+ C206 221 195 216 187 207
+ C180 199 176 188 172 181
+ L172 151
+ C176 144 180 133 189 115
+ C199 105 211 103 220 103
+ C225 103 225 97 219 96 Z" fill="#b87b42"/>
+ <g clip-path="url(#body-clip)">
+  <rect x="144" y="153" width="32" height="26" fill="#e7785b"/>
+  <path d="M149 160 Q160 163 171 159 M149 172 Q160 175 171 170"
+   fill="none" stroke="#984e39" stroke-width="1.8"/>
+ </g>
+ <path d="M219 96
+ C204 94 186 98 173 108
+ C158 120 151 133 152 141
+ C152 146 150 149 148 151
+ L148 181
+ C150 183 152 186 152 191
+ C151 199 158 212 173 225
+ C187 233 204 234 219 231
+ C224 230 225 226 219 224
+ C206 221 195 216 187 207
+ C180 199 176 188 172 181
+ L172 151
+ C176 144 180 133 189 115
+ C199 105 211 103 220 103
+ C225 103 225 97 219 96 Z" fill="none" stroke="#583f21" stroke-width="9"/>
+ <path d="M212 93 Q218 91 221 95 L225 105 Q225 112 219 113
+  L214 110 Q209 108 209 103 L209 98 Q209 95 212 93 Z"
+  fill="#dfac58" stroke="#583f21" stroke-width="9"/>
+ <path d="M212 233 Q218 235 221 231 L225 221 Q225 214 219 213
+  L214 216 Q209 218 209 223 L209 228 Q209 231 212 233 Z"
+  fill="#dfac58" stroke="#583f21" stroke-width="9"/>
+</g>
+</g>
+</svg>

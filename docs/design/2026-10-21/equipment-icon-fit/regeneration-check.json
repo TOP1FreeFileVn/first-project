@@ -1,0 +1,8 @@
+{
+  "icon_only_png_and_manifest_idempotent": true,
+  "production_png_count": 169,
+  "isolated_full_regeneration_png_count": 169,
+  "full_regeneration_sha256_differences": [],
+  "held_and_soldier_png_count": 23,
+  "held_and_soldier_changed_from_baseline": []
+}

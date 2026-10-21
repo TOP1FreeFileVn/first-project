@@ -1,0 +1,17 @@
+{
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "48:2",
+  "model": "gpt-image-2.5-sunburst",
+  "image": {
+    "url": "https://www.figma.com/api/mcp/asset/170ec993-549c-4cbb-8276-b1ea87c70fda.png",
+    "url_expires_in_days": 7,
+    "width": 1024,
+    "height": 1024,
+    "format": "png",
+    "model": "gpt-image-2.5-sunburst"
+  },
+  "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/170ec993-549c-4cbb-8276-b1ea87c70fda.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+  "prompt": "prompts/staff-iteration-2.txt",
+  "selected": false,
+  "review": "Retained failed thickness iteration. Final source is iteration3; this version is not used."
+}

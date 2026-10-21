@@ -1,0 +1,86 @@
+{
+  "review_date": "2026-10-20",
+  "review_only": true,
+  "product_reference": {
+    "name": "Cat Gunner",
+    "version": "1.1.64",
+    "package": "com.Chodun.CatGunner",
+    "sources": "../cat-shooter-background-study/sources.json",
+    "scope": "Recovered background sprites and terrain props; no runtime lobby reconstruction"
+  },
+  "generation": {
+    "tool": "Figma generate_image",
+    "model": "gpt-image-2.5-sunburst",
+    "file_key": "2uKzqvXeOSPQqfaow6s7TU",
+    "node_id": "64:2",
+    "raw": "courtyard-raw.png",
+    "prompt": "prompts/cat-gunner-informed-courtyard.txt",
+    "size": [
+      864,
+      1536
+    ],
+    "figma_ai_credits_used": true
+  },
+  "figma_review": {
+    "file_key": "2uKzqvXeOSPQqfaow6s7TU",
+    "page_id": "0:1",
+    "board_id": "66:2",
+    "scene_id": "66:8",
+    "background_id": "66:9",
+    "reference_image_id": "66:11",
+    "castle_detail_id": "66:12",
+    "url": "https://www.figma.com/design/2uKzqvXeOSPQqfaow6s7TU?node-id=66-2",
+    "castle_layer_id": "73:2",
+    "foreground_id": "72:176",
+    "title_id": "72:177",
+    "screenshot": "figma-preview.png",
+    "complete": true
+  },
+  "production_code_modified": false,
+  "validation": {
+    "review_assets": [
+      {
+        "name": "terrain-background.png",
+        "size": [
+          720,
+          1280
+        ],
+        "mode": "RGB",
+        "sha256": "134d8dfda55bbd0f81205178b78fe97f4b9b2335529fadc5ef10df0edd1f7e04"
+      },
+      {
+        "name": "castle-layer.png",
+        "size": [
+          720,
+          1280
+        ],
+        "mode": "RGBA",
+        "sha256": "5bf1017df36379b67331e5c7054315cead8e3c74dee19e7f03c9b6020e69ab94"
+      },
+      {
+        "name": "cat-occlusion-overlay.png",
+        "size": [
+          720,
+          1280
+        ],
+        "mode": "RGBA",
+        "sha256": "4f7e96736a1a89ea51117ca99497a8e2af601e591241c41fb131e613c5254daa"
+      },
+      {
+        "name": "courtyard-background.png",
+        "size": [
+          720,
+          1280
+        ],
+        "mode": "RGB",
+        "sha256": "9f760dff15ce57224c604454a3282bf9dfef1186768f03b8b01646cbefff9c12"
+      }
+    ],
+    "terrain_plus_castle_matches_composite": true,
+    "figma_descendant_count": 191,
+    "figma_vector_count": 108,
+    "stage_font": "Paytone One / Regular",
+    "visual_check": "Passed full Figma board screenshot and local native-UI composite; review-only artwork",
+    "remaining_scope": "Upgrade stages, runtime scene, animation and asset style cleanup pending art approval"
+  }
+}

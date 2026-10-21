@@ -1,0 +1,19 @@
+{
+  "generated_concept": "raw/staff-iteration-4.png",
+  "generation_node": "55:2",
+  "generation_model": "gpt-image-2.5-sunburst",
+  "final_source": "staff-refined.svg",
+  "authorship": "Manual vector refinement of generated crystal-staff concept. Broad fill and structural outline authored together; integral brass heel replaces crowded nested cradle. Not automatic outline processing.",
+  "canvas": [256, 240],
+  "render_scale": 3,
+  "main_stroke": 9,
+  "leather_seams": 2.3,
+  "ochre_joint": 2.2,
+  "local_grip": [0, 0],
+  "target_grip": [160, 166],
+  "shaft_clockwise_angle": 55,
+  "crystal_orientation": "Upright crown on tilted shaft, deliberately offset for face clearance.",
+  "held_alpha_bounds": [118.6667, 88.6667, 255, 201.3333],
+  "clipped": false,
+  "color_adjustment": "Final board and delivered processed staff use the shared 10 percent brighter fill treatment; SVG preserves original colors for reproducibility."
+}

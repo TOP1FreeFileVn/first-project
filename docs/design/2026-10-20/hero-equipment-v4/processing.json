@@ -1,0 +1,105 @@
+{
+  "version": 4,
+  "display_rule": "Only held weapon is visible. Helmet, armor, gloves, boots, amulet are stat-only item icons.",
+  "canvas": [
+    256,
+    240
+  ],
+  "render_scale": 3,
+  "poses": {
+    "melee": {
+      "hand": "right",
+      "target_grip": [
+        160,
+        166
+      ],
+      "alpha_bounds": [
+        131.0,
+        40.333333333333336,
+        238.66666666666666,
+        203.33333333333334
+      ],
+      "clipped": false
+    },
+    "ranged": {
+      "hand": "left",
+      "target_grip": [
+        94,
+        166
+      ],
+      "alpha_bounds": [
+        24.333333333333332,
+        87.66666666666667,
+        110.66666666666667,
+        238.33333333333334
+      ],
+      "clipped": false
+    },
+    "magic": {
+      "hand": "right",
+      "target_grip": [
+        160,
+        166
+      ],
+      "alpha_bounds": [
+        128.66666666666666,
+        69.33333333333333,
+        253.66666666666666,
+        197.66666666666666
+      ],
+      "clipped": false
+    },
+    "heavy": {
+      "hand": "right",
+      "target_grip": [
+        160,
+        166
+      ],
+      "alpha_bounds": [
+        129.66666666666666,
+        67.0,
+        252.33333333333334,
+        208.66666666666666
+      ],
+      "clipped": false
+    }
+  },
+  "base": "../../2026-10-19/hero-equipment/sources/hero-base.png",
+  "pawn_layer": "../../2026-10-19/hero-equipment/sources/hero-paws.png",
+  "palm_occlusion": "Rounded local ginger-fur fill sampled from original coat inside the native paw bowl, then unchanged C contour. No cuff or added glove outline.",
+  "right_palm_ellipse": [
+    151,
+    156,
+    168,
+    176
+  ],
+  "left_palm_transform": "x_new=254-x; bow and mask only, not cat/cape",
+  "staff": {
+    "source": "staff/staff-right.svg",
+    "source_grip": [
+      0,
+      8
+    ],
+    "target_grip": [
+      160,
+      166
+    ],
+    "clockwise_angle": 44,
+    "crystal_source_center": [
+      0,
+      -96
+    ],
+    "connector_axis": "Crystal, brass socket and shaft all local x=0; same44degree rotation without independent crown rotation.",
+    "rationale": "Grip is the actual centre of the leather wrap. The crystal and socket are coaxial with the shaft."
+  },
+  "bow": {
+    "source": "bow/bow-left.svg",
+    "main_native": 9,
+    "string_native": 3,
+    "string_role": "Visible secondary structural line",
+    "string_source_color": "#8a6240",
+    "string_brightened_color": "#986c46"
+  },
+  "brightness": "Sword/axe reuse v3 bright10 once. Authored bow and staff original-tone rasters each receive one1.10 paint pass; brown main ink preserved.",
+  "runtime": "Design review only; gameplay stats already follow weapon/five-stat-item contract in game/core/HeroCat.gd."
+}

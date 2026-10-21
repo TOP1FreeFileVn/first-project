@@ -1,0 +1,16 @@
+{
+  "selected": 1,
+  "prompt": "ONE single large heavy bearded axe sprite for a plump flat cartoon cat game, perfectlyupright on purewhite, nocharacter,nohands,notext,noshadow. Crafted chunky heavyweapon, not a spear and not a thin woodcutteraxe. Large single steelhead with broad hookedlowerbeard and clearclean cuttingbelly on the right, sturdy warmorangebrown woodhandle, honeybrasssocket, muted coral leathergrip, small honeybrassbuttcap.\nSource layout on1024x1024: axetop75, butttip950. Handlecenterx400. Gripcenterx400y730, longsturdygrip extendsy640to840. Headiscompactbroad singleblade extendingrightfromsocket atx400y235 toaroundx825; steelheadroughly450wide330high. Headbearddescendsto440, curvedlowernotchopensbroadly, softbluntjoints. Functionalheavymass, simplebroadplanes andcutecompactproportions. No secondblade, nobackspike, nologo, nocatface, nofireFX.\nEXTREMELYBOLD warmdarkbrown exteriorcontour #583f21 around65SOURCEPIXELSthick, roundedcapsandjoins. Shafttotalwidth175with50-65pxofwarmwoodvisibleinside andsturdythickbrownsides. This isaCARTOONMASCOTMARKERoutline, not15or20pxline. Leavebroadsteelcolorinsidehead despiteveryfatborder. The wholeweaponis designed tofitabout130pxheldheightwithmaincontournear9px on256x240catcanvas. Broadpalegraysteelhead withonebroadslightlydarkercoolgrayfaceplane. NOinkbetweensteelplanes. Onequietgraysteelseam onlyifneeded. Brasssocketjoinmayuseonesubordinateochreline. CoralwraponlyTHREEwidelyspacedcurvedmutedredbrownseamsabout12px, not brownmaincontour. Strongtrueheadsocketcontactcanusewarmbrownstructuralink. Sharededgesonce,no doubledborders,no outliningallcolorregions,nouniformgrayinteriorink.\nEveryregionUNIFORMOPAQUEFLATCOLOR. No gradients no illumination no highlights no shadedcylinder nosheen noglow no ambientocclusion no noise texture grain scratches notinyhardware no3Drender. Palettepalecoolsteel #D6E0E4,broadsteelplane #A0B2BA,honeybrass #E0AE53, warmorangebrownwood,coralleather #DE7D63. Purewhitebackground. Singleuprightcompleteweapon centeredwithsafe room, noscene noframe.",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "56:2",
+  "model": "gpt-image-2.5-sunburst",
+  "image": {
+    "url": "https://www.figma.com/api/mcp/asset/58325714-669f-4ffa-bf37-0f37cd43eddc.png",
+    "url_expires_in_days": 7,
+    "width": 1024,
+    "height": 1024,
+    "format": "png",
+    "model": "gpt-image-2.5-sunburst"
+  },
+  "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/58325714-669f-4ffa-bf37-0f37cd43eddc.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image."
+}

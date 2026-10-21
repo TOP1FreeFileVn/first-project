@@ -1,0 +1,10 @@
+extends SceneTree
+func _initialize() -> void:
+	var folder := ProjectSettings.globalize_path("res://..").simplify_path()
+	var im := Image.new()
+	if im.load_svg_from_string(FileAccess.get_file_as_string(folder + "/bow/bow-left.svg"), 3.0) != OK:
+		quit(1)
+		return
+	im.save_png(folder + "/bow/bow-left-layer-original-tone.png")
+	print("BOW_V4_RENDER_OK")
+	quit()

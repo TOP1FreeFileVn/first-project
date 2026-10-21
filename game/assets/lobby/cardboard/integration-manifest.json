@@ -1,0 +1,652 @@
+{
+  "date": "2026-10-20",
+  "status": "approved_design_assets_promoted_for_live_game_integration",
+  "screen": [
+    720,
+    1280
+  ],
+  "asset_root": "res://game/assets/lobby/cardboard/",
+  "design_sources": {
+    "v4": "docs/design/2026-10-20/cardboard-castle-lobby-v4/README.md",
+    "v4_figma": "https://www.figma.com/design/2uKzqvXeOSPQqfaow6s7TU?node-id=66-2",
+    "tunnel": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/art/README.md",
+    "tunnel_figma": "https://www.figma.com/design/2uKzqvXeOSPQqfaow6s7TU?node-id=77-2",
+    "bed": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/bed-art/README.md",
+    "bed_figma": "https://www.figma.com/design/2uKzqvXeOSPQqfaow6s7TU?node-id=82-2",
+    "cats": "docs/design/2026-10-20/cat-spine-parts/manifest.json"
+  },
+  "terrain": {
+    "file": "terrain-clean.png",
+    "position": [
+      0,
+      0
+    ],
+    "size": [
+      720,
+      1280
+    ],
+    "sha256": "41378bca41f70240e404aa252224f380aa0beb60fd5e031e3e168b8626bd4811",
+    "source": "source/terrain-approved-v4.png",
+    "derived_only_to_remove_duplicate_baked_live_props": true,
+    "remaining_static_bitmap_props": [
+      "scratching post",
+      "yarn ball",
+      "teal pillow"
+    ],
+    "no_baked_castle_or_cats": true,
+    "cleanup": [
+      {
+        "id": "tunnel",
+        "polygon": [
+          [
+            48,
+            665
+          ],
+          [
+            90,
+            645
+          ],
+          [
+            108,
+            633
+          ],
+          [
+            149,
+            635
+          ],
+          [
+            195,
+            630
+          ],
+          [
+            222,
+            630
+          ],
+          [
+            238,
+            636
+          ],
+          [
+            240,
+            726
+          ],
+          [
+            260,
+            738
+          ],
+          [
+            265,
+            754
+          ],
+          [
+            258,
+            773
+          ],
+          [
+            242,
+            786
+          ],
+          [
+            202,
+            793
+          ],
+          [
+            102,
+            796
+          ],
+          [
+            58,
+            783
+          ],
+          [
+            28,
+            768
+          ],
+          [
+            27,
+            744
+          ],
+          [
+            47,
+            731
+          ]
+        ],
+        "sample_context": [
+          0,
+          610,
+          330,
+          865
+        ],
+        "method": "robust quadratic fit to observed bright lawn only; excludes path/props/shadows/tufts; 4px mask expansion, 3px feather; protected yarn, pillow and post base",
+        "mask": "review/cleanup-tunnel-mask.png"
+      },
+      {
+        "id": "bed",
+        "polygon": [
+          [
+            445,
+            795
+          ],
+          [
+            469,
+            791
+          ],
+          [
+            493,
+            774
+          ],
+          [
+            509,
+            769
+          ],
+          [
+            523,
+            774
+          ],
+          [
+            589,
+            779
+          ],
+          [
+            612,
+            778
+          ],
+          [
+            626,
+            784
+          ],
+          [
+            631,
+            817
+          ],
+          [
+            638,
+            830
+          ],
+          [
+            637,
+            851
+          ],
+          [
+            626,
+            874
+          ],
+          [
+            603,
+            886
+          ],
+          [
+            565,
+            890
+          ],
+          [
+            484,
+            880
+          ],
+          [
+            439,
+            866
+          ],
+          [
+            429,
+            852
+          ],
+          [
+            432,
+            823
+          ]
+        ],
+        "sample_context": [
+          380,
+          700,
+          720,
+          950
+        ],
+        "method": "robust quadratic fit to observed bright lawn only; excludes path/props/shadows/tufts; 4px mask expansion, 3px feather; protected yarn, pillow and post base",
+        "mask": "review/cleanup-bed-mask.png"
+      }
+    ]
+  },
+  "castle": {
+    "layer": "castle-layer.png",
+    "layer_position": [
+      0,
+      0
+    ],
+    "layer_size": [
+      720,
+      1280
+    ],
+    "painted_bounds": [
+      156,
+      290,
+      591,
+      647
+    ],
+    "preview_crop": "castle-crop.png",
+    "crop_size": [
+      435,
+      357
+    ],
+    "crop_top_left": [
+      156,
+      290
+    ],
+    "doorway_bottom": [
+      365,
+      595
+    ],
+    "ramp_entry_approx": [
+      337,
+      644
+    ],
+    "bitmap": true,
+    "exact_approved_v4_copy": true,
+    "original_raw_source_region": [
+      100,
+      225,
+      790,
+      780
+    ],
+    "raw_to_approved_scale": 0.646
+  },
+  "props": [
+    {
+      "id": "tunnel",
+      "ground": [
+        165,
+        790
+      ],
+      "scale": 0.82,
+      "source_folder": "tunnel",
+      "canvas": [
+        256,
+        240
+      ],
+      "ground_local": [
+        128,
+        224
+      ],
+      "layer_order": [
+        "shadow",
+        "rear",
+        "interior",
+        "cat",
+        "front"
+      ],
+      "vector": true
+    },
+    {
+      "id": "bed",
+      "ground": [
+        530,
+        866
+      ],
+      "scale": 0.86,
+      "source_folder": "bed",
+      "canvas": [
+        256,
+        240
+      ],
+      "ground_local": [
+        128,
+        224
+      ],
+      "layer_order": [
+        "shadow",
+        "rear",
+        "interior",
+        "cat",
+        "front"
+      ],
+      "vector": true
+    }
+  ],
+  "cats": {
+    "kinds": [
+      "cat_cream",
+      "cat_tabby",
+      "cat_calico"
+    ],
+    "source_root": "cats/",
+    "pose": "original_front_only_all_states",
+    "canvas": [
+      256,
+      240
+    ],
+    "ground_local": [
+      128,
+      238
+    ],
+    "foot_pivots": {
+      "foot_L_image": [
+        82,
+        203
+      ],
+      "foot_R_image": [
+        174,
+        203
+      ]
+    },
+    "layer_order": [
+      "tail",
+      "foot_L_image",
+      "foot_R_image",
+      "body",
+      "paw_L_image",
+      "paw_R_image",
+      "head"
+    ],
+    "suggested_visual_scale": 0.37,
+    "v4_original_review_image_boxes": [
+      {
+        "kind": "cat_cream",
+        "xywh": [
+          115,
+          682,
+          96,
+          90
+        ]
+      },
+      {
+        "kind": "cat_tabby",
+        "xywh": [
+          323,
+          686,
+          108,
+          101
+        ]
+      },
+      {
+        "kind": "cat_calico",
+        "xywh": [
+          496,
+          772,
+          96,
+          90
+        ]
+      }
+    ],
+    "review_boxes_are_not_feet_anchors": true
+  },
+  "foreground": {
+    "file": "pillow-foreground.png",
+    "position": [
+      0,
+      0
+    ],
+    "size": [
+      720,
+      1280
+    ],
+    "purpose": "static approved pillow pixel restoration over live bed; not a second live entity"
+  },
+  "yarn_foreground": {
+    "file": "yarn-foreground.png",
+    "position": [
+      0,
+      0
+    ],
+    "size": [
+      720,
+      1280
+    ],
+    "depth_ground": [
+      214,
+      854
+    ],
+    "painted_alpha_bounds": [
+      181,
+      785,
+      248,
+      856
+    ],
+    "source": "source/terrain-approved-v4.png",
+    "rgb_exact_source_pixels": true,
+    "purpose": "static approved yarn pixel restoration, foot-sorted over cats behind the yarn; not a second live entity"
+  },
+  "qa": {
+    "exact_copy_files": 39,
+    "all_copy_sha256_match": true,
+    "pixels_outside_cleanup_unchanged": true,
+    "protected_yarn_pillow_pixels_unchanged": true,
+    "scene_proof": "review/scene-proof.png"
+  },
+  "copies": [
+    {
+      "asset": "source/terrain-approved-v4.png",
+      "source": "docs/design/2026-10-20/cardboard-castle-lobby-v4/processed/terrain-background.png",
+      "sha256": "134d8dfda55bbd0f81205178b78fe97f4b9b2335529fadc5ef10df0edd1f7e04",
+      "exact_copy": true
+    },
+    {
+      "asset": "castle-layer.png",
+      "source": "docs/design/2026-10-20/cardboard-castle-lobby-v4/processed/castle-layer.png",
+      "sha256": "5bf1017df36379b67331e5c7054315cead8e3c74dee19e7f03c9b6020e69ab94",
+      "exact_copy": true
+    },
+    {
+      "asset": "castle-crop.png",
+      "source": "docs/design/2026-10-20/cardboard-castle-lobby-v4/processed/castle-crop.png",
+      "sha256": "14bc581b03c5371d99cf9948af34f147f6ef958249b92ca5341fce849020fcd6",
+      "exact_copy": true
+    },
+    {
+      "asset": "tunnel/source.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/art/source.svg",
+      "sha256": "d9797d3b0401355329664717660936892e9ab4d8c062d3f87b3a6b52479869b7",
+      "exact_copy": true
+    },
+    {
+      "asset": "tunnel/shadow.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/art/shadow.svg",
+      "sha256": "ca58d1fdbca12ae0637d041970e3fec9f53e035bd4e6c804b69799b434399df7",
+      "exact_copy": true
+    },
+    {
+      "asset": "tunnel/rear.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/art/rear.svg",
+      "sha256": "813ec7e276c47485d3d0fc6825dda45a7b62b9570cc7305460e4ede78e253d09",
+      "exact_copy": true
+    },
+    {
+      "asset": "tunnel/interior.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/art/interior.svg",
+      "sha256": "2a5702e99f97a0f1f1cb315777c67fbf45081bac9cd79ecbe1669dd216d40dbf",
+      "exact_copy": true
+    },
+    {
+      "asset": "tunnel/front.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/art/front.svg",
+      "sha256": "3dfd46f8cea096fa62b26a3691d83c3b8a9b9abc69dd4a589dcb4968d04356a1",
+      "exact_copy": true
+    },
+    {
+      "asset": "tunnel/geometry.json",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/art/geometry.json",
+      "sha256": "2dafd7cda6df2603430324c0272b03b8309e58c04a8ed81d94dd5379ae36e765",
+      "exact_copy": true
+    },
+    {
+      "asset": "bed/source.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/bed-art/source.svg",
+      "sha256": "82bad0b3b9e134fc31a46478d33d3c1da06353417bcc30b15bad1fd0b7978f02",
+      "exact_copy": true
+    },
+    {
+      "asset": "bed/shadow.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/bed-art/shadow.svg",
+      "sha256": "a2c24319a6e4f5b1d3b6789b31124b298f4ad84a626b28a8eb04529280e3ebea",
+      "exact_copy": true
+    },
+    {
+      "asset": "bed/rear.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/bed-art/rear.svg",
+      "sha256": "25aca0ed81624dd45ac4d8113890500998ad5ca1b68c0699259ea60706474017",
+      "exact_copy": true
+    },
+    {
+      "asset": "bed/interior.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/bed-art/interior.svg",
+      "sha256": "4756539a23025929c62d6da1fadd10cfcf4ecb18f8d15cfd514c4f979281c1c0",
+      "exact_copy": true
+    },
+    {
+      "asset": "bed/front.svg",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/bed-art/front.svg",
+      "sha256": "4561ade619ddee877990897bbf019a4108163e61990c0b0c5e99bc27bbd55aee",
+      "exact_copy": true
+    },
+    {
+      "asset": "bed/geometry.json",
+      "source": "docs/design/2026-10-20/cardboard-tunnel-svg-pilot/bed-art/geometry.json",
+      "sha256": "215728a6bdd5b410e9440451c8e331970b08db05720e3dc541a14265845b0b54",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/assembled.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/assembled.svg",
+      "sha256": "88348a66fc562275e239701b316ef312039edb1e8ab1fb6abfcb46e5996cc1d3",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/tail.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/tail.svg",
+      "sha256": "005cc0d57a2ff2b5c53fd1767880ea913da1656b5f23c70392c69f82afb406f2",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/foot_L_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/foot_L_image.svg",
+      "sha256": "e6439f6a32295ef127f25560cb9bb0957b997185464fc89f5719387d165b4479",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/foot_R_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/foot_R_image.svg",
+      "sha256": "febd71af2f3e92d50627750cf4b1b286a19e241234d080b61500ff3a40f66392",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/body.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/body.svg",
+      "sha256": "63f52d7115e15a928c871dd3c9ce303b592e95c457ad714c9363c35288470ecb",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/paw_L_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/paw_L_image.svg",
+      "sha256": "e461a52ae08849308c65d72fac7d669590a50165edfef8fe6f0dc79833f796c3",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/paw_R_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/paw_R_image.svg",
+      "sha256": "11d77ca64dbcd74601e0fb551b351e3acc55d4bc44a08287614f72d4447673af",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_cream/head.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_cream/head.svg",
+      "sha256": "3730d399be785159596c230586616e00b95c61876a0c61d835b2508d6891f6b8",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/assembled.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/assembled.svg",
+      "sha256": "dde19c4e1c0988a6f0e981e97cc359bfd0f1c77e7e7cf235b18fa2bd7e86b0ca",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/tail.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/tail.svg",
+      "sha256": "056af0a59c4740bf9d7af68d2871e793b9529ca6be3c911db95e1b6849275754",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/foot_L_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/foot_L_image.svg",
+      "sha256": "89ba5f08281143dfa2d4c5f5b83d57a5a86f4c0729821f14f2b9b9e51d37d902",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/foot_R_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/foot_R_image.svg",
+      "sha256": "d1c8a94220ead075439fcdf8afd6ddec59f7d655a7bd556a388581acb09c3df2",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/body.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/body.svg",
+      "sha256": "cdd864c2c6938ad5f317b8a2356f47443f870ac156a70c010a7ec58f953cee24",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/paw_L_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/paw_L_image.svg",
+      "sha256": "e461a52ae08849308c65d72fac7d669590a50165edfef8fe6f0dc79833f796c3",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/paw_R_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/paw_R_image.svg",
+      "sha256": "11d77ca64dbcd74601e0fb551b351e3acc55d4bc44a08287614f72d4447673af",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_tabby/head.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby/head.svg",
+      "sha256": "e46eff78e066c9b6d7416758ca9869dda234170f224030c36364bbe292cc2791",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/assembled.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/assembled.svg",
+      "sha256": "098ec6ffa0e016c3f19c5159e9d885f8249da7cbf21d00bb9704f1dac5de5aea",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/tail.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/tail.svg",
+      "sha256": "12e75e5faadc1a92640b4c24d41e87d5e93e4f21e81d238daf194fa886d7aa17",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/foot_L_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/foot_L_image.svg",
+      "sha256": "50eda8245ce82b010ba1491a8aa06314d6ce33ffcc27fb74bbbe1388fff6c621",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/foot_R_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/foot_R_image.svg",
+      "sha256": "3924ddb122e7b996c72e89671ada4b8c5d0e9e3987916e4e87acee6a2d3cccd4",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/body.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/body.svg",
+      "sha256": "e50a1ed7a5a4250fe63ae770157ca6f0f72651316000401e7834561cda624084",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/paw_L_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/paw_L_image.svg",
+      "sha256": "e461a52ae08849308c65d72fac7d669590a50165edfef8fe6f0dc79833f796c3",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/paw_R_image.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/paw_R_image.svg",
+      "sha256": "11d77ca64dbcd74601e0fb551b351e3acc55d4bc44a08287614f72d4447673af",
+      "exact_copy": true
+    },
+    {
+      "asset": "cats/cat_calico/head.svg",
+      "source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_calico/head.svg",
+      "sha256": "ddf9e1e9537b9f853b8b7aa4835a21c2ef1d7f45fa9b78ebd935af5332a2ef33",
+      "exact_copy": true
+    }
+  ],
+  "runtime_scope": "Assets and placement data only; Home/BattlePage/LobbyWorld implementation owned elsewhere."
+}

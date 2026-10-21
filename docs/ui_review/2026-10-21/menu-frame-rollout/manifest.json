@@ -1,0 +1,9422 @@
+{
+	"captures": [
+		{
+			"context": "shop",
+			"file": "shop_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-rates_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-supplies_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-exchange_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero-detail_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon-rates_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "battle",
+			"file": "battle_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle-workshop_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "events",
+			"file": "events_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "patrol_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "login",
+			"file": "login_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "quests",
+			"file": "quests_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "quests",
+			"file": "quests-bottom_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "profile",
+			"file": "profile_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "profile",
+			"file": "profile-bottom_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "settings",
+			"file": "settings_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-rates_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-supplies_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-exchange_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero-detail_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon-rates_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "battle",
+			"file": "battle_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle-workshop_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"file": "events_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "patrol_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"file": "login_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"file": "quests_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"file": "quests-bottom_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"file": "profile_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"file": "profile-bottom_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"file": "settings_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_tab_entry_0",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_featured_and_exchange_attached_titles",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_supply_chests_in_two_columns",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_supply_cards_equal_width",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_supply_actions_share_baseline",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_silver_chest_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_silver_chest_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_silver_chest_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_silver_chest_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_open_chest_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_open_chest_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_open_chest_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_open_chest_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_rates_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_shop_rates_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_shop-rates",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop-rates",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_frame_within_viewport_width_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_tag_inside_section_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_tag_attached_to_panel_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_panel_inside_section_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-rates_content_inside_panel_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_popup_close_shop_rates",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_rates_close_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_supply_actions_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_shop-supplies",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop-supplies",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-supplies_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_exchange_reachable_by_scroll",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_exchange_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_exchange_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_exchange_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_exchange_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_shop_exchange_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_exchange_changes_only_fixture_currency",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_shop-exchange",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop-exchange",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop-exchange_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_tab_entry_1",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_frame_within_viewport_width_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tag_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tag_attached_to_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_panel_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_content_inside_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_1_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_2_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_3_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_4_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_5_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_6_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_equipment_card_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_hero_equipment_detail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_detail_popup_present",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_hero-detail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_hero-detail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_1_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_2_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_3_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_4_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_5_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_6_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_1_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Chỉ số",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Chỉ số",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Chỉ số",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Chỉ số",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Chỉ số",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_popup_close_hero_detail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_detail_close_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_tab_entry_3",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_frame_within_viewport_width_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tag_inside_section_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tag_attached_to_panel_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_panel_inside_section_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_content_inside_panel_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_1_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_2_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_3_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_4_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_tab_entry_4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_frame_within_viewport_width_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tag_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tag_attached_to_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_panel_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_content_inside_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_button_inside_panel_or_scroll_1_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_rates_reachable_by_scroll",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_summon_rates_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_summon-rates",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_summon-rates",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_frame_within_viewport_width_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_tag_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_tag_attached_to_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_panel_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_content_inside_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_button_inside_panel_or_scroll_1_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_frame_within_viewport_width_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_tag_inside_section_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_tag_attached_to_panel_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_panel_inside_section_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon-rates_content_inside_panel_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_popup_close_summon_rates",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_rates_close_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_return_to_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "cardboard_lobby_restored",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_art_separate_stage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_two_tagged_groups_without_nested_boards",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_frame_within_viewport_width_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_tag_inside_section_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_tag_attached_to_panel_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_panel_inside_section_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_content_inside_panel_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_1_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_frame_within_viewport_width_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_tag_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_tag_attached_to_panel_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_panel_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_content_inside_panel_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_1_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_2_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_3_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_upgrade_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_upgrade_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_upgrade_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_upgrade_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_upgrade_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_castle_upgrade_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_upgrade_advances_one_level",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_workshop_reachable_by_native_scroll",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_castle-workshop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_castle-workshop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_frame_within_viewport_width_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_tag_inside_section_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_tag_attached_to_panel_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_panel_inside_section_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_content_inside_panel_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_1_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_frame_within_viewport_width_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_tag_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_tag_attached_to_panel_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_panel_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_content_inside_panel_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_1_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_2_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_3_Xưởng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_three_flat_upgrade_rows",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_0_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_0_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_0_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_0_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_1_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_1_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_1_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_1_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_2_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_2_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_2_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "workshop_2_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_castle_back",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_back_restores_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_frame_within_viewport_width_Sự kiện",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_tag_inside_section_Sự kiện",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_tag_attached_to_panel_Sự kiện",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_panel_inside_section_Sự kiện",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_content_inside_panel_Sự kiện",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_1_Sự kiện",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_frame_within_viewport_width_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_tag_inside_section_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_tag_attached_to_panel_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_panel_inside_section_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_content_inside_panel_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_1_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_2_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_3_Sự kiện khác",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_events_to_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_frame_within_viewport_width_Kho vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_tag_inside_section_Kho vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_tag_attached_to_panel_Kho vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_panel_inside_section_Kho vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_content_inside_panel_Kho vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_button_inside_panel_or_scroll_1_Kho vàng",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_claim_button_exists",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_claim_original_button_texture",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_claim_original_outline_constant",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_claim_original_game_font",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_claim_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_patrol_claim_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_claim_grants_once_and_resets_storage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_quick_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_quick_patrol_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quick_patrol_consumes_one_free_use",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_patrol_back",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_back_restores_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_frame_within_viewport_width_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_tag_inside_section_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_tag_attached_to_panel_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_panel_inside_section_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_content_inside_panel_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_button_inside_panel_or_scroll_1_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_claim_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_login_claim_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_claim_progresses_one_day",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_popup_close_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "login_close_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_frame_within_viewport_width_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_tag_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_tag_attached_to_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_panel_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_content_inside_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_1_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_2_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_3_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_4_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_5_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_6_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_7_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_8_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_9_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_scroll_container_available",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_later_rows_reachable_or_already_visible",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_quests-bottom",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_quests-bottom",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_frame_within_viewport_width_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_tag_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_tag_attached_to_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_panel_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_content_inside_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_1_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_2_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_3_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_4_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_5_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_6_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_7_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_8_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_9_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_popup_close_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "quests_close_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_header_to_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_header_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_frame_within_viewport_width_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_tag_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_tag_attached_to_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_panel_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_content_inside_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_1_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_2_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_3_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_4_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_5_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_6_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_7_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_8_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_9_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_10_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_11_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_12_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_13_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_14_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_15_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_16_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_17_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_18_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_19_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_20_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_21_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_22_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_23_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_24_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_25_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_26_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_27_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_28_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_29_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_30_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_31_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_32_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_33_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_34_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_35_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_36_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_save_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_profile_save_action",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_profile-bottom",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_profile-bottom",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_frame_within_viewport_width_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_tag_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_tag_attached_to_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_panel_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_content_inside_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_1_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_2_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_3_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_4_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_5_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_6_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_7_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_8_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_9_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_10_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_11_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_12_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_13_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_14_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_15_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_16_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_17_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_18_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_19_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_20_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_21_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_22_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_23_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_24_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_25_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_26_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_27_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_28_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_29_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_30_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_31_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_32_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_33_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_34_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_35_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_36_Hồ sơ",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_popup_close_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "profile_close_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_header_to_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_header_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "tagged_frames_present_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_frame_within_viewport_width_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_tag_inside_section_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_tag_attached_to_panel_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_panel_inside_section_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_content_inside_panel_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_button_inside_panel_or_scroll_1_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_button_inside_panel_or_scroll_2_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_button_inside_panel_or_scroll_3_Cài đặt",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_fast_toggle_reachable",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_settings_fast_toggle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_toggle_changes_fixture_setting",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_popup_close_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "settings_close_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "popup_blank_panel_tap_keeps_window_open",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "popup_tag_tap_keeps_window_open",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "popup_outside_scrim_closes_and_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "all_menu_routes_restore_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_tab_entry_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_featured_and_exchange_attached_titles",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_supply_chests_in_two_columns",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_supply_cards_equal_width",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_supply_actions_share_baseline",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_silver_chest_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_silver_chest_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_silver_chest_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_silver_chest_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_open_chest_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_open_chest_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_open_chest_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_open_chest_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_rates_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shop_rates_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_shop-rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop-rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_frame_within_viewport_width_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_tag_inside_section_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_tag_attached_to_panel_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_panel_inside_section_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_content_inside_panel_Tỉ lệ thẻ trong rương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_shop_rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_rates_close_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_supply_actions_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_shop-supplies",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop-supplies",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-supplies_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_exchange_reachable_by_scroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_exchange_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_exchange_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_exchange_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_exchange_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shop_exchange_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_exchange_changes_only_fixture_currency",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_shop-exchange",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_shop-exchange",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_frame_within_viewport_width_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_tag_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_tag_attached_to_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_panel_inside_section_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_content_inside_panel_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_button_inside_panel_or_scroll_1_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_button_inside_panel_or_scroll_2_Rương Vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_frame_within_viewport_width_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_tag_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_tag_attached_to_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_panel_inside_section_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_content_inside_panel_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-exchange_button_inside_panel_or_scroll_1_Đổi kim cương",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_tab_entry_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_frame_within_viewport_width_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tag_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tag_attached_to_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_panel_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_content_inside_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_1_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_2_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_3_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_4_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_5_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_button_inside_panel_or_scroll_6_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_equipment_card_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_equipment_detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_detail_popup_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_hero-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_hero-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_1_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_2_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_3_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_4_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_5_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_6_Túi trang bị · 6 món",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_button_inside_panel_or_scroll_1_Kiếm Gỗ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Kỹ năng vũ khí",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_frame_within_viewport_width_Chỉ số",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_inside_section_Chỉ số",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_tag_attached_to_panel_Chỉ số",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_panel_inside_section_Chỉ số",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero-detail_content_inside_panel_Chỉ số",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_hero_detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_detail_close_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_tab_entry_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_frame_within_viewport_width_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tag_inside_section_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tag_attached_to_panel_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_panel_inside_section_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_content_inside_panel_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_1_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_2_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_3_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_button_inside_panel_or_scroll_4_Đội hình 3/4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_tab_entry_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_frame_within_viewport_width_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tag_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tag_attached_to_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_panel_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_content_inside_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_button_inside_panel_or_scroll_1_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_rates_reachable_by_scroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_summon_rates_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_summon-rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_summon-rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_frame_within_viewport_width_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_tag_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_tag_attached_to_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_panel_inside_section_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_content_inside_panel_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_button_inside_panel_or_scroll_1_Bảo hiểm triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_frame_within_viewport_width_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_tag_inside_section_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_tag_attached_to_panel_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_panel_inside_section_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon-rates_content_inside_panel_Tỉ lệ triệu hồi",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_summon_rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_rates_close_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_return_to_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cardboard_lobby_restored",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_art_separate_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_two_tagged_groups_without_nested_boards",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_frame_within_viewport_width_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_tag_inside_section_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_tag_attached_to_panel_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_panel_inside_section_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_content_inside_panel_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_1_Thành cấp 3 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_frame_within_viewport_width_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_tag_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_tag_attached_to_panel_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_panel_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_content_inside_panel_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_1_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_2_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_button_inside_panel_or_scroll_3_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_upgrade_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_upgrade_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_upgrade_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_upgrade_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_upgrade_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_castle_upgrade_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_upgrade_advances_one_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_workshop_reachable_by_native_scroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_castle-workshop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_castle-workshop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_frame_within_viewport_width_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_tag_inside_section_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_tag_attached_to_panel_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_panel_inside_section_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_content_inside_panel_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_1_Thành cấp 4 / 10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_frame_within_viewport_width_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_tag_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_tag_attached_to_panel_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_panel_inside_section_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_content_inside_panel_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_1_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_2_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle-workshop_button_inside_panel_or_scroll_3_Xưởng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_three_flat_upgrade_rows",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_0_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_0_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_0_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_0_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_1_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_1_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_1_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_1_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_2_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_2_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_2_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "workshop_2_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_castle_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_back_restores_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_frame_within_viewport_width_Sự kiện",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_tag_inside_section_Sự kiện",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_tag_attached_to_panel_Sự kiện",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_panel_inside_section_Sự kiện",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_content_inside_panel_Sự kiện",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_1_Sự kiện",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_frame_within_viewport_width_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_tag_inside_section_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_tag_attached_to_panel_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_panel_inside_section_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_content_inside_panel_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_1_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_2_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_button_inside_panel_or_scroll_3_Sự kiện khác",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_events_to_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_frame_within_viewport_width_Kho vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_tag_inside_section_Kho vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_tag_attached_to_panel_Kho vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_panel_inside_section_Kho vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_content_inside_panel_Kho vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_button_inside_panel_or_scroll_1_Kho vàng",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_claim_button_exists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_claim_original_button_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_claim_original_outline_constant",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_claim_original_game_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_claim_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_patrol_claim_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_claim_grants_once_and_resets_storage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_quick_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_quick_patrol_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick_patrol_consumes_one_free_use",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_patrol_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_back_restores_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_frame_within_viewport_width_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_tag_inside_section_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_tag_attached_to_panel_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_panel_inside_section_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_content_inside_panel_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_button_inside_panel_or_scroll_1_Quà 7 ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_claim_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_login_claim_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_claim_progresses_one_day",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_close_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_frame_within_viewport_width_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_tag_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_tag_attached_to_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_panel_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_content_inside_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_1_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_2_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_3_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_4_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_5_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_6_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_7_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_8_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_button_inside_panel_or_scroll_9_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_scroll_container_available",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_later_rows_reachable_or_already_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_quests-bottom",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_quests-bottom",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_frame_within_viewport_width_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_tag_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_tag_attached_to_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_panel_inside_section_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_content_inside_panel_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_1_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_2_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_3_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_4_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_5_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_6_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_7_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_8_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests-bottom_button_inside_panel_or_scroll_9_Nhiệm vụ hằng ngày",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_close_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_header_to_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_header_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_frame_within_viewport_width_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_tag_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_tag_attached_to_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_panel_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_content_inside_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_1_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_2_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_3_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_4_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_5_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_6_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_7_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_8_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_9_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_10_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_11_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_12_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_13_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_14_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_15_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_16_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_17_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_18_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_19_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_20_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_21_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_22_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_23_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_24_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_25_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_26_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_27_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_28_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_29_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_30_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_31_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_32_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_33_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_34_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_35_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_button_inside_panel_or_scroll_36_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_save_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_profile_save_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_profile-bottom",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_profile-bottom",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_frame_within_viewport_width_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_tag_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_tag_attached_to_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_panel_inside_section_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_content_inside_panel_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_1_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_2_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_3_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_4_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_5_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_6_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_7_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_8_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_9_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_10_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_11_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_12_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_13_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_14_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_15_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_16_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_17_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_18_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_19_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_20_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_21_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_22_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_23_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_24_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_25_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_26_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_27_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_28_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_29_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_30_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_31_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_32_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_33_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_34_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_35_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile-bottom_button_inside_panel_or_scroll_36_Hồ sơ",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_close_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_header_to_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_header_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tagged_frames_present_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_frame_within_viewport_width_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_popup_shell_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_popup_close_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_tag_inside_section_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_tag_attached_to_panel_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_panel_inside_section_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_content_inside_panel_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_button_inside_panel_or_scroll_1_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_button_inside_panel_or_scroll_2_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_button_inside_panel_or_scroll_3_Cài đặt",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_fast_toggle_reachable",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_settings_fast_toggle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_toggle_changes_fixture_setting",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_close_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_blank_panel_tap_keeps_window_open",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_tag_tap_keeps_window_open",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_outside_scrim_closes_and_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "all_menu_routes_restore_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_keeps_original_background",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_has_no_context_menu_frames",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_probe_does_not_start_wave",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"geometry": [
+		{
+			"screen": "shop",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						251.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						224.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						224.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						1133.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						1106.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						1106.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "shop-rates",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						251.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						224.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						224.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						1133.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						1106.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						1106.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						80.0,
+						504.0,
+						560.0,
+						298.0
+					],
+					"section": [
+						80.0,
+						477.0,
+						560.0,
+						325.0
+					],
+					"tag": [
+						112.0,
+						477.0,
+						310.0,
+						53.0
+					],
+					"title": "Tỉ lệ thẻ trong rương"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "shop-supplies",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						251.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						224.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						224.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						1133.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						1106.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						1106.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "shop-exchange",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						84.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						57.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						57.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						966.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						939.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						939.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "hero",
+			"sections": [
+				{
+					"buttons": 6,
+					"panel": [
+						10.0,
+						785.0,
+						700.0,
+						309.0
+					],
+					"section": [
+						10.0,
+						758.0,
+						700.0,
+						336.0
+					],
+					"tag": [
+						42.0,
+						758.0,
+						295.0,
+						53.0
+					],
+					"title": "Túi trang bị · 6 món"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "hero-detail",
+			"sections": [
+				{
+					"buttons": 6,
+					"panel": [
+						10.0,
+						785.0,
+						700.0,
+						309.0
+					],
+					"section": [
+						10.0,
+						758.0,
+						700.0,
+						336.0
+					],
+					"tag": [
+						42.0,
+						758.0,
+						295.0,
+						53.0
+					],
+					"title": "Túi trang bị · 6 món"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						303.0,
+						672.0,
+						701.0
+					],
+					"section": [
+						24.0,
+						276.0,
+						672.0,
+						728.0
+					],
+					"tag": [
+						56.0,
+						276.0,
+						152.0,
+						53.0
+					],
+					"title": "Kiếm Gỗ"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						52.0,
+						609.0,
+						616.0,
+						124.0
+					],
+					"section": [
+						52.0,
+						582.0,
+						616.0,
+						151.0
+					],
+					"tag": [
+						84.0,
+						582.0,
+						241.0,
+						53.0
+					],
+					"title": "Kỹ năng vũ khí"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						52.0,
+						774.0,
+						616.0,
+						90.0
+					],
+					"section": [
+						52.0,
+						747.0,
+						616.0,
+						117.0
+					],
+					"tag": [
+						84.0,
+						747.0,
+						119.0,
+						53.0
+					],
+					"title": "Chỉ số"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "troops",
+			"sections": [
+				{
+					"buttons": 4,
+					"panel": [
+						24.0,
+						211.0,
+						672.0,
+						273.0
+					],
+					"section": [
+						24.0,
+						184.0,
+						672.0,
+						300.0
+					],
+					"tag": [
+						56.0,
+						184.0,
+						202.0,
+						53.0
+					],
+					"title": "Đội hình 3/4"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "summon",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						703.0,
+						672.0,
+						269.0
+					],
+					"section": [
+						24.0,
+						676.0,
+						672.0,
+						296.0
+					],
+					"tag": [
+						56.0,
+						676.0,
+						285.0,
+						53.0
+					],
+					"title": "Bảo hiểm triệu hồi"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "summon-rates",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						703.0,
+						672.0,
+						269.0
+					],
+					"section": [
+						24.0,
+						676.0,
+						672.0,
+						296.0
+					],
+					"tag": [
+						56.0,
+						676.0,
+						285.0,
+						53.0
+					],
+					"title": "Bảo hiểm triệu hồi"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						80.0,
+						422.0,
+						560.0,
+						462.0
+					],
+					"section": [
+						80.0,
+						395.0,
+						560.0,
+						489.0
+					],
+					"tag": [
+						112.0,
+						395.0,
+						212.0,
+						53.0
+					],
+					"title": "Tỉ lệ triệu hồi"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "battle",
+			"sections": [],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "castle",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						459.0,
+						664.0,
+						493.0
+					],
+					"section": [
+						24.0,
+						432.0,
+						664.0,
+						520.0
+					],
+					"tag": [
+						56.0,
+						432.0,
+						252.0,
+						53.0
+					],
+					"title": "Thành cấp 3 / 10"
+				},
+				{
+					"buttons": 3,
+					"panel": [
+						24.0,
+						1001.0,
+						664.0,
+						382.0
+					],
+					"section": [
+						24.0,
+						974.0,
+						664.0,
+						409.0
+					],
+					"tag": [
+						56.0,
+						974.0,
+						129.0,
+						53.0
+					],
+					"title": "Xưởng"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "castle-workshop",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						126.0,
+						664.0,
+						493.0
+					],
+					"section": [
+						24.0,
+						99.0,
+						664.0,
+						520.0
+					],
+					"tag": [
+						56.0,
+						99.0,
+						255.0,
+						53.0
+					],
+					"title": "Thành cấp 4 / 10"
+				},
+				{
+					"buttons": 3,
+					"panel": [
+						24.0,
+						668.0,
+						664.0,
+						382.0
+					],
+					"section": [
+						24.0,
+						641.0,
+						664.0,
+						409.0
+					],
+					"tag": [
+						56.0,
+						641.0,
+						129.0,
+						53.0
+					],
+					"title": "Xưởng"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "events",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						30.0,
+						286.0,
+						660.0,
+						735.0
+					],
+					"section": [
+						30.0,
+						259.0,
+						660.0,
+						762.0
+					],
+					"tag": [
+						62.0,
+						259.0,
+						139.0,
+						53.0
+					],
+					"title": "Sự kiện"
+				},
+				{
+					"buttons": 3,
+					"panel": [
+						58.0,
+						567.0,
+						604.0,
+						424.0
+					],
+					"section": [
+						58.0,
+						540.0,
+						604.0,
+						451.0
+					],
+					"tag": [
+						90.0,
+						540.0,
+						209.0,
+						53.0
+					],
+					"title": "Sự kiện khác"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "patrol",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						513.0,
+						672.0,
+						381.0
+					],
+					"section": [
+						24.0,
+						486.0,
+						672.0,
+						408.0
+					],
+					"tag": [
+						56.0,
+						486.0,
+						171.0,
+						53.0
+					],
+					"title": "Kho vàng"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "login",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						30.0,
+						313.0,
+						660.0,
+						681.0
+					],
+					"section": [
+						30.0,
+						286.0,
+						660.0,
+						708.0
+					],
+					"tag": [
+						62.0,
+						286.0,
+						193.0,
+						53.0
+					],
+					"title": "Quà 7 ngày"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "quests",
+			"sections": [
+				{
+					"buttons": 9,
+					"panel": [
+						24.0,
+						246.0,
+						672.0,
+						815.0
+					],
+					"section": [
+						24.0,
+						219.0,
+						672.0,
+						842.0
+					],
+					"tag": [
+						56.0,
+						219.0,
+						321.0,
+						53.0
+					],
+					"title": "Nhiệm vụ hằng ngày"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "quests-bottom",
+			"sections": [
+				{
+					"buttons": 9,
+					"panel": [
+						24.0,
+						246.0,
+						672.0,
+						815.0
+					],
+					"section": [
+						24.0,
+						219.0,
+						672.0,
+						842.0
+					],
+					"tag": [
+						56.0,
+						219.0,
+						321.0,
+						53.0
+					],
+					"title": "Nhiệm vụ hằng ngày"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "profile",
+			"sections": [
+				{
+					"buttons": 36,
+					"panel": [
+						24.0,
+						98.0,
+						672.0,
+						1110.0
+					],
+					"section": [
+						24.0,
+						71.0,
+						672.0,
+						1137.0
+					],
+					"tag": [
+						56.0,
+						71.0,
+						113.0,
+						53.0
+					],
+					"title": "Hồ sơ"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "profile-bottom",
+			"sections": [
+				{
+					"buttons": 36,
+					"panel": [
+						24.0,
+						98.0,
+						672.0,
+						1110.0
+					],
+					"section": [
+						24.0,
+						71.0,
+						672.0,
+						1137.0
+					],
+					"tag": [
+						56.0,
+						71.0,
+						113.0,
+						53.0
+					],
+					"title": "Hồ sơ"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "settings",
+			"sections": [
+				{
+					"buttons": 3,
+					"panel": [
+						100.0,
+						485.0,
+						520.0,
+						337.0
+					],
+					"section": [
+						100.0,
+						458.0,
+						520.0,
+						364.0
+					],
+					"tag": [
+						132.0,
+						458.0,
+						138.0,
+						53.0
+					],
+					"title": "Cài đặt"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"screen": "shop",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						251.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						224.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						224.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						1133.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						1106.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						1106.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "shop-rates",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						251.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						224.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						224.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						1133.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						1106.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						1106.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						80.0,
+						504.0,
+						560.0,
+						298.0
+					],
+					"section": [
+						80.0,
+						477.0,
+						560.0,
+						325.0
+					],
+					"tag": [
+						112.0,
+						477.0,
+						310.0,
+						53.0
+					],
+					"title": "Tỉ lệ thẻ trong rương"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "shop-supplies",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						251.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						224.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						224.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						1133.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						1106.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						1106.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "shop-exchange",
+			"sections": [
+				{
+					"buttons": 2,
+					"panel": [
+						24.0,
+						84.0,
+						664.0,
+						290.0
+					],
+					"section": [
+						24.0,
+						57.0,
+						664.0,
+						317.0
+					],
+					"tag": [
+						56.0,
+						57.0,
+						206.0,
+						53.0
+					],
+					"title": "Rương Vàng"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						966.0,
+						664.0,
+						138.0
+					],
+					"section": [
+						24.0,
+						939.0,
+						664.0,
+						165.0
+					],
+					"tag": [
+						56.0,
+						939.0,
+						234.0,
+						53.0
+					],
+					"title": "Đổi kim cương"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "hero",
+			"sections": [
+				{
+					"buttons": 6,
+					"panel": [
+						10.0,
+						785.0,
+						700.0,
+						309.0
+					],
+					"section": [
+						10.0,
+						758.0,
+						700.0,
+						336.0
+					],
+					"tag": [
+						42.0,
+						758.0,
+						295.0,
+						53.0
+					],
+					"title": "Túi trang bị · 6 món"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "hero-detail",
+			"sections": [
+				{
+					"buttons": 6,
+					"panel": [
+						10.0,
+						785.0,
+						700.0,
+						309.0
+					],
+					"section": [
+						10.0,
+						758.0,
+						700.0,
+						336.0
+					],
+					"tag": [
+						42.0,
+						758.0,
+						295.0,
+						53.0
+					],
+					"title": "Túi trang bị · 6 món"
+				},
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						303.0,
+						672.0,
+						701.0
+					],
+					"section": [
+						24.0,
+						276.0,
+						672.0,
+						728.0
+					],
+					"tag": [
+						56.0,
+						276.0,
+						152.0,
+						53.0
+					],
+					"title": "Kiếm Gỗ"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						52.0,
+						609.0,
+						616.0,
+						124.0
+					],
+					"section": [
+						52.0,
+						582.0,
+						616.0,
+						151.0
+					],
+					"tag": [
+						84.0,
+						582.0,
+						241.0,
+						53.0
+					],
+					"title": "Kỹ năng vũ khí"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						52.0,
+						774.0,
+						616.0,
+						90.0
+					],
+					"section": [
+						52.0,
+						747.0,
+						616.0,
+						117.0
+					],
+					"tag": [
+						84.0,
+						747.0,
+						119.0,
+						53.0
+					],
+					"title": "Chỉ số"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "troops",
+			"sections": [
+				{
+					"buttons": 4,
+					"panel": [
+						24.0,
+						211.0,
+						672.0,
+						273.0
+					],
+					"section": [
+						24.0,
+						184.0,
+						672.0,
+						300.0
+					],
+					"tag": [
+						56.0,
+						184.0,
+						202.0,
+						53.0
+					],
+					"title": "Đội hình 3/4"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "summon",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						703.0,
+						672.0,
+						269.0
+					],
+					"section": [
+						24.0,
+						676.0,
+						672.0,
+						296.0
+					],
+					"tag": [
+						56.0,
+						676.0,
+						285.0,
+						53.0
+					],
+					"title": "Bảo hiểm triệu hồi"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "summon-rates",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						703.0,
+						672.0,
+						269.0
+					],
+					"section": [
+						24.0,
+						676.0,
+						672.0,
+						296.0
+					],
+					"tag": [
+						56.0,
+						676.0,
+						285.0,
+						53.0
+					],
+					"title": "Bảo hiểm triệu hồi"
+				},
+				{
+					"buttons": 0,
+					"panel": [
+						80.0,
+						422.0,
+						560.0,
+						462.0
+					],
+					"section": [
+						80.0,
+						395.0,
+						560.0,
+						489.0
+					],
+					"tag": [
+						112.0,
+						395.0,
+						212.0,
+						53.0
+					],
+					"title": "Tỉ lệ triệu hồi"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "battle",
+			"sections": [],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "castle",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						459.0,
+						664.0,
+						493.0
+					],
+					"section": [
+						24.0,
+						432.0,
+						664.0,
+						520.0
+					],
+					"tag": [
+						56.0,
+						432.0,
+						252.0,
+						53.0
+					],
+					"title": "Thành cấp 3 / 10"
+				},
+				{
+					"buttons": 3,
+					"panel": [
+						24.0,
+						1001.0,
+						664.0,
+						382.0
+					],
+					"section": [
+						24.0,
+						974.0,
+						664.0,
+						409.0
+					],
+					"tag": [
+						56.0,
+						974.0,
+						129.0,
+						53.0
+					],
+					"title": "Xưởng"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "castle-workshop",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						126.0,
+						664.0,
+						493.0
+					],
+					"section": [
+						24.0,
+						99.0,
+						664.0,
+						520.0
+					],
+					"tag": [
+						56.0,
+						99.0,
+						255.0,
+						53.0
+					],
+					"title": "Thành cấp 4 / 10"
+				},
+				{
+					"buttons": 3,
+					"panel": [
+						24.0,
+						668.0,
+						664.0,
+						382.0
+					],
+					"section": [
+						24.0,
+						641.0,
+						664.0,
+						409.0
+					],
+					"tag": [
+						56.0,
+						641.0,
+						129.0,
+						53.0
+					],
+					"title": "Xưởng"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "events",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						30.0,
+						286.0,
+						660.0,
+						735.0
+					],
+					"section": [
+						30.0,
+						259.0,
+						660.0,
+						762.0
+					],
+					"tag": [
+						62.0,
+						259.0,
+						139.0,
+						53.0
+					],
+					"title": "Sự kiện"
+				},
+				{
+					"buttons": 3,
+					"panel": [
+						58.0,
+						567.0,
+						604.0,
+						424.0
+					],
+					"section": [
+						58.0,
+						540.0,
+						604.0,
+						451.0
+					],
+					"tag": [
+						90.0,
+						540.0,
+						209.0,
+						53.0
+					],
+					"title": "Sự kiện khác"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "patrol",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						24.0,
+						513.0,
+						672.0,
+						381.0
+					],
+					"section": [
+						24.0,
+						486.0,
+						672.0,
+						408.0
+					],
+					"tag": [
+						56.0,
+						486.0,
+						171.0,
+						53.0
+					],
+					"title": "Kho vàng"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "login",
+			"sections": [
+				{
+					"buttons": 1,
+					"panel": [
+						30.0,
+						313.0,
+						660.0,
+						681.0
+					],
+					"section": [
+						30.0,
+						286.0,
+						660.0,
+						708.0
+					],
+					"tag": [
+						62.0,
+						286.0,
+						193.0,
+						53.0
+					],
+					"title": "Quà 7 ngày"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "quests",
+			"sections": [
+				{
+					"buttons": 9,
+					"panel": [
+						24.0,
+						246.0,
+						672.0,
+						815.0
+					],
+					"section": [
+						24.0,
+						219.0,
+						672.0,
+						842.0
+					],
+					"tag": [
+						56.0,
+						219.0,
+						321.0,
+						53.0
+					],
+					"title": "Nhiệm vụ hằng ngày"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "quests-bottom",
+			"sections": [
+				{
+					"buttons": 9,
+					"panel": [
+						24.0,
+						246.0,
+						672.0,
+						815.0
+					],
+					"section": [
+						24.0,
+						219.0,
+						672.0,
+						842.0
+					],
+					"tag": [
+						56.0,
+						219.0,
+						321.0,
+						53.0
+					],
+					"title": "Nhiệm vụ hằng ngày"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "profile",
+			"sections": [
+				{
+					"buttons": 36,
+					"panel": [
+						24.0,
+						98.0,
+						672.0,
+						1110.0
+					],
+					"section": [
+						24.0,
+						71.0,
+						672.0,
+						1137.0
+					],
+					"tag": [
+						56.0,
+						71.0,
+						113.0,
+						53.0
+					],
+					"title": "Hồ sơ"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "profile-bottom",
+			"sections": [
+				{
+					"buttons": 36,
+					"panel": [
+						24.0,
+						98.0,
+						672.0,
+						1110.0
+					],
+					"section": [
+						24.0,
+						71.0,
+						672.0,
+						1137.0
+					],
+					"tag": [
+						56.0,
+						71.0,
+						113.0,
+						53.0
+					],
+					"title": "Hồ sơ"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"screen": "settings",
+			"sections": [
+				{
+					"buttons": 3,
+					"panel": [
+						100.0,
+						485.0,
+						520.0,
+						337.0
+					],
+					"section": [
+						100.0,
+						458.0,
+						520.0,
+						364.0
+					],
+					"tag": [
+						132.0,
+						458.0,
+						138.0,
+						53.0
+					],
+					"title": "Cài đặt"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"native_render": true,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/menu-frame-rollout-profile/AppData/Godot/app_userdata/Gear Defenders"
+}

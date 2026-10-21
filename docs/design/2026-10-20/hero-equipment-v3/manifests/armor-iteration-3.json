@@ -1,0 +1,10 @@
+{
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "53:2",
+  "model": "gpt-image-2.5-sunburst",
+  "width": 1024,
+  "height": 1024,
+  "source": "raw/armor-iteration-3.png",
+  "prompt": "prompts/armor-iteration-3.txt",
+  "referenceMode": "Text-only generation based on studied game references; no image reference input supported."
+}

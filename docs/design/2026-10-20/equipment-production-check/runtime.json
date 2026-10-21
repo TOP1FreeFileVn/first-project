@@ -1,0 +1,9 @@
+{
+	"checks": 103,
+	"failed": 0,
+	"hero_weapon_looks": 5,
+	"persist": false,
+	"production_png_routing": true,
+	"soldier_art_count": 16,
+	"stat_only_gear_slots": 5
+}

@@ -16,7 +16,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1189",
+				"name": "@Control@788",
 				"render_rect": [
 					40.0,
 					243.0,
@@ -70,7 +70,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1202",
+				"name": "@Control@801",
 				"render_rect": [
 					202.0,
 					243.0,
@@ -124,7 +124,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1215",
+				"name": "@Control@814",
 				"render_rect": [
 					364.0,
 					243.0,
@@ -178,7 +178,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1228",
+				"name": "@Control@827",
 				"render_rect": [
 					526.0,
 					243.0,
@@ -232,7 +232,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1240",
+				"name": "@Control@839",
 				"render_rect": [
 					40.0,
 					456.0,
@@ -286,7 +286,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1252",
+				"name": "@Control@851",
 				"render_rect": [
 					202.0,
 					456.0,
@@ -340,7 +340,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1264",
+				"name": "@Control@863",
 				"render_rect": [
 					364.0,
 					456.0,
@@ -394,7 +394,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1276",
+				"name": "@Control@875",
 				"render_rect": [
 					526.0,
 					456.0,
@@ -448,7 +448,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1288",
+				"name": "@Control@887",
 				"render_rect": [
 					40.0,
 					669.0,
@@ -502,7 +502,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1300",
+				"name": "@Control@899",
 				"render_rect": [
 					202.0,
 					669.0,
@@ -556,7 +556,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1312",
+				"name": "@Control@911",
 				"render_rect": [
 					364.0,
 					669.0,
@@ -610,7 +610,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1324",
+				"name": "@Control@923",
 				"render_rect": [
 					526.0,
 					669.0,
@@ -664,7 +664,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1336",
+				"name": "@Control@935",
 				"render_rect": [
 					40.0,
 					882.0,
@@ -718,7 +718,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1348",
+				"name": "@Control@947",
 				"render_rect": [
 					202.0,
 					882.0,
@@ -772,7 +772,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1360",
+				"name": "@Control@959",
 				"render_rect": [
 					364.0,
 					882.0,
@@ -826,7 +826,7 @@
 					0.0,
 					0.0
 				],
-				"name": "@Control@1372",
+				"name": "@Control@971",
 				"render_rect": [
 					526.0,
 					882.0,

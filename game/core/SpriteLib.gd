@@ -144,6 +144,13 @@ func foot_offset(unit_key: String) -> float:
 # frames; Unit.gd bobs and swings it instead. Draw it with linear filtering.
 
 const SKIN := "res://game/ui/skin/"
+const RASTER_ART := "res://game/ui/art/"
+const HeroCat = preload("res://game/core/HeroCat.gd")
+const HERO_WEAPON_ART := {
+	"kiem_go": "hero_cat_melee", "cung_san": "hero_cat_ranged",
+	"gay_sao": "hero_cat_magic", "riu_lua": "hero_cat_heavy",
+	"katana_nguyet": "hero_cat_katana",
+}
 const CAT_CANVAS := Vector2i(128, 104)
 const CAT_SIZE := Vector2i(107, 100)
 ## Where the weapon's 64 px icon goes: hilt at the cat's right paw, blade up and out.
@@ -184,13 +191,29 @@ func cat_texture(unit_key: String) -> Texture2D:
 
 
 func _skin_image(file: String, size: Vector2i) -> Image:
-	var image: Image = load(SKIN + file + ".svg").get_image()
+	var raster := RASTER_ART + file + ".png"
+	var source := raster if ResourceLoader.exists(raster) else SKIN + file + ".svg"
+	var image: Image = load(source).get_image()
 	if image.is_compressed():
 		image.decompress()
 	image.convert(Image.FORMAT_RGBA8)
 	if image.get_size() != size:
 		image.resize(size.x, size.y, Image.INTERPOLATE_LANCZOS)
 	return image
+
+
+## Only the equipped weapon changes this original hero's front-facing look.
+## The five other slots keep their existing stats and standalone item icons.
+## Cache by artwork, so a level/stat upgrade never creates another costume.
+func hero_cat_texture(state: Dictionary) -> Texture2D:
+	var uid := HeroCat.equipped_uid(state, "weapon")
+	var definition := HeroCat.def(state, uid)
+	var weapon_id := str(HeroCat.item(state, uid).get("id", "")) if not definition.is_empty() else ""
+	var art_name: String = HERO_WEAPON_ART.get(weapon_id, "hero_cat_bare")
+	var key := "hero_cat/" + art_name
+	if not _textures.has(key):
+		_textures[key] = load(RASTER_ART + art_name + ".png")
+	return _textures[key]
 
 
 ## Same texture in every frame: idle and run loop, attack plays once (its length sets

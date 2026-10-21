@@ -1,0 +1,72 @@
+{
+  "status": "isolated_vector_pilot_not_production_approval",
+  "canvas": [
+    256,
+    240
+  ],
+  "ground_registration": [
+    128,
+    224
+  ],
+  "image_offset_from_ground": [
+    -128,
+    -224
+  ],
+  "layers_back_to_front": [
+    "shadow.svg",
+    "rear.svg",
+    "interior.svg",
+    "front.svg"
+  ],
+  "opening": {
+    "path": "M70 240 V157 C70 122 94 96 128 96 C162 96 186 122 186 157 V240 Z",
+    "geometric_bounds": [
+      70,
+      96,
+      186,
+      240
+    ],
+    "entry_at_ground": true,
+    "horizontal_bottom_stroke": false,
+    "interior_floor_path_unchanged": "M70 157 C70 122 94 96 128 96 C162 96 186 122 186 157 V193 C186 207 179 214 165 214 H91 C77 214 70 207 70 193 Z",
+    "max_clear_width_after_5px_stroke": 111,
+    "raster_clearance_report": "qa.json",
+    "front_alpha_is_true": true
+  },
+  "anchors": {
+    "approach_feet": [
+      128,
+      236
+    ],
+    "threshold_feet": [
+      128,
+      212
+    ],
+    "inside_rest_feet": [
+      128,
+      202
+    ],
+    "deep_feet": [
+      128,
+      188
+    ]
+  },
+  "front_outline": "M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z",
+  "scale_reference": {
+    "prop_canvas_width_world": 220,
+    "cat_canvas_width_world": 90,
+    "prop_main_stroke_world": 4.296875,
+    "cat_main_stroke_world": 4.21875,
+    "max_clear_opening_world": 95.390625,
+    "cat_painted_width_world_approx": 72
+  },
+  "stroke": {
+    "main": 5,
+    "secondary": 2.5,
+    "tape_marks": 2,
+    "main_color": "#583f21",
+    "secondary_color": "#b58950"
+  },
+  "occlusion_rule": "Use rear/interior, actor, front only while actor is assigned to the doorway/inside zone. Outside actors remain foot-sorted with the whole prop.",
+  "cat_not_embedded": true
+}

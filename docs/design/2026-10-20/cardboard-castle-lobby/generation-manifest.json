@@ -1,0 +1,31 @@
+{
+  "purpose": "Approval concepts only; production game unchanged",
+  "route": "Figma generate_image",
+  "model": "gpt-image-2.5-sunburst",
+  "file_key": "2uKzqvXeOSPQqfaow6s7TU",
+  "generations": [
+    {
+      "node_id": "57:2",
+      "image": "directions-raw.png",
+      "prompt": "prompts/directions.txt"
+    },
+    {
+      "node_id": "58:2",
+      "image": "progression-raw.png",
+      "prompt": "prompts/progression.txt"
+    }
+  ],
+  "composite": {
+    "castle_scale": 0.52,
+    "doorway_anchor": [
+      390,
+      579
+    ],
+    "screen": [
+      720,
+      1280
+    ],
+    "scene": "current lobby UI, native island and hero"
+  },
+  "caveat": "Generated seams and contour styles require native art cleanup after direction approval. No level thresholds or progression rules implemented."
+}

@@ -1,0 +1,89 @@
+{
+	"actual_chest_widths": [
+		26,
+		56,
+		94,
+		250
+	],
+	"captures": [
+		{
+			"file": "before-after-native.png",
+			"size": [
+				1200,
+				940
+			]
+		},
+		{
+			"file": "opening-states-native.png",
+			"size": [
+				1200,
+				600
+			]
+		},
+		{
+			"file": "shop-720x1280.png",
+			"size": [
+				720,
+				1280
+			]
+		},
+		{
+			"file": "actual-wait-720x1280.png",
+			"size": [
+				720,
+				1280
+			]
+		},
+		{
+			"file": "actual-open-720x1280.png",
+			"size": [
+				720,
+				1280
+			]
+		},
+		{
+			"file": "actual-card-720x1280.png",
+			"size": [
+				720,
+				1280
+			]
+		},
+		{
+			"file": "shop-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-wait-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-open-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-card-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": 37,
+	"contract": "Unchanged style_for/draw API; real drop/wait/open/card animation; separate transformed lid.",
+	"failures": [],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-21/chest-redesign/runtime-profile/Roaming/Godot/app_userdata/Gear Defenders",
+	"shop_control": [
+		104,
+		104
+	]
+}

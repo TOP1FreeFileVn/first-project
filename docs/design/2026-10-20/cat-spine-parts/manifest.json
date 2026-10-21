@@ -1,0 +1,135 @@
+{
+  "canvas": [
+    256,
+    240
+  ],
+  "scope": "Review-only Figma/Spine preparation; no production art edits.",
+  "naming": "L/R are image left/right, not anatomical left/right.",
+  "pivots_canvas_px": {
+    "foot_L_image": [
+      82,
+      203
+    ],
+    "foot_R_image": [
+      174,
+      203
+    ],
+    "body": [
+      128,
+      176
+    ],
+    "head": [
+      128,
+      121
+    ],
+    "tail": [
+      182,
+      210
+    ],
+    "paw_L_image": [
+      94,
+      166
+    ],
+    "paw_R_image": [
+      162,
+      166
+    ]
+  },
+  "feet_hidden_top_y": 184,
+  "feet_contour_start_y": 204,
+  "rig_note": "Open foot contours retain original curves. Upper foot fills overlap behind torso without new cut strokes. Small-motion proof only; no Spine skeleton or animation authored.",
+  "cats": {
+    "cat_cream": {
+      "source": "game/ui/skin/cat_cream.svg",
+      "source_sha256": "c2ba3c7cc9388558172c8178fbde5aaf55e60452ed85b0b79a349414b73916f7",
+      "source_body_stroke_px": 12.0,
+      "layer_order_back_to_front": [
+        "tail",
+        "foot_L_image",
+        "foot_R_image",
+        "body",
+        "paw_L_image",
+        "paw_R_image",
+        "head"
+      ],
+      "directory": "svg/cat_cream"
+    },
+    "cat_tabby": {
+      "source": "game/ui/skin/cat_tabby.svg",
+      "source_sha256": "6874ffe96d50fad235e81aa9614cf0a268d41d2b1eae6c0c808c4cf32795e0d7",
+      "source_body_stroke_px": 12.0,
+      "layer_order_back_to_front": [
+        "tail",
+        "foot_L_image",
+        "foot_R_image",
+        "body",
+        "paw_L_image",
+        "paw_R_image",
+        "head"
+      ],
+      "directory": "svg/cat_tabby"
+    },
+    "cat_grey": {
+      "source": "game/ui/skin/cat_grey.svg",
+      "source_sha256": "30d4af861d749728ede928573f5ec452d12f1e246473bb865afd7d45b4e963cd",
+      "source_body_stroke_px": 12.0,
+      "layer_order_back_to_front": [
+        "tail",
+        "foot_L_image",
+        "foot_R_image",
+        "body",
+        "paw_L_image",
+        "paw_R_image",
+        "head"
+      ],
+      "directory": "svg/cat_grey"
+    },
+    "cat_calico": {
+      "source": "game/ui/skin/cat_calico.svg",
+      "source_sha256": "61fdf094b82effd9dace34f756befde628b221e29b5f9a20164c69cc85bb6719",
+      "source_body_stroke_px": 12.0,
+      "layer_order_back_to_front": [
+        "tail",
+        "foot_L_image",
+        "foot_R_image",
+        "body",
+        "paw_L_image",
+        "paw_R_image",
+        "head"
+      ],
+      "directory": "svg/cat_calico"
+    },
+    "cat_hero": {
+      "source": "game/ui/skin/cat_hero.svg",
+      "source_sha256": "65cfae0a807e411b0331e9e70eda8afcc6fd085df61349daa49515c9f52b94d0",
+      "source_body_stroke_px": 12.0,
+      "layer_order_back_to_front": [
+        "tail",
+        "back_accessories",
+        "foot_L_image",
+        "foot_R_image",
+        "body",
+        "paw_L_image",
+        "paw_R_image",
+        "head"
+      ],
+      "directory": "svg/cat_hero"
+    },
+    "hero_neutral_9px": {
+      "source": "docs/design/2026-10-19/hero-equipment/sources/hero-neutral.svg",
+      "source_sha256": "023619a18ba66e788b409db7295ac514c7d4103520dc155852db0ed9384609cc",
+      "source_body_stroke_px": 9.0,
+      "layer_order_back_to_front": [
+        "tail",
+        "back_accessories",
+        "foot_L_image",
+        "foot_R_image",
+        "body",
+        "paw_L_image",
+        "paw_R_image",
+        "head"
+      ],
+      "directory": "svg/hero_neutral_9px"
+    }
+  }
+}

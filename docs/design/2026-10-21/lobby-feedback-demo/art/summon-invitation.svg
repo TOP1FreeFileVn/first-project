@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+  <!-- A substantial purple invitation emerging from a cream envelope. -->
+  <path d="M36 12H92L105 25V73H27V21Q27 12 36 12Z"
+        fill="#b8addb" stroke="#583f21" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M92 13V26H104" fill="#e8e0f4" stroke="#897ba6" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M44 31H82M44 41H73" fill="none" stroke="#897ba6" stroke-width="3.3" stroke-linecap="round"/>
+  <path d="M16 47H112Q119 47 119 55V108Q119 116 111 116H17Q9 116 9 108V55Q9 47 16 47Z"
+        fill="#fff0c7" stroke="#583f21" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M12 51L55 84Q64 90 73 84L116 51" fill="none" stroke="#b69969" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- The cat-shaped wax seal is the signature; there is no illustrated hero face. -->
+  <path d="M46 77L46 63Q46 59 50 61L58 68Q64 66 70 68L78 61Q82 59 82 63V77Q87 84 79 91Q73 96 64 96Q55 96 49 91Q41 84 46 77Z"
+        fill="#ee9c7f" stroke="#583f21" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M57 81Q64 85 71 81" fill="none" stroke="#b86d54" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M18 7L21 16L30 19L21 22L18 31L15 22L6 19L15 16Z"
+        fill="#d5eee8" stroke="#583f21" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

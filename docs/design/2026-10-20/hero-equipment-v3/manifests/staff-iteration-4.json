@@ -1,0 +1,9 @@
+{
+  "nodeId": "55:2",
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "model": "gpt-image-2.5-sunburst",
+  "recovery": "Generation transport closed after request. Node55:2 was created and original embedded image recovered with download_assets.",
+  "source": "raw/staff-iteration-4.png",
+  "prompt": "prompts/staff-iteration-4.txt",
+  "referenceMode": "Text only; viewed references not passed as image input."
+}

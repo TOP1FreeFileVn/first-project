@@ -1,0 +1,65 @@
+{
+  "source_generation": "../raw/bow-iteration-4.png",
+  "source_model": "gpt-image-2.5-sunburst",
+  "source_file": "2uKzqvXeOSPQqfaow6s7TU",
+  "source_node": "54:2",
+  "source_review": "Generated recurve shape retained as design reference;21–26sourcepx contour failed final thickness.",
+  "authorship": "Hand-authored SVG cubic Bezier silhouette and fill proportions, based on generated recurve; no morphology, dilation, skeletonization or global outline processing.",
+  "svg": "bow-refined.svg",
+  "canvas": [
+    256,
+    240
+  ],
+  "raster": [
+    768,
+    720
+  ],
+  "render_scale": 3,
+  "main_stroke_native": 9,
+  "main_stroke_raster": 27,
+  "string_native": 1.4,
+  "leather_seams_native": 1.8,
+  "palette": {
+    "main": "#583f21",
+    "wood": "#b87b42",
+    "brass": "#dfac58",
+    "coral": "#e7785b",
+    "seam": "#984e39",
+    "string": "#9c8564"
+  },
+  "grip": [
+    160,
+    166
+  ],
+  "orientation": "upright ready/carry, string outward on right; no arrow or drawn pose",
+  "grip_alignment": {
+    "riser_path_x": [
+      148,
+      172
+    ],
+    "riser_center_x": 160,
+    "upper_join_y": 151,
+    "lower_join_y": 181,
+    "join_midpoint_y": 166,
+    "raster_coral_center_x_at_y166": 160.0,
+    "construction": "One continuous body path; coral material clipped inside it; main silhouette drawn once. No separately outlined grip pad."
+  },
+  "native_bounds": [
+    143.333,
+    87.667,
+    229.667,
+    238.333
+  ],
+  "clipped": false,
+  "normal_measurement": {
+    "curve_parameter": 0.55,
+    "point_native": [
+      155.51000000000002,
+      127.70925
+    ],
+    "measured_opaque_ink_native": 8.75,
+    "note": "Raster sample perpendicular to upper shoulder; thresholded opaque ink. SVG geometry is9px, antialias sampling may vary within one rasterpixel."
+  },
+  "render_engine": "Godot4.7.2 Image.load_svg_from_string at3x; transparentPNG",
+  "integration": "Review layer only, production unchanged"
+}

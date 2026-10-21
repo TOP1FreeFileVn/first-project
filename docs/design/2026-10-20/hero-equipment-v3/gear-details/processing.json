@@ -1,0 +1,84 @@
+{
+  "gauntlet": {
+    "raw": "raw/gauntlet-iteration-4.png",
+    "source_bbox": [
+      114,
+      126,
+      926,
+      851
+    ],
+    "padded_asset": "processed/gauntlet.png",
+    "source_canvas": [
+      1024,
+      1024
+    ],
+    "fit_dimensions": [
+      38,
+      34
+    ],
+    "native_pair_bounds": [
+      [
+        75.0,
+        149.0,
+        113.0,
+        183.0
+      ],
+      [
+        141.0,
+        149.0,
+        179.0,
+        183.0
+      ]
+    ],
+    "source_main_sample": {
+      "y": 450,
+      "left_edge_start": 114,
+      "width": 125
+    },
+    "fitted_sample_main_width": 5.849753694581281,
+    "fit_note": "Aspect fitted to target rectangle for paw/foot mounting; generated widths vary; this is not exact9px certification.",
+    "cleanup": "White matte removed; source painted regions palette flattened. No dilation, skeletonization, contour reconstruction, or new linework.",
+    "mirror_left": true
+  },
+  "boot": {
+    "raw": "raw/boot-iteration-2.png",
+    "source_bbox": [
+      73,
+      206,
+      955,
+      810
+    ],
+    "padded_asset": "processed/boot.png",
+    "source_canvas": [
+      1024,
+      1024
+    ],
+    "fit_dimensions": [
+      48,
+      30
+    ],
+    "native_pair_bounds": [
+      [
+        60.0,
+        201.0,
+        108.0,
+        231.0
+      ],
+      [
+        148.0,
+        201.0,
+        196.0,
+        231.0
+      ]
+    ],
+    "source_main_sample": {
+      "y": 590,
+      "left_edge_start": 74,
+      "width": 121
+    },
+    "fitted_sample_main_width": 6.585034013605442,
+    "fit_note": "Aspect fitted to target rectangle for paw/foot mounting; generated widths vary; this is not exact9px certification.",
+    "cleanup": "White matte removed; source painted regions palette flattened. No dilation, skeletonization, contour reconstruction, or new linework.",
+    "mirror_left": true
+  }
+}

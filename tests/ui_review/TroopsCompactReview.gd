@@ -324,11 +324,13 @@ func _detail_routes() -> void:
 func _close_detail(route: String) -> void:
 	var box: Control = _page._detail_box
 	var overlay: Control = box.get_meta("overlay")
-	var frame: Control = box.get_parent().get_parent()
 	var close: Button
-	for child in frame.get_children():
-		if child is Button:
-			close = child
+	# The menu shell now contains a scroll between its content and frame.
+	# Find the actual thumb-sized close target without assuming that ancestry.
+	for candidate: Button in overlay.find_children("*", "Button", true, false):
+		if candidate.custom_minimum_size == Vector2(68, 68):
+			close = candidate
+			break
 	var received := await _tap(close)
 	await _settle()
 	_record(route, received and not is_instance_valid(overlay))

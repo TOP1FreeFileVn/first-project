@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene format=3 uid="uid://qmb7rlo1jljg"]
 
-[ext_resource type="Script" path="res://docs/design/2026-10-19/sky-islands-demo/SkyIslandsPreview.gd" id="1"]
+[ext_resource type="Script" uid="uid://cnsj8h0lltl68" path="res://docs/design/2026-10-19/sky-islands-demo/SkyIslandsPreview.gd" id="1"]
 
-[node name="SkyIslandsPreview" type="Node"]
+[node name="SkyIslandsPreview" type="Node" unique_id=1256683559]
 script = ExtResource("1")

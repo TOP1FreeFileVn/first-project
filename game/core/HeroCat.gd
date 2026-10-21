@@ -33,15 +33,15 @@ const CAV := TroopData.Klass.CAVALRY
 ## id -> slot, name, icon, rarity (0-3), stats at level 1; weapons add `pairs` (two soldier
 ## classes), `skill` and `range` (melee / ranged attack).
 const ITEMS := {
-	"kiem_go": {"slot": "weapon", "name": "Kiếm Gỗ", "icon": "w_kiem", "rarity": 0, "stats": {"atk": 40},
+	"kiem_go": {"slot": "weapon", "name": "Kiếm Gỗ", "icon": "hero_w_kiem", "rarity": 0, "stats": {"atk": 40},
 		"pairs": [INF, CAV], "range": "Cận chiến", "skill": "Chém xoáy: mỗi 8 giây chém vòng tròn quanh mèo."},
-	"cung_san": {"slot": "weapon", "name": "Cung Săn", "icon": "w_cung", "rarity": 1, "stats": {"atk": 52},
+	"cung_san": {"slot": "weapon", "name": "Cung Săn", "icon": "hero_w_cung", "rarity": 1, "stats": {"atk": 52},
 		"pairs": [RNG, MAG], "range": "Đánh xa", "skill": "Mưa tên: mỗi 10 giây bắn 8 mũi tên xuống đám đông."},
-	"gay_sao": {"slot": "weapon", "name": "Gậy Sao", "icon": "w_gay_phep", "rarity": 2, "stats": {"atk": 75},
+	"gay_sao": {"slot": "weapon", "name": "Gậy Sao", "icon": "hero_w_gay_phep", "rarity": 2, "stats": {"atk": 75},
 		"pairs": [MAG, RNG], "range": "Đánh xa", "skill": "Sao băng: mỗi 12 giây gọi sao rơi gây sát thương lan."},
-	"riu_lua": {"slot": "weapon", "name": "Rìu Lửa", "icon": "w_riu", "rarity": 2, "stats": {"atk": 82},
+	"riu_lua": {"slot": "weapon", "name": "Rìu Lửa", "icon": "hero_w_riu", "rarity": 2, "stats": {"atk": 82},
 		"pairs": [INF, CAV], "range": "Cận chiến", "skill": "Chẻ lửa: đòn thứ 4 đốt cháy mục tiêu."},
-	"katana_nguyet": {"slot": "weapon", "name": "Katana Nguyệt", "icon": "w_katana", "rarity": 3, "stats": {"atk": 115},
+	"katana_nguyet": {"slot": "weapon", "name": "Katana Nguyệt", "icon": "hero_w_katana", "rarity": 3, "stats": {"atk": 115},
 		"pairs": [INF, CAV], "range": "Cận chiến", "skill": "Trảm nguyệt: lướt qua hàng địch, chém mọi kẻ trên đường."},
 	"mu_da": {"slot": "helmet", "name": "Mũ Da", "icon": "eq_helmet", "rarity": 0, "stats": {"hp": 160, "def": 6}},
 	"mu_sat": {"slot": "helmet", "name": "Mũ Sắt", "icon": "eq_helmet", "rarity": 1, "stats": {"hp": 240, "def": 10}},

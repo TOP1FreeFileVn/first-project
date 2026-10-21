@@ -1,0 +1,8 @@
+# Local-only sandbox profile and renderer logs from capture-lobby.ps1.
+capture-profile-local/
+capture-profile-roaming/
+capture-engine.log
+capture-stdout.log
+capture-stderr.log
+layout-renderer/.godot/
+layout-renderer/render.log

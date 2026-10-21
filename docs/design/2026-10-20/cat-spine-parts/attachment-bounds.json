@@ -1,0 +1,630 @@
+{
+  "cat_cream": {
+    "tail": {
+      "canvas_alpha_bounds_px": [
+        167.0,
+        135.0,
+        247.333,
+        225.333
+      ],
+      "render_alpha_bounds_px": [
+        501,
+        405,
+        742,
+        676
+      ]
+    },
+    "foot_L_image": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        184.0,
+        123.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        552,
+        369,
+        715
+      ]
+    },
+    "foot_R_image": {
+      "canvas_alpha_bounds_px": [
+        133.0,
+        184.0,
+        218.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        399,
+        552,
+        654,
+        715
+      ]
+    },
+    "body": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        110.0,
+        218.0,
+        227.0
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        330,
+        654,
+        681
+      ]
+    },
+    "paw_L_image": {
+      "canvas_alpha_bounds_px": [
+        77.333,
+        145.333,
+        116.333,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        232,
+        436,
+        349,
+        551
+      ]
+    },
+    "paw_R_image": {
+      "canvas_alpha_bounds_px": [
+        139.667,
+        145.333,
+        178.667,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        419,
+        436,
+        536,
+        551
+      ]
+    },
+    "head": {
+      "canvas_alpha_bounds_px": [
+        36.0,
+        6.0,
+        220.0,
+        150.0
+      ],
+      "render_alpha_bounds_px": [
+        108,
+        18,
+        660,
+        450
+      ]
+    }
+  },
+  "cat_tabby": {
+    "tail": {
+      "canvas_alpha_bounds_px": [
+        167.0,
+        135.0,
+        247.333,
+        225.333
+      ],
+      "render_alpha_bounds_px": [
+        501,
+        405,
+        742,
+        676
+      ]
+    },
+    "foot_L_image": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        184.0,
+        123.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        552,
+        369,
+        715
+      ]
+    },
+    "foot_R_image": {
+      "canvas_alpha_bounds_px": [
+        133.0,
+        184.0,
+        218.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        399,
+        552,
+        654,
+        715
+      ]
+    },
+    "body": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        110.0,
+        218.0,
+        227.0
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        330,
+        654,
+        681
+      ]
+    },
+    "paw_L_image": {
+      "canvas_alpha_bounds_px": [
+        77.333,
+        145.333,
+        116.333,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        232,
+        436,
+        349,
+        551
+      ]
+    },
+    "paw_R_image": {
+      "canvas_alpha_bounds_px": [
+        139.667,
+        145.333,
+        178.667,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        419,
+        436,
+        536,
+        551
+      ]
+    },
+    "head": {
+      "canvas_alpha_bounds_px": [
+        36.0,
+        6.0,
+        220.0,
+        150.0
+      ],
+      "render_alpha_bounds_px": [
+        108,
+        18,
+        660,
+        450
+      ]
+    }
+  },
+  "cat_grey": {
+    "tail": {
+      "canvas_alpha_bounds_px": [
+        167.0,
+        135.0,
+        247.333,
+        225.333
+      ],
+      "render_alpha_bounds_px": [
+        501,
+        405,
+        742,
+        676
+      ]
+    },
+    "foot_L_image": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        184.0,
+        123.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        552,
+        369,
+        715
+      ]
+    },
+    "foot_R_image": {
+      "canvas_alpha_bounds_px": [
+        133.0,
+        184.0,
+        218.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        399,
+        552,
+        654,
+        715
+      ]
+    },
+    "body": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        110.0,
+        218.0,
+        227.0
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        330,
+        654,
+        681
+      ]
+    },
+    "paw_L_image": {
+      "canvas_alpha_bounds_px": [
+        77.333,
+        145.333,
+        116.333,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        232,
+        436,
+        349,
+        551
+      ]
+    },
+    "paw_R_image": {
+      "canvas_alpha_bounds_px": [
+        139.667,
+        145.333,
+        178.667,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        419,
+        436,
+        536,
+        551
+      ]
+    },
+    "head": {
+      "canvas_alpha_bounds_px": [
+        36.0,
+        6.0,
+        220.0,
+        150.0
+      ],
+      "render_alpha_bounds_px": [
+        108,
+        18,
+        660,
+        450
+      ]
+    }
+  },
+  "cat_calico": {
+    "tail": {
+      "canvas_alpha_bounds_px": [
+        167.0,
+        135.0,
+        247.333,
+        225.333
+      ],
+      "render_alpha_bounds_px": [
+        501,
+        405,
+        742,
+        676
+      ]
+    },
+    "foot_L_image": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        184.0,
+        123.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        552,
+        369,
+        715
+      ]
+    },
+    "foot_R_image": {
+      "canvas_alpha_bounds_px": [
+        133.0,
+        184.0,
+        218.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        399,
+        552,
+        654,
+        715
+      ]
+    },
+    "body": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        110.0,
+        218.0,
+        227.0
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        330,
+        654,
+        681
+      ]
+    },
+    "paw_L_image": {
+      "canvas_alpha_bounds_px": [
+        77.333,
+        145.333,
+        116.333,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        232,
+        436,
+        349,
+        551
+      ]
+    },
+    "paw_R_image": {
+      "canvas_alpha_bounds_px": [
+        139.667,
+        145.333,
+        178.667,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        419,
+        436,
+        536,
+        551
+      ]
+    },
+    "head": {
+      "canvas_alpha_bounds_px": [
+        36.0,
+        6.0,
+        220.0,
+        150.0
+      ],
+      "render_alpha_bounds_px": [
+        108,
+        18,
+        660,
+        450
+      ]
+    }
+  },
+  "cat_hero": {
+    "tail": {
+      "canvas_alpha_bounds_px": [
+        167.0,
+        135.0,
+        247.333,
+        225.333
+      ],
+      "render_alpha_bounds_px": [
+        501,
+        405,
+        742,
+        676
+      ]
+    },
+    "back_accessories": {
+      "canvas_alpha_bounds_px": [
+        6.0,
+        66.0,
+        240.0,
+        240.0
+      ],
+      "render_alpha_bounds_px": [
+        18,
+        198,
+        720,
+        720
+      ]
+    },
+    "foot_L_image": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        184.0,
+        123.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        552,
+        369,
+        715
+      ]
+    },
+    "foot_R_image": {
+      "canvas_alpha_bounds_px": [
+        133.0,
+        184.0,
+        218.0,
+        238.333
+      ],
+      "render_alpha_bounds_px": [
+        399,
+        552,
+        654,
+        715
+      ]
+    },
+    "body": {
+      "canvas_alpha_bounds_px": [
+        38.0,
+        110.0,
+        218.0,
+        227.0
+      ],
+      "render_alpha_bounds_px": [
+        114,
+        330,
+        654,
+        681
+      ]
+    },
+    "paw_L_image": {
+      "canvas_alpha_bounds_px": [
+        77.333,
+        145.333,
+        116.333,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        232,
+        436,
+        349,
+        551
+      ]
+    },
+    "paw_R_image": {
+      "canvas_alpha_bounds_px": [
+        139.667,
+        145.333,
+        178.667,
+        183.667
+      ],
+      "render_alpha_bounds_px": [
+        419,
+        436,
+        536,
+        551
+      ]
+    },
+    "head": {
+      "canvas_alpha_bounds_px": [
+        36.0,
+        0.0,
+        220.0,
+        150.0
+      ],
+      "render_alpha_bounds_px": [
+        108,
+        0,
+        660,
+        450
+      ]
+    }
+  },
+  "hero_neutral_9px": {
+    "tail": {
+      "canvas_alpha_bounds_px": [
+        166.333,
+        134.333,
+        248.0,
+        226.0
+      ],
+      "render_alpha_bounds_px": [
+        499,
+        403,
+        744,
+        678
+      ]
+    },
+    "back_accessories": {
+      "canvas_alpha_bounds_px": [
+        17.333,
+        123.333,
+        238.667,
+        239.667
+      ],
+      "render_alpha_bounds_px": [
+        52,
+        370,
+        716,
+        719
+      ]
+    },
+    "foot_L_image": {
+      "canvas_alpha_bounds_px": [
+        39.333,
+        184.0,
+        123.0,
+        237.0
+      ],
+      "render_alpha_bounds_px": [
+        118,
+        552,
+        369,
+        711
+      ]
+    },
+    "foot_R_image": {
+      "canvas_alpha_bounds_px": [
+        133.0,
+        184.0,
+        216.667,
+        237.0
+      ],
+      "render_alpha_bounds_px": [
+        399,
+        552,
+        650,
+        711
+      ]
+    },
+    "body": {
+      "canvas_alpha_bounds_px": [
+        39.333,
+        111.333,
+        216.667,
+        225.667
+      ],
+      "render_alpha_bounds_px": [
+        118,
+        334,
+        650,
+        677
+      ]
+    },
+    "paw_L_image": {
+      "canvas_alpha_bounds_px": [
+        79.333,
+        147.333,
+        114.333,
+        181.667
+      ],
+      "render_alpha_bounds_px": [
+        238,
+        442,
+        343,
+        545
+      ]
+    },
+    "paw_R_image": {
+      "canvas_alpha_bounds_px": [
+        141.667,
+        147.333,
+        176.667,
+        181.667
+      ],
+      "render_alpha_bounds_px": [
+        425,
+        442,
+        530,
+        545
+      ]
+    },
+    "head": {
+      "canvas_alpha_bounds_px": [
+        37.333,
+        7.333,
+        218.667,
+        148.667
+      ],
+      "render_alpha_bounds_px": [
+        112,
+        22,
+        656,
+        446
+      ]
+    }
+  }
+}

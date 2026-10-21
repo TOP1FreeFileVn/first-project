@@ -316,18 +316,8 @@ func _fit_roster_cards(grid: GridContainer) -> void:
 
 
 func _build_team() -> void:
-	_team_panel = Ui.panel("Board")
-	var board := Ui.THEME.get_stylebox("panel", "Board").duplicate() as StyleBoxTexture
-	board.content_margin_left = 16
-	board.content_margin_right = 16
-	board.content_margin_top = 14
-	board.content_margin_bottom = 18
-	_team_panel.add_theme_stylebox_override("panel", board)
-	_top.add_child(_team_panel)
 	var box := Ui.vbox(6)
-	_team_panel.add_child(box)
 	var head := Ui.hbox(8, BoxContainer.ALIGNMENT_BEGIN)
-	head.add_child(_small_text("Đội hình %d/%d" % [PlayerData.battle_team().size(), PlayerData.team_slots()], 26))
 	head.add_child(Ui.spacer())
 	head.add_child(Ui.icon("star", 30))
 	head.add_child(_small_text(UiKit.format_number(PlayerData.team_power()), 24))
@@ -361,6 +351,8 @@ func _build_team() -> void:
 	box.add_child(row)
 	if _swap_id == "":
 		box.add_child(_small_text("Chạm xem chi tiết · Giữ và kéo để đổi đội", 20))
+	_team_panel = Ui.menu_section("troops", "Đội hình %d/%d" % [team.size(), PlayerData.team_slots()], box)
+	_top.add_child(_team_panel)
 
 
 func _fit_team_slots(row: HBoxContainer) -> void:
@@ -391,7 +383,7 @@ func _team_slot(index: int, id: String) -> Button:
 		slot = Button.new()
 		slot.custom_minimum_size = Vector2(0, SLOT_HEIGHT)
 		slot.focus_mode = Control.FOCUS_NONE
-		var face := Ui.THEME.get_stylebox("panel", "Well")
+		var face := Ui.menu_panel_style("troops", "Well")
 		for state in ["normal", "hover", "pressed"]:
 			slot.add_theme_stylebox_override(state, face)
 	else:
@@ -614,7 +606,7 @@ func _fill_detail() -> void:
 		var ability := UiKit.ink("✦ " + troop.ability_text, 16)
 		ability.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		ability.add_theme_color_override("font_color", Color("6b3fa0") if troop.rarity < 3 else Color("9a5a00"))
-		box.add_child(ability)
+		box.add_child(Ui.menu_section("troops", "Kỹ năng", ability))
 
 	if not t["unlocked"]:
 		box.add_child(UiKit.ink("Chưa mở khoá. Mở rương ở Cửa hàng để nhận thẻ %s." % troop.display_name, 18))
@@ -648,7 +640,7 @@ func _fill_detail() -> void:
 		stats.add_child(UiKit.ink("%d%% · x%s sát thương" % [roundi(troop.crit_chance * 100.0), String.num(troop.crit_mult, 2)], 18))
 	stats.add_child(UiKit.ink("Sinh lính", 18))
 	stats.add_child(UiKit.ink("mỗi %.1f giây (tối đa %d)" % [troop.spawn_interval, troop.max_alive], 18))
-	box.add_child(stats)
+	box.add_child(Ui.menu_section("troops", "Chỉ số", stats))
 
 	var actions := UiKit.hbox(14)
 	actions.alignment = BoxContainer.ALIGNMENT_CENTER

@@ -1,0 +1,10 @@
+{
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "34:2",
+  "model": "gpt-image-2.5-sunburst",
+  "width": 1024,
+  "height": 1024,
+  "source": "raw/helmet-iteration-1.png",
+  "prompt": "prompts/helmet-iteration-1.txt",
+  "referenceMode": "Text-only generation based on studied game references; no image reference input supported."
+}

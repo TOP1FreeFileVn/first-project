@@ -1,14 +1,9 @@
 extends "res://game/menu/pages/MenuPage.gd"
 
-# Level select in the game skin, on the approved lobby layout (tests/ui/HomePreview):
-# [flex] level plaque + stars → stage island with the hero cat and the level's enemies →
-# ◀ page dots ▶ → rewards → [flex] one big "Trận chiến" button. Swipe the island (or tap the
-# arrows) to look at other levels; locked ones can be looked at but not played.
-
+# Stage selection is UI over the persistent cardboard courtyard owned by Home.
+# Changing a selected stage never rebuilds the backdrop or restarts its cats.
 const Ui = preload("res://game/ui/Ui.gd")
 const SWIPE_DISTANCE := 70.0
-## Where the level's enemies stand on the island, as fractions of it.
-const ENEMY_SPOTS := [Vector2(0.76, 0.40), Vector2(0.86, 0.53), Vector2(0.68, 0.58)]
 
 var _selected := -1
 var _column: VBoxContainer
@@ -33,6 +28,7 @@ func build() -> void:
 	if _selected < 0:
 		_selected = PlayerData.unlocked_levels - 1
 	if _column != null:
+		remove_child(_column)
 		_column.queue_free()
 	_column = Ui.vbox(6)
 	add_child(_column)
@@ -54,94 +50,46 @@ func _fill() -> void:
 	var parts: PackedStringArray = level.display_name.split(" · ")
 	var level_name: String = parts[parts.size() - 1] if parts.size() > 1 else level.display_name
 
-	_column.add_child(_flex(0.15))
-	# Plaque + stars on top of the stage.
-	var title := Ui.center(Ui.title_plaque("Màn %d · %s" % [index + 1, level_name], "", 26))
-	title.name = "LobbyTitle"
-	_column.add_child(title)
-	var star_row := Ui.hbox(4)
-	for i in 3:
-		star_row.add_child(Ui.icon("star" if i < stars else "star_off", 40 if i == 1 else 34))
-	_column.add_child(star_row)
-
-	# Stage: island at its aspect ratio between the side rails; hero cat in the middle,
-	# the level's enemies on the far side.
-	var side := Ui.margin(96, 0, 96, 0)
-	side.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	var fit := AspectRatioContainer.new()
-	fit.ratio = 560.0 / 400.0
-	side.add_child(fit)
-	_stage = Control.new()
-	_stage.name = "LobbyStage"
-	_stage.mouse_filter = Control.MOUSE_FILTER_STOP
-	_stage.gui_input.connect(_on_stage_input)
-	fit.add_child(_stage)
-	var island := Ui.image("menu_castle_island", Vector2.ZERO)
-	island.name = "LobbyIsland"
-	_stage.add_child(island)
-	island.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	var cat := Ui.image("cat_hero", Vector2.ZERO)
-	_stage.add_child(cat)
-	_place(cat, Vector2(0.12, 0.14), Vector2(0.40, 0.59))
-	var ids := _enemy_ids(level)
-	for i in mini(ids.size(), ENEMY_SPOTS.size()):
-		var foe := UiKit.troop_portrait(PlayerData.TROOPS[ids[i]], 64, "Red")
-		foe.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-		foe.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-		foe.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-		foe.flip_h = true
-		foe.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		_stage.add_child(foe)
-		var spot: Vector2 = ENEMY_SPOTS[i]
-		_place(foe, spot - Vector2(0.08, 0.16), spot + Vector2(0.08, 0.0))
-	if locked:
-		_stage.modulate = Color(0.45, 0.48, 0.58)
-		var padlock := Ui.icon("lock", 110)
-		_stage.add_child(padlock)
-		_place(padlock, Vector2(0.38, 0.2), Vector2(0.62, 0.55))
-	elif stars == 0:
-		# First-clear bonus as a callout over the island.
-		var note := "Lần đầu: x2 vàng"
-		var gift: String = Economy.FIRST_CLEAR_GIFT.get(index, "")
-		if gift != "":
-			note += " + " + PlayerData.TROOPS[gift].display_name
-		var tip := Ui.callout(note)
-		tip.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		_stage.add_child(tip)
-		tip.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP)
-		tip.grow_horizontal = Control.GROW_DIRECTION_BOTH
-		tip.offset_top = -10
-		Ui.bob(tip, 5.0, 1.2)
-	_column.add_child(side)
-
-	# ◀ page dots ▶
-	var pager := Ui.hbox(14)
+	var top_gap := Control.new()
+	top_gap.custom_minimum_size.y = 32
+	_column.add_child(top_gap)
+	var header_margin := Ui.margin(40, 0, 40, 0)
+	var pager := Ui.hbox(12)
 	pager.name = "LobbyPager"
+	header_margin.add_child(pager)
 	var prev := _page_arrow(false)
 	prev.name = "LobbyPrev"
 	prev.pressed.connect(func(): _go(-1))
 	prev.disabled = index == 0
 	pager.add_child(prev)
-	var dots := Ui.hbox(8)
-	for i in PlayerData.LEVELS.size():
-		var dot := Panel.new()
-		var size_px := 18.0 if i == index else 12.0
-		dot.custom_minimum_size = Vector2(size_px, size_px)
-		dot.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-		var style := StyleBoxFlat.new()
-		style.set_corner_radius_all(9)
-		style.border_color = Color("583f21")
-		style.set_border_width_all(2)
-		style.bg_color = Color("ffd23f") if i == index else (Color.WHITE if PlayerData.can_select(i) else Color("3d5a8a"))
-		dot.add_theme_stylebox_override("panel", style)
-		dots.add_child(dot)
-	pager.add_child(dots)
+	var title := Ui.label("Màn %d · %s" % [index + 1, level_name], "", 28)
+	title.name = "LobbyTitle"
+	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	title.add_theme_color_override("font_color", Color.WHITE)
+	title.add_theme_color_override("font_outline_color", Color("583f21"))
+	title.add_theme_constant_override("outline_size", 3)
+	pager.add_child(title)
 	var next := _page_arrow(true)
 	next.name = "LobbyNext"
 	next.pressed.connect(func(): _go(1))
 	next.disabled = index == PlayerData.LEVELS.size() - 1
 	pager.add_child(next)
-	_column.add_child(pager)
+	_column.add_child(header_margin)
+	var star_row := Ui.hbox(2)
+	star_row.custom_minimum_size.y = 30
+	for i in stars:
+		star_row.add_child(Ui.icon("star", 28))
+	_column.add_child(star_row)
+
+	# This transparent region keeps swipe navigation over the courtyard.
+	# The world itself lives outside this page's rebuildable UI column.
+	_stage = Control.new()
+	_stage.name = "LobbyStage"
+	_stage.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	_stage.mouse_filter = Control.MOUSE_FILTER_STOP
+	_stage.gui_input.connect(_on_stage_input)
+	_column.add_child(_stage)
 
 	# Keep the selected stage's reward and its action together, as one compact group.
 	var action_block := Ui.vbox(16)
@@ -207,26 +155,6 @@ func _page_arrow(flip: bool) -> Button:
 	return button
 
 
-## Anchors a child of the stage to a box given in fractions of the island.
-func _place(child: Control, top_left: Vector2, bottom_right: Vector2) -> void:
-	child.anchor_left = top_left.x
-	child.anchor_top = top_left.y
-	child.anchor_right = bottom_right.x
-	child.anchor_bottom = bottom_right.y
-	child.offset_left = 0
-	child.offset_top = 0
-	child.offset_right = 0
-	child.offset_bottom = 0
-
-
-func _flex(ratio: float) -> Control:
-	var c := Control.new()
-	c.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	c.size_flags_stretch_ratio = ratio
-	c.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	return c
-
-
 # --- Switching levels ---------------------------------------------------------------------
 
 func _go(step: int) -> void:
@@ -262,7 +190,7 @@ func _on_stage_input(event: InputEvent) -> void:
 			else:
 				_snap_back()
 	elif event is InputEventMouseMotion and _drag_from >= 0.0:
-		# The island follows the finger, with resistance past the first and last level.
+		# Keep the gesture local to this transparent region; courtyard actors stay in place.
 		var moved: float = event.position.x - _drag_from
 		var at_end := (moved > 0.0 and _selected == 0) or (moved < 0.0 and _selected == PlayerData.LEVELS.size() - 1)
 		_stage.position.x = moved * (0.3 if at_end else 1.0)
@@ -271,12 +199,3 @@ func _on_stage_input(event: InputEvent) -> void:
 func _snap_back() -> void:
 	if _stage != null:
 		create_tween().tween_property(_stage, "position:x", 0.0, 0.15)
-
-
-func _enemy_ids(level: Resource) -> Array:
-	var ids := []
-	for wave in level.waves:
-		for group in wave["groups"]:
-			if not ids.has(group["troop"]):
-				ids.append(group["troop"])
-	return ids

@@ -1,0 +1,887 @@
+{
+	"captures": [
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-battle.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-press.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-opening-075ms.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-opening-165ms.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-shop.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-hero.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-troops.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-summon.png",
+		"res://docs/design/2026-10-21/shoebox-nav-demo/native-rapid-settled.png"
+	],
+	"checks": [
+		{
+			"name": "carton_wings_bounded_overhang_0.0",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_mirror_0.0",
+			"pass": true
+		},
+		{
+			"name": "carton_fixed_hinges_0.0",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_bounded_overhang_0.25",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_mirror_0.25",
+			"pass": true
+		},
+		{
+			"name": "carton_fixed_hinges_0.25",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_bounded_overhang_0.5",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_mirror_0.5",
+			"pass": true
+		},
+		{
+			"name": "carton_fixed_hinges_0.5",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_bounded_overhang_0.75",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_mirror_0.75",
+			"pass": true
+		},
+		{
+			"name": "carton_fixed_hinges_0.75",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_bounded_overhang_1.0",
+			"pass": true
+		},
+		{
+			"name": "carton_wings_mirror_1.0",
+			"pass": true
+		},
+		{
+			"name": "carton_fixed_hinges_1.0",
+			"pass": true
+		},
+		{
+			"name": "carton_has_no_rear_lid",
+			"pass": true
+		},
+		{
+			"name": "shared_nav_shelf_rasterized_4x",
+			"pass": true
+		},
+		{
+			"name": "shared_nav_shelf_inside_viewport",
+			"pass": true
+		},
+		{
+			"name": "native-battle_saved",
+			"pass": true
+		},
+		{
+			"name": "initial_battle_selected",
+			"pass": true
+		},
+		{
+			"name": "pointer_down_compresses_60ms",
+			"pass": true
+		},
+		{
+			"name": "native-press_saved",
+			"pass": true
+		},
+		{
+			"name": "active_retap_preserves_inflight_open",
+			"pass": true
+		},
+		{
+			"name": "native-opening-075ms_saved",
+			"pass": true
+		},
+		{
+			"name": "native-opening-165ms_saved",
+			"pass": true
+		},
+		{
+			"name": "native-shop_saved",
+			"pass": true
+		},
+		{
+			"name": "shop_five_persistent_boxes",
+			"pass": true
+		},
+		{
+			"name": "shop_phases_0",
+			"pass": true
+		},
+		{
+			"name": "shop_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "shop_touch_width_0",
+			"pass": true
+		},
+		{
+			"name": "shop_flaps_inside_viewport_0",
+			"pass": true
+		},
+		{
+			"name": "shop_icon_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "shop_caption_fits",
+			"pass": true
+		},
+		{
+			"name": "shop_phases_1",
+			"pass": true
+		},
+		{
+			"name": "shop_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "shop_touch_width_1",
+			"pass": true
+		},
+		{
+			"name": "shop_flaps_inside_viewport_1",
+			"pass": true
+		},
+		{
+			"name": "shop_icon_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "shop_tight_body_gap_1",
+			"pass": true
+		},
+		{
+			"name": "shop_phases_2",
+			"pass": true
+		},
+		{
+			"name": "shop_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "shop_touch_width_2",
+			"pass": true
+		},
+		{
+			"name": "shop_flaps_inside_viewport_2",
+			"pass": true
+		},
+		{
+			"name": "shop_icon_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "shop_tight_body_gap_2",
+			"pass": true
+		},
+		{
+			"name": "shop_phases_3",
+			"pass": true
+		},
+		{
+			"name": "shop_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "shop_touch_width_3",
+			"pass": true
+		},
+		{
+			"name": "shop_flaps_inside_viewport_3",
+			"pass": true
+		},
+		{
+			"name": "shop_icon_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "shop_tight_body_gap_3",
+			"pass": true
+		},
+		{
+			"name": "shop_phases_4",
+			"pass": true
+		},
+		{
+			"name": "shop_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "shop_touch_width_4",
+			"pass": true
+		},
+		{
+			"name": "shop_flaps_inside_viewport_4",
+			"pass": true
+		},
+		{
+			"name": "shop_icon_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "shop_tight_body_gap_4",
+			"pass": true
+		},
+		{
+			"name": "native-hero_saved",
+			"pass": true
+		},
+		{
+			"name": "hero_five_persistent_boxes",
+			"pass": true
+		},
+		{
+			"name": "hero_phases_0",
+			"pass": true
+		},
+		{
+			"name": "hero_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "hero_touch_width_0",
+			"pass": true
+		},
+		{
+			"name": "hero_flaps_inside_viewport_0",
+			"pass": true
+		},
+		{
+			"name": "hero_icon_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "hero_phases_1",
+			"pass": true
+		},
+		{
+			"name": "hero_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "hero_touch_width_1",
+			"pass": true
+		},
+		{
+			"name": "hero_flaps_inside_viewport_1",
+			"pass": true
+		},
+		{
+			"name": "hero_icon_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "hero_caption_fits",
+			"pass": true
+		},
+		{
+			"name": "hero_tight_body_gap_1",
+			"pass": true
+		},
+		{
+			"name": "hero_phases_2",
+			"pass": true
+		},
+		{
+			"name": "hero_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "hero_touch_width_2",
+			"pass": true
+		},
+		{
+			"name": "hero_flaps_inside_viewport_2",
+			"pass": true
+		},
+		{
+			"name": "hero_icon_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "hero_tight_body_gap_2",
+			"pass": true
+		},
+		{
+			"name": "hero_phases_3",
+			"pass": true
+		},
+		{
+			"name": "hero_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "hero_touch_width_3",
+			"pass": true
+		},
+		{
+			"name": "hero_flaps_inside_viewport_3",
+			"pass": true
+		},
+		{
+			"name": "hero_icon_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "hero_tight_body_gap_3",
+			"pass": true
+		},
+		{
+			"name": "hero_phases_4",
+			"pass": true
+		},
+		{
+			"name": "hero_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "hero_touch_width_4",
+			"pass": true
+		},
+		{
+			"name": "hero_flaps_inside_viewport_4",
+			"pass": true
+		},
+		{
+			"name": "hero_icon_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "hero_tight_body_gap_4",
+			"pass": true
+		},
+		{
+			"name": "native-troops_saved",
+			"pass": true
+		},
+		{
+			"name": "troops_five_persistent_boxes",
+			"pass": true
+		},
+		{
+			"name": "troops_phases_0",
+			"pass": true
+		},
+		{
+			"name": "troops_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "troops_touch_width_0",
+			"pass": true
+		},
+		{
+			"name": "troops_flaps_inside_viewport_0",
+			"pass": true
+		},
+		{
+			"name": "troops_icon_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "troops_phases_1",
+			"pass": true
+		},
+		{
+			"name": "troops_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "troops_touch_width_1",
+			"pass": true
+		},
+		{
+			"name": "troops_flaps_inside_viewport_1",
+			"pass": true
+		},
+		{
+			"name": "troops_icon_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "troops_tight_body_gap_1",
+			"pass": true
+		},
+		{
+			"name": "troops_phases_2",
+			"pass": true
+		},
+		{
+			"name": "troops_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "troops_touch_width_2",
+			"pass": true
+		},
+		{
+			"name": "troops_flaps_inside_viewport_2",
+			"pass": true
+		},
+		{
+			"name": "troops_icon_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "troops_tight_body_gap_2",
+			"pass": true
+		},
+		{
+			"name": "troops_phases_3",
+			"pass": true
+		},
+		{
+			"name": "troops_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "troops_touch_width_3",
+			"pass": true
+		},
+		{
+			"name": "troops_flaps_inside_viewport_3",
+			"pass": true
+		},
+		{
+			"name": "troops_icon_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "troops_caption_fits",
+			"pass": true
+		},
+		{
+			"name": "troops_tight_body_gap_3",
+			"pass": true
+		},
+		{
+			"name": "troops_phases_4",
+			"pass": true
+		},
+		{
+			"name": "troops_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "troops_touch_width_4",
+			"pass": true
+		},
+		{
+			"name": "troops_flaps_inside_viewport_4",
+			"pass": true
+		},
+		{
+			"name": "troops_icon_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "troops_tight_body_gap_4",
+			"pass": true
+		},
+		{
+			"name": "native-summon_saved",
+			"pass": true
+		},
+		{
+			"name": "summon_five_persistent_boxes",
+			"pass": true
+		},
+		{
+			"name": "summon_phases_0",
+			"pass": true
+		},
+		{
+			"name": "summon_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "summon_touch_width_0",
+			"pass": true
+		},
+		{
+			"name": "summon_flaps_inside_viewport_0",
+			"pass": true
+		},
+		{
+			"name": "summon_icon_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "summon_phases_1",
+			"pass": true
+		},
+		{
+			"name": "summon_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "summon_touch_width_1",
+			"pass": true
+		},
+		{
+			"name": "summon_flaps_inside_viewport_1",
+			"pass": true
+		},
+		{
+			"name": "summon_icon_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "summon_tight_body_gap_1",
+			"pass": true
+		},
+		{
+			"name": "summon_phases_2",
+			"pass": true
+		},
+		{
+			"name": "summon_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "summon_touch_width_2",
+			"pass": true
+		},
+		{
+			"name": "summon_flaps_inside_viewport_2",
+			"pass": true
+		},
+		{
+			"name": "summon_icon_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "summon_tight_body_gap_2",
+			"pass": true
+		},
+		{
+			"name": "summon_phases_3",
+			"pass": true
+		},
+		{
+			"name": "summon_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "summon_touch_width_3",
+			"pass": true
+		},
+		{
+			"name": "summon_flaps_inside_viewport_3",
+			"pass": true
+		},
+		{
+			"name": "summon_icon_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "summon_tight_body_gap_3",
+			"pass": true
+		},
+		{
+			"name": "summon_phases_4",
+			"pass": true
+		},
+		{
+			"name": "summon_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "summon_touch_width_4",
+			"pass": true
+		},
+		{
+			"name": "summon_flaps_inside_viewport_4",
+			"pass": true
+		},
+		{
+			"name": "summon_icon_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "summon_caption_fits",
+			"pass": true
+		},
+		{
+			"name": "summon_tight_body_gap_4",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_five_persistent_boxes",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_phases_0",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_touch_width_0",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_flaps_inside_viewport_0",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_icon_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_phases_1",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_touch_width_1",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_flaps_inside_viewport_1",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_icon_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_tight_body_gap_1",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_phases_2",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_touch_width_2",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_flaps_inside_viewport_2",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_icon_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_caption_fits",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_tight_body_gap_2",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_phases_3",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_touch_width_3",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_flaps_inside_viewport_3",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_icon_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_tight_body_gap_3",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_phases_4",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_touch_width_4",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_flaps_inside_viewport_4",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_icon_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "rapid_clicks_tight_body_gap_4",
+			"pass": true
+		},
+		{
+			"name": "native-rapid-settled_saved",
+			"pass": true
+		},
+		{
+			"name": "active_retap_five_persistent_boxes",
+			"pass": true
+		},
+		{
+			"name": "active_retap_phases_0",
+			"pass": true
+		},
+		{
+			"name": "active_retap_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "active_retap_touch_width_0",
+			"pass": true
+		},
+		{
+			"name": "active_retap_flaps_inside_viewport_0",
+			"pass": true
+		},
+		{
+			"name": "active_retap_icon_bounds_0",
+			"pass": true
+		},
+		{
+			"name": "active_retap_phases_1",
+			"pass": true
+		},
+		{
+			"name": "active_retap_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "active_retap_touch_width_1",
+			"pass": true
+		},
+		{
+			"name": "active_retap_flaps_inside_viewport_1",
+			"pass": true
+		},
+		{
+			"name": "active_retap_icon_bounds_1",
+			"pass": true
+		},
+		{
+			"name": "active_retap_tight_body_gap_1",
+			"pass": true
+		},
+		{
+			"name": "active_retap_phases_2",
+			"pass": true
+		},
+		{
+			"name": "active_retap_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "active_retap_touch_width_2",
+			"pass": true
+		},
+		{
+			"name": "active_retap_flaps_inside_viewport_2",
+			"pass": true
+		},
+		{
+			"name": "active_retap_icon_bounds_2",
+			"pass": true
+		},
+		{
+			"name": "active_retap_caption_fits",
+			"pass": true
+		},
+		{
+			"name": "active_retap_tight_body_gap_2",
+			"pass": true
+		},
+		{
+			"name": "active_retap_phases_3",
+			"pass": true
+		},
+		{
+			"name": "active_retap_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "active_retap_touch_width_3",
+			"pass": true
+		},
+		{
+			"name": "active_retap_flaps_inside_viewport_3",
+			"pass": true
+		},
+		{
+			"name": "active_retap_icon_bounds_3",
+			"pass": true
+		},
+		{
+			"name": "active_retap_tight_body_gap_3",
+			"pass": true
+		},
+		{
+			"name": "active_retap_phases_4",
+			"pass": true
+		},
+		{
+			"name": "active_retap_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "active_retap_touch_width_4",
+			"pass": true
+		},
+		{
+			"name": "active_retap_flaps_inside_viewport_4",
+			"pass": true
+		},
+		{
+			"name": "active_retap_icon_bounds_4",
+			"pass": true
+		},
+		{
+			"name": "active_retap_tight_body_gap_4",
+			"pass": true
+		}
+	],
+	"failures": 0,
+	"native_render": true,
+	"production_modified": false,
+	"save_persistence": false,
+	"viewport": [
+		360.0,
+		640.0
+	]
+}

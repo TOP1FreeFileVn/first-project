@@ -1,0 +1,335 @@
+{
+  "sword": {
+    "iteration": 2,
+    "node": "42:2",
+    "source_grip": [
+      512,
+      800
+    ],
+    "scale": 0.18,
+    "angle": -30,
+    "mirror": false,
+    "palette_source": [
+      [
+        93,
+        63,
+        28
+      ],
+      [
+        212,
+        222,
+        224
+      ],
+      [
+        170,
+        187,
+        195
+      ],
+      [
+        219,
+        165,
+        77
+      ],
+      [
+        234,
+        116,
+        84
+      ],
+      [
+        148,
+        77,
+        54
+      ]
+    ],
+    "palette_target": [
+      [
+        88,
+        63,
+        33
+      ],
+      [
+        214,
+        224,
+        227
+      ],
+      [
+        164,
+        182,
+        191
+      ],
+      [
+        223,
+        172,
+        88
+      ],
+      [
+        231,
+        120,
+        91
+      ],
+      [
+        152,
+        78,
+        57
+      ]
+    ],
+    "measured_main_source": 49.5,
+    "measured_note": "Blade side contour horizontal sections y300,450,550; both sides49–50px. Grip outer border36–37px.",
+    "source_bbox": [
+      274,
+      3,
+      750,
+      1020
+    ],
+    "source_image": [
+      1024,
+      1024
+    ],
+    "crop_grip": [
+      254,
+      813
+    ],
+    "target_grip": [
+      160,
+      166
+    ],
+    "transformed_source_grip": [
+      512,
+      800
+    ],
+    "held_bounds": [
+      131.0,
+      40.333333333333336,
+      238.66666666666666,
+      203.33333333333334
+    ],
+    "clipped": false,
+    "estimated_fitted_main": 8.91,
+    "cleanup": "White matte extraction and palette flattening; broad light wood plane unified with wood. Original geometry retained.",
+    "model": "gpt-image-2.5-sunburst",
+    "generation_file": "2uKzqvXeOSPQqfaow6s7TU",
+    "provenance": "Text-only generation informed by viewed references; no image-input conditioning."
+  },
+  "bow": {
+    "iteration": 3,
+    "node": "52:2",
+    "source_grip": [
+      680,
+      505
+    ],
+    "scale": 0.145,
+    "angle": 0,
+    "mirror": true,
+    "palette_source": [
+      [
+        93,
+        65,
+        33
+      ],
+      [
+        191,
+        124,
+        63
+      ],
+      [
+        189,
+        139,
+        100
+      ],
+      [
+        226,
+        116,
+        86
+      ],
+      [
+        227,
+        172,
+        85
+      ],
+      [
+        151,
+        77,
+        54
+      ]
+    ],
+    "palette_target": [
+      [
+        88,
+        63,
+        33
+      ],
+      [
+        184,
+        123,
+        66
+      ],
+      [
+        184,
+        123,
+        66
+      ],
+      [
+        231,
+        120,
+        91
+      ],
+      [
+        223,
+        172,
+        88
+      ],
+      [
+        152,
+        78,
+        57
+      ]
+    ],
+    "measured_main_source": 47.0,
+    "measured_note": "Wood arc horizontal sections y350,650 around45–47px; y25050–56px.Grip boundary is selectively thinner~12px. Thin functional string retained, not enlarged.",
+    "source_bbox": [
+      297,
+      33,
+      766,
+      977
+    ],
+    "source_image": [
+      1024,
+      1024
+    ],
+    "crop_grip": [
+      399,
+      488
+    ],
+    "target_grip": [
+      160,
+      166
+    ],
+    "transformed_source_grip": [
+      344,
+      505
+    ],
+    "held_bounds": [
+      146.66666666666666,
+      96.66666666666667,
+      216.33333333333334,
+      235.0
+    ],
+    "clipped": false,
+    "estimated_fitted_main": 6.81,
+    "cleanup": "White matte extraction and palette flattening; broad light wood plane unified with wood. Original geometry retained.",
+    "model": "gpt-image-2.5-sunburst",
+    "generation_file": "2uKzqvXeOSPQqfaow6s7TU",
+    "provenance": "Text-only generation informed by viewed references; no image-input conditioning."
+  },
+  "staff": {
+    "iteration": 3,
+    "node": "50:2",
+    "source_grip": [
+      512,
+      835
+    ],
+    "scale": 0.2,
+    "angle": -22,
+    "mirror": false,
+    "palette_source": [
+      [
+        88,
+        61,
+        28
+      ],
+      [
+        181,
+        116,
+        59
+      ],
+      [
+        219,
+        166,
+        78
+      ],
+      [
+        232,
+        118,
+        91
+      ],
+      [
+        112,
+        196,
+        188
+      ],
+      [
+        154,
+        80,
+        56
+      ]
+    ],
+    "palette_target": [
+      [
+        88,
+        63,
+        33
+      ],
+      [
+        184,
+        123,
+        66
+      ],
+      [
+        223,
+        172,
+        88
+      ],
+      [
+        231,
+        120,
+        91
+      ],
+      [
+        113,
+        200,
+        188
+      ],
+      [
+        152,
+        78,
+        57
+      ]
+    ],
+    "measured_main_source": 42,
+    "measured_note": "Straight wood shaft at y400,500,700:42px each side. Orb contour and grip edge thinner; not claimed uniform9px.",
+    "source_bbox": [
+      353,
+      19,
+      671,
+      996
+    ],
+    "source_image": [
+      1024,
+      1024
+    ],
+    "crop_grip": [
+      175,
+      832
+    ],
+    "target_grip": [
+      160,
+      166
+    ],
+    "transformed_source_grip": [
+      512,
+      835
+    ],
+    "held_bounds": [
+      139.0,
+      11.666666666666666,
+      239.0,
+      197.33333333333334
+    ],
+    "clipped": false,
+    "estimated_fitted_main": 8.4,
+    "cleanup": "White matte extraction and palette flattening; broad light wood plane unified with wood. Original geometry retained.",
+    "model": "gpt-image-2.5-sunburst",
+    "generation_file": "2uKzqvXeOSPQqfaow6s7TU",
+    "provenance": "Text-only generation informed by viewed references; no image-input conditioning."
+  }
+}

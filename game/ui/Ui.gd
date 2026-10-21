@@ -9,11 +9,17 @@ const THEME = preload("res://game/ui/skin/game_theme.tres")
 const SKIN := "res://game/ui/skin/"
 const PATTERN_SHADER = preload("res://game/ui/pattern_scroll.gdshader")
 const MENU_SKY_SHADER = preload("res://game/ui/menu_sky.gdshader")
-const AlignedNavPanel = preload("res://game/ui/AlignedNavPanel.gd")
+const CartonNav = preload("res://game/ui/CartonNav.gd")
+const MenuSection = preload("res://game/ui/MenuSection.gd")
 const DARK_TEXT := Color("4b4444")
 
 
 static func tex(name: String) -> Texture2D:
+	# Accepted raster art is kept outside the generated SVG skin, so rebuilding
+	# the legacy skin cannot silently restore superseded weapon/equipment art.
+	var raster := "res://game/ui/art/" + name + ".png"
+	if ResourceLoader.exists(raster):
+		return load(raster)
 	return load(SKIN + name + ".svg")
 
 
@@ -110,6 +116,50 @@ static func pattern_bg(sky := Color("6fa3e0")) -> ColorRect:
 	return bg
 
 
+## One family of quiet scrolling menu backdrops. Light roster colors preserve
+## the brown headings; darker blue/violet support the shop and summon artwork.
+const MENU_PATTERN_COLORS := {
+	"shop": Color("4e78a3"),
+	"hero": Color("96b5ae"),
+	"troops": Color("b1c6a3"),
+	"summon": Color("81749f"),
+	"castle": Color("93aaa0"),
+	"patrol": Color("a4bb91"),
+	"events": Color("b89299"),
+	"login": Color("bca789"),
+	"quests": Color("99b3c1"),
+	"profile": Color("92abae"),
+	"settings": Color("8ea4b4"),
+	"admin": Color("526a7b"),
+}
+
+
+static func menu_pattern_color(context: String) -> Color:
+	return MENU_PATTERN_COLORS.get(context, MENU_PATTERN_COLORS["hero"])
+
+
+static func menu_context_for_title(title: String) -> String:
+	match title:
+		"Sự kiện": return "events"
+		"Quà 7 ngày": return "login"
+		"Nhiệm vụ hằng ngày": return "quests"
+		"Hồ sơ": return "profile"
+		"Cài đặt": return "settings"
+	return ""
+
+
+## Popup/opening helpers can find Home without depending on its script. Combat
+## scenes have no such ancestor, so their existing backgrounds stay untouched.
+static func register_menu_surface(host: Node, surface: Node, context := "") -> bool:
+	var owner_node := host
+	while owner_node != null:
+		if owner_node.has_method("register_menu_surface"):
+			owner_node.register_menu_surface(surface, context)
+			return true
+		owner_node = owner_node.get_parent()
+	return false
+
+
 ## The shared animated sky uses screen coordinates so page overlays join the header
 ## and navigation backdrop without compressing or restarting the scene.
 static func menu_bg() -> ColorRect:
@@ -141,6 +191,72 @@ static func panel(variation: String, child: Control = null) -> PanelContainer:
 	if child != null:
 		p.add_child(child)
 	return p
+
+
+## Menu-only frames: one brown contour and shallow lip, separate from combat/rarity art.
+const MENU_PANEL_CONTEXTS := ["shop", "hero", "troops", "castle", "patrol", "events", "summon", "login", "quests", "profile", "settings"]
+
+
+static func menu_panel_style(context: String, variation := "Board") -> StyleBoxTexture:
+	var chosen := context if MENU_PANEL_CONTEXTS.has(context) else "hero"
+	var kind := variation if variation in ["Board", "Well"] else "Board"
+	var box := THEME.get_stylebox("panel", kind).duplicate() as StyleBoxTexture
+	box.texture = load(SKIN + "menu/" + chosen + "_" + kind.to_snake_case() + ".svg")
+	if kind == "Board":
+		box.texture_margin_left = 48
+		box.texture_margin_right = 48
+		box.texture_margin_top = 48
+		box.texture_margin_bottom = 56
+		box.content_margin_left = 28
+		box.content_margin_right = 28
+		box.content_margin_top = 30
+		box.content_margin_bottom = 30
+	else:
+		box.set_texture_margin_all(24)
+		box.set_content_margin_all(14)
+	return box
+
+
+static func menu_panel(context: String, variation := "Board", child: Control = null) -> PanelContainer:
+	var p := panel(variation, child)
+	p.add_theme_stylebox_override("panel", menu_panel_style(context, variation))
+	p.set_meta("menu_panel_context", context)
+	p.set_meta("menu_panel_kind", variation)
+	return p
+
+
+## A section title attached to its top edge; content stays in normal container flow.
+static func menu_section(context: String, title: String, child: Control) -> Control:
+	var p := menu_panel(context, "Board", child)
+	p.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	p.size_flags_vertical = child.size_flags_vertical
+	var tag := menu_tag(title)
+	var section := MenuSection.new()
+	section.configure(p, tag)
+	section.set_meta("menu_section_context", context)
+	section.set_meta("menu_section_title", title)
+	return section
+
+
+static func menu_tag(title: String) -> PanelContainer:
+	var tag := PanelContainer.new()
+	tag.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var face := StyleBoxFlat.new()
+	face.bg_color = Color("e9c578")
+	face.border_color = Color("583f21")
+	face.set_border_width_all(4)
+	face.set_corner_radius_all(22)
+	face.content_margin_left = 22
+	face.content_margin_right = 22
+	face.content_margin_top = 8
+	face.content_margin_bottom = 8
+	face.anti_aliasing = true
+	tag.add_theme_stylebox_override("panel", face)
+	var caption := label(title, "LabelDark", 26)
+	caption.add_theme_color_override("font_color", Color("4b3927"))
+	caption.add_theme_constant_override("outline_size", 0)
+	tag.add_child(caption)
+	return tag
 
 
 ## Puts `child` at a fixed spot over `host` (badges on cards and icons).
@@ -461,56 +577,11 @@ static func hud(level: int, energy: String, timer: String, gold: String, gems: S
 	return p
 
 
-## Big icons, with a label only on the selected warm tab. Keep the label above the
-## bottom edge independently of the decorative background bleed. `badges` holds tab indexes
-## that get a red dot. `bleed`: how far
-## the caller lets the bar run past the screen's bottom edge, so the selected block sits
-## flush on the edge (its rounded bottom is hidden) while the other tiles keep their gap.
-static func bottom_nav(tabs: Array, selected: int, badges := [], bleed := 0.0) -> HBoxContainer:
-	var bar := hbox(0)
-	bar.custom_minimum_size.y = 134 + bleed
-	for i in tabs.size():
-		var cell: Control
-		if i == selected:
-			var block := AlignedNavPanel.new()
-			block.theme_type_variation = "NavSelected"
-			var body := vbox(0, BoxContainer.ALIGNMENT_END)
-			block.add_child(body)
-			# The icon sits inside the block: rising over its top edge tangled the two outlines.
-			var holder := Control.new()
-			# Transfer 12px from the caption's bottom padding into the icon holder.
-			# Total height and icon position stay fixed; the visible cream band is about 27%.
-			holder.custom_minimum_size = Vector2(0, 100)
-			body.add_child(holder)
-			var ic := icon(tabs[i][0], 94)
-			pin(holder, ic, Vector2(-47, -4), Control.PRESET_CENTER_TOP)
-			if badges.has(i):
-				dot(ic, Vector2(-14, 2))
-			var footer := AlignedNavPanel.new()
-			footer.theme_type_variation = "NavSelectedFooter"
-			footer.name = "SelectedNavFooter"
-			var footer_body := vbox(0)
-			footer.add_child(footer_body)
-			var caption := label(tabs[i][1], "LabelDark", 24)
-			caption.name = "SelectedNavCaption"
-			caption.add_theme_color_override("font_color", Color("583f21"))
-			caption.add_theme_constant_override("outline_size", 0)
-			footer_body.add_child(caption)
-			var under := Control.new()
-			under.custom_minimum_size.y = bleed + 6.0
-			footer_body.add_child(under)
-			body.add_child(footer)
-			cell = block
-		else:
-			cell = margin(3, 22, 3, 4 + int(bleed))
-			var ic := icon(tabs[i][0], 100)
-			cell.add_child(panel("NavCell", center(ic)))
-			if badges.has(i):
-				dot(ic, Vector2(-14, 0))
-		cell.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		# The selected tab takes a bit more width than the others.
-		cell.size_flags_stretch_ratio = 1.3 if i == selected else 1.0
-		bar.add_child(cell)
+## Persistent carton states keep opening/closing motion alive through selection
+## and alert changes. The legacy bleed argument stays accepted by preview scenes.
+static func bottom_nav(tabs: Array, selected: int, badges := [], _bleed := 0.0) -> CartonNav:
+	var bar := CartonNav.new()
+	bar.configure(tabs, selected, badges)
 	return bar
 
 
@@ -663,18 +734,25 @@ static func gear_card(icon_name: String, type_icon: String, tone: String, level:
 	var card := panel("CardUnit" + (tone if tone != "grey" else "yellow").capitalize())
 	root.add_child(card)
 	card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	var holder := Control.new()
-	card.add_child(holder)
-	# The item fills the card (a little low so the badge and level stay clear).
-	pin(holder, icon(icon_name, size * 0.84), Vector2(-size * 0.42, -size * 0.36), Control.PRESET_CENTER)
-	pin(root, icon(type_icon, size * 0.26), Vector2(5, 5))
+	# Lay art out against the full card, independently of the face's theme margins.
+	# Source icons already contain safe alpha padding; this square also leaves the
+	# top row free for the slot and level, including in the smaller bag cards.
+	var art := icon(icon_name, size * 0.78)
+	art.name = "EquipmentArt"
+	pin(root, art, Vector2(size * 0.11, size * 0.22))
+	var badge := icon(type_icon, size * 0.26)
+	badge.name = "SlotBadge"
+	pin(root, badge, Vector2(5, 5))
 	var lv := label("Lv." + level, "LabelTiny", int(size * 0.15))
+	lv.name = "EquipmentLevel"
 	lv.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	pin(root, lv, Vector2(-size * 0.62, 4), Control.PRESET_TOP_RIGHT)
 	lv.offset_right = -8
 	lv.offset_bottom = lv.offset_top + size * 0.24
 	if can_upgrade:
-		pin(root, icon("badge_up", size * 0.3), Vector2(-size * 0.3, -size * 0.32), Control.PRESET_BOTTOM_RIGHT)
+		var up := icon("badge_up", size * 0.3)
+		up.name = "EquipmentUpgrade"
+		pin(root, up, Vector2(-size * 0.3, -size * 0.32), Control.PRESET_BOTTOM_RIGHT)
 	return root
 
 

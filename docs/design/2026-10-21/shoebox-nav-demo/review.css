@@ -1,0 +1,25 @@
+#shoebox-nav-review{padding:12px;display:flex;justify-content:center}
+#shoebox-nav-review .shoe-phone{--shoe-ink:#715032;--shoe-k:1;position:relative;width:360px;max-width:100%;aspect-ratio:9/16;overflow:hidden;background:#bec982;border-radius:10px;isolation:isolate;font-family:ShoePaytone,sans-serif}
+#shoebox-nav-review .shoe-world{width:360px;height:640px;position:absolute;top:0;left:0;transform:scale(var(--shoe-k));transform-origin:top left}
+#shoebox-nav-review .shoe-pages{position:absolute;inset:0;overflow:hidden}
+#shoebox-nav-review .shoe-pages>img{position:absolute;inset:0;width:360px;height:640px;object-fit:cover;opacity:0;transform:translateX(0);transition:opacity 150ms ease-out,transform 180ms ease-out;pointer-events:none}
+#shoebox-nav-review .shoe-pages>img.shown{opacity:1}
+#shoebox-nav-review .shoe-dock{position:absolute;left:0;bottom:0;width:360px;height:102px;box-sizing:border-box;padding:3px 5px 0;display:flex;gap:3px;align-items:stretch}
+#shoebox-nav-review .shoe-shelf{position:absolute;left:0;right:0;bottom:0;height:70px;background:transparent url('@@V3_SHELF@@') no-repeat;background-size:100% 100%;z-index:0}
+#shoebox-nav-review .shoe-tab{--lid:0;--rise:0;--press:1;--push:0px;--pop:1;--title:0;flex:1 1 0;min-width:0;height:99px;border:0;padding:0;margin:0;background:transparent;color:var(--shoe-ink);font-family:inherit;position:relative;touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none}
+#shoebox-nav-review .shoe-tab[aria-pressed=true]{z-index:2}
+#shoebox-nav-review .shoe-art{display:block;position:absolute;inset:0;transform:translateY(var(--push)) scale(var(--press));transform-origin:50% 91%;pointer-events:none}
+#shoebox-nav-review .shoe-front,#shoebox-nav-review .shoe-lip,#shoebox-nav-review .shoe-mouth{position:absolute;left:0;top:0;width:100%;height:99px;background-color:transparent;background-size:100% 100%;background-repeat:no-repeat}
+#shoebox-nav-review .shoe-front,#shoebox-nav-review .shoe-lip{background-image:url('@@V3_FRONT@@')}
+#shoebox-nav-review .shoe-front{z-index:3}
+#shoebox-nav-review .shoe-mouth{z-index:1;background-image:url('@@V3_INSIDE@@')}
+#shoebox-nav-review .shoe-flaps{position:absolute;left:0;top:0;width:100%;height:99px;overflow:visible;z-index:2}
+#shoebox-nav-review .shoe-flaps polygon{fill:#edcc96;stroke:#715032;stroke-width:1.9;stroke-linejoin:round}
+#shoebox-nav-review .shoe-flaps line{stroke:#b98c57;stroke-width:1.1;stroke-linecap:round}
+#shoebox-nav-review .shoe-item{position:absolute;z-index:5;width:calc(36px + var(--rise)*8px);height:calc(36px + var(--rise)*8px);left:50%;top:calc(59px - var(--rise)*39px);transform:translateX(-50%) scale(var(--pop));transform-origin:50% 80%;display:grid;place-items:center}
+#shoebox-nav-review .shoe-item>img{width:100%;height:100%;object-fit:contain;display:block}
+#shoebox-nav-review .shoe-alert{position:absolute;right:-4px;top:-3px;width:9px;height:9px;display:grid;place-items:center;background:#e86f61;border:1.2px solid #fff0cc;border-radius:50%;color:#fff7dc;font:400 7px/1 ShoePaytone,sans-serif}
+#shoebox-nav-review .shoe-lip{z-index:6;opacity:var(--lid)}
+#shoebox-nav-review .shoe-caption{position:absolute;z-index:7;left:0;right:0;top:80px;color:#583f21;text-align:center;font-size:calc(11.5px / var(--shoe-k));font-weight:400;line-height:1.2;white-space:nowrap;opacity:var(--title);transform:translateY(calc(5px - var(--title)*5px));text-shadow:0 1px #f3d6a4}
+#shoebox-nav-review .shoe-reader{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){#shoebox-nav-review .shoe-pages>img{transition:none}}

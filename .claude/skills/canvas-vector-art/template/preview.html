@@ -1,0 +1,36 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Canvas preview</title>
+<style>
+  body { margin: 0; background: #d8e4de; font: 600 15px system-ui, sans-serif; color: #583f21; }
+  .row { display: flex; gap: 16px; padding: 16px; align-items: flex-start; }
+  .card { background: #eaf0e9; border-radius: 14px; padding: 12px; }
+  canvas { display: block; }
+</style>
+<div class="row">
+  <div class="card">Icon<canvas id="icon" width="256" height="256"></canvas></div>
+  <div class="card" id="heroCard">Cầm trên mèo<canvas id="hero" width="512" height="480"></canvas></div>
+  <div class="card">128×120<canvas id="small" width="128" height="120"></canvas><br>64 px<canvas id="i64" width="64" height="64"></canvas></div>
+</div>
+<!-- Paths are relative to docs/design/<date>/<name>/ -->
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="item.js"></script>
+<script>
+  const SRC = '../../2026-10-19/hero-equipment/sources/';
+  const load = (n) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.src = SRC + n; });
+  Pen.toCanvas(Item.icon(256), document.getElementById('icon').getContext('2d'));
+  Pen.toCanvas(Item.icon(64), document.getElementById('i64').getContext('2d'));
+  if (!Item.held) document.getElementById('heroCard').remove();
+  Promise.all([load('hero-base.svg'), load('hero-paws.svg')]).then(([base, paws]) => {
+    if (!Item.held) return;
+    const { weapon, palm } = Item.held();
+    for (const [id, k] of [['hero', 2], ['small', 0.5]]) {
+      const ctx = document.getElementById(id).getContext('2d');
+      ctx.scale(k, k);
+      ctx.drawImage(base, 0, 0, 256, 240);
+      Pen.toCanvas(weapon, ctx);
+      Pen.toCanvas(palm, ctx);
+      ctx.drawImage(paws, 0, 0, 256, 240);
+    }
+  });
+</script>

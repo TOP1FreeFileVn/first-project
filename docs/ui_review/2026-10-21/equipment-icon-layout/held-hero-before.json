@@ -1,0 +1,8 @@
+﻿{
+    "game/ui/art/hero_cat_bare.png":  "04f9e413c8ca247bd015dbeb103170a7cbe531a94284871cb7640043d74f4683",
+    "game/ui/art/hero_cat_heavy.png":  "e213b1c99e491cbfb3c49a43f74bf7adf043e2ab203dcd379b0942317c3114f3",
+    "game/ui/art/hero_cat_katana.png":  "af55523f37e7538942be012f6a85e9dd8a23182f3656e8de0d3899ca21bfc3f0",
+    "game/ui/art/hero_cat_magic.png":  "d3a5746d2001d832e2968ddda201d72b3090010b68640ceb1317e9b04296a65d",
+    "game/ui/art/hero_cat_ranged.png":  "abb86e5807db9e8341289b763ff36203fa888cc398ef32be96eb68d077517a89",
+    "game/ui/art/hero_cat_melee.png":  "5e0f1f715916d94122d73556ea41acb46d7f857b5ddae1d3bc2114b9ee06adbc"
+}

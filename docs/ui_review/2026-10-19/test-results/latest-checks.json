@@ -38,6 +38,26 @@
     ]
   },
   {
+    "name": "PinMeshTest",
+    "code": 0,
+    "timedOut": false,
+    "passed": true,
+    "summary": [
+      "PinMeshTest: 0 failures"
+    ]
+  },
+  {
+    "name": "FishSkillTest",
+    "code": 0,
+    "timedOut": false,
+    "passed": true,
+    "summary": [
+      "PASS: skill gear on the board (Chém xoáy)",
+      "PASS: fish used peaked at 3 of 3",
+      "PASS: hero skill cast 4 times"
+    ]
+  },
+  {
     "name": "PopupCloseTest",
     "code": 0,
     "timedOut": false,
@@ -45,6 +65,13 @@
     "summary": [
       "PASS: close button received the click and closed the popup"
     ]
+  },
+  {
+    "name": "SoundCheck",
+    "code": 0,
+    "timedOut": false,
+    "passed": true,
+    "summary": []
   },
   {
     "name": "UiTapRoutingTest",

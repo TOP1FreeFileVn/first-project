@@ -1,0 +1,22 @@
+{
+  "outputs": [
+    "original-lobby.png",
+    "empty-lobby.png"
+  ],
+  "persist": false,
+  "production_code_modified": false,
+  "profile": "C:/Users/dangp/GodotProjects/first-project/docs/design/2026-10-20/cardboard-castle-lobby/capture-profile-roaming/Godot/app_userdata/Gear Defenders",
+  "review_only": true,
+  "shader_time": 5.0,
+  "size": [
+    720,
+    1280
+  ],
+  "stage_hidden": true,
+  "stage_rect": [
+    96.0,
+    385.428588867188,
+    528.0,
+    377.142822265625
+  ]
+}

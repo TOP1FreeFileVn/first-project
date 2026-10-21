@@ -1,0 +1,116 @@
+{
+  "selected": {
+    "gauntlet": 4,
+    "boot": 2
+  },
+  "runs": [
+    {
+      "item": "gauntlet",
+      "iteration": 1,
+      "nodeId": "35:2",
+      "prompt": "ONE single chunky steel mitten gauntlet equipment sprite, on pure white, isolated, no hands no body no arms no character. Flat cute mascot-cat mobile game art. A stout rounded closed mitten, front/back-of-hand view, broad bulb shape with a subtle little thumb bulge to viewer right, short flared cuff at bottom. It will be fitted over a tiny cat paw, so it must retain one broad pale steel region when tiny. Strongly simplified crafted form, no five finger divisions, no articulated finger cage. Shape fills about 780 pixels wide and 650 high, centered in a 1024square.\nMain silhouette has an EXTREMELY BOLD continuous warm dark brown outline #583f21 around100-130sourcepixels, round joins; think huge marker contour of a plump cartoon cat. Author a LARGE simple shape with large broad colored interior to accommodate the very heavy contour. NOT fine line art or a small object with thin edges. One broad flat pale cool gray steel plane. A narrow small honey-brass cuff band, a small muted coral leather visible patch below cuff. The cuff has ONE shared occlusion/contact line if needed; not multiple nested outlined rings. At most ONE short quiet gray knuckle curve across a third of the steel, muted middle gray and much thinner than outline; no ink line required between flat pale steel and broad slightly darker gray side plane. Brass surface seams warm ochre, leather surface seams muted redbrown. Not universal gray interior ink.\nCompletely uniform flat opaque colors, broad open fills, no gradients no lighting no glossy shine no ambient occlusion no castshadow no 3D no realistic detail no scratches no rivets no mascot logo no gems no text. No scene, only ONE gauntlet on clean pure white background. Smooth confident contour, preserve fill readability at roughly38pixels wide on256x240catcanvas.",
+      "raw": "raw/gauntlet.png",
+      "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+      "model": "gpt-image-2.5-sunburst"
+    },
+    {
+      "item": "boot",
+      "iteration": 1,
+      "nodeId": "37:2",
+      "prompt": "ONE single short chunky armored boot equipment sprite, on pure white, isolated, NO foot NO leg NO body NO character. Flat cute mascot-cat mobile game art. One squat broad boot in near-front view with a little toe bulge to viewer right, designed to mirror as a left/right pair. Strongly simplified broad rounded toe cap, tiny ankle cuff on top, honey-brass thin sole at bottom, muted coral leather small cuff lip. Silhouette low and wide, about800pixels wide by500high, centered in1024square.\nMain silhouette has an EXTREMELY BOLD continuous warm dark brown outline #583f21 around100-130sourcepixels with round joins and caps; huge thick marker contour of a plump cartoon animal. Author large broad color fills INSIDE that very heavy contour. NOT detailed slim fantasy boot. Toe is one large pale cool gray steel mass, a second broad slightly darker coolgray sideplane can meet without an ink line. Keep outsole/cuff as simple color bands, not three closed thick nested frames. True upper/toe overlap can use one partial warm brown contact line, no doubled edges. At most one quiet short gray steel construction seam, thinner and lighter than the silhouette. Brass seam warm ochre, leather seam redbrown. NEVER outline every interior color region and never put all interiors in gray.\nUniform flat opaque colors only. No gradients no light no shine no 3D no texture no realistic stitching no laces no buckles no rivets no runes no gems no text. No castshadow. Pure white background, oneboot only. Read as friendly sturdy steel-toe mascot gear at roughly48pixelswide by30tall on256x240catcanvas.",
+      "raw": "raw/boot.png",
+      "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+      "model": "gpt-image-2.5-sunburst"
+    },
+    {
+      "item": "gauntlet",
+      "iteration": 2,
+      "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+      "nodeId": "41:2",
+      "model": "gpt-image-2.5-sunburst",
+      "image": {
+        "url": "https://www.figma.com/api/mcp/asset/8de78594-ae65-4b47-82d4-43c9c54bc521.png",
+        "url_expires_in_days": 7,
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "model": "gpt-image-2.5-sunburst"
+      },
+      "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/8de78594-ae65-4b47-82d4-43c9c54bc521.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+      "prompt": "One mitten gauntlet for a cute flat cartoon cat. THIS IS AN EXTREME HEAVY-OUTLINE DESIGN TEST, not normal thin-outlined fantasy art. Single closed rounded mitten with only small thumb bump on right, very short cuff below, isolated on white. Large image center. The object is 760px wide x650pxhigh in1024square.\nDraw the whole outer mitten as a very broad solid warm-dark-brown mass #583f21. Inside it, embed ONE simple broad pale-cool-gray mitten-shaped color patch, leaving an enormous rounded dark brown border. The brown rim must occupy ONE FIFTH of the entire mitten width on EACH side, minimum140pixels actualthickness. Two-fifths of the silhouette width belongs to the border; three-fifths remains clean palegray center. This enormous brown contour is the defining style. NOT 20pxline, NOT30pxline. Border should look cartoonishly overthick at1024 because finalpieceis38pixelswide and mustmatch a9pixelcharacteroutline. Keep broadflatcolorcore, no holes, no fiddly thumb protrusions.\nAtbottom ONE honeybrass shortcuffband andtinycoralleatherlip, no nested frames. One single quietgray shortknucklecurve optional, 12pxwide. Sharededgesonlyonce. Gray steel and ochre brass ink subordinate to mainbrown. All colorregionsabsolutelyflat anduniform. No shaded pixels gradients or texture, no realistic shine. No handsbodyarms. No text shadow scene outlineglow orborderaroundcanvas.",
+      "raw": "raw/gauntlet-iteration-2.png"
+    },
+    {
+      "item": "boot",
+      "iteration": 2,
+      "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+      "nodeId": "43:2",
+      "model": "gpt-image-2.5-sunburst",
+      "image": {
+        "url": "https://www.figma.com/api/mcp/asset/3525ed21-1345-4cbb-8847-1ca4f300742a.png",
+        "url_expires_in_days": 7,
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "model": "gpt-image-2.5-sunburst"
+      },
+      "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/3525ed21-1345-4cbb-8847-1ca4f300742a.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+      "prompt": "One stout low wide armored boot for a cute flat cartoon cat. THIS IS AN EXTREME HEAVY-OUTLINE DESIGN TEST, not normal thin-outlined fantasy art. One squat rounded frontish boot with small toe bulge on right, short low cuff above, tiny flat honeybrass sole below, isolated on white. Very broad low shape. Object800pixelswide x480high, centeredin1024square. NOlegsfeetbody.\nDraw the whole low boot as a solid very thick warm-dark-brown mass #583f21. Inside embed ONE large pale-cool-gray toe patch, a tiny coral cuff patch, a thin honeybrass sole patch. The brown exterior rim must occupy nearly ONE FIFTH of the boot's entire width on EACHside, actual140pixels minimumthickness. The bottom and top contours have equivalentfatmarkerweight. Two-fifths of object'swidth isboldbrownframe andthreefifthsislargecleancolorcore. This ENORMOUS roundedbrownrim is the signature. Not20pixeloutline not30pixelfineborder. It should look shockingly bold at1024 because fitted48pxwide itneedsa~9pixelcontourbesidethecat.\nKeeplargecontinuousgraytoeplane. ToeanduppercanbedifferingsteelgrayswithNOinkbetween, no nestedclosedframes, no buckleslacesrivetsstitching. Tiny cuff redbrownseam optional; noextraornament. Uniformflatcolorregionsonly #583f21darkbrown #D6E0E4palesteel #A0B2BAsteelplane #E0AE53honeybrass #DE7D63coral. Absolutely NOgradients NO lighting NO shadows NO3Drender NOtexture NOgloss. Onepieceonly onpurewhite, no castshadow text watermarkdecor.",
+      "raw": "raw/boot-iteration-2.png"
+    },
+    {
+      "item": "gauntlet",
+      "iteration": 3,
+      "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+      "nodeId": "47:2",
+      "model": "gpt-image-2.5-sunburst",
+      "image": {
+        "url": "https://www.figma.com/api/mcp/asset/482671f9-3447-41f2-a15c-b82ded5b9b23.png",
+        "url_expires_in_days": 7,
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "model": "gpt-image-2.5-sunburst"
+      },
+      "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/482671f9-3447-41f2-a15c-b82ded5b9b23.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+      "prompt": "ONE VERY SQUAT wide steel mitten gauntlet for a plump flat cartoon cat. The whole object is wider than tall, 850pxwide and650pxtall, horizontal rectangle silhouette, centered onwhite1024square. DO NOT draw a long vertical glove. Main body is a short roundpancake-like mitten, roughlya horizontaloval850wide500high. Tinybottomcuff addsONLY100pxheight. Thumb is a tiny bump to right, NOT a longfinger. AbsolutelyNOhandsarmsbody.\nEXTREME THICK CARTOON MARKER contour: start from huge solid warmdarkbrown silhouette #583f21. Put ONE broad palegray roundpatch inside. Thickborder160pxaround thegraypatch, oneFIFTHofwholewidthoneachside. Boldbrownrim is verylarge androunded; this heavycontour needs to matchthecatlinewhen thisimageisfitted38pxwideand30pxhigh. Not thin20pxline. Do NOT makeitlongandtall. Wide squatcatpawmitten with short cuff below.\nONEpale coolgrayfill formswholemittenface. Verysmallhoneybrassshortcuffband atbase andtinycorallip. Cufftotalheightless thanonefifthofobject. Mainsteelplaneunlined. Atmost ONEveryshortquietgrayknucklecurve, thinnerthanbrowncontour. No closedinnerframes nofingercage nostripesnofivefingers. Brass seams ochre leatherseams redbrown ifany. Flatopaqueuniform palette #583f21brown #D6E0E4steel #E0AE53brass #DE7D63coral. AbsolutelyNOgradients lightingtextureglossrealismshadow3D. Purewhitebackground, no castshadow, no text. ONE singleobjectonly.",
+      "raw": "raw/gauntlet-iteration-3.png"
+    },
+    {
+      "item": "gauntlet",
+      "iteration": 4,
+      "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+      "nodeId": "49:2",
+      "model": "gpt-image-2.5-sunburst",
+      "image": {
+        "url": "https://www.figma.com/api/mcp/asset/6d9f200b-f004-4627-81a4-a0a011f85022.png",
+        "url_expires_in_days": 7,
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "model": "gpt-image-2.5-sunburst"
+      },
+      "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/6d9f200b-f004-4627-81a4-a0a011f85022.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+      "prompt": "A simple flat-color game sprite: ONE squat wide cartoon steel mitten gauntlet, frontview, nocharacterhandarmbody. Design is MOSTLY DARKBROWN with a smaller PALEGRAY INSET in its middle. Whitebackground,1024square.\nThe overall gauntlet shape is short andwide: width850height650,withroundedmittenbulb top,smallthumbbumponright,shortcuffbottom. Its outerbody is a SOLID DARKBROWN SHAPE #583f21. It must visiblylookMOSTLYBROWN. The steelcolorinsert is a muchsmaller roundedmittenpatchinside:width500height330, positionedcentrallyinthebrownbody, leaving170pxdarkbrownaroundit. Brownrim thickness170pxleftandright,100pxtopandbottom. The graypatch DOES NOT extendclose tosilhouetteedge. DO NOT makeathinoutlinedgraymitten. Thisisathickbrownmascotgauntletwithasmallgrayinset. Brownborderisfortypercentoftotalwidth. Allcornersround.\nTinyhoneybrasswidebandacrossbottomcuffandaverythinmutedcorallipbelowit. Do notoutlinebrassorcoralagain. ONEsmallgrayseamof10pxoptional,no rivetsornamentfingerlines. Uniformsolidflatcolors: #583f21brown, #D6E0E4gray, #E0AE53brass, #DE7D63coral. Absolutelyno gradients,shade,shine,texture,3D,lighting,no shadows. ONEisolatedsquatwidepiece, centered,nocanvasborder,noframe,nopanel,notext.",
+      "raw": "raw/gauntlet-iteration-4.png"
+    },
+    {
+      "item": "gauntlet",
+      "iteration": 5,
+      "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+      "nodeId": "51:2",
+      "model": "gpt-image-2.5-sunburst",
+      "image": {
+        "url": "https://www.figma.com/api/mcp/asset/dc6bc316-c317-4a6c-885e-f054588858b1.png",
+        "url_expires_in_days": 7,
+        "width": 1024,
+        "height": 1024,
+        "format": "png",
+        "model": "gpt-image-2.5-sunburst"
+      },
+      "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/dc6bc316-c317-4a6c-885e-f054588858b1.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+      "prompt": "ONE isolated squat cartoon mitten gauntlet, purewhitebackground. It's a chunkyDARKBROWN silhouette with SMALLER coloredinsetpatches that NEVER TOUCH silhouetteedge. Outerbodymostlywarmdarkbrown #583f21. Width850height650,shortandwide,roundtopandrightthumbbulge,flatshortcuffbottom. Object must bewiderthantall.\nOuter silhouette100%continuousDARKBROWN on every edgeINCLUDINGBOTTOMCUFF. Main mittenfield is palegray roundedinset, about500wide330high, surroundedby150pxdarkbrownsides and100pxdarkbrowntop. Belowsteelpatch are TWO tiny insethorizontalcapsules: honeybrassbandandcoralleatherband. Every insetpatchstays INSIDEdarkbrownbody, at least80pxawayfromallouteredges; especially leave100pxSOLIDBROWNBASEbelowcoralband. Brownmustwraparoundcuffandbottomunbroken. No coloredpatch can meetwhitebackground. One broadgrayplane,nolinesornamentseams. Colorsflatuniform,#D6E0E4palegray #E0AE53brass #DE7D63coral. No lighting,gradients,shading,texture,shine,3D. This is a friendly simplewidecatpawarmormitten withanEXTREMELYTHICKmarkerbrowncontour, notfineoutlinedgrayglove. No handarmbodycharactertextcastshadowframe.",
+      "raw": "raw/gauntlet-iteration-5.png"
+    }
+  ]
+}

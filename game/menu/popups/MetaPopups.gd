@@ -1,7 +1,7 @@
 extends RefCounted
 
 # The lobby's side popups: Events hub, 7-day login gift, daily quests and the player
-# profile (name, avatar, frame). Each is a dark sheet (UiKit.dark_popup) that rebuilds
+# profile (name, avatar, frame). Each is a contextual sheet that rebuilds
 # its content after a claim or a choice.
 
 const UiKit = preload("res://game/ui/UiKit.gd")
@@ -14,6 +14,8 @@ const PatrolPage = preload("res://game/menu/pages/PatrolPage.gd")
 const SummonPage = preload("res://game/menu/pages/SummonPage.gd")
 
 const OK_GREEN := Color("7fd66b")
+const STATUS_INK := Color("286b33")
+const GOLD_INK := Color("80541d")
 
 
 static func _clear(box: VBoxContainer) -> void:
@@ -24,10 +26,21 @@ static func _clear(box: VBoxContainer) -> void:
 
 
 static func _note(text: String, size := 16, color := UiKit.INFO) -> Label:
-	var l := UiKit.label(text, size, color)
+	var l := UiKit.ink(text, size)
+	if color != UiKit.INFO:
+		l.add_theme_color_override("font_color", color)
 	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	return l
+
+
+## Reward icons retain their art; their amounts read directly on the menu face.
+static func _paper_rewards(reward: Dictionary, font_size := 18) -> HBoxContainer:
+	var row := UiKit.reward_row(reward, font_size)
+	for amount: Label in row.find_children("*", "Label", true, false):
+		amount.add_theme_color_override("font_color", UiKit.INK)
+		amount.add_theme_constant_override("outline_size", 0)
+	return row
 
 
 ## Short text for what a grant() gave, for toasts.
@@ -61,18 +74,16 @@ const EVENT_BUTTON := Vector2(140, 68)
 static func open_events(home: Control) -> void:
 	var box := UiKit.sheet_popup(home, 660, "Sự kiện")
 	box.add_child(_summon_banner(home, box))
-	var heading := Ui.label("Sự kiện khác", "LabelDark", 20)
-	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	box.add_child(heading)
+	var list := Ui.vbox(8)
 
 	var stored := PlayerData.patrol_stored()
 	var capacity := PlayerData.patrol_capacity()
-	box.add_child(_event_row("rail_patrol", "Tuần tra", _value_bar("BarItem", stored, capacity, "coin"),
+	list.add_child(_event_row("rail_patrol", "Tuần tra", _value_bar("BarItem", stored, capacity, "coin"),
 		"Thu" if PlayerData.patrol_alert() else "Đi", PlayerData.patrol_alert(), func():
 			UiKit.close_popup(box)
 			home.open_page(PatrolPage)))
 
-	box.add_child(_event_row("rail_checkin", "Quà 7 ngày", _login_track(),
+	list.add_child(_event_row("rail_checkin", "Quà 7 ngày", _login_track(),
 		"Nhận" if PlayerData.login_can_claim() else "Xem", PlayerData.login_can_claim(), func():
 			UiKit.close_popup(box)
 			open_login(home)))
@@ -83,10 +94,11 @@ static func open_events(home: Control) -> void:
 		if points < milestone["points"]:
 			goal = milestone["points"]
 			break
-	box.add_child(_event_row("rail_quest", "Nhiệm vụ hằng ngày", _value_bar("BarExp", points, goal, "star"),
+	list.add_child(_event_row("rail_quest", "Nhiệm vụ hằng ngày", _value_bar("BarExp", points, goal, "star"),
 		"Nhận" if PlayerData.quest_alert() else "Đi", PlayerData.quest_alert(), func():
 			UiKit.close_popup(box)
 			open_quests(home)))
+	box.add_child(Ui.menu_section("events", "Sự kiện khác", list))
 
 
 ## The featured event: a purple card as wide as the window, the featured hero on a glow at
@@ -159,7 +171,8 @@ static func _event_row(icon_name: String, title: String, progress: Control, acti
 	row.add_child(picture)
 	var middle := Ui.vbox(6, BoxContainer.ALIGNMENT_CENTER)
 	middle.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	var name_label := Ui.label(title, "", 22)
+	var name_label := Ui.label(title, "LabelDark", 22)
+	name_label.add_theme_color_override("font_color", UiKit.INK)
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	name_label.custom_minimum_size.y = 32
 	name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -171,9 +184,10 @@ static func _event_row(icon_name: String, title: String, progress: Control, acti
 	button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	button.pressed.connect(on_press)
 	row.add_child(button)
-	var panel := Ui.panel("Well", row)
-	panel.custom_minimum_size.y = 116
-	return panel
+	var inset := Ui.margin(0, 6, 0, 6)
+	inset.custom_minimum_size.y = 116
+	inset.add_child(row)
+	return inset
 
 
 ## A bar with "value/max" on it and an icon in front.
@@ -204,8 +218,8 @@ static func _login_track() -> Control:
 	for day in 7:
 		var mark: String = "badge_check" if day < claimed else ("star" if day == claimed and PlayerData.login_can_claim() else "star_off")
 		line.add_child(Ui.icon(mark, 28))
-	var day_label := Ui.label("Ngày %d/7" % mini(claimed + 1, 7), "LabelTiny", 16)
-	day_label.add_theme_constant_override("outline_size", 3)
+	var day_label := Ui.label("Ngày %d/7" % mini(claimed + 1, 7), "LabelDark", 16)
+	day_label.add_theme_color_override("font_color", UiKit.INK)
 	line.add_child(day_label)
 	return line
 
@@ -226,12 +240,12 @@ static func _fill_login(home: Control, box: VBoxContainer) -> void:
 	grid.columns = 3
 	grid.add_theme_constant_override("h_separation", 12)
 	grid.add_theme_constant_override("v_separation", 12)
-	grid.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	for day in 6:
-		grid.add_child(_login_card(day, claimed, ready, Vector2(196, 150)))
+		grid.add_child(_login_card(day, claimed, ready, Vector2(184, 150)))
 	box.add_child(grid)
-	var last := _login_card(6, claimed, ready, Vector2(612, 150))
-	last.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	var last := _login_card(6, claimed, ready, Vector2(0, 150))
+	last.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	box.add_child(last)
 	var claim := UiKit.button("NHẬN QUÀ NGÀY %d" % (claimed + 1) if ready else "Quay lại vào ngày mai", Vector2(380, 80), func():
 		var got := PlayerData.claim_login()
@@ -246,16 +260,15 @@ static func _fill_login(home: Control, box: VBoxContainer) -> void:
 static func _login_card(day: int, claimed: int, ready: bool, card_size: Vector2) -> Control:
 	var done := day < claimed
 	var today := day == claimed and ready
-	var border := OK_GREEN if done else (UiKit.GOLD_TEXT if today else UiKit.FRAME_BROWN)
-	var card := PanelContainer.new()
+	var card := Ui.menu_panel("login", "Board" if today else "Well")
 	card.custom_minimum_size = card_size
-	var style := UiKit.card_style(border, Color(0.18, 0.13, 0.05, 0.95) if today else Color(0.1, 0.12, 0.17, 0.95))
-	style.set_border_width_all(4 if today else 3)
-	card.add_theme_stylebox_override("panel", style)
+	card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var column := UiKit.vbox(4)
 	column.alignment = BoxContainer.ALIGNMENT_CENTER
 	card.add_child(column)
-	var title := UiKit.label("NGÀY %d" % (day + 1), 18, UiKit.GOLD_TEXT if today else Color.WHITE)
+	var title := UiKit.ink("NGÀY %d" % (day + 1), 18)
+	if today:
+		title.add_theme_color_override("font_color", GOLD_INK)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	column.add_child(title)
 	var reward: Dictionary = Meta.LOGIN_REWARDS[day]
@@ -264,22 +277,28 @@ static func _login_card(day: int, claimed: int, ready: bool, card_size: Vector2)
 		row.alignment = BoxContainer.ALIGNMENT_CENTER
 		row.add_child(UiKit.hero_portrait(reward["hero"], 84))
 		var text := UiKit.vbox(0)
-		text.add_child(UiKit.label(Heroes.HEROES[reward["hero"]]["name"], 22, Economy.RARITY_COLORS[Heroes.HEROES[reward["hero"]]["rarity"]]))
-		text.add_child(UiKit.label("Tướng " + Economy.RARITY_NAMES[Heroes.HEROES[reward["hero"]]["rarity"]], 16, UiKit.INFO))
+		var hero: Dictionary = Heroes.HEROES[reward["hero"]]
+		var hero_name := UiKit.ink(hero["name"], 22)
+		hero_name.add_theme_color_override("font_color", Economy.RARITY_COLORS[hero["rarity"]].darkened(0.45))
+		text.add_child(hero_name)
+		text.add_child(UiKit.ink("Tướng " + Economy.RARITY_NAMES[hero["rarity"]], 16))
 		row.add_child(text)
 		column.add_child(row)
 	else:
-		column.add_child(UiKit.reward_row(reward, 22))
+		column.add_child(_paper_rewards(reward, 22))
 	if done:
-		var tick := UiKit.label("✓ ĐÃ NHẬN", 15, OK_GREEN)
+		var tick := UiKit.ink("✓ ĐÃ NHẬN", 15)
+		tick.add_theme_color_override("font_color", STATUS_INK)
 		tick.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		column.add_child(tick)
 		card.modulate = Color(0.75, 0.75, 0.75)
 	elif today:
-		var now_label := UiKit.label("HÔM NAY", 15, UiKit.GOLD_TEXT)
+		var now_label := UiKit.ink("HÔM NAY", 15)
+		now_label.add_theme_color_override("font_color", GOLD_INK)
 		now_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		column.add_child(now_label)
 		# A gentle pulse on today's gift.
+		card.resized.connect(func(): card.pivot_offset = card.size / 2.0)
 		card.pivot_offset = card_size / 2.0
 		var pulse := card.create_tween().set_loops()
 		pulse.tween_property(card, "scale", Vector2(1.04, 1.04), 0.5).set_trans(Tween.TRANS_SINE)
@@ -309,26 +328,35 @@ static func _fill_quests(home: Control, box: VBoxContainer) -> void:
 static func _activity_bar(home: Control, box: VBoxContainer) -> Control:
 	var total: int = Meta.QUEST_MILESTONES[-1]["points"]
 	var panel := Control.new()
-	panel.custom_minimum_size = Vector2(640, 116)
+	panel.custom_minimum_size = Vector2(0, 116)
+	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var points := PlayerData.quest_points()
-	var label := UiKit.label("Năng động: %d" % points, 18, UiKit.GOLD_TEXT)
+	var label := UiKit.ink("Năng động: %d" % points, 18)
 	label.position = Vector2(0, 0)
 	panel.add_child(label)
-	var bar := UiKit.bar(UiKit.GOLD_TEXT, Vector2(560, 16))
-	bar.position = Vector2(20, 70)
-	bar.size = Vector2(560, 16)
+	var bar := UiKit.bar(UiKit.GOLD_TEXT, Vector2(0, 16))
+	bar.anchor_right = 1.0
+	bar.offset_left = 20
+	bar.offset_right = -35
+	bar.offset_top = 70
+	bar.offset_bottom = 86
 	bar.max_value = total
 	bar.value = points
 	panel.add_child(bar)
 	var tints := [Color("a0673a"), Color("aeb8c2"), Color("e8b93c")]
 	for i in Meta.QUEST_MILESTONES.size():
 		var need: int = Meta.QUEST_MILESTONES[i]["points"]
-		var x := 20.0 + 560.0 * need / total
+		var ratio := float(need) / total
 		var chest := Button.new()
 		chest.focus_mode = Control.FOCUS_NONE
 		chest.custom_minimum_size = Vector2(70, 70)
 		chest.size = Vector2(70, 70)
-		chest.position = Vector2(x - 35, 6)
+		chest.anchor_left = ratio
+		chest.anchor_right = ratio
+		chest.offset_left = 20.0 - 55.0 * ratio - 35.0
+		chest.offset_right = chest.offset_left + 70.0
+		chest.offset_top = 6
+		chest.offset_bottom = 76
 		for state in ["normal", "hover", "pressed", "disabled"]:
 			chest.add_theme_stylebox_override(state, StyleBoxEmpty.new())
 		var icon := UiKit.drawn(DrawnIcon.Kind.CHEST, 62)
@@ -355,8 +383,14 @@ static func _activity_bar(home: Control, box: VBoxContainer) -> Control:
 				UiKit.toast(home, got_text(got))
 				_fill_quests(home, box))
 		panel.add_child(chest)
-		var mark := UiKit.label(str(need), 15, Color.WHITE)
-		mark.position = Vector2(x - 12, 90)
+		var mark := UiKit.ink(str(need), 15)
+		mark.anchor_left = ratio
+		mark.anchor_right = ratio
+		mark.offset_left = 20.0 - 55.0 * ratio - 20.0
+		mark.offset_right = mark.offset_left + 40.0
+		mark.offset_top = 90
+		mark.offset_bottom = 116
+		mark.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		panel.add_child(mark)
 	return panel
 
@@ -377,23 +411,26 @@ static func _quest_row(home: Control, box: VBoxContainer, quest: Dictionary) -> 
 	var count := PlayerData.quest_count(id)
 	var done := PlayerData.quest_done(id)
 	var claimed := PlayerData.quest_is_claimed(id)
-	var row := PanelContainer.new()
-	row.add_theme_stylebox_override("panel", UiKit.card_style(OK_GREEN if done and not claimed else UiKit.FRAME_BROWN))
+	var row := Ui.menu_panel("quests", "Well")
 	var content := UiKit.hbox(12)
 	row.add_child(content)
 	var text := UiKit.vbox(4)
 	text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	text.add_child(UiKit.label(quest["text"], 19))
+	var heading := UiKit.ink(quest["text"], 19)
+	heading.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	text.add_child(heading)
 	var progress := UiKit.hbox(8)
-	var bar := UiKit.bar(OK_GREEN if done else Color("5aa9e6"), Vector2(200, 12))
+	progress.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var bar := UiKit.bar(OK_GREEN if done else Color("5aa9e6"), Vector2(160, 12))
+	bar.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	bar.max_value = quest["goal"]
 	bar.value = count
 	progress.add_child(bar)
-	progress.add_child(UiKit.label("%d/%d" % [count, quest["goal"]], 15))
-	progress.add_child(UiKit.label("+%d điểm" % Meta.QUEST_POINTS, 15, UiKit.GOLD_TEXT))
+	progress.add_child(UiKit.ink("%d/%d" % [count, quest["goal"]], 15))
+	progress.add_child(UiKit.ink("+%d điểm" % Meta.QUEST_POINTS, 15))
 	text.add_child(progress)
 	content.add_child(text)
-	content.add_child(UiKit.reward_row(quest["reward"], 18))
+	content.add_child(_paper_rewards(quest["reward"], 18))
 	var button: Button
 	if claimed:
 		button = UiKit.button("ĐÃ NHẬN", Vector2(120, 56), func(): pass)
@@ -470,24 +507,25 @@ static func _fill_profile(home: Control, box: VBoxContainer) -> void:
 		["Tướng", "%d/%d" % [PlayerData.heroes_owned(), Heroes.ORDER.size()]],
 	]
 	for entry in entries:
-		stats.add_child(UiKit.label(entry[0], 16, UiKit.INFO))
-		stats.add_child(UiKit.label(entry[1], 18, UiKit.GOLD_TEXT))
+		stats.add_child(UiKit.ink(entry[0], 16))
+		stats.add_child(UiKit.ink(entry[1], 18))
 	right.add_child(stats)
 	top.add_child(right)
 	box.add_child(top)
 
-	box.add_child(UiKit.label("Ảnh đại diện", 20, UiKit.GOLD_TEXT))
+	box.add_child(UiKit.ink("Ảnh đại diện", 20))
 	var grid := GridContainer.new()
 	grid.columns = 6
 	grid.add_theme_constant_override("h_separation", 10)
 	grid.add_theme_constant_override("v_separation", 10)
+	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	for i in range(1, Meta.AVATAR_COUNT + 1):
 		grid.add_child(_avatar_choice(home, box, str(i), "Qua %d màn" % Meta.avatar_need(i)))
 	for id in Heroes.ORDER:
 		grid.add_child(_avatar_choice(home, box, "hero:" + id, "Có tướng"))
 	box.add_child(grid)
 
-	box.add_child(UiKit.label("Khung", 20, UiKit.GOLD_TEXT))
+	box.add_child(UiKit.ink("Khung", 20))
 	var frames := UiKit.hbox(10)
 	for id in Meta.FRAME_ORDER:
 		frames.add_child(_frame_choice(home, box, id))
@@ -497,26 +535,41 @@ static func _fill_profile(home: Control, box: VBoxContainer) -> void:
 static func _avatar_choice(home: Control, box: VBoxContainer, value: String, need: String) -> Control:
 	var unlocked := PlayerData.avatar_unlocked(value)
 	var choice := Button.new()
-	choice.custom_minimum_size = Vector2(96, 96)
+	choice.custom_minimum_size = Vector2(90, 90)
+	choice.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	choice.focus_mode = Control.FOCUS_NONE
 	for state in ["normal", "hover", "pressed", "disabled"]:
 		choice.add_theme_stylebox_override(state, StyleBoxEmpty.new())
-	var picture := UiKit.avatar(92, value, PlayerData.frame if value == PlayerData.avatar else "wood")
-	picture.position = Vector2(2, 2)
+	var picture := UiKit.avatar(86, value, PlayerData.frame if value == PlayerData.avatar else "wood")
+	picture.anchor_left = 0.5
+	picture.anchor_right = 0.5
+	picture.offset_left = -43
+	picture.offset_right = 43
+	picture.offset_top = 2
+	picture.offset_bottom = 88
 	choice.add_child(picture)
 	if value == PlayerData.avatar:
 		var tick := UiKit.label("✓", 22, OK_GREEN)
-		tick.position = Vector2(70, -4)
+		tick.anchor_left = 1.0
+		tick.anchor_right = 1.0
+		tick.offset_left = -26
+		tick.offset_right = 0
+		tick.offset_top = -4
 		choice.add_child(tick)
 	if not unlocked:
 		picture.modulate = Color(0.3, 0.3, 0.35)
 		var lock := UiKit.drawn(DrawnIcon.Kind.LOCK, 34)
-		lock.position = Vector2(31, 22)
-		lock.size = Vector2(34, 34)
+		lock.anchor_left = 0.5
+		lock.anchor_right = 0.5
+		lock.offset_left = -17
+		lock.offset_right = 17
+		lock.offset_top = 19
+		lock.offset_bottom = 53
 		choice.add_child(lock)
 		var text := UiKit.label(need, 12, UiKit.WARN)
-		text.position = Vector2(0, 70)
-		text.size = Vector2(96, 20)
+		text.anchor_right = 1.0
+		text.offset_top = 64
+		text.offset_bottom = 84
 		text.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		choice.add_child(text)
 	choice.pressed.connect(func():
@@ -532,13 +585,15 @@ static func _frame_choice(home: Control, box: VBoxContainer, id: String) -> Cont
 	var frame: Dictionary = Meta.FRAMES[id]
 	var unlocked := PlayerData.frame_unlocked(id)
 	var choice := Button.new()
-	choice.custom_minimum_size = Vector2(150, 150)
+	choice.custom_minimum_size = Vector2(140, 150)
 	choice.focus_mode = Control.FOCUS_NONE
 	var style := UiKit.card_style(UiKit.GOLD_TEXT if PlayerData.frame == id else UiKit.FRAME_BROWN)
 	for state in ["normal", "hover", "pressed"]:
 		choice.add_theme_stylebox_override(state, style)
 	var column := UiKit.vbox(2)
 	column.set_anchors_preset(Control.PRESET_FULL_RECT)
+	column.offset_left = 6
+	column.offset_right = -6
 	column.alignment = BoxContainer.ALIGNMENT_CENTER
 	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	choice.add_child(column)
@@ -551,7 +606,6 @@ static func _frame_choice(home: Control, box: VBoxContainer, id: String) -> Cont
 	var need := UiKit.label("Đang dùng" if PlayerData.frame == id else (frame["need"] if not unlocked else "Chọn"), 12, OK_GREEN if unlocked else UiKit.WARN)
 	need.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	need.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	need.custom_minimum_size.x = 140
 	column.add_child(need)
 	if not unlocked:
 		picture.modulate = Color(0.35, 0.35, 0.4)

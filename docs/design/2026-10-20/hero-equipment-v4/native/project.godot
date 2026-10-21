@@ -1,0 +1,17 @@
+config_version=5
+
+[application]
+config/name="Hero equipment v4 isolated review"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="StudioHeroV4"
+
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=1280
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.847,0.898,0.875,1)
+
+[debug]
+file_logging/enable_file_logging=false

@@ -1,0 +1,50 @@
+{
+  "status": "isolated_pilot_art_not_approved_production_pose",
+  "source": "game/ui/skin/cat_tabby.svg",
+  "parts_source": "docs/design/2026-10-20/cat-spine-parts/svg/cat_tabby",
+  "source_part_sha256": {
+    "tail": "056af0a59c4740bf9d7af68d2871e793b9529ca6be3c911db95e1b6849275754",
+    "foot_L_image": "89ba5f08281143dfa2d4c5f5b83d57a5a86f4c0729821f14f2b9b9e51d37d902",
+    "foot_R_image": "d1c8a94220ead075439fcdf8afd6ddec59f7d655a7bd556a388581acb09c3df2",
+    "body": "cdd864c2c6938ad5f317b8a2356f47443f870ac156a70c010a7ec58f953cee24",
+    "head": "e46eff78e066c9b6d7416758ca9869dda234170f224030c36364bbe292cc2791"
+  },
+  "canvas": [
+    256,
+    240
+  ],
+  "ground_origin": [
+    128,
+    238
+  ],
+  "main_outline_px": 12,
+  "layers_back_to_front": [
+    "tail",
+    "foot_L_image",
+    "foot_R_image",
+    "body",
+    "head_rear"
+  ],
+  "foot_pivots": {
+    "foot_L_image": [
+      82,
+      203
+    ],
+    "foot_R_image": [
+      174,
+      203
+    ]
+  },
+  "head_pivot": [
+    128,
+    121
+  ],
+  "authored_changes": [
+    "Remove visible face and pink inner ears for rear view.",
+    "Lengthen three crown fur stripes to form simple nape markings.",
+    "Omit front paw hook layers; retain native body, foot and tail vectors."
+  ],
+  "scope": "Rear pose and separable attachments only. No side pose, Spine skeleton or authored walk cycle.",
+  "front_pose_rule": "Use untouched source cat-spine-parts/svg/cat_tabby parts when facing the viewer.",
+  "alignment_rule": "All SVGs use the full256x240 canvas; visual offset from floor-root is(-128,-238)."
+}

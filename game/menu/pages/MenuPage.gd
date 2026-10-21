@@ -64,9 +64,19 @@ func title(text: String, color := UiKit.Ribbon.BLUE) -> void:
 
 
 func panel(separation := 10) -> VBoxContainer:
+	var context: String = get_script().resource_path.get_file().get_basename().trim_suffix("Page").to_snake_case()
 	var p := PanelContainer.new()
-	p.add_theme_stylebox_override("panel", UiKit.panel_style())
+	p.add_theme_stylebox_override("panel", UiKit.panel_style(context))
+	p.set_meta("menu_panel_context", context)
+	p.set_meta("menu_panel_kind", "Board")
 	body.add_child(p)
 	var box := UiKit.vbox(separation)
 	p.add_child(box)
+	return box
+
+
+func section(heading: String, separation := 12) -> VBoxContainer:
+	var context: String = get_script().resource_path.get_file().get_basename().trim_suffix("Page").to_snake_case()
+	var box := UiKit.vbox(separation)
+	body.add_child(UiKit.Ui.menu_section(context, heading, box))
 	return box

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+  <!-- One welcoming cat-ear gateway, with a broad, quiet magical opening. -->
+  <path d="M18 111V56Q18 38 31 28L32 13Q32 8 37 10L51 23Q64 19 77 23L91 10Q96 8 96 13L97 28Q110 38 110 56V111Z"
+        fill="#b9addb" stroke="#583f21" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M35 109V59Q35 44 47 38Q64 30 81 38Q93 44 93 59V109Z" fill="#74c7cc"/>
+  <!-- A simple open door plane, not a glossy crystal or nested outlined badge. -->
+  <path d="M47 109V61Q47 49 58 46Q69 42 78 48L78 109Z" fill="#d5f0e8"/>
+  <path d="M29 56V91M99 56V91" fill="none" stroke="#8c7eac" stroke-width="3" stroke-linecap="round"/>
+  <path d="M15 108H113L118 119H10Z" fill="#e1d9ee" stroke="#583f21" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- The single sparkle stays separate from the silhouette at small sizes. -->
+  <path d="M112 9L114.5 16.5L122 19L114.5 21.5L112 29L109.5 21.5L102 19L109.5 16.5Z"
+        fill="#fff1bf" stroke="#583f21" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

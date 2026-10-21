@@ -26,6 +26,20 @@ The user subsequently rejected the programmatic SVG concept pipeline and chose G
 
 When using Figma generation, the available confirmed model identifier is `gpt-image-2.5-sunburst`. A file can allow editing while refusing AI generation. If the requested destination refuses AI, a user-authorized draft file may generate the images, which can then be uploaded to the requested page. State that route accurately; do not imply the destination itself generated the image. Honor current tool capabilities and spending requirements rather than assuming this route always works.
 
+## Current hero equipment display contract
+
+The user's latest correction on 2026-10-20 overrides the earlier hero-equipment proposal in which all five gear items were worn and every weapon shared the right paw. Preserve the original ginger cat's face, body, coat and blue cape. **Only the held weapon changes the hero's visible appearance.** Helmet, armor, gloves, boots and amulet are **stat-only equipment with standalone icons**; do not bake or composite them onto the hero preview. Their icon designs still follow the accepted material and stroke treatment.
+
+On the fixed 256 × 240 hero canvas, the bow uses the **image-left paw socket (94, 166)**. Sword, staff and axe use the **image-right paw socket (160, 166)**. Keep the body and both original paws fixed; align the actual grip centre to the correct socket and rotate the weapon around that grip. Mirror or refit the bow layer without mirroring the cat or cape. A carrying pose is not a drawn bow attack or a completed animation. Keep the face clear and check exposed grip, string clearance and source bounds at native 128 × 120 size.
+
+The bowstring must use a **visible secondary stroke**. The current v4 refinement uses 3 px on the 256 × 240 canvas against the 9 px main contour, in secondary brown (`#8a6240` before the requested single 10% paint brightening). The former 1.4 px string became nearly invisible when reduced. Keep it continuous between the tips, behind the sockets, and inspect it at 128 × 120; do not remove it or replace it with a filled sliver. This item-specific decision does not set all surface seams to 3 px.
+
+The original `hero-paws.svg` layer contains two open C-shaped strokes, not filled hands. Compositing these strokes over a weapon does not hide the shaft within the palm. Use a small rounded palm mask inside the relevant C, then composite the unchanged paw contour above it. Restoring chest-white base pixels made the held palm look like a white glove; the current v4 refinement uses a local ginger-fur fill sampled from the original coat instead, without a cuff or added glove outline. Keep this local to the palm and leave readable grip segments immediately above and below. For the bow, fit the occlusion to the left socket rather than reusing the right-hand mask unchanged.
+
+The straight crystal staff must keep the crystal base, brass socket and wooden shaft on one shared axis. The user explicitly rejected an upright crystal independently counter-rotated on a diagonal shaft: the join attached to the crystal's side. Rotate those connected components together around the real grip centre, then check both the connector close-up and the full held pose. A mathematically aligned hand alone does not certify the head-to-shaft connection.
+
+The v4 composition following this correction is a **current proposal, not user-approved artwork or production integration**. The accepted spear remains the stroke baseline; its 9/10 review does not approve the later equipment sets or override this display contract.
+
 ## Current roster
 
 | Family | IDs | Contour considerations |

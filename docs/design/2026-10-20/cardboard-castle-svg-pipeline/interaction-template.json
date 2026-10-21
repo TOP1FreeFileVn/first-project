@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status": "design_template_not_runtime_data",
+  "id": "cardboard_tunnel_01",
+  "tier": 1,
+  "art_reference": "../cardboard-castle-lobby-v4/map-with-cats.png",
+  "coordinate_systems": {
+    "scene_canvas": [720, 1280],
+    "svg_view_box": null,
+    "registration_local": null,
+    "depth_anchor_local": null,
+    "world_transform": null,
+    "rule": "Resolve SVG-local geometry first; keep world placement separate. Null values must be authored and validated before loading."
+  },
+  "parts": {
+    "source": "source.svg",
+    "shadow": "parts/shadow.svg",
+    "rear": "parts/rear.svg",
+    "interior": "parts/interior.svg",
+    "front": "parts/front.svg",
+    "alignment": "All parts use the same viewBox and registration within this prop."
+  },
+  "geometry_local": {
+    "footprint_polygon": null,
+    "opening_polygon": null,
+    "threshold_segment": null,
+    "handoff_region": null,
+    "anchors": {
+      "approach": null,
+      "threshold": null,
+      "inside_rest": null,
+      "exit_release": null
+    },
+    "entry_path": null,
+    "exit_path": null,
+    "fully_hidden_region": null
+  },
+  "v4_world_anchor_estimates_for_review_only": {
+    "approach": [165, 800],
+    "threshold": [164, 770],
+    "inside_rest": [164, 747]
+  },
+  "interaction": {
+    "kind": "enter_and_rest_same_opening",
+    "capacity": 1,
+    "reservation_required": true,
+    "outside_sort": "floor_y_same_canvas_same_z",
+    "inside_order": ["rear", "interior", "occupant", "front"],
+    "preserve_global_transform_on_handoff": true,
+    "hide_only_when_fully_occluded": true,
+    "required_pose_roles": ["idle_front", "walk_side", "walk_rear_or_three_quarter", "sit_inside"],
+    "cancel_policy": "Release reservation and resolve actor to a valid floor position before removing the prop."
+  },
+  "validation": {
+    "vector_art_approved": false,
+    "opening_fits_cat_pose": false,
+    "alpha_opening_verified": false,
+    "parts_reassemble_without_seams": false,
+    "front_back_walk_verified": false,
+    "entry_exit_motion_verified": false,
+    "two_cat_reservation_verified": false
+  }
+}

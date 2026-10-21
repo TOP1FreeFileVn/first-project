@@ -1,0 +1,116 @@
+{
+  "mutatedNodeIds": [
+    "66:2",
+    "66:9",
+    "73:2",
+    "72:176",
+    "66:12"
+  ],
+  "board": {
+    "id": "66:2",
+    "width": 1576,
+    "height": 1486,
+    "placeholder": false
+  },
+  "descendantCount": 191,
+  "counts": {
+    "TEXT": 8,
+    "FRAME": 7,
+    "RECTANGLE": 5,
+    "GROUP": 63,
+    "VECTOR": 108
+  },
+  "images": [
+    {
+      "id": "66:9",
+      "name": "Terrain · sky, hills and playground",
+      "type": "RECTANGLE",
+      "width": 720,
+      "height": 1280,
+      "hashes": [
+        "e7e6ac9a863d7784c73922a7472b0704badb97d0"
+      ]
+    },
+    {
+      "id": "73:2",
+      "name": "Castle · upgrade artwork",
+      "type": "RECTANGLE",
+      "width": 720,
+      "height": 1280,
+      "hashes": [
+        "168802a70ab82fc6fc0c5bf2ae4955309b508718"
+      ]
+    },
+    {
+      "id": "72:176",
+      "name": "Foreground · carton tray above cat",
+      "type": "RECTANGLE",
+      "width": 720,
+      "height": 1280,
+      "hashes": [
+        "ee1525f7463dda47e3eec30c578897dda274f1e9"
+      ]
+    },
+    {
+      "id": "66:11",
+      "name": "Cat Gunner 1.1.64 · sprite nguồn RE",
+      "type": "RECTANGLE",
+      "width": 720,
+      "height": 335.3399963378906,
+      "hashes": [
+        "01e2103365f765ffce9cae3084983031b2383601"
+      ]
+    },
+    {
+      "id": "66:12",
+      "name": "Chi tiết lâu đài · cùng bản cảnh",
+      "type": "RECTANGLE",
+      "width": 720,
+      "height": 460,
+      "hashes": [
+        "37d26416b45fe57cc20cebb635384868a1705c2f"
+      ]
+    }
+  ],
+  "title": {
+    "id": "72:177",
+    "font": {
+      "family": "Paytone One",
+      "style": "Regular"
+    },
+    "characters": "Màn 3 · Pháo Đài Đỏ"
+  },
+  "sceneOrder": [
+    {
+      "id": "66:9",
+      "name": "Terrain · sky, hills and playground"
+    },
+    {
+      "id": "73:2",
+      "name": "Castle · upgrade artwork"
+    },
+    {
+      "id": "72:2",
+      "name": "Cat cream · Spine-ready parts"
+    },
+    {
+      "id": "72:30",
+      "name": "Cat tabby · Spine-ready parts"
+    },
+    {
+      "id": "72:111",
+      "name": "Cat calico · Spine-ready parts"
+    },
+    {
+      "id": "72:176",
+      "name": "Foreground · carton tray above cat"
+    },
+    {
+      "id": "72:177",
+      "name": "Tên màn · editable"
+    }
+  ],
+  "validation": "Artwork images only; cats and stage text editable. No flattened complete UI inside board.",
+  "screenshot": "figma-preview.png",
+  "visual_check_passed": true
+}

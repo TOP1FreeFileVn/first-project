@@ -1,0 +1,17 @@
+{
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "36:2",
+  "model": "gpt-image-2.5-sunburst",
+  "image": {
+    "url": "https://www.figma.com/api/mcp/asset/6ceae25a-a009-47b0-ab7a-61d47ee7a394.png",
+    "url_expires_in_days": 7,
+    "width": 1024,
+    "height": 1024,
+    "format": "png",
+    "model": "gpt-image-2.5-sunburst"
+  },
+  "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/6ceae25a-a009-47b0-ab7a-61d47ee7a394.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+  "prompt": "prompts/bow.txt",
+  "selected": false,
+  "review": "Clean readable construction, but source main contour too thin when fitted. Retained as an attempt; targeted regeneration required."
+}

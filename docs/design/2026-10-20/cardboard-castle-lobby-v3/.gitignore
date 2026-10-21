@@ -1,0 +1,6 @@
+*.log
+*.png.import
+*.svg.import
+layout-renderer/.godot/
+layout-renderer/profile*/
+render-profile*/

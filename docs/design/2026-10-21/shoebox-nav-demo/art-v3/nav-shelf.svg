@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="70" viewBox="0 0 360 70">
+  <path d="M0 16Q0 10 8 10H352Q360 10 360 16V70H0Z" fill="#52776c" stroke="#52634f" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M2 17Q2 12 9 12H351Q358 12 358 17" fill="none" stroke="#89a18b" stroke-width="1.4" stroke-linecap="round"/>
+  <path d="M5 22H18M88 18H104M251 20H264M340 25H353" fill="none" stroke="#66897b" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M0 64H360V70H0Z" fill="#b78e5f"/>
+  <path d="M0 64H360" fill="none" stroke="#d4b283" stroke-width="1.6"/>
+  <path d="M0 69H360" fill="none" stroke="#826447" stroke-width="1.4"/>
+  <path d="M6 66L8 68M18 66L20 68M30 66L32 68M42 66L44 68M54 66L56 68M66 66L68 68M78 66L80 68M90 66L92 68M102 66L104 68M114 66L116 68M126 66L128 68M138 66L140 68M150 66L152 68M162 66L164 68M174 66L176 68M186 66L188 68M198 66L200 68M210 66L212 68M222 66L224 68M234 66L236 68M246 66L248 68M258 66L260 68M270 66L272 68M282 66L284 68M294 66L296 68M306 66L308 68M318 66L320 68M330 66L332 68M342 66L344 68M354 66L356 68" fill="none" stroke="#99744e" stroke-width="0.8" stroke-linecap="round"/>
+</svg>

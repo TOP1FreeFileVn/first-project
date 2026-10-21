@@ -1,0 +1,99 @@
+{
+  "render_scale": 3,
+  "canvas": [
+    256,
+    240
+  ],
+  "ground_origin": [
+    128,
+    238
+  ],
+  "front_vs_rear_alpha_coverage_delta": 0,
+  "changed_alpha_pixels": 25,
+  "layers": {
+    "assembled_rear": {
+      "alpha_bounds_render_px": [
+        108,
+        18,
+        742,
+        715
+      ],
+      "alpha_bounds_logical_px": [
+        36.0,
+        6.0,
+        247.333,
+        238.333
+      ]
+    },
+    "body": {
+      "alpha_bounds_render_px": [
+        114,
+        330,
+        654,
+        681
+      ],
+      "alpha_bounds_logical_px": [
+        38.0,
+        110.0,
+        218.0,
+        227.0
+      ]
+    },
+    "foot_L_image": {
+      "alpha_bounds_render_px": [
+        114,
+        552,
+        369,
+        715
+      ],
+      "alpha_bounds_logical_px": [
+        38.0,
+        184.0,
+        123.0,
+        238.333
+      ]
+    },
+    "foot_R_image": {
+      "alpha_bounds_render_px": [
+        399,
+        552,
+        654,
+        715
+      ],
+      "alpha_bounds_logical_px": [
+        133.0,
+        184.0,
+        218.0,
+        238.333
+      ]
+    },
+    "head_rear": {
+      "alpha_bounds_render_px": [
+        108,
+        18,
+        660,
+        450
+      ],
+      "alpha_bounds_logical_px": [
+        36.0,
+        6.0,
+        220.0,
+        150.0
+      ]
+    },
+    "tail": {
+      "alpha_bounds_render_px": [
+        501,
+        405,
+        742,
+        676
+      ],
+      "alpha_bounds_logical_px": [
+        167.0,
+        135.0,
+        247.333,
+        225.333
+      ]
+    }
+  }
+}

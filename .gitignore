@@ -4,6 +4,7 @@
 
 # Build outputs
 /Build/
+/output/
 
 # OS junk
 .DS_Store
@@ -13,6 +14,8 @@ Thumbs.db
 .env
 debug.log
 *.godot-mcp-backup-*
+docs/design/**/*.log
+docs/ui_review/**/*.log
 
 # Reference screenshots of commercial games (copyright) - kept local only
 docs/asset_reference/
@@ -21,6 +24,9 @@ docs/design/2026-10-19/weapon-redesign/reference-study/**/*.png
 docs/design/2026-10-19/weapon-redesign/reference-study/**/*.png.import
 docs/design/2026-10-20/stroke-reference-study/*.png
 docs/design/2026-10-20/stroke-reference-study/*.png.import
+docs/design/2026-10-20/cat-shooter-background-study/cat-gunner-background-sources.png*
+docs/design/2026-10-21/menu-frame-proposal/cat-gunner-frame-sources.png*
+docs/design/2026-10-21/menu-frame-proposal/cat-gunner-official-merge-upgrade.webp*
 # Godot editor profiles/caches captured by review tools
 docs/**/Godot/
 

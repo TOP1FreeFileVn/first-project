@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280">
+  <!-- Review-only smooth trace of the playground props in flat-map-raw.png.
+       Transparent canvas; no castle, cats, UI or ground plane. -->
+  <defs>
+    <clipPath id="yarn-clip"><circle cx="220" cy="785" r="28.5"/></clipPath>
+  </defs>
+
+  <!-- Quiet edge foliage. -->
+  <g stroke="#7B7951" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M4 134 L35 132 L35 202 Q34 213 26 216 L20 212 L14 217 L7 214 L0 216 Z" fill="#B28A56"/>
+    <path d="M-35 -30 H119 C145 -8 166 20 164 53 C162 90 143 115 107 121 C103 146 82 167 54 168 C24 170 6 162 -9 145 C-30 131 -40 98 -35 66 Z" fill="#8FB57B"/>
+    <path d="M-9 60 C5 46 18 49 29 51 C38 29 65 28 79 48 C102 48 109 62 105 81 C102 100 88 109 72 109 C66 132 41 140 22 127 C6 141 -15 133 -23 117 C-35 99 -28 72 -9 60 Z" fill="#BFD49A" stroke="none"/>
+    <path d="M716 134 L685 132 L685 202 Q686 213 694 216 L700 212 L706 217 L713 214 L720 216 Z" fill="#B28A56"/>
+    <path d="M755 -30 H601 C575 -8 554 20 556 53 C558 90 577 115 613 121 C617 146 638 167 666 168 C696 170 714 162 729 145 C750 131 760 98 755 66 Z" fill="#8FB57B"/>
+    <path d="M729 60 C715 46 702 49 691 51 C682 29 655 28 641 48 C618 48 611 62 615 81 C618 100 632 109 648 109 C654 132 679 140 698 127 C714 141 735 133 743 117 C755 99 748 72 729 60 Z" fill="#BFD49A" stroke="none"/>
+    <path d="M-20 291 C-4 280 15 286 24 303 C45 301 57 312 58 330 C78 342 71 369 48 374 L-20 377 Z" fill="#9CBD7A"/>
+    <path d="M740 291 C724 280 705 286 696 303 C675 301 663 312 662 330 C642 342 649 369 672 374 L740 377 Z" fill="#9CBD7A"/>
+    <path d="M-15 1181 C8 1154 44 1167 55 1193 C78 1186 97 1203 96 1227 C124 1233 137 1255 132 1285 H-15 Z" fill="#9CBD7A"/>
+    <path d="M735 1181 C712 1154 676 1167 665 1193 C642 1186 623 1203 624 1227 C596 1233 583 1255 588 1285 H735 Z" fill="#9CBD7A"/>
+  </g>
+
+  <!-- Curved footpath, an unoutlined flat color plane. -->
+  <path d="M333 545 C331 577 365 592 359 629 C353 662 322 681 296 704 C275 723 255 745 256 769 C257 789 273 800 293 800 C315 800 327 785 328 766 C330 741 350 727 371 705 C397 678 415 653 412 622 C410 588 383 568 387 545 Z" fill="#EDDBAD"/>
+
+  <g stroke="#583F21" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Cardboard cat tunnel; smooth version of the raw box silhouette. -->
+    <path d="M96 598 L122 576 Q127 571 135 572 L203 576 Q215 578 216 592 L216 676 Q216 682 210 688 L179 714 L87 704 Z" fill="#D5A76B"/>
+    <path d="M96 598 L122 576 Q127 571 135 572 L203 576 Q211 578 213 582 L179 610 Z" fill="#F0D49B"/>
+    <path d="M64 706 L64 627 Q64 609 71 591 Q74 583 81 589 L103 608 Q128 601 149 609 L165 595 Q173 588 177 597 Q183 611 183 628 L183 707 Q183 714 176 714 L72 714 Q64 714 64 706 Z" fill="#EAC27E"/>
+    <path d="M123 624 C100 624 82 643 82 666 C82 690 101 706 123 706 C146 706 162 688 162 665 C162 642 146 624 123 624 Z" fill="#8D663F"/>
+    <path d="M124 627 C125 651 134 671 158 677 C160 673 160 668 160 665 C160 644 145 628 124 627 Z" fill="#583F21" stroke="none"/>
+    <path d="M87 686 Q114 670 145 690" fill="none" stroke="#A57A48" stroke-width="2.5"/>
+    <path d="M137 577 L126 586 L118 584 L110 593 L117 600 L134 587 L139 589 L150 580 Z" fill="#FFF0BE" stroke="none"/>
+
+    <!-- Scratching post. Its base stays an oval rather than an isometric tile. -->
+    <path d="M528 693 C528 683 551 676 579 676 C608 676 632 683 632 693 L632 701 C632 709 609 715 579 715 C549 715 528 709 528 701 Z" fill="#B88B52"/>
+    <ellipse cx="580" cy="691" rx="52" ry="15" fill="#D5AD72"/>
+    <path d="M555 555 L602 555 L602 680 Q580 691 555 680 Z" fill="#FFF0BE"/>
+    <g fill="none" stroke="#A57A48" stroke-width="2.5">
+      <path d="M556 575 Q578 583 601 575"/>
+      <path d="M556 594 Q578 602 601 594"/>
+      <path d="M556 613 Q578 621 601 613"/>
+      <path d="M556 632 Q578 640 601 632"/>
+      <path d="M556 651 Q578 659 601 651"/>
+      <path d="M556 670 Q578 678 601 670"/>
+    </g>
+    <path d="M550 552 L550 562 Q578 575 608 562 L608 552 Z" fill="#A57A48"/>
+    <ellipse cx="579" cy="552" rx="29" ry="10" fill="#D6AE76"/>
+    <path d="M608 554 Q625 568 625 598 L625 610" fill="none"/>
+    <path d="M623 610 C634 608 640 618 635 627 L642 636 Q643 640 638 639 L628 633 C618 634 612 628 613 620 C614 615 617 612 623 610 Z" fill="#6BAFAF"/>
+
+    <!-- Yarn ball. Only a few quiet thread divisions. -->
+    <circle cx="220" cy="785" r="31" fill="#ED8375"/>
+    <g clip-path="url(#yarn-clip)" fill="none" stroke="#A57A48" stroke-width="2.5">
+      <path d="M198 810 C200 789 214 764 237 757"/>
+      <path d="M214 815 C216 790 230 776 247 771"/>
+      <path d="M194 767 Q214 776 223 788"/>
+      <path d="M226 789 Q236 793 248 795"/>
+    </g>
+
+    <!-- Empty cardboard sleeping tray. -->
+    <path d="M423 754 L454 725 Q457 721 463 722 L558 729 Q563 730 563 736 L563 774 L526 803 L425 794 Q421 794 421 788 L421 761 Q421 757 423 754 Z" fill="#D2A166"/>
+    <path d="M423 754 L454 725 Q457 721 463 722 L558 729 L526 763 Z" fill="#E9C386"/>
+    <path d="M430 752 L460 730 L549 736 L525 758 Z" fill="#C3945D" stroke="none"/>
+    <path d="M423 754 L526 763 L526 803 L425 794 Q421 794 421 788 L421 761 Q421 757 423 754 Z" fill="#EAC27E"/>
+    <path d="M526 763 L563 731 L563 774 L526 803" fill="#D2A166"/>
+    <path d="M460 731 L460 749 L525 756" fill="none" stroke="#A57A48" stroke-width="2.5"/>
+    <path d="M465 759 L478 760 L478 771 L475 773 L478 776 L478 796 L465 795 L465 779 L468 776 L465 773 Z" fill="#FFF0BE" stroke="none"/>
+
+    <!-- Flat turquoise cushion. -->
+    <path d="M550 792 C550 779 575 770 607 770 C640 770 666 780 666 792 L666 803 C666 815 641 824 608 824 C575 824 550 815 550 803 Z" fill="#579B9F"/>
+    <ellipse cx="608" cy="792" rx="58" ry="22" fill="#6BAFAF"/>
+    <path d="M558 798 Q608 821 658 798" fill="none" stroke="#A57A48" stroke-width="2.5"/>
+  </g>
+</svg>

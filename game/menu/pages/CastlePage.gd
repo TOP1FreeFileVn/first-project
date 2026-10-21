@@ -3,24 +3,25 @@ extends "res://game/menu/pages/MenuPage.gd"
 # Castle level (HP, max meat, open gear cells, team slots) and the three workshop upgrades.
 
 const GridPreview = preload("res://game/menu/widgets/GridPreview.gd")
-const CastleArt = preload("res://game/ui/skin/menu_castle.svg")
+const CastleArt = preload("res://game/assets/lobby/cardboard/castle-crop.png")
 
 
 func build() -> void:
-	title("Thành")
+	body.add_theme_constant_override("separation", 22)
 	var level := PlayerData.castle_level
 	var max_level := PlayerData.castle_max_level()
 	var now: Dictionary = PlayerData.castle_stats()
 	var next: Dictionary = Economy.CASTLE[level] if level < max_level else now
 
-	var castle := panel(10)
+	var art_stage := CenterContainer.new()
+	art_stage.name = "CastleStage"
+	art_stage.custom_minimum_size.y = 210
+	body.add_child(art_stage)
 	var castle_art := UiKit.icon(CastleArt, 210)
 	castle_art.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	castle_art.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	castle.add_child(castle_art)
-	var heading := UiKit.label("Cấp thành %d / %d" % [level, max_level], 26, UiKit.GOLD_TEXT)
-	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	castle.add_child(heading)
+	art_stage.add_child(castle_art)
+	var castle := section("Thành cấp %d / %d" % [level, max_level], 10)
 
 	var stats := GridContainer.new()
 	stats.columns = 2
@@ -36,8 +37,9 @@ func build() -> void:
 	preview.open_now = now["cells"]
 	preview.open_next = next["cells"]
 	castle.add_child(preview)
-	var legend := UiKit.label("Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau", 14)
+	var legend := UiKit.ink("Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau", 16)
 	legend.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	legend.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	castle.add_child(legend)
 
 	var cost := PlayerData.castle_upgrade_cost()
@@ -54,9 +56,17 @@ func build() -> void:
 		upgrade.disabled = PlayerData.gold < cost
 	castle.add_child(upgrade)
 
-	body.add_child(UiKit.ribbon("Xưởng", 22, UiKit.Ribbon.YELLOW))
+	var workshop := section("Xưởng", 18)
 	for id in Economy.WORKSHOP_ORDER:
-		_workshop_row(id)
+		if workshop.get_child_count() > 0:
+			var rule := HSeparator.new()
+			var line := StyleBoxFlat.new()
+			line.bg_color = Color(0.345, 0.247, 0.129, 0.2)
+			line.content_margin_top = 1
+			line.content_margin_bottom = 1
+			rule.add_theme_stylebox_override("separator", line)
+			workshop.add_child(rule)
+		_workshop_row(workshop, id)
 
 
 func has_alert() -> bool:
@@ -64,23 +74,22 @@ func has_alert() -> bool:
 
 
 func _stat_row(grid: GridContainer, name: String, now: String, next: String, has_next: bool) -> void:
-	grid.add_child(UiKit.label(name, 19))
-	grid.add_child(UiKit.label(now + ("  →  " + next if has_next and next != now else ""), 19, UiKit.INFO))
+	grid.add_child(UiKit.ink(name, 19))
+	grid.add_child(UiKit.ink(now + ("  →  " + next if has_next and next != now else ""), 19))
 
 
-func _workshop_row(id: String) -> void:
+func _workshop_row(box: VBoxContainer, id: String) -> void:
 	var spec: Dictionary = Economy.WORKSHOP[id]
 	var level := PlayerData.workshop_level(id)
-	var box := panel(6)
 	var row := UiKit.hbox(12)
 	box.add_child(row)
 	var info := UiKit.vbox(2)
 	info.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	info.add_child(UiKit.label("%s  (%d/%d)" % [spec["name"], level, spec["max"]], 21))
+	info.add_child(UiKit.ink("%s  (%d/%d)" % [spec["name"], level, spec["max"]], 21))
 	var effect: String = spec["desc"] % PlayerData.workshop_value(id)
 	if level < spec["max"]:
 		effect += "  →  " + spec["desc"] % PlayerData.workshop_value(id, level + 1)
-	var effect_label := UiKit.label(effect, 16, UiKit.INFO)
+	var effect_label := UiKit.ink(effect, 18)
 	effect_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	info.add_child(effect_label)
 	row.add_child(info)

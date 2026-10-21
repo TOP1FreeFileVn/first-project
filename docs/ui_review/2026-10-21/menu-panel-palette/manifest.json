@@ -1,0 +1,2060 @@
+{
+	"captures": [
+		{
+			"context": "shop",
+			"file": "shop_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero-detail_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle-workshop_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "events",
+			"file": "events_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "patrol_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero-detail_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "castle",
+			"file": "castle-workshop_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"file": "events_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "patrol_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_tab_entry_0",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_tab_entry_1",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_hero_item_opens_detail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_item_detail_available",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_hero-detail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_hero-detail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_hero_item_detail_close",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_item_close_restores_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_tab_entry_3",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_return_to_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "cardboard_lobby_returns",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_workshop_reachable_by_native_scroll",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_castle-workshop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_castle-workshop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_castle_back",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_back_restores_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_events_to_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_route_opens",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "context_panels_present_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_patrol_back",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "patrol_back_restores_lobby",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_tab_entry_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_tab_entry_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_item_opens_detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_item_detail_available",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_hero-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_hero-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_item_detail_close",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_item_close_restores_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_tab_entry_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_return_to_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cardboard_lobby_returns",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_workshop_reachable_by_native_scroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_castle-workshop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_castle-workshop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_castle_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_back_restores_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_events_to_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_route_opens",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "context_panels_present_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_patrol_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_back_restores_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_uses_original_background_script",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_has_no_context_menu_panel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_probe_does_not_start_wave",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"native_render": true,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/menu-panel-qa-profile/AppData/Roaming/Godot/app_userdata/Gear Defenders",
+	"readability": [
+		{
+			"panels": 4,
+			"screen": "shop",
+			"text": [
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Rương Gỗ",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "3 thẻ lính + 50–100 vàng",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 20,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Miễn phí!",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Rương Bạc",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "8 thẻ lính",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Rương Vàng",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "25 thẻ lính\nChắc chắn ≥ 3 thẻ Hiếm",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 4.95,
+					"font_size": 20,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Còn 10 lần nữa chắc chắn có thẻ Sử thi",
+					"text_color": "69328cff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Đổi kim cương",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "20 kim cương → 500 vàng",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 5,
+			"screen": "hero",
+			"text": [
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Hợp lính",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 18,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "·",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Chém xoáy",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 24,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "Túi trang bị",
+					"text_color": "4b4444ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "6 món",
+					"text_color": "4b4444ff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 7,
+			"screen": "hero-detail",
+			"text": [
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Hợp lính",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 18,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "·",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Chém xoáy",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 24,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "Túi trang bị",
+					"text_color": "4b4444ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "6 món",
+					"text_color": "4b4444ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Chém xoáy: mỗi 8 giây chém vòng tròn quanh mèo.",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 20,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Công",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 20,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "40 → 45",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 4.95,
+					"font_size": 20,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "+5",
+					"text_color": "1c5326ff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 1,
+			"screen": "troops",
+			"text": [
+				{
+					"contrast": 6.18,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c5d3aaff",
+					"text": "Đội hình 3/4",
+					"text_color": "583f21ff"
+				},
+				{
+					"contrast": 6.18,
+					"font_size": 24,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c5d3aaff",
+					"text": "352",
+					"text_color": "583f21ff"
+				},
+				{
+					"contrast": 6.18,
+					"font_size": 20,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c5d3aaff",
+					"text": "Chạm xem chi tiết · Giữ và kéo để đổi đội",
+					"text_color": "583f21ff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 4,
+			"screen": "castle",
+			"text": [
+				{
+					"contrast": 7.91,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Cấp thành 3 / 10",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Máu thành",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "x1.30  →  x1.50",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Túi xu tối đa",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "22.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đặt gear",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "16.0  →  18.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đội hình",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "4",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 16,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Két xu  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu thu nhập mỗi đợt  →  +1 xu thu nhập mỗi đợt",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Kho dự trữ  (0/4)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu khi vào trận  →  +1 xu khi vào trận",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Bánh răng tổng  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Gear sinh lính nhanh hơn 0%  →  Gear sinh lính nhanh hơn 5%",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 4,
+			"screen": "castle-workshop",
+			"text": [
+				{
+					"contrast": 7.91,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Cấp thành 3 / 10",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Máu thành",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "x1.30  →  x1.50",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Túi xu tối đa",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "22.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đặt gear",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "16.0  →  18.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đội hình",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "4",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 16,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Két xu  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu thu nhập mỗi đợt  →  +1 xu thu nhập mỗi đợt",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Kho dự trữ  (0/4)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu khi vào trận  →  +1 xu khi vào trận",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Bánh răng tổng  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Gear sinh lính nhanh hơn 0%  →  Gear sinh lính nhanh hơn 5%",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 3,
+			"screen": "events",
+			"text": [
+				{
+					"contrast": 6.75,
+					"font_size": 22,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Tuần tra",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 6.75,
+					"font_size": 22,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Quà 7 ngày",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 6.75,
+					"font_size": 16,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Ngày 4/7",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 6.75,
+					"font_size": 22,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Nhiệm vụ hằng ngày",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 1,
+			"screen": "patrol",
+			"text": [
+				{
+					"contrast": 8.15,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "180",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "mỗi giờ",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "Qua thêm màn để tuần tra kiếm nhiều vàng hơn. Kho chứa tối đa 8 giờ.",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "Kho: 540 / 1.440 vàng",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "Đầy sau 05:00:00",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"panels": 4,
+			"screen": "shop",
+			"text": [
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Rương Gỗ",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "3 thẻ lính + 50–100 vàng",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 20,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Miễn phí!",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Rương Bạc",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "8 thẻ lính",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Rương Vàng",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "25 thẻ lính\nChắc chắn ≥ 3 thẻ Hiếm",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 4.95,
+					"font_size": 20,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Còn 10 lần nữa chắc chắn có thẻ Sử thi",
+					"text_color": "69328cff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "Đổi kim cương",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.77,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "aac9d7ff",
+					"text": "20 kim cương → 500 vàng",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"panels": 5,
+			"screen": "hero",
+			"text": [
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Hợp lính",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 18,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "·",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Chém xoáy",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 24,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "Túi trang bị",
+					"text_color": "4b4444ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "6 món",
+					"text_color": "4b4444ff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"panels": 7,
+			"screen": "hero-detail",
+			"text": [
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Hợp lính",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 18,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "·",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Chém xoáy",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 24,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "Túi trang bị",
+					"text_color": "4b4444ff"
+				},
+				{
+					"contrast": 5.71,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b6cec4ff",
+					"text": "6 món",
+					"text_color": "4b4444ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 17,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Chém xoáy: mỗi 8 giây chém vòng tròn quanh mèo.",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 20,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "Công",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 5.25,
+					"font_size": 20,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "40 → 45",
+					"text_color": "5c3d38ff"
+				},
+				{
+					"contrast": 4.95,
+					"font_size": 20,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "acc5baff",
+					"text": "+5",
+					"text_color": "1c5326ff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"panels": 1,
+			"screen": "troops",
+			"text": [
+				{
+					"contrast": 6.18,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c5d3aaff",
+					"text": "Đội hình 3/4",
+					"text_color": "583f21ff"
+				},
+				{
+					"contrast": 6.18,
+					"font_size": 24,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c5d3aaff",
+					"text": "352",
+					"text_color": "583f21ff"
+				},
+				{
+					"contrast": 6.18,
+					"font_size": 20,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c5d3aaff",
+					"text": "Chạm xem chi tiết · Giữ và kéo để đổi đội",
+					"text_color": "583f21ff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"panels": 4,
+			"screen": "castle",
+			"text": [
+				{
+					"contrast": 7.91,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Cấp thành 3 / 10",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Máu thành",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "x1.30  →  x1.50",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Túi xu tối đa",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "22.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đặt gear",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "16.0  →  18.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đội hình",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "4",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 16,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Két xu  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu thu nhập mỗi đợt  →  +1 xu thu nhập mỗi đợt",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Kho dự trữ  (0/4)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu khi vào trận  →  +1 xu khi vào trận",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Bánh răng tổng  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Gear sinh lính nhanh hơn 0%  →  Gear sinh lính nhanh hơn 5%",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"panels": 4,
+			"screen": "castle-workshop",
+			"text": [
+				{
+					"contrast": 7.91,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Cấp thành 3 / 10",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Máu thành",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "x1.30  →  x1.50",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Túi xu tối đa",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "22.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đặt gear",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "16.0  →  18.0",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Ô đội hình",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 19,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "4",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 16,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Xanh: ô đang mở · Vàng: ô mở thêm ở cấp sau",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Két xu  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu thu nhập mỗi đợt  →  +1 xu thu nhập mỗi đợt",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Kho dự trữ  (0/4)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "+0 xu khi vào trận  →  +1 xu khi vào trận",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 21,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Bánh răng tổng  (0/5)",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 7.91,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "b7cac4ff",
+					"text": "Gear sinh lính nhanh hơn 0%  →  Gear sinh lính nhanh hơn 5%",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"panels": 3,
+			"screen": "events",
+			"text": [
+				{
+					"contrast": 6.75,
+					"font_size": 22,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Tuần tra",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 6.75,
+					"font_size": 22,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Quà 7 ngày",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 6.75,
+					"font_size": 16,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Ngày 4/7",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 6.75,
+					"font_size": 22,
+					"kind": "Well",
+					"outline": 0,
+					"panel_color": "cbb0bbff",
+					"text": "Nhiệm vụ hằng ngày",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"panels": 1,
+			"screen": "patrol",
+			"text": [
+				{
+					"contrast": 8.15,
+					"font_size": 26,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "180",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "mỗi giờ",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "Qua thêm màn để tuần tra kiếm nhiều vàng hơn. Kho chứa tối đa 8 giờ.",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 22,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "Kho: 540 / 1.440 vàng",
+					"text_color": "3b2b1eff"
+				},
+				{
+					"contrast": 8.15,
+					"font_size": 18,
+					"kind": "Board",
+					"outline": 0,
+					"panel_color": "c0cea8ff",
+					"text": "Đầy sau 05:00:00",
+					"text_color": "3b2b1eff"
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		}
+	]
+}

@@ -18,7 +18,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@705",
+						"name": "@Control@492",
 						"render_rect": [
 							162.0,
 							515.0,
@@ -72,7 +72,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@715",
+						"name": "@Control@502",
 						"render_rect": [
 							368.0,
 							515.0,
@@ -423,7 +423,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@741",
+						"name": "@Control@528",
 						"render_rect": [
 							44.0,
 							415.0,
@@ -477,7 +477,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@752",
+						"name": "@Control@539",
 						"render_rect": [
 							206.0,
 							415.0,
@@ -531,7 +531,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@762",
+						"name": "@Control@549",
 						"render_rect": [
 							368.0,
 							415.0,
@@ -585,7 +585,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@772",
+						"name": "@Control@559",
 						"render_rect": [
 							530.0,
 							415.0,
@@ -639,7 +639,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@782",
+						"name": "@Control@569",
 						"render_rect": [
 							44.0,
 							628.0,
@@ -693,7 +693,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@792",
+						"name": "@Control@579",
 						"render_rect": [
 							206.0,
 							628.0,
@@ -747,7 +747,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@802",
+						"name": "@Control@589",
 						"render_rect": [
 							368.0,
 							628.0,
@@ -801,7 +801,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@812",
+						"name": "@Control@599",
 						"render_rect": [
 							530.0,
 							628.0,
@@ -1184,7 +1184,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1189",
+						"name": "@Control@788",
 						"render_rect": [
 							40.0,
 							243.0,
@@ -1238,7 +1238,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1202",
+						"name": "@Control@801",
 						"render_rect": [
 							202.0,
 							243.0,
@@ -1292,7 +1292,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1215",
+						"name": "@Control@814",
 						"render_rect": [
 							364.0,
 							243.0,
@@ -1346,7 +1346,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1228",
+						"name": "@Control@827",
 						"render_rect": [
 							526.0,
 							243.0,
@@ -1400,7 +1400,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1240",
+						"name": "@Control@839",
 						"render_rect": [
 							40.0,
 							456.0,
@@ -1454,7 +1454,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1252",
+						"name": "@Control@851",
 						"render_rect": [
 							202.0,
 							456.0,
@@ -1508,7 +1508,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1264",
+						"name": "@Control@863",
 						"render_rect": [
 							364.0,
 							456.0,
@@ -1562,7 +1562,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1276",
+						"name": "@Control@875",
 						"render_rect": [
 							526.0,
 							456.0,
@@ -1616,7 +1616,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1288",
+						"name": "@Control@887",
 						"render_rect": [
 							40.0,
 							669.0,
@@ -1670,7 +1670,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1300",
+						"name": "@Control@899",
 						"render_rect": [
 							202.0,
 							669.0,
@@ -1724,7 +1724,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1312",
+						"name": "@Control@911",
 						"render_rect": [
 							364.0,
 							669.0,
@@ -1778,7 +1778,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1324",
+						"name": "@Control@923",
 						"render_rect": [
 							526.0,
 							669.0,
@@ -1832,7 +1832,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1336",
+						"name": "@Control@935",
 						"render_rect": [
 							40.0,
 							882.0,
@@ -1886,7 +1886,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1348",
+						"name": "@Control@947",
 						"render_rect": [
 							202.0,
 							882.0,
@@ -1940,7 +1940,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1360",
+						"name": "@Control@959",
 						"render_rect": [
 							364.0,
 							882.0,
@@ -1994,7 +1994,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1372",
+						"name": "@Control@971",
 						"render_rect": [
 							526.0,
 							882.0,
@@ -2400,7 +2400,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1189",
+						"name": "@Control@788",
 						"render_rect": [
 							40.0,
 							65.0,
@@ -2454,7 +2454,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1202",
+						"name": "@Control@801",
 						"render_rect": [
 							202.0,
 							65.0,
@@ -2508,7 +2508,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1215",
+						"name": "@Control@814",
 						"render_rect": [
 							364.0,
 							65.0,
@@ -2562,7 +2562,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1228",
+						"name": "@Control@827",
 						"render_rect": [
 							526.0,
 							65.0,
@@ -2616,7 +2616,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1240",
+						"name": "@Control@839",
 						"render_rect": [
 							40.0,
 							278.0,
@@ -2670,7 +2670,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1252",
+						"name": "@Control@851",
 						"render_rect": [
 							202.0,
 							278.0,
@@ -2724,7 +2724,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1264",
+						"name": "@Control@863",
 						"render_rect": [
 							364.0,
 							278.0,
@@ -2778,7 +2778,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1276",
+						"name": "@Control@875",
 						"render_rect": [
 							526.0,
 							278.0,
@@ -2832,7 +2832,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1288",
+						"name": "@Control@887",
 						"render_rect": [
 							40.0,
 							491.0,
@@ -2886,7 +2886,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1300",
+						"name": "@Control@899",
 						"render_rect": [
 							202.0,
 							491.0,
@@ -2940,7 +2940,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1312",
+						"name": "@Control@911",
 						"render_rect": [
 							364.0,
 							491.0,
@@ -2994,7 +2994,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1324",
+						"name": "@Control@923",
 						"render_rect": [
 							526.0,
 							491.0,
@@ -3048,7 +3048,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1336",
+						"name": "@Control@935",
 						"render_rect": [
 							40.0,
 							704.0,
@@ -3102,7 +3102,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1348",
+						"name": "@Control@947",
 						"render_rect": [
 							202.0,
 							704.0,
@@ -3156,7 +3156,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1360",
+						"name": "@Control@959",
 						"render_rect": [
 							364.0,
 							704.0,
@@ -3210,7 +3210,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1372",
+						"name": "@Control@971",
 						"render_rect": [
 							526.0,
 							704.0,
@@ -3863,7 +3863,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1407",
+						"name": "@Control@1006",
 						"render_rect": [
 							81.0,
 							257.5,
@@ -3917,7 +3917,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1417",
+						"name": "@Control@1016",
 						"render_rect": [
 							184.0,
 							257.5,
@@ -4268,7 +4268,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1443",
+						"name": "@Control@1042",
 						"render_rect": [
 							22.0,
 							207.5,
@@ -4322,7 +4322,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1454",
+						"name": "@Control@1053",
 						"render_rect": [
 							103.0,
 							207.5,
@@ -4376,7 +4376,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1464",
+						"name": "@Control@1063",
 						"render_rect": [
 							184.0,
 							207.5,
@@ -4430,7 +4430,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1474",
+						"name": "@Control@1073",
 						"render_rect": [
 							265.0,
 							207.5,
@@ -4484,7 +4484,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1484",
+						"name": "@Control@1083",
 						"render_rect": [
 							22.0,
 							314.0,
@@ -4538,7 +4538,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1494",
+						"name": "@Control@1093",
 						"render_rect": [
 							103.0,
 							314.0,
@@ -4592,7 +4592,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1504",
+						"name": "@Control@1103",
 						"render_rect": [
 							184.0,
 							314.0,
@@ -4646,7 +4646,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1514",
+						"name": "@Control@1113",
 						"render_rect": [
 							265.0,
 							314.0,
@@ -5029,7 +5029,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1921",
+						"name": "@Control@1302",
 						"render_rect": [
 							20.0,
 							121.5,
@@ -5083,7 +5083,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1934",
+						"name": "@Control@1315",
 						"render_rect": [
 							101.0,
 							121.5,
@@ -5137,7 +5137,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1947",
+						"name": "@Control@1328",
 						"render_rect": [
 							182.0,
 							121.5,
@@ -5191,7 +5191,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1960",
+						"name": "@Control@1341",
 						"render_rect": [
 							263.0,
 							121.5,
@@ -5245,7 +5245,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1972",
+						"name": "@Control@1353",
 						"render_rect": [
 							20.0,
 							228.0,
@@ -5299,7 +5299,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1984",
+						"name": "@Control@1365",
 						"render_rect": [
 							101.0,
 							228.0,
@@ -5353,7 +5353,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1996",
+						"name": "@Control@1377",
 						"render_rect": [
 							182.0,
 							228.0,
@@ -5407,7 +5407,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2008",
+						"name": "@Control@1389",
 						"render_rect": [
 							263.0,
 							228.0,
@@ -5461,7 +5461,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2020",
+						"name": "@Control@1401",
 						"render_rect": [
 							20.0,
 							334.5,
@@ -5515,7 +5515,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2032",
+						"name": "@Control@1413",
 						"render_rect": [
 							101.0,
 							334.5,
@@ -5569,7 +5569,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2044",
+						"name": "@Control@1425",
 						"render_rect": [
 							182.0,
 							334.5,
@@ -5623,7 +5623,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2056",
+						"name": "@Control@1437",
 						"render_rect": [
 							263.0,
 							334.5,
@@ -5677,7 +5677,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2068",
+						"name": "@Control@1449",
 						"render_rect": [
 							20.0,
 							441.0,
@@ -5731,7 +5731,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2080",
+						"name": "@Control@1461",
 						"render_rect": [
 							101.0,
 							441.0,
@@ -5785,7 +5785,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2092",
+						"name": "@Control@1473",
 						"render_rect": [
 							182.0,
 							441.0,
@@ -5839,7 +5839,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2104",
+						"name": "@Control@1485",
 						"render_rect": [
 							263.0,
 							441.0,
@@ -6245,7 +6245,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1921",
+						"name": "@Control@1302",
 						"render_rect": [
 							20.0,
 							32.5,
@@ -6299,7 +6299,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1934",
+						"name": "@Control@1315",
 						"render_rect": [
 							101.0,
 							32.5,
@@ -6353,7 +6353,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1947",
+						"name": "@Control@1328",
 						"render_rect": [
 							182.0,
 							32.5,
@@ -6407,7 +6407,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1960",
+						"name": "@Control@1341",
 						"render_rect": [
 							263.0,
 							32.5,
@@ -6461,7 +6461,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1972",
+						"name": "@Control@1353",
 						"render_rect": [
 							20.0,
 							139.0,
@@ -6515,7 +6515,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1984",
+						"name": "@Control@1365",
 						"render_rect": [
 							101.0,
 							139.0,
@@ -6569,7 +6569,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@1996",
+						"name": "@Control@1377",
 						"render_rect": [
 							182.0,
 							139.0,
@@ -6623,7 +6623,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2008",
+						"name": "@Control@1389",
 						"render_rect": [
 							263.0,
 							139.0,
@@ -6677,7 +6677,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2020",
+						"name": "@Control@1401",
 						"render_rect": [
 							20.0,
 							245.5,
@@ -6731,7 +6731,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2032",
+						"name": "@Control@1413",
 						"render_rect": [
 							101.0,
 							245.5,
@@ -6785,7 +6785,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2044",
+						"name": "@Control@1425",
 						"render_rect": [
 							182.0,
 							245.5,
@@ -6839,7 +6839,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2056",
+						"name": "@Control@1437",
 						"render_rect": [
 							263.0,
 							245.5,
@@ -6893,7 +6893,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2068",
+						"name": "@Control@1449",
 						"render_rect": [
 							20.0,
 							352.0,
@@ -6947,7 +6947,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2080",
+						"name": "@Control@1461",
 						"render_rect": [
 							101.0,
 							352.0,
@@ -7001,7 +7001,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2092",
+						"name": "@Control@1473",
 						"render_rect": [
 							182.0,
 							352.0,
@@ -7055,7 +7055,7 @@
 							0.0,
 							0.0
 						],
-						"name": "@Control@2104",
+						"name": "@Control@1485",
 						"render_rect": [
 							263.0,
 							352.0,
@@ -7698,7 +7698,7 @@
 	"failures": 0,
 	"native_render": true,
 	"persist": false,
-	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-19/chest-layout/mcp/profile/Godot/app_userdata/Gear Defenders",
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/pattern-chest-layout-profile/Roaming/Godot/app_userdata/Gear Defenders",
 	"routes": [
 		{
 			"name": "fast_two_presentation_preserves_granted_loot",

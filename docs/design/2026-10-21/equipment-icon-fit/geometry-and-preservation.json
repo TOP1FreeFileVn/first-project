@@ -1,0 +1,952 @@
+{
+  "installed_png_count": 169,
+  "target_count": 50,
+  "modified_target_count": 50,
+  "unchanged_non_target_count": 119,
+  "unexpected_modified_pngs": [],
+  "new_pngs": [],
+  "geometry_failures": [],
+  "maximum_sampled_functional_axis_deviation_degrees": 0.462914,
+  "icons": {
+    "icon_eq_amulet.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        21,
+        235,
+        234
+      ],
+      "centroid": [
+        121.93306,
+        132.38277
+      ],
+      "principal_axis_screen_degrees": -44.92301,
+      "eigenvalue_ratio": 1.85424,
+      "functional_axis_screen_degrees": -44.937348
+    },
+    "icon_eq_amulet_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        3,
+        29,
+        29
+      ],
+      "centroid": [
+        14.82493,
+        16.15445
+      ],
+      "principal_axis_screen_degrees": -45.33537,
+      "eigenvalue_ratio": 1.85339,
+      "functional_axis_screen_degrees": -45.07153
+    },
+    "icon_eq_amulet_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        44,
+        44
+      ],
+      "centroid": [
+        22.45982,
+        24.51256
+      ],
+      "principal_axis_screen_degrees": -45.34669,
+      "eigenvalue_ratio": 1.8553,
+      "functional_axis_screen_degrees": -45.07153
+    },
+    "icon_eq_amulet_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        6,
+        58,
+        58
+      ],
+      "centroid": [
+        30.15016,
+        32.81099
+      ],
+      "principal_axis_screen_degrees": -45.3663,
+      "eigenvalue_ratio": 1.85601,
+      "functional_axis_screen_degrees": -45.07153
+    },
+    "icon_eq_amulet_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        88,
+        88
+      ],
+      "centroid": [
+        45.41957,
+        49.52223
+      ],
+      "principal_axis_screen_degrees": -45.36882,
+      "eigenvalue_ratio": 1.85422,
+      "functional_axis_screen_degrees": -45.07153
+    },
+    "icon_eq_armor.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        35,
+        235,
+        221
+      ],
+      "centroid": [
+        127.49912,
+        134.0625
+      ],
+      "principal_axis_screen_degrees": -0.01105,
+      "eigenvalue_ratio": 1.48694
+    },
+    "icon_eq_armor_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        4,
+        29,
+        27
+      ],
+      "centroid": [
+        15.49931,
+        15.8166
+      ],
+      "principal_axis_screen_degrees": 0.00337,
+      "eigenvalue_ratio": 1.43291
+    },
+    "icon_eq_armor_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        6,
+        44,
+        41
+      ],
+      "centroid": [
+        23.50004,
+        24.23984
+      ],
+      "principal_axis_screen_degrees": -0.01298,
+      "eigenvalue_ratio": 1.46587
+    },
+    "icon_eq_armor_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        9,
+        58,
+        54
+      ],
+      "centroid": [
+        31.50053,
+        32.59256
+      ],
+      "principal_axis_screen_degrees": -0.01044,
+      "eigenvalue_ratio": 1.49877
+    },
+    "icon_eq_armor_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        13,
+        88,
+        82
+      ],
+      "centroid": [
+        47.49998,
+        49.43625
+      ],
+      "principal_axis_screen_degrees": -0.0091,
+      "eigenvalue_ratio": 1.50948
+    },
+    "icon_eq_boots.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        36,
+        235,
+        219
+      ],
+      "centroid": [
+        125.08883,
+        118.52485
+      ],
+      "principal_axis_screen_degrees": -31.35308,
+      "eigenvalue_ratio": 2.13891,
+      "functional_axis_screen_degrees": -44.927537
+    },
+    "icon_eq_boots_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        5,
+        29,
+        27
+      ],
+      "centroid": [
+        15.21972,
+        14.48451
+      ],
+      "principal_axis_screen_degrees": -30.55547,
+      "eigenvalue_ratio": 2.15617,
+      "functional_axis_screen_degrees": -44.624905
+    },
+    "icon_eq_boots_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        7,
+        44,
+        41
+      ],
+      "centroid": [
+        23.04883,
+        21.92082
+      ],
+      "principal_axis_screen_degrees": -30.87095,
+      "eigenvalue_ratio": 2.14481,
+      "functional_axis_screen_degrees": -44.75482
+    },
+    "icon_eq_boots_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        9,
+        58,
+        54
+      ],
+      "centroid": [
+        30.9129,
+        28.90974
+      ],
+      "principal_axis_screen_degrees": -32.20133,
+      "eigenvalue_ratio": 2.11512,
+      "functional_axis_screen_degrees": -45.268691
+    },
+    "icon_eq_boots_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        13,
+        88,
+        82
+      ],
+      "centroid": [
+        46.60339,
+        43.80446
+      ],
+      "principal_axis_screen_degrees": -31.96167,
+      "eigenvalue_ratio": 2.12195,
+      "functional_axis_screen_degrees": -45.173041
+    },
+    "icon_eq_gloves.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        26,
+        21,
+        229,
+        235
+      ],
+      "centroid": [
+        135.15547,
+        122.86732
+      ],
+      "principal_axis_screen_degrees": 67.72916,
+      "eigenvalue_ratio": 1.17204,
+      "functional_axis_screen_degrees": -45.044057
+    },
+    "icon_eq_gloves_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        3,
+        28,
+        29
+      ],
+      "centroid": [
+        15.99802,
+        14.94292
+      ],
+      "principal_axis_screen_degrees": 63.99317,
+      "eigenvalue_ratio": 1.14841,
+      "functional_axis_screen_degrees": -44.655905
+    },
+    "icon_eq_gloves_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        5,
+        4,
+        43,
+        44
+      ],
+      "centroid": [
+        25.02887,
+        22.62572
+      ],
+      "principal_axis_screen_degrees": 67.18601,
+      "eigenvalue_ratio": 1.17005,
+      "functional_axis_screen_degrees": -45.001751
+    },
+    "icon_eq_gloves_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        7,
+        6,
+        56,
+        58
+      ],
+      "centroid": [
+        32.96293,
+        30.37519
+      ],
+      "principal_axis_screen_degrees": 69.44998,
+      "eigenvalue_ratio": 1.18172,
+      "functional_axis_screen_degrees": -45.234659
+    },
+    "icon_eq_gloves_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        10,
+        8,
+        86,
+        88
+      ],
+      "centroid": [
+        50.54469,
+        45.77657
+      ],
+      "principal_axis_screen_degrees": 67.4228,
+      "eigenvalue_ratio": 1.16908,
+      "functional_axis_screen_degrees": -45.001751
+    },
+    "icon_eq_helmet.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        87,
+        235,
+        168
+      ],
+      "centroid": [
+        127.51248,
+        126.62395
+      ],
+      "principal_axis_screen_degrees": -0.02982,
+      "eigenvalue_ratio": 10.0085
+    },
+    "icon_eq_helmet_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        11,
+        29,
+        21
+      ],
+      "centroid": [
+        15.50178,
+        15.45691
+      ],
+      "principal_axis_screen_degrees": -0.02945,
+      "eigenvalue_ratio": 9.52361
+    },
+    "icon_eq_helmet_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        16,
+        44,
+        31
+      ],
+      "centroid": [
+        23.50152,
+        22.9322
+      ],
+      "principal_axis_screen_degrees": -0.03032,
+      "eigenvalue_ratio": 10.08182
+    },
+    "icon_eq_helmet_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        22,
+        58,
+        42
+      ],
+      "centroid": [
+        31.50291,
+        31.40528
+      ],
+      "principal_axis_screen_degrees": -0.03139,
+      "eigenvalue_ratio": 9.63578
+    },
+    "icon_eq_helmet_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        33,
+        88,
+        63
+      ],
+      "centroid": [
+        47.50459,
+        47.36248
+      ],
+      "principal_axis_screen_degrees": -0.03109,
+      "eigenvalue_ratio": 10.16517
+    },
+    "icon_hero_w_cung.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        24,
+        21,
+        231,
+        235
+      ],
+      "centroid": [
+        147.17116,
+        149.95439
+      ],
+      "principal_axis_screen_degrees": -45.71161,
+      "eigenvalue_ratio": 3.66732,
+      "functional_axis_screen_degrees": -45.027395
+    },
+    "icon_hero_w_cung_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        3,
+        28,
+        29
+      ],
+      "centroid": [
+        17.39491,
+        18.1863
+      ],
+      "principal_axis_screen_degrees": -45.99497,
+      "eigenvalue_ratio": 3.5867,
+      "functional_axis_screen_degrees": -45.198235
+    },
+    "icon_hero_w_cung_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        43,
+        44
+      ],
+      "centroid": [
+        26.75935,
+        27.64579
+      ],
+      "principal_axis_screen_degrees": -45.3259,
+      "eigenvalue_ratio": 3.60563,
+      "functional_axis_screen_degrees": -44.799949
+    },
+    "icon_hero_w_cung_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        7,
+        6,
+        57,
+        58
+      ],
+      "centroid": [
+        36.33906,
+        36.92199
+      ],
+      "principal_axis_screen_degrees": -46.00237,
+      "eigenvalue_ratio": 3.6401,
+      "functional_axis_screen_degrees": -45.198235
+    },
+    "icon_hero_w_cung_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        9,
+        8,
+        86,
+        88
+      ],
+      "centroid": [
+        54.48836,
+        55.88063
+      ],
+      "principal_axis_screen_degrees": -45.95327,
+      "eigenvalue_ratio": 3.66244,
+      "functional_axis_screen_degrees": -45.169602
+    },
+    "icon_hero_w_gay_phep.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        21,
+        235,
+        235
+      ],
+      "centroid": [
+        127.64182,
+        127.19361
+      ],
+      "principal_axis_screen_degrees": -44.98007,
+      "eigenvalue_ratio": 25.85057,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_gay_phep_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        3,
+        29,
+        29
+      ],
+      "centroid": [
+        15.50182,
+        15.47323
+      ],
+      "principal_axis_screen_degrees": -44.98386,
+      "eigenvalue_ratio": 24.87146,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_gay_phep_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        44,
+        44
+      ],
+      "centroid": [
+        23.53355,
+        23.43671
+      ],
+      "principal_axis_screen_degrees": -44.97278,
+      "eigenvalue_ratio": 25.48875,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_gay_phep_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        6,
+        58,
+        58
+      ],
+      "centroid": [
+        31.52854,
+        31.43092
+      ],
+      "principal_axis_screen_degrees": -44.97528,
+      "eigenvalue_ratio": 25.60654,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_gay_phep_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        88,
+        88
+      ],
+      "centroid": [
+        47.53997,
+        47.3986
+      ],
+      "principal_axis_screen_degrees": -44.98017,
+      "eigenvalue_ratio": 25.68618,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_katana.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        22,
+        235,
+        233
+      ],
+      "centroid": [
+        126.28027,
+        126.19735
+      ],
+      "principal_axis_screen_degrees": -45.05283,
+      "eigenvalue_ratio": 35.93801,
+      "functional_axis_screen_degrees": -45.058487
+    },
+    "icon_hero_w_katana_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        3,
+        29,
+        29
+      ],
+      "centroid": [
+        15.34426,
+        15.41523
+      ],
+      "principal_axis_screen_degrees": -45.45708,
+      "eigenvalue_ratio": 34.14057,
+      "functional_axis_screen_degrees": -45.462914
+    },
+    "icon_hero_w_katana_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        44,
+        43
+      ],
+      "centroid": [
+        23.26544,
+        22.85351
+      ],
+      "principal_axis_screen_degrees": -44.7089,
+      "eigenvalue_ratio": 35.13746,
+      "functional_axis_screen_degrees": -44.737636
+    },
+    "icon_hero_w_katana_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        6,
+        58,
+        57
+      ],
+      "centroid": [
+        31.21626,
+        30.80262
+      ],
+      "principal_axis_screen_degrees": -44.87651,
+      "eigenvalue_ratio": 35.46872,
+      "functional_axis_screen_degrees": -44.906647
+    },
+    "icon_hero_w_katana_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        88,
+        87
+      ],
+      "centroid": [
+        47.04653,
+        46.69721
+      ],
+      "principal_axis_screen_degrees": -45.09807,
+      "eigenvalue_ratio": 35.70243,
+      "functional_axis_screen_degrees": -45.102579
+    },
+    "icon_hero_w_kiem.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        21,
+        235,
+        235
+      ],
+      "centroid": [
+        129.97577,
+        125.08674
+      ],
+      "principal_axis_screen_degrees": -44.98977,
+      "eigenvalue_ratio": 7.519,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_kiem_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        3,
+        29,
+        29
+      ],
+      "centroid": [
+        15.80532,
+        15.20466
+      ],
+      "principal_axis_screen_degrees": -44.98488,
+      "eigenvalue_ratio": 7.49347,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_kiem_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        4,
+        44,
+        44
+      ],
+      "centroid": [
+        23.96572,
+        23.04653
+      ],
+      "principal_axis_screen_degrees": -44.98495,
+      "eigenvalue_ratio": 7.50331,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_kiem_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        6,
+        58,
+        58
+      ],
+      "centroid": [
+        32.09761,
+        30.9184
+      ],
+      "principal_axis_screen_degrees": -44.9911,
+      "eigenvalue_ratio": 7.49519,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_kiem_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        8,
+        88,
+        88
+      ],
+      "centroid": [
+        48.42315,
+        46.60129
+      ],
+      "principal_axis_screen_degrees": -44.99002,
+      "eigenvalue_ratio": 7.51199,
+      "functional_axis_screen_degrees": -45.0
+    },
+    "icon_hero_w_riu.png": {
+      "size": [
+        256,
+        256
+      ],
+      "alpha_bbox": [
+        21,
+        40,
+        235,
+        215
+      ],
+      "centroid": [
+        136.21496,
+        128.08927
+      ],
+      "principal_axis_screen_degrees": -30.85565,
+      "eigenvalue_ratio": 5.45962,
+      "functional_axis_screen_degrees": -44.985122
+    },
+    "icon_hero_w_riu_32.png": {
+      "size": [
+        32,
+        32
+      ],
+      "alpha_bbox": [
+        3,
+        5,
+        29,
+        26
+      ],
+      "centroid": [
+        16.55319,
+        15.13774
+      ],
+      "principal_axis_screen_degrees": -30.43603,
+      "eigenvalue_ratio": 5.48131,
+      "functional_axis_screen_degrees": -44.630355
+    },
+    "icon_hero_w_riu_48.png": {
+      "size": [
+        48,
+        48
+      ],
+      "alpha_bbox": [
+        4,
+        7,
+        44,
+        40
+      ],
+      "centroid": [
+        25.12184,
+        23.20446
+      ],
+      "principal_axis_screen_degrees": -31.18001,
+      "eigenvalue_ratio": 5.39346,
+      "functional_axis_screen_degrees": -45.23774
+    },
+    "icon_hero_w_riu_64.png": {
+      "size": [
+        64,
+        64
+      ],
+      "alpha_bbox": [
+        6,
+        10,
+        58,
+        53
+      ],
+      "centroid": [
+        33.6261,
+        31.26939
+      ],
+      "principal_axis_screen_degrees": -31.27693,
+      "eigenvalue_ratio": 5.39173,
+      "functional_axis_screen_degrees": -45.304438
+    },
+    "icon_hero_w_riu_96.png": {
+      "size": [
+        96,
+        96
+      ],
+      "alpha_bbox": [
+        8,
+        15,
+        88,
+        80
+      ],
+      "centroid": [
+        50.75139,
+        47.40736
+      ],
+      "principal_axis_screen_degrees": -30.60753,
+      "eigenvalue_ratio": 5.48976,
+      "functional_axis_screen_degrees": -44.800364
+    }
+  }
+}

@@ -27,7 +27,8 @@ const FIELD_RIGHT := 696.0
 const UNIT_MAX_Y := WALL_Y
 const DEPLOY_Y := WALL_Y - 36.0
 const ENEMY_SPAWN_Y := -30.0
-const SELL_RECT := Rect2(16, 1196, 152, 76)
+## Contextual drop target, shown by the HUD only while a sellable gear is held.
+const SELL_RECT := Rect2(16, 1196, 688, 76)
 const Economy := preload("res://game/core/Economy.gd")
 const Heroes := preload("res://game/core/Heroes.gd")
 const HeroCat := preload("res://game/core/HeroCat.gd")
@@ -157,7 +158,7 @@ func wave_number() -> int:
 # --- Shop -------------------------------------------------------------------------------
 
 func start_wave() -> void:
-	if phase != "shop":
+	if phase != "shop" or board.is_dragging():
 		return
 	phase = "fight"
 	waves.start_next()
@@ -256,9 +257,11 @@ func sell_gear(gear) -> void:
 		return
 	SoundLib.play("sell")
 	var refund := Economy.sell_refund(gear.troop.rarity, gear.tier)
+	var before := floori(core.meat)
 	core.add_meat(refund)
+	var received := floori(core.meat) - before
 	board.remove_gear(gear)
-	hud.show_message("Đã bán gear, hoàn %d xu." % refund)
+	hud.show_message("Đã bán gear · túi xu đầy." if received == 0 else "Đã bán gear, hoàn %d xu." % received)
 	shop_changed.emit()
 
 

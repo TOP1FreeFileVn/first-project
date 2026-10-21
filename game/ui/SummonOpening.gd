@@ -12,6 +12,7 @@ extends Control
 signal closed
 
 const UiKit = preload("res://game/ui/UiKit.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const Heroes = preload("res://game/core/Heroes.gd")
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
@@ -22,6 +23,7 @@ const CARD_SIZE := Vector2(122, 168)
 
 var _results: Array = []
 var _featured := ""
+var _menu_pattern := false
 var _on_again: Callable
 var _best := 0
 var _stage := "charge"
@@ -63,6 +65,7 @@ func attach(host: Node) -> void:
 	layer.layer = 20
 	host.add_child(layer)
 	layer.add_child(self)
+	_menu_pattern = Ui.register_menu_surface(host, layer, "summon")
 
 
 func _ready() -> void:
@@ -372,7 +375,7 @@ func _close() -> void:
 # --- Drawing ------------------------------------------------------------------------------
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(0.03, 0.02, 0.08, dim))
+	draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(0.03, 0.02, 0.08, dim * (0.5 if _menu_pattern else 1.0)))
 	if ray_alpha > 0.0:
 		for i in 14:
 			var angle := _time * 0.3 + i * TAU / 14.0

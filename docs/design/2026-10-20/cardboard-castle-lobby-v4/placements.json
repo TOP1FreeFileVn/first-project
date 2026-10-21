@@ -1,0 +1,76 @@
+{
+  "review_only": true,
+  "screen": [
+    720,
+    1280
+  ],
+  "background": "processed/courtyard-background.png",
+  "terrain_background": "processed/terrain-background.png",
+  "castle_layer": "processed/castle-layer.png",
+  "occlusion_overlay": "processed/cat-occlusion-overlay.png",
+  "layer_order": [
+    "background",
+    "native cat cream",
+    "native cat tabby",
+    "native cat calico",
+    "cat-occlusion-overlay",
+    "native UI overlay"
+  ],
+  "cats": [
+    {
+      "id": "cream",
+      "source": "game/ui/skin/cat_cream.svg",
+      "raster": "../cardboard-castle-lobby-v2/processed/cat_cream.png",
+      "x": 115,
+      "y": 682,
+      "width": 96,
+      "height": 90,
+      "place": "inside the cardboard tunnel"
+    },
+    {
+      "id": "tabby",
+      "source": "game/ui/skin/cat_tabby.svg",
+      "raster": "../cardboard-castle-lobby-v2/processed/cat_tabby.png",
+      "x": 323,
+      "y": 686,
+      "width": 108,
+      "height": 101,
+      "place": "central path in the playground"
+    },
+    {
+      "id": "calico",
+      "source": "game/ui/skin/cat_calico.svg",
+      "raster": "../cardboard-castle-lobby-v2/processed/cat_calico.png",
+      "x": 496,
+      "y": 772,
+      "width": 96,
+      "height": 90,
+      "place": "inside the cardboard sleeping tray; front wall restored above feet"
+    }
+  ],
+  "castle": {
+    "source": "courtyard-raw.png",
+    "source_region": [
+      100,
+      225,
+      790,
+      780
+    ],
+    "source_doorway_anchor": [
+      433,
+      700
+    ],
+    "destination_doorway_anchor": [
+      365,
+      595
+    ],
+    "scale_from_raw": 0.646,
+    "bounds": [
+      156,
+      290,
+      591,
+      647
+    ]
+  },
+  "processing": "Continuous material blending; source silhouettes/linework preserved. Residual broad shading retained; no hard quantization or SVG redraw."
+}

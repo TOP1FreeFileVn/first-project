@@ -1,0 +1,153 @@
+{
+  "reviewed": "2026-10-21",
+  "product": "Cat Gunner",
+  "package": "com.Chodun.CatGunner",
+  "version": "1.1.64",
+  "scope": "Original extracted UI sprites; not a verified runtime screen.",
+  "assets": [
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_0 (Outline)__882.png",
+      "size": [
+        474,
+        205
+      ],
+      "sha256": "a5672408c60d826ac4602a45b84a5ab1a5cefe75e5cb7ede4c245cdd7137d608"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_0__647.png",
+      "size": [
+        458,
+        181
+      ],
+      "sha256": "0e0c1f8e70b66b8e66509b9cc93cdda8bb78d92f317f89b304840c67df32a8d5"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_0 2__562.png",
+      "size": [
+        442,
+        165
+      ],
+      "sha256": "61206a98f6f8fb8513819504ae215398ae3cf8d52feecd4ef1dc0d9b593830d3"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_1 (Outline)__744.png",
+      "size": [
+        472,
+        203
+      ],
+      "sha256": "4cbee6e23409a7972bef33095034504214ed2224fdbcbad196209f1128dc82e4"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_1__723.png",
+      "size": [
+        456,
+        179
+      ],
+      "sha256": "eb7308fa5493cb5499918877433a67d56958433f8c6eb417080e59b61d21b0bd"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_2__548.png",
+      "size": [
+        458,
+        181
+      ],
+      "sha256": "e9296c3159e50f5c61f0d616d3012aa45a072bffb1ffbd5f07b922d49fb384d2"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_3__540.png",
+      "size": [
+        506,
+        180
+      ],
+      "sha256": "bc7ef590cf945095809085bb6776311d186aa2bcb48ac482244dd325c88a4bd3"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Panel_4__634.png",
+      "size": [
+        400,
+        204
+      ],
+      "sha256": "4296cb73b872db786fcd2ea89c0469b8ef687dd575fc962acdd78c6c4850316c"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Frame_TableFrame01_Line__799.png",
+      "size": [
+        754,
+        61
+      ],
+      "sha256": "3d2ba4391846f01b1ee2695fcf8baea70a24edd355966efc406aed0bf24c4c97"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 1__577.png",
+      "size": [
+        136,
+        140
+      ],
+      "sha256": "0534dec416f6edb43c9890d8ba4af8e2c268ce759fe19f6d34a555916a34e7a3"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 1 (Outline)__617.png",
+      "size": [
+        136,
+        140
+      ],
+      "sha256": "642d6c41527291c9f64944231d0b2c6ee6179d144cbe0fe07e0ad99219b4166b"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 1 (Fill)__948.png",
+      "size": [
+        124,
+        116
+      ],
+      "sha256": "46cc794d4ca1e528df322b482cb4aa2032a46d31dc9fb27b4ec02a7dd2660c04"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 2__545.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "140dcb37ade81eed9d279652749a6fb0d975bd47b3e1c47fa4424d89e720f8b7"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 2 (Outline)__975.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "0ac6e6079e6c3b2258ec12db6cca8ef473e4838255a0d5e268a3b6071d583e95"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 2 (inside)__505.png",
+      "size": [
+        224,
+        224
+      ],
+      "sha256": "5cfece8d4b3261da46d0d351472233630b725e39196658f374311e6410379305"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 7__710.png",
+      "size": [
+        254,
+        179
+      ],
+      "sha256": "903bceaa6836c8e5731a1bcd5d6968ef0bc1f4a98e8140affe118550362c9f48"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\ui 1 (Small) 3__504.png",
+      "size": [
+        84,
+        96
+      ],
+      "sha256": "70e8f477bdadad422862ed3ac01d9253fe94fca9312abc81b32e0dd2cbe747f5"
+    },
+    {
+      "source": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Title_Ribbon_Bg_Green__473.png",
+      "size": [
+        269,
+        153
+      ],
+      "sha256": "2e6e9a0b9535e07f347af70bdf6cfa587d114e5439ede37ff6a25c0997d25606"
+    }
+  ]
+}

@@ -1,0 +1,8796 @@
+{
+	"captures": [
+		{
+			"context": "battle",
+			"file": "battle-before_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "castle",
+			"file": "battle-castle_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "login",
+			"file": "battle-login_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "quests",
+			"file": "battle-quests_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "events",
+			"file": "battle-events_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "battle-patrol_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "profile",
+			"file": "battle-profile_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "settings",
+			"file": "battle-settings_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "castle",
+			"file": "shop-castle_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "shop-patrol_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "profile",
+			"file": "shop-profile_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "settings",
+			"file": "shop-settings_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-restored_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "battle",
+			"file": "battle-after_720x1280.png",
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"context": "battle",
+			"file": "battle-before_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "castle",
+			"file": "battle-castle_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"file": "battle-login_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"file": "battle-quests_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"file": "battle-events_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "battle-patrol_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"file": "battle-profile_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"file": "battle-settings_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "castle",
+			"file": "shop-castle_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "shop-patrol_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"file": "shop-profile_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"file": "shop-settings_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop-restored_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "battle",
+			"file": "battle-after_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "background_context_api_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "persistent_pattern_node_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "initial_battle_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-before",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-before",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_to_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_return_from_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_shop_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_to_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "hero_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "bare_pattern_pixels_move_over_time",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_return_from_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_hero_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_to_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "troops_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_return_from_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_troops_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_to_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "summon_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_nav_return_from_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_after_summon_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_battle_rail_to_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_castle_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_page_overlay_exists_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_page_overlay_hides_underlying_content_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_battle_rail_to_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_login_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_login_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_battle_rail_to_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_quests_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_battle_rail_to_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_events_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_events_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_battle_events_for_transition",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_events_hub_available_for_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_events_to_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_page_overlay_exists_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_page_overlay_hides_underlying_content_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_header_to_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_header_popup_close_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_header_to_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_native_header_popup_close_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_shop_entry_for_overlay_routes",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_base_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_castle_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_page_overlay_exists_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_page_overlay_hides_underlying_content_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_shop-castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_shop-castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_castle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_login_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_login_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_login",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_quests_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_quests",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_events_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_events",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_events_hub_available_for_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_events_to_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_page_overlay_exists_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_page_overlay_hides_underlying_content_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_shop-patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_shop-patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_patrol",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_header_to_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_shop-profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_shop-profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_header_popup_close_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_profile",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_header_to_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_shop-settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_shop-settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_native_header_popup_close_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_settings",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "events_transition_source_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_events_hub_available_for_login_transition",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_shop_events_to_login_transition",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_transitioned_login_close",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_context_palette_applied",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_shop-restored",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_shop-restored",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_battle_return_after_shop_routes",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_semantic_context",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "final_battle_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle-after",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_battle-after",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "initial_battle_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-before",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-before",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_to_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_return_from_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_shop_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_to_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_pattern_pixels_move_over_time",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_return_from_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_hero_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_to_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_return_from_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_troops_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_to_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_tab_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_nav_return_from_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_after_summon_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_battle_rail_to_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_castle_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_page_overlay_exists_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_page_overlay_hides_underlying_content_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_castle_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_battle_rail_to_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_login_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_login_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_battle_rail_to_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_quests_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_quests_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_battle_rail_to_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_events_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_events_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_battle_events_for_transition",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_events_hub_available_for_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_events_to_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_overlay_patrol_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_page_overlay_exists_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_page_overlay_hides_underlying_content_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_close_or_back_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_patrol_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_header_to_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_profile_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_header_popup_close_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_profile_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_header_to_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_header_popup_settings_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_native_header_popup_close_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restored_after_header_popup_settings_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "courtyard_resumes_after_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "top_surface_inherits_active_context_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "older_surface_exit_preserves_top_context_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "last_surface_exit_restores_courtyard_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shop_entry_for_overlay_routes",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_base_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_castle_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_page_overlay_exists_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_page_overlay_hides_underlying_content_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop-castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop-castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_castle_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_login_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_login_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_quests_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_quests_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_events_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_events_hub_available_for_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_events_to_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_overlay_patrol_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_page_overlay_exists_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_page_overlay_hides_underlying_content_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop-patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop-patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_close_or_back_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_patrol_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_header_to_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_profile_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop-profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop-profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_header_popup_close_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_profile_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_header_to_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_header_popup_settings_courtyard_clock_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop-settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop-settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_native_header_popup_close_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_header_popup_settings_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_awning_header_restored_after_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_transition_source_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_events_hub_available_for_login_transition",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shop_events_to_login_transition",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "new_login_context_survives_old_events_queued_exit_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_transitioned_login_close",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_pattern_visible_courtyard_paused_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_scrolling_shop_pattern_shader",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_restored_after_events_login_transition_context_palette_applied",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop-restored",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop-restored",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_battle_return_after_shop_routes",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_semantic_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_one_persistent_pattern",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_fullscreen_header_content_nav_coverage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_pattern_does_not_intercept_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_pattern_behind_header_and_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_courtyard_actor_identity_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_courtyard_visible_pattern_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "final_battle_no_shop_awning_in_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle-after",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle-after",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "menu_contexts_have_distinct_suitable_color_families",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_keeps_original_background_script",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_scene_has_no_menu_pattern_material",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "combat_probe_never_starts_wave",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"context_colors": {
+		"castle": "93aaa0",
+		"events": "b89299",
+		"hero": "96b5ae",
+		"login": "bca789",
+		"patrol": "a4bb91",
+		"profile": "92abae",
+		"quests": "99b3c1",
+		"settings": "8ea4b4",
+		"shop": "4e78a3",
+		"summon": "81749f",
+		"troops": "b1c6a3"
+	},
+	"failures": 0,
+	"motion": [
+		{
+			"after": "pattern-motion-end_720x1280.png",
+			"before": "pattern-motion-start_720x1280.png",
+			"changed_fraction": 0.160277777777778,
+			"interval_seconds": 0.7,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"after": "pattern-motion-end_360x640.png",
+			"before": "pattern-motion-start_360x640.png",
+			"changed_fraction": 0.16125,
+			"interval_seconds": 0.7,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-21/menu-pattern-background/profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

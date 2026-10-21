@@ -160,7 +160,7 @@ func _go(step: String) -> void:
 			_say("④ Xếp xong rồi! Bấm SẴN SÀNG để địch tới. Lính tự đánh, giữ thành đừng để hết máu.", CARD_Y, func(): return hud._ready_button.get_global_rect())
 			_next.visible = false
 		"fight":
-			_say("Trong trận vẫn kéo, ghép và bán gear được (kéo vào ô BÁN). Chỉ mua được ở lượt nghỉ.", 120.0, Callable())
+			_say("Trong trận vẫn kéo và ghép gear được. Muốn bán, kéo gear xuống vùng bán hiện ở dưới. Chỉ mua được ở lượt nghỉ.", 120.0, Callable())
 			_next.visible = false
 			_auto_hide = 6.0
 		"income":

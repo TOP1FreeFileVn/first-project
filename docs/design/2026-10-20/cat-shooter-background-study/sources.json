@@ -1,0 +1,205 @@
+{
+  "reviewed": "2026-10-20",
+  "product": "Cat Gunner",
+  "package": "com.Chodun.CatGunner",
+  "version": "1.1.64",
+  "source_root": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64",
+  "provenance": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\input-provenance.json",
+  "scope": "Recovered source sprite study only; no runtime scene/layout verification.",
+  "assets": [
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Map_0__644.png",
+      "size": [
+        512,
+        286
+      ],
+      "sha256": "25edceaf63a6fb745a66c478840ca00188d4766b76469e9079f16a89ef79e282"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Map_1__896.png",
+      "size": [
+        512,
+        286
+      ],
+      "sha256": "cece1e943e5ec9096c15838be45b6a256f3661f8e7f30a086de7566d19e88ff7"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Map_2__606.png",
+      "size": [
+        512,
+        286
+      ],
+      "sha256": "26982f66cbd5f0bb8dda51b7d083e8673629bc47894e421dfdde9b035e53599a"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Road_Forest__497.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "8e52e598ded963f3182b8bd2fbbdabbd5ce4e47b32dba99b073f5d7a1e28e9ad"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Field_Forest__622.png",
+      "size": [
+        128,
+        128
+      ],
+      "sha256": "33aa25834ee0cf9ce9f0b367db1790bd89fa60a60ed419c3831ba8a5403e49a1"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Road_up_Forest__590.png",
+      "size": [
+        253,
+        33
+      ],
+      "sha256": "d124f10731cf64e3ec2843805c29779c4e8ff693e99be701e7a17de2c9d03d64"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Bush_Yellow_Green_03__839.png",
+      "size": [
+        248,
+        148
+      ],
+      "sha256": "4986aa188b63dfc289cf7bdf12b576726d3903165e97c21106b7a0447e1db88c"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Bush_Yellow_Green_02__841.png",
+      "size": [
+        124,
+        104
+      ],
+      "sha256": "3508c1cc8a6d1647ebf17c28a7a7a6823c35f9ccc0ed3b2af5eff77cc86625a6"
+    },
+    {
+      "file": "C:\\Users\\dangp\\OneDrive\\Documents\\first-project\\reverse_engineering\\CatGunner_1.1.64\\Assets\\Sprite\\sharedassets0.assets\\Forest_Grass__864.png",
+      "size": [
+        46,
+        20
+      ],
+      "sha256": "86d8f2a4f284fd729bc152a1cb0142a6750755f87c0e0058baf436b30e3f9925"
+    }
+  ],
+  "palette_samples": {
+    "Map_0__644.png": [
+      {
+        "hex": "#9ad3e6",
+        "pixel_count": 2251
+      },
+      {
+        "hex": "#92ab58",
+        "pixel_count": 1514
+      },
+      {
+        "hex": "#e5fcff",
+        "pixel_count": 1491
+      },
+      {
+        "hex": "#8aa95b",
+        "pixel_count": 1224
+      },
+      {
+        "hex": "#abc36b",
+        "pixel_count": 1102
+      },
+      {
+        "hex": "#9bd4e7",
+        "pixel_count": 1006
+      },
+      {
+        "hex": "#e6fbff",
+        "pixel_count": 897
+      },
+      {
+        "hex": "#91ab58",
+        "pixel_count": 870
+      },
+      {
+        "hex": "#91ab57",
+        "pixel_count": 803
+      },
+      {
+        "hex": "#acc36b",
+        "pixel_count": 784
+      },
+      {
+        "hex": "#99d3e6",
+        "pixel_count": 768
+      },
+      {
+        "hex": "#7e9e6c",
+        "pixel_count": 753
+      }
+    ],
+    "Road_Forest__497.png": [
+      {
+        "hex": "#b89475",
+        "pixel_count": 16384
+      }
+    ],
+    "Field_Forest__622.png": [
+      {
+        "hex": "#61864e",
+        "pixel_count": 16378
+      },
+      {
+        "hex": "#61864d",
+        "pixel_count": 6
+      }
+    ],
+    "Road_up_Forest__590.png": [
+      {
+        "hex": "#61864e",
+        "pixel_count": 3765
+      },
+      {
+        "hex": "#61844e",
+        "pixel_count": 996
+      },
+      {
+        "hex": "#415935",
+        "pixel_count": 152
+      },
+      {
+        "hex": "#405834",
+        "pixel_count": 137
+      },
+      {
+        "hex": "#405a36",
+        "pixel_count": 128
+      },
+      {
+        "hex": "#405934",
+        "pixel_count": 101
+      },
+      {
+        "hex": "#415b34",
+        "pixel_count": 98
+      },
+      {
+        "hex": "#405732",
+        "pixel_count": 67
+      },
+      {
+        "hex": "#415a34",
+        "pixel_count": 59
+      },
+      {
+        "hex": "#405a35",
+        "pixel_count": 58
+      },
+      {
+        "hex": "#60874e",
+        "pixel_count": 49
+      },
+      {
+        "hex": "#61864f",
+        "pixel_count": 49
+      }
+    ]
+  },
+  "excluded_after_inspection": {
+    "Raid_0__105.png": "Boss/slime character texture atlas, not a background.",
+    "Background__449.png": "Generic 32x32 Unity UI sprite, not scene art."
+  }
+}

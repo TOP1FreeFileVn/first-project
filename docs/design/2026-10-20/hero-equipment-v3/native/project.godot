@@ -1,0 +1,19 @@
+config_version=5
+
+[application]
+config/name="Hero equipment v3 isolated review"
+config/use_custom_user_dir=true
+; run.ps1 redirects child-process APPDATA to the local profile-roaming folder.
+config/custom_user_dir_name="StudioHeroV3"
+
+[display]
+window/size/viewport_width=1024
+window/size/viewport_height=760
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+environment/defaults/default_clear_color=Color(0.847,0.898,0.875,1)
+
+[debug]
+file_logging/enable_file_logging=false

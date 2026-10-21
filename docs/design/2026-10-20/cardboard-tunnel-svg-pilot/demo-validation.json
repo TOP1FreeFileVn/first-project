@@ -1,0 +1,37 @@
+{
+	"cat_alpha": 1.0,
+	"cat_global_scale": [
+		1.0,
+		1.0
+	],
+	"depth_sort_enabled": true,
+	"duration_seconds": 23,
+	"exploded_view_checked": true,
+	"fps": 10,
+	"frames": 230,
+	"front_pose_source": "cat-spine-parts/svg/cat_tabby",
+	"isolated_project": true,
+	"pose_policy": "front_only_all_states",
+	"production_code_modified": false,
+	"prop": "tunnel",
+	"rear_pose_loaded": false,
+	"resolution": [
+		1100,
+		760
+	],
+	"same_z_index": true,
+	"scope": "Vector occlusion pilot; front-facing cat by design, simple foot motion, no Spine runtime.",
+	"states": [
+		"Đi phía trước",
+		"Vòng ra phía sau",
+		"Đi phía sau",
+		"Vòng về phía trước",
+		"Tới trước cửa",
+		"Tới ngưỡng cửa",
+		"Đang chui vào",
+		"Ngồi trong ống",
+		"Đi ra ngoài",
+		"Trở lại sân"
+	],
+	"switch_props_while_occupied_checked": true
+}

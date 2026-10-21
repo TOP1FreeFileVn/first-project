@@ -1,0 +1,4986 @@
+{
+	"caption_review_only": false,
+	"captures": [
+		{
+			"file": "press_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214094056790,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214060502356,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 0.94,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								24.0236778259277,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								167.729339599609,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 2
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "opening_025ms_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": true,
+						"badge": false,
+						"button_id": 214094056790,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214060502356,
+						"lid": 0.210700690746307,
+						"lift": 0.0,
+						"press": 0.958402861356735,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.00311223506927
+					},
+					{
+						"animating": true,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": true,
+						"badge": true,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								24.0236778259277,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 1.0,
+						"lift": 0.987551060505211,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								167.729339599609,
+								198.0
+							]
+						},
+						"weight": 1.31688776493073
+					},
+					{
+						"animating": true,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": true,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 0
+			},
+			"timing": {
+				"release_elapsed_ms": 73.816,
+				"requested_elapsed_ms": 25
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "opening_100ms_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": true,
+						"badge": false,
+						"button_id": 214094056790,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								6.85143089294434,
+								72.4086532592773
+							],
+							"size": [
+								61.2980766296387,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214060502356,
+						"lid": 0.985779881477356,
+						"lift": 0.915069103240967,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								150.001876831055,
+								198.0
+							]
+						},
+						"weight": 1.19067058563232
+					},
+					{
+						"animating": true,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								166.001876831055,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": true,
+						"badge": true,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								18.2901268005371,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 0.593729913234711,
+						"lift": 0.224275946617126,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								299.069549560547,
+								6.0
+							],
+							"size": [
+								144.795135498047,
+								198.0
+							]
+						},
+						"weight": 1.12932941436768
+					},
+					{
+						"animating": true,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": true,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 0
+			},
+			"timing": {
+				"release_elapsed_ms": 108.945,
+				"requested_elapsed_ms": 100
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "opening_220ms_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": true,
+						"badge": false,
+						"button_id": 214094056790,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								11.272367477417,
+								72.4086532592773
+							],
+							"size": [
+								61.2980766296387,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214060502356,
+						"lid": 1.0,
+						"lift": 1.04634976387024,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								167.685623168945,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								183.685623168945,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8691892623901,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								316.753295898438,
+								6.0
+							],
+							"size": [
+								127.111389160156,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 0
+			},
+			"timing": {
+				"release_elapsed_ms": 234.307,
+				"requested_elapsed_ms": 220
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "shop_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214094056790,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								11.2832927703857,
+								72.4086532592773
+							],
+							"size": [
+								61.2980766296387,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214060502356,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								167.72932434082,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								183.72932434082,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								316.796997070313,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 0
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "hero_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214094056790,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214060502356,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214312160610,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								10.8025236129761,
+								72.4086532592773
+							],
+							"size": [
+								62.2596130371094,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214278606176,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								167.72932434082,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								316.796997070313,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 1
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "battle_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214094056790,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214060502356,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								24.0236778259277,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								167.729339599609,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 2
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "troops_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214094056790,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214060502356,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								27.7496395111084,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								409.203002929688,
+								6.0
+							],
+							"size": [
+								167.729309082031,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 3
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "summon_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214094056790,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214060502356,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								409.203002929688,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.4278846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								14.7688694000244,
+								71.2067337036133
+							],
+							"size": [
+								54.3269233703613,
+								16.5865383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214932917636,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								542.270690917969,
+								6.0
+							],
+							"size": [
+								167.729309082031,
+								198.0
+							]
+						},
+						"weight": 1.32
+					}
+				],
+				"selected": 4
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "battle_720x1280.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214094056790,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214060502356,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214312160610,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214278606176,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214530264430,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								24.0236778259277,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214496709996,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								167.729339599609,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214748368250,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214714813816,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214966472070,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 214932917636,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 2
+			},
+			"timing": {},
+			"window": [
+				720,
+				1280
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "persistent_carton_bar_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "component_review_state_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "five_persistent_tab_wrappers",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_0",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_1",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_2",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_3",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_4",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "initial_battle_selection",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_pointer_down_compresses_carton",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "pointer_down_does_not_select_before_release",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_capture_size_press_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_pointer_release_selects_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "release_keeps_component_and_cell_instances",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_capture_size_opening_025ms_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "opening_has_intermediate_flap_phase",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_capture_size_opening_100ms_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "icon_lifts_during_opening",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "outgoing_icon_recedes_before_closing",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "outgoing_flaps_close_through_intermediate_phase",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_capture_size_opening_220ms_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "opening_settles_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_press_released_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_motion_stopped_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_press_released_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_motion_stopped_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_press_released_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_motion_stopped_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_press_released_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_motion_stopped_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_press_released_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_settles_motion_stopped_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "opening_does_not_rebuild_nav",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_pointer_switch_last_tab_wins",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_press_released_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_motion_stopped_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_press_released_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_motion_stopped_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_press_released_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_motion_stopped_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_press_released_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_motion_stopped_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_press_released_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_settles_without_stranded_flaps_motion_stopped_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_does_not_restart_flaps",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_does_not_restart_icon_lift",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_press_released_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_motion_stopped_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_press_released_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_motion_stopped_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_press_released_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_motion_stopped_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_press_released_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_motion_stopped_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_press_released_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "same_tab_retap_settles_motion_stopped_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "rapid_switch_and_retap_preserve_instances",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "data_and_tick_refresh_preserve_bar_and_cells",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "data_refresh_preserves_selection",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "production_badge_matches_page_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "production_badge_matches_page_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "production_badge_matches_page_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "production_badge_matches_page_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "production_badge_matches_page_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "badge_update_reuses_cells",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "badge_update_preserves_instances",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "data_refresh_during_motion_does_not_restart_opening",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "data_refresh_during_motion_preserves_instances",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_overlay_keeps_carton_navigation_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "carton_tab_closes_overlay_and_selects_page",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "overlay_close_preserves_cartons",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "registered_full_screen_modal_hides_carton_nav",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "modal_close_restores_same_carton_nav",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "modal_visibility_cycle_preserves_instances",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "pointer_selects_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "pointer_selects_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_hero_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "pointer_selects_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "pointer_selects_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_troops_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "pointer_selects_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_summon_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "pointer_selects_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "pointer_selects_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "pointer_selects_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_battle_720x1280",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "pointer_selects_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "pointer_selects_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "selection_preserves_bar_and_cells_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_hero",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_troops",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_on_screen_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "touch_target_at_least_44px_summon",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "neighbor_touch_targets_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_press_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_opening_025ms_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_opening_100ms_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_opening_220ms_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_hero_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_troops_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_summon_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle_720x1280",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"persistent_bar_id": 213959839055,
+	"persistent_cell_ids": [
+		214060502356,
+		214278606176,
+		214496709996,
+		214714813816,
+		214932917636
+	],
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/carton-nav-integration-profile/roaming/Godot/app_userdata/Gear Defenders",
+	"scope": "Production Home, native pointer events, RAM-only fixture; no battle or purchase."
+}

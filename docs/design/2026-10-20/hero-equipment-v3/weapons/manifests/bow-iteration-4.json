@@ -1,0 +1,18 @@
+{
+  "fileKey": "2uKzqvXeOSPQqfaow6s7TU",
+  "nodeId": "54:2",
+  "model": "gpt-image-2.5-sunburst",
+  "image": {
+    "url": "https://www.figma.com/api/mcp/asset/3546815f-9a12-43d4-88e6-312db3ea4efa.png",
+    "url_expires_in_days": 7,
+    "width": 1024,
+    "height": 1024,
+    "format": "png",
+    "model": "gpt-image-2.5-sunburst"
+  },
+  "instructions": "The full-resolution image is hosted at image.url in the first content entry (as JSON). Download the full-resolution PNG by running:\n\n  curl -f -L -o image.png \"https://www.figma.com/api/mcp/asset/3546815f-9a12-43d4-88e6-312db3ea4efa.png\"\n\nIMPORTANT: The URL expires after 7 days. The user MUST download the PNG before the URL expires to keep a copy.\nThe URL returns raw PNG bytes (Content-Type: image/png).\nAny inline image is a thumbnail preview (at most 256px per side), not the full-resolution image.",
+  "prompt": "prompts/bow-iteration-4.txt",
+  "selected": false,
+  "review": "Generated recurve silhouette informed authored refinement, but the raw source fails stroke:21–26sourcepx. It is retained as reference, not selected as final.",
+  "next_asset": "../authored/bow-refined.svg"
+}

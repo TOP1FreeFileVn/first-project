@@ -1,0 +1,235 @@
+{
+	"captures": [
+		{
+			"dragging": true,
+			"file": "full-wallet-hover_360x640.png",
+			"sell_visible": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"dragging": true,
+			"file": "fractional-capacity-hover_360x640.png",
+			"sell_visible": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "fixture_has_real_weapon_skill_gear",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "drag_read_api_available",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_press_motion_starts_drag",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_label_matches_visible_balance_gain",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_fixture_refund_exceeds_capacity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_capacity_hint_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_full-wallet-hover",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_full-wallet-hover",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_sale_removes_one_gear",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_sale_applies_only_available_capacity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_sale_matches_displayed_whole_coin_gain",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_toast_reports_received_gain",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_duplicate_release_cannot_pay_extra",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_wallet_sale_does_not_activate_hud",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_press_motion_starts_drag",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_label_matches_visible_balance_gain",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_fixture_refund_exceeds_capacity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_capacity_hint_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_fractional-capacity-hover",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_fractional-capacity-hover",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_sale_removes_one_gear",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_sale_applies_only_available_capacity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_sale_matches_displayed_whole_coin_gain",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_toast_reports_received_gain",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_duplicate_release_cannot_pay_extra",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fractional_capacity_sale_does_not_activate_hud",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/docs/ui_review/2026-10-21/gear-sell-drop/profile/AppData/Roaming/Godot/app_userdata/Gear Defenders"
+}

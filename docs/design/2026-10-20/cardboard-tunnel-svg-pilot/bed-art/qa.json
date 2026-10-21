@@ -1,0 +1,43 @@
+{
+  "render_scale": 3,
+  "all_canvas_dimensions": [
+    768,
+    720
+  ],
+  "front_centre_column_alpha_y144_to239": 0,
+  "front_side_wall_alpha": 255,
+  "clear_entry_by_local_y": {
+    "190": {
+      "left": 75.333,
+      "right_exclusive": 180.667,
+      "width": 105.333
+    },
+    "199": {
+      "left": 78.667,
+      "right_exclusive": 177.333,
+      "width": 98.667
+    },
+    "210": {
+      "left": 78.667,
+      "right_exclusive": 177.333,
+      "width": 98.667
+    },
+    "220": {
+      "left": 78.667,
+      "right_exclusive": 177.333,
+      "width": 98.667
+    },
+    "224": {
+      "left": 78.667,
+      "right_exclusive": 177.333,
+      "width": 98.667
+    }
+  },
+  "source_vs_split_composite": {
+    "max_rgba_difference": 5,
+    "mean_abs_difference": 0.0006709346064814814,
+    "changed_rgba_components": 1358
+  },
+  "svg_image_elements": 0,
+  "cat_proof_pose": "unchanged native front only"
+}

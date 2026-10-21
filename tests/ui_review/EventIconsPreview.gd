@@ -9,6 +9,7 @@ const HomeScene = preload("res://game/menu/Home.tscn")
 const WINDOW_SIZES := [Vector2i(720, 1280), Vector2i(360, 640)]
 const ICON_SIZES := [32, 48, 64, 96, 128]
 const ICONS := ["tab_shop", "rail_checkin", "rail_quest", "rail_event", "rail_castle", "rail_patrol", "rail_online", "rail_limited"]
+const SHORTCUT_ROUTE_SETTLE := 0.30
 
 @export var output_dir := OUT
 @export var routes_only := false
@@ -86,7 +87,7 @@ func _ready() -> void:
 func _events_round_trip(size: Vector2i, page := "events", route := "events") -> void:
 	var shortcut := _named_shortcut("EventsShortcut", "Sự kiện")
 	var tapped := await _tap(shortcut)
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(SHORTCUT_ROUTE_SETTLE).timeout
 	var overlay := _active_popup()
 	var opened := tapped and overlay != null and _contains_label(overlay, "Sự kiện") and _contains_label(overlay, "Tuần tra")
 	_record_route(route + "_shortcut_opens_events", opened, size)
@@ -121,7 +122,7 @@ func _events_paid_round_trip(size: Vector2i) -> void:
 
 func _popup_shortcut_round_trip(shortcut_name: String, title: String, route: String, size: Vector2i) -> void:
 	var tapped := await _tap(_named_shortcut(shortcut_name, title))
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(SHORTCUT_ROUTE_SETTLE).timeout
 	var overlay := _active_popup()
 	_record_route(route + "_shortcut_opens_popup", tapped and overlay != null and _contains_label(overlay, title), size)
 	if overlay == null:
@@ -136,7 +137,7 @@ func _popup_shortcut_round_trip(shortcut_name: String, title: String, route: Str
 
 func _castle_round_trip(size: Vector2i) -> void:
 	var tapped := await _tap(_named_shortcut("CastleShortcut", "Thành"))
-	await get_tree().create_timer(0.2).timeout
+	await get_tree().create_timer(SHORTCUT_ROUTE_SETTLE).timeout
 	var page: Control = _home._overlay_page
 	var opened := tapped and page != null and _contains_label(page, "Thành") and _contains_label(page, "Máu thành")
 	_record_route("castle_shortcut_opens_castle", opened, size)
@@ -185,6 +186,8 @@ func _nav_button(index: int) -> Button:
 
 
 func _shortcut_button(node: Node, caption: String) -> Button:
+	if node is Button and node.is_visible_in_tree() and node.tooltip_text == caption:
+		return node
 	# The hit button is a sibling of the illustrated content inside its wrapper.
 	if node is Control and node.is_visible_in_tree() and _contains_label(node, caption):
 		for child in node.get_children():
@@ -198,6 +201,10 @@ func _shortcut_button(node: Node, caption: String) -> Button:
 
 
 func _direct_button(node: Node) -> Button:
+	if node == null:
+		return null
+	if node is Button and node.is_visible_in_tree():
+		return node
 	for child in node.get_children():
 		if child is Button and child.is_visible_in_tree():
 			return child

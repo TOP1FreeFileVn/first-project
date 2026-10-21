@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1280" viewBox="0 0 720 1280">
+<!-- Contour cleanup traced from the generated three-box cat fortress.
+     Same design and layout; uniform flat materials and rounded cat-style ink. -->
+<g stroke="#583f21" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round">
+  <!-- Left shipping-box turret -->
+  <path d="M149 395H253V523Q253 529 247 529H155Q149 529 149 523Z" fill="#e9bd7a"/>
+  <path d="M149 398V377H167V390H185V377H205V390H223V377H241V398Z" fill="#f4d9a4"/>
+  <path d="M188 399H209V434L205 431 201 435 197 431 193 435 188 432Z" fill="#fff0b6" stroke="none"/>
+  <!-- Right shipping-box turret -->
+  <path d="M469 395H573V523Q573 529 567 529H475Q469 529 469 523Z" fill="#e9bd7a"/>
+  <path d="M469 398V377H487V390H505V377H525V390H543V377H561V398Z" fill="#f4d9a4"/>
+  <path d="M508 399H529V434L525 431 521 435 517 431 513 435 508 432Z" fill="#fff0b6" stroke="none"/>
+  <!-- Main keep: warm flat box front, folded ears and carton battlements -->
+  <path d="M253 349H469V536Q469 543 462 543H260Q253 543 253 536Z" fill="#e9bd7a"/>
+  <path d="M253 349L273 294Q277 285 284 291L311 325H332V313H352V338H372V313H392V325H414L442 291Q449 285 452 295L469 349Z" fill="#f4d9a4"/>
+  <path d="M273 329L281 306 301 329Z M423 329L444 306 450 329Z" fill="#d3a15f" stroke="none"/>
+  <path d="M350 350H375V410L370 406 365 411 360 406 355 411 350 407Z" fill="#fff0b6" stroke="none"/>
+  <!-- Cat-head entrance is an open cutout, not a face decoration -->
+  <path d="M311 525L314 468Q312 447 318 425Q320 417 326 421L345 436Q363 430 380 436L398 421Q404 417 406 426L410 468V525Z" fill="#583f21" stroke="none"/>
+  <path d="M326 518H395L410 563H312Z" fill="#e9bd7a"/>
+  <!-- Small cat-head window cutouts -->
+  <path d="M184 482L186 467Q187 464 190 467L197 473Q203 470 209 473L216 467Q219 464 220 468L222 482Q224 498 203 499Q183 498 184 482Z" fill="#583f21" stroke="none"/>
+  <path d="M504 482L506 467Q507 464 510 467L517 473Q523 470 529 473L536 467Q539 464 540 468L542 482Q544 498 523 499Q503 498 504 482Z" fill="#583f21" stroke="none"/>
+  <!-- Folded fish flags -->
+  <path d="M360 337V252M190 376V336M510 376V336" fill="none"/>
+  <path d="M364 257Q382 251 394 263L406 257Q413 253 410 262L406 272 411 282Q414 290 407 286L394 281Q381 292 364 282Z" fill="#64a8ad"/>
+  <path d="M194 340Q207 335 217 344L226 340Q232 337 229 343L226 351 230 359Q233 365 227 362L217 358Q207 367 194 361Z" fill="#64a8ad"/>
+  <path d="M514 340Q527 335 537 344L546 340Q552 337 549 343L546 351 550 359Q553 365 547 362L537 358Q527 367 514 361Z" fill="#64a8ad"/>
+</g>
+</svg>

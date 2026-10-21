@@ -1,0 +1,68 @@
+{
+  "canvas": [
+    256,
+    240
+  ],
+  "render_scale": 3,
+  "gear_fits": {
+    "helmet": {
+      "bounds": [
+        33,
+        8,
+        223.0,
+        79.66666666666667
+      ],
+      "scale": 0.18962075848303395,
+      "aspect_preserved": true
+    },
+    "armor": {
+      "bounds": [
+        68,
+        119,
+        188.0,
+        223.0
+      ],
+      "scale": 0.12658227848101267,
+      "aspect_preserved": true
+    },
+    "amulet": {
+      "bounds": [
+        120,
+        149,
+        136.0,
+        172.0
+      ],
+      "scale": 0.024169184290030215,
+      "aspect_preserved": true
+    }
+  },
+  "fixed_paws": [
+    [
+      94,
+      166
+    ],
+    [
+      160,
+      166
+    ]
+  ],
+  "cleanup": "Palette flattening, white matte removal and aspect-preserving placement only; no dilation or contour rebuilding.",
+  "line_note": "9px main target. Sword generated8.91. Bow/staff/axe manually authored9px; bowstring1.4px. Small gear contour varies~6-7px.",
+  "color_adjustment": "Painted sRGB values multiplied1.10 with255clamp; contour pixels within30 RGBdistance of#583f21 preserved. Cat/base unchanged.",
+  "accepted_spear_reference": "../spear-stroke-sample/processing.json",
+  "weapons": "weapons/processing.json",
+  "bow_refinement": "weapons/authored/authored-processing.json",
+  "heavy_refinement": "weapons-heavy/processing.json",
+  "paired_gear": "gear-details/processing.json",
+  "scope": "Design review set, not production integration or combat animation.",
+  "layers": [
+    "body",
+    "armor",
+    "boots",
+    "amulet",
+    "head-noears",
+    "helmet",
+    "weapon",
+    "gloves"
+  ]
+}

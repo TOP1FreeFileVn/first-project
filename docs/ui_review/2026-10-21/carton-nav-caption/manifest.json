@@ -1,0 +1,2537 @@
+{
+	"caption_review_only": true,
+	"captures": [
+		{
+			"file": "shop_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214396046678,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								11.2832927703857,
+								72.4086532592773
+							],
+							"size": [
+								61.2980766296387,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214362492244,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								167.72932434082,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								183.72932434082,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								316.796997070313,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 0
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "hero_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214614150498,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								10.8025236129761,
+								72.4086532592773
+							],
+							"size": [
+								62.2596130371094,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214580596064,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								167.72932434082,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								316.796997070313,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 1
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "battle_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								24.0236778259277,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								167.729339599609,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 2
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "troops_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								27.7496395111084,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								409.203002929688,
+								6.0
+							],
+							"size": [
+								167.729309082031,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 3
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "summon_360x640.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								409.203002929688,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.4278846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								14.7688694000244,
+								71.2067337036133
+							],
+							"size": [
+								54.3269233703613,
+								16.5865383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215234907524,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								542.270690917969,
+								6.0
+							],
+							"size": [
+								167.729309082031,
+								198.0
+							]
+						},
+						"weight": 1.32
+					}
+				],
+				"selected": 4
+			},
+			"timing": {},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "shop_450x800.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214396046678,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								11.2832927703857,
+								72.4086532592773
+							],
+							"size": [
+								61.2980766296387,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214362492244,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								167.72932434082,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								183.72932434082,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								316.796997070313,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 0
+			},
+			"timing": {},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "hero_450x800.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214614150498,
+						"caption_baseline": 83.9471153846154,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								10.8025236129761,
+								72.4086532592773
+							],
+							"size": [
+								62.2596130371094,
+								14.1826915740967
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214580596064,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								167.72932434082,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								316.796997070313,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 1
+			},
+			"timing": {},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "battle_450x800.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								24.0236778259277,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								167.729339599609,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								449.864654541016,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 2
+			},
+			"timing": {},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "troops_450x800.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								27.7496395111084,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								409.203002929688,
+								6.0
+							],
+							"size": [
+								167.729309082031,
+								198.0
+							]
+						},
+						"weight": 1.32
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.3900460531859,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								71.2704086303711
+							],
+							"size": [
+								53.9097747802734,
+								16.4591789245605
+							]
+						},
+						"caption_scale": 0.238538831862728,
+						"id": 215234907524,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								582.932312011719,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					}
+				],
+				"selected": 3
+			},
+			"timing": {},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "summon_450x800.png",
+			"state": {
+				"cells": [
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214396046678,
+						"caption_baseline": 83.4111013961493,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								255.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.2633819580078
+							],
+							"size": [
+								53.9097747802734,
+								12.4732418060303
+							]
+						},
+						"caption_scale": 0.211410886278339,
+						"id": 214362492244,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								10.0,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214614150498,
+						"caption_baseline": 83.350698285784,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								259.0,
+								59.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								4.81203031539917,
+								73.3596954345703
+							],
+							"size": [
+								53.9097785949707,
+								12.2806053161621
+							]
+						},
+						"caption_scale": 0.208145853285624,
+						"id": 214580596064,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								143.067672729492,
+								6.0
+							],
+							"size": [
+								127.067672729492,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 214832254318,
+						"caption_baseline": 85.9903846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								149.0,
+								56.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								13.8582639694214,
+								72.7692337036133
+							],
+							"size": [
+								35.8173065185547,
+								13.4615383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 214798699884,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								276.135345458984,
+								6.0
+							],
+							"size": [
+								127.067657470703,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": true,
+						"button_id": 215050358138,
+						"caption_baseline": 85.1490384615385,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-48.0
+							],
+							"size": [
+								118.0,
+								49.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								17.5842266082764,
+								73.6105804443359
+							],
+							"size": [
+								28.3653831481934,
+								11.7788457870483
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215016803704,
+						"lid": 0.0,
+						"lift": 0.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								409.203002929688,
+								6.0
+							],
+							"size": [
+								127.067687988281,
+								198.0
+							]
+						},
+						"weight": 1.0
+					},
+					{
+						"animating": false,
+						"badge": false,
+						"button_id": 215268461958,
+						"caption_baseline": 84.4278846153846,
+						"caption_ink": {
+							"position": [
+								0.0,
+								-55.0
+							],
+							"size": [
+								226.0,
+								69.0
+							]
+						},
+						"caption_ink_rect": {
+							"position": [
+								14.7688694000244,
+								71.2067337036133
+							],
+							"size": [
+								54.3269233703613,
+								16.5865383148193
+							]
+						},
+						"caption_scale": 0.240384615384615,
+						"id": 215234907524,
+						"lid": 1.0,
+						"lift": 1.0,
+						"press": 1.0,
+						"rect": {
+							"position": [
+								542.270690917969,
+								6.0
+							],
+							"size": [
+								167.729309082031,
+								198.0
+							]
+						},
+						"weight": 1.32
+					}
+				],
+				"selected": 4
+			},
+			"timing": {},
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "persistent_carton_bar_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "component_review_state_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "five_persistent_tab_wrappers",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_0",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_1",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_2",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_3",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "direct_native_button_4",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "initial_battle_selection",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_shop",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_hero",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_battle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_troops",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "page_visibility_summon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "exactly_one_page_selected",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "bar_matches_production_selected_page",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_capture_size_shop_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_hero_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_battle_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_troops_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_summon_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_shop_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_hero_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_battle_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_troops_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_summon_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_shop_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_hero_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_battle_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_troops_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_summon_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_shop_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_hero_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_battle_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_troops_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_summon_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"persistent_bar_id": 214261828943,
+	"persistent_cell_ids": [
+		214362492244,
+		214580596064,
+		214798699884,
+		215016803704,
+		215234907524
+	],
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/carton-nav-caption-profile/roaming/Godot/app_userdata/Gear Defenders",
+	"scope": "Production Home, native pointer events, RAM-only fixture; no battle or purchase."
+}

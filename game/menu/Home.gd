@@ -8,11 +8,14 @@ extends Control
 
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
+const CartonNav = preload("res://game/ui/CartonNav.gd")
+const LobbyShortcut = preload("res://game/ui/LobbyShortcut.gd")
 const AdminGate = preload("res://game/admin/AdminGate.gd")
 const AdminPanel = preload("res://game/admin/AdminPanel.gd")
 const MetaPopups = preload("res://game/menu/popups/MetaPopups.gd")
 const SummonPage = preload("res://game/menu/pages/SummonPage.gd")
 const CastlePage = preload("res://game/menu/pages/CastlePage.gd")
+const CardboardLobby = preload("res://game/menu/lobby/CardboardLobby.gd")
 const PAGES := [
 	preload("res://game/menu/pages/ShopPage.gd"),
 	preload("res://game/menu/pages/HeroCatPage.gd"),
@@ -27,12 +30,10 @@ const BATTLE_TAB := 2
 const TROOPS_TAB := 3
 const SUMMON_TAB := 4
 const TOP_HEIGHT := 112.0
-const NAV_HEIGHT := 160.0
+const NAV_HEIGHT := 204.0
 const SHOP_SKY := Color("4e78a3")
 const SHOP_AWNING_SIZE := Vector2(720, 104)
 const SCREEN := Vector2(720, 1280)
-## The nav bar runs this far past the bottom edge (see Ui.bottom_nav).
-const NAV_BLEED := 18.0
 
 # Remembered across scene changes so returning from a battle lands on the same tab.
 static var last_tab := BATTLE_TAB
@@ -40,17 +41,21 @@ static var last_tab := BATTLE_TAB
 var _content: Control
 var _pages: Array = []
 var _current := -1
-var _sky_backdrop: ColorRect
-var _shop_backdrop: ColorRect
+var _pattern_backdrop: ColorRect
+var _shop_awning: Control
+var _menu_surfaces: Array = []
+var _lobby_world: Control
 var _header: Control
 var _gold_label: Label
 var _gem_label: Label
 var _cheat_label: Label
 var _nav_holder: Control
-var _nav_key := ""
-## Side rails on the Chiến tab, and their alert dots by name.
+var _nav_bar: CartonNav
+## Side rails on the Chiến tab; keep their animation states through badge refreshes.
 var _side: Control
-var _side_dots := {}
+var _side_shortcuts := {}
+var _shortcut_pending := false
+var _shortcut_epoch := 0
 ## An event page opened over the tabs, or null.
 var _overlay: Control
 var _overlay_page: Control
@@ -62,19 +67,19 @@ func _ready() -> void:
 	theme = UiKit.make_theme()
 	# The skin is smooth SVG art; pixel portraits set nearest on themselves.
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-	_sky_backdrop = Ui.menu_bg()
-	add_child(_sky_backdrop)
-	_sky_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	_shop_backdrop = Ui.pattern_bg(SHOP_SKY)
-	_shop_backdrop.name = "ShopBackground"
-	_shop_backdrop.visible = false
-	add_child(_shop_backdrop)
-	_shop_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_pattern_backdrop = Ui.pattern_bg(SHOP_SKY)
+	_pattern_backdrop.name = "MenuPatternBackground"
+	_pattern_backdrop.visible = false
+	add_child(_pattern_backdrop)
+	_pattern_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var awning := Ui.image("shop_awning", SHOP_AWNING_SIZE)
+	_shop_awning = awning
 	awning.name = "ShopAwning"
 	awning.stretch_mode = TextureRect.STRETCH_SCALE
 	awning.size = SHOP_AWNING_SIZE
-	_shop_backdrop.add_child(awning)
+	_pattern_backdrop.add_child(awning)
+	_lobby_world = CardboardLobby.new()
+	add_child(_lobby_world)
 	_content = Control.new()
 	_content.position = Vector2(0, TOP_HEIGHT)
 	_content.size = Vector2(SCREEN.x, SCREEN.y - TOP_HEIGHT - NAV_HEIGHT)
@@ -105,14 +110,15 @@ func _ready() -> void:
 
 
 func select_tab(index: int, animate := true) -> void:
+	# A delayed shortcut must not open over a tab selected during its feedback.
+	_shortcut_epoch += 1
+	_shortcut_pending = false
 	close_page()
 	if index == _current:
 		return
 	var from := _current
 	_current = index
 	last_tab = index
-	_sky_backdrop.visible = index != SHOP_TAB
-	_shop_backdrop.visible = index == SHOP_TAB
 	# The shop canopy sits above the shared HUD row.
 	_header.position.y = SHOP_AWNING_SIZE.y if index == SHOP_TAB else 0.0
 	_content.position.y = TOP_HEIGHT + _header.position.y
@@ -127,7 +133,7 @@ func select_tab(index: int, animate := true) -> void:
 		var tween := create_tween().set_parallel()
 		tween.tween_property(page, "position:x", 0.0, 0.15)
 		tween.tween_property(page, "modulate:a", 1.0, 0.15)
-	_update_tabs()
+	_update_tabs(animate)
 
 
 func start_battle(level_index: int) -> void:
@@ -136,6 +142,7 @@ func start_battle(level_index: int) -> void:
 
 
 func _on_data_changed() -> void:
+	_lobby_world.sync_castle_level()
 	_pages[_current].refresh()
 	if _overlay_page != null:
 		_overlay_page.refresh()
@@ -152,7 +159,10 @@ func _on_tick() -> void:
 ## Opens an event page (a MenuPage script) over the tabs, with a back button.
 func open_page(script) -> void:
 	close_page()
-	var holder := Ui.pattern_bg(SHOP_SKY) if _current == SHOP_TAB else Ui.menu_bg()
+	# The full-screen pattern remains behind the shared chrome, without a seam
+	# or a second independently moving tile field inside this content viewport.
+	var holder := Control.new()
+	holder.name = "MenuPageOverlay"
 	holder.position = _content.position
 	holder.size = _content.size
 	holder.clip_contents = true
@@ -170,6 +180,7 @@ func open_page(script) -> void:
 	holder.add_child(back)
 	_overlay = holder
 	_overlay_page = page
+	register_menu_surface(holder, script.resource_path.get_file().get_basename().trim_suffix("Page").to_snake_case())
 	holder.position.x = 60.0
 	holder.modulate.a = 0.0
 	var tween := holder.create_tween().set_parallel()
@@ -187,6 +198,65 @@ func close_page() -> void:
 			_update_tabs()
 
 
+## Independent surface lifetimes avoid an old popup exit restoring stale color
+## when Events opens another page or several sheets are stacked.
+func register_menu_surface(surface: Node, context := "") -> void:
+	for entry in _menu_surfaces:
+		if entry.node == surface:
+			return
+	var chosen := active_menu_context() if context.is_empty() else context
+	if chosen == "battle":
+		chosen = "hero"
+	_menu_surfaces.append({"node": surface, "context": chosen})
+	surface.tree_exited.connect(_menu_surface_closed.bind(surface.get_instance_id()), CONNECT_ONE_SHOT)
+	_update_tabs()
+
+
+func _menu_surface_closed(surface_id: int) -> void:
+	for i in range(_menu_surfaces.size() - 1, -1, -1):
+		var node = _menu_surfaces[i].node
+		if not is_instance_valid(node) or node.get_instance_id() == surface_id:
+			_menu_surfaces.remove_at(i)
+	if is_inside_tree() and not is_queued_for_deletion():
+		_update_tabs()
+
+
+func active_menu_context() -> String:
+	for i in range(_menu_surfaces.size() - 1, -1, -1):
+		var node = _menu_surfaces[i].node
+		if is_instance_valid(node) and not node.is_queued_for_deletion():
+			return _menu_surfaces[i].context
+	match _current:
+		SHOP_TAB: return "shop"
+		HERO_TAB: return "hero"
+		TROOPS_TAB: return "troops"
+		SUMMON_TAB: return "summon"
+	return "battle"
+
+
+func _update_backdrop() -> void:
+	var context := active_menu_context()
+	var full_screen := false
+	for entry in _menu_surfaces:
+		var node = entry.node
+		if is_instance_valid(node) and not node.is_queued_for_deletion() and node is CanvasLayer:
+			full_screen = true
+			break
+	_pattern_backdrop.visible = context != "battle"
+	if _pattern_backdrop.visible:
+		var paint := Ui.menu_pattern_color(context)
+		_pattern_backdrop.color = paint
+		_pattern_backdrop.material.set_shader_parameter("sky", paint)
+	_shop_awning.visible = _current == SHOP_TAB and not full_screen
+	_content.visible = _overlay == null and not full_screen
+	_header.visible = not full_screen
+	_nav_holder.visible = not full_screen
+	if _overlay != null:
+		_overlay.visible = not full_screen
+	_side.visible = context == "battle"
+	_lobby_world.set_active(context == "battle")
+
+
 func _update_header() -> void:
 	_gold_label.text = UiKit.format_number(PlayerData.gold)
 	_gem_label.text = UiKit.format_number(PlayerData.gems)
@@ -197,22 +267,23 @@ func _update_header() -> void:
 	_update_tabs()
 
 
-func _update_tabs() -> void:
+func _update_tabs(animate := true) -> void:
 	if _nav_holder == null:
 		return
 	var badges := []
 	for i in _pages.size():
 		if i != _current and _pages[i].has_alert():
 			badges.append(i)
-	var key := "%d %s" % [_current, str(badges)]
-	if key != _nav_key:
-		_nav_key = key
+	if _nav_bar == null:
 		_build_nav(badges)
-	_side.visible = _current == BATTLE_TAB and _overlay == null
-	_side_dots["login"].visible = PlayerData.login_can_claim()
-	_side_dots["quests"].visible = PlayerData.quest_alert()
-	_side_dots["events"].visible = PlayerData.patrol_alert()
-	_side_dots["castle"].visible = false
+	else:
+		_nav_bar.set_selected(_current, animate)
+		_nav_bar.set_badges(badges)
+	_update_backdrop()
+	_side_shortcuts["login"].set_alert(PlayerData.login_can_claim())
+	_side_shortcuts["quests"].set_alert(PlayerData.quest_alert())
+	_side_shortcuts["events"].set_alert(PlayerData.patrol_alert())
+	_side_shortcuts["castle"].set_alert(false)
 
 
 ## Gives a chrome root the SVG skin and smooth filtering.
@@ -299,24 +370,13 @@ func _build_top_bar() -> void:
 	row.add_child(tools)
 
 
-## Rebuilt only when the selected tab or the alert dots change.
+## Keep the five carton states alive through tab changes and badge refreshes.
 func _build_nav(badges: Array) -> void:
-	for child in _nav_holder.get_children():
-		child.queue_free()
-	var bar := Ui.bottom_nav(TABS, _current, badges, NAV_BLEED)
-	_nav_holder.add_child(bar)
-	bar.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	bar.offset_left = 6
-	bar.offset_right = -6
-	bar.offset_bottom = NAV_BLEED
-	for i in bar.get_child_count():
-		var cell: Control = bar.get_child(i)
-		var hit := Button.new()
-		hit.flat = true
-		hit.focus_mode = Control.FOCUS_NONE
-		hit.pressed.connect(func(): SoundLib.play("click"))
-		hit.pressed.connect(select_tab.bind(i))
-		cell.add_child(hit)
+	_nav_bar = Ui.bottom_nav(TABS, _current, badges)
+	_nav_bar.name = "CartonNavigation"
+	_nav_holder.add_child(_nav_bar)
+	_nav_bar.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_nav_bar.tab_pressed.connect(select_tab)
 
 
 # Equal shortcut columns outside the stage, with a clear gap between each target.
@@ -339,13 +399,30 @@ func _build_side_rails() -> void:
 
 
 func _rail_entry(key: String, icon_name: String, text: String, on_press: Callable) -> Control:
-	var item := Ui.rail_item(icon_name, text)
-	var ic: Control = item.find_child("ShortcutIcon", true, false)
-	_side_dots[key] = Ui.dot(ic, Ui.SHORTCUT_BADGE_AT)
-	var shortcut := _tap(item, on_press)
+	var kind: int = ["login", "quests", "events", "castle"].find(key)
+	var shortcut := LobbyShortcut.new()
+	shortcut.configure(kind, text, Ui.icon_tex(icon_name, 96), false)
 	shortcut.name = key.to_pascal_case() + "Shortcut"
-	shortcut.custom_minimum_size = Ui.RAIL_ITEM_SIZE
+	_side_shortcuts[key] = shortcut
+	shortcut.activated.connect(func(_kind: int): _activate_shortcut(shortcut, on_press))
 	return shortcut
+
+
+func _activate_shortcut(shortcut: Button, on_press: Callable) -> void:
+	if _shortcut_pending or _current != BATTLE_TAB or not _side.is_visible_in_tree() or active_menu_context() != "battle":
+		return
+	_shortcut_pending = true
+	_shortcut_epoch += 1
+	var request := _shortcut_epoch
+	SoundLib.play("click")
+	# Let the release response read before the destination covers the shortcut.
+	await get_tree().create_timer(0.20).timeout
+	if not is_inside_tree() or request != _shortcut_epoch:
+		return
+	_shortcut_pending = false
+	if _current != BATTLE_TAB or active_menu_context() != "battle" or not is_instance_valid(shortcut) or not shortcut.is_visible_in_tree():
+		return
+	on_press.call()
 
 
 # The panel lives on its own CanvasLayer so it always draws above the lobby.

@@ -19,8 +19,10 @@ extends Control
 signal closed
 
 const UiKit = preload("res://game/ui/UiKit.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const ChestArt = preload("res://game/ui/ChestArt.gd")
+const ChestBurst = preload("res://game/ui/ChestBurst.gd")
 
 const SCREEN := Vector2(720, 1280)
 const CHEST_AT := Vector2(360, 760)
@@ -39,6 +41,7 @@ var _style: Dictionary
 var _loot := {}
 var _new_ids: Array = []
 var _fast := false
+var _menu_pattern := false
 var _on_view_troops: Callable
 
 var _stage := "drop"
@@ -108,6 +111,7 @@ func attach(host: Node) -> void:
 	layer.layer = 20
 	host.add_child(layer)
 	layer.add_child(self)
+	_menu_pattern = Ui.register_menu_surface(host, layer, "shop")
 
 
 func _ready() -> void:
@@ -594,7 +598,7 @@ func _close() -> void:
 
 # Background: the dim, two layers of turning rays and a soft glow, plus the card's halo.
 func _draw() -> void:
-	draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(0.02, 0.03, 0.05, dim))
+	draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(0.02, 0.03, 0.05, dim * (0.5 if _menu_pattern else 1.0)))
 	if ray_alpha > 0.0:
 		for i in RAYS:
 			var angle := _time * 0.35 + i * TAU / RAYS
@@ -766,16 +770,13 @@ func _set_face(card: Control, up: bool) -> void:
 
 ## `behind` puts the effect under the current card so it frames it instead of covering it.
 func _fx(effect: String, at: Vector2, effect_scale: float, color := Color.WHITE, behind := false) -> void:
-	var fx := AnimatedSprite2D.new()
-	fx.sprite_frames = SpriteLib.effect_frames(effect)
+	var fx := ChestBurst.new()
+	fx.setup(effect, color)
 	fx.position = at
 	fx.scale = Vector2(effect_scale, effect_scale)
-	fx.modulate = color
-	fx.animation_finished.connect(fx.queue_free)
 	add_child(fx)
 	if behind and _card != null:
 		move_child(fx, _card.get_index())
-	fx.play("default")
 
 
 func _flash(strength: float) -> void:

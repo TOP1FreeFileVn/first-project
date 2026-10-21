@@ -5,6 +5,7 @@ extends Control
 # Every balance edit goes through Balance and applies live; Save writes the override file.
 
 const UiKit = preload("res://game/ui/UiKit.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 const SimRunner = preload("res://game/admin/SimRunner.gd")
 const TABS := [
 	["Công thức", preload("res://game/admin/tabs/FormulaTab.gd")],
@@ -35,10 +36,12 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	theme = UiKit.make_theme()
-	var back := ColorRect.new()
-	back.color = Color(0.03, 0.05, 0.07)
-	back.set_anchors_preset(Control.PRESET_FULL_RECT)
+	var back := Ui.pattern_bg(Ui.menu_pattern_color("admin"))
+	back.name = "AdminPatternBackground"
+	back.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	back.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(back)
+	Ui.register_menu_surface(self, self, "admin")
 	sim = SimRunner.new()
 	add_child(sim)
 	_build_toolbar()

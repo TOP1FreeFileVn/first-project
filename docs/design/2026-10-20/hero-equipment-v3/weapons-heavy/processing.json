@@ -1,0 +1,46 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "generation_node": "56:2",
+  "generated_clean": "processed/heavy-axe-generated-clean.png",
+  "refinement": "Manual Bezier authoring preserving generated bearded-head concept; proportions, broad fills, and line hierarchy deliberately refined. NOT automatic dilation, morphology, skeletonization, tracing or segmented-boundary reconstruction.",
+  "source_svg": "processed/heavy-axe-authored.svg",
+  "source_canvas": [
+    440,
+    720
+  ],
+  "authoring_viewbox": [
+    0,
+    0,
+    110,
+    180
+  ],
+  "main_stroke_author_units": 9,
+  "main_stroke_source_pixels": 36,
+  "held_svg": "processed/heavy-axe-held.svg",
+  "held_canvas": [
+    256,
+    240
+  ],
+  "render_scale": 3,
+  "grip_author_units": [
+    40,
+    128
+  ],
+  "target_grip": [
+    160,
+    166
+  ],
+  "rotation_clockwise_degrees": 27,
+  "main_stroke_native_units": 9,
+  "wrap_seam_native_units": 2.4,
+  "socket_surface_line_native_units": 2.3,
+  "steel_planes": "Broad flat fills, unlined shared boundary.",
+  "generated_main_note": "Generated source had only~20-24pxcontour at1024 and did not pass fitted main-line target; manual refinement is disclosed separately.",
+  "held_alpha_bounds_native": [
+    129.66666666666666,
+    67.0,
+    252.33333333333334,
+    208.66666666666666
+  ],
+  "clipped": false
+}

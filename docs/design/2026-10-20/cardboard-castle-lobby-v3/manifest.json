@@ -1,0 +1,30 @@
+{
+  "review_only": true,
+  "model": "gpt-image-2.5-sunburst",
+  "route": "Figma generate_image",
+  "file_key": "2uKzqvXeOSPQqfaow6s7TU",
+  "generated_node_id": "61:2",
+  "prompt": "prompts/flat-cat-map.txt",
+  "raw": "flat-map-raw.png",
+  "cleanup": "Flat material study, followed by smooth SVG contour cleanup traced from the generated castle/playground; raw retained.",
+  "source_size": [
+    864,
+    1536
+  ],
+  "screen_size": [
+    720,
+    1280
+  ],
+  "flat_material_colors": 13,
+  "contour_cleanup_layers": [
+    "playground-clean.png",
+    "processed\\castle-clean.png"
+  ],
+  "warm_components": 488,
+  "unchanged_cat_sources": [
+    "game/ui/skin/cat_cream.svg",
+    "game/ui/skin/cat_tabby.svg",
+    "game/ui/skin/cat_calico.svg"
+  ],
+  "production_code_modified": false
+}

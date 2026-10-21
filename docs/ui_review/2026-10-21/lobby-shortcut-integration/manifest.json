@@ -1,0 +1,3147 @@
+{
+	"activations": [
+		4,
+		4,
+		3,
+		2
+	],
+	"captures": [
+		{
+			"context": "battle",
+			"file": "idle_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "press_login_360x640.png",
+			"states": [
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 0,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_login_360x640.png",
+			"states": [
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 0,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "login",
+			"file": "destination_login_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		},
+		{
+			"context": "battle",
+			"file": "press_quests_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 1,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_quests_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 1,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "quests",
+			"file": "destination_quests_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		},
+		{
+			"context": "battle",
+			"file": "press_events_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 2,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_events_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 2,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "events",
+			"file": "destination_events_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		},
+		{
+			"context": "battle",
+			"file": "press_castle_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 3,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_castle_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 3,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "castle",
+			"file": "destination_castle_360x640.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		},
+		{
+			"context": "battle",
+			"file": "idle_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "press_login_450x800.png",
+			"states": [
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 0,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_login_450x800.png",
+			"states": [
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 0,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "login",
+			"file": "destination_login_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		},
+		{
+			"context": "battle",
+			"file": "press_quests_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 1,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_quests_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": true,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 1,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "quests",
+			"file": "destination_quests_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		},
+		{
+			"context": "battle",
+			"file": "press_events_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 2,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_events_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 2,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "events",
+			"file": "destination_events_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		},
+		{
+			"context": "battle",
+			"file": "press_castle_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 1.0,
+					"focus": 0.938652038574219,
+					"has_focus": true,
+					"holding": true,
+					"kind": 3,
+					"lift": 2.81595611572266,
+					"pointer_over": true,
+					"press": 1.0,
+					"visual_scale": 0.94
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "battle",
+			"file": "feedback_castle_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": false,
+					"alert": false,
+					"animating": true,
+					"effect_progress": 0.186965823173523,
+					"focus": 1.0,
+					"has_focus": true,
+					"holding": false,
+					"kind": 3,
+					"lift": 3.0,
+					"pointer_over": true,
+					"press": -0.0971118211746216,
+					"visual_scale": 1.00582670927048
+				}
+			],
+			"surface_count": 0
+		},
+		{
+			"context": "castle",
+			"file": "destination_castle_450x800.png",
+			"states": [
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 0,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": true,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 1,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 2,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				},
+				{
+					"activation_blocked": true,
+					"alert": false,
+					"animating": false,
+					"effect_progress": 1.0,
+					"focus": 0.0,
+					"has_focus": false,
+					"holding": false,
+					"kind": 3,
+					"lift": 0.0,
+					"pointer_over": false,
+					"press": 0.0,
+					"visual_scale": 1.0
+				}
+			],
+			"surface_count": 1
+		}
+	],
+	"checks": [
+		{
+			"key": "native_shortcut_created_login",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_shortcut_created_quests",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_shortcut_created_events",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_shortcut_created_castle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "data_refresh_preserves_four_native_buttons",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "live_badge_matches_data_login",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "badge_can_update_without_rebuild_login",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "live_badge_matches_data_quests",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "badge_can_update_without_rebuild_quests",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "live_badge_matches_data_events",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "badge_can_update_without_rebuild_events",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "live_badge_matches_data_castle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "badge_can_update_without_rebuild_castle",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "badge_setters_preserve_identity",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_does_not_activate_pointer_exit",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_resets_visual_pointer_exit",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_does_not_activate_escape",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_resets_visual_escape",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_does_not_activate_focus_lost",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_resets_visual_focus_lost",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_does_not_activate_hidden",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_resets_visual_hidden",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_does_not_activate_touch_cancel",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "canceled_press_resets_visual_touch_cancel",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "window_focus_loss_resets_press_without_route",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "tab_change_cancels_pending_shortcut_route",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "rapid_shortcut_taps_open_only_first_destination",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "keyboard_focus_has_visible_feedback",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "keyboard_enter_depresses_button",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "keyboard_enter_opens_correct_destination",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_dimensions_idle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "pointer_depresses_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "press_does_not_route_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_press_login_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_login_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "opens_correct_destination_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_login_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "pointer_depresses_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "press_does_not_route_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_press_quests_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_quests_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "opens_correct_destination_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_quests_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "pointer_depresses_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "press_does_not_route_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_press_events_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_events_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "opens_correct_destination_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_events_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "pointer_depresses_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "press_does_not_route_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_press_castle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_castle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "opens_correct_destination_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_castle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capture_dimensions_idle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "pointer_depresses_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "press_does_not_route_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_press_login_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_login_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "opens_correct_destination_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_login_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "pointer_depresses_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "press_does_not_route_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_press_quests_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_quests_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "opens_correct_destination_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_quests_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "pointer_depresses_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "press_does_not_route_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_press_events_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_events_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "opens_correct_destination_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_events_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "pointer_depresses_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "press_does_not_route_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_press_castle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_has_local_motion_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_waits_for_feedback_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_feedback_castle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "release_activates_once_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "opens_correct_destination_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "destination_preserves_shortcuts_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_dimensions_destination_castle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_close_restores_lobby_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "close_preserves_shortcuts_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_at_least_44px_castle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capture_saved_idle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_login_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_login_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_login_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_quests_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_quests_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_quests_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_events_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_events_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_events_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_castle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_castle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_castle_360x640",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_idle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_login_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_login_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_login_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_quests_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_quests_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_quests_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_events_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_events_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_events_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_press_castle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_feedback_castle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capture_saved_destination_castle_450x800",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/lobby-shortcut-integration-profile/roaming/Godot/app_userdata/Gear Defenders",
+	"shortcut_ids": [
+		203591519333,
+		204061281391,
+		204698815625,
+		205151800467
+	]
+}

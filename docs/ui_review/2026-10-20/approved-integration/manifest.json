@@ -1,0 +1,1189 @@
+{
+	"captures": [
+		{
+			"file": "lobby_720x1280.png",
+			"window": [
+				720,
+				1280
+			],
+			"world": {
+				"active": true,
+				"actor_id": 131868919679,
+				"actor_ids": [
+					130191198054,
+					131868919679,
+					133479532435
+				],
+				"actors": [
+					{
+						"facing": "front",
+						"name": "cream",
+						"parent": "OccupantSlot",
+						"position": [
+							165.0,
+							778.0
+						],
+						"state": "rest_inside"
+					},
+					{
+						"facing": "front",
+						"name": "tabby",
+						"parent": "FootDepthWorld",
+						"position": [
+							375.0,
+							786.0
+						],
+						"state": "rest"
+					},
+					{
+						"facing": "front",
+						"name": "calico",
+						"parent": "OccupantSlot",
+						"position": [
+							528.0,
+							854.0
+						],
+						"state": "rest_inside"
+					}
+				],
+				"castle_level": 3,
+				"clock": 1.05494722222222,
+				"front_only": true,
+				"position": [
+					375.0,
+					786.0
+				],
+				"processing": true,
+				"reservations": {
+					"bed": {
+						"occupant": "calico",
+						"reserved_by": "calico"
+					},
+					"tunnel": {
+						"occupant": "cream",
+						"reserved_by": "cream"
+					}
+				},
+				"world_id": 127271962429,
+				"world_scale": [
+					1.0,
+					1.0
+				]
+			}
+		},
+		{
+			"file": "lobby_450x800.png",
+			"window": [
+				450,
+				800
+			],
+			"world": {
+				"active": true,
+				"actor_id": 131868919679,
+				"actor_ids": [
+					130191198054,
+					131868919679,
+					133479532435
+				],
+				"actors": [
+					{
+						"facing": "front",
+						"name": "cream",
+						"parent": "OccupantSlot",
+						"position": [
+							165.0,
+							778.0
+						],
+						"state": "rest_inside"
+					},
+					{
+						"facing": "front",
+						"name": "tabby",
+						"parent": "FootDepthWorld",
+						"position": [
+							375.0,
+							786.0
+						],
+						"state": "rest"
+					},
+					{
+						"facing": "front",
+						"name": "calico",
+						"parent": "OccupantSlot",
+						"position": [
+							528.0,
+							854.0
+						],
+						"state": "rest_inside"
+					}
+				],
+				"castle_level": 3,
+				"clock": 2.75992677777779,
+				"front_only": true,
+				"position": [
+					375.0,
+					786.0
+				],
+				"processing": true,
+				"reservations": {
+					"bed": {
+						"occupant": "calico",
+						"reserved_by": "calico"
+					},
+					"tunnel": {
+						"occupant": "cream",
+						"reserved_by": "cream"
+					}
+				},
+				"world_id": 127271962429,
+				"world_scale": [
+					1.0,
+					1.0
+				]
+			}
+		},
+		{
+			"file": "locked_450x800.png",
+			"window": [
+				450,
+				800
+			],
+			"world": {
+				"active": true,
+				"actor_id": 131868919679,
+				"actor_ids": [
+					130191198054,
+					131868919679,
+					133479532435
+				],
+				"actors": [
+					{
+						"facing": "front",
+						"name": "cream",
+						"parent": "OccupantSlot",
+						"position": [
+							165.0,
+							778.0
+						],
+						"state": "rest_inside"
+					},
+					{
+						"facing": "front",
+						"name": "tabby",
+						"parent": "FootDepthWorld",
+						"position": [
+							375.0,
+							786.0
+						],
+						"state": "rest"
+					},
+					{
+						"facing": "front",
+						"name": "calico",
+						"parent": "OccupantSlot",
+						"position": [
+							528.0,
+							854.0
+						],
+						"state": "rest_inside"
+					}
+				],
+				"castle_level": 3,
+				"clock": 3.12121033333335,
+				"front_only": true,
+				"position": [
+					375.0,
+					786.0
+				],
+				"processing": true,
+				"reservations": {
+					"bed": {
+						"occupant": "calico",
+						"reserved_by": "calico"
+					},
+					"tunnel": {
+						"occupant": "cream",
+						"reserved_by": "cream"
+					}
+				},
+				"world_id": 127271962429,
+				"world_scale": [
+					1.0,
+					1.0
+				]
+			}
+		},
+		{
+			"file": "shop_450x800.png",
+			"window": [
+				450,
+				800
+			],
+			"world": {
+				"active": false,
+				"actor_id": 131868919679,
+				"actor_ids": [
+					130191198054,
+					131868919679,
+					133479532435
+				],
+				"actors": [
+					{
+						"facing": "front",
+						"name": "cream",
+						"parent": "OccupantSlot",
+						"position": [
+							165.0,
+							778.0
+						],
+						"state": "rest_inside"
+					},
+					{
+						"facing": "front",
+						"name": "tabby",
+						"parent": "FootDepthWorld",
+						"position": [
+							375.0,
+							786.0
+						],
+						"state": "rest"
+					},
+					{
+						"facing": "front",
+						"name": "calico",
+						"parent": "OccupantSlot",
+						"position": [
+							528.0,
+							854.0
+						],
+						"state": "rest_inside"
+					}
+				],
+				"castle_level": 3,
+				"clock": 3.48731966666669,
+				"front_only": true,
+				"position": [
+					375.0,
+					786.0
+				],
+				"processing": false,
+				"reservations": {
+					"bed": {
+						"occupant": "calico",
+						"reserved_by": "calico"
+					},
+					"tunnel": {
+						"occupant": "cream",
+						"reserved_by": "cream"
+					}
+				},
+				"world_id": 127271962429,
+				"world_scale": [
+					1.0,
+					1.0
+				]
+			}
+		},
+		{
+			"file": "lobby_360x640.png",
+			"window": [
+				360,
+				640
+			],
+			"world": {
+				"active": true,
+				"actor_id": 131868919679,
+				"actor_ids": [
+					130191198054,
+					131868919679,
+					133479532435
+				],
+				"actors": [
+					{
+						"facing": "front",
+						"name": "cream",
+						"parent": "OccupantSlot",
+						"position": [
+							165.0,
+							778.0
+						],
+						"state": "rest_inside"
+					},
+					{
+						"facing": "front",
+						"name": "tabby",
+						"parent": "FootDepthWorld",
+						"position": [
+							371.2392578125,
+							796.826416015625
+						],
+						"state": "walk"
+					},
+					{
+						"facing": "front",
+						"name": "calico",
+						"parent": "OccupantSlot",
+						"position": [
+							528.0,
+							860.267944335938
+						],
+						"state": "exit"
+					}
+				],
+				"castle_level": 3,
+				"clock": 4.56981133333337,
+				"front_only": true,
+				"position": [
+					371.2392578125,
+					796.826416015625
+				],
+				"processing": true,
+				"reservations": {
+					"bed": {
+						"occupant": "calico",
+						"reserved_by": "calico"
+					},
+					"tunnel": {
+						"occupant": "cream",
+						"reserved_by": "cream"
+					}
+				},
+				"world_id": 127271962429,
+				"world_scale": [
+					1.0,
+					1.0
+				]
+			}
+		},
+		{
+			"file": "hero_360x640.png",
+			"window": [
+				360,
+				640
+			],
+			"world": {
+				"active": false,
+				"actor_id": 131868919679,
+				"actor_ids": [
+					130191198054,
+					131868919679,
+					133479532435
+				],
+				"actors": [
+					{
+						"facing": "front",
+						"name": "cream",
+						"parent": "OccupantSlot",
+						"position": [
+							165.0,
+							778.0
+						],
+						"state": "rest_inside"
+					},
+					{
+						"facing": "front",
+						"name": "tabby",
+						"parent": "FootDepthWorld",
+						"position": [
+							362.130004882813,
+							823.050048828125
+						],
+						"state": "walk"
+					},
+					{
+						"facing": "front",
+						"name": "calico",
+						"parent": "OccupantSlot",
+						"position": [
+							528.0,
+							875.450012207031
+						],
+						"state": "exit"
+					}
+				],
+				"castle_level": 3,
+				"clock": 5.95000155555561,
+				"front_only": true,
+				"position": [
+					362.130004882813,
+					823.050048828125
+				],
+				"processing": false,
+				"reservations": {
+					"bed": {
+						"occupant": "calico",
+						"reserved_by": "calico"
+					},
+					"tunnel": {
+						"occupant": "cream",
+						"reserved_by": "cream"
+					}
+				},
+				"world_id": 127271962429,
+				"world_scale": [
+					1.0,
+					1.0
+				]
+			}
+		},
+		{
+			"file": "equipment-detail_360x640.png",
+			"window": [
+				360,
+				640
+			],
+			"world": {
+				"active": false,
+				"actor_id": 131868919679,
+				"actor_ids": [
+					130191198054,
+					131868919679,
+					133479532435
+				],
+				"actors": [
+					{
+						"facing": "front",
+						"name": "cream",
+						"parent": "OccupantSlot",
+						"position": [
+							165.0,
+							778.0
+						],
+						"state": "rest_inside"
+					},
+					{
+						"facing": "front",
+						"name": "tabby",
+						"parent": "FootDepthWorld",
+						"position": [
+							362.130004882813,
+							823.050048828125
+						],
+						"state": "walk"
+					},
+					{
+						"facing": "front",
+						"name": "calico",
+						"parent": "OccupantSlot",
+						"position": [
+							528.0,
+							875.450012207031
+						],
+						"state": "exit"
+					}
+				],
+				"castle_level": 3,
+				"clock": 5.95000155555561,
+				"front_only": true,
+				"position": [
+					362.130004882813,
+					823.050048828125
+				],
+				"processing": false,
+				"reservations": {
+					"bed": {
+						"occupant": "calico",
+						"reserved_by": "calico"
+					},
+					"tunnel": {
+						"occupant": "cream",
+						"reserved_by": "cream"
+					}
+				},
+				"world_id": 127271962429,
+				"world_scale": [
+					1.0,
+					1.0
+				]
+			}
+		}
+	],
+	"checks": [
+		{
+			"name": "persistent_world_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "review_state_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "moving_actor_created",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "resource_refresh_preserves_world_actor",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "resource_refresh_does_not_restart_clock",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "resource_refresh_preserves_motion_continuity",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "castle_tier_updates_without_replacing_actor",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "front_pose_only",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_world_visible_active",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "uniform_world_scale",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "native_capture_size_lobby_720x1280",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "capture_saved_lobby_720x1280",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_next_level",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "locked_stage_cta_visible_disabled",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_previous_level",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "unlocked_cta_enabled_connected_without_starting_battle",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "level_changes_preserve_world_actor",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_shop_nav",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "world_hidden_paused_in_shop",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "shop_hidden_clock_stays_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_battle_nav_resumes_same_actor",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "battle_clock_resumes",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_castle_rail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "world_hidden_paused_under_castle_page",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_overlay_clock_stays_paused",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_castle_back",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "castle_close_resumes_same_world",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_login_rail",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "real_click_login_close",
+			"passed": true,
+			"window": [
+				720,
+				1280
+			]
+		},
+		{
+			"name": "front_pose_only",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "battle_world_visible_active",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "uniform_world_scale",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_lobby_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_lobby_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_next_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "locked_stage_cta_visible_disabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_locked_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_locked_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_previous_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "unlocked_cta_enabled_connected_without_starting_battle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_changes_preserve_world_actor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_shop_nav",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "world_hidden_paused_in_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop_hidden_clock_stays_paused",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_shop_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_shop_450x800",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_battle_nav_resumes_same_actor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "battle_clock_resumes",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_castle_rail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "world_hidden_paused_under_castle_page",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "castle_overlay_clock_stays_paused",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_castle_back",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "castle_close_resumes_same_world",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_login_rail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "real_click_login_close",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "front_pose_only",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_world_visible_active",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "uniform_world_scale",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_lobby_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_lobby_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_next_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "locked_stage_cta_visible_disabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_previous_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "unlocked_cta_enabled_connected_without_starting_battle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_changes_preserve_world_actor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_shop_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "world_hidden_paused_in_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_hidden_clock_stays_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_battle_nav_resumes_same_actor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_clock_resumes",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_castle_rail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "world_hidden_paused_under_castle_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_overlay_clock_stays_paused",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_castle_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "castle_close_resumes_same_world",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_login_rail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_login_close",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "real_click_hero_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "world_hidden_on_hero_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_hero_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_hero_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fixture_has_equipped_weapon",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "equipment_detail_opens",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_capture_size_equipment-detail_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_equipment-detail_360x640",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"moving_actor_id": 131868919679,
+	"persist": false,
+	"persistent_world_id": 127271962429,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/pattern-lobby-profile/Roaming/Godot/app_userdata/Gear Defenders",
+	"scope": "Production Home integration, real UI clicks, RAM fixture; no battle start."
+}

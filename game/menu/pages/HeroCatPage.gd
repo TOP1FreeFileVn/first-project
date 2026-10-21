@@ -14,8 +14,9 @@ const SIDE_CARD := 124.0
 const BAG_CARD := 118.0
 ## Soldier class -> its tier-1 weapon icon (how the classes are shown everywhere).
 const KLASS_ICONS := ["w_kiem", "w_cung", "w_gay_phep", "w_giao"]
-const UP := Color("3fbf4a")
-const DOWN := Color("e04b4b")
+## These are text accents on the light mint inset, not rarity-card fills.
+const UP := Color("1c5326")
+const DOWN := Color("8b2828")
 
 var _column: VBoxContainer
 var _detail: VBoxContainer
@@ -67,7 +68,7 @@ func _can_upgrade(uid: String) -> bool:
 
 func _doll() -> Control:
 	var state: Dictionary = PlayerData.hero_cat
-	var sheet := Ui.panel("Sheet")
+	var sheet := Ui.menu_panel("hero", "Board")
 	var box := Ui.vbox(8)
 	sheet.add_child(box)
 
@@ -78,6 +79,7 @@ func _doll() -> Control:
 	stage.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	Ui.pin(stage, Ui.image("platform", Vector2(230, 92)), Vector2(-115, -98), Control.PRESET_CENTER_BOTTOM)
 	var cat := Ui.image("cat_hero", Vector2(240, 225))
+	cat.texture = SpriteLib.hero_cat_texture(state)
 	Ui.pin(stage, cat, Vector2(-120, -270), Control.PRESET_CENTER_BOTTOM)
 	Ui.bob(cat, 4.0, 1.6)
 	row.add_child(stage)
@@ -103,7 +105,7 @@ func _slot_column(slots: Array) -> VBoxContainer:
 	for slot in slots:
 		var uid := HeroCat.equipped_uid(state, slot)
 		if uid == "":
-			var empty := Ui.panel("Well", Ui.center(Ui.icon(HeroCat.SLOT_ICONS[slot], SIDE_CARD * 0.5)))
+			var empty := Ui.menu_panel("hero", "Well", Ui.center(Ui.icon(HeroCat.SLOT_ICONS[slot], SIDE_CARD * 0.5)))
 			empty.custom_minimum_size = Vector2(SIDE_CARD, SIDE_CARD)
 			empty.modulate = Color(1, 1, 1, 0.6)
 			column.add_child(empty)
@@ -119,7 +121,7 @@ func _weapon_strip(state: Dictionary) -> Control:
 	var row := Ui.hbox(8, BoxContainer.ALIGNMENT_BEGIN)
 	if d.is_empty():
 		row.add_child(Ui.label("Chưa cầm vũ khí", "LabelDark", 18))
-		return Ui.panel("Well", row)
+		return Ui.menu_panel("hero", "Well", row)
 	row.add_child(Ui.label("Hợp lính", "LabelDark", 17))
 	for klass in d["pairs"]:
 		row.add_child(Ui.icon(KLASS_ICONS[klass], 34))
@@ -127,7 +129,7 @@ func _weapon_strip(state: Dictionary) -> Control:
 	var skill := Ui.label(str(d["skill"]).get_slice(":", 0), "LabelDark", 17)
 	row.add_child(Ui.icon("gear", 30))
 	row.add_child(skill)
-	return Ui.panel("Well", row)
+	return Ui.menu_panel("hero", "Well", row)
 
 
 # --- Bag ------------------------------------------------------------------------------------
@@ -135,15 +137,6 @@ func _weapon_strip(state: Dictionary) -> Control:
 func _bag() -> Control:
 	var state: Dictionary = PlayerData.hero_cat
 	var spare := HeroCat.spare(state)
-	var box := Ui.vbox(8)
-	box.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	var head := Ui.hbox(10)
-	var title := Ui.label("Túi trang bị", "", 24)
-	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	head.add_child(title)
-	head.add_child(Ui.label("%d món" % spare.size(), "LabelSmall", 18))
-	box.add_child(Ui.panel("Board", head))
 	var scroll := ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -158,8 +151,9 @@ func _bag() -> Control:
 	var holder := Ui.center(grid if not spare.is_empty() else Ui.label("Túi trống: trang bị rơi từ rương và sự kiện.", "LabelSmall", 18))
 	holder.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(holder)
-	box.add_child(scroll)
-	return box
+	var section := Ui.menu_section("hero", "Túi trang bị · %d món" % spare.size(), scroll)
+	section.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	return section
 
 
 ## A gear card that opens the item sheet when tapped.
@@ -213,16 +207,18 @@ func _fill_detail() -> void:
 	var kind := "%s · %s · Lv.%d/%d" % [Economy.RARITY_NAMES[d["rarity"]], HeroCat.SLOT_NAMES[d["slot"]], it["level"], HeroCat.MAX_LEVEL]
 	box.add_child(Ui.label(kind, "LabelDark", 18))
 	if d["slot"] == "weapon":
+		var weapon_info := Ui.vbox(8)
 		var pairs := Ui.hbox(6)
 		pairs.add_child(Ui.label("%s · Hợp lính" % d["range"], "LabelDark", 17))
 		for klass in d["pairs"]:
 			pairs.add_child(Ui.icon(KLASS_ICONS[klass], 32))
 			pairs.add_child(Ui.label(TroopData.KLASS_NAMES[klass], "LabelDark", 17))
-		box.add_child(pairs)
+		weapon_info.add_child(pairs)
 		var skill := Ui.label(d["skill"], "LabelDark", 17)
 		skill.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		skill.custom_minimum_size.x = 560
-		box.add_child(Ui.panel("Well", skill))
+		weapon_info.add_child(skill)
+		box.add_child(Ui.menu_section("hero", "Kỹ năng vũ khí", weapon_info))
 
 	# Stat rows: against the worn item, or now → next level for the worn one.
 	var mine := HeroCat.item_stats(state, uid)
@@ -232,6 +228,7 @@ func _fill_detail() -> void:
 	for key in ["hp", "atk", "def"]:
 		if mine.has(key) or other.has(key):
 			keys.append(key)
+	var stats := Ui.vbox(8)
 	for key in keys:
 		var row := Ui.hbox(10, BoxContainer.ALIGNMENT_BEGIN)
 		row.add_child(Ui.icon(HeroCat.STAT_ICONS[key], 30))
@@ -246,10 +243,12 @@ func _fill_detail() -> void:
 		text.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 		row.add_child(text)
 		if to != from:
-			var diff := Ui.label(("+%s" if to > from else "−%s") % UiKit.format_number(absi(to - from)), "LabelSmall", 20)
+			var diff := Ui.label(("+%s" if to > from else "−%s") % UiKit.format_number(absi(to - from)), "LabelDark", 20)
 			diff.add_theme_color_override("font_color", UP if to > from else DOWN)
 			row.add_child(diff)
-		box.add_child(Ui.panel("Well", row))
+		stats.add_child(row)
+	if not keys.is_empty():
+		box.add_child(Ui.menu_section("hero", "Chỉ số", stats))
 
 	var actions := Ui.hbox(14)
 	var upgrade: Button

@@ -1,25 +1,24 @@
 extends RefCounted
 
-# Treasure chests drawn in code, one look per chest kind: a plank wood chest with iron
-# bands, a steel-blue chest with silver bands, and a royal red chest with gold bands and a
-# gem. Everything is drawn around the seam (where the lid meets the base) so the lid can
-# fly off on its own. Shared by the shop icons and the full-screen chest opening.
-
-const INK := Color("24170e")
+# A broad, soft chest in the same flat, warm-ink family as the cats. The lid
+# remains a separate local drawing, hinged on the seam for ChestOpening's flight.
+# One construction serves the 26 px reward symbol and 250 px opening prop.
+const INK := Color("583f21")
 const STYLES := {
-	"wood": {"body": Color("a86a3c"), "dark": Color("6e4125"), "light": Color("d9985c"),
-		"band": Color("59616b"), "band_light": Color("a4adb8"), "planks": true, "gem": false},
-	"silver": {"body": Color("4d78a8"), "dark": Color("2c4a72"), "light": Color("86b0dc"),
-		"band": Color("c8d2dc"), "band_light": Color("ffffff"), "planks": false, "gem": false},
-	"gold": {"body": Color("b3313a"), "dark": Color("721a25"), "light": Color("e8676a"),
-		"band": Color("f0b93a"), "band_light": Color("fff1a6"), "planks": false, "gem": true},
+	"wood": {"body": Color("dda565"), "dark": Color("b98145"), "light": Color("f5cc88"),
+		"band": Color("a5b1a2"), "band_light": Color("d3dbc5"), "band_ink": Color("6d7c65"),
+		"paw": Color("66755e"), "planks": true, "gem": false},
+	"silver": {"body": Color("83b9d1"), "dark": Color("5e94af"), "light": Color("b5deeb"),
+		"band": Color("dce5dd"), "band_light": Color("f6f5df"), "band_ink": Color("93aaa7"),
+		"paw": Color("608da2"), "planks": false, "gem": false},
+	"gold": {"body": Color("ef8270"), "dark": Color("cf5e52"), "light": Color("ffb397"),
+		"band": Color("ffd16a"), "band_light": Color("ffe9a1"), "band_ink": Color("cc963e"),
+		"paw": Color("5baeb5"), "planks": false, "gem": true},
 }
-# The colours the shop used to tint each chest; style_for() maps a tint back to a kind.
+# Keep the existing callers' tint-to-kind mapping, independent of the new paint.
 const TINTS := {"wood": Color("a0673a"), "silver": Color("aeb8c2"), "gold": Color("e8b93c")}
-
-## Base height and lid height, as fractions of the chest width.
-const BASE_H := 0.46
-const LID_H := 0.32
+const BASE_H := 0.37
+const LID_H := 0.29
 
 
 static func style_for(tint: Color) -> Dictionary:
@@ -34,25 +33,16 @@ static func style_for(tint: Color) -> Dictionary:
 	return STYLES[best]
 
 
-## Draws a whole chest of width `w` with its seam at `seam`. The lid is drawn moved by
-## `lid_offset` and turned by `lid_rotation` around the seam; `mouth` (if not transparent)
-## lights the open chest from inside.
+## `seam` remains the animation origin. Only the lid and its bands move/rotate;
+## the mouth, lock and body stay on the base during the existing opening tween.
 static func draw(ci: CanvasItem, seam: Vector2, w: float, style: Dictionary, alpha := 1.0,
 		lid_offset := Vector2.ZERO, lid_rotation := 0.0, lid_alpha := 1.0, mouth := Color(0, 0, 0, 0)) -> void:
-	_draw_base(ci, seam, w, style, alpha)
+	var shadow := _ellipse(seam + Vector2(0, w * 0.393), Vector2(w * 0.445, w * 0.037))
+	ci.draw_colored_polygon(shadow, Color(INK, alpha * 0.15))
 	var open := mouth.a > 0.0
 	if open:
-		# Seen from the front, the open chest shows a thin strip of its inside above the
-		# front edge: the back wall, lit by whatever is glowing in there.
-		var depth := w * 0.1
-		var inside := Rect2(seam + Vector2(-w / 2.0, -depth), Vector2(w, depth))
-		ci.draw_rect(inside.grow(w * 0.018), Color(INK, alpha))
-		ci.draw_rect(inside, _c(style, "dark", alpha).darkened(0.3))
-		var lit := Rect2(seam + Vector2(-w * 0.44, -depth * 0.8), Vector2(w * 0.88, depth * 0.8))
-		ci.draw_rect(lit, Color(mouth, mouth.a * alpha))
-		ci.draw_rect(Rect2(seam + Vector2(-w * 0.3, -depth * 0.8), Vector2(w * 0.6, depth * 0.8)), Color(mouth.lightened(0.6), mouth.a * alpha))
-		# The front edge of the box.
-		ci.draw_rect(Rect2(seam + Vector2(-w / 2.0, -w * 0.012), Vector2(w, w * 0.03)), _c(style, "band", alpha))
+		_draw_mouth(ci, seam, w, style, alpha, mouth)
+	_draw_base(ci, seam, w, style, alpha)
 	if lid_alpha > 0.0:
 		ci.draw_set_transform(seam + lid_offset, lid_rotation, Vector2.ONE)
 		_draw_lid(ci, w, style, alpha * lid_alpha)
@@ -60,143 +50,155 @@ static func draw(ci: CanvasItem, seam: Vector2, w: float, style: Dictionary, alp
 	_draw_lock(ci, seam, w, style, alpha, open)
 
 
-static func _c(style: Dictionary, key: String, alpha: float) -> Color:
-	return Color(style[key], alpha)
+static func _c(s: Dictionary, key: String, alpha: float) -> Color:
+	return Color(s[key], alpha)
+
+
+static func _curve(start: Vector2, segments: Array) -> PackedVector2Array:
+	var result := PackedVector2Array([start])
+	var from := start
+	for segment in segments:
+		var c1: Vector2 = segment[0]
+		var c2: Vector2 = segment[1]
+		var to: Vector2 = segment[2]
+		for i in range(1, 9):
+			var t := i / 8.0
+			var u := 1.0 - t
+			result.append(from * u * u * u + c1 * 3.0 * u * u * t + c2 * 3.0 * u * t * t + to * t * t * t)
+		from = to
+	return result
+
+
+static func _placed(points: PackedVector2Array, at: Vector2, scale: float) -> PackedVector2Array:
+	var result := PackedVector2Array()
+	for p in points:
+		result.append(at + p * scale)
+	return result
+
+
+static func _ellipse(at: Vector2, radii: Vector2) -> PackedVector2Array:
+	var points := PackedVector2Array()
+	for i in 32:
+		points.append(at + Vector2(cos(i * TAU / 32.0), sin(i * TAU / 32.0)) * radii)
+	return points
+
+
+static func _rounded(rect: Rect2, radius: float) -> PackedVector2Array:
+	var r := minf(radius, minf(rect.size.x, rect.size.y) * 0.5)
+	var points := PackedVector2Array()
+	var centers := [rect.position + Vector2(r, r), Vector2(rect.end.x - r, rect.position.y + r),
+		rect.end - Vector2(r, r), Vector2(rect.position.x + r, rect.end.y - r)]
+	for corner in 4:
+		for i in 7:
+			var angle := PI + corner * PI * 0.5 + i * PI / 12.0
+			points.append(centers[corner] + Vector2.from_angle(angle) * r)
+	return points
+
+
+static func _stroke(ci: CanvasItem, points: PackedVector2Array, color: Color, width: float, closed := true) -> void:
+	var loop := points.duplicate()
+	if closed:
+		loop.append(points[0])
+	ci.draw_polyline(loop, color, width, true)
+
+
+static func _line(ci: CanvasItem, from: Vector2, to: Vector2, color: Color, width: float) -> void:
+	ci.draw_line(from, to, color, width, true)
+	ci.draw_circle(from, width * 0.5, color, true, -1.0, true)
+	ci.draw_circle(to, width * 0.5, color, true, -1.0, true)
+
+
+static func _draw_mouth(ci: CanvasItem, seam: Vector2, w: float, s: Dictionary, a: float, light: Color) -> void:
+	# A soft oval cavity, behind the fixed front wall; no rectangular black slot.
+	var rim := _ellipse(seam + Vector2(0, -w * 0.018), Vector2(w * 0.452, w * 0.072))
+	ci.draw_colored_polygon(rim, _c(s, "band", a))
+	_stroke(ci, rim, Color(INK, a), w * 0.03)
+	var inside := _ellipse(seam + Vector2(0, -w * 0.025), Vector2(w * 0.389, w * 0.039))
+	ci.draw_colored_polygon(inside, _c(s, "dark", a))
+	ci.draw_colored_polygon(inside, Color(light, light.a * a))
 
 
 static func _draw_base(ci: CanvasItem, seam: Vector2, w: float, s: Dictionary, a: float) -> void:
-	var bh := w * BASE_H
-	var ink := Color(INK, a)
-	# Ground shadow.
-	ci.draw_set_transform(seam + Vector2(0, bh + w * 0.02), 0.0, Vector2(1.0, 0.18))
-	ci.draw_circle(Vector2.ZERO, w * 0.62, Color(0, 0, 0, 0.35 * a))
-	ci.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-
-	var base := Rect2(seam + Vector2(-w / 2.0, 0), Vector2(w, bh))
-	ci.draw_rect(base.grow(w * 0.018), ink)
-	ci.draw_rect(base, _c(s, "body", a))
-	# Light from the left, shade on the right and under the lid.
-	ci.draw_rect(Rect2(base.position + Vector2(w * 0.7, 0), Vector2(w * 0.3, bh)), Color(s["dark"], 0.45 * a))
-	ci.draw_rect(Rect2(base.position + Vector2(w * 0.05, bh * 0.22), Vector2(w * 0.05, bh * 0.6)), Color(s["light"], 0.7 * a))
-	ci.draw_rect(Rect2(base.position, Vector2(w, bh * 0.16)), _c(s, "dark", a))
-	if s["planks"]:
-		for f in [0.45, 0.72]:
-			var y: float = base.position.y + bh * f
-			ci.draw_line(Vector2(base.position.x, y), Vector2(base.end.x, y), Color(s["dark"], 0.9 * a), maxf(1.5, w * 0.012))
-	else:
-		# A sunken panel between the bands.
-		var inset := Rect2(base.position + Vector2(w * 0.1, bh * 0.28), Vector2(w * 0.8, bh * 0.5))
-		ci.draw_rect(inset, Color(s["dark"], 0.35 * a))
-		ci.draw_rect(Rect2(inset.position, Vector2(inset.size.x, maxf(1.5, w * 0.01))), Color(s["dark"], 0.8 * a))
-	# Bottom rim.
-	var rim := Rect2(base.position + Vector2(0, bh * 0.84), Vector2(w, bh * 0.16))
-	ci.draw_rect(rim, _c(s, "band", a))
-	ci.draw_rect(Rect2(rim.position, Vector2(w, maxf(1.5, w * 0.012))), _c(s, "band_light", a))
-	ci.draw_line(rim.position, rim.position + Vector2(w, 0), ink, maxf(1.0, w * 0.008))
-	# Vertical bands with rivets.
-	for x in [-0.37, 0.23]:
-		var band := Rect2(seam + Vector2(w * x, 0), Vector2(w * 0.14, bh))
-		ci.draw_rect(band, _c(s, "band", a))
-		ci.draw_rect(Rect2(band.position, Vector2(w * 0.03, bh)), _c(s, "band_light", a))
-		ci.draw_line(band.position, band.position + Vector2(0, bh), ink, maxf(1.0, w * 0.008))
-		ci.draw_line(band.position + Vector2(band.size.x, 0), band.end, ink, maxf(1.0, w * 0.008))
-		for y in [0.3, 0.66]:
-			_rivet(ci, band.position + Vector2(band.size.x / 2.0, bh * y), w * 0.022, s, a)
+	var shape := _placed(_curve(Vector2(-0.435, 0), [
+		[Vector2(-0.18, -0.005), Vector2(0.18, -0.005), Vector2(0.435, 0)],
+		[Vector2(0.48, 0), Vector2(0.491, 0.035), Vector2(0.49, 0.092)],
+		[Vector2(0.492, 0.21), Vector2(0.48, 0.30), Vector2(0.45, 0.34)],
+		[Vector2(0.424, 0.374), Vector2(0.35, 0.37), Vector2(0.28, 0.37)],
+		[Vector2(0.10, 0.38), Vector2(-0.10, 0.38), Vector2(-0.28, 0.37)],
+		[Vector2(-0.35, 0.37), Vector2(-0.424, 0.374), Vector2(-0.45, 0.34)],
+		[Vector2(-0.48, 0.30), Vector2(-0.492, 0.21), Vector2(-0.49, 0.092)],
+		[Vector2(-0.491, 0.035), Vector2(-0.48, 0), Vector2(-0.435, 0)],
+	]), seam, w)
+	ci.draw_colored_polygon(shape, _c(s, "body", a))
+	# Single broad lower rail; the center stays a generous uninterrupted fill.
+	var rail := _rounded(Rect2(seam + Vector2(-w * 0.456, w * 0.294), Vector2(w * 0.912, w * 0.064)), w * 0.028)
+	ci.draw_colored_polygon(rail, _c(s, "dark", a))
+	if s["planks"] and w >= 48.0:
+		# Open-ended grain explains wood without boxing every plank in dark ink.
+		_line(ci, seam + Vector2(-w * 0.44, w * 0.184), seam + Vector2(-w * 0.085, w * 0.184), _c(s, "dark", a), w * 0.011)
+		_line(ci, seam + Vector2(w * 0.16, w * 0.238), seam + Vector2(w * 0.435, w * 0.238), _c(s, "dark", a), w * 0.011)
+	for x in [-0.31, 0.31]:
+		var band := _rounded(Rect2(seam + Vector2(w * (x - 0.061), w * 0.009), Vector2(w * 0.122, w * 0.342)), w * 0.027)
+		ci.draw_colored_polygon(band, _c(s, "band", a))
+		# Material-colored contact edge, subordinate to the main outer contour.
+		if w >= 48.0:
+			_line(ci, seam + Vector2(w * (x + 0.061), w * 0.035), seam + Vector2(w * (x + 0.061), w * 0.315), _c(s, "band_ink", a), w * 0.012)
+			_line(ci, seam + Vector2(w * (x - 0.032), w * 0.075), seam + Vector2(w * (x - 0.032), w * 0.225), _c(s, "band_light", a), w * 0.026)
+	_stroke(ci, shape, Color(INK, a), w * 0.035)
 
 
-static func _dome_y(x: float, w: float, lh: float) -> float:
-	# Straight sides, then a flattish top that only rounds off near the edges
-	# (a superellipse rather than a half circle).
-	var t := clampf(absf(x) / (w / 2.0), 0.0, 1.0)
-	return -(lh * 0.6 + lh * 0.4 * pow(1.0 - pow(t, 3.0), 1.0 / 3.0))
+static func _dome_y(x: float, w: float) -> float:
+	var t := clampf(absf(x) / (w * 0.5), 0.0, 1.0)
+	return -w * (0.04 + 0.25 * sqrt(maxf(0.0, 1.0 - pow(t, 4.0))))
 
 
 static func _draw_lid(ci: CanvasItem, w: float, s: Dictionary, a: float) -> void:
-	var lh := w * LID_H
-	var ink := Color(INK, a)
-	var shape := PackedVector2Array([Vector2(-w / 2.0, 0)])
-	var steps := 24
-	for i in steps + 1:
-		var x := -w / 2.0 + w * i / steps
-		shape.append(Vector2(x, _dome_y(x, w, lh)))
-	shape.append(Vector2(w / 2.0, 0))
-	var outline := shape.duplicate()
-	outline.append(shape[0])
-	ci.draw_polyline(outline, ink, w * 0.036, true)
+	var shape := PackedVector2Array()
+	for i in 65:
+		# Concentrate samples at the shoulders, where a uniform x step facets
+		# the round contour most visibly at the 250 px opening size.
+		var x := -cos(i * PI / 64.0) * w * 0.5
+		shape.append(Vector2(x, _dome_y(x, w)))
+	shape.append_array(_placed(_curve(Vector2(0.5, -0.04), [
+		[Vector2(0.503, -0.005), Vector2(0.485, 0), Vector2(0.455, 0)],
+		[Vector2(0.2, 0.008), Vector2(-0.2, 0.008), Vector2(-0.455, 0)],
+		[Vector2(-0.485, 0), Vector2(-0.503, -0.005), Vector2(-0.5, -0.04)],
+	]), Vector2.ZERO, w).slice(1))
 	ci.draw_colored_polygon(shape, _c(s, "body", a))
-	# Shade on the right half, a highlight along the upper left of the dome.
-	var shade := PackedVector2Array([Vector2(w * 0.2, 0)])
-	for i in 9:
-		var x := w * 0.2 + w * 0.3 * i / 8.0
-		shade.append(Vector2(x, _dome_y(x, w, lh)))
-	shade.append(Vector2(w / 2.0, 0))
-	ci.draw_colored_polygon(shade, Color(s["dark"], 0.45 * a))
-	var shine := PackedVector2Array()
-	for i in 9:
-		var x := -w * 0.4 + w * 0.34 * i / 8.0
-		shine.append(Vector2(x, _dome_y(x, w, lh) + lh * 0.14))
-	ci.draw_polyline(shine, Color(s["light"], 0.9 * a), maxf(2.0, lh * 0.1), true)
-	if s["planks"]:
-		for f in [0.5]:
-			var line := PackedVector2Array()
-			for i in 13:
-				var x := -w / 2.0 + w * i / 12.0
-				line.append(Vector2(x, _dome_y(x, w, lh) * f))
-			ci.draw_polyline(line, Color(s["dark"], 0.9 * a), maxf(1.5, w * 0.012), true)
-	# Bands over the dome, matching the ones on the base.
-	for x in [-0.37, 0.23]:
-		var x0: float = w * x
-		var x1: float = x0 + w * 0.14
-		var band := PackedVector2Array([Vector2(x0, 0)])
-		for i in 5:
-			var bx: float = lerpf(x0, x1, i / 4.0)
-			band.append(Vector2(bx, _dome_y(bx, w, lh)))
-		band.append(Vector2(x1, 0))
+	# Broad paint inset follows the puffed dome instead of a glossy shine stripe.
+	var inset := _rounded(Rect2(Vector2(-w * 0.235, -w * 0.245), Vector2(w * 0.47, w * 0.105)), w * 0.045)
+	ci.draw_colored_polygon(inset, _c(s, "light", a))
+	for x in [-0.31, 0.31]:
+		var band := PackedVector2Array([Vector2(w * (x - 0.061), -w * 0.025)])
+		for i in 9:
+			var bx: float = w * (x - 0.061 + 0.122 * i / 8.0)
+			band.append(Vector2(bx, _dome_y(bx, w)))
+		band.append(Vector2(w * (x + 0.061), -w * 0.025))
 		ci.draw_colored_polygon(band, _c(s, "band", a))
-		ci.draw_line(Vector2(x0, 0), Vector2(x0, _dome_y(x0, w, lh)), ink, maxf(1.0, w * 0.008))
-		ci.draw_line(Vector2(x1, 0), Vector2(x1, _dome_y(x1, w, lh)), ink, maxf(1.0, w * 0.008))
-		ci.draw_line(Vector2(x0 + w * 0.015, -lh * 0.1), Vector2(x0 + w * 0.015, _dome_y(x0, w, lh) + lh * 0.08), _c(s, "band_light", a), w * 0.028)
-		_rivet(ci, Vector2((x0 + x1) / 2.0, _dome_y((x0 + x1) / 2.0, w, lh) * 0.55), w * 0.022, s, a)
-	# Lid rim.
-	var rim := Rect2(Vector2(-w / 2.0, -lh * 0.2), Vector2(w, lh * 0.2))
-	ci.draw_rect(rim, _c(s, "band", a))
-	ci.draw_rect(Rect2(rim.position, Vector2(w, maxf(1.5, lh * 0.05))), _c(s, "band_light", a))
-	ci.draw_line(rim.position, rim.position + Vector2(w, 0), ink, maxf(1.0, w * 0.008))
-	if s["gem"]:
-		_gem(ci, Vector2(0, -lh * 0.6), w * 0.075, a)
+		if w >= 48.0:
+			_line(ci, Vector2(w * (x + 0.061), _dome_y(w * (x + 0.061), w) + w * 0.012), Vector2(w * (x + 0.061), -w * 0.06), _c(s, "band_ink", a), w * 0.012)
+			_line(ci, Vector2(w * (x - 0.032), -w * 0.22), Vector2(w * (x - 0.032), -w * 0.105), _c(s, "band_light", a), w * 0.026)
+	var lip := _rounded(Rect2(Vector2(-w * 0.487, -w * 0.06), Vector2(w * 0.974, w * 0.059)), w * 0.026)
+	ci.draw_colored_polygon(lip, _c(s, "band", a))
+	# One shared seam across the lid, rather than outlines around each band patch.
+	_line(ci, Vector2(-w * 0.445, -w * 0.061), Vector2(w * 0.445, -w * 0.061), _c(s, "band_ink", a), w * 0.012)
+	_stroke(ci, shape, Color(INK, a), w * 0.035)
 
 
-## Closed, the plate straddles the seam; open, only the hasp on the box is left.
-static func _draw_lock(ci: CanvasItem, seam: Vector2, w: float, s: Dictionary, a: float, open := false) -> void:
-	var ink := Color(INK, a)
-	var top := 0.0 if open else -w * 0.07
-	var plate := PackedVector2Array([
-		seam + Vector2(-w * 0.1, top), seam + Vector2(w * 0.1, top),
-		seam + Vector2(w * 0.1, w * 0.12), seam + Vector2(0, w * 0.2), seam + Vector2(-w * 0.1, w * 0.12)])
-	var outline := plate.duplicate()
-	outline.append(plate[0])
-	ci.draw_polyline(outline, ink, w * 0.03, true)
+static func _draw_lock(ci: CanvasItem, seam: Vector2, w: float, s: Dictionary, a: float, open: bool) -> void:
+	var top := 0.0 if open else -0.057
+	var plate := _rounded(Rect2(seam + Vector2(-w * 0.106, w * top), Vector2(w * 0.212, w * (0.19 - top))), w * 0.049)
 	ci.draw_colored_polygon(plate, _c(s, "band", a))
-	ci.draw_line(plate[0] + Vector2(w * 0.02, w * 0.02), plate[4] + Vector2(w * 0.02, -w * 0.01), _c(s, "band_light", a), maxf(1.5, w * 0.02))
-	ci.draw_circle(seam + Vector2(0, w * 0.035), w * 0.03, ink)
-	ci.draw_colored_polygon(PackedVector2Array([seam + Vector2(-w * 0.018, w * 0.04), seam + Vector2(w * 0.018, w * 0.04), seam + Vector2(0, w * 0.12)]), ink)
-
-
-static func _rivet(ci: CanvasItem, at: Vector2, r: float, s: Dictionary, a: float) -> void:
-	ci.draw_circle(at, r + 1.0, Color(INK, a))
-	ci.draw_circle(at, r, _c(s, "band_light", a))
-	ci.draw_circle(at + Vector2(r * 0.3, r * 0.3), r * 0.5, Color(s["band"], a))
-
-
-static func _gem(ci: CanvasItem, at: Vector2, r: float, a: float) -> void:
-	var top := at + Vector2(0, -r)
-	var bottom := at + Vector2(0, r)
-	var left := at + Vector2(-r * 0.85, -r * 0.2)
-	var right := at + Vector2(r * 0.85, -r * 0.2)
-	var shape := PackedVector2Array([top, right, bottom, left])
-	var outline := shape.duplicate()
-	outline.append(top)
-	ci.draw_polyline(outline, Color(INK, a), maxf(2.0, r * 0.3), true)
-	ci.draw_colored_polygon(shape, Color(Color("4fd6e8"), a))
-	ci.draw_colored_polygon(PackedVector2Array([top, at + Vector2(0, -r * 0.2), left]), Color(Color("d4fbff"), a))
-	ci.draw_colored_polygon(PackedVector2Array([right, bottom, at + Vector2(0, -r * 0.2)]), Color(Color("2b8fb8"), a))
+	_stroke(ci, plate, Color(INK, a), w * 0.026)
+	# The paw is the only ornament: a functional, generously sized lock emblem.
+	var center := seam + Vector2(0, w * 0.09)
+	var paw := _placed(_curve(Vector2(-0.049, 0.022), [
+		[Vector2(-0.053, 0.001), Vector2(-0.026, -0.002), Vector2(-0.017, -0.02)],
+		[Vector2(-0.007, -0.037), Vector2(0.007, -0.037), Vector2(0.017, -0.02)],
+		[Vector2(0.026, -0.002), Vector2(0.053, 0.001), Vector2(0.049, 0.022)],
+		[Vector2(0.045, 0.047), Vector2(0.018, 0.032), Vector2(0, 0.035)],
+		[Vector2(-0.018, 0.032), Vector2(-0.045, 0.047), Vector2(-0.049, 0.022)],
+	]), center, w)
+	ci.draw_colored_polygon(paw, _c(s, "paw", a))
+	for toe in [Vector2(-0.052, -0.023), Vector2(-0.021, -0.049), Vector2(0.021, -0.049), Vector2(0.052, -0.023)]:
+		ci.draw_circle(center + toe * w, w * 0.017, _c(s, "paw", a), true, -1.0, true)

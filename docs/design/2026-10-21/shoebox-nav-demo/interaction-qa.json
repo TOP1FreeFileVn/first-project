@@ -1,0 +1,78 @@
+{
+  "scope": "DOM event/state simulation; native PNGs cover visual art",
+  "checks": [
+    {
+      "name": "initial_battle_open",
+      "pass": true
+    },
+    {
+      "name": "no_persist_on_load",
+      "pass": true
+    },
+    {
+      "name": "press_compresses_without_selecting",
+      "pass": true
+    },
+    {
+      "name": "selection_response_immediate",
+      "pass": true
+    },
+    {
+      "name": "new_lid_opens_while_old_lid_closes",
+      "pass": true
+    },
+    {
+      "name": "selected_icon_emerges_after_lid",
+      "pass": true
+    },
+    {
+      "name": "selected_settles_open",
+      "pass": true
+    },
+    {
+      "name": "only_selected_page_visible",
+      "pass": true
+    },
+    {
+      "name": "drag_out_cancels_without_changing_tab",
+      "pass": true
+    },
+    {
+      "name": "retap_does_not_reopen_or_pop",
+      "pass": true
+    },
+    {
+      "name": "rapid_changes_last_tab_wins",
+      "pass": true
+    },
+    {
+      "name": "all_unselected_boxes_closed",
+      "pass": true
+    },
+    {
+      "name": "animation_stops_at_rest",
+      "pass": true
+    },
+    {
+      "name": "keyboard_wraps_and_focuses",
+      "pass": true
+    },
+    {
+      "name": "reduced_motion_settles_immediately",
+      "pass": true
+    },
+    {
+      "name": "restores_selected_tab",
+      "pass": true
+    },
+    {
+      "name": "fragment_is_self_contained",
+      "pass": true
+    },
+    {
+      "name": "literal_html_fragment",
+      "pass": true
+    }
+  ],
+  "failures": 0
+}

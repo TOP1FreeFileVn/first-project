@@ -1,0 +1,50 @@
+{
+  "scope": "Bow moved to left hand only. Bare hero/cape/head and original paw strokes; no wearable gear layers.",
+  "source": "bow-left.svg",
+  "source_sha256": "75c1384cfbeba1a6b2582d238cd17f75d752f352d4b897082f0f26001eae9c6c",
+  "raster_source_sha256": "12a23e49e779b415c8cfc7b8b4ed80537e2e97a7c3c3132402cb85373646cc31",
+  "color_adjustment": "Godot SVG original-tone raster receives one1.10 paint pass; main brown ink preserved.",
+  "transformation": "Authored SVG wraps only weapon with translate(254 0) scale(-1 1); x_new=254-x_old. Cat and paws are not mirrored.",
+  "canvas": [
+    256,
+    240
+  ],
+  "raster": [
+    768,
+    720
+  ],
+  "source_grip": [
+    160,
+    166
+  ],
+  "target_grip": [
+    94,
+    166
+  ],
+  "raster_leather_center_x_at_y166": 94.0,
+  "main_native": 9,
+  "string_native": 3,
+  "surface_native": 1.8,
+  "string_role": "Visible secondary structural line, distinct from main9. No fill substitute.",
+  "string_source_color": "#8a6240",
+  "string_brightened_color": "#986c46",
+  "string_axis_native": 32,
+  "string_span_native": [
+    97,
+    231
+  ],
+  "bounds_native": [
+    24.333,
+    87.667,
+    110.667,
+    238.333
+  ],
+  "clipped": false,
+  "layers_order": [
+    "original hero-base",
+    "bow-left-weapon-layer",
+    "local ginger palm fill",
+    "original hero-paws"
+  ],
+  "paw_occlusion": "Small rounded ginger-fur mask inside the left paw bowl, followed by unchanged original C contour. No added cuff or glove outline."
+}

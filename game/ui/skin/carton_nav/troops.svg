@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 128 128">
+  <!-- A broad, reinforced shield: flat crown, clipped shoulders and rounded lower cheeks. -->
+  <path d="M20 9H108Q116 9 118 18L121 38L117 76Q114 99 71 119Q64 123 57 119Q14 99 11 76L7 38L10 18Q12 9 20 9Z"
+        fill="#e7efea" stroke="#583f21" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- The broad enamel field meets the pale steel directly, without a second heavy contour. -->
+  <path d="M24 24H104L108 40L104 73Q102 88 64 107Q26 88 24 73L20 40Z" fill="#78c6ce"/>
+  <!-- Quiet steel construction marks stay subordinate to the silhouette. -->
+  <path d="M25 18H103M17 30L15 39L18 61M111 30L113 39L110 61"
+        fill="none" stroke="#a1b7b5" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- A single blank cat crest identifies the army, distinct from the hero's illustrated face. -->
+  <path d="M36 65L37 44Q37 40 41 42L52 51Q64 46 76 51L87 42Q91 40 91 44L92 65Q97 76 87 84Q78 91 64 91Q50 91 41 84Q31 76 36 65Z"
+        fill="#fff3d5"/>
+</svg>

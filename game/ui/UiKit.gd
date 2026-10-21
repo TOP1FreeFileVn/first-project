@@ -187,9 +187,11 @@ static func cozy_button_style(red: bool, narrow: bool, short: bool) -> StyleBoxT
 	return cozy_style(COZY_BUTTON_RED if red else COZY_BUTTON, scale, [m * 0.5, m * 0.4, m * 0.5, m * 0.55], [12, 4, 12, 10 if not short else 8])
 
 
-## Teal container for grouped content on the lobby pages and the battle shop.
-static func panel_style() -> StyleBox:
+## Menus opt into a contextual face; the battle shop keeps its existing skin.
+static func panel_style(context := "") -> StyleBox:
 	if is_game():
+		if not context.is_empty():
+			return Ui.menu_panel_style(context)
 		return skin_box("Board")
 	if is_cozy():
 		return cozy_style(COZY_PANEL, 0.4, [22, 20, 22, 26], [20, 18, 20, 22])
@@ -612,6 +614,16 @@ static func sheet_popup(host: Control, width: float, title: String) -> VBoxConta
 	overlay.theme = make_theme()
 	overlay.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	host.add_child(overlay)
+	var context := Ui.menu_context_for_title(title)
+	var ancestor: Node = host
+	while context == "" and ancestor != null:
+		if ancestor.has_method("active_menu_context"):
+			context = ancestor.active_menu_context()
+		ancestor = ancestor.get_parent()
+	if context == "battle" or context == "":
+		context = "hero"
+	if Ui.register_menu_surface(host, overlay, context):
+		return _menu_popup(overlay, width, title, context)
 	var center := CenterContainer.new()
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -652,6 +664,47 @@ static func sheet_popup(host: Control, width: float, title: String) -> VBoxConta
 			overlay.queue_free())
 	frame.scale = Vector2(0.85, 0.85)
 	overlay.create_tween().tween_property(frame, "scale", Vector2.ONE, 0.12)
+	box.set_meta("overlay", overlay)
+	return box
+
+
+## Menu-only B shell; long lists scroll inside the fixed tag/close boundary.
+## Combat keeps sheet_popup's original art and typography below the menu branch.
+static func _menu_popup(overlay: Control, width: float, title: String, context: String) -> VBoxContainer:
+	var center := CenterContainer.new()
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	overlay.add_child(center)
+	var scroll := ScrollContainer.new()
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var box := vbox(14)
+	box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.add_child(box)
+	# Existing popup rebuilders preserve child zero as their header placeholder.
+	box.add_child(gap(0, 0))
+	var frame := Ui.menu_section(context, title, scroll)
+	frame.mouse_filter = Control.MOUSE_FILTER_STOP
+	center.add_child(frame)
+	var close := close_button(overlay.queue_free)
+	frame.add_child(close)
+	close.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
+	close.offset_left = -62
+	close.offset_right = 6
+	close.offset_top = 0
+	close.offset_bottom = 68
+	var fit := func():
+		var view := overlay.get_viewport_rect().size
+		var shell_width := minf(width, view.x - 48)
+		var height_limit := maxf(120, view.y - 220)
+		scroll.custom_minimum_size = Vector2(shell_width - 56, minf(box.get_combined_minimum_size().y, height_limit))
+		frame.pivot_offset = frame.get_combined_minimum_size() / 2.0
+	box.minimum_size_changed.connect(fit)
+	overlay.resized.connect(fit)
+	fit.call()
+	overlay.gui_input.connect(func(event: InputEvent):
+		if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
+			overlay.queue_free())
 	box.set_meta("overlay", overlay)
 	return box
 

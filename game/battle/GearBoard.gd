@@ -61,6 +61,7 @@ var tiles := {}
 
 var _drag = null
 var _drag_from := NO_CELL
+var _drag_pointer := Vector2.ZERO
 var _slot_face: StyleBoxFlat
 var _locked_face: StyleBoxFlat
 
@@ -173,6 +174,28 @@ func is_dragging() -> bool:
 	return _drag != null
 
 
+func dragged_gear():
+	return _drag
+
+
+func drag_can_sell() -> bool:
+	return _drag != null and not _drag.is_skill()
+
+
+func drag_over_sell_zone() -> bool:
+	return drag_can_sell() and battle != null and battle.is_sell_zone(_drag_pointer)
+
+
+func cancel_drag() -> void:
+	if _drag != null:
+		_drop(NO_CELL)
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_WINDOW_FOCUS_OUT:
+		cancel_drag()
+
+
 func is_full() -> bool:
 	var room := 0
 	for cell in open_cells:
@@ -271,6 +294,8 @@ static func _pin_progress(offset: float) -> float:
 
 
 func _process(delta: float) -> void:
+	if _drag != null and (battle == null or not battle.accepts_input()):
+		cancel_drag()
 	_advance_drive(delta)
 	var fighting: bool = battle != null and battle.phase == "fight"
 	for gear in gears.values():
@@ -353,10 +378,13 @@ func _would_turn(cell: Vector2i) -> bool:
 func _input(event: InputEvent) -> void:
 	if battle == null or not battle.accepts_input():
 		if _drag != null:
-			_drop(NO_CELL)
+			cancel_drag()
+			get_viewport().set_input_as_handled()
 		return
+	if event is InputEventMouse:
+		_drag_pointer = get_canvas_transform().affine_inverse() * event.position
 	if event is InputEventMouseButton:
-		var cell := cell_at(get_local_mouse_position())
+		var cell := cell_at(to_local(_drag_pointer))
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.pressed and _drag == null and gears.has(cell):
 				_drag = gears[cell]
@@ -364,7 +392,7 @@ func _input(event: InputEvent) -> void:
 				_drag.z_index = 20
 				get_viewport().set_input_as_handled()
 			elif not event.pressed and _drag != null:
-				if battle.is_sell_zone(get_global_mouse_position()):
+				if drag_over_sell_zone():
 					var gear = _drag
 					_drag = null
 					battle.sell_gear(gear)
@@ -375,7 +403,8 @@ func _input(event: InputEvent) -> void:
 			battle.sell_gear(gears[cell])
 			get_viewport().set_input_as_handled()
 	elif event is InputEventMouseMotion and _drag != null:
-		_drag.position = get_local_mouse_position()
+		_drag.position = to_local(_drag_pointer)
+		get_viewport().set_input_as_handled()
 
 
 func _drop(cell: Vector2i) -> void:
@@ -408,7 +437,7 @@ func _place(gear, cell: Vector2i) -> void:
 
 
 func _draw() -> void:
-	var hover := cell_at(get_local_mouse_position()) if _drag != null else NO_CELL
+	var hover := cell_at(to_local(_drag_pointer)) if _drag != null else NO_CELL
 	for y in ROWS:
 		for x in COLS:
 			var cell := Vector2i(x, y)

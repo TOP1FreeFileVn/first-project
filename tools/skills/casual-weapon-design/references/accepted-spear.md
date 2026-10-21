@@ -4,6 +4,8 @@ On 2026-10-20, after the stroke-reference study and one requested weapon sample,
 
 Open [the included review image](../assets/accepted-spear-review.png): isolated spear, unchanged cat holding it, native-size hero and inventory thumbnails. The [Figma review](https://www.figma.com/design/wMtwWaYIiKUchUdq5YdTm5?node-id=3628-2) is node `3628:2` on page `3539:2`, file `wMtwWaYIiKUchUdq5YdTm5`.
 
+Later hero-equipment display corrections are recorded in [cat-defender.md](cat-defender.md#current-hero-equipment-display-contract): only weapons are visible on the unchanged hero; the other five slots use stat-only icons, and the bow uses the left paw. These corrections do not change this sample's approved stroke treatment or grant approval to the later v4 proposal.
+
 ## What to carry forward
 
 - Use a confident warm-brown main contour with broad colored areas inside. The main-line design target is **9 px on a 256 x 240 character canvas**. The selected raster's straight shaft measured **34 source px × 0.24 fitted scale = 8.16 px**, approximately 8.2 px. Generated widths vary locally; this sample is not evidence of exact 9 px everywhere.
