@@ -1,0 +1,2755 @@
+{
+	"captures": [
+		{
+			"file": "home_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "hover_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "pressed_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "release_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "login_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "quests_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "events_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "badge-refresh_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "tab-roundtrip_450x800.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "home_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "hover_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "pressed_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "release_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "login_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "quests_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "events_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "badge-refresh_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "tab-roundtrip_360x640.png",
+			"rails": {
+				"LobbyShortcutRailLeft": [
+					16.0,
+					252.0,
+					108.0,
+					256.0
+				],
+				"LobbyShortcutRailRight": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				]
+			},
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "initial_visible_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_same_fixed_rail_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_shared_flat_mask_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_approved_mask_color_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_no_mask_outline_or_shadow_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_continuous_compact_column_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_correct_group_count_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_visible_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_same_fixed_rail_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_shared_flat_mask_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_approved_mask_color_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_no_mask_outline_or_shadow_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_continuous_compact_column_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_correct_group_count_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_production_shortcut_script_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_same_native_shortcut_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_preserved_native_hit_target_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_approved_icon_caption_scale_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_production_shortcut_script_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_same_native_shortcut_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_preserved_native_hit_target_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_approved_icon_caption_scale_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_production_shortcut_script_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_same_native_shortcut_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_preserved_native_hit_target_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_approved_icon_caption_scale_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_stage_header_y_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_lowered_action_group_in_production",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_reward_row_above_battle_button",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_battle_button_clears_bottom_navigation_at_pulse",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_home",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_hover_feedback",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hover_keeps_shared_strip_fixed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_hover",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_held_press_feedback",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "press_keeps_shared_strip_fixed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_pressed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_release",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_login_destination",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_close_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_return_from_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_quests_shortcut_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_quests_destination",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_close_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_return_from_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_events_shortcut_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_events_destination",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_close_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_return_from_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_login_badge_ready",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge_refresh_updates_alert",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_visible_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_same_fixed_rail_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_shared_flat_mask_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_approved_mask_color_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_no_mask_outline_or_shadow_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_continuous_compact_column_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_correct_group_count_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_visible_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_same_fixed_rail_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_shared_flat_mask_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_approved_mask_color_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_no_mask_outline_or_shadow_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_continuous_compact_column_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_correct_group_count_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_production_shortcut_script_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_same_native_shortcut_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_preserved_native_hit_target_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_approved_icon_caption_scale_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_production_shortcut_script_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_same_native_shortcut_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_preserved_native_hit_target_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_approved_icon_caption_scale_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_production_shortcut_script_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_same_native_shortcut_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_preserved_native_hit_target_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "badge-refresh_approved_icon_caption_scale_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_badge-refresh",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_shop_tab_roundtrip_out",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop_hides_shortcut_columns",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_battle_tab_roundtrip_back",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "battle_restores_shortcut_columns",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_visible_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_fixed_rail_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_shared_flat_mask_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_mask_color_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_no_mask_outline_or_shadow_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_continuous_compact_column_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_correct_group_count_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_visible_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_fixed_rail_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_shared_flat_mask_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_mask_color_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_no_mask_outline_or_shadow_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_continuous_compact_column_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_correct_group_count_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_production_shortcut_script_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_native_shortcut_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_preserved_native_hit_target_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_icon_caption_scale_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_production_shortcut_script_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_native_shortcut_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_preserved_native_hit_target_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_icon_caption_scale_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_production_shortcut_script_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_native_shortcut_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_preserved_native_hit_target_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_icon_caption_scale_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_stage_header_y_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_lowered_action_group_in_production",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_reward_row_above_battle_button",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "tab-roundtrip_battle_button_clears_bottom_navigation_at_pulse",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_tab-roundtrip",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "review_never_persists",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_visible_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_same_fixed_rail_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_shared_flat_mask_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_approved_mask_color_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_no_mask_outline_or_shadow_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_continuous_compact_column_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_correct_group_count_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_visible_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_same_fixed_rail_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_shared_flat_mask_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_approved_mask_color_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_no_mask_outline_or_shadow_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_continuous_compact_column_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_correct_group_count_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_production_shortcut_script_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_same_native_shortcut_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_preserved_native_hit_target_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_approved_icon_caption_scale_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_production_shortcut_script_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_same_native_shortcut_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_preserved_native_hit_target_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_approved_icon_caption_scale_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_production_shortcut_script_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_same_native_shortcut_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_preserved_native_hit_target_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_approved_icon_caption_scale_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_stage_header_y_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_lowered_action_group_in_production",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_reward_row_above_battle_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_battle_button_clears_bottom_navigation_at_pulse",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_home",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hover_feedback",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hover_keeps_shared_strip_fixed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_hover",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_held_press_feedback",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "press_keeps_shared_strip_fixed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_pressed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_release",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_login_destination",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_close_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_return_from_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_quests_shortcut_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_quests_destination",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_close_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_return_from_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_events_shortcut_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_events_destination",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_close_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_return_from_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_login_badge_ready",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge_refresh_updates_alert",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_visible_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_same_fixed_rail_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_shared_flat_mask_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_approved_mask_color_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_no_mask_outline_or_shadow_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_continuous_compact_column_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_correct_group_count_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_visible_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_same_fixed_rail_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_shared_flat_mask_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_approved_mask_color_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_no_mask_outline_or_shadow_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_continuous_compact_column_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_correct_group_count_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_production_shortcut_script_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_same_native_shortcut_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_preserved_native_hit_target_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_approved_icon_caption_scale_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_production_shortcut_script_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_same_native_shortcut_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_preserved_native_hit_target_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_approved_icon_caption_scale_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_production_shortcut_script_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_same_native_shortcut_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_preserved_native_hit_target_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "badge-refresh_approved_icon_caption_scale_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_badge-refresh",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shop_tab_roundtrip_out",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_hides_shortcut_columns",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_battle_tab_roundtrip_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "battle_restores_shortcut_columns",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_visible_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_fixed_rail_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_shared_flat_mask_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_mask_color_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_no_mask_outline_or_shadow_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_continuous_compact_column_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_correct_group_count_LobbyShortcutRailLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_visible_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_fixed_rail_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_shared_flat_mask_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_mask_color_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_no_mask_outline_or_shadow_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_continuous_compact_column_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_correct_group_count_LobbyShortcutRailRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_production_shortcut_script_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_native_shortcut_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_preserved_native_hit_target_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_icon_caption_scale_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_production_shortcut_script_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_native_shortcut_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_preserved_native_hit_target_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_icon_caption_scale_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_production_shortcut_script_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_same_native_shortcut_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_preserved_native_hit_target_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_approved_icon_caption_scale_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_stage_header_y_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_lowered_action_group_in_production",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_reward_row_above_battle_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "tab-roundtrip_battle_button_clears_bottom_navigation_at_pulse",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_tab-roundtrip",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "review_never_persists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"demo_substitution": false,
+	"failures": 0,
+	"interaction_states": [
+		{
+			"phase": "hover",
+			"state": {
+				"activation_blocked": false,
+				"alert": true,
+				"animating": false,
+				"effect_progress": 1.0,
+				"focus": 1.0,
+				"has_focus": false,
+				"hit_rect": "[P: (16.0, 252.0), S: (108.0, 128.0)]",
+				"holding": false,
+				"kind": 0,
+				"lift": 3.0,
+				"pointer_over": true,
+				"press": 0.0,
+				"visual_scale": 1.0
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"phase": "held-press",
+			"state": {
+				"activation_blocked": false,
+				"alert": true,
+				"animating": false,
+				"effect_progress": 1.0,
+				"focus": 1.0,
+				"has_focus": true,
+				"hit_rect": "[P: (16.0, 252.0), S: (108.0, 128.0)]",
+				"holding": true,
+				"kind": 0,
+				"lift": 3.0,
+				"pointer_over": true,
+				"press": 1.0,
+				"visual_scale": 0.94
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"phase": "release",
+			"state": {
+				"activation_blocked": false,
+				"alert": true,
+				"animating": true,
+				"effect_progress": 0.0,
+				"focus": 1.0,
+				"has_focus": true,
+				"hit_rect": "[P: (16.0, 252.0), S: (108.0, 128.0)]",
+				"holding": false,
+				"kind": 0,
+				"lift": 3.0,
+				"pointer_over": true,
+				"press": 1.0,
+				"visual_scale": 0.94
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"phase": "hover",
+			"state": {
+				"activation_blocked": false,
+				"alert": true,
+				"animating": false,
+				"effect_progress": 1.0,
+				"focus": 1.0,
+				"has_focus": false,
+				"hit_rect": "[P: (16.0, 252.0), S: (108.0, 128.0)]",
+				"holding": false,
+				"kind": 0,
+				"lift": 3.0,
+				"pointer_over": true,
+				"press": 0.0,
+				"visual_scale": 1.0
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"phase": "held-press",
+			"state": {
+				"activation_blocked": false,
+				"alert": true,
+				"animating": false,
+				"effect_progress": 1.0,
+				"focus": 1.0,
+				"has_focus": true,
+				"hit_rect": "[P: (16.0, 252.0), S: (108.0, 128.0)]",
+				"holding": true,
+				"kind": 0,
+				"lift": 3.0,
+				"pointer_over": true,
+				"press": 1.0,
+				"visual_scale": 0.94
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"phase": "release",
+			"state": {
+				"activation_blocked": false,
+				"alert": true,
+				"animating": true,
+				"effect_progress": 0.0,
+				"focus": 1.0,
+				"has_focus": true,
+				"hit_rect": "[P: (16.0, 252.0), S: (108.0, 128.0)]",
+				"holding": false,
+				"kind": 0,
+				"lift": 3.0,
+				"pointer_over": true,
+				"press": 1.0,
+				"visual_scale": 0.94
+			},
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"persist": false,
+	"production_home": true,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/lobby-mask-integration-profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

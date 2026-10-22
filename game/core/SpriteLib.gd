@@ -203,7 +203,7 @@ func _skin_image(file: String, size: Vector2i) -> Image:
 
 
 ## Only the equipped weapon changes this original hero's front-facing look.
-## The five other slots keep their existing stats and standalone item icons.
+## The three other slots keep their existing stats and standalone item icons.
 ## Cache by artwork, so a level/stat upgrade never creates another costume.
 func hero_cat_texture(state: Dictionary) -> Texture2D:
 	var uid := HeroCat.equipped_uid(state, "weapon")

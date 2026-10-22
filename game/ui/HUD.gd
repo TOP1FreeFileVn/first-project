@@ -314,6 +314,7 @@ func _build_controls(root: Control) -> void:
 	row.add_child(refund)
 
 	var ready_rect := sell_rect
+	ready_rect.position.y += 6.0
 	_ready_button = Ui.button("", "Yellow", ready_rect.size, 26)
 	_ready_button.name = "BattleReadyButton"
 	_raise_button_caption(_ready_button)

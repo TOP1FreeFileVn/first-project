@@ -1,0 +1,50 @@
+[
+  {
+    "id": "A",
+    "title": "Tời kéo xô",
+    "idea": "Cuộn dây lớn trên hai gối đỡ, dây buông xuống chiếc xô bên phải.",
+    "source": "Tời cuộn dây quay tay và xô kéo nước."
+  },
+  {
+    "id": "B",
+    "title": "Máy xay quay tay",
+    "idea": "Phễu nạp phía trên, ống xay nằm ngang, vòi ra và chân vít kẹp bàn.",
+    "source": "Máy xay thực phẩm bằng gang quay tay."
+  },
+  {
+    "id": "C",
+    "title": "Máy khâu cổ",
+    "idea": "Thân cổ cong, bánh đà bên trái, kim và bàn ép bên phải.",
+    "source": "Máy may cơ tay quay với thân cổ ngỗng và bánh đà."
+  },
+  {
+    "id": "D",
+    "title": "Máy chiếu phim",
+    "idea": "Hai cuộn phim nổi trên đầu, ống kính nhô bên phải, thân máy có chân đế.",
+    "source": "Máy chiếu phim quay tay hai cuộn đầu thế kỷ20."
+  },
+  {
+    "id": "E",
+    "title": "Máy câu cuộn cước",
+    "idea": "Ống cuộn có hai vành, cần gạt dây vòng cung và chân kẹp cần câu.",
+    "source": "Máy câu spinning quay tay"
+  },
+  {
+    "id": "F",
+    "title": "Bơm nước quay tay",
+    "idea": "Thân bơm đứng, vòi cong chúc xuống và chân đế thấp; màu xanh xám của gang sơn.",
+    "source": "Bơm nước gang quay tay, thân đứng và vòi cong"
+  },
+  {
+    "id": "G",
+    "title": "Guồng quấn len gỗ",
+    "idea": "Bốn thanh gỗ thẳng, cọc chặn ngang và các vòng len căng thành bối; guồng quay trên giá nhỏ.",
+    "source": "Guồng quấn sợi len bốn tay có cọc giữ bối"
+  },
+  {
+    "id": "H",
+    "title": "Máy hát loa kèn",
+    "idea": "Hộp máy thấp, đĩa quay và loa kèn loe lớn bên trên; nhận ra đồ vật ngay cả khi mèo che giữa.",
+    "source": "Máy hát đĩa loa kèn quay tay"
+  }
+]

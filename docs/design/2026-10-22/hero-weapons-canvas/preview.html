@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><title>Vũ khí · bản vẽ lại</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#e4e9e2;color:#583f21;width:1280px;font:15px Game,sans-serif}h1{font-size:28px;margin:0 0 5px}p{margin:0 0 18px;color:#776b58;font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.card{background:#f4f4ed;border-radius:18px;padding:14px;text-align:center}h2{font-size:21px;margin:0 0 8px}.old{height:90px}.old img{height:80px;width:80px;object-fit:contain}.icon{width:240px;height:240px}.hero{width:256px;height:240px}.mini{display:flex;align-items:flex-end;justify-content:center;gap:12px;margin:12px 0}.label{font:12px sans-serif;margin:5px 0 8px;color:#776b58}.role{width:96px;height:96px;vertical-align:middle}.native{width:128px;height:120px;vertical-align:middle}footer{margin-top:12px;color:#776b58;font:13px sans-serif}
+</style>
+<h1>VŨ KHÍ · BẢN VẼ LẠI</h1><p>Cung hướng lên trái · rìu vẽ lại đầu rộng · nét chính / nét phụ rõ vai trò</p><div class="grid" id="grid"></div>
+<footer>Mẫu thiết kế riêng · đỏ: nét chính, xanh: nét phụ · mặt vật liệu dùng fill không kẻ viền</footer>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script><script src="bow.js"></script><script src="staff.js"></script><script src="axe.js"></script><script src="katana.js"></script><script src="art.js"></script>
+<script>
+const SRC='../../2026-10-19/hero-equipment/sources/';
+const load=n=>new Promise(ok=>{const i=new Image();i.onload=()=>ok(i);i.src=SRC+n;});
+Promise.all([load('hero-base.svg'),load('hero-paws.svg')]).then(([base,paws])=>{
+ for(const [slug,d] of Object.entries(HeroWeaponArt.definitions)){
+  const card=document.createElement('section');card.className='card';card.innerHTML=`<h2>${d.title}</h2><div class="old"><img src="../../../../game/ui/art/icon_hero_w_${d.old}.png"></div><div class="label">Đang dùng</div><canvas class="icon" width="256" height="256"></canvas><div class="mini"></div><canvas class="hero" width="256" height="240"></canvas><div><canvas class="native" width="128" height="120"></canvas><canvas class="role" width="256" height="256"></canvas></div>`;
+  document.getElementById('grid').append(card);Pen.toCanvas(HeroWeaponArt.icon(slug,256),card.querySelector('.icon').getContext('2d'));
+  for(const size of [32,48,64,96]){const c=document.createElement('canvas');c.width=c.height=size;card.querySelector('.mini').append(c);Pen.toCanvas(HeroWeaponArt.icon(slug,size),c.getContext('2d'));}
+  const pose=HeroWeaponArt.held(slug);
+  for(const [cls,scale] of [['.hero',1],['.native',.5]]){const c=card.querySelector(cls).getContext('2d');c.scale(scale,scale);c.drawImage(base,0,0,256,240);Pen.toCanvas(pose.weapon,c);Pen.toCanvas(pose.palm,c);c.drawImage(paws,0,0,256,240);}
+  Pen.toCanvas(HeroWeaponArt.icon(slug,256,true),card.querySelector('.role').getContext('2d'));
+ }
+ document.title+=' ready';
+});
+</script>

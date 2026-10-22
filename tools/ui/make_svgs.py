@@ -6,9 +6,11 @@ Re-run after changing a colour or a proportion:  python -I tools/ui/make_svgs.py
 """
 import math
 import os
+import re
 import sys
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join("game", "ui", "skin")
+_output_args = [arg for arg in sys.argv[1:] if arg != "--equipment-cards-only"]
+OUT = _output_args[0] if _output_args else os.path.join("game", "ui", "skin")
 
 LINE = "#503737"
 ICON_LINE = "#3c1e0c"
@@ -25,6 +27,26 @@ def n(v):
 def svg(w, h, body, defs=""):
     head = f'<svg xmlns="http://www.w3.org/2000/svg" width="{n(w)}" height="{n(h)}" viewBox="0 0 {n(w)} {n(h)}">'
     return head + (f"<defs>{defs}</defs>" if defs else "") + body + "</svg>\n"
+
+
+def approved_nav_svg(filename):
+    """Read the canonical approved navigation art, independent of cwd."""
+    source = os.path.join(os.path.dirname(__file__), "..", "..", "game", "ui",
+                          "art_sources", filename)
+    with open(source, encoding="utf-8") as file:
+        return file.read()
+
+
+def approved_tab_hero_svg(size):
+    """Resize only the root viewport; preserve the approved helmet paths/viewBox."""
+    artwork = approved_nav_svg("nav_hero.svg")
+
+    def resize_root(match):
+        return re.sub(r'\s(width|height)\s*=\s*([\'"]).*?\2',
+                      lambda dimension: f' {dimension.group(1)}="{n(size)}"',
+                      match.group(0))
+
+    return re.sub(r'<svg\b[^>]*>', resize_root, artwork, count=1)
 
 
 def rect(x, y, w, h, r, fill, extra=""):
@@ -117,9 +139,10 @@ def button(tone, pressed):
 # --- Containers -------------------------------------------------------------------------------
 
 def board():
-    body = rect(0, 8, 96, 96, 26, "#000000", ' fill-opacity="0.2"')
-    body += rect(0, 0, 96, 96, 26, LINE) + rect(3, 3, 90, 90, 23, "#cea364") + rect(14, 14, 68, 68, 16, "#dabf96")
-    body += rect(18, 18, 60, 60, 13, "none", ' stroke="#e8d4ae" stroke-width="2"')
+    # Preserve the legacy canvas, extending the flat face into the old shadow
+    # area so its bottom contour has the same weight as its top and sides.
+    body = rect(0, 0, 96, 104, 26, LINE) + rect(3, 3, 90, 98, 23, "#cea364") + rect(14, 14, 68, 76, 16, "#dabf96")
+    body += rect(18, 18, 60, 68, 13, "none", ' stroke="#e8d4ae" stroke-width="2"')
     return svg(96, 104, body)
 
 
@@ -144,8 +167,8 @@ def blue_panel():
 
 
 def sheet():
-    body = rect(0, 6, 64, 64, 16, "#000000", ' fill-opacity="0.2"') + rect(0, 0, 64, 64, 16, LINE)
-    body += rect(3, 3, 58, 58, 13, "#fffdfb") + rect(6, 6, 52, 52, 10, "#f1e7df")
+    body = rect(0, 0, 64, 70, 16, LINE)
+    body += rect(3, 3, 58, 64, 13, "#fffdfb") + rect(6, 6, 52, 58, 10, "#f1e7df")
     return svg(64, 70, body)
 
 
@@ -156,12 +179,11 @@ def hex_points(x0, y0, x1, y1, tip):
 
 def title_plaque():
     # bg_qbnzsx: orange-beige bar with pointed ends.
-    pts = hex_points(3, 3, 117, 45, 16)
+    pts = hex_points(3, 3, 117, 48, 16)
     d = poly(pts)
     defs = f'<clipPath id="p"><path d="{d}"/></clipPath>'
-    body = f'<g opacity="0.2" transform="translate(0 3)"><path d="{d}" fill="#000" stroke="#000" stroke-width="5" stroke-linejoin="round"/></g>'
-    body += f'<path d="{d}" fill="#e2a04d"/>'
-    body += '<g clip-path="url(#p)"><rect x="0" y="0" width="120" height="6" fill="#fbb762"/><rect x="0" y="42" width="120" height="4" fill="#f8b663"/></g>'
+    body = f'<path d="{d}" fill="#e2a04d"/>'
+    body += '<g clip-path="url(#p)"><rect x="0" y="0" width="120" height="6" fill="#fbb762"/><rect x="0" y="45" width="120" height="4" fill="#f8b663"/></g>'
     body += f'<path d="{d}" fill="none" stroke="{LINE}" stroke-width="5" stroke-linejoin="round"/>'
     return svg(120, 51, body, defs)
 
@@ -189,8 +211,8 @@ def hud_bg():
 
 
 def avatar_frame():
-    body = rect(0, 4, 80, 80, 14, "#000000", ' fill-opacity="0.2"') + rect(0, 0, 80, 80, 14, LINE)
-    body += rect(3, 3, 74, 74, 11, "#ffffff") + rect(6, 6, 68, 68, 9, "#f3e6d8")
+    body = rect(0, 0, 80, 84, 14, LINE)
+    body += rect(3, 3, 74, 78, 11, "#ffffff") + rect(6, 6, 68, 72, 9, "#f3e6d8")
     return svg(80, 84, body)
 
 
@@ -287,24 +309,24 @@ ITEM = {"cream": ("#eed5c7", "#f8e7dd"), "blue": ("#5babe2", "#86c6f0"), "orange
 
 def unit_card(tone):
     ring, face, inner, glow = KAPAI[tone]
-    w, h = 124, 142
+    w, h = 124, 146
     defs = f'<clipPath id="f">{rect(5, 5, w - 10, h - 10, 8, "#000")}</clipPath>'
-    body = rect(0, 4, w, h, 12, "#000000", ' fill-opacity="0.2"') + rect(0, 0, w, h, 12, LINE)
+    body = rect(0, 0, w, h, 12, LINE)
     body += rect(2.5, 2.5, w - 5, h - 5, 10, ring) + rect(5, 5, w - 10, h - 10, 8, face)
     body += rect(10, 10, w - 20, h - 31, 6, inner)
     body += f'<g clip-path="url(#f)"><rect x="0" y="{h - 9}" width="{w}" height="4" fill="{glow}"/></g>'
-    return svg(w, h + 4, body, defs)
+    return svg(w, h, body, defs)
 
 
 def item_card(tone):
     face, hi = ITEM[tone]
-    w, h = 140, 154
+    w, h = 140, 158
     defs = f'<clipPath id="f">{rect(2.5, 2.5, w - 5, h - 5, 10, "#000")}</clipPath>'
-    body = rect(0, 4, w, h, 12, "#000000", ' fill-opacity="0.2"') + rect(0, 0, w, h, 12, LINE)
+    body = rect(0, 0, w, h, 12, LINE)
     body += rect(2.5, 2.5, w - 5, h - 5, 10, face)
     body += f'<g clip-path="url(#f)"><rect x="0" y="0" width="{w}" height="6.5" fill="{hi}"/></g>'
     body += rect(9.5, 10.5, w - 19, h - 44.5, 8, hi, ' fill-opacity="0.35"')
-    return svg(w, h + 4, body, defs)
+    return svg(w, h, body, defs)
 
 
 # --- Badges -----------------------------------------------------------------------------------
@@ -806,7 +828,7 @@ def make_icons():
 
     # Bottom-nav tab icons: small illustrated scenes (stall, cat, swords, gears, crystal ball,
     # sack) like the reference games, not reused currency icons.
-    ic = Icon()  # Cửa hàng: a friendly paw-sign kiosk, with four broad blue/cream scallops.
+    ic = Icon()  # Cửa hàng: a fish-sign kiosk, with four broad blue/cream scallops.
     for x in (23, 95):
         ic.shape(rr_d(x, 35, 10, 47, 4), "#bd8f62", "#bd8f62", 59)
     ic.shape(rr_d(18, 73, 92, 44, 8), "#bd8f62", "#bd8f62", 95)
@@ -817,11 +839,11 @@ def make_icons():
         x = 12 + 26 * i
         col = "#83b8c5" if i % 2 == 0 else "#fff0c9"
         ic.shape(f"M{x} 33 L{x + 26} 33 L{x + 26} 45 Q{x + 13} 61 {x} 45 Z", col, col, 44)
-    ic.raw(f'<path d="{rr_d(39, 84, 50, 25, 8)}" fill="#f5c565" stroke="#583f21" stroke-width="3"/>')
-    feature_paw(ic, 64, 99, 0.43)
+    fish = approved_nav_svg("nav_shop_fish.svg")
+    ic.raw(re.search(r'<svg\b[^>]*>(.*)</svg>\s*$', fish, re.DOTALL).group(1))
     icons["tab_shop"] = ic
 
-    # Mèo: not an Icon — the tab uses the hero cat head in the cat sprite style (see main()).
+    # Hero tab: the selected helmet SVG is emitted directly in main().
 
     ic = Icon()  # Chiến: a matched pair of short knight swords, in the flat cat style.
     # Finish the back sword before drawing the front one, keeping the X easy to read.
@@ -1339,15 +1361,41 @@ SHORTCUT_TONES = {
 
 
 def shortcut_card(tone):
-    """One small feature tile: pastel icon field, cream caption band and a flat base lip."""
-    face, lip = SHORTCUT_TONES[tone]
-    body = rect(3, 8, 102, 117, 20, lip, f' stroke="{CAT_LINE}" stroke-width="3.5"')
-    body += rect(3, 3, 102, 117, 20, face)
-    body += '<g clip-path="url(#featureface)"><rect x="3" y="88" width="102" height="32" fill="#fff0d3"/></g>'
+    """One flat feature frame with a pastel icon field and cream caption band."""
+    face, _lip = SHORTCUT_TONES[tone]
+    body = rect(3, 3, 102, 122, 20, face)
+    body += '<g clip-path="url(#featureface)"><rect x="3" y="88" width="102" height="37" fill="#fff0d3"/></g>'
     body += '<path d="M5 88 L103 88" stroke="#b89a70" stroke-width="2"/>'
-    body += rect(9, 9, 90, 105, 15, "none", ' stroke="#fff0d3" stroke-width="2"')
-    body += rect(3, 3, 102, 117, 20, "none", f' stroke="{CAT_LINE}" stroke-width="3.5"')
-    return svg(108, 128, body, '<clipPath id="featureface">' + rect(3, 3, 102, 117, 20, "#fff") + '</clipPath>')
+    body += rect(9, 9, 90, 110, 15, "none", ' stroke="#fff0d3" stroke-width="2"')
+    body += rect(3, 3, 102, 122, 20, "none", f' stroke="{CAT_LINE}" stroke-width="3.5"')
+    return svg(108, 128, body, '<clipPath id="featureface">' + rect(3, 3, 102, 122, 20, "#fff") + '</clipPath>')
+
+
+EQUIPMENT_CARD_TONES = {
+    # Approved 2026-10-23: A cardboard tray, palette 1 (natural).
+    "green": "#A7CE87", "blue": "#8FC6DE",
+    "purple": "#B9A0DC", "orange": "#F2BA85",
+}
+
+
+def equipment_card(tone):
+    """Replay A's approved paths; only replace the rarity-coloured insert.
+
+    Canonical artwork comes from the shared Canvas Pen export in
+    docs/design/2026-10-23/weapon-frame-options/colors/. Keep its flat kraft
+    rim, two tape patches and single brown contour unchanged.
+    """
+    source = os.path.join(os.path.dirname(__file__), "..", "..", "game", "ui",
+                          "art_sources", "equipment_frame_carton_A.svg")
+    with open(source, encoding="utf-8") as file:
+        template = file.read()
+    return template.replace("#A7CE87", EQUIPMENT_CARD_TONES[tone])
+
+
+def make_equipment_cards():
+    os.makedirs(OUT, exist_ok=True)
+    for tone in EQUIPMENT_CARD_TONES:
+        save(f"card_equipment_{tone}", equipment_card(tone))
 
 
 GEAR_TONES = {'green': ('#7fd45f', '#c9f2b0', '#5aa947'), 'blue': ('#5fb0ea', '#bfe6ff', '#3f86c8'), 'purple': ('#b07be6', '#e6cdff', '#8752c4'), 'orange': ('#f7a24f', '#ffe2b0', '#d47b2a'), 'grey': ('#a9a39e', '#dcd6d0', '#86807b')}
@@ -1355,64 +1403,43 @@ GEAR_TONES = {'green': ('#7fd45f', '#c9f2b0', '#5aa947'), 'blue': ('#5fb0ea', '#
 
 def gear_card_bg(tone):
     """Rarity card behind an item: face colour with a soft light centre (the item sits in it),
-    faint diagonal stripes, a darker foot band, cat-brown outline. 128x128, 9-slice safe."""
-    face, glow, foot = GEAR_TONES[tone]
+    faint diagonal stripes and one even cat-brown outline. 128x128, 9-slice safe."""
+    face, glow, _foot = GEAR_TONES[tone]
     defs = (f'<clipPath id="c">{rect(4, 4, 120, 120, 16, "#000")}</clipPath>'
             f'<radialGradient id="r" cx="0.5" cy="0.55" r="0.55"><stop offset="0" stop-color="{glow}"/>'
             f'<stop offset="1" stop-color="{face}"/></radialGradient>')
-    body = rect(0, 4, 128, 124, 20, "#000000", ' fill-opacity="0.22"')
-    body += rect(0, 0, 128, 124, 20, CAT_LINE)
-    body += f'<rect x="4" y="4" width="120" height="116" rx="16" fill="url(#r)"/>'
+    body = rect(0, 0, 128, 128, 20, CAT_LINE)
+    body += f'<rect x="4" y="4" width="120" height="120" rx="16" fill="url(#r)"/>'
     body += '<g clip-path="url(#c)">'
     for x in range(-120, 160, 22):
         body += f'<path d="M{x} 128 L{x + 128} 0" stroke="#ffffff" stroke-opacity="0.10" stroke-width="7"/>'
-    body += f'<rect x="0" y="100" width="128" height="24" fill="{foot}"/>'
     body += '<rect x="12" y="8" width="104" height="4" rx="2" fill="#ffffff" fill-opacity="0.45"/></g>'
     return svg(128, 128, body, defs)
 
 
 BATTLE_COG_TONES = {
-    # face, recessed centre, inset rim: cat-game pastels, no gloss or metal shading.
-    "tier_1": ("#ead5ac", "#c9ad81", "#fff5d9"),
-    "tier_2": ("#80bfd7", "#5998b1", "#c4eaf0"),
-    "tier_3": ("#b49cd6", "#8d70b4", "#e4d7f2"),
-    "tier_4": ("#eead6c", "#cf8248", "#ffe2b0"),
-    "tier_5": ("#aec778", "#7fa054", "#e1edbc"),
-    "idle": ("#aaa995", "#858675", "#d5d4bf"),
+    # Selected proposal B: the tier remains on the cast body, the broad quiet
+    # face uses the approved cream fill. No decorative bright inset outline.
+    "tier_1": ("#ead5ac", "#f4dfb4"),
+    "tier_2": ("#80bfd7", "#f4dfb4"),
+    "tier_3": ("#b49cd6", "#f4dfb4"),
+    "tier_4": ("#eead6c", "#f4dfb4"),
+    "tier_5": ("#aec778", "#f4dfb4"),
+    "idle": ("#aaa995", "#d2cbb8"),
 }
 
 
-def battle_cog(fill, centre, rim):
-    """Chunky disk + short broad teeth, adapted from Gear Defenders for the cat game.
+def battle_cog(fill, centre):
+    """Replay the selected Canvas B paths so a skin rebuild preserves approval.
 
-    Outer 54, shoulder 44 and a 36.5 deep clearance notch keep the 100px grid and
-    8-tooth pin drive. Tooth/gap centres stay at .3/.8 of a pitch. PinMeshTest checks
-    the rounded contour, including its 3px ink, rather than an ideal wedge.
+    Authoring: docs/design/2026-10-22/gear-options/gears.js; update the canonical
+    source with its export.mjs --install=B. PinMeshTest reads this painted contour.
     """
-    points = []
-    pitch = math.tau / 8
-    for tooth in range(8):
-        for fraction, radius in ((0.05, 44), (0.18, 54), (0.42, 54), (0.55, 44), (0.8, 36.5)):
-            a = (tooth + fraction) * pitch
-            points.append((64 + math.cos(a) * radius, 64 + math.sin(a) * radius))
-    # Rounded flat caps and concave notches, not long pointed spokes.
-    entries, exits = [], []
-    for index, point in enumerate(points):
-        def towards(other):
-            distance = math.dist(point, other)
-            cut = min(2.2, distance * 0.22)
-            return tuple(p + (q - p) * cut / distance for p, q in zip(point, other))
-        entries.append(towards(points[index - 1]))
-        exits.append(towards(points[(index + 1) % len(points)]))
-    coord = lambda point: f"{n(point[0])} {n(point[1])}"
-    path = f"M{coord(entries[0])}"
-    for index, point in enumerate(points):
-        path += f" Q{coord(point)} {coord(exits[index])} L{coord(entries[(index + 1) % len(points)])}"
-    body = f'<path d="{path} Z" fill="{fill}" stroke="{CAT_LINE}" stroke-width="3" stroke-linejoin="round"/>'
-    # A continuous inset lip follows the complete silhouette. All colours remain flat.
-    body += f'<path d="{path} Z" transform="translate(64 64) scale(.94) translate(-64 -64)" fill="none" stroke="{rim}" stroke-width="2" stroke-linejoin="round"/>'
-    body += f'<circle cx="64" cy="64" r="29.5" fill="{centre}"/>'
-    return svg(128, 128, body)
+    source = os.path.join(os.path.dirname(__file__), "..", "..", "game", "ui",
+                          "art_sources", "battle_cog_B.svg")
+    with open(source, encoding="utf-8") as file:
+        template = file.read()
+    return template.replace("#ead5ac", fill).replace("#f4dfb4", centre)
 
 
 def make_battle_cogs():
@@ -1451,6 +1478,7 @@ def main():
     save("nav_cell", nav_cell())
     for tone in GEAR_TONES:
         save(f"gear_bg_{tone}", gear_card_bg(tone))
+    make_equipment_cards()
     save("nav_selected", nav_selected())
     save("nav_selected_footer", nav_selected_footer())
     for tone in TROOP_CARD_RIMS:
@@ -1493,12 +1521,9 @@ def main():
                 save(f"{prefix}{name}_{size}", draw(size))
     for size in ICON_SIZES:  # the fish is drawn in the cat style, not the icon style
         save("icon_fish" + ("" if size == 128 else f"_{size}"), fish_flat(size))
-    # Mèo tab = the hero cat's head in the flat cat style, squared up, one file per icon size.
-    head = cat_svg("hero", head_only=True)
+    # The selected navigation helmet is separate from the actual hero cat/head.
     for size in ICON_SIZES:
-        square = head.replace('width="184" height="148" viewBox="36 0 184 148"',
-                              f'width="{size}" height="{size}" viewBox="36 -18 184 184"')
-        save("icon_tab_cat" + ("" if size == 128 else f"_{size}"), square)
+        save("icon_tab_cat" + ("" if size == 128 else f"_{size}"), approved_tab_hero_svg(size))
     for kind in CATS:
         save(f"cat_{kind}", cat_svg(kind))
         save(f"cat_head_{kind}", cat_svg(kind, head_only=True))
@@ -1506,4 +1531,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    if "--equipment-cards-only" in sys.argv[1:]:
+        make_equipment_cards()
+        print("Approved equipment frames written to", OUT)
+    else:
+        main()

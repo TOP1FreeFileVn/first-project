@@ -1,0 +1,51 @@
+<!doctype html><html lang="vi"><meta charset="utf-8">
+<title>6 phương án bánh răng · Cat Defender</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#e8ddc8;color:#583f21;font-family:Game,sans-serif}
+main{width:1140px;margin:auto;padding:26px 20px 22px}h1{font-size:27px;margin:0 0 7px;font-weight:normal}
+.intro{font-size:13px;margin:0;line-height:1.6}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;min-height:102px}
+.old{display:flex;align-items:center;gap:12px;padding:5px 18px;border-left:2px solid #c3a77e;font-size:12px}
+.old img{width:80px;height:80px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{appearance:none;background:#f8f0df;border:2px solid #c6a67c;border-radius:16px;padding:14px 10px 8px;min-width:0;color:inherit;font:inherit;cursor:pointer;text-align:left;transition:background .15s,border-color .15s}
+.card:hover,.card:focus-visible{background:#fff6df;border-color:#583f21;outline:none}.card.active{border-color:#583f21;background:#fff3d9}
+.heading{display:flex;align-items:center;gap:10px;padding:0 4px}.letter{background:#583f21;color:#fff0cf;border-radius:9px;display:grid;place-items:center;width:33px;height:33px;font-size:19px}
+.name{font-size:18px}.sub{font-size:10px;line-height:1.6;margin:7px 4px 0;min-height:17px}.card canvas{width:328px;height:222px;display:block;margin:auto}
+.footer{font-size:11px;margin:16px 0 0;text-align:center;color:#84633d}.context{margin:30px auto 0;border-top:2px solid #c7ac83;padding-top:23px}
+.context h2{font-size:20px;font-weight:normal;margin:0 0 8px}.context p{font-size:12px;margin:0 0 15px}.context-row{display:flex;gap:24px;align-items:flex-start}.context canvas{display:block;width:450px;height:300px}
+.controls{background:#f8f0df;border-radius:14px;padding:20px;width:calc(100% - 474px);font-size:14px}.controls button{font:inherit;color:#583f21;border:2px solid #583f21;background:#e9c17d;border-radius:10px;padding:9px 16px;cursor:pointer}.controls p{margin-top:15px;line-height:1.8}.sizes{display:flex;gap:15px;align-items:center;margin-top:18px}.sizes canvas{background:#e0b878;width:80px;height:80px;border-radius:10px}.controls .sizes p{font-size:11px}
+@media(max-width:1140px){main{margin:0}}
+</style>
+<main><div class="top"><div><h1>6 phương án bánh răng</h1><p class="intro">Cùng màu để so dáng · giữ nét nâu và màu phẳng của mèo.<br>Mỗi thẻ có hình trống, hình có lính và hàng bánh răng ở tỷ lệ màn 450 px.</p></div><div class="old"><img src="before-tier-1.svg"><span>TRƯỚC ĐÂY<br>để đối chiếu</span></div></div>
+<div class="grid" id="grid"></div>
+<p class="footer">Bản phác thảo để chọn hướng · nhấn vào A–F để xem trên bàn bên dưới.</p>
+<div class="context" id="context"><h2 id="selection">A · Răng khối bo trên bàn carton</h2><p>Có thể bật quay để xem nhịp chuyển động và độ rõ của lính.</p><div class="context-row"><canvas id="board" width="900" height="600"></canvas><div class="controls"><button id="motion">Bật quay</button><p>Răng và mặt lõi đổi theo từng phương án. Mèo, màu cấp và huy hiệu giữ cùng kích thước để dễ so.</p><div class="sizes"><canvas id="actual" width="160" height="160"></canvas><p>Kích thước thật<br>trên màn 450 px</p></div></div></div></div></main>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="gears.js"></script><script src="variants-detail.js"></script>
+<script>
+const defs={...GearOptions.defs,...GearDetail};
+const colors=['#ead5ac','#80bfd7','#b49cd6','#eead6c','#aec778'];
+const units={};let selected='B',running=false,tick=0;
+const boardImage=new Image();boardImage.src='../../../../game/assets/battle/cardboard-board/board.svg';
+const oldImage=document.querySelector('.old img');
+function loadImage(src){return new Promise(resolve=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=()=>resolve(im);im.src=src;});}
+function text(ctx,label,x,y,size=11,color='#876747'){ctx.font=`${size}px Game`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle=color;ctx.fillText(label,x,y);}
+function cog(ctx,id,x,y,s=1,fill=colors[0],angle=0,icon=null,tier=1){
+ ctx.save();ctx.translate(x,y);ctx.scale(s,s);ctx.save();ctx.rotate(angle+13.5*Math.PI/180);const P=new Pen();defs[id].draw(P,fill);Pen.toCanvas(P.ops,ctx);ctx.restore();
+ if(icon){ctx.strokeStyle='#583f21';ctx.lineWidth=2;ctx.beginPath();ctx.arc(0,0,32.5,0,Math.PI*2);ctx.stroke();ctx.strokeStyle='#fff2bf';ctx.lineWidth=3;ctx.beginPath();ctx.arc(0,0,32.5,-Math.PI/2,Math.PI*.75);ctx.stroke();ctx.drawImage(icon,-31,-34,62,62);ctx.fillStyle='#fff3d4';ctx.strokeStyle='#583f21';ctx.lineWidth=2.7;ctx.beginPath();ctx.arc(32,-34,12,0,Math.PI*2);ctx.fill();ctx.stroke();text(ctx,String(tier),32,-33,17,'#583f21');}
+ ctx.restore();
+}
+function drawCard(canvas,id){const ctx=canvas.getContext('2d');ctx.scale(2,2);ctx.clearRect(0,0,328,222);cog(ctx,id,87,66,1.02);cog(ctx,id,236,66,1.02,colors[0],0,units.kiem);text(ctx,'DÁNG RĂNG',87,127,9);text(ctx,'KHI CÓ LÍNH',236,127,9);ctx.fillStyle='#e0b878';ctx.beginPath();ctx.roundRect(8,146,312,73,9);ctx.fill();
+ const phases=[-.3*Math.PI/4,.3*Math.PI/4+.9*Math.PI/4,-.3*Math.PI/4];
+ for(let i=0;i<3;i++)cog(ctx,id,101+i*62.5,182,.625,colors[i],phases[i],units[['kiem','cung','thuoc'][i]],i+1);ctx.resetTransform();}
+function drawContext(){const canvas=document.getElementById('board'),ctx=canvas.getContext('2d');ctx.resetTransform();ctx.clearRect(0,0,900,600);ctx.scale(1.25,1.25);if(boardImage.complete)ctx.drawImage(boardImage,0,0,720,480);else{ctx.fillStyle='#e0b878';ctx.fillRect(0,0,720,480);}
+ for(let y=0;y<4;y++)for(let x=0;x<6;x++){ctx.fillStyle=(y===3&&x>2)?'#be955e':'#dfb77d';ctx.beginPath();ctx.roundRect(64+x*100,44+y*100,92,92,8);ctx.fill();}
+ const gears=[[1,0,'kiem',0],[2,0,'cung',1],[3,0,'thuoc',2],[1,1,'cung',0],[3,1,'kiem',3],[2,2,'thuoc',4]];
+ for(const[x,y,u,t]of gears){const at=tick-.3*Math.PI/4;const phase=(x+y)%2===0?at:-at+.9*Math.PI/4;cog(ctx,selected,110+x*100,90+y*100,1,colors[t],phase,units[u],t+1);}
+ const x=310,y=190;ctx.save();ctx.translate(x,y);ctx.rotate(tick);ctx.fillStyle='#e7a957';ctx.strokeStyle='#583f21';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(12,-14);ctx.lineTo(52,-6);ctx.lineTo(52,6);ctx.lineTo(12,14);ctx.closePath();ctx.fill();ctx.stroke();ctx.restore();ctx.fillStyle='#f6ce66';ctx.strokeStyle='#583f21';ctx.lineWidth=3;ctx.beginPath();ctx.arc(x,y,30,0,Math.PI*2);ctx.fill();ctx.stroke();ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,21,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#583f21';for(const[dx,dy,r]of[[0,6,7],[-10,-4,4],[0,-10,4],[10,-4,4]]){ctx.beginPath();ctx.arc(x+dx,y+dy,r,0,Math.PI*2);ctx.fill();}
+ const ac=document.getElementById('actual').getContext('2d');ac.resetTransform();ac.clearRect(0,0,160,160);cog(ac,selected,80,80,1.25,colors[0],tick,units.kiem);}
+function select(id){selected=id;document.querySelectorAll('.card').forEach(el=>el.classList.toggle('active',el.dataset.id===id));document.getElementById('selection').textContent=`${id} · ${defs[id].title} trên bàn carton`;drawContext();}
+document.getElementById('motion').onclick=()=>{running=!running;document.getElementById('motion').textContent=running?'Dừng quay':'Bật quay';};
+async function start(){await document.fonts.ready;for(const u of ['kiem','cung','thuoc'])units[u]=await loadImage(`../../../../game/ui/art/unit_${u}.png`);await new Promise(resolve=>{if(boardImage.complete)resolve();else boardImage.onload=resolve;});for(const[id,d]of Object.entries(defs)){const el=document.createElement('button');el.className='card';el.dataset.id=id;el.innerHTML=`<div class="heading"><span class="letter">${id}</span><span class="name">${d.title}</span></div><p class="sub">${d.subtitle}</p><canvas width="656" height="444"></canvas>`;el.onclick=()=>select(id);document.getElementById('grid').appendChild(el);drawCard(el.querySelector('canvas'),id);}select('B');document.body.dataset.ready='true';let last=0;function frame(t){if(running){tick+=Math.min((t-last)/1000,.05)*Math.PI/2;drawContext();}last=t;requestAnimationFrame(frame);}requestAnimationFrame(frame);}
+start();
+</script></html>

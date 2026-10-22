@@ -1,0 +1,234 @@
+{
+  "bow": {
+    "iconFit": {
+      "x": -58.111053240740745,
+      "y": -58.11105324074073,
+      "width": 154.6085358796296,
+      "height": 154.6085358796296,
+      "cx": 19.193214699074062,
+      "cy": 19.193214699074076,
+      "scale": 1.261249897300736,
+      "angle": -135
+    },
+    "held": {
+      "angle": -10,
+      "scale": 0.65
+    },
+    "hand": "left",
+    "socket": [
+      94,
+      166
+    ],
+    "iconStrokes": [
+      {
+        "width": 4.4,
+        "ink": "#946d46"
+      },
+      {
+        "width": 6.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 6.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 13,
+        "ink": "#583f21"
+      }
+    ],
+    "heldStrokes": [
+      {
+        "width": 3,
+        "ink": "#946d46"
+      },
+      {
+        "width": 4.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 4.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 9,
+        "ink": "#583f21"
+      }
+    ],
+    "aim": "string-to-grip firing vector at -135deg screen (up-left), not string axis"
+  },
+  "staff": {
+    "iconFit": {
+      "x": -36.806684027777784,
+      "y": -108.19,
+      "width": 144.99668402777777,
+      "height": 144.99668402777777,
+      "cx": 35.69165798611111,
+      "cy": -35.69165798611111,
+      "scale": 1.3448583414682975,
+      "angle": 45
+    },
+    "held": {
+      "angle": 32,
+      "scale": 0.76
+    },
+    "hand": "right",
+    "socket": [
+      160,
+      166
+    ],
+    "iconStrokes": [
+      {
+        "width": 6.5,
+        "ink": "#9b7f58"
+      },
+      {
+        "width": 6.5,
+        "ink": "#9b7f58"
+      },
+      {
+        "width": 6.5,
+        "ink": "#9b7f58"
+      },
+      {
+        "width": 13,
+        "ink": "#583f21"
+      }
+    ],
+    "heldStrokes": [
+      {
+        "width": 4.5,
+        "ink": "#9b7f58"
+      },
+      {
+        "width": 4.5,
+        "ink": "#9b7f58"
+      },
+      {
+        "width": 4.5,
+        "ink": "#9b7f58"
+      },
+      {
+        "width": 9,
+        "ink": "#583f21"
+      }
+    ],
+    "aim": "grip-to-head at -45deg screen"
+  },
+  "axe": {
+    "iconFit": {
+      "x": -41.09171875,
+      "y": -114.78874999999996,
+      "width": 201.95671875,
+      "height": 155.88046874999998,
+      "cx": 59.886640625000005,
+      "cy": -36.84851562499998,
+      "scale": 0.9655534176181004,
+      "angle": 45
+    },
+    "held": {
+      "angle": 28,
+      "scale": 0.6
+    },
+    "hand": "right",
+    "socket": [
+      160,
+      166
+    ],
+    "iconStrokes": [
+      {
+        "width": 13,
+        "ink": "#583f21"
+      },
+      {
+        "width": 13,
+        "ink": "#583f21"
+      }
+    ],
+    "heldStrokes": [
+      {
+        "width": 9,
+        "ink": "#583f21"
+      },
+      {
+        "width": 9,
+        "ink": "#583f21"
+      }
+    ],
+    "aim": "grip-to-head at -45deg screen"
+  },
+  "katana": {
+    "iconFit": {
+      "x": -34.650000000000006,
+      "y": -113.84,
+      "width": 151.32,
+      "height": 148.49,
+      "cx": 41.01,
+      "cy": -39.595,
+      "scale": 1.288659793814433,
+      "angle": 45
+    },
+    "held": {
+      "angle": 32,
+      "scale": 0.76
+    },
+    "hand": "right",
+    "socket": [
+      160,
+      166
+    ],
+    "iconStrokes": [
+      {
+        "width": 13,
+        "ink": "#583f21"
+      },
+      {
+        "width": 6.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 6.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 6.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 13,
+        "ink": "#583f21"
+      },
+      {
+        "width": 13,
+        "ink": "#583f21"
+      }
+    ],
+    "heldStrokes": [
+      {
+        "width": 9,
+        "ink": "#583f21"
+      },
+      {
+        "width": 4.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 4.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 4.5,
+        "ink": "#946d46"
+      },
+      {
+        "width": 9,
+        "ink": "#583f21"
+      },
+      {
+        "width": 9,
+        "ink": "#583f21"
+      }
+    ],
+    "aim": "grip-to-head at -45deg screen"
+  }
+}

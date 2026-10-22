@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><title>Chest polish proposal</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#d8e4de;color:#583f21;font:16px Game,Arial,sans-serif}h1{font-size:27px;margin:0 0 7px}p{font:17px Arial,sans-serif;color:#617368;margin:0 0 18px}.row{display:flex;gap:18px}.card{flex:1;background:#edf1e8;padding:17px;border-radius:18px}h2{font-size:19px;margin:0}canvas{display:block;margin:auto}.sub{font:16px Arial,sans-serif;color:#667469;line-height:1.5}.bottom{margin-top:18px;display:flex;gap:35px;align-items:center;justify-content:space-around}.thumb{text-align:center}.text{font:16px Arial,sans-serif;color:#667469;line-height:1.6}
+</style>
+<h1>RƯƠNG SAN HÔ / VÀNG · HOÀN THIỆN THÊM ~15%</h1><p>Giữ dáng nắp thấp và màu phẳng. Tăng độ chỉn chu ở mảng ghép, góc kim loại và đế khóa.</p>
+<div class="row"><div class="card"><h2>Hiện tại · cùng bảng màu</h2><canvas id="old" width="300" height="300"></canvas><div class="sub">Dáng và tỷ lệ đã giữ lại.<br>Bản hiện tại dùng bề mặt rộng đơn giản.</div></div><div class="card"><h2>Đề xuất · thêm cấu tạo</h2><canvas id="new" width="300" height="300"></canvas><div class="sub">Mảng ghép lớn, góc đồng có nếp gập.<br>Bỏ chi tiết vàng dưới mép khóa.</div></div><div class="card"><h2>Mở · nắp tách riêng</h2><canvas id="open" width="300" height="300"></canvas><div class="sub">Mọi chi tiết nắp đi cùng một lớp.<br>Thân và khóa giữ nguyên vị trí.</div></div></div>
+<div class="card bottom"><div class="thumb"><canvas id="s128" width="128" height="128"></canvas>128 px</div><div class="thumb"><canvas id="s96" width="96" height="96"></canvas>96 px · shop</div><div class="thumb"><canvas id="s64" width="64" height="64"></canvas>64 px</div><div class="thumb"><canvas id="s26" width="26" height="26"></canvas>26 px · bỏ nét nhỏ</div><div class="text">Nét chính vẫn 9 px ở bản 256 px.<br>Nét phụ 3 px, màu theo vật liệu.<br>Mảng ghép / mặt gập dùng màu phẳng.<br>Giữ nguyên viền và khối chính.</div></div>
+<script src="pen.js"></script><script src="../chest-stroke-pilot/chest.js"></script><script>const Before=ChestPilot;</script><script src="chest.js"></script><script>
+// Recolour the preceding approved drawing to the current coral/gold tier for a fair comparison.
+const colors={'#eca966':'#f28c77','#d88f4f':'#da705e','#b87941':'#bf6551','#f3c56b':'#ffd16a','#ba853c':'#c99740','#704c2c':'#965749'};
+const old=Before.icon(300).filter(op=>op.stroke!=='#b87941').map(op=>({...op,fill:colors[op.fill]||op.fill,stroke:colors[op.stroke]||op.stroke}));
+Pen.toCanvas(old,document.getElementById('old').getContext('2d'));
+for(const[id,size,open]of[['new',300,0],['open',300,1],['s128',128,0],['s96',96,0],['s64',64,0],['s26',26,0]])Pen.toCanvas(ChestPilot.icon(size,open),document.getElementById(id).getContext('2d'));
+</script>

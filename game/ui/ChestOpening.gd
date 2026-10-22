@@ -38,6 +38,7 @@ const TOP_BAR_GOLD := Vector2(150, 42)
 var _chest_name := ""
 var _chest_color := Color("a0673a")
 var _style: Dictionary
+var _chest_size := CHEST_SIZE
 var _loot := {}
 var _new_ids: Array = []
 var _fast := false
@@ -93,6 +94,7 @@ func setup(chest_name: String, chest_color: Color, loot: Dictionary, new_ids: Ar
 	_chest_name = chest_name
 	_chest_color = chest_color
 	_style = ChestArt.style_for(chest_color)
+	_chest_size = CHEST_SIZE * (1.2 if _style.get("kind", "wood") == "gold" else 1.0)
 	_loot = loot
 	_new_ids = new_ids
 	_fast = fast
@@ -221,8 +223,8 @@ func _drop() -> void:
 	_tween.tween_property(self, "chest_pos", CHEST_AT, 0.42).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	_tween.tween_callback(func():
 		SoundLib.play("thud", 0.0, 0.0)
-		_fx("dust", CHEST_AT + Vector2(-110, 110), 2.4)
-		_fx("dust", CHEST_AT + Vector2(110, 110), 2.4)
+		_fx("dust", CHEST_AT + Vector2(-_chest_size * 0.44, _chest_size * 0.44), 2.4)
+		_fx("dust", CHEST_AT + Vector2(_chest_size * 0.44, _chest_size * 0.44), 2.4)
 		_shake(9.0, 0.25))
 	# Squash on landing, stretch back up, settle.
 	_tween.tween_property(self, "chest_squash", Vector2(1.3, 0.7), 0.07)
@@ -625,7 +627,7 @@ func _soft_glow(at: Vector2, radius: float, color: Color, alpha: float) -> void:
 
 
 func _draw_chest() -> void:
-	var w := CHEST_SIZE
+	var w := _chest_size
 	var light := glow_color
 	var closed := lid_alpha > 0.5 and lid_offset == Vector2.ZERO
 	# Once the lid is off, a beam pours out behind the cards.
@@ -634,17 +636,24 @@ func _draw_chest() -> void:
 		_chest.draw_colored_polygon(beam, Color(light, 0.2 * mouth * chest_alpha))
 		var core := PackedVector2Array([Vector2(-w * 0.25, 0), Vector2(w * 0.25, 0), Vector2(w * 0.45, -620), Vector2(-w * 0.45, -620)])
 		_chest.draw_colored_polygon(core, Color(light.lightened(0.5), 0.14 * mouth * chest_alpha))
-	ChestArt.draw(_chest, Vector2.ZERO, w, _style, chest_alpha, lid_offset, lid_rotation, lid_alpha,
-		Color(light, mouth) if mouth > 0.0 else Color(0, 0, 0, 0))
-	# Closed: light leaks through the seam and fans up over the lid.
+	# The closed rays rise behind the prop, keeping the latch and its contour intact.
 	if glow > 0.0 and closed:
 		var bright := minf(glow, 1.0)
-		_chest.draw_rect(Rect2(Vector2(-w * 0.5, -3.0), Vector2(w, 6.0)), Color(light.lightened(0.3), 0.95 * bright * chest_alpha))
 		for i in 7:
 			var x := (i - 3) * w * 0.16
 			var reach := w * 0.34 + 60.0 * glow * (1.0 - absf(i - 3) * 0.2)
 			var tip := Vector2(x * 1.7, -reach)
 			_chest.draw_colored_polygon(PackedVector2Array([Vector2(x - 8, 0), Vector2(x + 8, 0), tip]), Color(light, 0.26 * bright * chest_alpha))
+	ChestArt.draw(_chest, Vector2.ZERO, w, _style, chest_alpha, lid_offset, lid_rotation, lid_alpha,
+		Color(light, mouth) if mouth > 0.0 else Color(0, 0, 0, 0))
+	if glow > 0.0 and closed:
+		# Light escapes along the seam on either side of the foreground cat latch.
+		var latch_width := 44.0 if _style.get("kind", "wood") == "gold" else 32.0
+		var latch_clearance := w * latch_width / ChestArt.AUTHOR_WIDTH
+		var leak := Color(light.lightened(0.3), 0.95 * minf(glow, 1.0) * chest_alpha)
+		for side in [-1.0, 1.0]:
+			var x := -w * 0.5 if side < 0.0 else latch_clearance
+			_chest.draw_rect(Rect2(Vector2(x, -3.0), Vector2(w * 0.5 - latch_clearance, 6.0)), leak)
 
 
 # Over everything: shockwave ring, card shine, sparkles, the cards-left badge and the flash.
@@ -670,7 +679,7 @@ func _draw_front() -> void:
 			_star(at, 10.0 * sin(t * PI), Color(_best_light(), sin(t * PI)))
 	var left := _order.size() - _next
 	if chest_alpha > 0.0 and left > 0 and _stage in ["wait", "open", "card"]:
-		var at := _chest.position + Vector2(CHEST_SIZE * 0.44, -CHEST_SIZE * 0.3)
+		var at := _chest.position + Vector2(_chest_size * 0.44, -_chest_size * 0.3)
 		_front.draw_circle(at, 30.0, Color("24170e"))
 		_front.draw_circle(at, 26.0, Color("e0405a"))
 		var font := UiKit.game_font()

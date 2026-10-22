@@ -4,12 +4,9 @@ extends Control
 ## The host owns availability and clicks; hide this control when no upgrade is ready.
 const ARROW := preload("res://game/ui/skin/icon_badge_up_96.svg")
 const PULSE_SECONDS := 1.10
-const MIN_SCALE := 0.90
-const MAX_SCALE := 1.16
-const BOB_PIXELS := 3.0
+const BOB_PIXELS := 6.0
 
 var _elapsed := 0.0
-var _visual_scale := 1.0
 var _bob := 0.0
 
 
@@ -46,7 +43,6 @@ func _sync_visibility() -> void:
 
 func _reset_motion() -> void:
 	_elapsed = 0.0
-	_visual_scale = 1.0
 	_bob = 0.0
 	queue_redraw()
 
@@ -58,24 +54,22 @@ func _update_pivot() -> void:
 
 func _process(delta: float) -> void:
 	_elapsed = fmod(_elapsed + delta, PULSE_SECONDS)
-	var swell := 0.5 - 0.5 * cos(TAU * _elapsed / PULSE_SECONDS)
-	_visual_scale = lerpf(MIN_SCALE, MAX_SCALE, swell)
-	_bob = -BOB_PIXELS * swell
+	var rise := 0.5 - 0.5 * cos(TAU * _elapsed / PULSE_SECONDS)
+	_bob = -BOB_PIXELS * rise
 	queue_redraw()
 
 
 func _draw() -> void:
 	var center := size * 0.5 + Vector2(0, _bob)
-	draw_set_transform(center, 0.0, Vector2.ONE * _visual_scale)
+	draw_set_transform(center)
 	draw_texture_rect(ARROW, Rect2(-size * 0.5, size), false)
 
 
 func get_review_state() -> Dictionary:
-	var visual_size := size * _visual_scale
-	var visual_rect := Rect2((size - visual_size) * 0.5 + Vector2(0, _bob), visual_size)
+	var visual_rect := Rect2(Vector2(0, _bob), size)
 	return {
 		"size": size,
-		"visual_scale": _visual_scale,
+		"visual_scale": 1.0,
 		"bob": _bob,
 		"visible": is_visible_in_tree(),
 		"animating": is_processing(),

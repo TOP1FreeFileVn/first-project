@@ -9,11 +9,11 @@
 			"gold": 2400,
 			"hint": {
 				"animating": true,
-				"bob": -2.99624268833138,
+				"bob": -5.90738737366936,
 				"pulse_seconds": 1.1,
 				"size": "(56.0, 56.0)",
 				"visible": true,
-				"visual_scale": 1.15967436632205
+				"visual_scale": 1.0
 			},
 			"quiet_arrow_visible": false
 		},
@@ -43,11 +43,11 @@
 			"gold": 2000,
 			"hint": {
 				"animating": true,
-				"bob": -2.24989364288741,
+				"bob": -4.4997427629205,
 				"pulse_seconds": 1.1,
 				"size": "(56.0, 56.0)",
 				"visible": true,
-				"visual_scale": 1.09499078238358
+				"visual_scale": 1.0
 			},
 			"quiet_arrow_visible": false
 		},
@@ -111,11 +111,11 @@
 			"gold": 2400,
 			"hint": {
 				"animating": true,
-				"bob": -2.12297703339848,
+				"bob": -4.24594887073591,
 				"pulse_seconds": 1.1,
 				"size": "(56.0, 56.0)",
 				"visible": true,
-				"visual_scale": 1.08399134289453
+				"visual_scale": 1.0
 			},
 			"quiet_arrow_visible": false
 		},
@@ -145,11 +145,11 @@
 			"gold": 2400,
 			"hint": {
 				"animating": true,
-				"bob": -2.97585648559309,
+				"bob": -5.96230974653263,
 				"pulse_seconds": 1.1,
 				"size": "(56.0, 56.0)",
 				"visible": true,
-				"visual_scale": 1.15790756208473
+				"visual_scale": 1.0
 			},
 			"quiet_arrow_visible": false
 		},
@@ -179,11 +179,11 @@
 			"gold": 2000,
 			"hint": {
 				"animating": true,
-				"bob": -2.24985406686467,
+				"bob": -4.5,
 				"pulse_seconds": 1.1,
 				"size": "(56.0, 56.0)",
 				"visible": true,
-				"visual_scale": 1.0949873524616
+				"visual_scale": 1.0
 			},
 			"quiet_arrow_visible": false
 		},
@@ -247,11 +247,11 @@
 			"gold": 2400,
 			"hint": {
 				"animating": true,
-				"bob": -2.12312251950283,
+				"bob": -4.24624503900566,
 				"pulse_seconds": 1.1,
 				"size": "(56.0, 56.0)",
 				"visible": true,
-				"visual_scale": 1.08400395169025
+				"visual_scale": 1.0
 			},
 			"quiet_arrow_visible": false
 		},
@@ -347,7 +347,15 @@
 			]
 		},
 		{
-			"key": "hint_scale_changes_over_time",
+			"key": "hint_keeps_fixed_scale",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "hint_moves_vertically_over_time",
 			"passed": true,
 			"window": [
 				360,
@@ -747,7 +755,15 @@
 			]
 		},
 		{
-			"key": "hint_scale_changes_over_time",
+			"key": "hint_keeps_fixed_scale",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "hint_moves_vertically_over_time",
 			"passed": true,
 			"window": [
 				450,
@@ -1237,5 +1253,5 @@
 	],
 	"failures": 0,
 	"persist": false,
-	"profile": "C:/Users/dangp/GodotProjects/first-project/output/castle-upgrade-qa-profile/roaming/Godot/app_userdata/Gear Defenders"
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/upgrade-arrow-castle-profile/AppData/Godot/app_userdata/Gear Defenders"
 }

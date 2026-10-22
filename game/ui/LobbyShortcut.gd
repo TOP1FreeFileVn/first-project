@@ -9,12 +9,9 @@ const FONT := preload("res://game/ui/fonts/PaytoneOne-Regular.ttf")
 const FONT_SOURCE := 52
 const INK := Color("583f21")
 const PAPER := Color("fff0d3")
-const FRAMES: Array[Texture2D] = [
-	preload("res://game/ui/skin/shortcut_peach.svg"),
-	preload("res://game/ui/skin/shortcut_sage.svg"),
-	preload("res://game/ui/skin/shortcut_lavender.svg"),
-	preload("res://game/ui/skin/shortcut_sand.svg"),
-]
+const CAPTION_COLOR := Color("fff4dc")
+const CAPTION_SIZE := 20.0
+const ICON_RECT := Rect2(12, 2, 84, 84)
 
 var _kind := 0
 var _title := ""
@@ -31,8 +28,6 @@ var _activation_blocked := false
 var _face_tween: Tween
 var _intent_tween: Tween
 var _effect_tween: Tween
-var _rim := StyleBoxFlat.new()
-var _shadow := StyleBoxFlat.new()
 
 
 func _init() -> void:
@@ -45,13 +40,6 @@ func _init() -> void:
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	for state in ["normal", "hover", "pressed", "focus", "disabled"]:
 		add_theme_stylebox_override(state, StyleBoxEmpty.new())
-	for corner in ["top_left", "top_right", "bottom_left", "bottom_right"]:
-		_rim.set("corner_radius_" + corner, 22)
-		_shadow.set("corner_radius_" + corner, 19)
-	_rim.bg_color = Color("f3d188")
-	_rim.border_color = Color("a27640")
-	_rim.set_border_width_all(2)
-	_shadow.bg_color = Color(0.24, 0.17, 0.09, 0.20)
 	set_process(false)
 
 
@@ -247,25 +235,18 @@ func get_review_state() -> Dictionary:
 
 func _draw() -> void:
 	var base_scale := size / BASE_SIZE
-	draw_set_transform(Vector2.ZERO, 0.0, base_scale)
-	draw_style_box(_shadow, Rect2(7, 12, 94, 113))
 	var face_scale := 1.0 - 0.06 * _press_amount
 	var face_offset := BASE_SIZE * 0.5 * (1.0 - face_scale) + Vector2(0, 4.0 * _press_amount - _hover_lift)
 	draw_set_transform(face_offset * base_scale, 0.0, base_scale * face_scale)
-	if _highlight > 0.001:
-		_rim.bg_color.a = _highlight
-		_rim.border_color.a = _highlight
-		draw_style_box(_rim, Rect2(0, 0, 108, 124))
-	draw_texture_rect(FRAMES[_kind], Rect2(Vector2.ZERO, BASE_SIZE), false, Color(1, 1, 1, 0.55 if disabled else 1.0))
 	_draw_icon(face_offset, face_scale, base_scale)
-	draw_set_transform(face_offset * base_scale, 0.0, base_scale * face_scale)
 	_draw_caption(face_offset, face_scale, base_scale)
 	draw_set_transform(face_offset * base_scale, 0.0, base_scale * face_scale)
 	if _alert:
-		draw_circle(Vector2(94, 13), 8.0, Color("e77859"), true, -1.0, true)
-		draw_arc(Vector2(94, 13), 8.0, 0, TAU, 32, INK, 2.2, true)
-		draw_line(Vector2(94, 8), Vector2(94, 13), PAPER, 2.0, true)
-		draw_circle(Vector2(94, 16.5), 1.0, PAPER, true, -1.0, true)
+		# Only icon, caption and badge respond; Home's shared mask stays still.
+		draw_circle(Vector2(92, 13), 7.0, Color("e77859"), true, -1.0, true)
+		draw_arc(Vector2(92, 13), 7.0, 0, TAU, 32, INK, 2.0, true)
+		draw_line(Vector2(92, 9), Vector2(92, 13), PAPER, 1.8, true)
+		draw_circle(Vector2(92, 16), 0.9, PAPER, true, -1.0, true)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
@@ -273,27 +254,21 @@ func _draw_icon(face_offset: Vector2, face_scale: float, base_scale: Vector2) ->
 	if _icon == null:
 		return
 	var pulse := sin(_effect_progress * PI)
-	var icon_at := Vector2(18, 9)
-	var icon_size := Vector2(72, 72)
-	var icon_rect := Rect2(icon_at, icon_size)
-	var center := icon_rect.get_center()
-	var angle := 0.0
-	var lift := 0.0
-	if _kind == 0:
-		angle = deg_to_rad(-5.0) * pulse
-	elif _kind == 1:
-		lift = -4.0 * pulse
-	elif _kind == 3:
-		lift = -2.0 * pulse
+	var angle := deg_to_rad(-5.0) * pulse if _kind == 0 else 0.0
+	var lift := -4.0 * pulse if _kind == 1 else (-2.0 * pulse if _kind == 3 else 0.0)
+	var center := ICON_RECT.get_center()
 	var icon_transform := Transform2D(angle, center + Vector2(0, lift)) * Transform2D(0.0, -center)
 	var face_transform := Transform2D(0.0, face_offset).scaled_local(Vector2.ONE * face_scale)
 	var screen_transform := Transform2D(0.0, Vector2.ZERO).scaled_local(base_scale)
 	draw_set_transform_matrix(screen_transform * face_transform * icon_transform)
 	if _kind == 2:
-		_draw_fluttering_banner(icon_rect, pulse)
+		_draw_fluttering_banner(ICON_RECT, pulse)
 	else:
-		draw_texture_rect(_icon, icon_rect, false)
+		draw_texture_rect(_icon, ICON_RECT, false, Color(1, 1, 1, 0.55 if disabled else 1.0))
 	if _effect_progress < 0.999:
+		# Existing page/check/door details were authored around a 72 px icon.
+		var detail_transform := Transform2D(0.0, Vector2(-9, -8.5)).scaled_local(Vector2.ONE * (84.0 / 72.0))
+		draw_set_transform_matrix(screen_transform * face_transform * icon_transform * detail_transform)
 		match _kind:
 			0: _draw_calendar_page(pulse)
 			1: _draw_quest_check(pulse)
@@ -376,11 +351,13 @@ func _draw_castle_door(amount: float) -> void:
 func _draw_caption(face_offset: Vector2, face_scale: float, base_scale: Vector2) -> void:
 	if _title.is_empty():
 		return
-	var scale_text := minf(16.0 / FONT_SOURCE, 94.0 / maxf(1.0, _caption_ink.size.x))
+	var scale_text := minf(CAPTION_SIZE / FONT_SOURCE, 116.0 / maxf(1.0, _caption_ink.size.x))
 	var width := _caption_ink.size.x * scale_text
-	var baseline := 103.5 - _caption_ink.get_center().y * scale_text
+	var baseline := 96.0 - _caption_ink.get_center().y * scale_text
+	var origin := Vector2((108.0 - width) * 0.5, baseline) / scale_text
 	draw_set_transform(face_offset * base_scale, 0.0, base_scale * face_scale * scale_text)
-	draw_string(FONT, Vector2((108.0 - width) * 0.5, baseline) / scale_text, _title, HORIZONTAL_ALIGNMENT_LEFT, -1, FONT_SOURCE, INK)
+	draw_string_outline(FONT, origin, _title, HORIZONTAL_ALIGNMENT_LEFT, -1, FONT_SOURCE, roundi(3.0 / scale_text), INK)
+	draw_string(FONT, origin, _title, HORIZONTAL_ALIGNMENT_LEFT, -1, FONT_SOURCE, CAPTION_COLOR)
 
 
 func _measure_caption(caption: String) -> Rect2:

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
+<path d="M163.95 142.48 L206.47 75.85 Q213.56 65.94 225.89 61.99 L229.84 74.32 L180.06 152.54 Z" fill="#d9e0e8" />
+<path d="M225.89 61.99 L229.84 74.32 L180.06 152.54 L173.61 148.52 Z" fill="#a8b4c7" />
+<path d="M163.95 142.48 L206.47 75.85 Q213.56 65.94 225.89 61.99 L229.84 74.32 L180.06 152.54 Z" fill="none" stroke="#583f21" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M164.83 151.1 L171.28 155.12 Q175.14 157.54 172.73 161.41 L152.99 192.99 Q150.58 196.86 146.71 194.44 L140.27 190.41 Q136.4 188 138.81 184.13 L158.55 152.55 Q160.97 148.68 164.83 151.1 Z" fill="#cfa265" />
+<path d="M152.51 162.21 L170.31 165.27" fill="none" stroke="#946d46" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M145.66 173.17 L163.47 176.23" fill="none" stroke="#946d46" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M139.22 183.48 L157.02 186.54" fill="none" stroke="#946d46" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M164.83 151.1 L171.28 155.12 Q175.14 157.54 172.73 161.41 L152.99 192.99 Q150.58 196.86 146.71 194.44 L140.27 190.41 Q136.4 188 138.81 184.13 L158.55 152.55 Q160.97 148.68 164.83 151.1 Z" fill="none" stroke="#583f21" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M161.04 137.08 L185.54 152.38 Q189.4 154.8 186.99 158.67 L185.78 160.6 Q183.36 164.47 179.5 162.05 L155 146.75 Q151.14 144.33 153.55 140.46 L154.76 138.53 Q157.18 134.66 161.04 137.08 Z" fill="#a8b4c7" stroke="#583f21" stroke-width="9" stroke-linejoin="round" stroke-linecap="round" />
+</svg>

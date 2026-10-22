@@ -34,7 +34,7 @@ func build() -> void:
 	_column = Ui.vbox(6)
 	add_child(_column)
 	_column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	_column.offset_bottom = -20
+	_column.offset_bottom = 0
 	_fill()
 
 

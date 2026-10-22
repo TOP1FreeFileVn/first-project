@@ -1,0 +1,95 @@
+{
+  "native_review": "res://tests/ui_review/BattleCardboardCastleReview.tscn -- --label=layers-full-gate-occlusion",
+  "result": "PASS",
+  "checks": {
+    "above_battlements_keeps_units_visible": true,
+    "board_still_accepts_game_input": true,
+    "castle_still_takes_damage": true,
+    "gate_crown_occludes_units": true,
+    "left_tower_occludes_units": true,
+    "low_wall_occludes_units": true,
+    "native_gear_drop_moves_to_empty_cell": true,
+    "native_gear_motion_follows_pointer": true,
+    "native_gear_press_starts_drag": true,
+    "native_gear_return_restores_board": true,
+    "no_save_write": true,
+    "open_gate_does_not_occlude_units": true,
+    "real_battle": true,
+    "right_tower_occludes_units": true,
+    "same_deployment_line": true,
+    "same_gear_origin": true,
+    "upper_aperture_keeps_units_visible": true,
+    "upper_gate_occludes_units": true
+  },
+  "ready_button": {
+    "position": [
+      16,
+      1202
+    ],
+    "size": [
+      688,
+      76
+    ],
+    "delta_y": 6,
+    "viewport": [
+      720,
+      1280
+    ]
+  },
+  "castle": {
+    "origin_y": 516,
+    "source_baseline_y": 218,
+    "world_baseline_y": 734,
+    "table_top_y": 734,
+    "layers_back_to_front": [
+      "rear flags",
+      "units",
+      "complete foreground facade"
+    ],
+    "foreground_z": 2,
+    "horizontal_split": false,
+    "aperture": "transparent"
+  },
+  "svg_alpha": {
+    "samples": [
+      [
+        360,
+        170
+      ],
+      [
+        360,
+        205
+      ]
+    ],
+    "rear": [
+      0,
+      0
+    ],
+    "facade": [
+      0,
+      0
+    ],
+    "composite": [
+      0,
+      0
+    ]
+  },
+  "screenshots": [
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-lobby_450x800.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-prepare_450x800.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-depth-probes_450x800.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-castle-occlusion_450x800.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-gear-drag_450x800.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-prepare_360x640.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-fight_360x640.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-fight_450x800.png",
+    "res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-full-gate-occlusion-hit_450x800.png"
+  ],
+  "notes": [
+    "Native prepare/fight reviewed at450x800 and360x640.",
+    "Pixels verify occlusion at the upper gate/crown, both towers and low wall; aperture and above-battlement visibility are preserved.",
+    "A clean native screenshot shows the actual hero behind the gate without debug probes.",
+    "Deployment/rally coordinates remain unchanged.",
+    "No script/runtime errors; existing certificate-store environment warning only."
+  ]
+}

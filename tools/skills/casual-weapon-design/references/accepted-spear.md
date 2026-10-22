@@ -4,7 +4,7 @@ On 2026-10-20, after the stroke-reference study and one requested weapon sample,
 
 Open [the included review image](../assets/accepted-spear-review.png): isolated spear, unchanged cat holding it, native-size hero and inventory thumbnails. The [Figma review](https://www.figma.com/design/wMtwWaYIiKUchUdq5YdTm5?node-id=3628-2) is node `3628:2` on page `3539:2`, file `wMtwWaYIiKUchUdq5YdTm5`.
 
-Later hero-equipment display corrections are recorded in [cat-defender.md](cat-defender.md#current-hero-equipment-display-contract): only weapons are visible on the unchanged hero; the other five slots use stat-only icons, and the bow uses the left paw. These corrections do not change this sample's approved stroke treatment or grant approval to the later v4 proposal.
+Later hero-equipment display corrections are recorded in [cat-defender.md](cat-defender.md#current-hero-equipment-display-contract): only weapons are visible on the unchanged hero, and the bow uses the left paw. The active stat-only slots are now helmet, armor and boots; gloves and amulets were removed on 2026-10-22. These corrections do not change this sample's approved stroke treatment or grant blanket approval to the later equipment set.
 
 ## What to carry forward
 
@@ -20,4 +20,4 @@ The selected generation is `32:2` in draft file `2uKzqvXeOSPQqfaow6s7TU`, produc
 
 Post-processing removed the uniform white matte and flattened the palette, then fitted the intact generated design onto the cat. It did not dilate outlines, skeletonize boundaries or rebuild the spear from segmented regions. If a future generation lacks broad fills or readable construction, revise the generation rather than manufacturing those forms by global outline processing.
 
-Full reproducibility artifacts in the project are under `docs/design/2026-10-20/spear-stroke-sample/`: `generation.json` (all three attempts and selected node), `raw/`, `processing.json`, `build_review.py`, `processed/`, and `native/` (Godot rendering). Raw selected image: `raw/spear-iteration-3.png`. Clean image: `processed/spear.png`. The sample is still a review asset; production integration is separate.
+Full reproducibility artifacts in the project are under `docs/design/2026-10-20/spear-stroke-sample/`: `generation.json` (all three attempts and selected node), `raw/`, `processing.json`, `build_review.py`, `processed/`, and `native/` (Godot rendering). Raw selected image: `raw/spear-iteration-3.png`. Clean image: `processed/spear.png`. The selected spear was subsequently integrated; `game/ui/art/equipment-sources.json` records the installed source and hashes. Future revisions still require their own review.

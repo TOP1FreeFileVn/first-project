@@ -10,6 +10,8 @@ Adopted 2026-10-21 after the sword pilot (`docs/design/2026-10-21/sword-canvas-p
 The art rules still come from the other skills. This skill is only the *how*:
 - Style: `.claude/skills/cat-sprite-art/SKILL.md` and `tools/skills/casual-weapon-design/` (read `references/cat-defender.md`, `references/accepted-spear.md`, `references/internal-strokes.md` for weapons/gear).
 - Items are flat cat style: flat fills, one even `#583f21` contour, round joins/caps, no gradients/shine/shadow (memory: items-in-cat-style).
+- The authoritative stroke contract is `tools/skills/casual-weapon-design/references/internal-strokes.md`: **main and secondary strokes**. Material planes are fills. This guide and its templates must not override that contract with fixed width ratios or local-unit defaults.
+- For standalone helmet, armor and boots, also read `tools/skills/casual-weapon-design/references/equipment-icon-baseline.md` and open its review image. The current working profile is 11.35/7.41 px at 256 px, distinct from the held-art 9 px main target. Boots are a pair, kept upright; arrange and fit the pair before settling the stroke widths.
 
 ## Tools (all already on this machine)
 
@@ -37,11 +39,12 @@ Copy `template/item.js`, `template/preview.html`, `template/export.mjs` into it.
 ### 2. Draw in `item.js`
 - **Local frame:** origin = grip centre (or the item's natural pivot), functional head toward −y, total length ≈ 200 units. All placement (icon tilt, paw socket, rotation) happens in `icon()` / `held()` with `P.translate/rotate/scale`, never by editing coordinates.
 - **Path API:** `P.shape(cmds, {fill, stroke, width})` with absolute `['M',x,y]`, `['L',x,y]`, `['Q',cx,cy,x,y]`, `['C',…]`, `['Z']`. Helpers `Pen.circle(cx,cy,r)`, `Pen.rrect(x,y,w,h,r)`. Stroke width is in local units and scales with the pen.
-- **Layer order per part:** (1) fill → (2) darker flat material plane clipped by shape, *no line on that shared boundary* → (3) secondary seams (wraps, rivets) in a material-tinted, thinner stroke (~0.45–0.5 × main) → (4) the main contour last. Draw back parts first (blade, grip, pommel, then guard on top).
-- **Line weight:** main contour `w = 10` local units on both icon and held calls (≈ 8–9 px on the 256×240 hero canvas after `scale(0.82)`, matching the accepted spear). Don't use thinner than 0.45 × w for anything that must survive 64 px.
+- **Layer order per part:** (1) fill → (2) flat material plane clipped by shape, *no line on that shared boundary* → (3) secondary seams in quieter material-related ink → (4) main contour. Draw back parts first, hide their occluded edges and resolve each visible shared edge once. Do not close a main outline around every material patch.
+- **Line weight:** configure named main/secondary profiles for held art and icons. The held main target is 9 px **after all placement transforms** on the 256×240 hero canvas; with uniform scale `s`, author `9 / s` local width. Choose secondary widths/ink for the item's function and material, then check them at actual size; no universal ratio or minimum percentage applies. Keep the bowstring at its specific 3 px held target. Calibrate icon weight beside the accepted sword at the same display size rather than reusing the held profile after arbitrary fitting.
+- **Template values:** the demo's secondary seam and icon profile are examples to replace in the item brief. They do not certify an asset or establish set-wide secondary widths. Record the final chosen profiles and fitted measurements.
 - **Chunky proportions:** the first attempt is always too thin. Start wide: sword blade ±18–24, grip ±11, pommel r 13, gem r ≥ 6.
 - **Mirror symmetric parts** with a loop or `P.save(); P.transform(-1,0,0,1,0,0); …; P.restore()` instead of retyping coordinates.
-- **Held pose:** right-paw socket (160,166) for sword/staff/axe; left-paw (94,166) for bow; rotate around the grip. Keep the palm patch (`PALM #f5a25d`) inside the paw's C so grip shows above and below. Stat-only gear (helmet, armor, gloves, boots, amulet) gets no `held()`; delete it.
+- **Held pose:** right-paw socket (160,166) for sword/staff/axe; left-paw (94,166) for bow; rotate around the grip. Keep the palm patch (`PALM #f5a25d`) inside the paw's C so grip shows above and below. Active stat-only gear (helmet, armor, boots) gets no `held()`; delete it. Gloves and amulets remain historical art, not active slots.
 
 ### 3. Look — mandatory every round
 ```
@@ -54,6 +57,7 @@ Then **Read the PNG**. Never skip this and never judge from code. Check, in this
 4. Mass: blade/head not thin; no dark tangle where lines meet.
 5. Interior detail survives 64 px; remove what turns to mush.
 6. Nothing clipped at the canvas edge.
+7. Main and secondary roles remain distinct after fitting: no doubled edge, dark junction knot or lost secondary line. Check both a marked role view and the clean image, and record the fitted main/secondary measurements; do not infer compliance from source widths alone.
 
 Write the failures you see as a short list, fix them in `item.js`, re-snap with the next round number. Expect 2–3 rounds; stop when the checklist passes, not after a fixed count. Keep the round PNGs; they are the review trail.
 
@@ -67,7 +71,7 @@ Writes `svg/<item>-icon-{256,96,64}.svg`, and for held items `svg/<item>-weapon-
 ```
 powershell -File .claude/skills/canvas-vector-art/scripts/godot_render.ps1 -Dir docs/design/<date>/<item>-canvas
 ```
-Read `godot/hero-<item>.png` and `godot/<item>-icon-64.png`. They must match the canvas round. If Godot differs (it shouldn't with plain paths), simplify the path rather than adding SVG features.
+Read `godot/hero-<item>.png` for held art and the icon PNGs. For standalone equipment, export and inspect native **32/48/64/96 px** icons plus a 256 px line-role view; add these sizes to the copied export template when needed. Inspect pair overlap, seams and openings as well as contour weight. They must match the canvas round. If Godot differs (it shouldn't with plain paths), simplify the path rather than adding SVG features.
 
 ### 6. Compare and hand over
 Build a small `compare.html` next to the files (old vs new at equal size, plus native 128×120 and 64 px), snap it to `compare.png`, Read it. Give the user the folder path and `compare.png`, list what changed in construction (not just colour/stroke), and ask for a score. **Don't overwrite production art** (`ui/skin/`, `ui/art/`, `tools/ui/make_svgs.py`) until the user approves; integration is a separate step.

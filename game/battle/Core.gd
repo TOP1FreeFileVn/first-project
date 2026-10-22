@@ -1,13 +1,12 @@
 extends Node2D
 
-# The master drive orb in its grid cell. It never stops and drives every gear chained to
+# The cat-operated master drive in its grid cell. It never stops and drives every gear chained to
 # it; the castle's HP is the level's life, and it stores the meat the
 # between-wave shop spends. Meat comes from wave income, interest on savings and kills.
 
 signal destroyed
 
-const CogDraw = preload("res://game/battle/CogDraw.gd")
-const Gear = preload("res://game/battle/Gear.gd")
+const CatDrive = preload("res://game/battle/CatDrive.gd")
 
 const Economy = preload("res://game/core/Economy.gd")
 ## Radius of the pin's rounded tip; fits the gear's tooth gap where the tip travels.
@@ -20,14 +19,17 @@ var meat := 0.0
 var max_meat := 10.0
 
 
+func _ready() -> void:
+	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+
+
 func _process(_delta: float) -> void:
 	queue_redraw()
 
 
 func _draw() -> void:
 	var angle: float = board.pin_angle() if board else -PI / 2.0
-	# The arm ends in a rounded tip centred at PIN_REACH, sized to sit in a tooth gap.
-	CogDraw.draw_orb(self, Vector2.ZERO, Gear.ORB_RADIUS, angle, board.PIN_REACH if board else 51.0, PIN_TIP)
+	CatDrive.draw_drive(self, angle, board.PIN_REACH if board else 51.0, PIN_TIP)
 
 
 # Castle level and workshop upgrades from PlayerData shape every level.

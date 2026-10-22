@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+<path d="M49 76 L151 76 Q161 76 161 86 L161 165 Q161 175 151 175 L49 175 Q39 175 39 165 L39 86 Q39 76 49 76 Z" fill="#d4a36b" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M54 85 L146 85 Q146 85 146 85 L146 128 Q146 128 146 128 L54 128 Q54 128 54 128 L54 85 Q54 85 54 85 Z" fill="#fffaf1" />
+<path d="M25 66 L48 27 Q51 22 59 22 L141 22 Q149 22 152 27 L175 66 L175 79 Q150 111 125 80 Q100 111 75 80 Q50 111 25 79 Z" fill="#73b5cb" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M75 28 L125 28 L125 80 Q100 103 75 80 Z" fill="#fff2cc" />
+<path d="M25 66 L175 66" fill="none" stroke="#4285aa" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M30 123 L170 123 Q176 123 176 129 L176 135 Q176 141 170 141 L30 141 Q24 141 24 135 L24 129 Q24 123 30 123 Z" fill="#f7cb69" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M80 158 Q103 139 123 157 Q103 176 80 158 L68 148 L68 168 Z" fill="#fff2cc" />
+<path d="M111 153.2 C112.55 153.2 113.8 154.45 113.8 156 C113.8 157.55 112.55 158.8 111 158.8 C109.45 158.8 108.2 157.55 108.2 156 C108.2 154.45 109.45 153.2 111 153.2 Z" fill="#583f21" />
+</svg>

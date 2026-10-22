@@ -1,0 +1,86 @@
+{
+  "status": "B-approved-and-integrated",
+  "selected": "B",
+  "title": "Bánh đúc",
+  "selection_date": "2026-10-22",
+  "canonical_source": "game/ui/art_sources/battle_cog_B.svg",
+  "canvas_source": "docs/design/2026-10-22/gear-options/gears.js",
+  "preserved_references": {
+    "approved_before_fit": "B-approved-original.svg",
+    "previous_production": "before-tier-1.svg",
+    "canvas_fit_review": "B-production-fit.png"
+  },
+  "profile": {
+    "canvas": [128, 128],
+    "teeth": 8,
+    "outer": 54,
+    "root": 36.5,
+    "shoulder": 43,
+    "flank_angle_degrees": [-14, 14],
+    "cap_angle_degrees": [-5.5, 5.5],
+    "corner_round": 2.4,
+    "shape_phase_degrees": 13.5,
+    "main_stroke": 3.2,
+    "main_ink": "#583f21",
+    "main_stroke_at_450px": 2.0,
+    "interior_secondary_stroke": "none; broad unlined material fill"
+  },
+  "production_files": [
+    "game/ui/skin/battle_cog_tier_1.svg",
+    "game/ui/skin/battle_cog_tier_2.svg",
+    "game/ui/skin/battle_cog_tier_3.svg",
+    "game/ui/skin/battle_cog_tier_4.svg",
+    "game/ui/skin/battle_cog_tier_5.svg",
+    "game/ui/skin/battle_cog_idle.svg"
+  ],
+  "palette": {
+    "tier_1": ["#ead5ac", "#f4dfb4"],
+    "tier_2": ["#80bfd7", "#f4dfb4"],
+    "tier_3": ["#b49cd6", "#f4dfb4"],
+    "tier_4": ["#eead6c", "#f4dfb4"],
+    "tier_5": ["#aec778", "#f4dfb4"],
+    "idle": ["#aaa995", "#d2cbb8"]
+  },
+  "mesh_validation": {
+    "engine_test": "res://tests/PinMeshTest.tscn",
+    "source_read_by_test": "game/ui/skin/battle_cog_tier_1.svg",
+    "initial_proposal_clearance_px": {"pin": -0.181, "neighbour": -1.936},
+    "fitted_clearance_px": {"pin": 1.632, "neighbour": 0.779},
+    "required_clearance_px": {"pin": 1.5, "neighbour": 0.5},
+    "failures": 0,
+    "log": "B-pinmesh-stdout.log"
+  },
+  "palette_validation": {
+    "renderer": "Godot SVG rasterizer, direct production SVG load, no editor import",
+    "profile": "output/gear-B-palette",
+    "image": "godot/B-production-palette.png",
+    "inspected": true,
+    "fill_color_checks_passed": 12,
+    "checks": "godot/B-production-palette-checks.json"
+  },
+  "native_validation": {
+    "status": "passed",
+    "label": "layers-gear-B",
+    "checks_passed": 13,
+    "checks_total": 13,
+    "sizes_inspected": [[450, 800], [360, 640]],
+    "manifest": "docs/ui_review/2026-10-22/battle-cardboard-castle/layers-gear-B-manifest.json",
+    "image": "B-in-game.png",
+    "log": "B-native-stdout.log",
+    "input_checks": ["press", "motion", "drop to empty cell", "return to original cell"]
+  },
+  "rebuild": {
+    "generator": "tools/ui/make_svgs.py::battle_cog / make_battle_cogs",
+    "canonical_template_replayed": true,
+    "scoped_rebuild_byte_identical_files": 6,
+    "steps": [
+      "Review the Canvas preview after changing gears.js.",
+      "node docs/design/2026-10-22/gear-options/export.mjs --install=B",
+      "python -c \"import sys; sys.path.insert(0,'tools/ui'); import make_svgs; make_svgs.make_battle_cogs()\"",
+      "Run Godot --headless --path . res://tests/PinMeshTest.tscn.",
+      "Import fresh assets, then capture BattleCardboardCastleReview with --label=layers-gear-B in a temporary profile.",
+      "Render render-B-palette.gd, then run build-B-palette.py and inspect the palette."
+    ]
+  },
+  "scope": "Art contour and palette only; no gear mechanics, cell positions, collision or combat changes."
+}

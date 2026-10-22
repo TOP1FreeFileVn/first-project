@@ -55,7 +55,8 @@ func _featured_chest() -> void:
 	body.add_child(frame)
 	var row := UiKit.hbox(18)
 	box.add_child(row)
-	row.add_child(_chest_art("gold", 188))
+	# The premium chest leads the offer and is visibly larger than supply chests.
+	row.add_child(_chest_art("gold", 248))
 	var info := UiKit.vbox(8)
 	info.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	info.size_flags_vertical = Control.SIZE_SHRINK_CENTER

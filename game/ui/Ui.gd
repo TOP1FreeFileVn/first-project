@@ -15,11 +15,13 @@ const DARK_TEXT := Color("4b4444")
 
 
 static func tex(name: String) -> Texture2D:
-	# Accepted raster art is kept outside the generated SVG skin, so rebuilding
-	# the legacy skin cannot silently restore superseded weapon/equipment art.
-	var raster := "res://game/ui/art/" + name + ".png"
-	if ResourceLoader.exists(raster):
-		return load(raster)
+	# Accepted art lives outside the generated skin so a legacy rebuild cannot
+	# restore superseded assets. Raster overrides retain priority over vectors.
+	var accepted := "res://game/ui/art/" + name
+	if ResourceLoader.exists(accepted + ".png"):
+		return load(accepted + ".png")
+	if ResourceLoader.exists(accepted + ".svg"):
+		return load(accepted + ".svg")
 	return load(SKIN + name + ".svg")
 
 
@@ -193,7 +195,7 @@ static func panel(variation: String, child: Control = null) -> PanelContainer:
 	return p
 
 
-## Menu-only frames: one brown contour and shallow lip, separate from combat/rarity art.
+## Menu-only frames: one flat brown contour, separate from combat/rarity art.
 const MENU_PANEL_CONTEXTS := ["shop", "hero", "troops", "castle", "patrol", "events", "summon", "login", "quests", "profile", "settings"]
 
 
@@ -206,7 +208,7 @@ static func menu_panel_style(context: String, variation := "Board") -> StyleBoxT
 		box.texture_margin_left = 48
 		box.texture_margin_right = 48
 		box.texture_margin_top = 48
-		box.texture_margin_bottom = 56
+		box.texture_margin_bottom = 48
 		box.content_margin_left = 28
 		box.content_margin_right = 28
 		box.content_margin_top = 30
@@ -492,49 +494,54 @@ static func platform(art: String, level: String) -> Control:
 ## One HUD resource: a fixed-height pill with the icon overlapping its left end, the value
 ## centred between its icon and optional green "+", with a timer tag below when needed.
 ## The value is a sibling of the panel so its minimum width cannot stretch the pill.
-static func _currency(icon_name: String, text: String, plus: bool, timer := "") -> Control:
+## Home uses the large preset; the earlier three-resource HUD keeps its compact size.
+static func _currency(icon_name: String, text: String, plus: bool, timer := "", large := false) -> Control:
+	var pill_top := 10.0 if large else 8.0
+	var pill_bottom := 58.0 if large else 44.0
+	var caption_size := 22 if large else 18
 	var root := Control.new()
-	root.custom_minimum_size = Vector2(0, 52)
+	root.custom_minimum_size = Vector2(0, 68 if large else 52)
 	root.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var pill := panel("HudPill")
 	pill.name = "CurrencyPill"
 	pill.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(pill)
 	pill.anchor_right = 1.0
-	pill.offset_left = 20
-	pill.offset_top = 8
-	pill.offset_bottom = 44
-	var value := label(text, "LabelSmall", 18)
+	pill.offset_left = 22 if large else 20
+	pill.offset_top = pill_top
+	pill.offset_bottom = pill_bottom
+	var value := label(text, "LabelSmall", caption_size)
 	value.name = "CurrencyValue"
 	value.add_theme_constant_override("outline_size", 3)
 	value.clip_text = true
 	value.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	root.add_child(value)
 	value.anchor_right = 1.0
-	value.offset_left = 44
-	value.offset_right = -36 if plus else -8
-	value.offset_top = 8
-	value.offset_bottom = 44
+	value.offset_left = 52 if large else 44
+	value.offset_right = (-40 if large else -36) if plus else -8
+	value.offset_top = pill_top
+	value.offset_bottom = pill_bottom
 	# Refit after a resize and after Home changes the amount. Both keep the icon/plus slots.
 	var fit_value := func():
 		var available := value.size.x - 8.0
 		if available <= 0.0:
 			return
 		var font := value.get_theme_font("font")
-		var font_size := 18
-		while font_size > 12 and font.get_string_size(value.text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x > available:
+		var font_size := caption_size
+		var minimum_size := 16 if large else 12
+		while font_size > minimum_size and font.get_string_size(value.text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x > available:
 			font_size -= 1
 		if value.get_theme_font_size("font_size") != font_size:
 			value.add_theme_font_size_override("font_size", font_size)
 	value.set_meta("fit_value", fit_value)
 	value.resized.connect(fit_value)
 	if plus:
-		var add := icon("badge_plus", 28)
+		var add := icon("badge_plus", 34 if large else 28)
 		add.name = "CurrencyPlus"
-		pin(root, add, Vector2(-30, 12), Control.PRESET_TOP_RIGHT)
-	var resource_icon := icon(icon_name, 48)
+		pin(root, add, Vector2(-36, 17) if large else Vector2(-30, 12), Control.PRESET_TOP_RIGHT)
+	var resource_icon := icon(icon_name, 56 if large else 48)
 	resource_icon.name = "CurrencyIcon"
-	pin(root, resource_icon, Vector2(-2, 2))
+	pin(root, resource_icon, Vector2(-2, 6) if large else Vector2(-2, 2))
 	if timer != "":
 		var t := label(timer, "LabelTiny", 13)
 		root.add_child(t)
@@ -726,20 +733,24 @@ static func stat_pill(icon_name: String, text: String, min_width := 150.0) -> Pa
 	return p
 
 
-## Equipment card in the Capybara-Go style: rarity card, slot-type badge top-left, "Lv.x" top
+## Approved carton A equipment card: rarity insert, slot-type badge top-left, "Lv.x" top
 ## right, big item art, green up arrow bottom-right when it can be upgraded now.
 static func gear_card(icon_name: String, type_icon: String, tone: String, level: String, size := 116.0, can_upgrade := false) -> Control:
 	var root := Control.new()
 	root.custom_minimum_size = Vector2(size, size)
-	var card := panel("CardUnit" + (tone if tone != "grey" else "yellow").capitalize())
+	var frame_type := "CardEquipment" if tone in ["green", "blue", "purple", "orange"] else "CardUnit"
+	var card := panel(frame_type + (tone if tone != "grey" else "yellow").capitalize())
 	root.add_child(card)
 	card.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	# Lay art out against the full card, independently of the face's theme margins.
-	# Source icons already contain safe alpha padding; this square also leaves the
-	# top row free for the slot and level, including in the smaller bag cards.
-	var art := icon(icon_name, size * 0.78)
+	# Source icons already contain safe alpha padding and centred painted bounds.
+	# Centre the square in both axes. Diagonal weapon tips need extra clearance
+	# beneath the level caption; upright gear can use the larger square.
+	var art_ratio := 0.68 if icon_name.begins_with("hero_w_") or icon_name.begins_with("w_") else 0.78
+	var art := icon(icon_name, size * art_ratio)
 	art.name = "EquipmentArt"
-	pin(root, art, Vector2(size * 0.11, size * 0.22))
+	var art_inset := size * (1.0 - art_ratio) * 0.5
+	pin(root, art, Vector2(art_inset, art_inset))
 	var badge := icon(type_icon, size * 0.26)
 	badge.name = "SlotBadge"
 	pin(root, badge, Vector2(5, 5))

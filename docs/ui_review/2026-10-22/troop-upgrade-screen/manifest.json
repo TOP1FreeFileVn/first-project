@@ -1,0 +1,1869 @@
+{
+	"captures": [
+		"level-ready_360x640.png",
+		"after-level-up_360x640.png",
+		"star-ready_360x640.png",
+		"after-star-up_360x640.png",
+		"insufficient-cards_360x640.png",
+		"capped-star-default_360x640.png",
+		"maximum_360x640.png",
+		"locked_360x640.png",
+		"full-team-swap_360x640.png",
+		"support-long-text_360x640.png",
+		"level-ready_450x800.png",
+		"after-level-up_450x800.png",
+		"star-ready_450x800.png",
+		"after-star-up_450x800.png",
+		"insufficient-cards_450x800.png",
+		"capped-star-default_450x800.png",
+		"maximum_450x800.png",
+		"locked_450x800.png",
+		"full-team-swap_450x800.png",
+		"support-long-text_450x800.png"
+	],
+	"checks": [
+		{
+			"key": "native_card_opens_screen_funded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "dedicated_layer_hides_lobby_chrome_and_roster",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "dedicated_screen_covers_logical_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "underlying_upgrade_arrows_and_team_checks_not_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradePortrait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeStats",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeResource",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeScroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_mode_tabs_do_not_overlap_funded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scroll_information_clears_fixed_primary_action_funded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "primary_native_target_at_least_44px_funded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_level-ready_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_level-ready_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "funded_level_primary_enabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_level_upgrade_spends_exactly_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_upgrade_refreshes_current_and_next_stats",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_upgrade_has_visible_feedback",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_after-level-up_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_after-level-up_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "funded_star_mode_primary_enabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_star-ready_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_star-ready_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_star_upgrade_spends_cards_once_without_gold",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "star_upgrade_increases_level_cap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_after-star-up_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_after-star-up_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_back_frees_whole_layer_and_restores_lobby",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "roster_upgrade_hint_resumes_naturally_after_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "returned_roster_hint_still_pulses",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_card_opens_screen_insufficient",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "insufficient_gold_disables_level_primary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "disabled_level_primary_cannot_spend",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "insufficient_cards_disables_star_primary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "disabled_star_primary_cannot_spend",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_insufficient-cards_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_insufficient-cards_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_card_opens_screen_capped",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "capped_with_cards_defaults_to_available_star_upgrade",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_capped-star-default_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_capped-star-default_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capped_default_primary_upgrades_star_without_gold",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "new_star_unlocks_level_mode_again",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_card_opens_screen_maximum",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "max_level_primary_disabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "max_stars_primary_disabled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_maximum_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_maximum_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_card_opens_screen_locked",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "locked_troop_has_no_spend_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "locked_troop_cannot_join_team",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "locked_screen_explains_unlock_state",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "locked_silhouette_has_visible_question_mark",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "locked_question_stays_light_and_centered_over_black_art",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradePortrait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeScroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_mode_tabs_do_not_overlap_locked",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scroll_information_clears_fixed_primary_action_locked",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "primary_native_target_at_least_44px_locked",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_locked_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_locked_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_card_opens_screen_filtered",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "back_preserves_roster_rarity_filter",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "fixture_has_nonzero_roster_scroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_card_opens_screen_scrolled",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "back_preserves_nonzero_roster_scroll_and_filter",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_card_opens_screen_full-team",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full_team_join_closes_screen_into_roster_swap_flow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_full-team-swap_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_full-team-swap_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_team_slot_completes_requested_swap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_card_opens_screen_last-unit",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "last_unit_cannot_leave_team",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "disabled_last_unit_action_preserves_team",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_card_opens_screen_support-long-text",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradePortrait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeStats",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeResource",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeScroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_mode_tabs_do_not_overlap_support-long-text",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scroll_information_clears_fixed_primary_action_support-long-text",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "primary_native_target_at_least_44px_support-long-text",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "support_stats_omit_direct_attack_rows",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "long_support_ability_text_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_support-long-text_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_support-long-text_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_card_opens_screen_funded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dedicated_layer_hides_lobby_chrome_and_roster",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dedicated_screen_covers_logical_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "underlying_upgrade_arrows_and_team_checks_not_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_funded_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradePortrait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeStats",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeResource",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_funded_TroopUpgradeScroll",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_mode_tabs_do_not_overlap_funded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scroll_information_clears_fixed_primary_action_funded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "primary_native_target_at_least_44px_funded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_level-ready_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_level-ready_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "funded_level_primary_enabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_level_upgrade_spends_exactly_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_upgrade_refreshes_current_and_next_stats",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_upgrade_has_visible_feedback",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_after-level-up_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_after-level-up_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "funded_star_mode_primary_enabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_star-ready_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_star-ready_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_star_upgrade_spends_cards_once_without_gold",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "star_upgrade_increases_level_cap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_after-star-up_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_after-star-up_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_back_frees_whole_layer_and_restores_lobby",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "roster_upgrade_hint_resumes_naturally_after_back",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "returned_roster_hint_still_pulses",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_card_opens_screen_insufficient",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "insufficient_gold_disables_level_primary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "disabled_level_primary_cannot_spend",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "insufficient_cards_disables_star_primary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "disabled_star_primary_cannot_spend",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_insufficient-cards_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_insufficient-cards_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_card_opens_screen_capped",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "capped_with_cards_defaults_to_available_star_upgrade",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_capped-star-default_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_capped-star-default_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "capped_default_primary_upgrades_star_without_gold",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "new_star_unlocks_level_mode_again",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_card_opens_screen_maximum",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "max_level_primary_disabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "max_stars_primary_disabled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_maximum_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_maximum_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_card_opens_screen_locked",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "locked_troop_has_no_spend_action",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "locked_troop_cannot_join_team",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "locked_screen_explains_unlock_state",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "locked_silhouette_has_visible_question_mark",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "locked_question_stays_light_and_centered_over_black_art",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_locked_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradePortrait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_locked_TroopUpgradeScroll",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_mode_tabs_do_not_overlap_locked",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scroll_information_clears_fixed_primary_action_locked",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "primary_native_target_at_least_44px_locked",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_locked_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_locked_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_card_opens_screen_filtered",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "back_preserves_roster_rarity_filter",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "fixture_has_nonzero_roster_scroll",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_card_opens_screen_scrolled",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "back_preserves_nonzero_roster_scroll_and_filter",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_card_opens_screen_full-team",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full_team_join_closes_screen_into_roster_swap_flow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_full-team-swap_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_full-team-swap_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_team_slot_completes_requested_swap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_card_opens_screen_last-unit",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "last_unit_cannot_leave_team",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "disabled_last_unit_action_preserves_team",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_card_opens_screen_support-long-text",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeBack",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeLevelTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeStarTab",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradePrimary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_action_within_viewport_support-long-text_TroopUpgradeTeam",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradePortrait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeStats",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeResource",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "layout_node_exists_support-long-text_TroopUpgradeScroll",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_mode_tabs_do_not_overlap_support-long-text",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scroll_information_clears_fixed_primary_action_support-long-text",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "primary_native_target_at_least_44px_support-long-text",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "support_stats_omit_direct_attack_rows",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "long_support_ability_text_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_support-long-text_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_support-long-text_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/troop-card-regression-profile/Godot/app_userdata/Gear Defenders"
+}

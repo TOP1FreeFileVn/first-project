@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://docs/design/2026-10-22/lobby-mask-shortcuts/MaskShortcutPreview.gd" id="1"]
+
+[node name="MaskShortcutPreview" type="Node"]
+script = ExtResource("1")

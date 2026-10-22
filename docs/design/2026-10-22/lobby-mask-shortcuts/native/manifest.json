@@ -1,0 +1,561 @@
+{
+	"captures": [
+		{
+			"file": "production_450x800.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "focus_450x800.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "pressed_450x800.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "release_450x800.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "production_360x640.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "focus_360x640.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "pressed_360x640.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "release_360x640.png",
+			"shortcuts": {
+				"events": [
+					596.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"login": [
+					16.0,
+					252.0,
+					108.0,
+					128.0
+				],
+				"quests": [
+					16.0,
+					380.0,
+					108.0,
+					128.0
+				]
+			},
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"check": "login_original_hit_size",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "login_production_component",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "shared_mask_has_no_outline_or_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "quests_original_hit_size",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "quests_production_component",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "events_original_hit_size",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "events_production_component",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "shared_mask_has_no_outline_or_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "one_shared_mask_per_column",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "production_native_size",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "production_saved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "focus_native_size",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "focus_saved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "native_hover_response",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "pressed_native_size",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "pressed_saved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "native_press_response",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "release_native_size",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "release_saved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "native_release_opens_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "demo_never_persists",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"check": "login_original_hit_size",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "login_production_component",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "shared_mask_has_no_outline_or_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "quests_original_hit_size",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "quests_production_component",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "events_original_hit_size",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "events_production_component",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "shared_mask_has_no_outline_or_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "one_shared_mask_per_column",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "production_native_size",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "production_saved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "focus_native_size",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "focus_saved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "native_hover_response",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "pressed_native_size",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "pressed_saved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "native_press_response",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "release_native_size",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "release_saved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "native_release_opens_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"check": "demo_never_persists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failed": 0,
+	"persist": false,
+	"production": true
+}

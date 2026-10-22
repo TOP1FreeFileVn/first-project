@@ -1,0 +1,17 @@
+<!doctype html><meta charset="utf-8"><title>Chest comparison</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#d8e4de;color:#583f21;font:16px Game,Arial,sans-serif}h1{font-size:27px;margin:0 0 8px}p{margin:0 0 18px;font:17px Arial,sans-serif;color:#617368}.row{display:flex;gap:18px}.card{background:#edf1e8;padding:17px;border-radius:18px;flex:1}h2{margin:0;font-size:19px}canvas{display:block;margin:auto}.sub{font:16px Arial,sans-serif;line-height:1.5;color:#667469}.bottom{margin-top:18px;display:flex;align-items:center;justify-content:space-around}.thumb{text-align:center}.legend{font:16px Arial,sans-serif;line-height:1.6;color:#667469}
+</style>
+<h1>RƯƠNG GỖ MÈO · SO SÁNH CÙNG BỀ NGANG</h1><p>Mẫu thử độc lập · SVG và canvas dùng cùng một bộ path · ảnh bản mới bên dưới render bằng Godot.</p>
+<div class="row"><div class="card"><h2>Hiện tại · nắp vòm, đai dọc</h2><canvas id="old" width="310" height="250"></canvas><div class="sub">Ảnh cắt từ bản kiểm tra Godot hiện tại.<br>Mảng sáng ở nắp, hai đai chạy dọc.</div></div><div class="card"><h2>Đề xuất · nắp thấp, góc đồng</h2><canvas id="new" width="310" height="250"></canvas><div class="sub">Nắp vát vai, thân gọn; khóa đầu mèo.<br>Vân gỗ và tiếp giáp đồng nhẹ hơn viền.</div></div><div class="card"><h2>Mở · nắp tách riêng</h2><canvas id="open" width="310" height="250"></canvas><div class="sub">Nắp + bọc đồng là một lớp chuyển động.<br>Giữ thân, khóa và miệng rương tách lớp.</div></div></div>
+<div class="card bottom"><div class="thumb"><img src="godot/chest-closed-128.png" width="128" height="128"><br>128 px</div><div class="thumb"><img src="godot/chest-closed-96.png" width="96" height="96"><br>96 px · shop</div><div class="thumb"><img src="godot/chest-closed-64.png" width="64" height="64"><br>64 px</div><div class="thumb"><img src="godot/chest-closed-26.png" width="26" height="26"><br>26 px</div><div class="legend">Nét chính: 9 px ở bản 256 px.<br>Nét phụ: 3 px, theo màu vật liệu.<br>Mảng gỗ / đồng: không viền kín từng phần.<br>Bản 26 px bỏ vân và đinh tán nhỏ.</div></div>
+<script>
+const load=src=>new Promise(ok=>{const i=new Image();i.onload=()=>ok(i);i.src=src});
+Promise.all([load('current-production-crop.png'),load('godot/chest-closed-256.png'),load('godot/chest-open-256.png')]).then(([old,closed,open])=>{
+  document.getElementById('old').getContext('2d').drawImage(old,5,2,256,174,30,57,250,170);
+  // The closed native texture's actual silhouette is 217 px wide; fit to 250 px.
+  document.getElementById('new').getContext('2d').drawImage(closed,19,56,218,160,30,57,250,183.5);
+  document.getElementById('open').getContext('2d').drawImage(open,27,0,256,256);
+});
+</script>

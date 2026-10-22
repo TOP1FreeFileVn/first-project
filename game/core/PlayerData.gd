@@ -1218,9 +1218,7 @@ func from_dict(data: Dictionary) -> void:
 		seen_tiles.append(str(kind))
 	var saved_cat = data.get("hero_cat", null)
 	if saved_cat is Dictionary and saved_cat.has("bag") and saved_cat.has("equipped"):
-		hero_cat = saved_cat.duplicate(true)
-		for uid in hero_cat["bag"]:
-			hero_cat["bag"][uid]["level"] = int(hero_cat["bag"][uid]["level"])
+		hero_cat = HeroCat.restore_state(saved_cat)
 
 
 func _save() -> void:

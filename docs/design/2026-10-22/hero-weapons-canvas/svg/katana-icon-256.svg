@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+<path d="M90.64 141.66 L186.32 47.81 Q201.81 34.14 223.68 32.32 L225.5 54.19 L113.42 164.44 Z" fill="#d9e0e8" />
+<path d="M223.68 32.32 L225.5 54.19 L113.42 164.44 L104.31 155.33 Z" fill="#a8b4c7" />
+<path d="M90.64 141.66 L186.32 47.81 Q201.81 34.14 223.68 32.32 L225.5 54.19 L113.42 164.44 Z" fill="none" stroke="#583f21" stroke-width="13" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M88.82 156.24 L97.93 165.36 Q103.4 170.82 97.93 176.29 L53.28 220.94 Q47.82 226.41 42.35 220.94 L33.24 211.83 Q27.77 206.36 33.24 200.89 L77.89 156.24 Q83.35 150.78 88.82 156.24 Z" fill="#cfa265" />
+<path d="M64.22 169.91 L92.47 181.76" fill="none" stroke="#946d46" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M48.73 185.4 L76.97 197.25" fill="none" stroke="#946d46" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M34.15 199.98 L62.39 211.83" fill="none" stroke="#946d46" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M88.82 156.24 L97.93 165.36 Q103.4 170.82 97.93 176.29 L53.28 220.94 Q47.82 226.41 42.35 220.94 L33.24 211.83 Q27.77 206.36 33.24 200.89 L77.89 156.24 Q83.35 150.78 88.82 156.24 Z" fill="none" stroke="#583f21" stroke-width="13" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M87.91 131.64 L122.54 166.27 Q128 171.73 122.54 177.2 L119.8 179.94 Q114.33 185.4 108.87 179.94 L74.24 145.31 Q68.77 139.84 74.24 134.37 L76.97 131.64 Q82.44 126.17 87.91 131.64 Z" fill="#a8b4c7" stroke="#583f21" stroke-width="13" stroke-linejoin="round" stroke-linecap="round" />
+</svg>

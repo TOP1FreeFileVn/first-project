@@ -1,0 +1,1032 @@
+{
+	"captures": [
+		"normal_450x800.png",
+		"stress_450x800.png",
+		"normal_360x640.png",
+		"stress_360x640.png"
+	],
+	"checks": [
+		{
+			"name": "normal_header_child_onscreen_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_header_child_onscreen_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_header_children_separated_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_header_child_onscreen_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_header_children_separated_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_header_child_onscreen_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_header_children_separated_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_complete_expected_amount",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_plus_clears_value",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_complete_expected_amount",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_plus_clears_value",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_normal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_header_children_separated_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_header_children_separated_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_header_children_separated_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_complete_expected_amount",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_plus_clears_value",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_complete_expected_amount",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_plus_clears_value",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_stress",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "CurrencyGold_native_plus_hit_opens_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "CurrencyGems_native_plus_hit_opens_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "review_never_persists",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "normal_header_child_onscreen_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_header_child_onscreen_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_header_children_separated_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_header_child_onscreen_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_header_children_separated_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_header_child_onscreen_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_header_children_separated_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_complete_expected_amount",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_plus_clears_value",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGold_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_complete_expected_amount",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_plus_clears_value",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "normal_CurrencyGems_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_normal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_header_children_separated_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_header_children_separated_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_header_child_onscreen_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_header_children_separated_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_complete_expected_amount",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_plus_clears_value",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGold_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_complete_expected_amount",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_text_and_outline_fit_without_ellipsis",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_readable_adaptive_font",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_enlarged_pill_and_icon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_plus_clears_value",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "stress_CurrencyGems_plus_inside_native_hit",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_stress",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "CurrencyGold_native_plus_hit_opens_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "CurrencyGems_native_plus_hit_opens_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "review_never_persists",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"layouts": [
+		{
+			"currency": "CurrencyGold",
+			"font_size": 22,
+			"icon": [
+				100.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				124.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				279.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				102.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "normal",
+			"text": "100.000",
+			"text_width_with_outline": 96.0,
+			"value": [
+				154.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"currency": "CurrencyGems",
+			"font_size": 22,
+			"icon": [
+				321.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				345.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				500.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				323.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "normal",
+			"text": "260",
+			"text_width_with_outline": 45.0,
+			"value": [
+				375.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"currency": "CurrencyGold",
+			"font_size": 19,
+			"icon": [
+				100.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				124.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				279.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				102.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "stress",
+			"text": "100.015.084",
+			"text_width_with_outline": 118.0,
+			"value": [
+				154.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"currency": "CurrencyGems",
+			"font_size": 22,
+			"icon": [
+				321.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				345.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				500.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				323.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "stress",
+			"text": "9.994.769",
+			"text_width_with_outline": 108.0,
+			"value": [
+				375.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"currency": "CurrencyGold",
+			"font_size": 22,
+			"icon": [
+				100.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				124.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				279.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				102.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "normal",
+			"text": "100.000",
+			"text_width_with_outline": 96.0,
+			"value": [
+				154.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"currency": "CurrencyGems",
+			"font_size": 22,
+			"icon": [
+				321.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				345.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				500.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				323.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "normal",
+			"text": "260",
+			"text_width_with_outline": 45.0,
+			"value": [
+				375.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"currency": "CurrencyGold",
+			"font_size": 19,
+			"icon": [
+				100.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				124.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				279.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				102.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "stress",
+			"text": "100.015.084",
+			"text_width_with_outline": 118.0,
+			"value": [
+				154.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"currency": "CurrencyGems",
+			"font_size": 22,
+			"icon": [
+				321.0,
+				26.0,
+				56.0,
+				56.0
+			],
+			"pill": [
+				345.0,
+				30.0,
+				191.0,
+				48.0
+			],
+			"plus": [
+				500.0,
+				37.0,
+				34.0,
+				34.0
+			],
+			"root": [
+				323.0,
+				20.0,
+				213.0,
+				68.0
+			],
+			"state": "stress",
+			"text": "9.994.769",
+			"text_width_with_outline": 108.0,
+			"value": [
+				375.0,
+				30.0,
+				121.0,
+				48.0
+			],
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"persist": false,
+	"production_home": true,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/home-currency-profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

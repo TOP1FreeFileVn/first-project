@@ -1,0 +1,3605 @@
+{
+	"captures": [
+		"full-five_360x640.png",
+		"team-tap-upgrade_360x640.png",
+		"swap-target-feedback_360x640.png",
+		"starter-3-slots-empty-and-locked_360x640.png",
+		"starter-4-slots-empty-and-locked_360x640.png",
+		"full-five_450x800.png",
+		"team-tap-upgrade_450x800.png",
+		"swap-target-feedback_450x800.png",
+		"starter-3-slots-empty-and-locked_450x800.png",
+		"starter-4-slots-empty-and-locked_450x800.png"
+	],
+	"checks": [
+		{
+			"key": "native_capture_dimensions_full-five_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_full-five_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_exists_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_single_row_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_visible_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_exists_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_single_row_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_visible_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_exists_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_single_row_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_visible_cat_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_exists_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_single_row_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_visible_cat_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_exists_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_single_row_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_visible_cat_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five_formation_count_and_power_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "collection_remains_five_columns_with_all_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "collection_rendered_first_row_has_five_without_horizontal_overflow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_standing_cat_tap_opens_dedicated_upgrade_screen",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_team-tap-upgrade_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_team-tap-upgrade_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_upgrade_back_returns_to_formation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_roster_tap_opens_swap_candidate",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full_team_action_enters_swap_without_changing_team",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "swap_targets_have_visible_feedback",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_swap-target-feedback_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_swap-target-feedback_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_target_tap_replaces_requested_slot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_team_drag_swaps_without_opening_detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_roster_drag_replaces_team_slot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_team_drag_outside_benches_cat",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_drag_cannot_bench_final_cat",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "fixture_castle_capacity_exists_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_starter-3-slots-empty-and-locked_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_starter-3-slots-empty-and-locked_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_visible_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_only_numeric_level_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_names_or_other_captions_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_ground_circle_or_halo_node_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_art_and_level_fit_transparent_slot_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_centered_below_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_clears_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_visible_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_only_numeric_level_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_names_or_other_captions_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_ground_circle_or_halo_node_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_art_and_level_fit_transparent_slot_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_centered_below_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_clears_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_formation_count_and_power_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_empty_open_slot_is_interactive",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_castle_locked_slot_is_noninteractive",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "fixture_castle_capacity_exists_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_starter-4-slots-empty-and-locked_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_starter-4-slots-empty-and-locked_360x640.png",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_visible_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_only_numeric_level_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_names_or_other_captions_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_ground_circle_or_halo_node_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_art_and_level_fit_transparent_slot_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_centered_below_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_clears_cat_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_visible_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_only_numeric_level_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_names_or_other_captions_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_ground_circle_or_halo_node_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_art_and_level_fit_transparent_slot_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_centered_below_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_clears_cat_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_visible_cat_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_only_numeric_level_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_names_or_other_captions_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_ground_circle_or_halo_node_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_art_and_level_fit_transparent_slot_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_centered_below_cat_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_clears_cat_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_formation_count_and_power_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_empty_open_slot_is_interactive",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_castle_locked_slot_is_noninteractive",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_full-five_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_full-five_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_exists_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_single_row_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_visible_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_exists_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_single_row_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_visible_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_exists_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_single_row_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_visible_cat_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_exists_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_single_row_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_visible_cat_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_exists_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slot_within_team_and_viewport_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_single_row_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_slots_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_interactive_native_touch_area_at_least_44px_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_visible_cat_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_only_numeric_level_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_names_or_other_captions_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_transparent_slot_without_card_or_rarity_background_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_no_ground_circle_or_halo_node_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_art_and_level_fit_transparent_slot_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_centered_below_cat_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_level_clears_cat_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full-five_formation_count_and_power_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "collection_remains_five_columns_with_all_troops",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "collection_rendered_first_row_has_five_without_horizontal_overflow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_standing_cat_tap_opens_dedicated_upgrade_screen",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_team-tap-upgrade_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_team-tap-upgrade_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_upgrade_back_returns_to_formation",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_roster_tap_opens_swap_candidate",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "full_team_action_enters_swap_without_changing_team",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "swap_targets_have_visible_feedback",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_swap-target-feedback_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_swap-target-feedback_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_target_tap_replaces_requested_slot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_team_drag_swaps_without_opening_detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_roster_drag_replaces_team_slot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_team_drag_outside_benches_cat",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_drag_cannot_bench_final_cat",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "fixture_castle_capacity_exists_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_starter-3-slots-empty-and-locked_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_starter-3-slots-empty-and-locked_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_visible_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_only_numeric_level_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_names_or_other_captions_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_ground_circle_or_halo_node_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_art_and_level_fit_transparent_slot_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_centered_below_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_clears_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_visible_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_only_numeric_level_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_names_or_other_captions_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_no_ground_circle_or_halo_node_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_art_and_level_fit_transparent_slot_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_centered_below_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_level_clears_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_exists_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slot_within_team_and_viewport_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_single_row_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_slots_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_formation_count_and_power_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_empty_open_slot_is_interactive",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked_castle_locked_slot_is_noninteractive",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "fixture_castle_capacity_exists_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_starter-4-slots-empty-and-locked_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_starter-4-slots-empty-and-locked_450x800.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_visible_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_only_numeric_level_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_names_or_other_captions_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_ground_circle_or_halo_node_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_art_and_level_fit_transparent_slot_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_centered_below_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_clears_cat_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_visible_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_only_numeric_level_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_names_or_other_captions_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_ground_circle_or_halo_node_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_art_and_level_fit_transparent_slot_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_centered_below_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_clears_cat_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_visible_cat_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_only_numeric_level_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_names_or_other_captions_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_transparent_slot_without_card_or_rarity_background_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_no_ground_circle_or_halo_node_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_art_and_level_fit_transparent_slot_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_centered_below_cat_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_level_clears_cat_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_interactive_native_touch_area_at_least_44px_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_exists_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slot_within_team_and_viewport_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_single_row_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_slots_do_not_overlap_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_formation_count_and_power_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_empty_open_slot_is_interactive",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked_castle_locked_slot_is_noninteractive",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"layouts": [
+		{
+			"key": "full-five",
+			"slots": [
+				{
+					"index": 0,
+					"level": [
+						55.0,
+						395.0,
+						110.0,
+						34.0
+					],
+					"level_text": "7",
+					"native_size": [
+						58.0,
+						77.0
+					],
+					"portrait": [
+						55.0,
+						283.0,
+						110.0,
+						112.0
+					],
+					"rect": [
+						52.0,
+						281.0,
+						116.0,
+						154.0
+					]
+				},
+				{
+					"index": 1,
+					"level": [
+						179.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "12",
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"portrait": [
+						179.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						176.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 2,
+					"level": [
+						304.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "18",
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"portrait": [
+						304.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						301.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 3,
+					"level": [
+						429.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "20",
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"portrait": [
+						429.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						426.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 4,
+					"level": [
+						554.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "30",
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"portrait": [
+						554.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						551.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked",
+			"slots": [
+				{
+					"index": 0,
+					"level": [
+						55.0,
+						395.0,
+						110.0,
+						34.0
+					],
+					"level_text": "7",
+					"native_size": [
+						58.0,
+						77.0
+					],
+					"portrait": [
+						55.0,
+						283.0,
+						110.0,
+						112.0
+					],
+					"rect": [
+						52.0,
+						281.0,
+						116.0,
+						154.0
+					]
+				},
+				{
+					"index": 1,
+					"level": [
+						179.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "12",
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"portrait": [
+						179.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						176.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 2,
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"rect": [
+						301.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 3,
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"rect": [
+						426.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 4,
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"rect": [
+						551.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked",
+			"slots": [
+				{
+					"index": 0,
+					"level": [
+						55.0,
+						395.0,
+						110.0,
+						34.0
+					],
+					"level_text": "7",
+					"native_size": [
+						58.0,
+						77.0
+					],
+					"portrait": [
+						55.0,
+						283.0,
+						110.0,
+						112.0
+					],
+					"rect": [
+						52.0,
+						281.0,
+						116.0,
+						154.0
+					]
+				},
+				{
+					"index": 1,
+					"level": [
+						179.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "12",
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"portrait": [
+						179.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						176.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 2,
+					"level": [
+						304.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "18",
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"portrait": [
+						304.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						301.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 3,
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"rect": [
+						426.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 4,
+					"native_size": [
+						58.5,
+						77.0
+					],
+					"rect": [
+						551.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				}
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "full-five",
+			"slots": [
+				{
+					"index": 0,
+					"level": [
+						55.0,
+						395.0,
+						110.0,
+						34.0
+					],
+					"level_text": "7",
+					"native_size": [
+						72.5,
+						96.25
+					],
+					"portrait": [
+						55.0,
+						283.0,
+						110.0,
+						112.0
+					],
+					"rect": [
+						52.0,
+						281.0,
+						116.0,
+						154.0
+					]
+				},
+				{
+					"index": 1,
+					"level": [
+						179.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "12",
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"portrait": [
+						179.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						176.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 2,
+					"level": [
+						304.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "18",
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"portrait": [
+						304.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						301.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 3,
+					"level": [
+						429.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "20",
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"portrait": [
+						429.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						426.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 4,
+					"level": [
+						554.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "30",
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"portrait": [
+						554.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						551.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				}
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-3-slots-empty-and-locked",
+			"slots": [
+				{
+					"index": 0,
+					"level": [
+						55.0,
+						395.0,
+						110.0,
+						34.0
+					],
+					"level_text": "7",
+					"native_size": [
+						72.5,
+						96.25
+					],
+					"portrait": [
+						55.0,
+						283.0,
+						110.0,
+						112.0
+					],
+					"rect": [
+						52.0,
+						281.0,
+						116.0,
+						154.0
+					]
+				},
+				{
+					"index": 1,
+					"level": [
+						179.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "12",
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"portrait": [
+						179.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						176.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 2,
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"rect": [
+						301.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 3,
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"rect": [
+						426.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 4,
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"rect": [
+						551.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				}
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "starter-4-slots-empty-and-locked",
+			"slots": [
+				{
+					"index": 0,
+					"level": [
+						55.0,
+						395.0,
+						110.0,
+						34.0
+					],
+					"level_text": "7",
+					"native_size": [
+						72.5,
+						96.25
+					],
+					"portrait": [
+						55.0,
+						283.0,
+						110.0,
+						112.0
+					],
+					"rect": [
+						52.0,
+						281.0,
+						116.0,
+						154.0
+					]
+				},
+				{
+					"index": 1,
+					"level": [
+						179.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "12",
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"portrait": [
+						179.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						176.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 2,
+					"level": [
+						304.0,
+						395.0,
+						111.0,
+						34.0
+					],
+					"level_text": "18",
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"portrait": [
+						304.0,
+						283.0,
+						111.0,
+						112.0
+					],
+					"rect": [
+						301.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 3,
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"rect": [
+						426.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				},
+				{
+					"index": 4,
+					"native_size": [
+						73.125,
+						96.25
+					],
+					"rect": [
+						551.0,
+						281.0,
+						117.0,
+						154.0
+					]
+				}
+			],
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/troops-standing-formation-profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

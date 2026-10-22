@@ -10,8 +10,8 @@ const Economy = preload("res://game/core/Economy.gd")
 
 const METALS := [Color("ead5ac"), Color("80bfd7"), Color("b49cd6"), Color("eead6c"), Color("aec778")]
 const IDLE_METAL := Color("aaa995")
-# Short broad teeth sit on a 44px shoulder; the concave 36.5px notches leave painted
-# clearance for neighbouring teeth and the master pin on the 100px grid.
+# Selected B uses short trapezoid teeth on 43px shoulders; the 36.5px root and
+# fitted flanks leave painted clearance for the pin and neighbours on the 100px grid.
 # Multiples of four keep the same tooth/gap phase on all four sides of the master.
 const OUTER := 54.0
 const INNER := 36.5

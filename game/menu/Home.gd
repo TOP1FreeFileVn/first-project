@@ -320,7 +320,7 @@ func _build_top_bar() -> void:
 	bar.position = Vector2.ZERO
 	bar.size = Vector2(SCREEN.x, TOP_HEIGHT)
 	add_child(bar)
-	var row := Ui.hbox(12, BoxContainer.ALIGNMENT_BEGIN)
+	var row := Ui.hbox(8, BoxContainer.ALIGNMENT_BEGIN)
 	row.name = "HeaderRow"
 	bar.add_child(row)
 
@@ -332,10 +332,10 @@ func _build_top_bar() -> void:
 	avatar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	row.add_child(avatar)
 
-	var gold := Ui._currency("coin", "", true)
+	var gold := Ui._currency("coin", "", true, "", true)
 	gold.name = "CurrencyGold"
 	_gold_label = gold.get_node("CurrencyValue")
-	var gems := Ui._currency("gem", "", true)
+	var gems := Ui._currency("gem", "", true, "", true)
 	gems.name = "CurrencyGems"
 	_gem_label = gems.get_node("CurrencyValue")
 	for pill in [gold, gems]:
@@ -346,7 +346,7 @@ func _build_top_bar() -> void:
 		row.add_child(hit)
 
 	var has_admin := AdminGate.available()
-	var tool_width := 174.0 if has_admin else 68.0
+	var tool_width := 162.0 if has_admin else 68.0
 	var tools := Control.new()
 	tools.name = "HeaderTools"
 	tools.custom_minimum_size = Vector2(tool_width, 84)
@@ -354,7 +354,7 @@ func _build_top_bar() -> void:
 	tool_row.name = "HeaderActions"
 	# One tap opens the admin panel; the button only exists in debug / "admin" builds.
 	if has_admin:
-		var admin := Ui.button("ADMIN", "Red", Vector2(100, 60), 16)
+		var admin := Ui.button("ADMIN", "Red", Vector2(88, 60), 16)
 		admin.name = "AdminButton"
 		admin.pressed.connect(open_admin)
 		tool_row.add_child(admin)
@@ -385,22 +385,40 @@ func _build_nav(badges: Array) -> void:
 	_nav_bar.tab_pressed.connect(select_tab)
 
 
-# Equal shortcut columns outside the stage, with a clear gap between each target.
+# Borderless shortcuts over one fixed translucent strip per column.
 func _build_side_rails() -> void:
 	_side = _skinned(Control.new())
 	_side.position = _content.position
 	_side.size = _content.size
 	_side.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_side)
-	var left := Ui.rail([
+	var left := _shortcut_rail("LobbyShortcutRailLeft", [
 		_rail_entry("login", "rail_checkin", "Quà 7 ngày", func(): MetaPopups.open_login(self)),
 		_rail_entry("quests", "rail_quest", "Nhiệm vụ", func(): MetaPopups.open_quests(self)),
 	])
 	Ui.pin(_side, left, Vector2(16, 140))
-	var right := Ui.rail([
+	var right := _shortcut_rail("LobbyShortcutRailRight", [
 		_rail_entry("events", "rail_event", "Sự kiện", func(): MetaPopups.open_events(self)),
 	])
 	Ui.pin(_side, right, Vector2(-16 - Ui.RAIL_ITEM_SIZE.x, 140), Control.PRESET_TOP_RIGHT)
+
+
+func _shortcut_rail(rail_name: String, items: Array) -> PanelContainer:
+	var rail := Ui.rail(items)
+	rail.name = rail_name
+	var column: VBoxContainer = rail.get_child(0)
+	column.add_theme_constant_override("separation", 0)
+	# This is one continuous mask behind icon, caption and space between items.
+	var mask := StyleBoxFlat.new()
+	mask.bg_color = Color("3f493f", 0.48)
+	mask.set_corner_radius_all(10)
+	mask.corner_detail = 12
+	mask.expand_margin_left = 6
+	mask.expand_margin_right = 6
+	mask.expand_margin_top = 6
+	mask.set_content_margin_all(0)
+	rail.add_theme_stylebox_override("panel", mask)
+	return rail
 
 
 func _rail_entry(key: String, icon_name: String, text: String, on_press: Callable) -> Control:

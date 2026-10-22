@@ -1,0 +1,15 @@
+{
+  "changed": [
+    "hero_cat_heavy.png",
+    "icon_hero_w_riu.png",
+    "icon_hero_w_riu_32.png",
+    "icon_hero_w_riu_48.png",
+    "icon_hero_w_riu_64.png",
+    "icon_hero_w_riu_96.png"
+  ],
+  "unchanged_png_count": 163,
+  "all_other_pngs_preserved": true,
+  "bow_up_left_files_preserved": true,
+  "source_and_output_hashes_verified": true,
+  "full_rebuild_reproduces_approved_six_axe_files_and_up_left_bow_icons": true
+}

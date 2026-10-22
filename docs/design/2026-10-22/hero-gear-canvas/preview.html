@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Mũ và giày · bản thử</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#e4e9e2;color:#583f21;font:16px Game,sans-serif;width:1120px;padding:24px}h1{font-size:27px;margin:0 0 6px}p{margin:0 0 18px;font:15px Game,sans-serif;color:#70624f}.row{display:flex;gap:20px}.item{flex:1;background:#f4f4ed;border-radius:18px;padding:18px}h2{font-size:21px;margin:0 0 12px}.compare{display:flex;gap:8px;align-items:center}.sample{width:50%;text-align:center}.sample span{display:block;font-size:14px;color:#786d5c}.sample canvas,.sample img{width:240px;height:240px;object-fit:contain}.sizes{display:flex;align-items:flex-end;justify-content:space-around;height:145px}.sizes label{display:block;font:12px sans-serif;text-align:center;margin-top:8px}.role{display:flex;align-items:center;gap:18px;margin-top:18px;border-top:1px solid #d9dece;padding-top:14px}.role canvas{width:128px;height:128px}.role p{font:14px sans-serif;line-height:1.6;margin:0}footer{font:13px sans-serif;margin-top:16px;color:#786d5c}
+</style>
+<h1>MŨ &amp; GIÀY · MẪU THỬ</h1>
+<p>Một họ màu bạc · nét chính 11,35 / nét phụ 7,41 px · giày đi theo đôi, đứng thẳng</p>
+<div class="row" id="items"></div>
+<footer>Đỏ: nét chính · xanh: nét phụ · hai mảng bạc là fill · chưa thay asset trong game</footer>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="helmet.js"></script><script src="boots.js"></script>
+<script>
+for(const [slug,title,api,note] of [
+ ['helmet','MŨ SẮT',GearHelmet,'Mép hình + mặt hở: nét chính.\nĐường ghép đỉnh mũ: nét phụ.'],
+ ['boots','ĐÔI GIÀY GIÁP',GearBoots,'Mép hình + cổ hở: nét chính.\nĐường cấu tạo thân: nét phụ.']
+]){
+ const el=document.createElement('section');el.className='item';
+ el.innerHTML=`<h2>${title}</h2><div class="compare"><div class="sample"><span>Đang dùng</span><img src="../../../../game/ui/art/icon_eq_${slug}.png"></div><div class="sample"><span>Bản mới</span><canvas width="256" height="256"></canvas></div></div><div class="sizes"></div><div class="role"><canvas width="256" height="256"></canvas><p>${note.replace('\n','<br>')}</p></div>`;
+ document.getElementById('items').append(el);Pen.toCanvas(api.icon(256),el.querySelector('canvas').getContext('2d'));
+ for(const size of [32,48,64,96]){const entry=document.createElement('div'),c=document.createElement('canvas');c.width=c.height=size;entry.append(c);entry.insertAdjacentHTML('beforeend',`<label>${size} px</label>`);el.querySelector('.sizes').append(entry);Pen.toCanvas(api.icon(size),c.getContext('2d'));}
+ Pen.toCanvas(api.icon(256,true),el.querySelector('.role canvas').getContext('2d'));
+}
+</script>

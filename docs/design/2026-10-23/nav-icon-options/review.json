@@ -1,0 +1,215 @@
+{
+  "status": "approval study; production unchanged",
+  "fitting": [
+    {
+      "id": "A-battle",
+      "original_bounds": [
+        31,
+        29,
+        168,
+        171
+      ],
+      "viewbox": "22.326 22.826 154.348 154.348",
+      "author_main": 6.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.853,
+      "secondary_px_44": 1.197,
+      "main_px_26": 1.095,
+      "secondary_px_26": 0.707
+    },
+    {
+      "id": "A-hero",
+      "original_bounds": [
+        21,
+        8,
+        178,
+        180
+      ],
+      "viewbox": "6.022 0.522 186.957 186.957",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.765,
+      "secondary_px_44": 0.988,
+      "main_px_26": 1.043,
+      "secondary_px_26": 0.584
+    },
+    {
+      "id": "A-shop",
+      "original_bounds": [
+        18,
+        16,
+        182,
+        181
+      ],
+      "viewbox": "10.326 8.826 179.348 179.348",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.84,
+      "secondary_px_44": 1.03,
+      "main_px_26": 1.087,
+      "secondary_px_26": 0.609
+    },
+    {
+      "id": "B-battle",
+      "original_bounds": [
+        20,
+        21,
+        180,
+        178
+      ],
+      "viewbox": "13.043 12.543 173.913 173.913",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.897,
+      "secondary_px_44": 1.063,
+      "main_px_26": 1.121,
+      "secondary_px_26": 0.628
+    },
+    {
+      "id": "B-hero",
+      "original_bounds": [
+        20,
+        19,
+        180,
+        182
+      ],
+      "viewbox": "11.413 11.913 177.174 177.174",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.863,
+      "secondary_px_44": 1.043,
+      "main_px_26": 1.101,
+      "secondary_px_26": 0.616
+    },
+    {
+      "id": "B-shop",
+      "original_bounds": [
+        12,
+        37,
+        184,
+        178
+      ],
+      "viewbox": "4.522 14.022 186.957 186.957",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.765,
+      "secondary_px_44": 0.988,
+      "main_px_26": 1.043,
+      "secondary_px_26": 0.584
+    },
+    {
+      "id": "C-battle",
+      "original_bounds": [
+        37,
+        2,
+        198,
+        181
+      ],
+      "viewbox": "20.217 -5.783 194.565 194.565",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.696,
+      "secondary_px_44": 0.95,
+      "main_px_26": 1.002,
+      "secondary_px_26": 0.561
+    },
+    {
+      "id": "C-hero",
+      "original_bounds": [
+        31,
+        10,
+        169,
+        183
+      ],
+      "viewbox": "5.978 2.478 188.043 188.043",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.755,
+      "secondary_px_44": 0.983,
+      "main_px_26": 1.037,
+      "secondary_px_26": 0.581
+    },
+    {
+      "id": "C-shop",
+      "original_bounds": [
+        28,
+        17,
+        180,
+        184
+      ],
+      "viewbox": "13.239 9.739 181.522 181.522",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.818,
+      "secondary_px_44": 1.018,
+      "main_px_26": 1.074,
+      "secondary_px_26": 0.602
+    },
+    {
+      "id": "D-battle",
+      "original_bounds": [
+        39,
+        14,
+        177,
+        183
+      ],
+      "viewbox": "16.152 6.652 183.696 183.696",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.796,
+      "secondary_px_44": 1.006,
+      "main_px_26": 1.062,
+      "secondary_px_26": 0.594
+    },
+    {
+      "id": "D-hero",
+      "original_bounds": [
+        29,
+        18,
+        171,
+        183
+      ],
+      "viewbox": "10.326 10.826 179.348 179.348",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.84,
+      "secondary_px_44": 1.03,
+      "main_px_26": 1.087,
+      "secondary_px_26": 0.609
+    },
+    {
+      "id": "D-shop",
+      "original_bounds": [
+        15,
+        41,
+        184,
+        186
+      ],
+      "viewbox": "7.652 21.652 183.696 183.696",
+      "author_main": 7.5,
+      "author_secondary": 4.2,
+      "main_px_44": 1.796,
+      "secondary_px_44": 1.006,
+      "main_px_26": 1.062,
+      "secondary_px_26": 0.594
+    }
+  ],
+  "verification": {
+    "renderer": "Godot 4.7.2",
+    "rendered_icons": 60,
+    "menu_control": "game/ui/CartonNav.gd",
+    "context_captures": 12,
+    "production_modified": false,
+    "save_writes": false,
+    "alpha_threshold_for_clipping": 16,
+    "clipped_native_icons": [],
+    "max_native_edge_alpha": 5
+  },
+  "observations": [
+    "A: strongest immediate shop / hero / combat recognition. Crossed-sword main reduced to 6.5 author units after the first visual review.",
+    "B: broad cardboard-town silhouettes. Castle/gate semantics are close to the unchanged summon portal, so A or D is stronger for battle navigation.",
+    "C: item-symbol direction. Replaced sword/shield with an axe to avoid duplicating the unchanged troop shield. Purse may read currency/wallet rather than shop.",
+    "D: red flag has a distinct silhouette/color and reads campaign. The cart's tow handle is subordinate at 26px; broad wheels and awning retain its identity.",
+    "Facial features and small shop goods are subordinate at 26px; silhouettes, material blocks and the selected 44px view carry the roles."
+  ]
+}

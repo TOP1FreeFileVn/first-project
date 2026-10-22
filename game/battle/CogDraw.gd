@@ -1,6 +1,7 @@
 extends RefCounted
 
-# Chunky flat disks with short broad teeth and an inset rim, in the cats' palette.
+# Selected B: cast disks with short trapezoid teeth and a broad, unlined face.
+# Canonical Canvas source is recorded in game/ui/art_sources/battle_cog_B.svg.
 const LINE := Color("583f21")
 const COG_DESIGN_OUTER := 54.0
 const PIN_INK_OUTSET := 1.0

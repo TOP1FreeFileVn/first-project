@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+<path d="M17 26.56 L34.94 8.96 Q37.84 6.4 41.94 6.06 L42.28 10.16 L21.27 30.83 Z" fill="#d9e0e8" />
+<path d="M41.94 6.06 L42.28 10.16 L21.27 30.83 L19.56 29.12 Z" fill="#a8b4c7" />
+<path d="M17 26.56 L34.94 8.96 Q37.84 6.4 41.94 6.06 L42.28 10.16 L21.27 30.83 Z" fill="none" stroke="#583f21" stroke-width="2.44" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M16.65 29.3 L18.36 31 Q19.39 32.03 18.36 33.05 L9.99 41.43 Q8.97 42.45 7.94 41.43 L6.23 39.72 Q5.21 38.69 6.23 37.67 L14.6 29.3 Q15.63 28.27 16.65 29.3 Z" fill="#cfa265" />
+<path d="M12.04 31.86 L17.34 34.08" fill="none" stroke="#946d46" stroke-width="1.22" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M9.14 34.76 L14.43 36.98" fill="none" stroke="#946d46" stroke-width="1.22" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M6.4 37.5 L11.7 39.72" fill="none" stroke="#946d46" stroke-width="1.22" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M16.65 29.3 L18.36 31 Q19.39 32.03 18.36 33.05 L9.99 41.43 Q8.97 42.45 7.94 41.43 L6.23 39.72 Q5.21 38.69 6.23 37.67 L14.6 29.3 Q15.63 28.27 16.65 29.3 Z" fill="none" stroke="#583f21" stroke-width="2.44" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M16.48 24.68 L22.98 31.18 Q24 32.2 22.98 33.23 L22.46 33.74 Q21.44 34.76 20.41 33.74 L13.92 27.25 Q12.9 26.22 13.92 25.2 L14.43 24.68 Q15.46 23.66 16.48 24.68 Z" fill="#a8b4c7" stroke="#583f21" stroke-width="2.44" stroke-linejoin="round" stroke-linecap="round" />
+</svg>

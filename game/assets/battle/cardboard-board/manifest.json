@@ -1,0 +1,49 @@
+{
+  "id": "battle-cardboard-board-v2-edge-to-edge",
+  "source": "docs/design/2026-10-22/battle-cardboard-board/board.js",
+  "canvas": [
+    720,
+    480
+  ],
+  "world_rect": [
+    0,
+    720,
+    720,
+    480
+  ],
+  "opaque_backing_bounds": [
+    2.3,
+    14,
+    717.7,
+    474
+  ],
+  "visible_outer_horizontal_bounds": [
+    0,
+    720
+  ],
+  "grid_world_origin": [
+    60,
+    760
+  ],
+  "cell_size": 100,
+  "grid": [
+    6,
+    4
+  ],
+  "main_stroke": 4.6,
+  "secondary_stroke": 2.6,
+  "palette": {
+    "ink": "#583f21",
+    "seam": "#a57a48",
+    "board": "#e0b878",
+    "top": "#e8c080",
+    "side": "#cfa466",
+    "tape": "#f7dfad"
+  },
+  "notes": [
+    "Opaque carton backing covers the old rounded tray in battle_map_field.svg.",
+    "No gameplay cells, hitboxes, gear sizes or production mechanics are changed.",
+    "The outer contour reaches both screen edges; the deck and gear registration stay fixed.",
+    "No ramp and no cast shadow; render beneath the castle facade, board cells and gear."
+  ]
+}

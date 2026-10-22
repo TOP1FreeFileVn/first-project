@@ -1,0 +1,33 @@
+<!doctype html><html lang="vi"><meta charset="utf-8"><title>Mèo quay cối · bản thử ý tưởng</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#e8ddc8;color:#583f21;font-family:Game,sans-serif}main{width:1030px;margin:auto;padding:26px 20px}h1{font-size:27px;font-weight:normal;margin:0 0 9px}p{font-size:13px;line-height:1.8;margin:0}.row{display:flex;gap:20px;margin:24px 0}.panel{background:#f7efde;border-radius:16px;padding:18px}.panel h2{font-size:17px;font-weight:normal;margin:0 0 10px}.hero{width:360px}.hero canvas{display:block;width:324px;height:278px}.board{width:610px}.board canvas{width:574px;height:383px;display:block}.hint{font-size:11px;color:#8d6940;margin-top:8px}button{font:inherit;background:#e8c080;border:2px solid #583f21;color:#583f21;padding:8px 19px;border-radius:10px;cursor:pointer}.buttons{display:flex;gap:16px;align-items:center}input{width:230px;accent-color:#a57a48}.poses{display:flex;gap:10px;margin-top:15px}.poses canvas{width:239px;height:154px;display:block;background:#f7efde;border-radius:12px}.bottom{font-size:12px;margin-top:15px}#strip{display:none}
+</style>
+<main><h1>Mèo quay cối → kéo dàn bánh răng</h1><p>Mèo ngồi sau cối nhỏ, hai tay đẩy cán quay, thân nhún nhẹ theo nhịp.<br>Giữ mặt trước của mèo; cối nằm gọn trong ô trục giữa.</p>
+<div class="row"><section class="panel hero"><h2>Một “công nhân” ở trục giữa</h2><canvas id="hero" width="648" height="556"></canvas><p class="hint">Cán nằm dưới mặt · tay bám theo cán<br>Cánh truyền động lộ ở ngoài cối</p></section><section class="panel board"><h2>Khi đặt vào bàn gear mẫu B</h2><canvas id="board" width="1148" height="766"></canvas></section></div>
+<div class="buttons"><button id="play">Dừng để xem</button><input id="phase" type="range" min="0" max="6.28318" value="0" step=".01"><span id="state">Đang quay</span></div>
+<div class="poses" id="poses"></div><p class="bottom">Bản demo ý tưởng để xem động tác và tỷ lệ trước khi đưa vào game.</p></main><canvas id="strip" width="1200" height="800"></canvas>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script><script src="../gear-options/gears.js"></script><script src="crank.js"></script>
+<script>
+const params=new URLSearchParams(location.search),parts={},units={},boardImage=new Image(),catDir='../../../../game/assets/lobby/cardboard/cats/cat_cream/';
+let running=true,drive=0,last=0;const entry=Math.acos((10000+CatCrank.reach**2-54**2)/(200*CatCrank.reach)),TAU=Math.PI*2;
+function load(src){return new Promise(resolve=>{const im=new Image();im.onload=()=>resolve(im);im.src=src;});}
+function text(ctx,s,x,y,size=12){ctx.font=`${size}px Game`;ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#583f21';ctx.fillText(s,x,y);}
+function station(canvas,angle,scale=2.6){const c=canvas.getContext('2d');c.resetTransform();c.clearRect(0,0,canvas.width,canvas.height);c.scale(2,2);c.translate(canvas.width/4,canvas.height/4+7);c.scale(scale,scale);CatCrank.draw(c,parts,angle,false);}
+function cog(ctx,x,y,t,u,angle){ctx.save();ctx.translate(x,y);ctx.save();ctx.rotate(angle);ctx.rotate(13.5*Math.PI/180);const P=new Pen();GearOptions.defs.B.draw(P,['#ead5ac','#80bfd7','#b49cd6','#eead6c','#aec778'][t]);Pen.toCanvas(P.ops,ctx);ctx.restore();ctx.strokeStyle='#583f21';ctx.lineWidth=2;ctx.beginPath();ctx.arc(0,0,32.5,0,TAU);ctx.stroke();ctx.drawImage(units[u],-31,-34,62,62);ctx.fillStyle='#fff3d4';ctx.lineWidth=2.5;ctx.beginPath();ctx.arc(32,-34,12,0,TAU);ctx.fill();ctx.stroke();text(ctx,String(t+1),32,-33,17);ctx.restore();}
+function board(angle){const canvas=document.getElementById('board'),c=canvas.getContext('2d');c.resetTransform();c.clearRect(0,0,1148,766);c.scale(1148/720,766/480);c.drawImage(boardImage,0,0,720,480);
+for(let y=0;y<4;y++)for(let x=0;x<6;x++){c.fillStyle=y===3&&x>2?'#be955e':'#dfb77d';c.beginPath();c.roundRect(64+x*100,44+y*100,92,92,8);c.fill();}
+// Illustration of the pin drive's geometry. No alternate production/speed rules.
+const pieces=[[1,0,'kiem',0],[2,0,'cung',1],[3,0,'thuoc',2],[1,1,'cung',0],[3,1,'kiem',3],[2,2,'thuoc',4]];
+const turn=drive/8;for(const[x,y,u,t]of pieces){const phase=(x+y)%2===0?turn-.3*Math.PI/4:-turn+1.2*Math.PI/4;cog(c,110+x*100,90+y*100,t,u,phase);}
+c.save();c.translate(310,190);CatCrank.draw(c,parts,angle);c.restore();}
+function render(){station(document.getElementById('hero'),-drive);board(-drive);document.getElementById('phase').value=drive%TAU;}
+document.getElementById('play').onclick=()=>{running=!running;document.getElementById('play').textContent=running?'Dừng để xem':'Cho mèo quay';document.getElementById('state').textContent=running?'Đang quay':'Đang dừng';};
+document.getElementById('phase').oninput=e=>{drive=+e.target.value;running=false;document.getElementById('play').textContent='Cho mèo quay';document.getElementById('state').textContent='Kéo để xem từng nhịp';render();};
+async function start(){await document.fonts.ready;for(const n of ['tail','foot_L_image','foot_R_image','body','head'])parts[n]=await load(catDir+n+'.svg');for(const u of ['kiem','cung','thuoc'])units[u]=await load(`../../../../game/ui/art/unit_${u}.png`);boardImage.src='../../../../game/assets/battle/cardboard-board/board.svg';await new Promise(resolve=>{boardImage.onload=resolve;});
+for(let i=0;i<4;i++){const cv=document.createElement('canvas');cv.width=478;cv.height=308;document.getElementById('poses').appendChild(cv);station(cv,-i*Math.PI/2,1.45);const c=cv.getContext('2d');c.resetTransform();text(c,`${i+1} · ${['Đẩy sang phải','Đẩy về trước','Đẩy sang trái','Kéo về'][i]}`,239,285,20);}
+if(params.has('strip')){document.querySelector('main').style.display='none';const cv=document.getElementById('strip');cv.style.display='block';const c=cv.getContext('2d');c.fillStyle='#e8ddc8';c.fillRect(0,0,1200,800);for(let i=0;i<24;i++){c.save();c.translate((i%6)*200+100,Math.floor(i/6)*200+96);c.scale(1.65,1.65);CatCrank.draw(c,parts,-i/24*TAU,false);c.restore();}running=false;return;}
+if(params.has('still')){drive=+params.get('still');running=false;document.getElementById('play').textContent='Cho mèo quay';document.getElementById('state').textContent='Bản xem một nhịp';}render();document.body.dataset.ready='true';
+function frame(t){const dt=Math.min((t-last)/1000,.05);if(running){const offset=Math.abs(((drive+Math.PI/4)%(Math.PI/2))-Math.PI/4),heavy=offset<entry;drive+=dt*(TAU+1.5*4*2*entry)/3/(heavy?2.5:1);render();}last=t;requestAnimationFrame(frame);}requestAnimationFrame(frame);}
+start();
+</script></html>

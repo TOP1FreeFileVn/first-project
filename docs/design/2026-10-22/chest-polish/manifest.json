@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-22",
+  "status": "integrated_for_native_qa",
+  "source": "chest.js",
+  "approved_base": "../chest-stroke-pilot/chest.js",
+  "final_preview": "round-2.png",
+  "historical_preview": "round-1.png",
+  "user_correction": "Remove gold tab and circular rivet beneath the cat-head latch; keep latch and other polish",
+  "main_stroke": {"author_width": 9, "color": "#583f21"},
+  "secondary_stroke": {"author_width": 3, "ink": "material-specific"},
+  "body_author_width": 208,
+  "production_generator": "tools/ui/build_chest_paths.mjs",
+  "native_path_data": "game/ui/art_sources/ChestPaths.gd",
+  "native_renderer": "game/ui/ChestArt.gd",
+  "generic_texture_base_size": 128,
+  "generic_texture_variants": [32, 48, 64, 96],
+  "generic_texture_directory": "game/ui/art",
+  "native_proposal_svgs_rendered": 6,
+  "parse_check": "Godot --headless --script res://game/ui/ChestArt.gd --check-only: exit 0",
+  "gameplay_changed": false
+}

@@ -1,0 +1,687 @@
+{
+  "captures": [
+    {
+      "file": "icon-wood-26.png",
+      "size": [
+        26,
+        26
+      ]
+    },
+    {
+      "file": "icon-wood-48.png",
+      "size": [
+        48,
+        48
+      ]
+    },
+    {
+      "file": "icon-wood-64.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "file": "icon-wood-96.png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "file": "icon-wood-128.png",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "file": "icon-wood-256.png",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "icon-silver-26.png",
+      "size": [
+        26,
+        26
+      ]
+    },
+    {
+      "file": "icon-silver-48.png",
+      "size": [
+        48,
+        48
+      ]
+    },
+    {
+      "file": "icon-silver-64.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "file": "icon-silver-96.png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "file": "icon-silver-128.png",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "file": "icon-silver-256.png",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "icon-gold-26.png",
+      "size": [
+        26,
+        26
+      ]
+    },
+    {
+      "file": "icon-gold-48.png",
+      "size": [
+        48,
+        48
+      ]
+    },
+    {
+      "file": "icon-gold-64.png",
+      "size": [
+        64,
+        64
+      ]
+    },
+    {
+      "file": "icon-gold-96.png",
+      "size": [
+        96,
+        96
+      ]
+    },
+    {
+      "file": "icon-gold-128.png",
+      "size": [
+        128,
+        128
+      ]
+    },
+    {
+      "file": "icon-gold-256.png",
+      "size": [
+        256,
+        256
+      ]
+    },
+    {
+      "file": "accepted-chest-icon-routes.png",
+      "size": [
+        1200,
+        300
+      ]
+    },
+    {
+      "file": "tier-and-small-symbols.png",
+      "size": [
+        1200,
+        810
+      ]
+    },
+    {
+      "file": "separate-lid-states.png",
+      "size": [
+        1200,
+        600
+      ]
+    },
+    {
+      "file": "shop-360x640.png",
+      "size": [
+        360,
+        640
+      ]
+    },
+    {
+      "file": "lobby-chest-counter-360x640.png",
+      "size": [
+        360,
+        640
+      ]
+    },
+    {
+      "file": "actual-wait-gold-360x640.png",
+      "size": [
+        360,
+        640
+      ]
+    },
+    {
+      "file": "actual-open-gold-360x640.png",
+      "size": [
+        360,
+        640
+      ]
+    },
+    {
+      "file": "actual-card-gold-360x640.png",
+      "size": [
+        360,
+        640
+      ]
+    },
+    {
+      "file": "shop-450x800.png",
+      "size": [
+        450,
+        800
+      ]
+    },
+    {
+      "file": "lobby-chest-counter-450x800.png",
+      "size": [
+        450,
+        800
+      ]
+    },
+    {
+      "file": "actual-wait-gold-450x800.png",
+      "size": [
+        450,
+        800
+      ]
+    },
+    {
+      "file": "actual-open-gold-450x800.png",
+      "size": [
+        450,
+        800
+      ]
+    },
+    {
+      "file": "actual-card-gold-450x800.png",
+      "size": [
+        450,
+        800
+      ]
+    }
+  ],
+  "checks": 136,
+  "contract": "Actual DrawnIcon, Shop and ChestOpening; all three tier palettes; independent lid flight; fixed body and latch.",
+  "failures": [],
+  "icon_bounds": [
+    {
+      "control": [
+        13,
+        13,
+        26,
+        26
+      ],
+      "kind": "wood",
+      "painted": [
+        14,
+        17,
+        24,
+        18
+      ],
+      "size": 26
+    },
+    {
+      "control": [
+        24,
+        24,
+        48,
+        48
+      ],
+      "kind": "wood",
+      "painted": [
+        25,
+        32,
+        46,
+        33
+      ],
+      "size": 48
+    },
+    {
+      "control": [
+        32,
+        32,
+        64,
+        64
+      ],
+      "kind": "wood",
+      "painted": [
+        34,
+        42,
+        60,
+        45
+      ],
+      "size": 64
+    },
+    {
+      "control": [
+        48,
+        48,
+        96,
+        96
+      ],
+      "kind": "wood",
+      "painted": [
+        51,
+        64,
+        90,
+        66
+      ],
+      "size": 96
+    },
+    {
+      "control": [
+        64,
+        64,
+        128,
+        128
+      ],
+      "kind": "wood",
+      "painted": [
+        67,
+        85,
+        122,
+        89
+      ],
+      "size": 128
+    },
+    {
+      "control": [
+        128,
+        128,
+        256,
+        256
+      ],
+      "kind": "wood",
+      "painted": [
+        135,
+        170,
+        242,
+        178
+      ],
+      "size": 256
+    },
+    {
+      "control": [
+        13,
+        13,
+        26,
+        26
+      ],
+      "kind": "silver",
+      "painted": [
+        14,
+        17,
+        24,
+        18
+      ],
+      "size": 26
+    },
+    {
+      "control": [
+        24,
+        24,
+        48,
+        48
+      ],
+      "kind": "silver",
+      "painted": [
+        25,
+        32,
+        46,
+        33
+      ],
+      "size": 48
+    },
+    {
+      "control": [
+        32,
+        32,
+        64,
+        64
+      ],
+      "kind": "silver",
+      "painted": [
+        34,
+        42,
+        60,
+        45
+      ],
+      "size": 64
+    },
+    {
+      "control": [
+        48,
+        48,
+        96,
+        96
+      ],
+      "kind": "silver",
+      "painted": [
+        51,
+        64,
+        90,
+        66
+      ],
+      "size": 96
+    },
+    {
+      "control": [
+        64,
+        64,
+        128,
+        128
+      ],
+      "kind": "silver",
+      "painted": [
+        67,
+        85,
+        122,
+        89
+      ],
+      "size": 128
+    },
+    {
+      "control": [
+        128,
+        128,
+        256,
+        256
+      ],
+      "kind": "silver",
+      "painted": [
+        135,
+        170,
+        242,
+        178
+      ],
+      "size": 256
+    },
+    {
+      "control": [
+        13,
+        13,
+        26,
+        26
+      ],
+      "kind": "gold",
+      "painted": [
+        14,
+        17,
+        24,
+        18
+      ],
+      "size": 26
+    },
+    {
+      "control": [
+        24,
+        24,
+        48,
+        48
+      ],
+      "kind": "gold",
+      "painted": [
+        25,
+        32,
+        46,
+        33
+      ],
+      "size": 48
+    },
+    {
+      "control": [
+        32,
+        32,
+        64,
+        64
+      ],
+      "kind": "gold",
+      "painted": [
+        34,
+        42,
+        60,
+        45
+      ],
+      "size": 64
+    },
+    {
+      "control": [
+        48,
+        48,
+        96,
+        96
+      ],
+      "kind": "gold",
+      "painted": [
+        51,
+        64,
+        90,
+        66
+      ],
+      "size": 96
+    },
+    {
+      "control": [
+        64,
+        64,
+        128,
+        128
+      ],
+      "kind": "gold",
+      "painted": [
+        67,
+        85,
+        122,
+        89
+      ],
+      "size": 128
+    },
+    {
+      "control": [
+        128,
+        128,
+        256,
+        256
+      ],
+      "kind": "gold",
+      "painted": [
+        135,
+        170,
+        242,
+        178
+      ],
+      "size": 256
+    }
+  ],
+  "icon_routes": [
+    {
+      "path": "res://game/ui/art/icon_chest_32.svg",
+      "size": 32
+    },
+    {
+      "path": "res://game/ui/art/icon_chest_48.svg",
+      "size": 48
+    },
+    {
+      "path": "res://game/ui/art/icon_chest_64.svg",
+      "size": 64
+    },
+    {
+      "path": "res://game/ui/art/icon_chest_96.svg",
+      "size": 96
+    },
+    {
+      "path": "res://game/ui/art/icon_chest.svg",
+      "size": 128
+    }
+  ],
+  "mode": "gold-followup",
+  "persist": false,
+  "profile": "C:/Users/dangp/GodotProjects/first-project/output/chest-integration-profile/Roaming/Godot/app_userdata/Gear Defenders",
+  "shop_layouts": [
+    {
+      "size": [
+        360,
+        640
+      ],
+      "tiers": [
+        {
+          "control": [
+            248.0,
+            248.0
+          ],
+          "kind": "gold",
+          "painted_in_stage": [
+            6.78125,
+            8.44750213623047,
+            234.4375,
+            172.4375
+          ],
+          "stage": [
+            248.0,
+            183.520004272461
+          ]
+        },
+        {
+          "control": [
+            200.0,
+            200.0
+          ],
+          "kind": "wood",
+          "painted_in_stage": [
+            5.46875,
+            6.8125,
+            189.0625,
+            139.0625
+          ],
+          "stage": [
+            200.0,
+            148.0
+          ]
+        },
+        {
+          "control": [
+            200.0,
+            200.0
+          ],
+          "kind": "silver",
+          "painted_in_stage": [
+            5.46875,
+            6.8125,
+            189.0625,
+            139.0625
+          ],
+          "stage": [
+            200.0,
+            148.0
+          ]
+        }
+      ]
+    },
+    {
+      "size": [
+        450,
+        800
+      ],
+      "tiers": [
+        {
+          "control": [
+            248.0,
+            248.0
+          ],
+          "kind": "gold",
+          "painted_in_stage": [
+            6.78125,
+            8.44750213623047,
+            234.4375,
+            172.4375
+          ],
+          "stage": [
+            248.0,
+            183.520004272461
+          ]
+        },
+        {
+          "control": [
+            200.0,
+            200.0
+          ],
+          "kind": "wood",
+          "painted_in_stage": [
+            5.46875,
+            6.8125,
+            189.0625,
+            139.0625
+          ],
+          "stage": [
+            200.0,
+            148.0
+          ]
+        },
+        {
+          "control": [
+            200.0,
+            200.0
+          ],
+          "kind": "silver",
+          "painted_in_stage": [
+            5.46875,
+            6.8125,
+            189.0625,
+            139.0625
+          ],
+          "stage": [
+            200.0,
+            148.0
+          ]
+        }
+      ]
+    }
+  ],
+  "sizes": [
+    [
+      360,
+      640
+    ],
+    [
+      450,
+      800
+    ]
+  ],
+  "verification": {
+    "prior_full_run": {
+      "mode": "all-tiers",
+      "checks": 175,
+      "captures": 43,
+      "failures": [],
+      "artifacts": "output/chest-integration-flat-polish-baseline",
+      "scope": "All three tier opening sequences at both dimensions before the gold-only premium revision."
+    },
+    "final_followup": {
+      "mode": "gold-followup",
+      "checks": 136,
+      "captures": 31,
+      "failures": [],
+      "scope": "All tier native icons, comparative construction board, live icon routing, Shop and Battle lobby at both dimensions; real wait/open/card replayed for final gold construction only."
+    },
+    "preserved_basic_opening_captures": "Wood and silver wait/open/card images come from the preceding full pass; their geometry and animation are unchanged."
+  }
+}

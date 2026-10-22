@@ -1,0 +1,26 @@
+[
+  {
+    "id": "natural",
+    "title": "1 · Carton tự nhiên",
+    "note": "Đề xuất · viền kraft ấm, phần lót sáng vừa",
+    "carton": "#DAB47A",
+    "tape": "#EAD4AA",
+    "tones": {"green": "#A7CE87", "blue": "#8FC6DE", "purple": "#B9A0DC", "orange": "#F2BA85"}
+  },
+  {
+    "id": "vivid",
+    "title": "2 · Đồ chơi sáng",
+    "note": "Màu rực hơn · độ hiếm nổi bật hơn",
+    "carton": "#E4C495",
+    "tape": "#F1DEB5",
+    "tones": {"green": "#8BCB68", "blue": "#6FBADF", "purple": "#A481D6", "orange": "#F3A867"}
+  },
+  {
+    "id": "soft",
+    "title": "3 · Giấy nhẹ",
+    "note": "Pastel dịu · trang bị nổi hơn màu nền",
+    "carton": "#CDA973",
+    "tape": "#E9D7B6",
+    "tones": {"green": "#BDD9A8", "blue": "#AED4E2", "purple": "#CCB8E3", "orange": "#EEC59C"}
+  }
+]

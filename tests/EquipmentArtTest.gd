@@ -7,8 +7,8 @@ const HeroCat = preload("res://game/core/HeroCat.gd")
 const IDS := ["kiem", "riu", "dao", "katana", "cung", "no", "sung", "dai_bac",
 	"gay_phep", "thuoc", "sach_phep", "dua_phep", "giao", "cu_kiem", "chuy", "bua"]
 const WEAPONS := ["kiem_go", "cung_san", "gay_sao", "riu_lua", "katana_nguyet"]
-const STAT_ITEMS := ["mu_hiep_si", "giap_rong", "gang_bac", "giay_gio", "bua_ngoc"]
-const OUT := "res://docs/design/2026-10-20/equipment-production-check"
+const STAT_ITEMS := ["mu_hiep_si", "giap_rong", "giay_gio"]
+const OUT := "res://docs/ui_review/2026-10-22/hero-four-slots/art-routing"
 var _checks := 0
 var _failed := 0
 
@@ -24,7 +24,7 @@ func _ready() -> void:
 			_check(icon != null and icon.resource_path == "res://game/ui/art/icon_w_%s_%d.png" % [id, size], id + " UI uses final raster at " + str(size))
 		texture.get_image().save_png(OUT + "/soldier-" + id + ".png")
 	_check(Ui.tex("platform").resource_path == "res://game/ui/skin/platform.svg", "unchanged UI still falls back to generated SVG")
-	for name in ["helmet", "armor", "gloves", "boots", "amulet"]:
+	for name in ["helmet", "armor", "boots"]:
 		_check(Ui.icon_tex("eq_" + name, 64).resource_path == "res://game/ui/art/icon_eq_%s_64.png" % name, name + " uses final stat-only icon")
 	var state := HeroCat.new_state()
 	var appearances := {}
@@ -39,8 +39,8 @@ func _ready() -> void:
 		for stat_id in STAT_ITEMS:
 			var stat_uid := HeroCat.add_item(geared, stat_id)
 			geared.equipped[HeroCat.ITEMS[stat_id].slot] = stat_uid
-		_check(HeroCat.total_stats(geared) != original_stats, "five gear slots still add stats for " + id)
-		_check(SpriteLib.hero_cat_texture(geared) == before, "five stat-only items do not change " + id + " appearance")
+		_check(HeroCat.total_stats(geared) != original_stats, "three stat-only gear slots still add stats for " + id)
+		_check(SpriteLib.hero_cat_texture(geared) == before, "three stat-only items do not change " + id + " appearance")
 		var picture := before.get_image()
 		picture.resize(128, 120, Image.INTERPOLATE_LANCZOS)
 		picture.save_png(OUT + "/hero-" + id + ".png")

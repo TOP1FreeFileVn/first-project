@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-22",
+  "status": "integrated_for_native_qa",
+  "tier": "gold_only",
+  "source": "chest.js",
+  "basic_source_unchanged": "../chest-polish/chest.js",
+  "final_preview": "round-2.png",
+  "historical_preview": "round-1.png",
+  "rejected_detail_removed": "Turquoise diamond on lid",
+  "lock_tab": false,
+  "gem": false,
+  "main_stroke_author_units": 9,
+  "secondary_stroke_author_units": 3,
+  "bounds_author_units": {"left": -104, "right": 104, "top": -62, "bottom": 88},
+  "planned_shop_control_sizes": {"wood": 200, "silver": 200, "gold": 248},
+  "production_generator": "tools/ui/build_chest_paths.mjs",
+  "production_native_data": "game/ui/art_sources/ChestPaths.gd",
+  "native_data_prefixes": ["basic_", "gold_"],
+  "native_svg_renders": 7,
+  "production_parse_check": "Godot check-only exit0",
+  "generic_wood_svg_hashes_unchanged": true,
+  "gameplay_changed": false
+}

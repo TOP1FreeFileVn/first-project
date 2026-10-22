@@ -1,0 +1,73 @@
+{
+  "items": {
+    "helmet": {
+      "profile": {
+        "main": 11.35,
+        "secondary": 7.41
+      },
+      "colors": {
+        "ink": "#583f21",
+        "steel": "#d9e0e8",
+        "steelPlane": "#a8b4c7",
+        "secondary": "#9b7f58"
+      },
+      "strokes": [
+        {
+          "ink": "#9b7f58",
+          "width": 7.41
+        },
+        {
+          "ink": "#583f21",
+          "width": 11.35
+        }
+      ]
+    },
+    "boots": {
+      "profile": {
+        "main": 11.35,
+        "secondary": 7.41
+      },
+      "colors": {
+        "ink": "#583f21",
+        "steel": "#d9e0e8",
+        "steelPlane": "#a8b4c7",
+        "secondary": "#9b7f58"
+      },
+      "strokes": [
+        {
+          "ink": "#9b7f58",
+          "width": 7.41
+        },
+        {
+          "ink": "#9b7f58",
+          "width": 7.41
+        },
+        {
+          "ink": "#583f21",
+          "width": 11.35
+        },
+        {
+          "ink": "#583f21",
+          "width": 11.35
+        },
+        {
+          "ink": "#9b7f58",
+          "width": 7.41
+        },
+        {
+          "ink": "#9b7f58",
+          "width": 7.41
+        },
+        {
+          "ink": "#583f21",
+          "width": 11.35
+        },
+        {
+          "ink": "#583f21",
+          "width": 11.35
+        }
+      ]
+    }
+  },
+  "note": "Authored widths; inspect native PNGs separately. Proposal only."
+}

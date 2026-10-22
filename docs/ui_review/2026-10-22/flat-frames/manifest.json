@@ -1,0 +1,7557 @@
+{
+	"captures": [
+		{
+			"context": "home",
+			"file": "home_450x800.png",
+			"frame_count": 6,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_450x800.png",
+			"frame_count": 24,
+			"textures": [
+				"res://game/ui/skin/menu/hero_board.svg",
+				"res://game/ui/skin/card_unit_green.svg",
+				"res://game/ui/skin/card_unit_purple.svg",
+				"res://game/ui/skin/card_unit_orange.svg",
+				"res://game/ui/skin/card_unit_blue.svg",
+				"res://game/ui/skin/title_plaque.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/hero_well.svg",
+				"res://game/ui/skin/avatar_frame.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop_450x800.png",
+			"frame_count": 10,
+			"textures": [
+				"res://game/ui/skin/menu/shop_featured.svg",
+				"res://game/ui/skin/menu/shop_wood.svg",
+				"res://game/ui/skin/menu/shop_silver.svg",
+				"res://game/ui/skin/menu/shop_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"file": "shop-rates_450x800.png",
+			"frame_count": 12,
+			"textures": [
+				"res://game/ui/skin/menu/shop_featured.svg",
+				"res://game/ui/skin/menu/shop_wood.svg",
+				"res://game/ui/skin/menu/shop_silver.svg",
+				"res://game/ui/skin/menu/shop_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_450x800.png",
+			"frame_count": 5,
+			"textures": [
+				"res://game/ui/skin/menu/troops_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon_450x800.png",
+			"frame_count": 7,
+			"textures": [
+				"res://game/ui/skin/menu/summon_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"file": "login_450x800.png",
+			"frame_count": 15,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/login_board.svg",
+				"res://game/ui/skin/menu/login_well.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"file": "quests_450x800.png",
+			"frame_count": 14,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/quests_board.svg",
+				"res://game/ui/skin/menu/quests_well.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"file": "events_450x800.png",
+			"frame_count": 13,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/events_board.svg",
+				"res://game/ui/skin/card_unit_purple.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "patrol_450x800.png",
+			"frame_count": 6,
+			"textures": [
+				"res://game/ui/skin/menu/patrol_scene.svg",
+				"res://game/ui/skin/menu/patrol_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"file": "settings_450x800.png",
+			"frame_count": 8,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/settings_board.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"file": "profile_450x800.png",
+			"frame_count": 44,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/profile_board.svg"
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "home",
+			"file": "home_360x640.png",
+			"frame_count": 6,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"file": "hero_360x640.png",
+			"frame_count": 24,
+			"textures": [
+				"res://game/ui/skin/menu/hero_board.svg",
+				"res://game/ui/skin/card_unit_green.svg",
+				"res://game/ui/skin/card_unit_purple.svg",
+				"res://game/ui/skin/card_unit_orange.svg",
+				"res://game/ui/skin/card_unit_blue.svg",
+				"res://game/ui/skin/title_plaque.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/hero_well.svg",
+				"res://game/ui/skin/avatar_frame.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"file": "shop_360x640.png",
+			"frame_count": 10,
+			"textures": [
+				"res://game/ui/skin/menu/shop_featured.svg",
+				"res://game/ui/skin/menu/shop_wood.svg",
+				"res://game/ui/skin/menu/shop_silver.svg",
+				"res://game/ui/skin/menu/shop_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"file": "shop-rates_360x640.png",
+			"frame_count": 12,
+			"textures": [
+				"res://game/ui/skin/menu/shop_featured.svg",
+				"res://game/ui/skin/menu/shop_wood.svg",
+				"res://game/ui/skin/menu/shop_silver.svg",
+				"res://game/ui/skin/menu/shop_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"file": "troops_360x640.png",
+			"frame_count": 5,
+			"textures": [
+				"res://game/ui/skin/menu/troops_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"file": "summon_360x640.png",
+			"frame_count": 7,
+			"textures": [
+				"res://game/ui/skin/menu/summon_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"file": "login_360x640.png",
+			"frame_count": 15,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/login_board.svg",
+				"res://game/ui/skin/menu/login_well.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"file": "quests_360x640.png",
+			"frame_count": 14,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/quests_board.svg",
+				"res://game/ui/skin/menu/quests_well.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"file": "events_360x640.png",
+			"frame_count": 13,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/events_board.svg",
+				"res://game/ui/skin/card_unit_purple.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"file": "patrol_360x640.png",
+			"frame_count": 6,
+			"textures": [
+				"res://game/ui/skin/menu/patrol_scene.svg",
+				"res://game/ui/skin/menu/patrol_board.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"file": "settings_360x640.png",
+			"frame_count": 8,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/settings_board.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"file": "profile_360x640.png",
+			"frame_count": 44,
+			"textures": [
+				"res://game/ui/skin/counter.svg",
+				"res://game/ui/skin/avatar_frame.svg",
+				"res://game/ui/skin/hud_pill.svg",
+				"res://game/ui/skin/menu/profile_board.svg"
+			],
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "eighteen_action_button_baselines_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_blue.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_blue_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_green.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_green_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_grey.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_grey_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_orange.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_orange_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_purple.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_purple_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_red.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_red_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_tab.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_tab_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_white.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_white_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_yellow.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_yellow_pressed.svg",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_Button",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnBlue",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnGreen",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnYellow",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnRed",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "home_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "home_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_home",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_navigation_hero",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "selected_page_hero",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_hero",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_navigation_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "selected_page_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_shop_rates_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop_rates_sheet_opens",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop-rates_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop-rates_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop-rates_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop-rates_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shop-rates_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_shop-rates",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_popup_close_shop-rates",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "popup_closes_shop-rates",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_navigation_troops",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "selected_page_troops",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "troops_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "troops_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "troops_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_troops",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_navigation_summon",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "selected_page_summon",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "summon_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "summon_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "summon_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_summon",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_return_to_home",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_shortcut_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shortcut_opens_correct_context_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "login_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "login_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "login_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "login_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "login_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_popup_close_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "popup_closes_login",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_shortcut_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shortcut_opens_correct_context_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "quests_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "quests_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "quests_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "quests_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "quests_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_popup_close_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "popup_closes_quests",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_shortcut_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "shortcut_opens_correct_context_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "events_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "events_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "events_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "events_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "events_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_event_patrol_action",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "event_opens_patrol_page",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "patrol_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "patrol_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "patrol_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_patrol",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_patrol_back",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "patrol_back_closes_page",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_settings_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "settings_opens",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "settings_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "settings_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "settings_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "settings_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "settings_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_settings",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_settings_checkbox",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "settings_toggle_still_changes_preference",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_popup_close_settings",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "popup_closes_settings",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_profile_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_opens",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_profile",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_popup_close_profile",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "popup_closes_profile",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "home_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "home_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_home",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_navigation_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selected_page_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_navigation_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selected_page_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shop_rates_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop_rates_sheet_opens",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shop-rates_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_shop-rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_shop-rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_closes_shop-rates",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_navigation_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selected_page_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "troops_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_troops",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_navigation_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "selected_page_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "summon_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_summon",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_return_to_home",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shortcut_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shortcut_opens_correct_context_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "login_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_closes_login",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shortcut_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shortcut_opens_correct_context_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quests_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_closes_quests",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_shortcut_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "shortcut_opens_correct_context_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "events_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_events",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_event_patrol_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "event_opens_patrol_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_patrol",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_patrol_back",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "patrol_back_closes_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_settings_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_opens",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_settings_checkbox",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "settings_toggle_still_changes_preference",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_closes_settings",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_profile_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_opens",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_runtime_flat_frames_no_drop_shadow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_runtime_frame_top_bottom_border_equal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_actual_production_frames_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_popup_uses_shared_frame",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "profile_popup_frame_inside_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_popup_close_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "popup_closes_profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "eighteen_action_button_baselines_available",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_blue.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_blue_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_green.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_green_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_grey.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_grey_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_orange.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_orange_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_purple.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_purple_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_red.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_red_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_tab.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_tab_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_white.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_white_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_yellow.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "raised_button_art_unchanged_btn_yellow_pressed.svg",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_Button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnBlue",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnGreen",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnYellow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "action_button_keeps_distinct_raised_and_pressed_art_BtnRed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"frames": [
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@326/BattleActionBlock/LobbyRewards/@PanelContainer@336",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@326/BattleActionBlock/LobbyRewards/@PanelContainer@340",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@326/BattleActionBlock/LobbyRewards/@PanelContainer@344",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392",
+			"rect": [
+				10.0,
+				116.0,
+				700.0,
+				510.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/hero_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/HeroEquipmentRow/HeroEquipmentLeft/@Control@355/@PanelContainer@353",
+			"rect": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/HeroEquipmentRow/HeroEquipmentLeft/@Control@358/@PanelContainer@356",
+			"rect": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/HeroEquipmentRow/HeroEquipmentRight/@Control@362/@PanelContainer@360",
+			"rect": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_orange.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/HeroEquipmentRow/HeroEquipmentRight/@Control@365/@PanelContainer@363",
+			"rect": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/@CenterContainer@370/@PanelContainer@369",
+			"rect": [
+				271.0,
+				426.0,
+				178.0,
+				52.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/title_plaque.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/@HBoxContainer@383/@PanelContainer@374",
+			"rect": [
+				67.0,
+				486.0,
+				190.0,
+				40.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/@HBoxContainer@383/@PanelContainer@378",
+			"rect": [
+				265.0,
+				486.0,
+				190.0,
+				40.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/@HBoxContainer@383/@PanelContainer@382",
+			"rect": [
+				463.0,
+				486.0,
+				190.0,
+				40.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@PanelContainer@392/@VBoxContainer@352/@PanelContainer@391",
+			"rect": [
+				38.0,
+				534.0,
+				644.0,
+				62.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/hero_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426",
+			"rect": [
+				10.0,
+				661.0,
+				700.0,
+				389.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/hero_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@397/@PanelContainer@395",
+			"rect": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_orange.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@400/@PanelContainer@398",
+			"rect": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@403/@PanelContainer@401",
+			"rect": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@406/@PanelContainer@404",
+			"rect": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@409/@PanelContainer@407",
+			"rect": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@412/@PanelContainer@410",
+			"rect": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@415/@PanelContainer@413",
+			"rect": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@418/@PanelContainer@416",
+			"rect": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@426/@ScrollContainer@424/@CenterContainer@423/@GridContainer@422/@Control@421/@PanelContainer@419",
+			"rect": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@117/@VBoxContainer@351/@Container@428/@PanelContainer@427",
+			"rect": [
+				42.0,
+				634.0,
+				295.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/FeaturedChest/@PanelContainer@431",
+			"rect": [
+				24.0,
+				251.0,
+				664.0,
+				305.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_featured.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/FeaturedChest/@PanelContainer@432",
+			"rect": [
+				56.0,
+				224.0,
+				206.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@VBoxContainer@461/@HBoxContainer@444/@PanelContainer@443",
+			"rect": [
+				24.0,
+				580.0,
+				218.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@VBoxContainer@461/SupplyChestGrid/SupplyChest_wood",
+			"rect": [
+				24.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_wood.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@VBoxContainer@461/SupplyChestGrid/SupplyChest_silver",
+			"rect": [
+				364.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_silver.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@Container@466/@PanelContainer@464",
+			"rect": [
+				24.0,
+				1148.0,
+				664.0,
+				138.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@Container@466/@PanelContainer@465",
+			"rect": [
+				56.0,
+				1121.0,
+				234.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				116.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/FeaturedChest/@PanelContainer@431",
+			"rect": [
+				24.0,
+				251.0,
+				664.0,
+				305.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_featured.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/FeaturedChest/@PanelContainer@432",
+			"rect": [
+				56.0,
+				224.0,
+				206.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@VBoxContainer@461/@HBoxContainer@444/@PanelContainer@443",
+			"rect": [
+				24.0,
+				580.0,
+				218.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@VBoxContainer@461/SupplyChestGrid/SupplyChest_wood",
+			"rect": [
+				24.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_wood.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@VBoxContainer@461/SupplyChestGrid/SupplyChest_silver",
+			"rect": [
+				364.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_silver.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@Container@466/@PanelContainer@464",
+			"rect": [
+				24.0,
+				1148.0,
+				664.0,
+				138.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@68/@ScrollContainer@65/@MarginContainer@66/@VBoxContainer@67/@Container@466/@PanelContainer@465",
+			"rect": [
+				56.0,
+				1121.0,
+				234.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				116.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@472/@CenterContainer@473/@Container@482/@PanelContainer@480",
+			"rect": [
+				80.0,
+				504.0,
+				560.0,
+				298.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@472/@CenterContainer@473/@Container@482/@PanelContainer@481",
+			"rect": [
+				112.0,
+				477.0,
+				310.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@234/@MarginContainer@232/@VBoxContainer@233/@Container@507/@PanelContainer@505",
+			"rect": [
+				24.0,
+				211.0,
+				672.0,
+				289.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/troops_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@234/@MarginContainer@232/@VBoxContainer@233/@Container@507/@PanelContainer@506",
+			"rect": [
+				56.0,
+				184.0,
+				204.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@288/@ScrollContainer@285/@MarginContainer@286/@VBoxContainer@287/@PanelContainer@557",
+			"rect": [
+				24.0,
+				128.0,
+				672.0,
+				488.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@288/@ScrollContainer@285/@MarginContainer@286/@VBoxContainer@287/@PanelContainer@557/@VBoxContainer@545/@PanelContainer@556",
+			"rect": [
+				42.0,
+				476.0,
+				636.0,
+				122.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@288/@ScrollContainer@285/@MarginContainer@286/@VBoxContainer@287/@Container@566/@PanelContainer@564",
+			"rect": [
+				24.0,
+				659.0,
+				672.0,
+				269.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/summon_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@288/@ScrollContainer@285/@MarginContainer@286/@VBoxContainer@287/@Container@566/@PanelContainer@565",
+			"rect": [
+				56.0,
+				632.0,
+				285.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@580",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@584",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@588",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603",
+			"rect": [
+				30.0,
+				313.0,
+				660.0,
+				681.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603/@ScrollContainer@601/@VBoxContainer@599/@GridContainer@651/@PanelContainer@615",
+			"rect": [
+				57.2029037475586,
+				393.383697509766,
+				195.594192504883,
+				151.232620239258
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603/@ScrollContainer@601/@VBoxContainer@599/@GridContainer@651/@PanelContainer@622",
+			"rect": [
+				264.0,
+				394.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603/@ScrollContainer@601/@VBoxContainer@599/@GridContainer@651/@PanelContainer@629",
+			"rect": [
+				469.0,
+				394.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603/@ScrollContainer@601/@VBoxContainer@599/@GridContainer@651/@PanelContainer@636",
+			"rect": [
+				58.0,
+				556.0,
+				194.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603/@ScrollContainer@601/@VBoxContainer@599/@GridContainer@651/@PanelContainer@643",
+			"rect": [
+				264.0,
+				556.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603/@ScrollContainer@601/@VBoxContainer@599/@GridContainer@651/@PanelContainer@650",
+			"rect": [
+				469.0,
+				556.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@603/@ScrollContainer@601/@VBoxContainer@599/@PanelContainer@659",
+			"rect": [
+				58.0,
+				720.0,
+				604.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@595/@CenterContainer@596/@Container@605/@PanelContainer@604",
+			"rect": [
+				62.0,
+				286.0,
+				193.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@580",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@584",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@588",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@669",
+			"rect": [
+				24.0,
+				246.0,
+				672.0,
+				815.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@669/@ScrollContainer@667/@VBoxContainer@665/@PanelContainer@698",
+			"rect": [
+				52.0,
+				457.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@669/@ScrollContainer@667/@VBoxContainer@665/@PanelContainer@711",
+			"rect": [
+				52.0,
+				555.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@669/@ScrollContainer@667/@VBoxContainer@665/@PanelContainer@724",
+			"rect": [
+				52.0,
+				653.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@669/@ScrollContainer@667/@VBoxContainer@665/@PanelContainer@737",
+			"rect": [
+				52.0,
+				751.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@669/@ScrollContainer@667/@VBoxContainer@665/@PanelContainer@750",
+			"rect": [
+				52.0,
+				849.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@669/@ScrollContainer@667/@VBoxContainer@665/@PanelContainer@763",
+			"rect": [
+				52.0,
+				947.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@661/@CenterContainer@662/@Container@671/@PanelContainer@670",
+			"rect": [
+				56.0,
+				219.0,
+				321.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@580",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@584",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@588",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@764/@CenterContainer@765/@Container@774/@PanelContainer@772",
+			"rect": [
+				30.0,
+				286.0,
+				660.0,
+				735.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/events_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@764/@CenterContainer@765/@Container@774/@PanelContainer@772/@ScrollContainer@770/@VBoxContainer@768/@Control@798/@PanelContainer@776",
+			"rect": [
+				58.0,
+				330.0,
+				604.0,
+				196.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@764/@CenterContainer@765/@Container@774/@PanelContainer@772/@ScrollContainer@770/@VBoxContainer@768/@Control@798/@PanelContainer@776/@HBoxContainer@777/@VBoxContainer@788/@PanelContainer@787",
+			"rect": [
+				206.0,
+				443.0,
+				171.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@764/@CenterContainer@765/@Container@774/@PanelContainer@772/@ScrollContainer@770/@VBoxContainer@768/@Control@798/@PanelContainer@797",
+			"rect": [
+				72.0,
+				316.0,
+				71.0,
+				26.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@764/@CenterContainer@765/@Container@774/@PanelContainer@772/@ScrollContainer@770/@VBoxContainer@768/@Container@840/@PanelContainer@838",
+			"rect": [
+				58.0,
+				567.0,
+				604.0,
+				424.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/events_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@764/@CenterContainer@765/@Container@774/@PanelContainer@772/@ScrollContainer@770/@VBoxContainer@768/@Container@840/@PanelContainer@839",
+			"rect": [
+				90.0,
+				540.0,
+				209.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@764/@CenterContainer@765/@Container@774/@PanelContainer@773",
+			"rect": [
+				62.0,
+				259.0,
+				139.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/MenuPageOverlay/@Control@846/@ScrollContainer@843/@MarginContainer@844/@VBoxContainer@845/@PanelContainer@854",
+			"rect": [
+				24.0,
+				200.0,
+				672.0,
+				258.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/patrol_scene.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/MenuPageOverlay/@Control@846/@ScrollContainer@843/@MarginContainer@844/@VBoxContainer@845/@Container@859/@PanelContainer@857",
+			"rect": [
+				24.0,
+				513.0,
+				672.0,
+				381.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/patrol_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/MenuPageOverlay/@Control@846/@ScrollContainer@843/@MarginContainer@844/@VBoxContainer@845/@Container@859/@PanelContainer@858",
+			"rect": [
+				56.0,
+				486.0,
+				171.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@580",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@584",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@570/BattleActionBlock/LobbyRewards/@PanelContainer@588",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@878/@CenterContainer@879/@Container@888/@PanelContainer@886",
+			"rect": [
+				100.0,
+				485.0,
+				520.0,
+				337.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/settings_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@878/@CenterContainer@879/@Container@888/@PanelContainer@887",
+			"rect": [
+				132.0,
+				458.0,
+				138.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@895/BattleActionBlock/LobbyRewards/@PanelContainer@905",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@895/BattleActionBlock/LobbyRewards/@PanelContainer@909",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@Control@62/@Control@201/@VBoxContainer@895/BattleActionBlock/LobbyRewards/@PanelContainer@913",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928",
+			"rect": [
+				24.0,
+				98.0,
+				672.0,
+				1110.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/profile_board.svg",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@HBoxContainer@947/@PanelContainer@933",
+			"rect": [
+				52.0,
+				173.0,
+				120.0,
+				120.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@952/@PanelContainer@950",
+			"rect": [
+				56.5,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@955/@PanelContainer@954",
+			"rect": [
+				161.5,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@958/@PanelContainer@957",
+			"rect": [
+				266.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@961/@PanelContainer@960",
+			"rect": [
+				370.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@964/@PanelContainer@963",
+			"rect": [
+				474.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@967/@PanelContainer@966",
+			"rect": [
+				578.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@970/@PanelContainer@969",
+			"rect": [
+				56.5,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@973/@PanelContainer@972",
+			"rect": [
+				161.5,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@976/@PanelContainer@975",
+			"rect": [
+				266.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@979/@PanelContainer@978",
+			"rect": [
+				370.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@984/@PanelContainer@981",
+			"rect": [
+				474.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@989/@PanelContainer@986",
+			"rect": [
+				578.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@994/@PanelContainer@991",
+			"rect": [
+				56.5,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@999/@PanelContainer@996",
+			"rect": [
+				161.5,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1004/@PanelContainer@1001",
+			"rect": [
+				266.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1009/@PanelContainer@1006",
+			"rect": [
+				370.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1014/@PanelContainer@1011",
+			"rect": [
+				474.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1019/@PanelContainer@1016",
+			"rect": [
+				578.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1024/@PanelContainer@1021",
+			"rect": [
+				56.5,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1029/@PanelContainer@1026",
+			"rect": [
+				161.5,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1034/@PanelContainer@1031",
+			"rect": [
+				266.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1039/@PanelContainer@1036",
+			"rect": [
+				370.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1044/@PanelContainer@1041",
+			"rect": [
+				474.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1049/@PanelContainer@1046",
+			"rect": [
+				578.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1054/@PanelContainer@1051",
+			"rect": [
+				56.5,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1060/@PanelContainer@1057",
+			"rect": [
+				161.5,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1066/@PanelContainer@1063",
+			"rect": [
+				266.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1071/@PanelContainer@1068",
+			"rect": [
+				370.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1076/@PanelContainer@1073",
+			"rect": [
+				474.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1079/@PanelContainer@1078",
+			"rect": [
+				578.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@GridContainer@1085/@Button@1084/@PanelContainer@1081",
+			"rect": [
+				56.5,
+				883.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@HBoxContainer@1111/@Button@1092/@VBoxContainer@1087/@PanelContainer@1089",
+			"rect": [
+				84.0,
+				1042.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@HBoxContainer@1111/@Button@1098/@VBoxContainer@1093/@PanelContainer@1095",
+			"rect": [
+				234.0,
+				1042.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@HBoxContainer@1111/@Button@1104/@VBoxContainer@1099/@PanelContainer@1101",
+			"rect": [
+				384.0,
+				1042.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@928/@ScrollContainer@926/@VBoxContainer@924/@HBoxContainer@1111/@Button@1110/@VBoxContainer@1105/@PanelContainer@1107",
+			"rect": [
+				534.0,
+				1031.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@920/@CenterContainer@921/@Container@930/@PanelContainer@929",
+			"rect": [
+				56.0,
+				71.0,
+				113.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1420/BattleActionBlock/LobbyRewards/@PanelContainer@1430",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1420/BattleActionBlock/LobbyRewards/@PanelContainer@1434",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1420/BattleActionBlock/LobbyRewards/@PanelContainer@1438",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "home",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486",
+			"rect": [
+				10.0,
+				116.0,
+				700.0,
+				510.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/hero_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/HeroEquipmentRow/HeroEquipmentLeft/@Control@1449/@PanelContainer@1447",
+			"rect": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/HeroEquipmentRow/HeroEquipmentLeft/@Control@1452/@PanelContainer@1450",
+			"rect": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/HeroEquipmentRow/HeroEquipmentRight/@Control@1456/@PanelContainer@1454",
+			"rect": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_orange.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/HeroEquipmentRow/HeroEquipmentRight/@Control@1459/@PanelContainer@1457",
+			"rect": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/@CenterContainer@1464/@PanelContainer@1463",
+			"rect": [
+				271.0,
+				426.0,
+				178.0,
+				52.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/title_plaque.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/@HBoxContainer@1477/@PanelContainer@1468",
+			"rect": [
+				67.0,
+				486.0,
+				190.0,
+				40.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/@HBoxContainer@1477/@PanelContainer@1472",
+			"rect": [
+				265.0,
+				486.0,
+				190.0,
+				40.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/@HBoxContainer@1477/@PanelContainer@1476",
+			"rect": [
+				463.0,
+				486.0,
+				190.0,
+				40.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@PanelContainer@1486/@VBoxContainer@1446/@PanelContainer@1485",
+			"rect": [
+				38.0,
+				534.0,
+				644.0,
+				62.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/hero_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520",
+			"rect": [
+				10.0,
+				661.0,
+				700.0,
+				389.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/hero_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1491/@PanelContainer@1489",
+			"rect": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_orange.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1494/@PanelContainer@1492",
+			"rect": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1497/@PanelContainer@1495",
+			"rect": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1500/@PanelContainer@1498",
+			"rect": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1503/@PanelContainer@1501",
+			"rect": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1506/@PanelContainer@1504",
+			"rect": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_blue.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1509/@PanelContainer@1507",
+			"rect": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1512/@PanelContainer@1510",
+			"rect": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1520/@ScrollContainer@1518/@CenterContainer@1517/@GridContainer@1516/@Control@1515/@PanelContainer@1513",
+			"rect": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_green.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1211/@VBoxContainer@1445/@Container@1522/@PanelContainer@1521",
+			"rect": [
+				42.0,
+				634.0,
+				295.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "hero",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/FeaturedChest/@PanelContainer@1525",
+			"rect": [
+				24.0,
+				251.0,
+				664.0,
+				305.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_featured.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/FeaturedChest/@PanelContainer@1526",
+			"rect": [
+				56.0,
+				224.0,
+				206.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@VBoxContainer@1555/@HBoxContainer@1538/@PanelContainer@1537",
+			"rect": [
+				24.0,
+				580.0,
+				218.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@VBoxContainer@1555/SupplyChestGrid/SupplyChest_wood",
+			"rect": [
+				24.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_wood.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@VBoxContainer@1555/SupplyChestGrid/SupplyChest_silver",
+			"rect": [
+				364.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_silver.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@Container@1560/@PanelContainer@1558",
+			"rect": [
+				24.0,
+				1148.0,
+				664.0,
+				138.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@Container@1560/@PanelContainer@1559",
+			"rect": [
+				56.0,
+				1121.0,
+				234.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				116.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/FeaturedChest/@PanelContainer@1525",
+			"rect": [
+				24.0,
+				251.0,
+				664.0,
+				305.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_featured.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/FeaturedChest/@PanelContainer@1526",
+			"rect": [
+				56.0,
+				224.0,
+				206.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@VBoxContainer@1555/@HBoxContainer@1538/@PanelContainer@1537",
+			"rect": [
+				24.0,
+				580.0,
+				218.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@VBoxContainer@1555/SupplyChestGrid/SupplyChest_wood",
+			"rect": [
+				24.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_wood.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@VBoxContainer@1555/SupplyChestGrid/SupplyChest_silver",
+			"rect": [
+				364.0,
+				645.0,
+				324.0,
+				452.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_silver.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@Container@1560/@PanelContainer@1558",
+			"rect": [
+				24.0,
+				1148.0,
+				664.0,
+				138.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1162/@ScrollContainer@1159/@MarginContainer@1160/@VBoxContainer@1161/@Container@1560/@PanelContainer@1559",
+			"rect": [
+				56.0,
+				1121.0,
+				234.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				116.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				140.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1566/@CenterContainer@1567/@Container@1576/@PanelContainer@1574",
+			"rect": [
+				80.0,
+				504.0,
+				560.0,
+				298.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/shop_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "shop-rates",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1566/@CenterContainer@1567/@Container@1576/@PanelContainer@1575",
+			"rect": [
+				112.0,
+				477.0,
+				310.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1328/@MarginContainer@1326/@VBoxContainer@1327/@Container@1601/@PanelContainer@1599",
+			"rect": [
+				24.0,
+				211.0,
+				672.0,
+				289.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/troops_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1328/@MarginContainer@1326/@VBoxContainer@1327/@Container@1601/@PanelContainer@1600",
+			"rect": [
+				56.0,
+				184.0,
+				204.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "troops",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1382/@ScrollContainer@1379/@MarginContainer@1380/@VBoxContainer@1381/@PanelContainer@1651",
+			"rect": [
+				24.0,
+				128.0,
+				672.0,
+				488.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1382/@ScrollContainer@1379/@MarginContainer@1380/@VBoxContainer@1381/@PanelContainer@1651/@VBoxContainer@1639/@PanelContainer@1650",
+			"rect": [
+				42.0,
+				476.0,
+				636.0,
+				122.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1382/@ScrollContainer@1379/@MarginContainer@1380/@VBoxContainer@1381/@Container@1660/@PanelContainer@1658",
+			"rect": [
+				24.0,
+				659.0,
+				672.0,
+				269.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/summon_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1382/@ScrollContainer@1379/@MarginContainer@1380/@VBoxContainer@1381/@Container@1660/@PanelContainer@1659",
+			"rect": [
+				56.0,
+				632.0,
+				285.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "summon",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1674",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1678",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1682",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697",
+			"rect": [
+				30.0,
+				313.0,
+				660.0,
+				681.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697/@ScrollContainer@1695/@VBoxContainer@1693/@GridContainer@1745/@PanelContainer@1709",
+			"rect": [
+				57.134391784668,
+				393.330718994141,
+				195.731216430664,
+				151.338562011719
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697/@ScrollContainer@1695/@VBoxContainer@1693/@GridContainer@1745/@PanelContainer@1716",
+			"rect": [
+				264.0,
+				394.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697/@ScrollContainer@1695/@VBoxContainer@1693/@GridContainer@1745/@PanelContainer@1723",
+			"rect": [
+				469.0,
+				394.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697/@ScrollContainer@1695/@VBoxContainer@1693/@GridContainer@1745/@PanelContainer@1730",
+			"rect": [
+				58.0,
+				556.0,
+				194.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697/@ScrollContainer@1695/@VBoxContainer@1693/@GridContainer@1745/@PanelContainer@1737",
+			"rect": [
+				264.0,
+				556.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697/@ScrollContainer@1695/@VBoxContainer@1693/@GridContainer@1745/@PanelContainer@1744",
+			"rect": [
+				469.0,
+				556.0,
+				193.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1697/@ScrollContainer@1695/@VBoxContainer@1693/@PanelContainer@1753",
+			"rect": [
+				58.0,
+				720.0,
+				604.0,
+				150.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/login_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "login",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1689/@CenterContainer@1690/@Container@1699/@PanelContainer@1698",
+			"rect": [
+				62.0,
+				286.0,
+				193.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1674",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1678",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1682",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1763",
+			"rect": [
+				24.0,
+				246.0,
+				672.0,
+				815.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1763/@ScrollContainer@1761/@VBoxContainer@1759/@PanelContainer@1792",
+			"rect": [
+				52.0,
+				457.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1763/@ScrollContainer@1761/@VBoxContainer@1759/@PanelContainer@1805",
+			"rect": [
+				52.0,
+				555.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1763/@ScrollContainer@1761/@VBoxContainer@1759/@PanelContainer@1818",
+			"rect": [
+				52.0,
+				653.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1763/@ScrollContainer@1761/@VBoxContainer@1759/@PanelContainer@1831",
+			"rect": [
+				52.0,
+				751.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1763/@ScrollContainer@1761/@VBoxContainer@1759/@PanelContainer@1844",
+			"rect": [
+				52.0,
+				849.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1763/@ScrollContainer@1761/@VBoxContainer@1759/@PanelContainer@1857",
+			"rect": [
+				52.0,
+				947.0,
+				616.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/quests_well.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "quests",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1755/@CenterContainer@1756/@Container@1765/@PanelContainer@1764",
+			"rect": [
+				56.0,
+				219.0,
+				321.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1674",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1678",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1682",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1858/@CenterContainer@1859/@Container@1868/@PanelContainer@1866",
+			"rect": [
+				30.0,
+				286.0,
+				660.0,
+				735.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/events_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1858/@CenterContainer@1859/@Container@1868/@PanelContainer@1866/@ScrollContainer@1864/@VBoxContainer@1862/@Control@1892/@PanelContainer@1870",
+			"rect": [
+				58.0,
+				330.0,
+				604.0,
+				196.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/card_unit_purple.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1858/@CenterContainer@1859/@Container@1868/@PanelContainer@1866/@ScrollContainer@1864/@VBoxContainer@1862/@Control@1892/@PanelContainer@1870/@HBoxContainer@1871/@VBoxContainer@1882/@PanelContainer@1881",
+			"rect": [
+				206.0,
+				443.0,
+				171.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1858/@CenterContainer@1859/@Container@1868/@PanelContainer@1866/@ScrollContainer@1864/@VBoxContainer@1862/@Control@1892/@PanelContainer@1891",
+			"rect": [
+				72.0,
+				316.0,
+				71.0,
+				26.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1858/@CenterContainer@1859/@Container@1868/@PanelContainer@1866/@ScrollContainer@1864/@VBoxContainer@1862/@Container@1934/@PanelContainer@1932",
+			"rect": [
+				58.0,
+				567.0,
+				604.0,
+				424.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/events_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1858/@CenterContainer@1859/@Container@1868/@PanelContainer@1866/@ScrollContainer@1864/@VBoxContainer@1862/@Container@1934/@PanelContainer@1933",
+			"rect": [
+				90.0,
+				540.0,
+				209.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "events",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1858/@CenterContainer@1859/@Container@1868/@PanelContainer@1867",
+			"rect": [
+				62.0,
+				259.0,
+				139.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/MenuPageOverlay/@Control@1940/@ScrollContainer@1937/@MarginContainer@1938/@VBoxContainer@1939/@PanelContainer@1948",
+			"rect": [
+				24.0,
+				200.0,
+				672.0,
+				258.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/patrol_scene.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/MenuPageOverlay/@Control@1940/@ScrollContainer@1937/@MarginContainer@1938/@VBoxContainer@1939/@Container@1953/@PanelContainer@1951",
+			"rect": [
+				24.0,
+				513.0,
+				672.0,
+				381.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/patrol_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/MenuPageOverlay/@Control@1940/@ScrollContainer@1937/@MarginContainer@1938/@VBoxContainer@1939/@Container@1953/@PanelContainer@1952",
+			"rect": [
+				56.0,
+				486.0,
+				171.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "patrol",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1674",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1678",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1664/BattleActionBlock/LobbyRewards/@PanelContainer@1682",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1972/@CenterContainer@1973/@Container@1982/@PanelContainer@1980",
+			"rect": [
+				100.0,
+				485.0,
+				520.0,
+				337.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/settings_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "settings",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@1972/@CenterContainer@1973/@Container@1982/@PanelContainer@1981",
+			"rect": [
+				132.0,
+				458.0,
+				138.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1989/BattleActionBlock/LobbyRewards/@PanelContainer@1999",
+			"rect": [
+				243.0,
+				876.0,
+				93.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1989/BattleActionBlock/LobbyRewards/@PanelContainer@2003",
+			"rect": [
+				350.0,
+				876.0,
+				83.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@Control@1156/@Control@1295/@VBoxContainer@1989/BattleActionBlock/LobbyRewards/@PanelContainer@2007",
+			"rect": [
+				447.0,
+				876.0,
+				123.0,
+				38.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/counter.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/ProfileButton/AvatarFrame",
+			"rect": [
+				14.0,
+				12.0,
+				80.0,
+				84.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/avatar_frame.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GoldButton/CurrencyGold/CurrencyPill",
+			"rect": [
+				126.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/Header/HeaderRow/GemsButton/CurrencyGems/CurrencyPill",
+			"rect": [
+				339.0,
+				36.0,
+				181.0,
+				36.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/hud_pill.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022",
+			"rect": [
+				24.0,
+				98.0,
+				672.0,
+				1110.0
+			],
+			"style": "StyleBoxTexture",
+			"texture": "res://game/ui/skin/menu/profile_board.svg",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@HBoxContainer@2041/@PanelContainer@2027",
+			"rect": [
+				52.0,
+				173.0,
+				120.0,
+				120.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2046/@PanelContainer@2044",
+			"rect": [
+				56.5,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2049/@PanelContainer@2048",
+			"rect": [
+				161.5,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2052/@PanelContainer@2051",
+			"rect": [
+				266.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2055/@PanelContainer@2054",
+			"rect": [
+				370.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2058/@PanelContainer@2057",
+			"rect": [
+				474.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2061/@PanelContainer@2060",
+			"rect": [
+				578.0,
+				383.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2064/@PanelContainer@2063",
+			"rect": [
+				56.5,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2067/@PanelContainer@2066",
+			"rect": [
+				161.5,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2070/@PanelContainer@2069",
+			"rect": [
+				266.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2073/@PanelContainer@2072",
+			"rect": [
+				370.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2078/@PanelContainer@2075",
+			"rect": [
+				474.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2083/@PanelContainer@2080",
+			"rect": [
+				578.0,
+				483.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2088/@PanelContainer@2085",
+			"rect": [
+				56.5,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2093/@PanelContainer@2090",
+			"rect": [
+				161.5,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2098/@PanelContainer@2095",
+			"rect": [
+				266.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2103/@PanelContainer@2100",
+			"rect": [
+				370.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2108/@PanelContainer@2105",
+			"rect": [
+				474.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2113/@PanelContainer@2110",
+			"rect": [
+				578.0,
+				583.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2118/@PanelContainer@2115",
+			"rect": [
+				56.5,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2123/@PanelContainer@2120",
+			"rect": [
+				161.5,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2128/@PanelContainer@2125",
+			"rect": [
+				266.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2133/@PanelContainer@2130",
+			"rect": [
+				370.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2138/@PanelContainer@2135",
+			"rect": [
+				474.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2143/@PanelContainer@2140",
+			"rect": [
+				578.0,
+				683.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2148/@PanelContainer@2145",
+			"rect": [
+				56.5,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2154/@PanelContainer@2151",
+			"rect": [
+				161.5,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2160/@PanelContainer@2157",
+			"rect": [
+				266.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2165/@PanelContainer@2162",
+			"rect": [
+				370.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2170/@PanelContainer@2167",
+			"rect": [
+				474.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2173/@PanelContainer@2172",
+			"rect": [
+				578.0,
+				783.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@GridContainer@2179/@Button@2178/@PanelContainer@2175",
+			"rect": [
+				56.5,
+				883.0,
+				86.0,
+				86.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@HBoxContainer@2205/@Button@2186/@VBoxContainer@2181/@PanelContainer@2183",
+			"rect": [
+				84.0,
+				1042.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@HBoxContainer@2205/@Button@2192/@VBoxContainer@2187/@PanelContainer@2189",
+			"rect": [
+				234.0,
+				1042.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@HBoxContainer@2205/@Button@2198/@VBoxContainer@2193/@PanelContainer@2195",
+			"rect": [
+				384.0,
+				1042.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2022/@ScrollContainer@2020/@VBoxContainer@2018/@HBoxContainer@2205/@Button@2204/@VBoxContainer@2199/@PanelContainer@2201",
+			"rect": [
+				534.0,
+				1031.0,
+				76.0,
+				76.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "profile",
+			"node": "/root/FlatFrameReview/Home/@ColorRect@2014/@CenterContainer@2015/@Container@2024/@PanelContainer@2023",
+			"rect": [
+				56.0,
+				71.0,
+				113.0,
+				53.0
+			],
+			"style": "StyleBoxFlat",
+			"texture": "",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/flat-frames-profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

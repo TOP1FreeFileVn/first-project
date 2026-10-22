@@ -1,0 +1,972 @@
+{
+	"captures": [
+		{
+			"equipped": {
+				"armor": "3",
+				"helmet": "2",
+				"weapon": "1"
+			},
+			"file": "fresh-three-worn_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_melee.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {},
+			"file": "all-four-empty_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_bare.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "full-bag-four-worn_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_melee.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "worn-item-detail_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_melee.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "2"
+			},
+			"file": "weapon-cung_san_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_ranged.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "weapon-kiem_go_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_melee.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "3"
+			},
+			"file": "weapon-gay_sao_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_magic.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "4"
+			},
+			"file": "weapon-riu_lua_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_heavy.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "5"
+			},
+			"file": "weapon-katana_nguyet_450x800.png",
+			"hero_texture": "res://game/ui/art/hero_cat_katana.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "3",
+				"helmet": "2",
+				"weapon": "1"
+			},
+			"file": "fresh-three-worn_360x640.png",
+			"hero_texture": "res://game/ui/art/hero_cat_melee.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {},
+			"file": "all-four-empty_360x640.png",
+			"hero_texture": "res://game/ui/art/hero_cat_bare.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "full-bag-four-worn_360x640.png",
+			"hero_texture": "res://game/ui/art/hero_cat_melee.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "worn-item-detail_360x640.png",
+			"hero_texture": "res://game/ui/art/hero_cat_melee.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "2"
+			},
+			"file": "weapon-cung_san_360x640.png",
+			"hero_texture": "res://game/ui/art/hero_cat_ranged.png",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_fixture_counts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_four_side_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_empty_slots_use_independent_slot_icons",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_worn_slots_use_production_item_pngs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_all_visible_item_cards_use_production_pngs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_fresh-three-worn",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "empty_fixture_counts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "empty_four_side_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "empty_empty_slots_use_independent_slot_icons",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "empty_worn_slots_use_production_item_pngs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "empty_all_visible_item_cards_use_production_pngs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_all-four-empty",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "all-items_fixture_counts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "all-items_four_side_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "all-items_empty_slots_use_independent_slot_icons",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "all-items_worn_slots_use_production_item_pngs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "all-items_all_visible_item_cards_use_production_pngs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_full-bag-four-worn",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_worn_card_opens_detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "detail_targets_worn_item",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_worn-item-detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_close_detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_spare_bow_card_opens_comparison",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_targets_bow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_equip_bow_action",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bow_equipped_and_comparison_closed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bow_updates_production_held_hero",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-cung_san",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-kiem_go",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-gay_sao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-riu_lua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-katana_nguyet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_fixture_counts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_four_side_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_empty_slots_use_independent_slot_icons",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_worn_slots_use_production_item_pngs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_all_visible_item_cards_use_production_pngs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_fresh-three-worn",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "empty_fixture_counts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "empty_four_side_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "empty_empty_slots_use_independent_slot_icons",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "empty_worn_slots_use_production_item_pngs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "empty_all_visible_item_cards_use_production_pngs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_all-four-empty",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "all-items_fixture_counts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "all-items_four_side_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "all-items_empty_slots_use_independent_slot_icons",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "all-items_worn_slots_use_production_item_pngs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "all-items_all_visible_item_cards_use_production_pngs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_full-bag-four-worn",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_worn_card_opens_detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "detail_targets_worn_item",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_worn-item-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_close_detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_spare_bow_card_opens_comparison",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_targets_bow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_equip_bow_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bow_equipped_and_comparison_closed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bow_updates_production_held_hero",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_weapon-cung_san",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "review_did_not_write_player_save",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/hero-equipment-integration/runtimeQA/appdata/Godot/app_userdata/Gear Defenders",
+	"resources": [
+		{
+			"all_item_textures": [
+				"res://game/ui/art/icon_hero_w_kiem_96.png",
+				"res://game/ui/art/icon_eq_helmet.png",
+				"res://game/ui/art/icon_eq_armor.png",
+				"res://game/ui/art/icon_hero_w_gay_phep_96.png",
+				"res://game/ui/art/icon_hero_w_cung_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_boots_96.png"
+			],
+			"context": "fresh",
+			"empty_slots": [
+				{
+					"slot": "boots",
+					"texture": "res://game/ui/art/icon_slot_boots_64.svg"
+				}
+			],
+			"window": [
+				450,
+				800
+			],
+			"worn_slots": [
+				{
+					"slot": "weapon",
+					"texture": "res://game/ui/art/icon_hero_w_kiem_96.png"
+				},
+				{
+					"slot": "helmet",
+					"texture": "res://game/ui/art/icon_eq_helmet.png"
+				},
+				{
+					"slot": "armor",
+					"texture": "res://game/ui/art/icon_eq_armor.png"
+				}
+			]
+		},
+		{
+			"all_item_textures": [
+				"res://game/ui/art/icon_hero_w_gay_phep_96.png",
+				"res://game/ui/art/icon_hero_w_cung_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_hero_w_kiem_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_armor_96.png",
+				"res://game/ui/art/icon_eq_boots_96.png"
+			],
+			"context": "empty",
+			"empty_slots": [
+				{
+					"slot": "weapon",
+					"texture": "res://game/ui/art/icon_slot_weapon_64.svg"
+				},
+				{
+					"slot": "helmet",
+					"texture": "res://game/ui/art/icon_slot_helmet_64.svg"
+				},
+				{
+					"slot": "armor",
+					"texture": "res://game/ui/art/icon_slot_armor_64.svg"
+				},
+				{
+					"slot": "boots",
+					"texture": "res://game/ui/art/icon_slot_boots_64.svg"
+				}
+			],
+			"window": [
+				450,
+				800
+			],
+			"worn_slots": []
+		},
+		{
+			"all_item_textures": [
+				"res://game/ui/art/icon_hero_w_kiem_96.png",
+				"res://game/ui/art/icon_eq_helmet.png",
+				"res://game/ui/art/icon_eq_armor.png",
+				"res://game/ui/art/icon_eq_boots.png",
+				"res://game/ui/art/icon_hero_w_katana_96.png",
+				"res://game/ui/art/icon_hero_w_gay_phep_96.png",
+				"res://game/ui/art/icon_hero_w_riu_96.png",
+				"res://game/ui/art/icon_hero_w_cung_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_armor_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_armor_96.png",
+				"res://game/ui/art/icon_eq_boots_96.png"
+			],
+			"context": "all-items",
+			"empty_slots": [],
+			"window": [
+				450,
+				800
+			],
+			"worn_slots": [
+				{
+					"slot": "weapon",
+					"texture": "res://game/ui/art/icon_hero_w_kiem_96.png"
+				},
+				{
+					"slot": "helmet",
+					"texture": "res://game/ui/art/icon_eq_helmet.png"
+				},
+				{
+					"slot": "armor",
+					"texture": "res://game/ui/art/icon_eq_armor.png"
+				},
+				{
+					"slot": "boots",
+					"texture": "res://game/ui/art/icon_eq_boots.png"
+				}
+			]
+		},
+		{
+			"all_item_textures": [
+				"res://game/ui/art/icon_hero_w_kiem_96.png",
+				"res://game/ui/art/icon_eq_helmet.png",
+				"res://game/ui/art/icon_eq_armor.png",
+				"res://game/ui/art/icon_hero_w_gay_phep_96.png",
+				"res://game/ui/art/icon_hero_w_cung_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_boots_96.png"
+			],
+			"context": "fresh",
+			"empty_slots": [
+				{
+					"slot": "boots",
+					"texture": "res://game/ui/art/icon_slot_boots_64.svg"
+				}
+			],
+			"window": [
+				360,
+				640
+			],
+			"worn_slots": [
+				{
+					"slot": "weapon",
+					"texture": "res://game/ui/art/icon_hero_w_kiem_96.png"
+				},
+				{
+					"slot": "helmet",
+					"texture": "res://game/ui/art/icon_eq_helmet.png"
+				},
+				{
+					"slot": "armor",
+					"texture": "res://game/ui/art/icon_eq_armor.png"
+				}
+			]
+		},
+		{
+			"all_item_textures": [
+				"res://game/ui/art/icon_hero_w_gay_phep_96.png",
+				"res://game/ui/art/icon_hero_w_cung_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_hero_w_kiem_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_armor_96.png",
+				"res://game/ui/art/icon_eq_boots_96.png"
+			],
+			"context": "empty",
+			"empty_slots": [
+				{
+					"slot": "weapon",
+					"texture": "res://game/ui/art/icon_slot_weapon_64.svg"
+				},
+				{
+					"slot": "helmet",
+					"texture": "res://game/ui/art/icon_slot_helmet_64.svg"
+				},
+				{
+					"slot": "armor",
+					"texture": "res://game/ui/art/icon_slot_armor_64.svg"
+				},
+				{
+					"slot": "boots",
+					"texture": "res://game/ui/art/icon_slot_boots_64.svg"
+				}
+			],
+			"window": [
+				360,
+				640
+			],
+			"worn_slots": []
+		},
+		{
+			"all_item_textures": [
+				"res://game/ui/art/icon_hero_w_kiem_96.png",
+				"res://game/ui/art/icon_eq_helmet.png",
+				"res://game/ui/art/icon_eq_armor.png",
+				"res://game/ui/art/icon_eq_boots.png",
+				"res://game/ui/art/icon_hero_w_katana_96.png",
+				"res://game/ui/art/icon_hero_w_gay_phep_96.png",
+				"res://game/ui/art/icon_hero_w_riu_96.png",
+				"res://game/ui/art/icon_hero_w_cung_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_armor_96.png",
+				"res://game/ui/art/icon_eq_helmet_96.png",
+				"res://game/ui/art/icon_eq_armor_96.png",
+				"res://game/ui/art/icon_eq_boots_96.png"
+			],
+			"context": "all-items",
+			"empty_slots": [],
+			"window": [
+				360,
+				640
+			],
+			"worn_slots": [
+				{
+					"slot": "weapon",
+					"texture": "res://game/ui/art/icon_hero_w_kiem_96.png"
+				},
+				{
+					"slot": "helmet",
+					"texture": "res://game/ui/art/icon_eq_helmet.png"
+				},
+				{
+					"slot": "armor",
+					"texture": "res://game/ui/art/icon_eq_armor.png"
+				},
+				{
+					"slot": "boots",
+					"texture": "res://game/ui/art/icon_eq_boots.png"
+				}
+			]
+		}
+	],
+	"scope": "Production Home/Hero, fresh and empty slots, all 13 items, native detail/equip taps."
+}

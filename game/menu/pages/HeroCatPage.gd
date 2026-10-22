@@ -1,7 +1,7 @@
 extends "res://game/menu/pages/MenuPage.gd"
 
 # "Anh hùng": the one hero cat and its equipment, on the approved layout (tests/ui/HeroPreview,
-# modelled on Capybara Go): a cream sheet with three gear cards either side of the cat on its
+# modelled on Capybara Go): a sheet with two gear cards either side of the cat on its
 # stand, the power plaque and three stat pills, the weapon strip (paired soldier classes and
 # skill), then the bag of spare items as a 5-column grid. Tapping any card opens the item
 # sheet: compared with what is worn in that slot, with Nâng cấp (gold) and Trang bị.
@@ -11,6 +11,7 @@ const Ui = preload("res://game/ui/Ui.gd")
 const HeroCat = preload("res://game/core/HeroCat.gd")
 const TroopData = preload("res://game/data/TroopData.gd")
 const SIDE_CARD := 124.0
+const SLOTS_PER_SIDE := 2
 const BAG_CARD := 118.0
 ## Soldier class -> its tier-1 weapon icon (how the classes are shown everywhere).
 const KLASS_ICONS := ["w_kiem", "w_cung", "w_gay_phep", "w_giao"]
@@ -73,17 +74,24 @@ func _doll() -> Control:
 	sheet.add_child(box)
 
 	var row := Ui.hbox(0)
-	row.add_child(_slot_column(HeroCat.SLOTS.slice(0, 3)))
+	row.name = "HeroEquipmentRow"
+	var left := _slot_column(HeroCat.SLOTS.slice(0, SLOTS_PER_SIDE))
+	left.name = "HeroEquipmentLeft"
+	row.add_child(left)
 	var stage := Control.new()
-	stage.custom_minimum_size = Vector2(0, SIDE_CARD * 3 + 24)
+	stage.name = "HeroPreviewStage"
+	stage.custom_minimum_size = Vector2(0, SIDE_CARD * SLOTS_PER_SIDE + 24)
 	stage.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	Ui.pin(stage, Ui.image("platform", Vector2(230, 92)), Vector2(-115, -98), Control.PRESET_CENTER_BOTTOM)
 	var cat := Ui.image("cat_hero", Vector2(240, 225))
+	cat.name = "HeroPreview"
 	cat.texture = SpriteLib.hero_cat_texture(state)
 	Ui.pin(stage, cat, Vector2(-120, -270), Control.PRESET_CENTER_BOTTOM)
 	Ui.bob(cat, 4.0, 1.6)
 	row.add_child(stage)
-	row.add_child(_slot_column(HeroCat.SLOTS.slice(3, 6)))
+	var right := _slot_column(HeroCat.SLOTS.slice(SLOTS_PER_SIDE))
+	right.name = "HeroEquipmentRight"
+	row.add_child(right)
 	box.add_child(row)
 
 	var stats := PlayerData.hero_cat_stats()
@@ -105,9 +113,12 @@ func _slot_column(slots: Array) -> VBoxContainer:
 	for slot in slots:
 		var uid := HeroCat.equipped_uid(state, slot)
 		if uid == "":
-			var empty := Ui.menu_panel("hero", "Well", Ui.center(Ui.icon(HeroCat.SLOT_ICONS[slot], SIDE_CARD * 0.5)))
+			var symbol := Ui.icon(HeroCat.SLOT_ICONS[slot], SIDE_CARD * 0.5)
+			symbol.name = "EmptyEquipmentSymbol"
+			var empty := Ui.menu_panel("hero", "Well", Ui.center(symbol))
+			empty.name = "EmptyEquipmentSlot_" + slot
 			empty.custom_minimum_size = Vector2(SIDE_CARD, SIDE_CARD)
-			empty.modulate = Color(1, 1, 1, 0.6)
+			empty.tooltip_text = "Chưa trang bị: " + HeroCat.SLOT_NAMES[slot]
 			column.add_child(empty)
 		else:
 			column.add_child(_item_card(uid, SIDE_CARD, _can_upgrade(uid)))

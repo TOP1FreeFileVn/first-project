@@ -766,8 +766,6 @@ static func avatar(avatar_size: float, value := "", frame_id := "") -> Control:
 	style.set_border_width_all(maxi(3, roundi(avatar_size * 0.07)))
 	style.set_corner_radius_all(roundi(avatar_size * 0.22))
 	style.set_content_margin_all(maxf(2.0, avatar_size * 0.06))
-	style.shadow_color = Color(0, 0, 0, 0.35)
-	style.shadow_size = 2
 	holder.add_theme_stylebox_override("panel", style)
 	holder.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	holder.custom_minimum_size = Vector2(avatar_size, avatar_size)
@@ -804,8 +802,6 @@ static func dark_popup(host: Control, width: float, title: String) -> VBoxContai
 		style.set_border_width_all(5)
 		style.set_corner_radius_all(22)
 		style.set_content_margin_all(20)
-		style.shadow_color = Color(0, 0, 0, 0.5)
-		style.shadow_size = 12
 		panel.add_theme_stylebox_override("panel", style)
 	panel.custom_minimum_size = Vector2(width, 0)
 	overlay.add_child(panel)

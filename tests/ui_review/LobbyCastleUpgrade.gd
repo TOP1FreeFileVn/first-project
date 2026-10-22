@@ -105,10 +105,14 @@ func _check_rich(requested: Vector2i) -> void:
 	_check(button.is_visible_in_tree() and not button.disabled, "funded_castle_bubble_enabled", requested)
 	_check(hint.is_visible_in_tree() and hint.is_processing(), "funded_hint_visible_animated", requested)
 	var scales: Array[float] = []
+	var positions: Array[float] = []
 	for sample in 4:
-		scales.append(float(hint.call("get_review_state").get("visual_scale", 1.0)))
+		var state: Dictionary = hint.call("get_review_state")
+		scales.append(float(state.visual_scale))
+		positions.append(state.ink_rect.position.y)
 		await _wait(0.15)
-	_check(float(scales.max()) - float(scales.min()) > 0.025, "hint_scale_changes_over_time", requested)
+	_check(is_equal_approx(float(scales.min()), 1.0) and is_equal_approx(float(scales.max()), 1.0), "hint_keeps_fixed_scale", requested)
+	_check(float(positions.max()) - float(positions.min()) > 2.0, "hint_moves_vertically_over_time", requested)
 	_check(hint.mouse_filter == Control.MOUSE_FILTER_IGNORE and not hint.clip_contents, "hint_does_not_take_pointer_or_clip", requested)
 	var ratio := Vector2(requested) / get_viewport().get_visible_rect().size
 	var pixels := button.get_global_rect().size * ratio

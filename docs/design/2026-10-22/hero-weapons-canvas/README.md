@@ -1,0 +1,21 @@
+# Vũ khí anh hùng — Canvas 22/10/2026
+
+Người dùng yêu cầu làm lại các món đánh nhau theo skill mới và sửa cung xoay 45° bị hướng đất. Phạm vi bản vẽ: cung, trượng, rìu và katana; kiếm đã được đánh giá tốt là mốc so sánh. Đây là bản thiết kế riêng để xem trước. Sửa lỗi hướng icon cung hiện tại được thực hiện riêng ở installer production.
+
+Cung có thân recurve liên tục và hai đầu gọn; trượng ngọc–khớp–cán cùng trục; rìu lưỡi rộng có phần râu; katana gần thẳng, chuôi dài, không trở lại độ cong đã bị chê. Gom màu theo vật liệu chức năng, không thêm trang trí vàng/đá quý lên mọi món. Các mặt thép/ngọc là fill rộng không kẻ viền phân mảng.
+
+Hai cấp nét. Icon 256 px main 13, secondary 6.5 px; đây là profile thử riêng cho vũ khí, không chép 11.35/7.41 của trang bị stat-only. Nét dây cung 4.4 px ở icon. Khi cầm, main 9, secondary 4.5 và dây cung 3 px sau uniform fit. Chỉ dùng nét phụ khi cần mô tả kết cấu; rìu mới không có nét phụ. Bù độ rộng nét trước phép scale; không dùng nở biên raster. Các số là mục tiêu nguồn, cần đối chiếu ảnh xuất.
+
+**Hướng cung:** trục bắn có chiều từ giữa dây đến tay nắm/thân cong. Trục dây vuông góc với hướng bắn. Người dùng chốt **icon cung hướng lên góc trái trên**, tức trục bắn -135° trong hệ màn hình. Không lấy đầu dưới–đầu trên dây làm hướng bắn. Hướng icon độc lập với pose cầm tay trái.
+
+Mèo giữ nguyên `hero-base.svg` / `hero-paws.svg` từ nguồn đã chốt. Chỉ vũ khí thay đổi; cung grip tay trái (94,166), các món khác tay phải (160,166). Miếng lòng tay màu lông che đúng grip trước khi vẽ lại nét paw gốc. Mũ/giáp/giày không mặc lên mèo.
+
+`preview.html` là Canvas dùng chung nguồn path; `round-*.png` lưu lượt xem. `export.mjs` xuất đúng path sang SVG, `godot/` chứa kiểm tra renderer game. Trình bày icon 32/48/64/96 px, hình cầm 128×120 và phân vai nét. Không coi hash/góc metadata hay xuất SVG thành công là đủ chứng minh hình đạt.
+
+Phản hồi vòng đầu: người dùng yêu cầu **làm lại rìu**, rồi làm rõ hướng **lên góc trái trên là của icon cung**. Rìu mới có đầu rộng, đường cắt cong liền, cán dày hơn; `axe-v1.js` giữ nguồn bị thay. Icon rìu vẫn hướng đầu lên phải, pose cầm tay phải đặt riêng để không che mặt. Cung cầm nghiêng nhẹ ra trái để thoáng mõm, trục bắn icon xử lý độc lập với dây. `round-2-axe.png` ghi lượt tạm hiểu nhầm hướng rìu; vòng sau sửa đúng phạm vi chỉ icon cung.
+
+Kiểm tra: đã mở `round-3-corrected-bow.png`, xuất và render đủ 36 PNG bằng Godot, mở `review.png`, `axe-review.png` và `before-after-96.png`. Các cỡ icon 32/48/64/96 px và hero 128×120 được xem trực tiếp để kiểm tra dây cung, phần thép và khoảng hở. Trượng/katana giữ mắt–miệng rõ; rìu mới nằm ngoài lông mày phải; cung nghiêng ra ngoài mép mõm. Không dùng kiểm tra alpha khác 0 để khẳng định mọi ảnh có lề trống: raster nhỏ có pixel nội suy rất mờ sát mép, và chân mèo gốc ở hero 128×120 chạm mép dưới. Kiểm tra việc cắt viền vũ khí tách riêng khỏi giới hạn của mèo gốc. `source-profiles.json` ghi các phép fit và độ rộng sau transform riêng cho icon/held; thuộc tính nguồn không chứng nhận mọi pixel antialias có độ dày y hệt nhau.
+
+Lịch sử sửa nét phụ rìu: `round-4-axe-seams.png` rút nét quấn quá ngắn thành chấm và bị người dùng phản đối; `round-5-long-wraps.png` kéo dài chúng sát viền, chừa khe nhỏ có tính cả đầu stroke tròn. `round-6-clean-head.png` bỏ nét thừa trên đầu thép. Sau đó người dùng yêu cầu bỏ cả hai nét quấn cán còn lại. **Bản mới nhất có cán gỗ trơn không dấu nét, phần cầm rộng ±20 và đầu thép sạch gồm hai mảng fill không viền phân mảng.** `round-7-clean-handle.png` và `round-7-axe-crop.png` ghi bản mới nhất; nguồn rìu và bản xuất chỉ còn nét chính. Các vòng trước chỉ lưu lịch sử; không thêm nét phụ để đủ hai cấp nét.
+
+Production đã áp dụng riêng bản rìu cán trơn được người dùng duyệt: năm icon `icon_hero_w_riu` và `hero_cat_heavy.png`, qua `--approved-weapon riu`. Hero 768×720 được render từ cùng path SVG, không phóng raster. Các bản cung/trượng/katana vẽ mới vẫn là đề xuất; hướng năm icon cung production đã sửa lên trái trước đó được giữ nguyên. Lệnh `--weapon-only cung` vẫn cài riêng hướng cung, với regression trên màu pixel thực tế; cả năm cỡ đạt. `docs/design/2026-10-22/approved-axe-integration/` lưu kiểm tra tích hợp rìu, còn `docs/design/2026-10-22/bow-icon-orientation/` lưu kiểm tra hướng cung.

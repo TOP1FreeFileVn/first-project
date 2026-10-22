@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-22",
+  "status": "proposal_for_user_review",
+  "item": "wood_brass_cat_chest",
+  "authoring": "shared Pen path list to canvas and SVG",
+  "geometry_source": "chest.js",
+  "main_stroke_at_256": {"width": 9, "color": "#583f21"},
+  "secondary_strokes_at_256": [
+    {"role": "wood grain", "width": 3, "color": "#b87941"},
+    {"role": "brass contact seam", "width": 3, "color": "#ba853c"}
+  ],
+  "closed_sizes": [256, 128, 96, 64, 26],
+  "open_sizes": [256],
+  "small_symbol_detail_cutoff": 48,
+  "preview": "round-2.png",
+  "comparison": "compare.png",
+  "native_renderer": "Godot v4.7.2 Image.load_svg_from_string at 2x, Lanczos reduction",
+  "native_rendered_svgs": 6,
+  "production_modified": false,
+  "review_notes": [
+    "First canvas review found open lid clipping; corrected layout padding.",
+    "Final canvas board and native open256 and closed64 were visually inspected.",
+    "Main edges, primary overlap, material secondary lines and broad unlined planes are authored separately."
+  ]
+}

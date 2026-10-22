@@ -1,0 +1,25 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Áo giáp · bản thử</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#d7e3da;color:#583f21;font:16px Game,'Segoe UI',sans-serif;width:1080px;padding:24px}
+h1{margin:0 0 4px;font-size:30px}p{margin:0 0 20px;color:#5b7065}.row{display:flex;gap:18px}.card{background:#eef2e9;border-radius:20px;padding:18px;flex:1}h2{font-size:20px;margin:0 0 12px}.big{height:290px;display:flex;align-items:center;justify-content:center}.big canvas,.big img{width:256px;height:256px}.sizes{display:flex;align-items:end;justify-content:space-between;height:132px}.sizes label{display:block;text-align:center;font:13px 'Segoe UI',sans-serif;color:#617269;margin-top:8px}.sizes canvas{display:block}footer{margin-top:18px;display:flex;gap:30px;font:14px 'Segoe UI',sans-serif}.dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:7px}
+</style>
+<h1>ÁO GIÁP · MẪU 01</h1>
+<p>Một họ màu thép bạc · hai mảng màu phẳng · giữ nguyên hai cấp nét</p>
+<div class="row">
+ <section class="card"><h2>Bản vừa rồi</h2><div class="big"><img src="armor-palette-previous-256.png"></div><div class="sizes" id="old"></div></section>
+ <section class="card"><h2>Bản mới</h2><div class="big"><canvas id="new" width="256" height="256"></canvas></div><div class="sizes" id="sizes"></div></section>
+ <section class="card"><h2>Phân cấp nét</h2><div class="big"><canvas id="roles" width="256" height="256"></canvas></div><p style="margin-top:20px">Viền ngoài và cổ: nét chính.<br>Đường nối nách: nét phụ mảnh.<br>Bỏ các đường xám trang trí.</p></section>
+</div>
+<footer><span><i class="dot" style="background:#d45d46"></i>Nét chính</span><span><i class="dot" style="background:#168c91"></i>Nét phụ</span><span>Kích thước nhỏ: 32 / 48 / 64 / 96 px</span></footer>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script><script src="item.js"></script>
+<script>
+Pen.toCanvas(Item.icon(256),document.getElementById('new').getContext('2d'));
+Pen.toCanvas(Item.icon(256,true),document.getElementById('roles').getContext('2d'));
+for(const size of [32,48,64,96]){
+ const entry=document.createElement('div'),c=document.createElement('canvas');c.width=c.height=size;entry.append(c);entry.insertAdjacentHTML('beforeend',`<label>${size} px</label>`);document.getElementById('sizes').append(entry);Pen.toCanvas(Item.icon(size),c.getContext('2d'));
+ const old=document.createElement('div');old.innerHTML=`<img src="armor-palette-previous-256.png" width="${size}" height="${size}"><label>${size} px</label>`;document.getElementById('old').append(old);
+}
+</script>

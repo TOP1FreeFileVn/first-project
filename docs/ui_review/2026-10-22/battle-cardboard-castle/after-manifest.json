@@ -1,0 +1,20 @@
+{
+	"checks": {
+		"board_still_accepts_game_input": true,
+		"castle_still_takes_damage": true,
+		"no_save_write": true,
+		"real_battle": true,
+		"same_deployment_line": true,
+		"same_gear_origin": true
+	},
+	"label": "after",
+	"scope": "First live cardboard-castle visual demo; no castle tier art or portal traversal introduced.",
+	"screenshots": [
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/after-lobby_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/after-prepare_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/after-prepare_360x640.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/after-fight_360x640.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/after-fight_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/after-hit_450x800.png"
+	]
+}

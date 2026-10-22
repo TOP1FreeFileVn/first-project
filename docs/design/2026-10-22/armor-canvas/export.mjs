@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const here=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(here,'../../../..');
+for(const file of [path.join(root,'.claude/skills/canvas-vector-art/scripts/pen.js'),path.join(here,'item.js')]) (0,eval)(fs.readFileSync(file,'utf8'));
+fs.mkdirSync(path.join(here,'svg'),{recursive:true});
+for(const size of [32,48,64,96,256]) fs.writeFileSync(path.join(here,`svg/armor-icon-${size}.svg`),Pen.toSvg(Item.icon(size),size,size));
+fs.writeFileSync(path.join(here,'svg/armor-roles-256.svg'),Pen.toSvg(Item.icon(256,true),256,256));
+const strokes=Item.icon(256).filter(o=>o.stroke).map(o=>({ink:o.stroke,width:o.width}));
+fs.writeFileSync(path.join(here,'source-strokes.json'),JSON.stringify({profile:Item.strokeProfiles,strokes,note:'Authored output widths. Final raster measurements and slot review are separate.'},null,2)+'\n');
+console.log('Exported armor SVGs and role view from shared Canvas paths.');

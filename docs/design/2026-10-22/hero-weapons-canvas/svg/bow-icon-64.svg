@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<path d="M13.46 55.38 L55.38 13.46" fill="none" stroke="#946d46" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M12.35 56.05 C7 52.48 6.1 42.22 10.12 35.54 L16.14 28.18 Q17.92 25.95 19.71 25.95 L25.95 19.71 Q25.95 17.92 28.18 16.14 L35.54 10.12 C42.22 6.1 52.48 7 56.05 12.35 Q57.16 14.35 54.49 14.8 C47.58 11.01 41.11 15.69 33.97 22.38 L22.38 33.97 C15.69 41.11 11.01 47.58 14.8 54.49 Q14.35 57.16 12.35 56.05 Z" fill="#cfa265" />
+<path d="M23.05 33.31 L17.25 27.51 Q17.92 25.95 19.71 25.95 L25.95 19.71 Q25.95 17.92 27.51 17.25 L33.31 23.05 Z" fill="#e0b97e" />
+<path d="M27.06 29.29 Q25.06 25.95 20.15 25.06" fill="none" stroke="#946d46" stroke-width="1.63" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M30.85 25.5 Q28.85 22.16 23.94 21.27" fill="none" stroke="#946d46" stroke-width="1.63" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M12.35 56.05 C7 52.48 6.1 42.22 10.12 35.54 L16.14 28.18 Q17.92 25.95 19.71 25.95 L25.95 19.71 Q25.95 17.92 28.18 16.14 L35.54 10.12 C42.22 6.1 52.48 7 56.05 12.35 Q57.16 14.35 54.49 14.8 C47.58 11.01 41.11 15.69 33.97 22.38 L22.38 33.97 C15.69 41.11 11.01 47.58 14.8 54.49 Q14.35 57.16 12.35 56.05 Z" fill="none" stroke="#583f21" stroke-width="3.25" stroke-linejoin="round" stroke-linecap="round" />
+</svg>

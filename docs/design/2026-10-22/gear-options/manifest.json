@@ -1,0 +1,75 @@
+{
+  "status": "B-selected",
+  "selected": "B",
+  "selected_profile": {
+    "root": 36.5,
+    "shoulder": 43,
+    "flankAngle": 14,
+    "capAngle": 5.5,
+    "round": 2.4
+  },
+  "canvas": [
+    128,
+    128
+  ],
+  "outer": 54,
+  "teeth": 8,
+  "shape_phase_degrees": 13.5,
+  "actual_450px_scale": 0.625,
+  "main_450px": 2,
+  "secondary_450px": 1.1875,
+  "proposals": [
+    {
+      "id": "A",
+      "title": "Răng khối bo",
+      "description": "Răng ngắn, bản rộng · gọn và chắc",
+      "file": "svg/A.svg",
+      "main": 3.2,
+      "secondary": 1.9
+    },
+    {
+      "id": "B",
+      "title": "Bánh đúc",
+      "description": "Khối tròn lớn · răng hình thang thấp",
+      "file": "svg/B.svg",
+      "main": 3.2,
+      "secondary": 1.9
+    },
+    {
+      "id": "C",
+      "title": "Răng cong",
+      "description": "Răng quét nhẹ · cảm giác chuyển động",
+      "file": "svg/C.svg",
+      "main": 3.2,
+      "secondary": 1.9
+    },
+    {
+      "id": "D",
+      "title": "Carton bế",
+      "description": "Răng hai bậc như tai bìa gấp; lòng trơn",
+      "file": "svg/D.svg",
+      "main": 3.2,
+      "secondary": 1.9
+    },
+    {
+      "id": "E",
+      "title": "Vòng có khe",
+      "description": "Răng dày, bốn khe xuyên thật ở vành chéo",
+      "file": "svg/E.svg",
+      "main": 3.2,
+      "secondary": 1.9
+    },
+    {
+      "id": "F",
+      "title": "Răng tròn",
+      "description": "Đầu răng viên nhộng, hõm chữ U mềm",
+      "file": "svg/F.svg",
+      "main": 3.2,
+      "secondary": 1.9
+    }
+  ],
+  "notes": [
+    "Canvas and SVG share paths.",
+    "Selected B is fitted for the production pin/gear clearance cycle. See B-pinmesh-stdout.log and selection.json for verification."
+  ]
+}

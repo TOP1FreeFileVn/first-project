@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><title>Cardboard gear work tray</title>
+<style>body{margin:0;padding:20px;background:#e7ece3;color:#583f21;font-family:Arial,sans-serif}h1{font-size:22px;margin:0 0 8px}p{font-size:14px;margin:0 0 20px}.row{display:flex;gap:28px;align-items:flex-start}canvas{display:block;background:#d5bd92}.label{font-size:14px;margin-bottom:8px}section{padding:16px;background:#f4f1e5;border-radius:12px}</style>
+<h1>Bàn xếp gear bằng carton · nối với cổng thành</h1>
+<p>Mặt bàn phẳng, thành carton thấp, hai miếng băng keo. Ô xếp gear giữ vị trí cũ; nét tròn dấu cộng được bỏ.</p>
+<div class="row"><section><div class="label">450 px · cửa + bàn cùng bảng màu</div><canvas id="wide" width="450" height="375"></canvas></section><section><div class="label">360 px · ô còn đọc rõ</div><canvas id="narrow" width="360" height="300"></canvas></section></div>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="../battle-cardboard-castle/castle.js"></script><script src="board.js"></script>
+<script>
+function cells(ctx){
+  for(let y=0;y<4;y++)for(let x=0;x<6;x++){
+    const cx=110+x*100,cy=210+y*100,locked=(x===5&&y!==1)||(y===3&&(x===0||x===4));
+    if(x===2&&y===1){ctx.fillStyle='#ffce6b';ctx.strokeStyle='#583f21';ctx.lineWidth=3;ctx.beginPath();ctx.arc(cx,cy,29,0,Math.PI*2);ctx.fill();ctx.stroke();continue;}
+    ctx.fillStyle=locked?'#be955e':'#dfb77d';ctx.beginPath();ctx.roundRect(cx-46,cy-46,92,92,8);ctx.fill();
+    if(locked){ctx.strokeStyle='#6d512c';ctx.lineWidth=3;ctx.beginPath();ctx.roundRect(cx-7,cy-3,14,12,2);ctx.stroke();ctx.beginPath();ctx.arc(cx,cy-5,5,Math.PI,0);ctx.stroke();continue;}
+    ctx.strokeStyle='#b28b58';ctx.lineWidth=2.4;ctx.lineCap='round';
+    for(const [sx,sy] of [[-1,-1],[1,-1],[-1,1],[1,1]]){ctx.beginPath();ctx.moveTo(cx+sx*7,cy+sy*15);ctx.lineTo(cx+sx*15,cy+sy*15);ctx.lineTo(cx+sx*15,cy+sy*7);ctx.stroke();}
+  }
+}
+for(const id of ['wide','narrow']){
+  const c=document.getElementById(id),ctx=c.getContext('2d');ctx.scale(c.width/720,c.width/720);
+  ctx.save();ctx.translate(0,120);Pen.toCanvas(CardboardBoard.layer(),ctx);ctx.restore();cells(ctx);
+  // Castle overlaps the rear carton edge, never the interaction grid.
+  ctx.save();ctx.translate(0,-84);Pen.toCanvas(CardboardCastle.layer('rear'),ctx);Pen.toCanvas(CardboardCastle.layer('facade'),ctx);ctx.restore();
+}
+</script>

@@ -10,7 +10,6 @@ var _hint: Control
 var _quiet_arrow: TextureRect
 var _caption: Label
 var _face := StyleBoxFlat.new()
-var _shadow := StyleBoxFlat.new()
 
 
 func _init() -> void:
@@ -27,9 +26,6 @@ func _init() -> void:
 	_face.set_border_width_all(3)
 	_face.set_corner_radius_all(16)
 	_face.corner_detail = 10
-	_shadow.bg_color = Color(0.29, 0.20, 0.10, 0.23)
-	_shadow.set_corner_radius_all(16)
-	_shadow.corner_detail = 10
 	_hint = UpgradeHint.new()
 	_hint.name = "CastleUpgradeHint"
 	_hint.custom_minimum_size = Vector2(56, 56)
@@ -69,8 +65,6 @@ func _draw() -> void:
 	var engaged := is_hovered() or has_focus()
 	_face.bg_color = Color("f4dfa9") if is_pressed() else (Color("fff7df") if engaged else FACE)
 	_face.border_color = Color("94703b") if engaged else INK
-	draw_style_box(_shadow, Rect2(4, 22, 88, 70))
-	draw_colored_polygon(PackedVector2Array([Vector2(34, 84), Vector2(47, 107), Vector2(65, 84)]), _shadow.bg_color)
 	# Draw one continuous-looking rim: the filled tail covers the panel's lower edge.
 	draw_style_box(_face, Rect2(3, 16, 90, 72))
 	var tail := PackedVector2Array([Vector2(35, 85), Vector2(47, 102), Vector2(64, 85)])

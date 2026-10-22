@@ -1,7 +1,7 @@
 """Build approved B menu frames without changing shared combat or rarity skin.
 
 Run from the project root: python -I tools/ui/make_menu_panels.py
-Board 128x136: L48/T48/R48/B56 slices in Ui.menu_panel_style.
+Board 128x136: L48/T48/R48/B48 slices in Ui.menu_panel_style.
 Well 64x64: 24px slices, a quiet inset with no highlight or extra inner rim.
 """
 
@@ -51,9 +51,10 @@ def svg(w, h, body, defs=""):
 
 
 def board(face, frame, highlight):
-    body = rect(0, 8, 128, 128, 44, frame)
-    body += rect(0, 0, 128, 128, 44, LINE)
-    body += rect(6, 6, 116, 116, 38, face)
+    # The full canvas is one flat frame; a second lower layer would read as a
+    # raised button lip when the panel is stretched through its nine-slice.
+    body = rect(0, 0, 128, 136, 44, LINE)
+    body += rect(6, 6, 116, 124, 38, face)
     return svg(128, 136, body)
 
 

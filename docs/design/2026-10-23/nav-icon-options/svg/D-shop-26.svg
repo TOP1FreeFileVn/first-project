@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="7.652 21.652 183.696 183.696">
+<path d="M42 73 L45 73 Q48 73 48 76 L48 121 Q48 124 45 124 L42 124 Q39 124 39 121 L39 76 Q39 73 42 73 Z" fill="#d4a36b" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M148 73 L151 73 Q154 73 154 76 L154 121 Q154 124 151 124 L148 124 Q145 124 145 121 L145 76 Q145 73 148 73 Z" fill="#d4a36b" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M148 149 L170 131 Q177 126 178 135" fill="none" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M62 152 C69.73 152 76 158.27 76 166 C76 173.73 69.73 180 62 180 C54.27 180 48 173.73 48 166 C48 158.27 54.27 152 62 152 Z" fill="#4285aa" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M135 152 C142.73 152 149 158.27 149 166 C149 173.73 142.73 180 135 180 C127.27 180 121 173.73 121 166 C121 158.27 127.27 152 135 152 Z" fill="#4285aa" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M62 162 C64.21 162 66 163.79 66 166 C66 168.21 64.21 170 62 170 C59.79 170 58 168.21 58 166 C58 163.79 59.79 162 62 162 Z" fill="#f7cb69" />
+<path d="M135 162 C137.21 162 139 163.79 139 166 C139 168.21 137.21 170 135 170 C132.79 170 131 168.21 131 166 C131 163.79 132.79 162 135 162 Z" fill="#f7cb69" />
+<path d="M43 107 L153 107 Q160 107 160 114 L160 148 Q160 155 153 155 L43 155 Q36 155 36 148 L36 114 Q36 107 43 107 Z" fill="#d4a36b" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M35 104 L161 104 Q165 104 165 108 L165 111 Q165 115 161 115 L35 115 Q31 115 31 111 L31 108 Q31 104 35 104 Z" fill="#fff2cc" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M37 47 L157 47 L174 76 L174 89 Q150 107 125 89 Q100 107 74 89 Q47 107 21 89 L21 76 Z" fill="#73b5cb" />
+<path d="M77 47 L117 47 L125 76 L125 89 Q100 107 74 89 L74 76 Z" fill="#fff2cc" />
+<path d="M37 47 L157 47 L174 76 L174 89 Q150 107 125 89 Q100 107 74 89 Q47 107 21 89 L21 76 Z" fill="none" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M75 133 Q91 118 111 126 L124 119 L122 133 L125 146 L111 139 Q91 148 75 133 Z" fill="#f7cb69" />
+<path d="M85 128.6 C86.33 128.6 87.4 129.67 87.4 131 C87.4 132.33 86.33 133.4 85 133.4 C83.67 133.4 82.6 132.33 82.6 131 C82.6 129.67 83.67 128.6 85 128.6 Z" fill="#583f21" />
+</svg>

@@ -1,0 +1,20 @@
+{
+  "game/ui/skin/btn_blue.svg": "2b7c8dd794587d1bf975df537296c3dfdc6c245f89ef2b827e221d747657b4bd",
+  "game/ui/skin/btn_blue_pressed.svg": "eebf99f227f3d7ea27b89a9a80deb2d3a035047958bbfadab45415ab5ecf4103",
+  "game/ui/skin/btn_green.svg": "6db4112b1a8e1fd19130d31d0b2b2dbf5bfb1b1c9054dffc7f69ee2a852a786f",
+  "game/ui/skin/btn_green_pressed.svg": "f2a0c3bcaa5cc110176ddd9c51f9f1e503dee387669854fe2e8ca5beb68c6f2e",
+  "game/ui/skin/btn_grey.svg": "8c6c9cea7ed6e581a212f47ec2b805dcbc78cf94c2b293009f5a5e63b6fba904",
+  "game/ui/skin/btn_grey_pressed.svg": "d4c358793a701815777a3d40ba57a8e7afa2a6b6066da7b9b927086f8ac8c2a9",
+  "game/ui/skin/btn_orange.svg": "c3cbca473a0f6d0f11b4406a1dcc2da354f83ad5a806488fea8ce8980e6ed8c3",
+  "game/ui/skin/btn_orange_pressed.svg": "c1051f4717dab2afbb5254ebbfc6a8bcb5fefb3a51ddc5656e90b8c4acb4ae4c",
+  "game/ui/skin/btn_purple.svg": "f24f3543d822ab6bcf5cec5d59166893e2b25c4a3db736661dd83c431d92e6ec",
+  "game/ui/skin/btn_purple_pressed.svg": "e47301bd425257ad8a326fa18bdf5ef5587e6e1538f1268f22f285d37c8876ab",
+  "game/ui/skin/btn_red.svg": "8f7c7d16aee643d66956b7127740052e28d14e7bc79428e4e14b94f3f69f12da",
+  "game/ui/skin/btn_red_pressed.svg": "cdc8e6e068b5a8f1bb81e7b382d80be213c4bee6f9bf15940e42c7b154674041",
+  "game/ui/skin/btn_tab.svg": "8d2349d489ea5d4f99708fa5f22297ee60a726d65e77667d6aacac532d45c313",
+  "game/ui/skin/btn_tab_pressed.svg": "ea017de82e8e589075a93244ee08c7bc435d43694cfa8e8eb7a660cfadd97dfe",
+  "game/ui/skin/btn_white.svg": "15a2a9e1bae596b0515326698ea02d638be81d96bdec81c4f9abca863c3c43ed",
+  "game/ui/skin/btn_white_pressed.svg": "aad16a57e7e227dbfecdc881687d4f407abc61415f479da347e7e595911af56f",
+  "game/ui/skin/btn_yellow.svg": "e0afc05cf2a72c8f22e1bc4c9add23570de0a29efcb5128f51911be2667060b4",
+  "game/ui/skin/btn_yellow_pressed.svg": "5e1ddcbc8c6d8bf1347526a68bcff63f3229ffac0efa14643c7eded64d1cc70b"
+}

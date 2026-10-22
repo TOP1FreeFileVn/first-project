@@ -1,0 +1,9939 @@
+{
+	"captures": [
+		{
+			"file": "hero-fresh-profile_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "hero-all-items_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "bag-bottom_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "equipped-detail_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "comparison-detail_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "after-equip_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "hero-fresh-profile_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "hero-all-items_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "bag-bottom_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "equipped-detail_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "comparison-detail_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "after-equip_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "held_hero_baseline_six_files_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_bare.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_heavy.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_katana.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_magic.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_ranged.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_melee.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "equipment_source_metadata_available",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "boots_authored_upright_no_raster_rotation_icon_eq_boots.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "boots_authored_upright_no_raster_rotation_icon_eq_boots_48.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "boots_authored_upright_no_raster_rotation_icon_eq_boots_64.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "boots_authored_upright_no_raster_rotation_icon_eq_boots_96.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "boots_authored_upright_no_raster_rotation_icon_eq_boots_32.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "boots_all_five_raster_sizes_checked_upright",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"name": "native_hero_navigation_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "actual_hero_page_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_four_gameplay_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_thirteen_active_items",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_5",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_6",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_7",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_no_removed_equipped_gloves",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_no_removed_equipped_amulet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_no_removed_equipped_ring",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_two_left_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_two_right_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_bag_has_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_three_equipped_four_spare",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_expected_card_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_hero-fresh-profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_hero-fresh-profile",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_navigation_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "actual_hero_page_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_four_gameplay_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_thirteen_active_items",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_5",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_6",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_7",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_8",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_9",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_11",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_12",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_active_bag_item_13",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_no_removed_equipped_gloves",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_no_removed_equipped_amulet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_no_removed_equipped_ring",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_two_left_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_two_right_slots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_bag_has_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "four_equipped_nine_spare_fixture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_expected_card_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "hero_initial_all_eight_unique_icons_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_hero-all-items",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_hero-all-items",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_bag-bottom",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_bag-bottom",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_equipped_card_opens_detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_targets_correct_uid",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_expected_card_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_equipped-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_equipped-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_upgrade_action_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "upgrade_changes_one_item_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "upgrade_spends_exact_gold",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "upgrade_preserves_original_held_hero_texture",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_expected_card_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_upgrade_all_eight_unique_icons_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_detail_close_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equipped_detail_closes",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_spare_card_opens_comparison",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "spare_detail_targets_correct_uid",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_expected_card_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_detail_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_comparison-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_comparison-detail",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_equip_action_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equip_switches_weapon_uid",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equip_returns_previous_weapon_to_bag",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equip_closes_comparison",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "equip_uses_existing_katana_hero_art",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_expected_card_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_equip_all_eight_unique_icons_present",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_capture_size_after-equip",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_after-equip",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_navigation_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "actual_hero_page_selected",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_four_gameplay_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_thirteen_active_items",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_5",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_6",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_active_bag_item_7",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_no_removed_equipped_gloves",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_no_removed_equipped_amulet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_no_removed_equipped_ring",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_two_left_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_two_right_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_bag_has_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_three_equipped_four_spare",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_expected_card_count",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_profile_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_hero-fresh-profile",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_hero-fresh-profile",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_hero_navigation_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "actual_hero_page_selected",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_four_gameplay_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_thirteen_active_items",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_5",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_6",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_7",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_8",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_9",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_10",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_11",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_12",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_active_bag_item_13",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_no_removed_equipped_gloves",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_no_removed_equipped_amulet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_no_removed_equipped_ring",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_two_left_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_two_right_slots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_bag_has_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "four_equipped_nine_spare_fixture",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_expected_card_count",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "hero_initial_all_eight_unique_icons_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_hero-all-items",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_hero-all-items",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_bag-bottom",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_bag-bottom",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_equipped_card_opens_detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_targets_correct_uid",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_expected_card_count",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_equipped-detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_equipped-detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_upgrade_action_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "upgrade_changes_one_item_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "upgrade_spends_exact_gold",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "upgrade_preserves_original_held_hero_texture",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_expected_card_count",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_upgrade_all_eight_unique_icons_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_detail_close_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equipped_detail_closes",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_spare_card_opens_comparison",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "spare_detail_targets_correct_uid",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_expected_card_count",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_detail_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_comparison-detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_comparison-detail",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_equip_action_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equip_switches_weapon_uid",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equip_returns_previous_weapon_to_bag",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equip_closes_comparison",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "equip_uses_existing_katana_hero_art",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_expected_card_count",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_boots",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_eq_helmet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_no_removed_equipment_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_loaded_nonempty_art_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_visible_art_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_control_inside_card_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_painted_art_centered_within_one_native_pixel_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_art_no_display_rotation_or_deformation_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_level_and_slot_badge_preserved_icon_hero_w_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_equip_all_eight_unique_icons_present",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_capture_size_after-equip",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_saved_after-equip",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "held_hero_baseline_six_files_available",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_bare.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_heavy.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_katana.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_magic.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_ranged.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_held_hero_file_unchanged_hero_cat_melee.png",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"geometry": [
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				70.2666702270508
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.094451904296875
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.000030517578125,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				124.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				106.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				131.566665649414,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				254.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				236.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				-0.208953857421875,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				262.402496337891,
+				716.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				378.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				366.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.000030517578125
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				386.650024414063,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				508.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				496.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.239715576171875
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				516.650024414063,
+				723.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				70.2666702270508
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.094451904296875
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.000030517578125,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.000030517578125,
+				-0.0944366455078125
+			],
+			"texture": "res://game/ui/art/icon_eq_boots.png",
+			"visible_alpha": [
+				579.574096679688,
+				322.041900634766,
+				80.8518753051758,
+				55.5384368896484
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.208953857421875
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				66.5666656494141,
+				716.566650390625,
+				66.8666687011719,
+				66.0308303833008
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.208953857421875
+			],
+			"texture": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"visible_alpha": [
+				196.566665649414,
+				722.41748046875,
+				66.8666687011719,
+				54.3291664123535
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				319.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				326.566680908203,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.23968505859375
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				716.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				573.97998046875,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				-0.000030517578125,
+				-0.000030517578125
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				581.649963378906,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				839.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				-0.208961486816406,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				67.4024963378906,
+				846.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.239715576171875
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				191.649993896484,
+				853.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.23968505859375
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				846.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.000030517578125
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				865.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				319.200012207031,
+				394.200012207031,
+				81.6000061035156,
+				81.6000061035156
+			],
+			"card": [
+				300.0,
+				375.0,
+				120.0,
+				120.0
+			],
+			"context": "equipped_detail",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				326.0,
+				401.0,
+				68.0000076293945,
+				68.0000076293945
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				70.2666702270508
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.094451904296875
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.000030517578125,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.000030517578125,
+				-0.0944366455078125
+			],
+			"texture": "res://game/ui/art/icon_eq_boots.png",
+			"visible_alpha": [
+				579.574096679688,
+				322.041900634766,
+				80.8518753051758,
+				55.5384368896484
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.208953857421875
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				66.5666656494141,
+				716.566650390625,
+				66.8666687011719,
+				66.0308303833008
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.208953857421875
+			],
+			"texture": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"visible_alpha": [
+				196.566665649414,
+				722.41748046875,
+				66.8666687011719,
+				54.3291664123535
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				319.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				326.566680908203,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.23968505859375
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				716.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				573.97998046875,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				-0.000030517578125,
+				-0.000030517578125
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				581.649963378906,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				839.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				-0.208961486816406,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				67.4024963378906,
+				846.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.239715576171875
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				191.649993896484,
+				853.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.23968505859375
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				846.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.000030517578125
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				865.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				206.199996948242,
+				394.200012207031,
+				81.6000061035156,
+				81.6000061035156
+			],
+			"card": [
+				187.0,
+				375.0,
+				120.0,
+				120.0
+			],
+			"context": "comparison_detail",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				213.0,
+				401.0,
+				68.0000076293945,
+				68.0000076293945
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				416.200012207031,
+				394.200012207031,
+				81.6000061035156,
+				81.6000061035156
+			],
+			"card": [
+				397.0,
+				375.0,
+				120.0,
+				120.0
+			],
+			"context": "comparison_detail",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.212493896484375
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				423.0,
+				401.0,
+				68.0000076293945,
+				67.1500091552734
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.219581604003906
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				69.3883361816406
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.094451904296875
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.000030517578125,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.000030517578125,
+				-0.0944366455078125
+			],
+			"texture": "res://game/ui/art/icon_eq_boots.png",
+			"visible_alpha": [
+				579.574096679688,
+				322.041900634766,
+				80.8518753051758,
+				55.5384368896484
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.208953857421875
+			],
+			"texture": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"visible_alpha": [
+				66.5666656494141,
+				722.41748046875,
+				66.8666687011719,
+				54.3291664123535
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				196.566665649414,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.23968505859375
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				716.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.000030517578125
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				579.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				-0.208953857421875,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				587.402526855469,
+				716.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				53.9799995422363,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.239715576171875
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				61.6500015258789,
+				853.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.23968505859375
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				191.649993896484,
+				846.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0000152587890625,
+				-0.000030517578125
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				865.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				449.880004882813,
+				839.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				456.566680908203,
+				846.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				70.2666702270508
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.118064880371094
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.00003814697265625,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				124.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				106.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				131.566665649414,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				254.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				236.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				-0.261192321777344,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				262.402496337891,
+				716.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				378.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				366.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.00003814697265625
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				386.650024414063,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				508.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				496.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh_profile",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.299644470214844
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				516.650024414063,
+				723.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				70.2666702270508
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.118064880371094
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.00003814697265625,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.00003814697265625,
+				-0.118045806884766
+			],
+			"texture": "res://game/ui/art/icon_eq_boots.png",
+			"visible_alpha": [
+				579.574096679688,
+				322.041900634766,
+				80.8518753051758,
+				55.5384368896484
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.261192321777344
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				66.5666656494141,
+				716.566650390625,
+				66.8666687011719,
+				66.0308303833008
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.261192321777344
+			],
+			"texture": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"visible_alpha": [
+				196.566665649414,
+				722.41748046875,
+				66.8666687011719,
+				54.3291664123535
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				319.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				326.566680908203,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.299606323242188
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				716.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				573.97998046875,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				-0.00003814697265625,
+				-0.00003814697265625
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				581.649963378906,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				839.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				-0.261201858520508,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				67.4024963378906,
+				846.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.299644470214844
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				191.649993896484,
+				853.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.299606323242188
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				846.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "hero_initial",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.00003814697265625
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				865.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				319.200012207031,
+				394.200012207031,
+				81.6000061035156,
+				81.6000061035156
+			],
+			"card": [
+				300.0,
+				375.0,
+				120.0,
+				120.0
+			],
+			"context": "equipped_detail",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				326.0,
+				401.0,
+				68.0000076293945,
+				68.0000076293945
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				70.2666702270508
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.118064880371094
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.00003814697265625,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.00003814697265625,
+				-0.118045806884766
+			],
+			"texture": "res://game/ui/art/icon_eq_boots.png",
+			"visible_alpha": [
+				579.574096679688,
+				322.041900634766,
+				80.8518753051758,
+				55.5384368896484
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.261192321777344
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				66.5666656494141,
+				716.566650390625,
+				66.8666687011719,
+				66.0308303833008
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.261192321777344
+			],
+			"texture": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"visible_alpha": [
+				196.566665649414,
+				722.41748046875,
+				66.8666687011719,
+				54.3291664123535
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				319.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				326.566680908203,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.299606323242188
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				716.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				573.97998046875,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				-0.00003814697265625,
+				-0.00003814697265625
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				581.649963378906,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				839.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				-0.261201858520508,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				67.4024963378906,
+				846.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.299644470214844
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				191.649993896484,
+				853.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.299606323242188
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				846.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_upgrade",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.00003814697265625
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				865.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				206.199996948242,
+				394.200012207031,
+				81.6000061035156,
+				81.6000061035156
+			],
+			"card": [
+				187.0,
+				375.0,
+				120.0,
+				120.0
+			],
+			"context": "comparison_detail",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				213.0,
+				401.0,
+				68.0000076293945,
+				68.0000076293945
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				416.200012207031,
+				394.200012207031,
+				81.6000061035156,
+				81.6000061035156
+			],
+			"card": [
+				397.0,
+				375.0,
+				120.0,
+				120.0
+			],
+			"context": "comparison_detail",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.265617370605469
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				423.0,
+				401.0,
+				68.0000076293945,
+				67.1500091552734
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.274477005004883
+			],
+			"texture": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"visible_alpha": [
+				64.8666687011719,
+				178.866668701172,
+				70.2666702270508,
+				69.3883361816406
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.118064880371094
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet.png",
+			"visible_alpha": [
+				59.5740623474121,
+				334.509704589844,
+				80.8518753051758,
+				30.6028137207031
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.00003814697265625,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_eq_armor.png",
+			"visible_alpha": [
+				579.574096679688,
+				178.863433837891,
+				80.8518753051758,
+				70.2731246948242
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.00003814697265625,
+				-0.118045806884766
+			],
+			"texture": "res://game/ui/art/icon_eq_boots.png",
+			"visible_alpha": [
+				579.574096679688,
+				322.041900634766,
+				80.8518753051758,
+				55.5384368896484
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.261192321777344
+			],
+			"texture": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"visible_alpha": [
+				66.5666656494141,
+				722.41748046875,
+				66.8666687011719,
+				54.3291664123535
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"visible_alpha": [
+				196.566665649414,
+				716.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.299606323242188
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				716.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				443.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.00003814697265625
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				451.650024414063,
+				735.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				579.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				-0.261192321777344,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"visible_alpha": [
+				587.402526855469,
+				716.566650390625,
+				64.3591613769531,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				53.9799995422363,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.299644470214844
+			],
+			"texture": "res://game/ui/art/icon_eq_boots_96.png",
+			"visible_alpha": [
+				61.6500015258789,
+				853.154968261719,
+				76.7000045776367,
+				52.7312545776367
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				-0.299606323242188
+			],
+			"texture": "res://game/ui/art/icon_eq_armor_96.png",
+			"visible_alpha": [
+				191.649993896484,
+				846.443725585938,
+				76.7000045776367,
+				66.1537551879883
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.000019073486328125,
+				-0.00003814697265625
+			],
+			"texture": "res://game/ui/art/icon_eq_helmet_96.png",
+			"visible_alpha": [
+				321.650024414063,
+				865.618713378906,
+				76.7000045776367,
+				28.7625026702881
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art_control": [
+				449.880004882813,
+				839.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "after_equip",
+			"painted_center_error_native_pixels": [
+				0.0,
+				0.0
+			],
+			"texture": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"visible_alpha": [
+				456.566680908203,
+				846.566650390625,
+				66.8666687011719,
+				66.8666687011719
+			],
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/hero-centered-icons-profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

@@ -1,0 +1,67 @@
+{
+  "changed_production_pngs": [
+    "icon_hero_w_cung.png",
+    "icon_hero_w_cung_32.png",
+    "icon_hero_w_cung_48.png",
+    "icon_hero_w_cung_64.png",
+    "icon_hero_w_cung_96.png"
+  ],
+  "unchanged_other_production_pngs": 164,
+  "old_regression_demonstrated": true,
+  "new_raster_direction_passed": true,
+  "paint_metrics": [
+    {
+      "stage": "before",
+      "size": 32,
+      "painted_string_to_grip_angle_screen_degrees": 38.5956,
+      "up_left": false
+    },
+    {
+      "stage": "before",
+      "size": 48,
+      "painted_string_to_grip_angle_screen_degrees": 52.7696,
+      "up_left": false
+    },
+    {
+      "stage": "before",
+      "size": 64,
+      "painted_string_to_grip_angle_screen_degrees": 51.037,
+      "up_left": false
+    },
+    {
+      "stage": "before",
+      "size": 96,
+      "painted_string_to_grip_angle_screen_degrees": 43.7143,
+      "up_left": false
+    },
+    {
+      "stage": "after",
+      "size": 32,
+      "painted_string_to_grip_angle_screen_degrees": -141.4044,
+      "up_left": true
+    },
+    {
+      "stage": "after",
+      "size": 48,
+      "painted_string_to_grip_angle_screen_degrees": -127.2304,
+      "up_left": true
+    },
+    {
+      "stage": "after",
+      "size": 64,
+      "painted_string_to_grip_angle_screen_degrees": -128.963,
+      "up_left": true
+    },
+    {
+      "stage": "after",
+      "size": 96,
+      "painted_string_to_grip_angle_screen_degrees": -136.2857,
+      "up_left": true
+    }
+  ],
+  "held_and_display_code": "unchanged",
+  "other_weapons_including_axe": "unchanged; only bow targets -135 screen degrees",
+  "source": "docs/design/2026-10-20/hero-equipment-v4/processed/ranged-weapon-layer.png",
+  "old_alignment": "bottom-to-top bowstring incorrectly treated as aim",
+  "new_alignment": "directed string-at-grip-height to grip, target screen angle -135 degrees (up-left) per user clarification"
+}

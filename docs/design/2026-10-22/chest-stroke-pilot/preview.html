@@ -1,0 +1,15 @@
+<!doctype html><meta charset="utf-8"><title>Chest stroke pilot</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;padding:26px;background:#d8e4de;color:#583f21;font:17px Game,Arial,sans-serif}
+h1{font-size:28px;margin:0 0 7px}p{margin:0 0 20px;color:#667469}.row{display:flex;gap:18px}.card{background:#edf1e8;border-radius:20px;padding:18px;flex:1}.card h2{font-size:19px;margin:0 0 4px}.card canvas{display:block;margin:auto}.sub{font:15px Arial,sans-serif;color:#6c735d;line-height:1.5}.native{display:flex;gap:28px;align-items:center;justify-content:space-around}.footer{margin-top:18px}.mini{text-align:center}
+</style>
+<h1>RƯƠNG GỖ MÈO · BẢN THỬ NÉT</h1><p>Khối gọn, góc bọc đồng, khóa đầu mèo. Nét chính 9 px · nét gỗ/đồng phụ 3 px ở bản 256 px.</p>
+<div class="row"><div class="card"><h2>Đóng · một đường ráp nắp</h2><canvas id="closed" width="300" height="300"></canvas><div class="sub">Thân vuông mềm, nắp thấp vát vai.<br>Mảng gỗ rộng, không viền từng mảng màu.</div></div>
+<div class="card"><h2>Mở · nắp tách riêng</h2><canvas id="open" width="300" height="300"></canvas><div class="sub">Nắp và bọc đồng chuyển động cùng nhau.<br>Miệng rương là khoảng hở có nét chính.</div></div>
+<div class="card"><h2>Cạnh nhân vật · cùng nét ấm</h2><canvas id="cat" width="300" height="300"></canvas><div class="sub">Mèo giữ nguyên. Rương không dùng<br>bóng đổ, phản quang hoặc gradient.</div></div></div>
+<div class="card footer"><h2>Kiểm tra thu nhỏ</h2><div class="native"><div class="mini"><canvas id="s128" width="128" height="128"></canvas>128 px</div><div class="mini"><canvas id="s96" width="96" height="96"></canvas>96 px · shop</div><div class="mini"><canvas id="s64" width="64" height="64"></canvas>64 px</div><div class="mini"><canvas id="s26" width="26" height="26"></canvas>26 px · bỏ vân nhỏ</div><div class="sub">Khóa/viền ngoài: nâu ấm 9 px.<br>Vân gỗ: nâu gỗ 3 px.<br>Tiếp giáp đồng: màu đồng 3 px.<br>Ranh giới hai mảng gỗ: không stroke.</div></div></div>
+<script src="pen.js"></script><script src="chest.js"></script><script>
+for(const [id,size,open] of [['closed',300,0],['open',300,1],['s128',128,0],['s96',96,0],['s64',64,0],['s26',26,0]]) Pen.toCanvas(ChestPilot.icon(size,open),document.getElementById(id).getContext('2d'));
+const cat=new Image();cat.onload=()=>{const ctx=document.getElementById('cat').getContext('2d');ctx.drawImage(cat,12,4,256,240);ctx.save();ctx.translate(117,120);Pen.toCanvas(ChestPilot.icon(175),ctx);ctx.restore()};cat.src='../../2026-10-19/hero-equipment/sources/hero-base.svg';
+</script>

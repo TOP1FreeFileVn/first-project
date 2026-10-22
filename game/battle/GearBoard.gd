@@ -67,19 +67,18 @@ var _locked_face: StyleBoxFlat
 
 
 func _ready() -> void:
-	_slot_face = _cell_face(Color("cbb893"), Color("a78b63"))
-	_locked_face = _cell_face(Color("b69d79"), Color("a78b63"))
+	_slot_face = _cell_face(Color("dfb77d"))
+	_locked_face = _cell_face(Color("be955e"))
 	var order := open_order()
 	for i in mini(PlayerData.unlocked_cells(), order.size()):
 		open_cells[order[i]] = true
 
 
-static func _cell_face(fill: Color, border: Color) -> StyleBoxFlat:
+static func _cell_face(fill: Color) -> StyleBoxFlat:
 	var face := StyleBoxFlat.new()
 	face.bg_color = fill
-	face.border_color = border
-	face.set_border_width_all(2)
-	face.set_corner_radius_all(16)
+	face.set_border_width_all(0)
+	face.set_corner_radius_all(8)
 	return face
 
 
@@ -453,12 +452,15 @@ func _draw() -> void:
 				draw_tile(self, tiles[cell], center)
 			if gears.has(cell) or tile(cell) == "rock":
 				continue
-			# Empty cells that would mesh with the drive train glow, to guide placement.
+			# Quiet carton registration corners leave gear silhouettes and rarity
+			# colors clear. Stronger ink still guides placement near the drive.
 			var hot := _would_turn(cell)
-			var mark := Color("806346") if hot else Color("a78b63")
-			draw_arc(center, 34.0, 0.0, TAU, 40, mark, 2.0, true)
-			draw_line(center - Vector2(8, 0), center + Vector2(8, 0), mark, 3.0, true)
-			draw_line(center - Vector2(0, 8), center + Vector2(0, 8), mark, 3.0, true)
+			var mark := Color("9d7849") if hot else Color("b28b58")
+			for sign_x in [-1.0, 1.0]:
+				for sign_y in [-1.0, 1.0]:
+					var corner := center + Vector2(sign_x * 15.0, sign_y * 15.0)
+					draw_line(corner - Vector2(sign_x * 8.0, 0), corner, mark, 2.4, true)
+					draw_line(corner, corner - Vector2(0, sign_y * 8.0), mark, 2.4, true)
 	if _drag == null:
 		return
 	for cell in gears:

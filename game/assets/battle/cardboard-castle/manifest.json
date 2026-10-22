@@ -1,0 +1,109 @@
+{
+  "id": "battle-cardboard-castle-v3-flat-gate",
+  "status": "in-game",
+  "source": "docs/design/2026-10-23/battle-flat-gate/castle.js",
+  "canvas": [
+    720,
+    240
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "world_placement": [
+    "0",
+    "Battle.WALL_Y - 184"
+  ],
+  "wall_line_y": 184,
+  "ramp": false,
+  "art_end_y": 220.3,
+  "outer_sides_centerline_x": [
+    2.3,
+    717.7
+  ],
+  "geometry": {
+    "projection": "front-facing flat 2D",
+    "side_tower_windows": 0,
+    "extruded_side_faces": 0,
+    "gate_leaves": 0,
+    "recessed_floor": false
+  },
+  "gate": {
+    "straight_jambs_x": [
+      313,
+      407
+    ],
+    "head_top_y": 140,
+    "crown_y": 148,
+    "straight_jamb_start_y": 181,
+    "base_y": 218,
+    "world_base_y": 734,
+    "gear_table_top_y": 734,
+    "clear_alpha_samples": [
+      [
+        360,
+        170
+      ],
+      [
+        360,
+        205
+      ]
+    ],
+    "gate_leaves": "none"
+  },
+  "layers_back_to_front": [
+    "rear.svg flags",
+    "ACTORS",
+    "facade.svg complete opaque wall and transparent aperture"
+  ],
+  "runtime_layers": {
+    "source": "game/battle/Background.gd",
+    "rear": {
+      "asset": "rear.svg",
+      "source_rect": [
+        0,
+        0,
+        720,
+        240
+      ],
+      "z_index": 0
+    },
+    "foreground": {
+      "asset": "facade.svg",
+      "source_rect": [
+        0,
+        0,
+        720,
+        240
+      ],
+      "destination_local": [
+        0,
+        0
+      ],
+      "node": "CastleForeground",
+      "z_index": 2
+    },
+    "reason": "The entire opaque gate and towers must cover units; only the transparent doorway and space above the battlements reveal them."
+  },
+  "composite": "composite.svg",
+  "main_stroke_px": 4.6,
+  "secondary_stroke_px": 2.6,
+  "palette": {
+    "ink": "#583f21",
+    "seam": "#a57a48",
+    "board": "#e0b878",
+    "top": "#e8c080",
+    "side": "#cfa466",
+    "tape": "#f7dfad",
+    "dark": "#604820",
+    "inner": "#c09559",
+    "teal": "#77b3b3",
+    "tealDark": "#568f91",
+    "stamp": "#ac854b"
+  },
+  "notes": [
+    "No side windows, projecting jamb leaves, receding side faces or recessed floor.",
+    "Whole facade lifted4logicalpx so its baseline and the gear-table top edge share world y734; gameplay wall and gear coordinates unchanged.",
+    "Clear cat-shaped aperture remains. The full opaque facade now occludes actors; no horizontal actor split. Flags, battlements, tape and paw stamps retain cardboard identity."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+	"checks": {
+		"no_player_save_writes": true,
+		"no_round_marker_beyond_blunt_tip": true,
+		"output_arm_moves_continuously_between_cat_poses": true,
+		"production_core_renderer": true,
+		"same_cat_pose_at_two_test_angles": true
+	},
+	"moving_tip_pixels": 773,
+	"note": "Inspect phase contact sheets for opaque arms and an uninterrupted torso outline. PinMeshTest checks unchanged gear mechanics separately.",
+	"phase_captures": 96
+}

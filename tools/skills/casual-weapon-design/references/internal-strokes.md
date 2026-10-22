@@ -16,27 +16,41 @@ Figma screenshots here are displayed at 128 x 128 for equipment and 160 x 160 fo
 
 ### Main and secondary stroke contract
 
-Apply this contract to weapons and the five hero equipment types, for both generated raster art and authored vectors. Classify a line by its visual function before choosing its width or color.
+Apply this contract to weapons and active hero gear (helmet, armor, boots), for both generated raster art and authored vectors. Gloves and amulets are historical assets removed from active slots on 2026-10-22.
+
+Use **two stroke classes: main and secondary**. Classify each visible line by function before drawing it. A filled material plane is a color region, not a third class of stroke. The user reaffirmed this hierarchy on 2026-10-22 after rejecting the inconsistent equipment set; recording the rule without checking the finished assets is insufficient.
 
 | Line class | Purpose | Weight and ink |
 | --- | --- | --- |
-| Main stroke | Defines the silhouette, including openings against the background, or a primary shape-defining overlap. A main line may continue inside the object. | Match the cat: **9 px design target on the 256 × 240 character canvas**, warm brown **`#583f21`**, with rounded joins and caps. Measure after fitting; generated contours can vary locally. |
+| Main stroke | Defines the silhouette, including openings against the background, or a primary shape-defining overlap. A main line may continue inside the object. | Warm brown **`#583f21`**, rounded joins/caps. Held art matches the cat's **9 px design target on the 256 × 240 character canvas**. Standalone icons use their separately fitted profile below. Measure after fitting; generated contours can vary locally. |
 | Secondary stroke | Describes subordinate construction such as surface seams, grip wraps, small joins, ornament or a bowstring. | Use a thinner, visually quieter line that survives downscaling. Choose width per item and softer ink relative to the local fill: soft gray on steel, muted red-brown on leather, ochre/brown on gold are examples. |
-| Filled material plane | Separates broad material/color areas, such as the two steel planes on the accepted spear. | Keep it as a fill; add no separating stroke when the color boundary already reads clearly. |
+
+Broad material/color areas, such as the two steel planes on the accepted spear, remain fills. Add no separating stroke when the color boundary already reads clearly.
 
 A plate edge, cuff or sole is not automatically a main line. A hole's exposed edge remains a silhouette edge even when it lies inside the object's bounds. Resolve a shared edge once; foreground parts hide the contours behind them. Preserve broad fills and open gaps instead of outlining every color patch.
+
+The user's armor correction on 2026-10-22 explicitly classifies the **shoulder-to-body join at the armpit as secondary**, thinner than the outer contour. The first armor pilot incorrectly gave it main weight and added unwanted thin gray curves across the chest and flanks. Remove those decorative gray marks; retain only construction lines the design actually needs. This is an armor-specific correction, not permission to lighten every overlap or outline all material regions.
 
 The user's bow correction requires a **visible secondary stroke for the string**. In the current v4 bow this is **3 px on the 256 × 240 canvas**, in secondary brown ink, against the 9 px main contour. Keep it continuous between the tips and check it at **128 × 120**. The former 1.4 px line disappeared when reduced. This is a bow-specific choice, not a universal 3 px rule for surface seams.
 
 The earlier recipes assigning every major component boundary 9 px, every other seam 4–5 px / 2–3 px, and every interior `#62656B` were over-prescriptive interpretations. Keep secondary widths item-specific; do not reinstate that fixed ladder or uniform-gray treatment.
 
+### Authoring and acceptance
+
+- Name main and secondary styles explicitly in the drawing source or raster brief. Record the chosen secondary weight and material-related ink; do not assign ad hoc widths to individual paths without a role. Do not add decorative lines merely to demonstrate both classes.
+- The 9 px main target applies **after placement on the 256 × 240 hero canvas**. For a uniform placement scale `s`, the source width is `9 / s`; include all transforms and measure the rendered result away from corners. Avoid nonuniform scaling that distorts stroke weight.
+- Inventory art has its own fitted profile. Compare its main-line weight with the accepted sword in the same-size slot, and inspect secondary details at 32/48/64/96 px. The current helmet/armor/paired-boots trial uses **11.35 px main / 7.41 px secondary at 256 px**; read [equipment-icon-baseline.md](equipment-icon-baseline.md) for the fitting, palette and review status. Enlarging a held raster to fill an icon is not sufficient evidence of matching strokes.
+- Review a marked line-role view, the clean result, and the actual-size held/icon views. Main contours must remain coherent; secondary lines must remain visibly subordinate and readable. A shared edge is drawn once, hidden lines are occluded, and junctions must not collapse into dark knots.
+- Record fitted measurements and inspect Godot output before extending the set. Neither a `stroke-width` attribute, a hash/bounds test nor a render that completes successfully substitutes for this check. If the hierarchy fails, revise the source and repeat the visual review.
+- Check orientation using a directed functional axis. A bow's aim runs from the string at grip height towards the grip/curved body; its string axis is perpendicular, so aligning the string to an angle can make the bow face the wrong way. Use the user's requested quadrant and inspect the raster. Keep inventory rotation separate from the left-paw carrying pose. The production fix and before/after evidence are in `docs/design/2026-10-22/bow-icon-orientation/`.
+
 ## Before the next redraw
 
 1. Compose the item at its intended size on the unchanged cat, or in its standalone icon frame for stat-only gear. Identify silhouette edges (including holes), actual overlaps, surface seams/ornament, and filled material planes. Mark main and secondary lines by function.
-2. Record the 9 px main-line target and each secondary line's intended weight/material-related ink in the art brief. Match the reference's hierarchy and open color areas; do not globally recolor all interior pixels or outline every segmented region.
+2. Record the intended fitted main and secondary profiles in the art brief: the 9 px main target for held art, or the separately calibrated standalone-icon profile. Match the reference's hierarchy and open color areas; do not globally recolor all interior pixels or outline every segmented region.
 3. Include that hierarchy in the generation prompt or authored vector paths before cleanup. Preserve raw generations and prompts. If broad fills or gaps are missing, revise the design; global dilation or reconstructing label adjacency cannot supply the intended authored linework.
 4. Inspect the fitted 256 x 240 composition, native 128 x 120 hero and intended inventory size. Check silhouette continuity, occlusion, stronger versus subordinate lines, material-related ink, fill areas and junctions. Measure claimed main widths after fitting, away from corners; do not claim all strokes are equal from a visual impression.
 
 After this study, the user requested one weapon sample and rated the resulting spear **9/10** on 2026-10-20. Use the [accepted spear and selected prompt](accepted-spear.md) as the current visual baseline. Its 9 px main-line design target is distinct from the measured straight shaft, approximately 8.2 px after fitting; no claim that every generated contour is exactly 9 px is supported.
 
-The earlier `hero-equipment` and `hero-equipment-v2` prototypes remain unapproved. Their mechanical boundary reconstruction and uniform-gray interiors are not superseded into approval by the accepted spear. Keep proposal approval separate from production integration; the spear currently remains a review asset.
+The earlier `hero-equipment` and `hero-equipment-v2` prototypes remain unapproved. Their mechanical boundary reconstruction and uniform-gray interiors are not superseded into approval by the accepted spear. The spear and selected v4 assets were subsequently integrated; `game/ui/art/equipment-sources.json` records the installed revisions. The user's 2026-10-22 redraw request means those installed items still require this stroke review; integration is not blanket approval of their linework.

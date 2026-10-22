@@ -1,0 +1,12 @@
+<!doctype html><meta charset="utf-8"><title>Cardboard castle · battle demo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#e7ece3;color:#583f21;font-family:Arial,sans-serif;padding:24px}h1{font-size:23px;margin:0 0 8px}p{margin:0 0 16px;max-width:1000px;line-height:1.4}section{background:#f4f1e5;border-radius:16px;padding:18px;margin-bottom:18px;width:1068px}canvas{display:block} .row{display:flex;align-items:center;gap:30px}.label{font-size:13px;margin-bottom:8px;color:#785b36}img{width:261px;height:auto}.checker{background-color:#dce1d5;background-image:linear-gradient(45deg,#e8ebe2 25%,transparent 25%),linear-gradient(-45deg,#e8ebe2 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e8ebe2 75%),linear-gradient(-45deg,transparent 75%,#e8ebe2 75%);background-size:20px 20px;background-position:0 0,0 10px,10px -10px,-10px 0}
+</style>
+<h1>Thành hộp giấy · cổng mở, bỏ cầu dốc</h1><p>Cổng xuyên thật: thấy nền qua ô cửa, cánh bìa gấp sát hai bên, sàn bìa phẳng. Game đặt rear và facade y0..164 sau units; chỉ dải facade y164..240 che phía trước để hero/lính vẫn hiện rõ.</p>
+<section><div class="row"><div><div class="label">Thành ngoài đang dùng</div><img src="../../../../game/assets/lobby/cardboard/castle-crop.png"></div><div><div class="label">Thành trong trận · đúng tỉ lệ cửa sổ 450 px</div><canvas id="small" width="450" height="150"></canvas></div></div></section>
+<section><div class="label">Canvas 720 × 240 · nét chính 4.6 px, nét gấp 2.6 px</div><canvas class="checker" id="large" width="720" height="240"></canvas></section>
+<section><div class="label">Hai lớp cùng registration · rear / facade · khe cổng thật vẫn mở</div><div class="row"><canvas class="checker" id="rear" width="450" height="150"></canvas><canvas class="checker" id="facade" width="450" height="150"></canvas></div></section>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script><script src="castle.js"></script>
+<script>
+for(const id of ['large','small','rear','facade']){const c=document.getElementById(id),ctx=c.getContext('2d');ctx.scale(c.width/720,c.height/240);if(['large','small'].includes(id)){ctx.fillStyle='#bfd49a';ctx.fillRect(0,0,720,240);}Pen.toCanvas(CardboardCastle.layer(['large','small'].includes(id)?'composite':id),ctx);}
+</script>

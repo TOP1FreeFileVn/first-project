@@ -1,0 +1,8093 @@
+{
+	"captures": [
+		"top_360x640.png",
+		"bottom_360x640.png",
+		"top_450x800.png",
+		"bottom_450x800.png"
+	],
+	"checks": [
+		{
+			"key": "collection_exists_all",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_riu_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dao_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dao_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_katana_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_katana_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_katana_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "all_sixteen_collection_cards_present_all",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "first_rendered_row_has_five_cards_all",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "complete_rendered_row_has_five_cards_all_0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "complete_rendered_row_has_five_cards_all_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "complete_rendered_row_has_five_cards_all_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "five_column_grid_has_no_horizontal_overflow_all",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_kiem_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_kiem_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_kiem_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_kiem_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_kiem_TroopStar_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_riu_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_riu_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_riu_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_riu_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_riu_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_riu_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_riu_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_riu_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_riu_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_riu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_dao_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_dao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_dao_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dao_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dao_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dao_TroopStar_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_dao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_katana_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_katana_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_katana_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_katana_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_katana_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_katana_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_katana_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_katana_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_cung_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_cung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_cung_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cung_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cung_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_cung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_no_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_no_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_no_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_no_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_no_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_no_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_no_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_no_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_no_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_no_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_no_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_no_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_no_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_no_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_no_TroopStar_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_no",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_sung_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_sung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sung_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_sung_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_sung_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_sung",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_dai_bac_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_dai_bac_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dai_bac_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dai_bac_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_dai_bac",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_gay_phep_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_gay_phep_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_gay_phep_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_gay_phep_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_gay_phep_TroopStar_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_gay_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_thuoc_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_thuoc_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_thuoc_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_thuoc",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_sach_phep_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_sach_phep_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_sach_phep_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_sach_phep_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_sach_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_dua_phep_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_dua_phep_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dua_phep_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dua_phep_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dua_phep_TroopStar_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_dua_phep",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_giao_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_giao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_giao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_giao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_giao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_giao_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_giao_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_giao_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_giao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_cu_kiem_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_cu_kiem_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cu_kiem_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cu_kiem_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_cu_kiem",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_chuy_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_chuy_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_chuy_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_chuy_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_chuy_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_chuy_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_chuy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_chuy_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_chuy_TroopStar_2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_chuy_TroopStar_3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_chuy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_bua_name",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_bua_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_bua_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_bua_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_bua_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_bua_TroopName",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_exists_bua_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_within_face_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "level_is_top_left_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_bua_TroopStar_1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_bua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_size_top_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_top_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_size_bottom_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_bottom_360x640.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "collection_exists_all",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_riu_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dao_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dao_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_katana_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_katana_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_katana_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cung_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_no_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sung_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dai_bac_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_gay_phep_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_thuoc_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_sach_phep_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_dua_phep_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_giao_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_cu_kiem_TroopCard_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_chuy_TroopCard_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_stays_within_horizontal_scroll_bounds_all_TroopCard_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cards_do_not_overlap_all_TroopCard_bua_TroopCard_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "all_sixteen_collection_cards_present_all",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "first_rendered_row_has_five_cards_all",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "complete_rendered_row_has_five_cards_all_0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "complete_rendered_row_has_five_cards_all_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "complete_rendered_row_has_five_cards_all_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "five_column_grid_has_no_horizontal_overflow_all",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_kiem_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_kiem_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_kiem_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_kiem_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_kiem_TroopStar_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_riu_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_riu_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_riu_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_riu_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_riu_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_riu_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_riu_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_riu_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_riu_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_riu_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_riu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_dao_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_dao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_dao_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dao_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dao_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dao_TroopStar_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_dao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_katana_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_katana_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_katana_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_katana_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_katana_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_katana_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_katana_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_katana_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_katana_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_cung_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_cung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_cung_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cung_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cung_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_cung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_no_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_no_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_no_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_no_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_no_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_no_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_no_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_no_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_no_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_no_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_no_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_no_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_no_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_no_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_no_TroopStar_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_troop_has_check_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_check_bottom_right_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "equipped_and_upgrade_markers_do_not_overlap_no",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_sung_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_sung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sung_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_sung_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sung_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_sung_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_sung",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_dai_bac_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dai_bac_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_dai_bac_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dai_bac_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dai_bac_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dai_bac_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_dai_bac",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_gay_phep_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_gay_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_gay_phep_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_gay_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_gay_phep_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_gay_phep_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_gay_phep_TroopStar_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_gay_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_thuoc_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_thuoc_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_thuoc_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_thuoc_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_thuoc_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_thuoc",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_sach_phep_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sach_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_sach_phep_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_sach_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_sach_phep_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_sach_phep_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_sach_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_dua_phep_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dua_phep_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_dua_phep_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_dua_phep_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dua_phep_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dua_phep_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_dua_phep_TroopStar_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_dua_phep",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_giao_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_giao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_giao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_giao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_giao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_giao_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_giao_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_giao_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_giao_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_giao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_cu_kiem_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cu_kiem_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_cu_kiem_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_cu_kiem_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cu_kiem_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_cu_kiem_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_cu_kiem",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_chuy_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_chuy_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_chuy_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_chuy_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_chuy_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_chuy_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_chuy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_chuy_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_chuy_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_chuy_TroopStar_2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_chuy_TroopStar_3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_chuy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_bua_name",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_bua_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_bua_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_bua_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_bua_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_bua_TroopName",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_exists_bua_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_within_face_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_white_with_black_outline_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_uses_game_font_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_label_lines_fit_height_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card_single_line_text_fits_bua_TroopLevel",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "level_is_top_left_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "compact_portrait_fits_card_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_earned_stars_shown_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_fits_card_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_row_is_centered_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "earned_star_is_not_clipped_bua_TroopStar_1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_top_right_over_border_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "upgrade_hint_does_not_steal_card_tap_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_troop_has_no_equipped_check_bua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_size_top_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_top_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_size_bottom_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		},
+		{
+			"key": "native_capture_saved_bottom_450x800.png",
+			"passed": true,
+			"window": [
+				0,
+				0
+			]
+		}
+	],
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/troop-caption-stars-profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

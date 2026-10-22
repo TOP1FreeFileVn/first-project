@@ -2,7 +2,7 @@ extends Node
 
 # Dedicated production screen, native pointer input and disposable RAM fixtures.
 const HOME = preload("res://game/menu/Home.tscn")
-const OUT := "res://docs/ui_review/2026-10-21/troop-upgrade-screen"
+const OUT := "res://docs/ui_review/2026-10-22/troop-upgrade-screen"
 const SIZES := [Vector2i(360, 640), Vector2i(450, 800)]
 const MARKERS := ["TroopLevelReady", "TroopStarReady", "TroopInTeam"]
 
@@ -223,12 +223,14 @@ func _check_roster_restore(requested: Vector2i) -> void:
 	_page._filter = -1
 	_page.refresh()
 	await _settle()
-	var card := _page.find_child("TroopCard_sung", true, false) as Button
+	# The compact five-column collection now shows Sung without scrolling.
+	var last_id: String = PlayerData.TROOP_ORDER.back()
+	var card := _page.find_child("TroopCard_" + last_id, true, false) as Button
 	_page._scroll.ensure_control_visible(card)
 	await _settle()
 	var chosen_scroll: int = _page._scroll.scroll_vertical
 	_check(chosen_scroll > 20, "fixture_has_nonzero_roster_scroll", requested)
-	if await _open("sung", requested, "scrolled"):
+	if await _open(last_id, requested, "scrolled"):
 		await _back()
 		_check(absi(_page._scroll.scroll_vertical - chosen_scroll) <= 2 and _page._filter == -1, "back_preserves_nonzero_roster_scroll_and_filter", requested)
 
@@ -311,10 +313,14 @@ func _check_resumed_hint(requested: Vector2i) -> void:
 	_check(hint != null and hint.is_processing(), "roster_upgrade_hint_resumes_naturally_after_back", requested)
 	if hint != null:
 		var scales: Array[float] = []
+		var positions: Array[float] = []
 		for sample in 4:
-			scales.append(float(hint.call("get_review_state").get("visual_scale", 1.0)))
+			var state: Dictionary = hint.call("get_review_state")
+			scales.append(float(state.visual_scale))
+			positions.append(state.ink_rect.position.y)
 			await _wait(0.15)
-		_check(float(scales.max()) - float(scales.min()) > 0.025, "returned_roster_hint_still_pulses", requested)
+		_check(is_equal_approx(float(scales.min()), 1.0) and is_equal_approx(float(scales.max()), 1.0), "returned_roster_hint_keeps_fixed_scale", requested)
+		_check(float(positions.max()) - float(positions.min()) > 2.0, "returned_roster_hint_still_moves_vertically", requested)
 
 
 func _all_text(node: Node) -> String:

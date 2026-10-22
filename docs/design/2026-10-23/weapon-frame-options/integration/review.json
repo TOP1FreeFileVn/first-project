@@ -1,0 +1,1200 @@
+{
+	"captures": [
+		{
+			"file": "fresh_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "full-bag_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "bow-comparison_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "fresh_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "full-bag_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "bow-comparison_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_all_cards_use_production_CardEquipment_SVGs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_production_item_art_centered_and_fitted",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fresh_empty_slot_retains_dedicated_boots_glyph",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_fresh",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_all_cards_use_production_CardEquipment_SVGs",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_production_item_art_centered_and_fitted",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_inventory_five_cards_per_row_within_page",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_full-bag",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_card_opens_bow_comparison",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_targets_bow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "comparison_also_uses_two_production_equipment_frames",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_bow-comparison",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_all_cards_use_production_CardEquipment_SVGs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_production_item_art_centered_and_fitted",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fresh_empty_slot_retains_dedicated_boots_glyph",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_fresh",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_all_cards_use_production_CardEquipment_SVGs",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_production_item_art_centered_and_fitted",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_inventory_five_cards_per_row_within_page",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_full-bag",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_card_opens_bow_comparison",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_targets_bow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "comparison_also_uses_two_production_equipment_frames",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_bow-comparison",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "no_player_save_write",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"failures": 0,
+	"frames": [
+		{
+			"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"art_rect": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet.png",
+			"art_rect": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor.png",
+			"art_rect": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"art_rect": [
+				124.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				106.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"art_rect": [
+				254.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				236.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"art_rect": [
+				378.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				366.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"art_rect": [
+				508.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				496.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"art_rect": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet.png",
+			"art_rect": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor.png",
+			"art_rect": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_orange.svg",
+			"variant": "CardEquipmentOrange",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots.png",
+			"art_rect": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"art_rect": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_orange.svg",
+			"variant": "CardEquipmentOrange",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"art_rect": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"art_rect": [
+				319.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"art_rect": [
+				449.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"art_rect": [
+				573.97998046875,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"art_rect": [
+				53.9799995422363,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"art_rect": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"art_rect": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"art_rect": [
+				443.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"art_rect": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet.png",
+			"art_rect": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor.png",
+			"art_rect": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"art_rect": [
+				124.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				106.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"art_rect": [
+				254.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				236.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"art_rect": [
+				378.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				366.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"art_rect": [
+				508.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				496.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "fresh",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"art_rect": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet.png",
+			"art_rect": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor.png",
+			"art_rect": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_orange.svg",
+			"variant": "CardEquipmentOrange",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots.png",
+			"art_rect": [
+				571.640014648438,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card": [
+				558.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"art_rect": [
+				59.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				41.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_orange.svg",
+			"variant": "CardEquipmentOrange",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"art_rect": [
+				189.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				171.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_riu_96.png",
+			"art_rect": [
+				319.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				301.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_purple.svg",
+			"variant": "CardEquipmentPurple",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"art_rect": [
+				449.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card": [
+				431.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"art_rect": [
+				573.97998046875,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				561.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"art_rect": [
+				53.9799995422363,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				41.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_blue.svg",
+			"variant": "CardEquipmentBlue",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"art_rect": [
+				183.979995727539,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				171.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"art_rect": [
+				313.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				301.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"art_rect": [
+				443.980010986328,
+				833.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card": [
+				431.0,
+				821.0,
+				118.0,
+				118.0
+			],
+			"context": "full",
+			"source": "res://game/ui/skin/card_equipment_green.svg",
+			"variant": "CardEquipmentGreen",
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/weapon-frame-integration/appdata/Godot/app_userdata/Gear Defenders",
+	"save_after": "absent",
+	"save_before": "absent",
+	"scope": "Actual production Home/Hero equipment frames, no visual overrides; fresh and all-item inventory at two native window sizes."
+}

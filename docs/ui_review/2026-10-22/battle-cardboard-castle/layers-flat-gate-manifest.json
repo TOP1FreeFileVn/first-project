@@ -1,0 +1,29 @@
+{
+	"checks": {
+		"board_still_accepts_game_input": true,
+		"castle_still_takes_damage": true,
+		"low_wall_occludes_units": true,
+		"native_gear_drop_moves_to_empty_cell": true,
+		"native_gear_motion_follows_pointer": true,
+		"native_gear_press_starts_drag": true,
+		"native_gear_return_restores_board": true,
+		"no_save_write": true,
+		"open_gate_does_not_occlude_units": true,
+		"real_battle": true,
+		"same_deployment_line": true,
+		"same_gear_origin": true,
+		"upper_wall_keeps_spawn_bodies_readable": true
+	},
+	"label": "layers-flat-gate",
+	"scope": "Open gate, no ramp, separate low foreground wall and cardboard gear table; no new castle tiers or unit routing.",
+	"screenshots": [
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-lobby_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-prepare_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-depth-probes_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-gear-drag_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-prepare_360x640.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-fight_360x640.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-fight_450x800.png",
+		"res://docs/ui_review/2026-10-22/battle-cardboard-castle/layers-flat-gate-hit_450x800.png"
+	]
+}

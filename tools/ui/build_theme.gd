@@ -11,6 +11,7 @@ extends SceneTree
 #   PanelContainer: Board Well BluePanel Sheet TitlePlaque SectionPlaque InfoStrip HudPill Counter
 #                  HudBar AvatarFrame LvPlaque NavCell NavSelected NavSelectedFooter
 #                  CardUnitOrange/Yellow/Blue/Purple/Red  CardItemCream/Blue/Orange/Red/Purple
+#                  CardEquipmentGreen/Blue/Purple/Orange (approved carton A, natural palette)
 #                  TroopCardGreen/Blue/Purple/Orange/Locked
 #   ProgressBar:   BarHpRed BarHpBlue BarHpGreen BarHpYellow BarExp BarItem
 #   Label:         LabelTitle LabelSmall LabelTiny LabelDark LabelAccent
@@ -22,17 +23,23 @@ const DARK_TEXT := Color("4b4444")
 
 
 func _init() -> void:
-	var theme := Theme.new()
-	var font := FontVariation.new()
-	font.base_font = load(FONTS + "PaytoneOne-Regular.ttf")
-	font.fallbacks = [load(FONTS + "DejaVuSans.ttf")]
-	theme.default_font = font
-	theme.default_font_size = 22
+	var theme: Theme
+	if "--equipment-cards-only" in OS.get_cmdline_user_args():
+		# A narrow install preserves every existing font, button and other style.
+		theme = load(SKIN + "game_theme.tres")
+		_equipment_cards(theme)
+	else:
+		theme = Theme.new()
+		var font := FontVariation.new()
+		font.base_font = load(FONTS + "PaytoneOne-Regular.ttf")
+		font.fallbacks = [load(FONTS + "DejaVuSans.ttf")]
+		theme.default_font = font
+		theme.default_font_size = 22
 
-	_labels(theme)
-	_buttons(theme)
-	_panels(theme)
-	_bars(theme)
+		_labels(theme)
+		_buttons(theme)
+		_panels(theme)
+		_bars(theme)
 
 	var path := SKIN + "game_theme.tres"
 	var err := ResourceSaver.save(theme, path)
@@ -105,12 +112,18 @@ func _panel(theme: Theme, type: String, file: String, margins: Array, content: A
 	theme.set_stylebox("panel", type, _box(file, margins, content))
 
 
+func _equipment_cards(theme: Theme) -> void:
+	# Square cards scale the whole approved frame. Slicing would stretch its tape patches.
+	for tone in ["green", "blue", "purple", "orange"]:
+		_panel(theme, "CardEquipment" + tone.capitalize(), "card_equipment_" + tone, [0, 0, 0, 0], [0, 0, 0, 0])
+
+
 func _panels(theme: Theme) -> void:
 	theme.set_stylebox("panel", "PanelContainer", StyleBoxEmpty.new())
-	_panel(theme, "Board", "board", [34, 34, 34, 42], [28, 24, 28, 32])
+	_panel(theme, "Board", "board", [34, 34, 34, 34], [28, 24, 28, 32])
 	_panel(theme, "Well", "well", [18, 18, 18, 18], [16, 16, 16, 16])
 	_panel(theme, "BluePanel", "blue_panel", [0, 10, 0, 0], [0, 10, 0, 0])
-	_panel(theme, "Sheet", "sheet", [22, 22, 22, 28], [20, 18, 20, 24])
+	_panel(theme, "Sheet", "sheet", [22, 22, 22, 22], [20, 18, 20, 24])
 	_panel(theme, "TitlePlaque", "title_plaque", [24, 20, 24, 20], [30, 4, 30, 8])
 	_panel(theme, "SectionPlaque", "section_plaque", [34, 20, 34, 20], [38, 2, 38, 6])
 	_panel(theme, "InfoStrip", "info_strip", [22, 20, 22, 20], [20, 4, 20, 4])
@@ -124,7 +137,7 @@ func _panels(theme: Theme) -> void:
 	hud_box.content_margin_right = 20
 	hud_box.content_margin_bottom = 12
 	theme.set_stylebox("panel", "HudBar", hud_box)
-	_panel(theme, "AvatarFrame", "avatar_frame", [16, 16, 16, 20], [8, 8, 8, 12])
+	_panel(theme, "AvatarFrame", "avatar_frame", [16, 16, 16, 16], [8, 8, 8, 12])
 	_panel(theme, "LvPlaque", "lv_plaque", [10, 10, 10, 10], [8, 0, 8, 2])
 	_panel(theme, "NavCell", "nav_cell", [24, 24, 24, 24], [4, 4, 4, 6])
 	_panel(theme, "NavSelected", "nav_selected", [26, 30, 26, 30], [0, 6, 0, 0])
@@ -134,13 +147,14 @@ func _panels(theme: Theme) -> void:
 		if tone != "locked":
 			_panel(theme, "TroopCard" + tone.capitalize() + "Pressed", "troop_card_" + tone + "_pressed", [14, 14, 14, 14], [8, 8, 8, 8])
 	for tone in ["green", "blue", "purple", "orange", "grey"]:
-		_panel(theme, "GearBg" + tone.capitalize(), "gear_bg_" + tone, [26, 26, 26, 30], [0, 0, 0, 0])
+		_panel(theme, "GearBg" + tone.capitalize(), "gear_bg_" + tone, [26, 26, 26, 26], [0, 0, 0, 0])
+	_equipment_cards(theme)
 	_panel(theme, "Callout", "callout", [20, 14, 20, 22], [14, 4, 14, 16])
 	_panel(theme, "Rail", "rail_bg", [30, 30, 30, 30], [6, 12, 6, 12])
 	for tone in ["green", "orange", "yellow", "blue", "purple", "red"]:
-		_panel(theme, "CardUnit" + tone.capitalize(), "card_unit_" + tone, [20, 20, 20, 24], [8, 10, 8, 12])
+		_panel(theme, "CardUnit" + tone.capitalize(), "card_unit_" + tone, [20, 20, 20, 20], [8, 10, 8, 12])
 	for tone in ["cream", "blue", "orange", "red", "purple"]:
-		_panel(theme, "CardItem" + tone.capitalize(), "card_item_" + tone, [20, 20, 20, 24], [10, 10, 10, 14])
+		_panel(theme, "CardItem" + tone.capitalize(), "card_item_" + tone, [20, 20, 20, 20], [10, 10, 10, 14])
 
 
 func _bar(theme: Theme, type: String, track: String, fill: String, track_m: Array, fill_m: Array, inset: int) -> void:

@@ -1,0 +1,62 @@
+{
+  "approved_selection": "C-hero helmet; original battle; original shop with blue fish on wood",
+  "latest_clarification": "Remove the gold sign board on the shop, not the helmet nasal guard.",
+  "hero_fixes": [
+    "material fills drawn before silhouette ink",
+    "right material plane meets the silhouette without a pale sliver",
+    "compact nasal guard"
+  ],
+  "shop_original_rerender_matches_pixels": true,
+  "shop_changed_bbox": [
+    109,
+    288,
+    311,
+    395
+  ],
+  "shop_fish_profile": {
+    "fill": "#8fdce6",
+    "outline": 1.8,
+    "logical_width": 43,
+    "logical_height": 20,
+    "eye_radius": 1.4,
+    "counter_clearance": "Tail upper corner lowered to y88; no contact with counter outline"
+  },
+  "global_tab_variants": [
+    "game\\ui\\skin\\icon_tab_shop_32.svg",
+    "game\\ui\\skin\\icon_tab_cat_32.svg",
+    "game\\ui\\skin\\icon_tab_shop_48.svg",
+    "game\\ui\\skin\\icon_tab_cat_48.svg",
+    "game\\ui\\skin\\icon_tab_shop_64.svg",
+    "game\\ui\\skin\\icon_tab_cat_64.svg",
+    "game\\ui\\skin\\icon_tab_shop_96.svg",
+    "game\\ui\\skin\\icon_tab_cat_96.svg",
+    "game\\ui\\skin\\icon_tab_shop.svg",
+    "game\\ui\\skin\\icon_tab_cat.svg"
+  ],
+  "unchanged_assets_sha256": {
+    "battle.png": "6afa171972b6ea55dbbc19b2b85b37405c0e05a66281f3fac2c507f1d5c0ffa7",
+    "troops.svg": "f31a1ef76985ddbde4a8a055acfca7362c16e3220bdcc2f9f008a37cd6d2a3a5",
+    "summon.svg": "7b04ed87e0b00e4478410476b8cb571f3116eebc4cf042b4e4363b67c0f90927"
+  },
+  "installed": {
+    "shop": {
+      "source": "docs/design/2026-10-23/nav-icons-approved/shop-source.svg",
+      "sha256": "035df083d9764789d957a37fa64a0b0a16494eb5a9ef6d1b198e257a2584952c"
+    },
+    "hero": {
+      "source": "docs/design/2026-10-23/nav-icons-approved/hero-source.svg",
+      "sha256": "449346e4d5fc5c1ccb1265d26baf784c6d8f1767efb835276a1f4329bd8309b9"
+    }
+  },
+  "native_review": {
+    "control": "game/ui/CartonNav.gd default preloads",
+    "capture_widths": [
+      360,
+      720
+    ],
+    "capture_count": 6,
+    "player_save_writes": false,
+    "shared_svg_renders": 10,
+    "status": "visually inspected; fish clear at 26/44px; tail clear of counter"
+  }
+}

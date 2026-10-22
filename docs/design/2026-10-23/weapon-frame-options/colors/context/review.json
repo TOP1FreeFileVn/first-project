@@ -1,0 +1,137 @@
+{
+	"cards": [
+		{
+			"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"art_rect": [
+				57.8400001525879,
+				171.839996337891,
+				84.3200073242188,
+				84.3200073242188
+			],
+			"card_rect": [
+				38.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"svg": "svg/natural-green.svg",
+			"tone": "green"
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet.png",
+			"art_rect": [
+				51.6399993896484,
+				301.640014648438,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card_rect": [
+				38.0,
+				288.0,
+				124.0,
+				124.0
+			],
+			"svg": "svg/natural-green.svg",
+			"tone": "green"
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor.png",
+			"art_rect": [
+				571.640014648438,
+				165.639999389648,
+				96.7200012207031,
+				96.7200012207031
+			],
+			"card_rect": [
+				558.0,
+				152.0,
+				124.0,
+				124.0
+			],
+			"svg": "svg/natural-green.svg",
+			"tone": "green"
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"art_rect": [
+				124.879997253418,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card_rect": [
+				106.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"svg": "svg/natural-purple.svg",
+			"tone": "purple"
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"art_rect": [
+				254.880004882813,
+				709.880004882813,
+				80.2399978637695,
+				80.2399978637695
+			],
+			"card_rect": [
+				236.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"svg": "svg/natural-blue.svg",
+			"tone": "blue"
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"art_rect": [
+				378.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card_rect": [
+				366.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"svg": "svg/natural-blue.svg",
+			"tone": "blue"
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"art_rect": [
+				508.980010986328,
+				703.97998046875,
+				92.0400085449219,
+				92.0400085449219
+			],
+			"card_rect": [
+				496.0,
+				691.0,
+				118.0,
+				118.0
+			],
+			"svg": "svg/natural-green.svg",
+			"tone": "green"
+		}
+	],
+	"checks": {
+		"actual_hero_page": true,
+		"art_and_labels_unchanged": true,
+		"fresh_profile": true,
+		"native_capture": true,
+		"no_player_save_write": true,
+		"seven_backgrounds_only": true
+	},
+	"file": "context/natural-hero_450x800.png",
+	"palette": "natural",
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/weapon-frame-colors-context/appdata/Godot/app_userdata/Gear Defenders",
+	"save_after": "absent",
+	"save_before": "absent",
+	"scope": "Only equipment-card backgrounds replaced in-memory. Empty slots, all art, metadata, layout and production files unchanged."
+}

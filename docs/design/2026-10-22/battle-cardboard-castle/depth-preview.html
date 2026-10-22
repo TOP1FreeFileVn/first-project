@@ -1,0 +1,13 @@
+<!doctype html><meta charset="utf-8"><title>Open gate · layer proof</title>
+<style>body{margin:0;background:#e7ece3;color:#583f21;padding:24px;font:16px Arial,sans-serif}h1{font-size:23px;margin:0 0 10px}p{margin:0 0 20px}section{width:760px;padding:20px;border-radius:16px;background:#f4f1e5;margin-bottom:16px}canvas{display:block}.caption{font-size:13px;margin-bottom:10px}</style>
+<h1>Cổng mở · minh họa hình học alpha</h1><p>Proof dùng toàn facade ở trước mèo, chân mèo cổng local y218. Game thật có chân hero local y144 và chỉ đặt dải facade y164..240 ở trước units để giữ giao tranh rõ.</p>
+<section><div class="caption">Minh họa asset: rear → mèo → toàn facade · không phải placement hoặc draw order runtime</div><canvas id="correct" width="720" height="240"></canvas></section>
+<section><div class="caption">Hai lớp cổng phóng riêng để thấy alpha: mặt tiền không phủ kín ô cửa</div><canvas id="gate" width="376" height="352"></canvas></section>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script><script src="castle.js"></script>
+<script>
+const cat=new Image();cat.src='../../../../game/ui/skin/cat_cream.svg';cat.onload=()=>{
+  const c=document.getElementById('correct'),ctx=c.getContext('2d');ctx.fillStyle='#bfd49a';ctx.fillRect(0,0,720,240);Pen.toCanvas(CardboardCastle.layer('rear'),ctx);
+  ctx.drawImage(cat,328,158,64,60);ctx.drawImage(cat,104,84,64,60);Pen.toCanvas(CardboardCastle.layer('facade'),ctx);
+  const g=document.getElementById('gate'),gx=g.getContext('2d');gx.fillStyle='#bfd49a';gx.fillRect(0,0,g.width,g.height);gx.scale(4,4);gx.translate(-313,-132);Pen.toCanvas(CardboardCastle.layer('rear'),gx);gx.drawImage(cat,328,158,64,60);Pen.toCanvas(CardboardCastle.layer('facade'),gx);
+};
+</script>

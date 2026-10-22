@@ -27,8 +27,16 @@ docs/design/2026-10-20/stroke-reference-study/*.png.import
 docs/design/2026-10-20/cat-shooter-background-study/cat-gunner-background-sources.png*
 docs/design/2026-10-21/menu-frame-proposal/cat-gunner-frame-sources.png*
 docs/design/2026-10-21/menu-frame-proposal/cat-gunner-official-merge-upgrade.webp*
+docs/design/2026-10-22/armor-canvas/figma-equipment-reference.png*
+docs/design/2026-10-22/armor-canvas/figma-steel-reference.png*
 # Godot editor profiles/caches captured by review tools
 docs/**/Godot/
+# Windows also matches the lowercase godot/ artwork folders. These four contain
+# canonical equipment PNGs required by the installer, rather than editor data.
+!docs/design/2026-10-22/armor-canvas/godot/
+!docs/design/2026-10-22/hero-gear-canvas/godot/
+!docs/design/2026-10-22/hero-weapons-canvas/godot/
+!docs/design/2026-10-23/hero-equipment-integration/godot/
 
 # Python runtime caches
 __pycache__/

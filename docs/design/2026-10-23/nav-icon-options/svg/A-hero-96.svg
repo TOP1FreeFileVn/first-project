@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="6.022 0.522 186.957 186.957">
+<path d="M92 53 C82 22 105 8 132 17 Q149 21 155 34 Q128 27 111 57 Z" fill="#ef7767" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M31 93 Q26 129 46 150 Q65 174 100 174 Q135 174 154 150 Q174 129 169 93 Z" fill="#f5ad62" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M100 125 C74 125 63 140 66 150 C69 164 85 169 100 169 C115 169 131 164 134 150 C137 140 126 125 100 125 Z" fill="#fffaf1" />
+<path d="M28 103 L37 46 Q39 38 45 42 L76 66 Q100 58 124 66 L155 42 Q161 38 163 46 L172 103 Q100 90 28 103 Z" fill="#dce6eb" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M47 59 L43 83 L68 76 Z" fill="#f5b7a3" />
+<path d="M153 59 L157 83 L132 76 Z" fill="#f5b7a3" />
+<path d="M100 65 L100 85" fill="none" stroke="#95aab4" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M31 92 Q100 79 169 92 L172 103 Q100 90 28 103 Z" fill="#f7cb69" />
+<path d="M28 103 Q100 90 172 103" fill="none" stroke="#583f21" stroke-width="7.5" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M78.15 117.31 C80.88 117.31 83.09 119.52 83.09 122.25 C83.09 124.98 80.88 127.19 78.15 127.19 C75.42 127.19 73.21 124.98 73.21 122.25 C73.21 119.52 75.42 117.31 78.15 117.31 Z" fill="#583f21" />
+<path d="M121.85 117.31 C124.58 117.31 126.79 119.52 126.79 122.25 C126.79 124.98 124.58 127.19 121.85 127.19 C119.12 127.19 116.91 124.98 116.91 122.25 C116.91 119.52 119.12 117.31 121.85 117.31 Z" fill="#583f21" />
+<path d="M88.6 134.6 Q94.3 145.05 100 135.55 Q105.7 145.05 111.4 134.6" fill="none" stroke="#583f21" stroke-width="3.99" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M70 111 L83 115 M130 111 L117 115" fill="none" stroke="#583f21" stroke-width="4.2" stroke-linejoin="round" stroke-linecap="round" />
+</svg>

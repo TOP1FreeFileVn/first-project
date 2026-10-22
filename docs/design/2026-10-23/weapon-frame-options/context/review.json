@@ -1,0 +1,269 @@
+{
+	"captures": [
+		{
+			"cards": [
+				{
+					"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+					"art_rect": [
+						57.8400001525879,
+						171.839996337891,
+						84.3200073242188,
+						84.3200073242188
+					],
+					"card_rect": [
+						38.0,
+						152.0,
+						124.0,
+						124.0
+					],
+					"svg": "svg/A-green.svg",
+					"tone": "green"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_helmet.png",
+					"art_rect": [
+						51.6399993896484,
+						301.640014648438,
+						96.7200012207031,
+						96.7200012207031
+					],
+					"card_rect": [
+						38.0,
+						288.0,
+						124.0,
+						124.0
+					],
+					"svg": "svg/A-green.svg",
+					"tone": "green"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_armor.png",
+					"art_rect": [
+						571.640014648438,
+						165.639999389648,
+						96.7200012207031,
+						96.7200012207031
+					],
+					"card_rect": [
+						558.0,
+						152.0,
+						124.0,
+						124.0
+					],
+					"svg": "svg/A-green.svg",
+					"tone": "green"
+				},
+				{
+					"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+					"art_rect": [
+						124.879997253418,
+						709.880004882813,
+						80.2399978637695,
+						80.2399978637695
+					],
+					"card_rect": [
+						106.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/A-purple.svg",
+					"tone": "purple"
+				},
+				{
+					"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+					"art_rect": [
+						254.880004882813,
+						709.880004882813,
+						80.2399978637695,
+						80.2399978637695
+					],
+					"card_rect": [
+						236.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/A-blue.svg",
+					"tone": "blue"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_helmet_96.png",
+					"art_rect": [
+						378.980010986328,
+						703.97998046875,
+						92.0400085449219,
+						92.0400085449219
+					],
+					"card_rect": [
+						366.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/A-blue.svg",
+					"tone": "blue"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_boots_96.png",
+					"art_rect": [
+						508.980010986328,
+						703.97998046875,
+						92.0400085449219,
+						92.0400085449219
+					],
+					"card_rect": [
+						496.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/A-green.svg",
+					"tone": "green"
+				}
+			],
+			"file": "context/A-hero_450x800.png",
+			"option": "A"
+		},
+		{
+			"cards": [
+				{
+					"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+					"art_rect": [
+						57.8400001525879,
+						171.839996337891,
+						84.3200073242188,
+						84.3200073242188
+					],
+					"card_rect": [
+						38.0,
+						152.0,
+						124.0,
+						124.0
+					],
+					"svg": "svg/E-green.svg",
+					"tone": "green"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_helmet.png",
+					"art_rect": [
+						51.6399993896484,
+						301.640014648438,
+						96.7200012207031,
+						96.7200012207031
+					],
+					"card_rect": [
+						38.0,
+						288.0,
+						124.0,
+						124.0
+					],
+					"svg": "svg/E-green.svg",
+					"tone": "green"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_armor.png",
+					"art_rect": [
+						571.640014648438,
+						165.639999389648,
+						96.7200012207031,
+						96.7200012207031
+					],
+					"card_rect": [
+						558.0,
+						152.0,
+						124.0,
+						124.0
+					],
+					"svg": "svg/E-green.svg",
+					"tone": "green"
+				},
+				{
+					"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+					"art_rect": [
+						124.879997253418,
+						709.880004882813,
+						80.2399978637695,
+						80.2399978637695
+					],
+					"card_rect": [
+						106.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/E-purple.svg",
+					"tone": "purple"
+				},
+				{
+					"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+					"art_rect": [
+						254.880004882813,
+						709.880004882813,
+						80.2399978637695,
+						80.2399978637695
+					],
+					"card_rect": [
+						236.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/E-blue.svg",
+					"tone": "blue"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_helmet_96.png",
+					"art_rect": [
+						378.980010986328,
+						703.97998046875,
+						92.0400085449219,
+						92.0400085449219
+					],
+					"card_rect": [
+						366.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/E-blue.svg",
+					"tone": "blue"
+				},
+				{
+					"art": "res://game/ui/art/icon_eq_boots_96.png",
+					"art_rect": [
+						508.980010986328,
+						703.97998046875,
+						92.0400085449219,
+						92.0400085449219
+					],
+					"card_rect": [
+						496.0,
+						691.0,
+						118.0,
+						118.0
+					],
+					"svg": "svg/E-green.svg",
+					"tone": "green"
+				}
+			],
+			"file": "context/E-hero_450x800.png",
+			"option": "E"
+		}
+	],
+	"checks": {
+		"A_actual_hero_page": true,
+		"A_art_and_labels_unchanged": true,
+		"A_fresh_profile": true,
+		"A_native_capture": true,
+		"A_seven_backgrounds_only": true,
+		"E_actual_hero_page": true,
+		"E_art_and_labels_unchanged": true,
+		"E_fresh_profile": true,
+		"E_native_capture": true,
+		"E_seven_backgrounds_only": true,
+		"no_player_save_write": true
+	},
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/weapon-frame-options/contextQA/appdata/Godot/app_userdata/Gear Defenders",
+	"scope": "Only equipment-card backgrounds replaced in-memory; empty slot and production art/layout unchanged."
+}

@@ -1,0 +1,224 @@
+{
+  "native_renderer": "Godot 4.7.2",
+  "frame_count": 24,
+  "cycle_ms": 3000,
+  "all_frames_inside_canvas": true,
+  "bounds": [
+    {
+      "file": "frame-00.png",
+      "alpha_bbox": [
+        32,
+        12,
+        179,
+        222
+      ]
+    },
+    {
+      "file": "frame-01.png",
+      "alpha_bbox": [
+        32,
+        12,
+        179,
+        222
+      ]
+    },
+    {
+      "file": "frame-02.png",
+      "alpha_bbox": [
+        32,
+        11,
+        180,
+        221
+      ]
+    },
+    {
+      "file": "frame-03.png",
+      "alpha_bbox": [
+        32,
+        11,
+        185,
+        221
+      ]
+    },
+    {
+      "file": "frame-04.png",
+      "alpha_bbox": [
+        32,
+        11,
+        191,
+        221
+      ]
+    },
+    {
+      "file": "frame-05.png",
+      "alpha_bbox": [
+        32,
+        12,
+        194,
+        220
+      ]
+    },
+    {
+      "file": "frame-06.png",
+      "alpha_bbox": [
+        32,
+        12,
+        195,
+        219
+      ]
+    },
+    {
+      "file": "frame-07.png",
+      "alpha_bbox": [
+        32,
+        13,
+        194,
+        220
+      ]
+    },
+    {
+      "file": "frame-08.png",
+      "alpha_bbox": [
+        32,
+        13,
+        191,
+        221
+      ]
+    },
+    {
+      "file": "frame-09.png",
+      "alpha_bbox": [
+        32,
+        14,
+        186,
+        221
+      ]
+    },
+    {
+      "file": "frame-10.png",
+      "alpha_bbox": [
+        32,
+        15,
+        184,
+        221
+      ]
+    },
+    {
+      "file": "frame-11.png",
+      "alpha_bbox": [
+        32,
+        15,
+        181,
+        222
+      ]
+    },
+    {
+      "file": "frame-12.png",
+      "alpha_bbox": [
+        32,
+        16,
+        179,
+        223
+      ]
+    },
+    {
+      "file": "frame-13.png",
+      "alpha_bbox": [
+        32,
+        15,
+        179,
+        222
+      ]
+    },
+    {
+      "file": "frame-14.png",
+      "alpha_bbox": [
+        32,
+        15,
+        179,
+        221
+      ]
+    },
+    {
+      "file": "frame-15.png",
+      "alpha_bbox": [
+        32,
+        14,
+        179,
+        221
+      ]
+    },
+    {
+      "file": "frame-16.png",
+      "alpha_bbox": [
+        32,
+        13,
+        179,
+        221
+      ]
+    },
+    {
+      "file": "frame-17.png",
+      "alpha_bbox": [
+        32,
+        13,
+        179,
+        220
+      ]
+    },
+    {
+      "file": "frame-18.png",
+      "alpha_bbox": [
+        32,
+        12,
+        179,
+        219
+      ]
+    },
+    {
+      "file": "frame-19.png",
+      "alpha_bbox": [
+        32,
+        12,
+        179,
+        220
+      ]
+    },
+    {
+      "file": "frame-20.png",
+      "alpha_bbox": [
+        32,
+        11,
+        179,
+        221
+      ]
+    },
+    {
+      "file": "frame-21.png",
+      "alpha_bbox": [
+        32,
+        11,
+        179,
+        221
+      ]
+    },
+    {
+      "file": "frame-22.png",
+      "alpha_bbox": [
+        32,
+        11,
+        179,
+        221
+      ]
+    },
+    {
+      "file": "frame-23.png",
+      "alpha_bbox": [
+        32,
+        12,
+        179,
+        222
+      ]
+    }
+  ]
+}

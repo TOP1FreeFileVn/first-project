@@ -1,0 +1,21 @@
+{
+  "profile": {
+    "main": 11.35,
+    "secondary": 7.41
+  },
+  "strokes": [
+    {
+      "ink": "#9b7f58",
+      "width": 7.41
+    },
+    {
+      "ink": "#9b7f58",
+      "width": 7.41
+    },
+    {
+      "ink": "#583f21",
+      "width": 11.35
+    }
+  ],
+  "note": "Authored output widths. Final raster measurements and slot review are separate."
+}

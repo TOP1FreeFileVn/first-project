@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="144" height="144" viewBox="-64 -64 128 128"><path d="M10 15 Q29 6 24 -12 L39 -28 Q23 -42 7 -38 Q18 -22 17 -13 Q22 1 8 8 Z" fill="#91aaae" stroke="#583f21" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M25.67 -41.33 C34.75 -38.02 40.92 -32.06 39.44 -28.01 C37.97 -23.97 29.41 -23.36 20.33 -26.67 C11.25 -29.98 5.08 -35.94 6.56 -39.99 C8.03 -44.03 16.59 -44.64 25.67 -41.33 Z" fill="#adc6c7" stroke="#583f21" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M24.57 -38.32 C31.53 -35.79 36.46 -31.8 35.59 -29.42 C34.72 -27.03 28.38 -27.15 21.43 -29.68 C14.47 -32.21 9.54 -36.2 10.41 -38.58 C11.28 -40.97 17.62 -40.85 24.57 -38.32 Z" fill="#5e7c82" />
+<path d="M-31 20 L31 20 Q35 20 35 24 L35 34 Q35 38 31 38 L-31 38 Q-35 38 -35 34 L-35 24 Q-35 20 -31 20 Z" fill="#91aaae" stroke="#583f21" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M-31 27 L31 27 L31 33 L-31 33 Z" fill="#adc6c7" />
+<path d="M0 14 C16.02 14 29 16.24 29 19 C29 21.76 16.02 24 0 24 C-16.02 24 -29 21.76 -29 19 C-29 16.24 -16.02 14 0 14 Z" fill="#adc6c7" stroke="#583f21" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M0 15.1 C12.7 15.1 23 16.71 23 18.7 C23 20.69 12.7 22.3 0 22.3 C-12.7 22.3 -23 20.69 -23 18.7 C-23 16.71 -12.7 15.1 0 15.1 Z" fill="#5e7c82" />
+<path d="M12.61 17.88 L18.01 17.53" fill="none" stroke="#adc6c7" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M27 21 L26 12 Q25 9 20 11 L9 16" fill="none" stroke="#583f21" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M7.8 14.5 L11.7 14.5 Q13 14.5 13 15.8 L13 16.2 Q13 17.5 11.7 17.5 L7.8 17.5 Q6.5 17.5 6.5 16.2 L6.5 15.8 Q6.5 14.5 7.8 14.5 Z" fill="#91aaae" stroke="#583f21" stroke-width="2.9" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M6.98 -20.03 L47.72 -25.83 L49.9 -21.33 L20.03 6.98 Z" fill="#91aaae" stroke="#583f21" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M47.29 -26.73 C49.03 -27.57 51.12 -26.84 51.96 -25.1 C52.8 -23.36 52.07 -21.27 50.33 -20.43 C48.59 -19.58 46.5 -20.31 45.66 -22.05 C44.82 -23.8 45.55 -25.89 47.29 -26.73 Z" fill="#583f21" />
+<path d="M48.16 -24.93 C48.9 -25.29 49.8 -24.98 50.16 -24.23 C50.52 -23.48 50.21 -22.59 49.46 -22.23 C48.71 -21.87 47.82 -22.18 47.46 -22.92 C47.1 -23.67 47.41 -24.57 48.16 -24.93 Z" fill="#adc6c7" /></svg>
