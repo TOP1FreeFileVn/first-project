@@ -1,0 +1,998 @@
+{
+	"assets": [
+		{
+			"kind": "wood",
+			"metadata": {
+				"author_width": 208,
+				"cavity_rect": [
+					-96,
+					-2,
+					192,
+					15
+				],
+				"latch_half_width": 27.566,
+				"layer_notes": "Fixed body and latch; moving lid contains repaired strap/seam only where source lock occluded them. All four textures share texture_rect. Original generated contour/keyhole preserved; no ink dilation.",
+				"layer_order": [
+					"cavity",
+					"body",
+					"lid",
+					"latch"
+				],
+				"main_measurement": {
+					"fitted_range": [
+						6.516,
+						7.518
+					],
+					"method": "Opaque brown runs on straight source wall/bottom, away from rounded joins; source-R<120/G<100/A>240. Fitted by uniform208/sourceAlphaWidth.",
+					"source_samples": {
+						"bottom_column": 140,
+						"bottom_width": 13,
+						"left_wall_rows": [
+							150,
+							160,
+							180
+						],
+						"left_wall_widths": [
+							14,
+							14,
+							15
+						]
+					}
+				},
+				"main_width": 6.766,
+				"palette": {
+					"body": "#eca966",
+					"main": "#583f21",
+					"metal": "#f3c56b",
+					"secondary": "#b07c45"
+				},
+				"scale_from_source": 0.501204819277108,
+				"source": "docs/design/2026-10-23/chest-concept-options/png/B1.png",
+				"source_alpha_bbox": [
+					8,
+					8,
+					423,
+					291
+				],
+				"source_frame": [
+					431,
+					299
+				],
+				"source_seam": [
+					215.0,
+					114
+				],
+				"source_sha256": "bbf277872e21b7af3f7d71bb1cc67e0c0d65b79140a3862ba2d2b0737e65fc92",
+				"texture_rect": [
+					-117.7831,
+					-67.1614,
+					236.0675,
+					169.9084
+				],
+				"textures": {
+					"body": "game/ui/art/chests/strongbox-b/wood/body.png",
+					"closed": "game/ui/art/chests/strongbox-b/wood/closed.png",
+					"latch": "game/ui/art/chests/strongbox-b/wood/latch.png",
+					"lid": "game/ui/art/chests/strongbox-b/wood/lid.png"
+				}
+			}
+		},
+		{
+			"kind": "silver",
+			"metadata": {
+				"author_width": 208,
+				"cavity_rect": [
+					-96,
+					-2,
+					192,
+					15
+				],
+				"latch_half_width": 27.716,
+				"layer_notes": "Fixed body and latch; moving lid contains repaired strap/seam only where source lock occluded them. All four textures share texture_rect. Original generated contour/keyhole preserved; no ink dilation.",
+				"layer_order": [
+					"cavity",
+					"body",
+					"lid",
+					"latch"
+				],
+				"main_measurement": {
+					"fitted_range": [
+						6.611,
+						7.12
+					],
+					"method": "Opaque brown runs on straight source wall/bottom, away from rounded joins; source-R<120/G<100/A>240. Fitted by uniform208/sourceAlphaWidth.",
+					"source_samples": {
+						"bottom_column": 140,
+						"bottom_width": 13,
+						"left_wall_rows": [
+							150,
+							160,
+							180
+						],
+						"left_wall_widths": [
+							14,
+							14,
+							14
+						]
+					}
+				},
+				"main_width": 6.866,
+				"palette": {
+					"body": "#9bcde0",
+					"body_secondary": "#6a98ac",
+					"main": "#583f21",
+					"metal": "#e7e8dc",
+					"metal_secondary": "#96aaa3"
+				},
+				"scale_from_source": 0.508557457212714,
+				"source": "docs/design/2026-10-23/chest-concept-options/png/B2.png",
+				"source_alpha_bbox": [
+					8,
+					8,
+					417,
+					291
+				],
+				"source_frame": [
+					425,
+					299
+				],
+				"source_seam": [
+					212.0,
+					114
+				],
+				"source_sha256": "8c20a52aa4415c20bb7733943394b8f37fab5a3242808b0511484ba9439f1171",
+				"texture_rect": [
+					-117.9853,
+					-68.1467,
+					236.4792,
+					172.401
+				],
+				"textures": {
+					"body": "game/ui/art/chests/strongbox-b/silver/body.png",
+					"closed": "game/ui/art/chests/strongbox-b/silver/closed.png",
+					"latch": "game/ui/art/chests/strongbox-b/silver/latch.png",
+					"lid": "game/ui/art/chests/strongbox-b/silver/lid.png"
+				}
+			}
+		},
+		{
+			"kind": "gold",
+			"metadata": {
+				"author_width": 208,
+				"cavity_rect": [
+					-96,
+					-2,
+					192,
+					15
+				],
+				"gloss_policy": "User requested a richer slightly polished gold shop chest; four authored gold tones retained, coral field flattened.",
+				"latch_half_width": 26.54,
+				"layer_notes": "Fixed body and latch; moving lid contains repaired strap/seam only where source lock occluded them. All four textures share texture_rect. Original generated contour/keyhole preserved; no ink dilation.",
+				"layer_order": [
+					"cavity",
+					"body",
+					"lid",
+					"latch"
+				],
+				"main_measurement": {
+					"fitted_range": [
+						4.317,
+						4.796
+					],
+					"method": "Opaque brown runs on straight source wall/bottom, away from rounded joins; source-R<120/G<100/A>240. Fitted by uniform208/sourceAlphaWidth.",
+					"source_samples": {
+						"bottom_column": 450,
+						"bottom_width": 27,
+						"left_wall_rows": [
+							410,
+							440,
+							480
+						],
+						"left_wall_widths": [
+							30,
+							30,
+							30
+						]
+					}
+				},
+				"main_width": 4.556,
+				"palette": {
+					"body": "#f66b58",
+					"main": "#583f21",
+					"metal": "#ffd363",
+					"metal_highlight": "#fff19e",
+					"metal_shadow": "#e1aa39",
+					"secondary": "#a97526"
+				},
+				"raw_crop": [
+					109,
+					55,
+					1426,
+					927
+				],
+				"raw_source": "output/imagegen/chest-options-2026-10-23/B-v2-raw.png",
+				"raw_source_sha256": "da6329607a4a5071b869d478724b71903e6b40c5ea63c61f03a86d501307f3e8",
+				"scale_from_source": 0.159877017678709,
+				"source": "docs/design/2026-10-23/chest-b-production/gold-source-crop.png",
+				"source_alpha_bbox": [
+					8,
+					8,
+					1309,
+					864
+				],
+				"source_frame": [
+					1317,
+					872
+				],
+				"source_seam": [
+					658.0,
+					333
+				],
+				"source_sha256": "b7aafece4b44cd36bef73c0ec7e6774c95fa322190e194d2dfc302031e00609a",
+				"texture_rect": [
+					-108.3966,
+					-56.4366,
+					216.9531,
+					145.8078
+				],
+				"textures": {
+					"body": "game/ui/art/chests/strongbox-b/gold/body.png",
+					"closed": "game/ui/art/chests/strongbox-b/gold/closed.png",
+					"latch": "game/ui/art/chests/strongbox-b/gold/latch.png",
+					"lid": "game/ui/art/chests/strongbox-b/gold/lid.png"
+				}
+			}
+		}
+	],
+	"captures": [
+		{
+			"file": "icon-wood-26.png",
+			"size": [
+				26,
+				26
+			]
+		},
+		{
+			"file": "icon-wood-48.png",
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"file": "icon-wood-64.png",
+			"size": [
+				64,
+				64
+			]
+		},
+		{
+			"file": "icon-wood-96.png",
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"file": "icon-wood-128.png",
+			"size": [
+				128,
+				128
+			]
+		},
+		{
+			"file": "icon-wood-256.png",
+			"size": [
+				256,
+				256
+			]
+		},
+		{
+			"file": "icon-silver-26.png",
+			"size": [
+				26,
+				26
+			]
+		},
+		{
+			"file": "icon-silver-48.png",
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"file": "icon-silver-64.png",
+			"size": [
+				64,
+				64
+			]
+		},
+		{
+			"file": "icon-silver-96.png",
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"file": "icon-silver-128.png",
+			"size": [
+				128,
+				128
+			]
+		},
+		{
+			"file": "icon-silver-256.png",
+			"size": [
+				256,
+				256
+			]
+		},
+		{
+			"file": "icon-gold-26.png",
+			"size": [
+				26,
+				26
+			]
+		},
+		{
+			"file": "icon-gold-48.png",
+			"size": [
+				48,
+				48
+			]
+		},
+		{
+			"file": "icon-gold-64.png",
+			"size": [
+				64,
+				64
+			]
+		},
+		{
+			"file": "icon-gold-96.png",
+			"size": [
+				96,
+				96
+			]
+		},
+		{
+			"file": "icon-gold-128.png",
+			"size": [
+				128,
+				128
+			]
+		},
+		{
+			"file": "icon-gold-256.png",
+			"size": [
+				256,
+				256
+			]
+		},
+		{
+			"file": "accepted-chest-icon-routes.png",
+			"size": [
+				1200,
+				300
+			]
+		},
+		{
+			"file": "tier-and-small-symbols.png",
+			"size": [
+				1200,
+				810
+			]
+		},
+		{
+			"file": "separate-lid-states.png",
+			"size": [
+				1200,
+				600
+			]
+		},
+		{
+			"file": "shop-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "lobby-chest-counter-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-wait-wood-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-open-wood-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-card-wood-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-wait-silver-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-open-silver-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-card-silver-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-wait-gold-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-open-gold-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "actual-card-gold-360x640.png",
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "shop-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "lobby-chest-counter-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-wait-wood-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-open-wood-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-card-wood-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-wait-silver-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-open-silver-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-card-silver-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-wait-gold-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-open-gold-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "actual-card-gold-450x800.png",
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": 223,
+	"contract": "Selected strongbox B artwork in actual DrawnIcon, Shop, live lobby counter and ChestOpening; all three tiers; independent lid flight; fixed body and latch.",
+	"failures": [],
+	"icon_bounds": [
+		{
+			"control": [
+				13,
+				13,
+				26,
+				26
+			],
+			"kind": "wood",
+			"painted": [
+				14,
+				19,
+				24,
+				16
+			],
+			"size": 26
+		},
+		{
+			"control": [
+				24,
+				24,
+				48,
+				48
+			],
+			"kind": "wood",
+			"painted": [
+				26,
+				35,
+				44,
+				29
+			],
+			"size": 48
+		},
+		{
+			"control": [
+				32,
+				32,
+				64,
+				64
+			],
+			"kind": "wood",
+			"painted": [
+				35,
+				46,
+				58,
+				40
+			],
+			"size": 64
+		},
+		{
+			"control": [
+				48,
+				48,
+				96,
+				96
+			],
+			"kind": "wood",
+			"painted": [
+				53,
+				70,
+				86,
+				59
+			],
+			"size": 96
+		},
+		{
+			"control": [
+				64,
+				64,
+				128,
+				128
+			],
+			"kind": "wood",
+			"painted": [
+				70,
+				93,
+				116,
+				79
+			],
+			"size": 128
+		},
+		{
+			"control": [
+				128,
+				128,
+				256,
+				256
+			],
+			"kind": "wood",
+			"painted": [
+				141,
+				185,
+				231,
+				158
+			],
+			"size": 256
+		},
+		{
+			"control": [
+				13,
+				13,
+				26,
+				26
+			],
+			"kind": "silver",
+			"painted": [
+				14,
+				19,
+				24,
+				16
+			],
+			"size": 26
+		},
+		{
+			"control": [
+				24,
+				24,
+				48,
+				48
+			],
+			"kind": "silver",
+			"painted": [
+				26,
+				35,
+				44,
+				30
+			],
+			"size": 48
+		},
+		{
+			"control": [
+				32,
+				32,
+				64,
+				64
+			],
+			"kind": "silver",
+			"painted": [
+				35,
+				46,
+				58,
+				40
+			],
+			"size": 64
+		},
+		{
+			"control": [
+				48,
+				48,
+				96,
+				96
+			],
+			"kind": "silver",
+			"painted": [
+				53,
+				69,
+				86,
+				60
+			],
+			"size": 96
+		},
+		{
+			"control": [
+				64,
+				64,
+				128,
+				128
+			],
+			"kind": "silver",
+			"painted": [
+				70,
+				92,
+				116,
+				80
+			],
+			"size": 128
+		},
+		{
+			"control": [
+				128,
+				128,
+				256,
+				256
+			],
+			"kind": "silver",
+			"painted": [
+				141,
+				184,
+				231,
+				160
+			],
+			"size": 256
+		},
+		{
+			"control": [
+				13,
+				13,
+				26,
+				26
+			],
+			"kind": "gold",
+			"painted": [
+				14,
+				19,
+				24,
+				15
+			],
+			"size": 26
+		},
+		{
+			"control": [
+				24,
+				24,
+				48,
+				48
+			],
+			"kind": "gold",
+			"painted": [
+				26,
+				35,
+				44,
+				28
+			],
+			"size": 48
+		},
+		{
+			"control": [
+				32,
+				32,
+				64,
+				64
+			],
+			"kind": "gold",
+			"painted": [
+				35,
+				47,
+				58,
+				38
+			],
+			"size": 64
+		},
+		{
+			"control": [
+				48,
+				48,
+				96,
+				96
+			],
+			"kind": "gold",
+			"painted": [
+				53,
+				70,
+				86,
+				57
+			],
+			"size": 96
+		},
+		{
+			"control": [
+				64,
+				64,
+				128,
+				128
+			],
+			"kind": "gold",
+			"painted": [
+				70,
+				93,
+				116,
+				76
+			],
+			"size": 128
+		},
+		{
+			"control": [
+				128,
+				128,
+				256,
+				256
+			],
+			"kind": "gold",
+			"painted": [
+				141,
+				187,
+				230,
+				152
+			],
+			"size": 256
+		}
+	],
+	"icon_routes": [
+		{
+			"path": "res://game/ui/art/icon_chest_32.png",
+			"size": 32
+		},
+		{
+			"path": "res://game/ui/art/icon_chest_48.png",
+			"size": 48
+		},
+		{
+			"path": "res://game/ui/art/icon_chest_64.png",
+			"size": 64
+		},
+		{
+			"path": "res://game/ui/art/icon_chest_96.png",
+			"size": 96
+		},
+		{
+			"path": "res://game/ui/art/icon_chest.png",
+			"size": 128
+		}
+	],
+	"mode": "all-tiers",
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/chest-b-integration-profile/Roaming/Godot/app_userdata/Gear Defenders",
+	"shop_layouts": [
+		{
+			"size": [
+				360,
+				640
+			],
+			"tiers": [
+				{
+					"control": [
+						248.0,
+						248.0
+					],
+					"kind": "gold",
+					"painted_in_stage": [
+						12.59375,
+						24.9162521362305,
+						222.8125,
+						147.25
+					],
+					"stage": [
+						248.0,
+						183.520004272461
+					]
+				},
+				{
+					"control": [
+						200.0,
+						200.0
+					],
+					"kind": "wood",
+					"painted_in_stage": [
+						10.15625,
+						18.53125,
+						180.46875,
+						123.4375
+					],
+					"stage": [
+						200.0,
+						148.0
+					]
+				},
+				{
+					"control": [
+						200.0,
+						200.0
+					],
+					"kind": "silver",
+					"painted_in_stage": [
+						10.15625,
+						17.75,
+						180.46875,
+						125.0
+					],
+					"stage": [
+						200.0,
+						148.0
+					]
+				}
+			]
+		},
+		{
+			"size": [
+				450,
+				800
+			],
+			"tiers": [
+				{
+					"control": [
+						248.0,
+						248.0
+					],
+					"kind": "gold",
+					"painted_in_stage": [
+						12.59375,
+						24.9162521362305,
+						222.8125,
+						147.25
+					],
+					"stage": [
+						248.0,
+						183.520004272461
+					]
+				},
+				{
+					"control": [
+						200.0,
+						200.0
+					],
+					"kind": "wood",
+					"painted_in_stage": [
+						10.15625,
+						18.53125,
+						180.46875,
+						123.4375
+					],
+					"stage": [
+						200.0,
+						148.0
+					]
+				},
+				{
+					"control": [
+						200.0,
+						200.0
+					],
+					"kind": "silver",
+					"painted_in_stage": [
+						10.15625,
+						17.75,
+						180.46875,
+						125.0
+					],
+					"stage": [
+						200.0,
+						148.0
+					]
+				}
+			]
+		}
+	],
+	"sizes": [
+		[
+			360,
+			640
+		],
+		[
+			450,
+			800
+		]
+	]
+}

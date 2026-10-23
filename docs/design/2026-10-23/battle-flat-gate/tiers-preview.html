@@ -1,0 +1,18 @@
+<!doctype html><meta charset="utf-8"><title>Battle castle tiers</title>
+<style>body{margin:0;background:#a9c98a;font:600 14px system-ui;color:#583f21}.c{padding:6px 10px}canvas{display:block}</style>
+<div id="host"></div>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="../castle-tiers-canvas/castle.js"></script>
+<script>const LobbyCastle = Castle;</script>
+<script src="castle.js"></script>
+<script>
+  const cloth = (big) => LobbyCastle.cloth(big, 440, 0);
+  for (let t = 1; t <= 5; t++) {
+    const d = document.createElement('div'); d.className = 'c'; d.textContent = 'Hình ' + t;
+    const c = document.createElement('canvas'); c.width = 720; c.height = 240; d.appendChild(c); host.appendChild(d);
+    const ctx = c.getContext('2d');
+    const r = CardboardCastle.draw(t, 'composite');
+    Pen.toCanvas(r.ops, ctx);
+    for (const a of r.anchors) { ctx.save(); ctx.translate(a.x, a.y); Pen.toCanvas(cloth(a.big), ctx); ctx.restore(); }
+  }
+</script>

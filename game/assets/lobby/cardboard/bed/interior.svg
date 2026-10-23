@@ -1,10 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
 <g id="interior" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M25 187 L43 166 H213 L231 187 V213 Q231 224 220 224 H36
-           Q25 224 25 213 Z" fill="#e9c68a"/>
-  <path d="M53 190 C53 179 76 174 128 174 C180 174 203 179 203 190
-           V203 Q203 216 188 216 H68 Q53 216 53 203 Z"
-        fill="#fff0be" stroke="#b58950" stroke-width="2.5"/>
-  <path d="M113 185 Q128 192 143 185" fill="none" stroke="#d8bc86" stroke-width="2.5"/>
+  <!-- One quiet cardboard floor: no cushion, extra prop or front sill. -->
+  <path d="M25 187 L45 168 H211 L231 187 V212 Q231 224 220 224 H36 Q25 224 25 212 Z" fill="#d4a065"/>
+  <path d="M43 188 L57 177 H199 L213 188 V211 Q213 216 207 216 H49 Q43 216 43 211 Z" fill="#e8bb7c"/>
 </g>
 </svg>

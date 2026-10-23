@@ -6,6 +6,14 @@ for(const f of [path.join(root,'.claude/skills/canvas-vector-art/scripts/pen.js'
 const out=path.join(root,'game/assets/battle/cardboard-castle');
 fs.mkdirSync(out,{recursive:true});
 for(const name of ['rear','facade','composite'])fs.writeFileSync(path.join(out,name+'.svg'),Pen.toSvg(CardboardCastle.layer(name),720,240));
+// Upgrade tiers 1-5: rear (bare poles behind units) + facade (wall in front). Cloths are drawn
+// by the game from tiers.json anchors, reusing the lobby flag art.
+const tiers={};
+for(let t=1;t<=5;t++){
+ for(const name of ['rear','facade'])fs.writeFileSync(path.join(out,`tier-${t}-${name}.svg`),Pen.toSvg(CardboardCastle.draw(t,name).ops,720,240));
+ tiers[t]=CardboardCastle.draw(t,'composite').anchors;
+}
+fs.writeFileSync(path.join(out,'tiers.json'),JSON.stringify({canvas:[720,240],flag_pad:8,tiers},null,1)+String.fromCharCode(10));
 const manifest={
  id:'battle-cardboard-castle-v3-flat-gate',status:'in-game',
  source:'docs/design/2026-10-23/battle-flat-gate/castle.js',canvas:[720,240],origin:[0,0],

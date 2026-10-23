@@ -1,0 +1,32 @@
+[
+  {
+    "stage": 11,
+    "name": "Bến Cảng",
+    "ground": "output/imagegen/battle-regions/11-ben-cang/battlefield.png",
+    "title": "output/imagegen/map-titles-11-15/11-ben-cang/landscape-raw.png"
+  },
+  {
+    "stage": 12,
+    "name": "Rừng Sương",
+    "ground": "output/imagegen/battle-regions/12-rung-suong/battlefield.png",
+    "title": "output/imagegen/map-titles-11-15/12-rung-suong/landscape-raw.png"
+  },
+  {
+    "stage": 13,
+    "name": "Đồi Cừu",
+    "ground": "output/imagegen/battle-regions/13-doi-cuu/battlefield.png",
+    "title": "output/imagegen/map-titles-11-15/13-doi-cuu/landscape-raw.png"
+  },
+  {
+    "stage": 14,
+    "name": "Mỏ Vàng",
+    "ground": "output/imagegen/battle-regions/14-mo-vang/battlefield.png",
+    "title": "output/imagegen/map-titles-11-15/14-mo-vang/landscape-raw.png"
+  },
+  {
+    "stage": 15,
+    "name": "Cầu Đá",
+    "ground": "output/imagegen/battle-regions/15-cau-da/battlefield.png",
+    "title": "output/imagegen/map-titles-11-15/15-cau-da/landscape-raw.png"
+  }
+]

@@ -1,0 +1,1302 @@
+{
+	"checks": [
+		{
+			"name": "stage-01-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-01-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-01-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-01-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-01-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-01-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-01-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-01-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-01-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-01-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-01-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-01-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-01-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-01-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-01-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-01-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-01-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-01-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-01",
+			"passed": true
+		},
+		{
+			"name": "stage-02-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-02-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-02-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-02-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-02-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-02-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-02-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-02-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-02-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-02-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-02-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-02-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-02-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-02-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-02-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-02-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-02-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-02-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-02",
+			"passed": true
+		},
+		{
+			"name": "stage-03-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-03-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-03-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-03-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-03-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-03-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-03-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-03-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-03-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-03-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-03-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-03-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-03-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-03-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-03-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-03-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-03-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-03-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-03",
+			"passed": true
+		},
+		{
+			"name": "stage-04-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-04-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-04-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-04-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-04-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-04-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-04-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-04-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-04-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-04-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-04-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-04-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-04-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-04-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-04-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-04-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-04-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-04-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-04",
+			"passed": true
+		},
+		{
+			"name": "stage-05-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-05-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-05-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-05-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-05-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-05-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-05-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-05-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-05-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-05-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-05-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-05-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-05-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-05-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-05-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-05-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-05-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-05-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-05",
+			"passed": true
+		},
+		{
+			"name": "stage-06-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-06-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-06-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-06-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-06-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-06-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-06-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-06-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-06-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-06-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-06-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-06-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-06-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-06-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-06-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-06-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-06-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-06-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-06",
+			"passed": true
+		},
+		{
+			"name": "stage-07-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-07-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-07-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-07-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-07-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-07-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-07-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-07-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-07-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-07-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-07-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-07-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-07-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-07-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-07-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-07-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-07-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-07-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-07",
+			"passed": true
+		},
+		{
+			"name": "stage-08-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-08-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-08-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-08-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-08-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-08-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-08-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-08-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-08-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-08-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-08-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-08-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-08-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-08-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-08-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-08-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-08-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-08-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-08",
+			"passed": true
+		},
+		{
+			"name": "stage-09-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-09-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-09-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-09-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-09-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-09-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-09-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-09-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-09-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-09-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-09-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-09-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-09-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-09-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-09-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-09-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-09-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-09-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "next-arrow-09",
+			"passed": true
+		},
+		{
+			"name": "stage-10-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-10-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-10-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-10-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-10-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-10-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-10-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-10-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-10-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-10-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-10-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-10-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "native-shop-tab",
+			"passed": true
+		},
+		{
+			"name": "native-battle-tab-restores-stage",
+			"passed": true
+		},
+		{
+			"name": "stage-10-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-10-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-10-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-10-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-10-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-10-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-10-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-10-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-10-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-10-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "native-previous-arrow",
+			"passed": true
+		},
+		{
+			"name": "native-next-after-previous",
+			"passed": true
+		},
+		{
+			"name": "stage-10-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-10-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-10-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-10-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-10-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-10-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-10-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-10-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-10-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-10-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "stage-10-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-10-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-10-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-10-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-10-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-10-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-10-panel-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-background-texture-present",
+			"passed": true
+		},
+		{
+			"name": "stage-10-approved-panel-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-banner-clear-of-castle-bubble",
+			"passed": true
+		},
+		{
+			"name": "stage-10-flat-backdrop-rect",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-bound-to-selected-level",
+			"passed": true
+		},
+		{
+			"name": "stage-10-texture-size",
+			"passed": true
+		},
+		{
+			"name": "stage-10-packable-level-dependency",
+			"passed": true
+		},
+		{
+			"name": "stage-10-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-10-small-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-10-small-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "fallback-navigation-11",
+			"passed": true
+		},
+		{
+			"name": "stage-11-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-11-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-11-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-11-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-11-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-11-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-11-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-11-unassigned-map-text-fallback",
+			"passed": true
+		},
+		{
+			"name": "stage-11-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "home-11-fallback-capture-size",
+			"passed": true
+		},
+		{
+			"name": "home-11-fallback-capture-saved",
+			"passed": true
+		},
+		{
+			"name": "fallback-navigation-12",
+			"passed": true
+		},
+		{
+			"name": "stage-12-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-12-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-12-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-12-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-12-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-12-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-12-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-12-unassigned-map-text-fallback",
+			"passed": true
+		},
+		{
+			"name": "stage-12-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "fallback-navigation-13",
+			"passed": true
+		},
+		{
+			"name": "stage-13-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-13-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-13-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-13-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-13-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-13-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-13-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-13-unassigned-map-text-fallback",
+			"passed": true
+		},
+		{
+			"name": "stage-13-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "fallback-navigation-14",
+			"passed": true
+		},
+		{
+			"name": "stage-14-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-14-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-14-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-14-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-14-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-14-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-14-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-14-unassigned-map-text-fallback",
+			"passed": true
+		},
+		{
+			"name": "stage-14-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "fallback-navigation-15",
+			"passed": true
+		},
+		{
+			"name": "stage-15-real-home-page",
+			"passed": true
+		},
+		{
+			"name": "stage-15-page-selected",
+			"passed": true
+		},
+		{
+			"name": "stage-15-separate-live-title-label",
+			"passed": true
+		},
+		{
+			"name": "stage-15-courtyard-and-cats-persist",
+			"passed": true
+		},
+		{
+			"name": "stage-15-save-disabled",
+			"passed": true
+		},
+		{
+			"name": "stage-15-title-centered",
+			"passed": true
+		},
+		{
+			"name": "stage-15-approved-font-colors",
+			"passed": true
+		},
+		{
+			"name": "stage-15-unassigned-map-text-fallback",
+			"passed": true
+		},
+		{
+			"name": "stage-15-matching-arrow-buttons",
+			"passed": true
+		},
+		{
+			"name": "no-save-file-created",
+			"passed": true
+		}
+	],
+	"failures": [],
+	"no_save_file_created": true,
+	"scope": "Actual Home, 10 selected black-stroked regional map title textures at 476x90 inside the unchanged 476x106 holder, native arrow and tab navigation, 5 map-name fallbacks, persistent courtyard and three cat actors. Separate live label over background art.",
+	"screenshots": [
+		{
+			"background": "res://game/assets/lobby/map-titles/01-dong-co.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-01.png",
+			"stage": 1,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/02-doi-da.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-02.png",
+			"stage": 2,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/03-phao-dai-do.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-03.png",
+			"stage": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/04-rung-thong.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-04.png",
+			"stage": 4,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/05-hem-nui.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-05.png",
+			"stage": 5,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/06-lang-bo-hoang.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-06.png",
+			"stage": 6,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/07-dam-lay.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-07.png",
+			"stage": 7,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/08-thanh-da-den.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-08.png",
+			"stage": 8,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/09-cong-phao-dai.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-09.png",
+			"stage": 9,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/10-vua-do.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-10.png",
+			"stage": 10,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"background": "res://game/assets/lobby/map-titles/10-vua-do.png",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-10-small.png",
+			"stage": 10,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"background": "",
+			"path": "res://docs/ui_review/2026-10-23/lobby-regional-titles-black-stroke/home-11-fallback.png",
+			"stage": 11,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"user_data_dir": "C:/Users/dangp/GodotProjects/first-project/tmp/lobby-regional-profile-2620627de7a6461988d70752957bada8/Godot/app_userdata/Gear Defenders"
+}

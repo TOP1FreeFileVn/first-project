@@ -1,0 +1,174 @@
+{
+  "review_only": false,
+  "production_changed": true,
+  "workflow": "User-authorized 9Router Responses image_generation route",
+  "requested_image_model": "gpt-image-2.5-sunburst",
+  "standard_cli_attempt": {
+    "model": "gpt-image-2",
+    "endpoint": "images/edits",
+    "status": "HTTP 500; no image produced"
+  },
+  "selected_raws": {
+    "A": "output/imagegen/chest-options-2026-10-23/A-raw.png",
+    "B": "output/imagegen/chest-options-2026-10-23/B-raw.png",
+    "C": "output/imagegen/chest-options-2026-10-23/C-v2-raw.png",
+    "D": "output/imagegen/chest-options-2026-10-23/D-raw.png"
+  },
+  "calls": [
+    {
+      "review_only": true,
+      "production_changed": false,
+      "family": "A",
+      "requested_image_model": "gpt-image-2.5-sunburst",
+      "orchestrator": "cx/gpt-6-astra",
+      "transport": "9Router local /v1/responses",
+      "quality": "medium",
+      "requested_size": "1536x1024",
+      "user_authorized_custom_route": true,
+      "started_utc": "2026-10-23T16:40:52.5499330Z",
+      "prompt": "prompts/A.txt",
+      "reference_files": [
+        "game/ui/art/cat_hero.png",
+        "docs/design/2026-10-22/chest-premium/round-2.png"
+      ],
+      "status": "generated",
+      "finished_utc": "2026-10-23T16:42:01.4239556Z",
+      "output": "A-raw.png",
+      "response_id": "resp_06a68d30a00451be016adb8e1b947887d0b345fb2262ef047f",
+      "response_model": null,
+      "image_call_id": "ig_06a68d30a00451be016adb8e1e5df087d0b9124c835f04653e",
+      "revised_prompt": "Create a polished flat 2D game asset concept sheet, 1536x1024 landscape, solid off-white #f6f0df background. EXACTLY THREE CLOSED treasure chests in one horizontal row, pure straight front elevation with absolutely no visible tops or side planes, no perspective. Left center x256 width340, middle center x768 width340, right center x1280 width410. All bottoms baseline y740, abundant blank space around each. No text, labels, numbers, UI, border, shadows, extras or characters. Reference attached orange cat ONLY for chunky rounded flat cartoon style and smooth thick warm brown outlines, NOT any cat features. Previous chest reference ONLY for wood/orange, silver/blue, gold/coral color relationships; completely replace its low clipped angular lid and cat lock.\nDesign a coherent NEW family of plump DOMED treasure chests: defining contour is a high generous softly curved barrel-vault lid above a broad squat rounded body, dome occupies about 40 percent of total height. Unmistakably curved arched tops, never low polygonal clipped lids. Closed lids have a strong horizontal structural overlapping lip across the front. Two broad vertical wraparound reinforcement straps, one on each shoulder, continuing down body; each has a single large centered rounded rectangular metal lock with simple dark keyhole. No pointed cat ears on locks. Front view construction clear, shared edges drawn only once. Left chest honey-orange wood with understated brass straps, only one or two subtle short construction seams, no grain. Middle pale desaturated blue body with ivory-silver straps and broader rounded shoulder caps, wide clean blue fill areas. Right chest richer and larger: warm coral-red body, bright honey-gold frame and broad straps, fuller taller curved dome, a broader integrated brass top cap following upper arch, substantial integrated reinforced feet, larger centered rounded rectangular lock. Gold richness comes from sturdy construction not ornaments. No dangling metal tab below lock, jewel, crown, wings, mascot or lid gemstone.\nUse reference-compatible smooth warm brown #583f21 thick contour about16px at360px chest width, rounded joins and caps. Subordinate seams only about7px in material colors (muted warm brown wood, muted blue gray silver, ochre gold). Broad unlined opaque color planes, do not outline every colored region. Each chest one body color plus one metal color and at most one related material plane. Keep all detailing clear at64-100px thumbnail size. Friendly powerful charming crafted silhouettes. Absolutely flat fills; no gradients, rendering, shine, specular highlights, sparkles, texture, noise, scratches, thin gray trims, dense rivets, shadows or open chests. Exactly three separate closed objects, no floating elements, no ground line."
+    },
+    {
+      "review_only": true,
+      "production_changed": false,
+      "family": "B",
+      "requested_image_model": "gpt-image-2.5-sunburst",
+      "orchestrator": "cx/gpt-6-astra",
+      "transport": "9Router local /v1/responses",
+      "quality": "medium",
+      "requested_size": "1536x1024",
+      "user_authorized_custom_route": true,
+      "started_utc": "2026-10-23T16:41:15.4671811Z",
+      "prompt": "prompts/B.txt",
+      "reference_files": [
+        "game/ui/art/cat_hero.png",
+        "docs/design/2026-10-22/chest-premium/round-2.png"
+      ],
+      "status": "generated",
+      "finished_utc": "2026-10-23T16:42:25.0760878Z",
+      "output": "B-raw.png",
+      "response_id": "resp_04e186898a053be3016adb8e32c35487d0b4cd7487f8b310ab",
+      "response_model": null,
+      "image_call_id": "ig_04e186898a053be3016adb8e35f98087d0924d1e22d8c3d599",
+      "revised_prompt": "Create a polished flat 2D game asset concept sheet, 1536x1024 canvas, solid off-white #f6f0df background. Exactly THREE separate CLOSED fortified flat-lid treasure strongboxes, one horizontal row, front orthographic elevation with NO perspective or side planes. Baselines precisely y740, centers x256,768,1280. First two widths about 340px, premium third width 410px. First two heights about 235px, premium about 280px. Large empty background above and below; all objects at least 70px from edges. NO text or labels anywhere. Use supplied cat image only for graphic style: chunky rounded shapes, flat opaque colors, smooth warm brown outlines #583f21, 16px primary outlines with rounded joins. Do NOT depict cat, face, paws, sword. Prior chest image only provides tier palette, do NOT copy construction or cat-shaped locks.\nFamily B shared design: squat wide rectangular heavy coffer, confidently softly clipped upper shoulders, low thick perfectly flat lid approximately one fifth of chest height, large fitted L-shaped corner shoes, broad integrated central vertical clasp carrying a simple rounded-square keyhole plate. Clasp is unmistakably rectangular with softened corners, no ears or animal motif. Single clean horizontal opening seam, CLOSED lids, no double outlines. Must look compact, reassuringly heavy and playful, like a treasure strongbox, not a safe or suitcase. Broad armor really defines silhouette, not pasted-on decoration.\nLEFT wood tier: warm honey-orange broad wood boards, compact warm brass upper corner plates and large fitted L-shaped lower corner shoes, strong central brass clasp and rounded-square keyhole plate. Only one or two quiet broad board seams. MIDDLE silver tier: pale blue body, broad ivory-silver corner armor, wider flat ivory-silver lid cap; one quiet thin panel seam only. Integrated broad ivory-silver clasp with simple dark keyhole. RIGHT premium gold tier: visibly bigger and sturdier with larger clipped shoulders, coral-red center body framed by strong continuous thick honey-gold structural perimeter, low flat gold lid cap, broad substantial golden L-shaped feet and prominent brass rounded-square lock plate. Large uncluttered flat red and gold fields. Gold frame must feel load bearing, no excessive decoration.\nStrict flat clean casual cartoon rendering: only two stroke roles, main warm-brown 16px contours and secondary about 7px softer material-related brown, blue-gray or ochre seams. Color boundaries often unlined; shared edges drawn only once. Avoid dark knots at silhouette junctions. Each chest limited to body color, reinforcing metal color and one related material plane, plus outline. Pure opaque fills, NO gradients, highlights, shadows, gloss, texture, woodgrain, micro rivets, tiny trim, 3D, isometric. NO crown, gemstones, cat-head decoration, wheels, hanging tabs beneath locks, handles, safe-door dials, elaborate mechanics, coins, sparkles, additional objects, open versions, UI, frames, numbers, lettering. Readable silhouettes and strong locks at 64â100px thumbnail size. Return only the finished image."
+    },
+    {
+      "review_only": true,
+      "production_changed": false,
+      "family": "C",
+      "requested_image_model": "gpt-image-2.5-sunburst",
+      "orchestrator": "cx/gpt-6-astra",
+      "transport": "9Router local /v1/responses",
+      "quality": "medium",
+      "requested_size": "1536x1024",
+      "user_authorized_custom_route": true,
+      "started_utc": "2026-10-23T16:41:15.4138822Z",
+      "prompt": "prompts/C.txt",
+      "reference_files": [
+        "game/ui/art/cat_hero.png",
+        "docs/design/2026-10-22/chest-premium/round-2.png"
+      ],
+      "status": "generated",
+      "finished_utc": "2026-10-23T16:42:24.7740449Z",
+      "output": "C-raw.png",
+      "response_id": "resp_0266d0ba6df3b7d6016adb8e3258d487d0807fcd0736568500",
+      "response_model": null,
+      "image_call_id": "ig_0266d0ba6df3b7d6016adb8e34c56887d0bbef8f1c596faba0",
+      "revised_prompt": "Create a polished flat 2D game asset concept sheet, 1536x1024, solid off-white #f6f0df. Exactly THREE CLOSED cardboard treasure parcels, front elevation orthographic, in a single horizontal row, centers x256,768,1280, bottom baseline y740. First two widths 340px and heights about 310px, last width 410px height 370px. Ample blank padding. NO text anywhere. Use supplied orange cat ONLY for smooth chunky flat cartoon graphic style, not subject; old chests ONLY for tier colors, NOT silhouettes. These must be visibly plump squared SHIPPING CARTONS with softly bulging sides, rounded corners, shallow folded tops, two closed side flaps meeting at a subtle central join, no separate chest lid. No perspective side walls or visible depth. Cardboard construction explained with a few broad soft crease lines and folded corner planes. Broad packing tape crosses the top meeting seam, descends the front and ends at substantial central metal fastening patch. Loot storage, not gifts or traditional wooden chests. Left: honey kraft board with broad pale cream packing tape and sturdy warm brass rounded rectangular center clasp. Center: pale muted blue cardboard carton with substantial wide ivory silver fitted sleeve reinforcements and large silver center fastening plate. Right: larger thick warm coral red carton, broad bright honey gold reinforcement straps, substantial fitted folded corner guards and large rounded-square gold lock plate. Hardware simple, bold and readable, small single keyhole acceptable, no dangling tabs. Clear increasing reinforcement and value across tiers. Retain broad visible cardboard areas, coherent related carton shapes. Warm brown #583f21 smooth thick silhouette outlines roughly 16px for 360px box, round joins; secondary fold creases 7px, muted material-relative tan blue gray ochre. Broad unlined tape color areas, avoid outlining every tape region. One shared edge once, no doubled dark edges. Flat opaque colors only, restrained palette per box: body color, reinforcement color, related flat folded material plane. Match reference cat's smooth warm contour and softly chunky clean mobile game art. Each body near rounded square, NOT domed or suitcase lid, no horizontal chest lid split. Nothing protrudes from closed flaps. No cats, faces, ears, paws, weapons, people, bows, symbols, labels, shipping printing, writing, numbers, stickers, jewels, gems, tiny rivets, microdetails, corrugation texture, wood texture, realistic rendering, gradients, shine, grain, bloom, sparkles, shadows, ground shadows, frames, UI, extra objects or alternate views. Exactly three separate closed cartons, no additional objects."
+    },
+    {
+      "review_only": true,
+      "production_changed": false,
+      "family": "C",
+      "revision": 2,
+      "requested_image_model": "gpt-image-2.5-sunburst",
+      "orchestrator": "cx/gpt-6-astra",
+      "transport": "9Router local /v1/responses",
+      "quality": "medium",
+      "requested_size": "1536x1024",
+      "user_authorized_custom_route": true,
+      "started_utc": "2026-10-23T16:45:28.9786747Z",
+      "prompt": "prompts/C-v2.txt",
+      "reference_files": [
+        "game/ui/art/cat_hero.png",
+        "docs/design/2026-10-22/chest-premium/round-2.png",
+        "output/imagegen/chest-options-2026-10-23/C-raw.png"
+      ],
+      "status": "generated",
+      "finished_utc": "2026-10-23T16:46:32.6974679Z",
+      "output": "C-v2-raw.png",
+      "response_id": "resp_0dc062861cf3ec9f016adb8f2ff5b887d0add9729730331aa8",
+      "response_model": null,
+      "image_call_id": "ig_0dc062861cf3ec9f016adb8f326acc87d083b1b2a50f329463",
+      "revised_prompt": "Create a corrected flat vector game asset concept sheet, 1536x1024, uniform off-white #f6f0df. Exactly THREE CLOSED RIGID CARDBOARD treasure cartons in one horizontal row, pure frontal orthographic 2D. Centers x256,768,1280; identical baseline y740; basic and silver each width330 height330; gold width395 height390. Generous separation. Follow attached cat reference ONLY for bold clean flat graphic style, never depict cat. Attached last attempt is specifically WRONG in its padded shape, top perspective, flap and rendering: correct all of these. Each carton has perfectly straight vertical walls, level straight horizontal top and bottom, almost square rectangular silhouette with only tiny rounded corner bevels. NO perspective top plane, sloping shoulders, domed roof, pillow corners, bulges or curved folds. One uninterrupted rectangular flat front panel, NO horizontal hanging lid flap across face. Closed folded shipping carton construction: two short flat side flaps meet at narrow central join at the level top edge, sealed by a broad FLAT vertical packing tape strip down the front, no visible angled top surface. A maximum of two tiny straight diagonal cardboard fold seams near corners, restrained thin material-related ink. Left: solid honey kraft cardboard, cream vertical packing tape, ONE small rounded-square brass clasp centered on face with brown keyhole; no metal corner armor. Middle: solid pale blue-gray cardboard, cream-silver vertical packing strip and reinforcing bands, modest straight fitted L-shaped silver corner sleeves; ONE larger rounded-square silver clasp centered on face, brown keyhole. Right: larger solid warm coral cardboard, visibly stronger structural construction: wide honey-gold horizontal structural top rail fitted flush along top edge, substantial geometric L-shaped brass corner reinforcements, broad bright gold flat vertical packing tape, ONE big rounded-square gold clasp centered on face with brown keyhole. No dangling tab below locks. The gold strength comes from reinforcement geometry, not just recoloring. All clasps simple flat solid color with no shine or inner highlight. Use perfectly UNIFORM SOLID color fills only, absolutely zero gradients, zero texture, zero light effects, zero shading, zero shadows, zero bevel highlights. Smooth even warm brown #583f21 outer contours about16px thick, round joins. Necessary subordinate straight seams about7px, colored in softer material-related ink. Do not outline every color patch; tape boundaries may be unlined. Resolve shared edges once. Broad clean open areas with very few deliberate material colors. No animals, cats, paws, cat-shaped locks, gems, crowns, badges, rivets, symbols except the three functional keyholes, text, lettering, captions, UI, frames, extra objects, open variants, handles, bows, wrinkles, fabric, bags, wrapping paper, shiny metal, scribbles. Exactly three fully visible rigid CLOSED shipping-carton treasure boxes. Crisp flat vector illustration, not painted or 3D."
+    },
+    {
+      "review_only": true,
+      "production_changed": false,
+      "family": "D",
+      "requested_image_model": "gpt-image-2.5-sunburst",
+      "orchestrator": "cx/gpt-6-astra",
+      "transport": "9Router local /v1/responses",
+      "quality": "medium",
+      "requested_size": "1536x1024",
+      "user_authorized_custom_route": true,
+      "started_utc": "2026-10-23T16:41:16.5542199Z",
+      "prompt": "prompts/D.txt",
+      "reference_files": [
+        "game/ui/art/cat_hero.png",
+        "docs/design/2026-10-22/chest-premium/round-2.png"
+      ],
+      "status": "generated",
+      "finished_utc": "2026-10-23T16:42:26.0469475Z",
+      "output": "D-raw.png",
+      "response_id": "resp_0a0ab4325f9d3e60016adb8e33cf6087d0a3fa6b2b31376709",
+      "response_model": null,
+      "image_call_id": "ig_0a0ab4325f9d3e60016adb8e35fab087d08d20b69667e49cb2",
+      "revised_prompt": "Create a 1536x1024 flat 2D casual mobile game concept sheet, exactly THREE CLOSED adventurer travelling coffers and nothing else, on uniform off-white #f6f0df. Use supplied cat image ONLY as flat rounded warm-brown-outline style reference, not subject; old chest ONLY palette reference, do not copy shape or locks. Pure orthographic FRONT elevation with NO visible top planes or side planes. Horizontal row centers (256,768,1280), all bottom baseline y760. First two body widths 330px and heights 281px, third body width 395px height 336px; small side handles extend modestly, keep 70px safe outer margins. Tall stout soft-corner almost-square trunks, distinctly not conventional squat treasure chests. Each has deep softly curved rectangular closed lid, seam at upper third, TWO broad vertical luggage strap bands continuing down front, prominent CENTER clasp between straps, and two stubby chunky side carry handles with clear background-colored holes. No top carry handle. Friendly chunky crafted adventure luggage, not modern suitcases. Left basic tier orange honey-wood/leather body, broad tan-brass straps, simple rounded shield lock. Middle silver tier pale blue body, broad ivory silver straps, slightly larger rounded shoulder protectors, silver center clasp. Right premium tier larger coral body, substantial bright honey-gold straps, rounded shoulder reinforcement and substantial corner edge shoes, strong broad central clasp. Premium through larger mass and construction, not ornament. Clasps have simple tiny keyholes, never cat-head silhouettes; no dangling tab below lock. Restrained 3-4 flat colors per object. All primary contours smooth warm brown #583f21 about 16px per 360px body, round joins and caps. Secondary seam thinner around 7px in soft material-related brown blue-gray or ochre. Handle holes outlined at main weight. Resolve shared boundaries once and hide all occluded lines. Broad flat opaque fill planes, no outlining every color change. No gradients, shading, highlights, shine, texture, wood grain, tiny rivets, scratches, dashes, gray outlines. Lid straps and lock must remain readable at 64-100px thumbnail. Exactly three objects, NO text numbers labels panels frames ground shadows cats faces paws weapons people props jewels gems crowns wings wheels telescoping handles or open versions. Polished clean vector-like cartoon art faithfully matching the supplied reference's rounded masses and flat colors."
+    }
+  ],
+  "selection": {
+    "family": "B",
+    "wood": "B1",
+    "silver": "B2",
+    "gold": "B-v2",
+    "production_manifest": "game/ui/art/chests/strongbox-b/manifest.json",
+    "gold_gloss": "User requested a more detailed, slightly polished shop gold chest; wood and silver remain flat."
+  },
+  "gold_followup": {
+    "review_only": true,
+    "production_changed": false,
+    "family": "B",
+    "revision": 2,
+    "requested_image_model": "gpt-image-2.5-sunburst",
+    "orchestrator": "cx/gpt-6-astra",
+    "transport": "9Router local /v1/responses",
+    "quality": "medium",
+    "requested_size": "1024x1024",
+    "user_authorized_custom_route": true,
+    "started_utc": "2026-10-23T16:57:28.7597164Z",
+    "prompt": "prompts/B-v2.txt",
+    "reference_files": [
+      "docs/design/2026-10-23/chest-concept-options/png/B3.png",
+      "game/ui/art/cat_hero.png"
+    ],
+    "status": "generated",
+    "finished_utc": "2026-10-23T16:58:24.7404734Z",
+    "output": "B-v2-raw.png",
+    "response_id": "resp_09070af7c90b4bfe016adb91ffc54087d09f575120ed6dd0e0",
+    "response_model": null,
+    "image_call_id": "ig_09070af7c90b4bfe016adb920218fc87d0aac817bf19239d68",
+    "revised_prompt": "Edit the first supplied image, the approved B3 gold chest, into ONE production game asset. Preserve its exact recognizable silhouette and relative geometry, only increase craftsmanship detail 15â20% and give mildly polished cartoon gold. Use the second cat image solely as line/style reference; never depict any cat or other object. Square 1024x1024 uniform off-white #f6f0df background, chest optically centered, approximately 800px wide and 530px tall, fully visible generous margins, no shadow. Pure frontal elevation, absolutely no visible top plane or side walls. Exactly one CLOSED chest. Preserve wide squat coral body, low flat chamfered lid, single central vertical gold strap, large rounded-square central keyhole lock, thick warm-brown #583f21 rounded structural outlines, and bright gold L-shaped bottom corner shoes. Coral panels uniform flat warm coral, broad open front with minimal seams. Add a broad connected brass top edging fitted INSIDE existing lid silhouette, following horizontal top and chamfered shoulders. Add restrained layered bevel color planes to existing corner armor and clean inset brass rim on central lock. Exactly FOUR generous circular recessed fasteners total, one each in upper left, upper right, bottom left, bottom right corner plates, with quiet ochre recess details. Maintain bottom brass rail, NO hanging tab beneath lock. Bright yellow-honey brass, not bronze or orange. Metal uses two or three broad clean cel-shaded color planes with a few short warm cream #fff0b7 reflection bands on upper/left edges; mildly glossy, mostly flat quiet surfaces. Highlights only on metal, keep dark keyhole clean unobscured. Consistent bold brown outlines and rounded joins, finer soft ochre secondary metal seams; do not outline every bevel or highlight, avoid doubled contours. Shape faithful to image 1, modest richer constructed reinforcement rather than ornate embellishment. No text, labels, UI, frames, coins, characters, additional objects, stars, sparkles, gems, crowns, extra straps, handles, ears, wings, tall dome, texture, scratches, speckle, gradients on coral, bloom, realistic reflections, 3D rendering, or ground shadow."
+  }
+}

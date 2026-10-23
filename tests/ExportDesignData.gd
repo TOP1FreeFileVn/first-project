@@ -3,7 +3,7 @@ extends Node
 # Dumps the game's design numbers (levels, troops, castle, heroes, rewards) as JSON for
 # the design report. Run: Godot --headless --path . res://tests/ExportDesignData.tscn -- --out=C:/file.json
 
-const Heroes = preload("res://game/core/Heroes.gd")
+const HeroCat = preload("res://game/core/HeroCat.gd")
 const Economy = preload("res://game/core/Economy.gd")
 
 
@@ -13,7 +13,7 @@ func _ready() -> void:
 		if arg.begins_with("--out="):
 			out = arg.get_slice("=", 1)
 	PlayerData.persist = false
-	var data := {"levels": [], "troops": [], "castle": Economy.CASTLE, "heroes": [], "chests": Economy.CHESTS,
+	var data := {"levels": [], "troops": [], "castle": Economy.CASTLE, "hero_items": [], "chests": Economy.CHESTS,
 		"rarity_weights": Economy.RARITY_WEIGHTS, "battle_shop": Economy.BATTLE_SHOP}
 	for i in PlayerData.LEVELS.size():
 		var level: Resource = PlayerData.level_data(i)
@@ -44,9 +44,9 @@ func _ready() -> void:
 		data["troops"].append({"id": id, "name": t.display_name, "rarity": t.rarity, "role": t.role, "hp": t.max_hp,
 			"damage": t.damage, "range": t.attack_range, "cooldown": t.attack_cooldown, "speed": t.move_speed, "crit": t.crit_chance, "crit_mult": t.crit_mult, "spawn": t.spawn_interval,
 			"ability": t.ability_text, "description": t.description})
-	for id in Heroes.ORDER:
-		var h: Dictionary = Heroes.HEROES[id]
-		data["heroes"].append({"id": id, "name": h["name"], "rarity": h["rarity"], "buff": Heroes.bonus_text(id, 1, 1), "troop": h["troop"]})
+	for id in HeroCat.ITEMS:
+		var it: Dictionary = HeroCat.ITEMS[id]
+		data["hero_items"].append({"id": id, "name": it["name"], "slot": it["slot"], "rarity": it["rarity"], "stats": it["stats"]})
 	var file := FileAccess.open(out, FileAccess.WRITE)
 	file.store_string(JSON.stringify(data, "  "))
 	file.close()

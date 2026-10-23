@@ -1,36 +1,34 @@
 extends "res://game/menu/pages/MenuPage.gd"
 
-# The hero summon event (opened from the Events icon or the Heroes tab): a banner with
-# the week's featured hero, a countdown, the pity counter, the rates, and the x1 / x10
-# buttons. Results play in SummonOpening.
+# The equipment summon (bottom tab "Triệu hồi"): gems buy random items for the hero cat
+# (weapons, helmets, armour, boots) plus some Forge Stones with every pull. A banner with
+# the four item kinds, the pity counter toward a legendary, the rates, and x1 / x10 buttons.
+# Results play in SummonOpening. Numbers live in HeroCat (SUMMON_*).
 
-const Heroes = preload("res://game/core/Heroes.gd")
+const HeroCat = preload("res://game/core/HeroCat.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const SummonOpening = preload("res://game/ui/SummonOpening.gd")
 const BANNER_MIN_HEIGHT := 460.0
-
-var _countdown: Label
-
+## The items shown standing on the banner, one per slot, best first.
+const SHOWCASE := ["katana_nguyet", "mu_rong", "giap_rong", "giay_than"]
 
 func build() -> void:
 	fill_available_height()
 	body.add_theme_constant_override("separation", 16)
-	var featured := PlayerData.summon_featured()
-	var hero: Dictionary = Heroes.HEROES[featured]
-	var color: Color = Economy.RARITY_COLORS[hero["rarity"]]
-	body.add_child(_banner(featured, hero, color))
+	var color: Color = Economy.RARITY_COLORS[3]
+	body.add_child(_banner(color))
 
 	var box := UiKit.vbox(10)
-	var pity := UiKit.ink("Còn %d lượt chắc chắn nhận %s" % [PlayerData.summon_pity_left(), hero["name"]], 22)
+	var pity := UiKit.ink("Còn %d lượt chắc chắn ra trang bị Huyền thoại" % PlayerData.summon_pity_left(), 22)
 	pity.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)
 	var bar := UiKit.bar(color, Vector2(0, 16))
 	bar.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	bar.max_value = Heroes.SUMMON_PITY
+	bar.max_value = HeroCat.SUMMON_PITY
 	bar.value = PlayerData.summon_pity
 	box.add_child(bar)
-	var note := UiKit.ink("Gói x10 chắc chắn có ít nhất 1 tướng · Trùng tướng đổi thành %d mảnh" % Heroes.DUPLICATE_SHARDS, 22)
+	var note := UiKit.ink("Gói x10 chắc chắn có ít nhất 1 Sử thi · Mỗi lượt kèm %d đá rèn · 3 món giống nhau ghép thành 1 món phẩm cao hơn" % HeroCat.SUMMON_STONES, 22)
 	note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(note)
@@ -46,17 +44,11 @@ func build() -> void:
 	buttons.add_child(_summon_button(1))
 	buttons.add_child(_summon_button(10))
 	body.add_child(buttons)
-	tick()
-
 
 func tick() -> void:
-	if _countdown == null or not is_instance_valid(_countdown):
-		return
-	var left := PlayerData.summon_seconds_left()
-	_countdown.text = "Kết thúc sau %d ngày %s" % [left / 86400, UiKit.format_time(left % 86400)]
+	pass
 
-
-func _banner(featured: String, hero: Dictionary, color: Color) -> Control:
+func _banner(color: Color) -> Control:
 	var banner := PanelContainer.new()
 	banner.custom_minimum_size.y = BANNER_MIN_HEIGHT
 	banner.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -71,48 +63,34 @@ func _banner(featured: String, hero: Dictionary, color: Color) -> Control:
 	var column := UiKit.vbox(8)
 	banner.add_child(column)
 
-	var head := UiKit.vbox(2)
-	head.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	column.add_child(head)
-	var title := UiKit.label("TRIỆU HỒI TƯỚNG QUÂN", 30, UiKit.GOLD_TEXT)
+	var title := UiKit.label("TRIỆU HỒI TRANG BỊ", 30, UiKit.GOLD_TEXT)
 	title.add_theme_constant_override("outline_size", 5)
-	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	head.add_child(title)
-	_countdown = _secondary("", 22)
-	_countdown.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_countdown.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	head.add_child(_countdown)
+	column.add_child(title)
+	var sub := _secondary("Vũ khí · Mũ · Giáp · Giày cho mèo anh hùng", 22)
+	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	column.add_child(sub)
 
-	# The scene receives spare height; the information and pull buttons stay together
-	# in the lower action area. A short viewport scrolls the same column.
+	# The four best items stand on a turning summoning circle.
 	var art := Control.new()
 	art.custom_minimum_size.y = 220
 	art.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	art.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	art.clip_contents = true
 	column.add_child(art)
-	var sprite := AnimatedSprite2D.new()
-	sprite.sprite_frames = SpriteLib.unit_frames(hero["unit"], "Blue")
-	sprite.material = UiKit.hero_material(featured)
-	sprite.offset = Vector2(0, -SpriteLib.foot_offset(hero["unit"]))
-	sprite.play("idle")
-	art.add_child(sprite)
-	var crown: Control
-	if hero["rarity"] >= 3:
-		crown = UiKit.drawn(UiKit.DrawnIcon.Kind.CROWN, 56)
-		crown.size = Vector2(56, 56)
-		art.add_child(crown)
-	var natural_size := sprite.sprite_frames.get_frame_texture("idle", 0).get_size()
-	var fit_sprite := func():
-		var scale_factor := minf(art.size.x * 0.5 / natural_size.x, art.size.y * 0.76 / natural_size.y)
-		sprite.scale = Vector2.ONE * scale_factor
-		sprite.position = Vector2(art.size.x * 0.5, art.size.y * 0.82)
-		if crown != null:
-			crown.position = Vector2(sprite.position.x - 28, maxf(0, sprite.position.y - natural_size.y * scale_factor - 12))
-	art.resized.connect(fit_sprite)
-	art.ready.connect(fit_sprite)
-	# Turning rays and the circle follow the available scene bounds.
+	var row := UiKit.hbox(14)
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for id in SHOWCASE:
+		var d: Dictionary = HeroCat.ITEMS[id]
+		row.add_child(Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(d["rarity"]), "", 112.0))
+	art.add_child(row)
+	var fit := func():
+		row.size = Vector2(art.size.x, 0)
+		row.position = Vector2(0, art.size.y * 0.62 - 56)
+	art.resized.connect(fit)
+	art.ready.connect(fit)
 	art.draw.connect(func():
 		var t := Time.get_ticks_msec() / 1000.0
 		var center := art.size * Vector2(0.5, 0.5)
@@ -120,8 +98,8 @@ func _banner(featured: String, hero: Dictionary, color: Color) -> Control:
 		for i in 12:
 			var angle := t * 0.25 + i * TAU / 12.0
 			art.draw_colored_polygon(PackedVector2Array([center, center + Vector2.from_angle(angle - 0.09) * ray_length, center + Vector2.from_angle(angle + 0.09) * ray_length]), Color(color, 0.08))
-		var radius := minf(art.size.x * 0.28, art.size.y * 0.52)
-		art.draw_set_transform(art.size * Vector2(0.5, 0.82), 0.0, Vector2(1.0, 0.32))
+		var radius := minf(art.size.x * 0.4, art.size.y * 0.52)
+		art.draw_set_transform(art.size * Vector2(0.5, 0.86), 0.0, Vector2(1.0, 0.3))
 		art.draw_arc(Vector2.ZERO, radius, 0.0, TAU, 64, Color(color, 0.8), 6.0, true)
 		art.draw_arc(Vector2.ZERO, radius * 0.82, t, t + TAU * 0.8, 48, Color(color.lightened(0.4), 0.7), 3.0, true)
 		art.draw_circle(Vector2.ZERO, radius * 0.76, Color(color, 0.18))
@@ -134,9 +112,8 @@ func _banner(featured: String, hero: Dictionary, color: Color) -> Control:
 	var tag_box := UiKit.vbox(2)
 	tag.add_child(tag_box)
 	for caption in [
-		_secondary("%s · TỈ LỆ TĂNG!" % Economy.RARITY_NAMES[hero["rarity"]].to_upper(), 20, color),
-		UiKit.label(hero["name"], 28),
-		_secondary("✦ " + Heroes.bonus_text(featured, 1, 1), 20, Color("9ff0a0")),
+		_secondary("HUYỀN THOẠI · %s%%" % str(HeroCat.SUMMON_RARITY[3]).replace(".", ","), 20, color),
+		UiKit.label("Vũ khí đổi chiêu của mèo và tăng sát thương 2 lớp lính hợp", 22),
 	]:
 		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -144,12 +121,10 @@ func _banner(featured: String, hero: Dictionary, color: Color) -> Control:
 	column.add_child(tag)
 	return banner
 
-
 func _secondary(text: String, font_size: int, color := UiKit.INFO) -> Label:
 	var caption := UiKit.label(text, font_size, color)
 	caption.add_theme_constant_override("outline_size", 2)
 	return caption
-
 
 func _summon_button(count: int) -> Button:
 	var cost := PlayerData.summon_cost(count)
@@ -160,36 +135,26 @@ func _summon_button(count: int) -> Button:
 	b.disabled = not PlayerData.can_summon(count)
 	return b
 
-
 func _summon(count: int) -> void:
 	var results := PlayerData.summon(count)
 	if results.is_empty():
 		return
 	var opening = SummonOpening.new()
-	opening.setup(results, PlayerData.summon_featured(), func(): _summon(count))
+	opening.setup(results, "", func(): _summon(count))
 	opening.attach(home)
-
 
 func _show_rates() -> void:
 	var box := UiKit.dark_popup(home, 560, "Tỉ lệ triệu hồi")
-	var names := {
-		"featured": "Tướng nổi bật (%s)" % Heroes.HEROES[PlayerData.summon_featured()]["name"],
-		"legendary": "Tướng Huyền thoại khác", "epic": "Tướng Sử thi", "rare": "Tướng Hiếm",
-		"featured_shards": "%d mảnh tướng nổi bật" % Heroes.FEATURED_SHARDS,
-		"shards": "%d mảnh tướng ngẫu nhiên" % Heroes.RANDOM_SHARDS,
-		"gold": "%d vàng" % Heroes.SUMMON_GOLD,
-	}
 	var grid := GridContainer.new()
 	grid.columns = 2
 	grid.add_theme_constant_override("h_separation", 40)
 	grid.add_theme_constant_override("v_separation", 8)
-	for row in Heroes.SUMMON_TABLE:
-		var name_label := UiKit.ink(names[row[0]], 22)
+	for r in HeroCat.SUMMON_RARITY.size():
+		var name_label := UiKit.ink("Trang bị " + Economy.RARITY_NAMES[r], 22)
 		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		grid.add_child(name_label)
-		grid.add_child(UiKit.ink(("%.1f%%" % row[1]).replace(".", ","), 22))
+		grid.add_child(UiKit.ink(("%.1f%%" % HeroCat.SUMMON_RARITY[r]).replace(".", ","), 22))
 	box.add_child(grid)
-	var pity := UiKit.ink("Bảo hiểm: lượt thứ %d chắc chắn ra tướng nổi bật. Tính cả bảo hiểm, tỉ lệ nhận tướng nổi bật thực tế khoảng 2,9%%." % Heroes.SUMMON_PITY, 22)
+	var pity := UiKit.ink("Bảo hiểm: lượt thứ %d chắc chắn ra trang bị Huyền thoại. Món ra ngẫu nhiên trong 4 loại; loại nào chưa có phẩm đó thì ra phẩm thấp hơn gần nhất." % HeroCat.SUMMON_PITY, 22)
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)

@@ -1,0 +1,21 @@
+{
+	"captures": [
+		"current-360x640.png",
+		"flat-360x640.png",
+		"honey-360x640.png",
+		"teal-360x640.png",
+		"current-450x800.png",
+		"flat-450x800.png",
+		"honey-450x800.png",
+		"teal-450x800.png",
+		"insufficient-450x800.png",
+		"scrolled-450x800.png",
+		"rates-450x800.png",
+		"opening-450x800.png"
+	],
+	"checks": 66,
+	"failures": [],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/shop-clarity-demo-profile/Roaming/Godot/app_userdata/Gear Defenders",
+	"scope": "Isolated shop proposal, existing Home chrome and original chest art; no production UI modifications"
+}

@@ -1,12 +1,18 @@
-[gd_resource type="Resource" load_steps=5 format=3]
+[gd_resource type="Resource" load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://game/data/LevelData.gd" id="1_level"]
 [ext_resource type="Resource" path="res://game/data/troops/pawn.tres" id="2_pawn"]
 [ext_resource type="Resource" path="res://game/data/troops/warrior.tres" id="3_warrior"]
 [ext_resource type="Resource" path="res://game/data/troops/archer.tres" id="4_archer"]
 
+[ext_resource type="Texture2D" path="res://game/assets/battle/regions/01-dong-co.png" id="battlefield"]
+
+[ext_resource type="Texture2D" path="res://game/assets/lobby/map-titles/01-dong-co.png" id="lobby_banner"]
+
 [resource]
 script = ExtResource("1_level")
+lobby_banner = ExtResource("lobby_banner")
+battlefield = ExtResource("battlefield")
 display_name = "Màn 1 · Đồng Cỏ"
 troop_pool = [ExtResource("2_pawn"), ExtResource("3_warrior"), ExtResource("4_archer")]
 start_meat = 6.0

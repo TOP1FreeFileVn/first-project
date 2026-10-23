@@ -1,0 +1,42 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Soldier rig v2</title>
+<style>
+  body { margin: 0; background: #d8e4de; font: 600 14px system-ui; color: #583f21; }
+  .row { display: flex; gap: 12px; padding: 12px; align-items: flex-end; flex-wrap: wrap; }
+  .card { background: #eaf0e9; border-radius: 12px; padding: 8px; text-align: center; }
+  canvas, img { display: block; margin-top: 4px; }
+</style>
+<div class="row">
+  <div class="card">Cũ<img src="old-assembled.png" width="256"></div>
+  <div class="card">Mới · ghép<canvas id="all" width="256" height="240"></canvas></div>
+  <div class="card">Chân nhấc (thử)<canvas id="step" width="256" height="240"></canvas></div>
+  <div class="card">128×120<canvas id="small" width="128" height="120"></canvas></div>
+</div>
+<div class="row" id="parts"></div>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="cat.js"></script>
+<script>
+  const weapon = new Image(); weapon.src = 'svg/weapon.svg';
+  function draw(ctx, k, lift) {
+    for (const n of Cat.ORDER) {
+      if (n === 'weapon') { ctx.drawImage(weapon, 0, 0, 256 * k, 240 * k); continue; }
+      ctx.save();
+      if (lift && n === 'leg_l') ctx.translate(0, -lift * k);
+      Pen.toCanvas(Cat.part(n, k), ctx);
+      ctx.restore();
+    }
+  }
+  weapon.onload = () => {
+    draw(document.getElementById('all').getContext('2d'), 1, 0);
+    draw(document.getElementById('step').getContext('2d'), 1, 14);
+    draw(document.getElementById('small').getContext('2d'), 0.5, 0);
+    for (const n of Cat.ORDER) {
+      const card = document.createElement('div'); card.className = 'card'; card.textContent = n;
+      const c = document.createElement('canvas'); c.width = 128; c.height = 120; card.appendChild(c);
+      document.getElementById('parts').appendChild(card);
+      const ctx = c.getContext('2d');
+      if (n === 'weapon') ctx.drawImage(weapon, 0, 0, 128, 120); else Pen.toCanvas(Cat.part(n, 0.5), ctx);
+    }
+  };
+</script>

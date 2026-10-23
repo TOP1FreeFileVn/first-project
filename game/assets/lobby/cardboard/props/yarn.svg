@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
+<defs><clipPath id="ball"><circle cx="40" cy="38" r="31"/></clipPath></defs>
+<circle cx="40" cy="38" r="31" fill="#e89e70"/>
+<path d="M57 11 Q80 52 41 70 H77 V8 Z" fill="#c87f54" clip-path="url(#ball)"/>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M20 16 Q42 25 54 58 M12 32 Q26 41 33 65 M39 9 Q36 29 18 53 M58 20 Q48 36 44 58" stroke="#b07c45" stroke-width="3"/>
+  <circle cx="40" cy="38" r="31" stroke="#583f21" stroke-width="6"/>
+</g>
+</svg>

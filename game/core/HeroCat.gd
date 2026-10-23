@@ -6,7 +6,14 @@ extends RefCounted
 # meant to be replaced from the sheet.
 #
 # Four slots. The weapon decides the hero's attack style, its skill and the two soldier
-# classes it pairs with; helmet, armour and boots add stats. Items level up with gold.
+# classes it pairs with (they hit harder while it is worn); helmet, armour and boots add
+# stats (hp -> castle HP, def -> less damage to the wall, atk -> the hero's skill).
+#
+# Economy, kept apart from the troops so the two never fight over one currency:
+#   source  - the equipment summon (gems, see SUMMON_*) and Forge Stones from battles;
+#   level   - Forge Stones (đá rèn) plus a little gold (upgrade_cost / upgrade_gold);
+#   rarity  - three identical items of one rarity fuse into the next rarity (fuse());
+#   spare   - an unworn item salvages back into Forge Stones (salvage_value()).
 # The save keeps {"equipped": {slot: uid}, "bag": {uid: {"id", "level"}}, "next": uid}
 # in PlayerData.hero_cat. Removed equipment is retained in a separate retired_items archive.
 
@@ -25,6 +32,12 @@ const BASE := {"hp": 1200, "atk": 90, "def": 30}
 ## Each item level adds this share of the item's level-1 stats.
 const PER_LEVEL := 0.12
 const MAX_LEVEL := 20
+
+## A weapon adds this much damage to the two soldier classes it pairs with (and +1 per 10 levels).
+const PAIR_DAMAGE_PCT := 8.0
+## Each point of armour (def) takes this share off a blow to the wall, capped.
+const DEF_BLOCK := 0.002
+const DEF_BLOCK_MAX := 0.4
 
 const INF := TroopData.Klass.INFANTRY
 const RNG := TroopData.Klass.RANGED
@@ -52,7 +65,32 @@ const ITEMS := {
 	"giap_rong": {"slot": "armor", "name": "Giáp Vảy Rồng", "icon": "eq_armor", "rarity": 3, "stats": {"hp": 640, "def": 30}},
 	"giay_co": {"slot": "boots", "name": "Giày Cỏ", "icon": "eq_boots", "rarity": 0, "stats": {"hp": 120, "def": 4}},
 	"giay_gio": {"slot": "boots", "name": "Giày Gió", "icon": "eq_boots", "rarity": 1, "stats": {"hp": 180, "atk": 8}},
+	"mu_rong": {"slot": "helmet", "name": "Mũ Rồng", "icon": "eq_helmet", "rarity": 3, "stats": {"hp": 520, "def": 22}},
+	"giap_bac": {"slot": "armor", "name": "Giáp Bạc", "icon": "eq_armor", "rarity": 2, "stats": {"hp": 470, "def": 22}},
+	"giay_bao": {"slot": "boots", "name": "Giày Bão", "icon": "eq_boots", "rarity": 2, "stats": {"hp": 260, "atk": 14}},
+	"giay_than": {"slot": "boots", "name": "Giày Thần Tốc", "icon": "eq_boots", "rarity": 3, "stats": {"hp": 380, "atk": 22}},
 }
+
+# --- Equipment summon (the bottom tab "Triệu hồi") ---------------------------------------
+const SUMMON_COST := {1: 30, 10: 270}
+## Rarity odds in %, common → legendary. A x10 always holds at least one epic.
+const SUMMON_RARITY := [62.0, 28.0, 8.5, 1.5]
+## Pulls without a legendary before the next one is guaranteed.
+const SUMMON_PITY := 60
+## Forge Stones that come with every pull, so even a common is never a dud.
+const SUMMON_STONES := 5
+
+# --- Forge Stones (đá rèn) ---------------------------------------------------------------
+## Stones a won battle gives: base + per level, x2 on first clear; a loss gives LOSS_STONES.
+const WIN_STONES := 6
+const WIN_STONES_PER_LEVEL := 2
+const LOSS_STONES := 2
+## Stones an hour of patrol makes (capped with the patrol).
+const PATROL_STONES_PER_HOUR := 3
+## A level-1 unworn item salvages for this many stones, by rarity, plus half what was spent.
+const SALVAGE_STONES := [4, 10, 25, 60]
+## Three identical items of the same rarity (any level) fuse into one of the next rarity.
+const FUSE_COUNT := 3
 
 ## The skill gear each weapon brings into battle: it charges while it turns on the board
 ## (`cooldown` = production seconds) and then the hero casts it. `power` scales the hero's
@@ -205,14 +243,70 @@ static func power(stats: Dictionary) -> int:
 	return roundi(stats.get("hp", 0) + stats.get("atk", 0) * 8.0 + stats.get("def", 0) * 12.0)
 
 
-## Gold for the next level, or -1 at max.
+## Forge Stones for the next level, or -1 at max.
 static func upgrade_cost(state: Dictionary, uid: String) -> int:
 	var it := item(state, uid)
 	var definition := def(state, uid)
 	if it.is_empty() or definition.is_empty() or it["level"] >= MAX_LEVEL:
 		return -1
 	var rarity: int = definition["rarity"]
-	return roundi((40 + 25 * it["level"]) * (1.0 + 0.5 * rarity))
+	return roundi((4 + 3 * it["level"]) * (1.0 + 0.5 * rarity))
+
+## The small gold part of a level-up (troops keep the gold economy; this stays minor).
+static func upgrade_gold(state: Dictionary, uid: String) -> int:
+	var it := item(state, uid)
+	return -1 if upgrade_cost(state, uid) < 0 else 10 * int(it["level"])
+
+## Stones spent to bring an item from level 1 to `level`.
+static func stones_spent(rarity: int, level: int) -> int:
+	var total := 0
+	for lv in range(1, level):
+		total += roundi((4 + 3 * lv) * (1.0 + 0.5 * rarity))
+	return total
+
+## Stones an unworn item salvages for: its rarity's base plus half the stones put into it.
+static func salvage_value(state: Dictionary, uid: String) -> int:
+	var d := def(state, uid)
+	if d.is_empty():
+		return 0
+	return SALVAGE_STONES[d["rarity"]] + stones_spent(d["rarity"], item(state, uid)["level"]) / 2
+
+## Items of `slot` with exactly `rarity` (for summon picks and fusing).
+static func ids_of(slot: String, rarity: int) -> Array:
+	var out := []
+	for id in ITEMS:
+		if (slot == "" or ITEMS[id]["slot"] == slot) and ITEMS[id]["rarity"] == rarity:
+			out.append(id)
+	return out
+
+## A random item id of `rarity`; falls to the nearest lower rarity that exists in that slot.
+static func random_of_rarity(rarity: int) -> String:
+	for r in range(rarity, -1, -1):
+		var pool := ids_of("", r)
+		if not pool.is_empty():
+			return pool.pick_random()
+	return ITEMS.keys()[0]
+
+## Unworn copies of `id`'s item (same id), lowest level first: the fuse candidates.
+static func copies(state: Dictionary, id: String) -> Array:
+	var uids := []
+	for uid in state["bag"]:
+		if state["bag"][uid]["id"] == id:
+			uids.append(uid)
+	uids.sort_custom(func(a, b): return state["bag"][a]["level"] < state["bag"][b]["level"])
+	return uids
+
+## What three copies of `id` fuse into: a same-slot item one rarity up, or "" at the top.
+static func fuse_target(id: String) -> String:
+	var d: Dictionary = ITEMS.get(id, {})
+	if d.is_empty():
+		return ""
+	for r in range(d["rarity"] + 1, 4):
+		var pool := ids_of(d["slot"], r)
+		if not pool.is_empty():
+			pool.sort()
+			return pool[0]
+	return ""
 
 
 static func tone(rarity: int) -> String:

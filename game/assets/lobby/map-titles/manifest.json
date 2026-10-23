@@ -1,0 +1,207 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "draw_rect": [
+    122,
+    136,
+    476,
+    90
+  ],
+  "text_is_separate": true,
+  "title_center": [
+    360,
+    181
+  ],
+  "maps": [
+    {
+      "stage": 1,
+      "name": "Đồng Cỏ",
+      "file": "01-dong-co.png",
+      "source": "output/imagegen/map-title-meadow-v2/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "2e263dcf07aa5c9f6f97f0da4ce3cdc75d301a2d7e03b033ae040ff6435a32c3",
+      "source_sha256": "067c8f036745fcfb9e552eb7dc8600e2d537d299da1cf7b9265694419db5c75a"
+    },
+    {
+      "stage": 2,
+      "name": "Đồi Đá",
+      "file": "02-doi-da.png",
+      "source": "output/imagegen/map-titles-02-10/02-doi-da/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "2b19f20b66df79636c423b4119aafd1e76d2eb10d8b962a9af1de4097eb9e6de",
+      "source_sha256": "00222910bc4cd534a7087375b972aa625faaa157f872ee1cc7a15f61ec984e6a"
+    },
+    {
+      "stage": 3,
+      "name": "Pháo Đài Đỏ",
+      "file": "03-phao-dai-do.png",
+      "source": "output/imagegen/map-titles-02-10/03-phao-dai-do/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "6c4184139bfa15c9f1cc061d35e976bece157e6ee50f6f2f282656e6840dbb0c",
+      "source_sha256": "9c243c79c9592166b8a18d210296969e32f2911a2f59331a32f4fdad9c179357"
+    },
+    {
+      "stage": 4,
+      "name": "Rừng Thông",
+      "file": "04-rung-thong.png",
+      "source": "output/imagegen/map-titles-02-10/04-rung-thong/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "f096a09f7fd2057c17e0d4f058524645955392a3fe5b86355cdeba4e5de81303",
+      "source_sha256": "aa1c623061b5cca438cc2eccd127fc209b1a24679af25c57799f755fa512fb62"
+    },
+    {
+      "stage": 5,
+      "name": "Hẻm Núi",
+      "file": "05-hem-nui.png",
+      "source": "output/imagegen/map-titles-02-10/05-hem-nui/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "4113f96548f336f05ce440b4d8c4ae30a4999514e65ecbcb01adfdb516d8e457",
+      "source_sha256": "5ee2d6c6543385834be5d71517d9f5ca31c204108541148a82fadb83e3b24ceb"
+    },
+    {
+      "stage": 6,
+      "name": "Làng Bỏ Hoang",
+      "file": "06-lang-bo-hoang.png",
+      "source": "output/imagegen/map-titles-02-10/06-lang-bo-hoang/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "49937fef0dfdbdc52840e28294e953d386f26229d4492ccd56db4ebb81bf0f74",
+      "source_sha256": "842442686bd99742704b8705826dd65ef9ba6f5013030c3b6e5c7afb046153f9"
+    },
+    {
+      "stage": 7,
+      "name": "Đầm Lầy",
+      "file": "07-dam-lay.png",
+      "source": "output/imagegen/map-titles-02-10/07-dam-lay/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "5cf0949aa3a12b949d669cc729075628c16636bd1f80a9b6a14260c53d09e1bb",
+      "source_sha256": "e3e167c5abe12ba94cfc53ab7dae54a874636d2794d07b4bbece7f438cd000b8"
+    },
+    {
+      "stage": 8,
+      "name": "Thành Đá Đen",
+      "file": "08-thanh-da-den.png",
+      "source": "output/imagegen/map-titles-02-10/08-thanh-da-den/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "be3eabeab7e2f27a7c18411cee6348213338d3f42f487bc53493fec477e5f450",
+      "source_sha256": "0a7725fa512f16522b30fc4058e2ddd57382778f9e62cdf43c26ae437346fc6a"
+    },
+    {
+      "stage": 9,
+      "name": "Cổng Pháo Đài",
+      "file": "09-cong-phao-dai.png",
+      "source": "output/imagegen/map-titles-02-10/09-cong-phao-dai/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "9ff5ff4a30b8007cb27d725be5df87d9aac7a4b8a95cc2cb5ea6c2c218227be2",
+      "source_sha256": "89529ab1f4e299e523cc65c2a796839fe7f92cd9c3fba39a6e9855f5a3d991bf"
+    },
+    {
+      "stage": 10,
+      "name": "Vua Đỏ",
+      "file": "10-vua-do.png",
+      "source": "output/imagegen/map-titles-02-10/10-vua-do/landscape-raw.png",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "55a9c8eaaef943039a66053575f0c70b6fca21fd8f7622bc8465764af2abe9aa",
+      "source_sha256": "603b0565a686186af27f1e88db025fc191e2f27c96e2f6ce12b6883292815b45"
+    },
+    {
+      "stage": 11,
+      "name": "Bến Cảng",
+      "file": "11-ben-cang.png",
+      "source": "output/imagegen/map-titles-11-15/11-ben-cang/landscape-raw.png",
+      "source_sha256": "744a3cdbb5070c28325a4282ddded82042a70b61debc2def8bb147c8e766fadd",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "9be4f472507c56ae27daeed5f1fef15575a4480458eee26e0bbdbe2c55496cf9"
+    },
+    {
+      "stage": 12,
+      "name": "Rừng Sương",
+      "file": "12-rung-suong.png",
+      "source": "output/imagegen/map-titles-11-15/12-rung-suong/landscape-raw.png",
+      "source_sha256": "61ffa93731ad72ab7dd3b2a665e049104aa9b819de98aa3804f5498d3b95d5d7",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "aa05ce77ae83741ac3f1a90067b2e9df098b0077775e7825411d84021e468e67"
+    },
+    {
+      "stage": 13,
+      "name": "Đồi Cừu",
+      "file": "13-doi-cuu.png",
+      "source": "output/imagegen/map-titles-11-15/13-doi-cuu/landscape-raw.png",
+      "source_sha256": "e7c89c2d69f090be023c952e703d63b8be043b83444b4b8036f308f389c14b6a",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "3776aa2089eee5ffa27aeab8e498a39f78477a3a6f528b0a18c71ff9069abadd"
+    },
+    {
+      "stage": 14,
+      "name": "Mỏ Vàng",
+      "file": "14-mo-vang.png",
+      "source": "output/imagegen/map-titles-11-15/14-mo-vang/landscape-raw.png",
+      "source_sha256": "5815478dac7211c77ffeb4d1207c9d9a1a199a15f5212189117cf15a69d27d1e",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "a10b854591254404a44743b7847ebda7e61cfc73263e4810910a7d3671400441"
+    },
+    {
+      "stage": 15,
+      "name": "Cầu Đá",
+      "file": "15-cau-da.png",
+      "source": "output/imagegen/map-titles-11-15/15-cau-da/landscape-raw.png",
+      "source_sha256": "eed56406ebd0fe1bd5a3112cb07e3b7e806768738a216792bd50de34bf0cde86",
+      "size": [
+        476,
+        90
+      ],
+      "sha256": "b491b76a284390352c39fb594c56c271678783d72df36a83afa77c9c7f840fad"
+    }
+  ],
+  "frame": false,
+  "shadow": false,
+  "corner_radius": 10,
+  "transform": "Centered crop from approved original, rounded alpha, brown outline; no carton lip or shadow",
+  "builder": "tools/ui/install_lobby_map_titles.py",
+  "stroke": {
+    "color": "#583f21",
+    "width": 3,
+    "alignment": "inside"
+  },
+  "scope": "Regional title panoramas for all 15 playable stages; live stage names remain separate."
+}

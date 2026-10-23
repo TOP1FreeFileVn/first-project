@@ -66,17 +66,11 @@ func build() -> void:
 
 
 func has_alert() -> bool:
-	var state: Dictionary = PlayerData.hero_cat
-	for slot in HeroCat.SLOTS:
-		var uid := HeroCat.equipped_uid(state, slot)
-		if uid != "" and _can_upgrade(uid):
-			return true
-	return false
+	return PlayerData.hero_alert()
 
 
 func _can_upgrade(uid: String) -> bool:
-	var cost := HeroCat.upgrade_cost(PlayerData.hero_cat, uid)
-	return cost >= 0 and PlayerData.gold >= cost
+	return PlayerData.hero_cat_can_upgrade(uid)
 
 
 # --- Paper doll ---------------------------------------------------------------------------
@@ -236,6 +230,12 @@ func _bag() -> Control:
 	heading.add_child(tag)
 	heading.add_child(Ui.spacer())
 	var count := HeroCat.spare(PlayerData.hero_cat).size()
+	var stones := Ui.hbox(4)
+	stones.name = "HeroForgeStones"
+	stones.add_child(UiKit.forge_stone_icon(28))
+	stones.add_child(_paper_text(UiKit.format_number(PlayerData.forge_stones), 20, Color("fff1d1")))
+	heading.add_child(stones)
+	heading.add_child(Ui.spacer())
 	var capacity := _paper_text("%d món" % count, 20, Color("fff1d1"))
 	capacity.name = "HeroInventoryCount"
 	heading.add_child(capacity)
@@ -269,6 +269,18 @@ func _bag() -> Control:
 	sort.pressed.connect(_toggle_sort)
 	tools.add_child(sort)
 	box.add_child(tools)
+	var fusable := PlayerData.hero_cat_fusable()
+	if not fusable.is_empty():
+		var id: String = fusable[0]
+		var target := HeroCat.fuse_target(id)
+		var fuse := Ui.button("Ghép 3 %s → %s" % [HeroCat.ITEMS[id]["name"], HeroCat.ITEMS[target]["name"]], "Green", Vector2(0, 56), 20)
+		fuse.name = "EquipmentFuse"
+		fuse.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		fuse.pressed.connect(func():
+			if PlayerData.hero_cat_fuse(id) != "":
+				SoundLib.play("merge"))
+		Ui.dot(fuse, Vector2(-14, -8))
+		box.add_child(fuse)
 	var scroll := ScrollContainer.new()
 	scroll.name = "HeroInventoryScroll"
 	scroll.custom_minimum_size.y = 124
@@ -286,7 +298,7 @@ func _bag() -> Control:
 	var contents: Control = grid
 	if spare.is_empty():
 		grid.free()
-		var empty_text := "Chưa có trang bị loại này." if count > 0 else "Túi trống · Nhận trang bị từ rương và sự kiện"
+		var empty_text := "Chưa có trang bị loại này." if count > 0 else "Túi trống · Nhận trang bị ở tab Triệu hồi"
 		var empty := _paper_text(empty_text, 20, Color("fff1d1"))
 		empty.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		empty.custom_minimum_size.x = 600
@@ -509,7 +521,8 @@ func _fill_detail() -> void:
 		upgrade.disabled = true
 	else:
 		upgrade = Ui.cost_button("Nâng cấp", UiKit.format_number(cost), "coin", "Yellow", Vector2(240, 96))
-		upgrade.disabled = PlayerData.gold < cost
+		_stone_cost(upgrade, cost, HeroCat.upgrade_gold(state, uid))
+		upgrade.disabled = not PlayerData.hero_cat_can_upgrade(uid)
 	upgrade.pressed.connect(func():
 		if PlayerData.hero_cat_upgrade(uid):
 			SoundLib.play("reward"))
@@ -521,8 +534,44 @@ func _fill_detail() -> void:
 			PlayerData.hero_cat_equip(uid))
 		actions.add_child(wear)
 	box.add_child(actions)
+	var more := Ui.hbox(14)
+	var copies := HeroCat.copies(state, it["id"]).size()
+	var target := HeroCat.fuse_target(it["id"])
+	if target != "":
+		var fuse := Ui.button("Ghép (%d/%d)" % [mini(copies, HeroCat.FUSE_COUNT), HeroCat.FUSE_COUNT], "Green", Vector2(240, 72), 22)
+		fuse.disabled = copies < HeroCat.FUSE_COUNT
+		fuse.tooltip_text = "3 món %s → 1 %s" % [d["name"], HeroCat.ITEMS[target]["name"]]
+		fuse.pressed.connect(func():
+			var new_uid := PlayerData.hero_cat_fuse(it["id"])
+			if new_uid != "":
+				SoundLib.play("merge")
+				_detail_uid = new_uid
+				_fill_detail())
+		more.add_child(fuse)
+	if not wearing:
+		var salvage := Ui.button("Rã · +%d đá" % HeroCat.salvage_value(state, uid), "White", Vector2(240, 72), 22)
+		salvage.pressed.connect(func():
+			if PlayerData.hero_cat_salvage(uid) > 0:
+				SoundLib.play("sell")
+				UiKit.close_popup(_detail))
+		more.add_child(salvage)
+	if more.get_child_count() > 0:
+		box.add_child(more)
 	_style_detail_surface()
 
+
+# Turns a gold cost_button into a Forge Stone one: the stone icon and count, then the gold.
+func _stone_cost(button: Button, stones: int, gold: int) -> void:
+	var row: HBoxContainer = button.get_child(0).get_child(1)
+	var coin := row.get_child(0)
+	row.remove_child(coin)
+	coin.queue_free()
+	row.add_child(UiKit.forge_stone_icon(26))
+	row.move_child(row.get_child(row.get_child_count() - 1), 0)
+	(row.get_child(1) as Label).text = UiKit.format_number(stones)
+	if gold > 0:
+		row.add_child(Ui.icon("coin", 22))
+		row.add_child(Ui.label(UiKit.format_number(gold), "LabelSmall", 18))
 
 func _style_detail_surface() -> void:
 	var overlay := _detail.get_meta("overlay", null) as Control

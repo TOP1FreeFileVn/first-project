@@ -7,10 +7,9 @@ extends RefCounted
 # every page is rebuilt on Ui.gd directly.
 
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
-const Heroes = preload("res://game/core/Heroes.gd")
+const HeroCat = preload("res://game/core/HeroCat.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const Meta = preload("res://game/core/Meta.gd")
-const RECOLOR = preload("res://game/ui/recolor.gdshader")
 const Ui = preload("res://game/ui/Ui.gd")
 
 const INFO := Color("fff2c2")
@@ -43,7 +42,6 @@ const COZY_UNCHECKED := "Checkboxes/Checkbox2_unchecked.png"
 const FONTS := "res://game/ui/fonts/"
 const FRAME_BROWN := Color("5b3a1e")
 static var _game_font: Font
-static var _hero_materials := {}
 
 
 static func is_game() -> bool:
@@ -715,43 +713,15 @@ static func close_popup(box: Control) -> void:
 		overlay.queue_free()
 
 
-# --- Heroes, avatars, dark popups ---------------------------------------------------------
+# --- Forge Stones, avatars, dark popups --------------------------------------------------
 
-## The recolour that turns a stock unit into this hero (shared per hero).
-static func hero_material(id: String) -> ShaderMaterial:
-	# Drawn generals carry their own colours.
-	if SpriteLib.is_cat(Heroes.HEROES[id]["unit"]):
-		return null
-	if not _hero_materials.has(id):
-		var hero: Dictionary = Heroes.HEROES[id]
-		var material := ShaderMaterial.new()
-		material.shader = RECOLOR
-		material.set_shader_parameter("hue_shift", hero["hue"])
-		material.set_shader_parameter("saturation", hero["sat"])
-		material.set_shader_parameter("brightness", hero["val"])
-		_hero_materials[id] = material
-	return _hero_materials[id]
+## Forge Stone (đá rèn), the hero-cat equipment upgrade resource: a grey-blue cut stone.
+const FORGE_STONE_TINT := Color("8fa3b8")
 
-
-static func hero_portrait(id: String, portrait_size: float) -> TextureRect:
-	var hero: Dictionary = Heroes.HEROES[id]
-	var portrait := icon(SpriteLib.portrait(hero["unit"], "Blue"), portrait_size)
-	portrait.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR if SpriteLib.is_cat(hero["unit"]) else CanvasItem.TEXTURE_FILTER_NEAREST
-	portrait.material = hero_material(id)
-	if hero["rarity"] >= 3:
-		var crown := drawn(DrawnIcon.Kind.CROWN, portrait_size * 0.3)
-		crown.position = Vector2(portrait_size * 0.36, -portrait_size * 0.02)
-		crown.size = crown.custom_minimum_size
-		portrait.add_child(crown)
-	return portrait
-
-
-static func shard_icon(id: String, icon_size: float) -> Control:
-	var shard := drawn(DrawnIcon.Kind.SHARD, icon_size)
-	shard.tint = Economy.RARITY_COLORS[Heroes.HEROES[id]["rarity"]]
-	return shard
-
-
+static func forge_stone_icon(icon_size: float) -> Control:
+	var stone := drawn(DrawnIcon.Kind.SHARD, icon_size)
+	stone.tint = FORGE_STONE_TINT
+	return stone
 
 ## The player's avatar in its frame. `value`/`frame_id` default to the profile's.
 static func avatar(avatar_size: float, value := "", frame_id := "") -> Control:
@@ -772,11 +742,8 @@ static func avatar(avatar_size: float, value := "", frame_id := "") -> Control:
 	holder.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	var inner := avatar_size * 0.8
 	var picture: Control
-	if value.begins_with("hero:") and Heroes.HEROES.has(value.substr(5)):
-		picture = hero_portrait(value.substr(5), inner)
-	else:
-		picture = icon(SpriteLib.texture(Meta.avatar_path(clampi(int(value), 1, Meta.AVATAR_COUNT))), inner)
-		picture.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	picture = icon(SpriteLib.texture(Meta.avatar_path(clampi(int(value), 1, Meta.AVATAR_COUNT))), inner)
+	picture.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	picture.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	holder.add_child(picture)
 	return holder
@@ -857,25 +824,22 @@ static func reward_row(reward: Dictionary, font_size := 18) -> HBoxContainer:
 			item.add_child(troop_portrait(PlayerData.TROOPS[id], font_size * 2.0))
 			item.add_child(label("x%d" % cards[id], font_size))
 			row.add_child(item)
-	var shards = reward.get("shards", null)
-	if shards is Array:
-		var id: String = PlayerData.summon_featured() if shards[0] == "featured" else shards[0]
-		var item := hbox(2)
-		item.add_child(shard_icon(id, font_size * 1.5))
-		item.add_child(label("%d" % shards[1], font_size))
-		row.add_child(item)
-	elif shards is Dictionary:
-		for id in shards:
-			var item := hbox(2)
-			item.add_child(shard_icon(id, font_size * 1.5))
-			item.add_child(label("%d" % shards[id], font_size))
-			row.add_child(item)
-	var heroes: Array = []
-	if reward.get("hero", "") != "":
-		heroes.append(reward["hero"])
-	heroes.append_array(reward.get("heroes", []))
-	for id in heroes:
-		row.add_child(hero_portrait(id, font_size * 2.4))
+	if int(reward.get("stones", 0)) > 0:
+		var stones := hbox(2)
+		stones.add_child(forge_stone_icon(font_size * 1.5))
+		stones.add_child(label("%d" % reward["stones"], font_size))
+		row.add_child(stones)
+	# {"item": rarity} (a promised random item) or {"items": [ids]} (what was granted).
+	var items: Array = reward.get("items", [])
+	if reward.has("item"):
+		var tag_label := label("Trang bị " + Economy.RARITY_NAMES[int(reward["item"])], font_size)
+		tag_label.add_theme_color_override("font_color", Economy.RARITY_COLORS[int(reward["item"])])
+		row.add_child(tag_label)
+	for id in items:
+		var d: Dictionary = HeroCat.ITEMS[id]
+		var face := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(d["rarity"]), "", font_size * 2.4)
+		face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		row.add_child(face)
 	return row
 
 

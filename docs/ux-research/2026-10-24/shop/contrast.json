@@ -1,0 +1,35 @@
+{
+  "method": "WCAG sRGB relative luminance; flat authored pairs only, not outlined label certification",
+  "pairs": [
+    {
+      "pair": "current_gold",
+      "foreground": "#3b2b1e",
+      "background": "#e7ca91",
+      "ratio": 8.5501
+    },
+    {
+      "pair": "current_wood",
+      "foreground": "#3b2b1e",
+      "background": "#bfd7ab",
+      "ratio": 8.7234
+    },
+    {
+      "pair": "current_silver",
+      "foreground": "#3b2b1e",
+      "background": "#b2d4df",
+      "ratio": 8.6282
+    },
+    {
+      "pair": "current_pity",
+      "foreground": "#69328c",
+      "background": "#e7ca91",
+      "ratio": 5.4422
+    },
+    {
+      "pair": "proposed_paper",
+      "foreground": "#3b2b1e",
+      "background": "#f2dcab",
+      "ratio": 10.0633
+    }
+  ]
+}

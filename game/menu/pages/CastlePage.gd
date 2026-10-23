@@ -3,7 +3,12 @@ extends "res://game/menu/pages/MenuPage.gd"
 # Castle level (HP, max meat, open gear cells, team slots) and the three workshop upgrades.
 
 const GridPreview = preload("res://game/menu/widgets/GridPreview.gd")
-const CastleArt = preload("res://game/assets/lobby/cardboard/castle-crop.png")
+const CastleTiers = preload("res://game/menu/lobby/CastleTiers.gd")
+const CASTLE_ART := [
+	preload("res://game/assets/lobby/castle-tiers/castle-tier-1.svg"), preload("res://game/assets/lobby/castle-tiers/castle-tier-2.svg"),
+	preload("res://game/assets/lobby/castle-tiers/castle-tier-3.svg"), preload("res://game/assets/lobby/castle-tiers/castle-tier-4.svg"),
+	preload("res://game/assets/lobby/castle-tiers/castle-tier-5.svg"),
+]
 
 
 func build() -> void:
@@ -17,7 +22,7 @@ func build() -> void:
 	art_stage.name = "CastleStage"
 	art_stage.custom_minimum_size.y = 210
 	body.add_child(art_stage)
-	var castle_art := UiKit.icon(CastleArt, 210)
+	var castle_art := UiKit.icon(CASTLE_ART[CastleTiers.tier_for(level) - 1], 210)
 	castle_art.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	castle_art.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	art_stage.add_child(castle_art)

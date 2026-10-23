@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=7 format=3]
+[gd_resource type="Resource" load_steps=9 format=3]
 
 [ext_resource type="Script" path="res://game/data/LevelData.gd" id="1_level"]
 [ext_resource type="Resource" path="res://game/data/troops/pawn.tres" id="2_pawn"]
@@ -7,8 +7,14 @@
 [ext_resource type="Resource" path="res://game/data/troops/lancer.tres" id="5_lancer"]
 [ext_resource type="Resource" path="res://game/data/troops/monk.tres" id="6_monk"]
 
+[ext_resource type="Texture2D" path="res://game/assets/battle/regions/05-hem-nui.png" id="battlefield"]
+
+[ext_resource type="Texture2D" path="res://game/assets/lobby/map-titles/05-hem-nui.png" id="lobby_banner"]
+
 [resource]
 script = ExtResource("1_level")
+lobby_banner = ExtResource("lobby_banner")
+battlefield = ExtResource("battlefield")
 display_name = "Màn 5 · Hẻm Núi"
 troop_pool = [ExtResource("2_pawn"), ExtResource("3_warrior"), ExtResource("4_archer"), ExtResource("5_lancer"), ExtResource("6_monk")]
 start_meat = 10.0

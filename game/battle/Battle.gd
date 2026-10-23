@@ -30,7 +30,6 @@ const ENEMY_SPAWN_Y := -30.0
 ## Contextual drop target, shown by the HUD only while a sellable gear is held.
 const SELL_RECT := Rect2(16, 1196, 688, 76)
 const Economy := preload("res://game/core/Economy.gd")
-const Heroes := preload("res://game/core/Heroes.gd")
 const HeroCat := preload("res://game/core/HeroCat.gd")
 const UiKit := preload("res://game/ui/UiKit.gd")
 ## Seconds of victory dance before the result panel.
@@ -65,9 +64,6 @@ var _pool: Array = []
 # Gear tier multipliers, computed once per battle instead of evaluating the formula per spawn.
 var _tier_mult: Array = []
 # The leading hero's buffs, read once per battle.
-var _hero_hp := 1.0
-var _hero_damage := 1.0
-var _hero_unit = null
 var _last_crit_text := 0
 ## Fish basket: living cat soldiers eat Economy.fish_cost() each (the general does not).
 var fish_cap := 28
@@ -82,12 +78,16 @@ func _ready() -> void:
 	for tier in range(1, board.MAX_TIER + 1):
 		_tier_mult.append(Economy.tier_multiplier(tier))
 	level = PlayerData.level_data()
-	_hero_hp = PlayerData.hero_hp_multiplier()
-	_hero_damage = PlayerData.hero_damage_multiplier()
+	$Background.setup(level)
 	for id in PlayerData.battle_team():
 		_pool.append(PlayerData.TROOPS[id])
 	core.setup(level)
 	core.destroyed.connect(_on_core_destroyed)
+	MusicLib.play("battle")
+	MusicLib.set_intensity(0.0)
+	# The jingle plays alone first; the battle music swells in under it.
+	MusicLib.duck(1.7, 40.0)
+	SoundLib.play("battle_start", 0.0, 0.0)
 	board.battle = self
 	core.board = board
 	waves.battle = self
@@ -101,35 +101,8 @@ func _ready() -> void:
 	fish_cap = Economy.FISH_CAP
 	board.place_new(_pool[0], 1)
 	_place_skill_gear()
-	_spawn_hero()
 	_open_shop()
-	var leader := PlayerData.leader()
-	if leader != "":
-		var h: Dictionary = PlayerData.hero_state(leader)
-		hud.show_message("Tướng %s: %s" % [Heroes.HEROES[leader]["name"], Heroes.bonus_text(leader, h["level"], h["stars"])])
-	else:
-		hud.show_message("Lượt nghỉ: mua gear, ghép gear giống nhau rồi bấm SẴN SÀNG.")
-
-
-# The leading hero fights as a big unit: its base troop's behaviour, the hero's stats and
-# look. It comes out from the wall at the start and again each wave if it fell.
-func _spawn_hero() -> void:
-	var id := PlayerData.leader()
-	if id == "" or (_hero_unit != null and is_instance_valid(_hero_unit) and not _hero_unit.is_dead()):
-		return
-	var hero: Dictionary = Heroes.HEROES[id]
-	var h: Dictionary = PlayerData.hero_state(id)
-	var troop: Resource = PlayerData.TROOPS[hero["troop"]]
-	var unit = UnitScene.instantiate()
-	unit.hero_id = id
-	unit.setup(self, troop, PLAYER, 1, Heroes.hp_mult(h["level"], h["stars"]) * _hero_hp, Heroes.damage_mult(h["level"], h["stars"]) * _hero_damage)
-	unit.position = HERO_AT
-	unit.rally = deployment_point(Vector2(FIELD_LEFT + (FIELD_RIGHT - FIELD_LEFT) / 2.0, RALLY_Y + (150.0 if troop.role != TroopData.Role.MELEE else 40.0)))
-	units_layer.add_child(unit)
-	player_units.append(unit)
-	_hero_unit = unit
-	spawn_effect("blast", HERO_AT + Vector2(0, -30), 0.9)
-	SoundLib.play("hero", -2.0, 0.0)
+	hud.show_message("Lượt nghỉ: mua gear, ghép gear giống nhau rồi bấm SẴN SÀNG.")
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -161,6 +134,7 @@ func start_wave() -> void:
 	if phase != "shop" or board.is_dragging():
 		return
 	phase = "fight"
+	MusicLib.set_intensity(1.0)
 	waves.start_next()
 	shop_changed.emit()
 
@@ -187,6 +161,7 @@ func buy(slot: int):
 	SoundLib.play("buy")
 	offer["sold"] = true
 	var gear = board.place_new(PlayerData.TROOPS[offer["id"]], offer["tier"])
+	SoundLib.play("gear_place", -2.0, 0.025)
 	spawn_effect("dust", gear.global_position + Vector2(0, 10), 1.6)
 	if not _merge_hint_shown and _has_merge_pair():
 		_merge_hint_shown = true
@@ -235,6 +210,7 @@ func income_preview() -> Array:
 
 func _open_shop() -> void:
 	phase = "shop"
+	MusicLib.set_intensity(0.0)
 	# A locked shop keeps its offers for one break, then unlocks.
 	if shop_locked and not shop.is_empty():
 		shop_locked = false
@@ -266,7 +242,8 @@ func sell_gear(gear) -> void:
 
 
 func on_gear_merged(gear) -> void:
-	SoundLib.play("merge")
+	# Each tier climbs a whole step, so progress is audible.
+	SoundLib.play("merge", 0.0, 0.0, minf(1.5, pow(1.122, gear.tier - 2)))
 	spawn_effect("dust", gear.global_position + Vector2(0, 10), 2.2)
 	hud.show_message("%s lên bậc %d!" % [gear.troop.display_name, gear.tier])
 	shop_changed.emit()
@@ -284,7 +261,8 @@ func spawn_player_unit(troop: Resource, tier: int, at: Vector2):
 		return null
 	var mult: float = _tier_mult[tier - 1] * PlayerData.troop_multiplier(troop.id)
 	var unit = UnitScene.instantiate()
-	unit.setup(self, troop, PLAYER, tier, mult * _hero_hp, mult * _hero_damage)
+	# The hero cat's weapon strengthens the two classes it pairs with.
+	unit.setup(self, troop, PLAYER, tier, mult, mult * PlayerData.class_damage_multiplier(troop.klass))
 	unit.position = deployment_point(at)
 	var hold_back := 0.0
 	match troop.role:
@@ -308,7 +286,7 @@ func spawn_player_unit(troop: Resource, tier: int, at: Vector2):
 func fish_used() -> int:
 	var used := 0
 	for unit in player_units:
-		if is_instance_valid(unit) and unit.hero_id == "":
+		if is_instance_valid(unit):
 			used += Economy.fish_cost(unit.troop.rarity)
 	return used
 
@@ -407,10 +385,6 @@ func on_unit_died(unit) -> void:
 	SoundLib.play("death" if unit.team == PLAYER else "pop", -1.0, 0.12)
 	if unit.team == PLAYER:
 		player_units.erase(unit)
-		if unit == _hero_unit:
-			spawn_effect("explosion", unit.position + Vector2(0, -30), 0.8)
-			hud.show_message("%s đã ngã! Sẽ trở lại ở đợt sau." % Heroes.HEROES[unit.hero_id]["name"], hud.WARN)
-			return
 		spawn_effect("dust", unit.position + Vector2(0, -8), 1.1)
 		return
 	enemy_units.erase(unit)
@@ -427,7 +401,8 @@ func damage_core(amount: float) -> void:
 		SoundLib.play("wall", -3.0, 0.1)
 		# Troops hit the wall for a fraction of their damage, so a few leakers hurt
 		# without ending the level on the spot.
-		core.take_damage(Economy.siege_damage(amount))
+		# The hero cat's armour (def) blocks part of every blow to the wall.
+		core.take_damage(Economy.siege_damage(amount) * (1.0 - PlayerData.wall_block()))
 
 
 ## Fires the shooter's projectile: an arrow (burning for fire archers) or a lobbed bomb.
@@ -553,9 +528,6 @@ func _on_wave_started(index: int, total: int) -> void:
 	_basket_warned = false
 	SoundLib.play("wave", 0.0, 0.0)
 	hud.show_message("Đợt %d/%d đang tới!" % [index + 1, total], hud.WARN)
-	if PlayerData.leader() != "" and (_hero_unit == null or not is_instance_valid(_hero_unit) or _hero_unit.is_dead()):
-		_spawn_hero()
-		hud.show_message("%s trở lại chiến trường!" % Heroes.HEROES[PlayerData.leader()]["name"])
 
 
 func _on_wave_cleared(index: int) -> void:
@@ -574,6 +546,8 @@ func _on_all_waves_cleared() -> void:
 	if phase != "fight":
 		return
 	phase = "won"
+	MusicLib.set_intensity(0.0)
+	MusicLib.duck(3.5, 14.0)
 	var ratio: float = core.hp / core.max_hp
 	var stars := Economy.battle_stars(ratio)
 	var reward: Dictionary = PlayerData.grant_battle_rewards(true, stars, level.waves.size())
@@ -616,8 +590,10 @@ func _celebrate() -> void:
 
 func _on_core_destroyed() -> void:
 	phase = "lost"
+	MusicLib.set_intensity(0.0)
+	MusicLib.duck(3.5, 14.0)
 	SoundLib.play("defeat", 0.0, 0.0)
-	SoundLib.play("explosion")
+	SoundLib.play("explosion", -8.0)
 	waves.stop()
 	units_layer.process_mode = Node.PROCESS_MODE_DISABLED
 	projectiles.process_mode = Node.PROCESS_MODE_DISABLED

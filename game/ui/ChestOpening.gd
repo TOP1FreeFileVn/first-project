@@ -2,10 +2,10 @@ extends Control
 
 # Full-screen chest opening, gacha style:
 #   drop    - the chest falls in, squashes on landing and kicks up dust;
-#   wait    - it bobs and rattles, light leaking from the seam in the colour of the best
-#             card inside, with a badge counting the cards;
-#   open    - on tap it winds up (shaking harder and longer the better the loot, the light
-#             turning from white to that colour), then bursts: flash, shockwave, the lid
+#   wait    - it bobs and rattles, warm light breathing along the lid seam,
+#             with a badge counting the cards;
+#   open    - on tap it winds up (longer for better loot), pauses, then bursts:
+#             a brief local flash, shockwave, the lid
 #             flies off and light pours out;
 #   card    - cards shoot out one by one (rarest last). Their halo hints at the rarity
 #             before the flip; epic and legendary cards shake first. After the flip a
@@ -23,6 +23,7 @@ const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const ChestArt = preload("res://game/ui/ChestArt.gd")
 const ChestBurst = preload("res://game/ui/ChestBurst.gd")
+const ChestLight = preload("res://game/ui/ChestLight.gd")
 
 const SCREEN := Vector2(720, 1280)
 const CHEST_AT := Vector2(360, 760)
@@ -31,7 +32,7 @@ const CARD_SIZE := Vector2(170, 230)
 const CARD_SCALE := 1.25
 const TRAY_Y := 1110.0
 const CHEST_SIZE := 250.0
-const RAYS := 12
+const RAYS := 8
 const SPECIAL_MIN := 0.4
 const TOP_BAR_GOLD := Vector2(150, 42)
 
@@ -69,6 +70,10 @@ var ray_center := CHEST_AT
 var ray_color := Color.WHITE
 var dim := 0.0
 var flash := 0.0
+var flash_center := CHEST_AT
+var flash_color := ChestLight.WARM
+var flash_radius := Vector2(270, 210)
+var _flash_tween: Tween
 var ring := 0.0
 var ring_center := CHEST_AT
 var ring_color := Color.WHITE
@@ -123,8 +128,8 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	theme = UiKit.make_theme()
-	ray_color = Economy.RARITY_COLORS[_best]
-	glow_color = _best_light()
+	ray_color = ChestLight.WARM
+	glow_color = ChestLight.WARM
 	_chest = Node2D.new()
 	_chest.draw.connect(_draw_chest)
 	add_child(_chest)
@@ -236,11 +241,14 @@ func _drop() -> void:
 func _wait() -> void:
 	_stage = "wait"
 	_hint.text = "Chạm để mở"
+	glow = 0.32
 	_tween = create_tween().set_loops()
-	_tween.tween_property(self, "glow", 1.0, 0.5)
-	_tween.tween_property(self, "glow", 0.35, 0.5)
+	_tween.tween_property(self, "glow", 1.0, 0.65).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	_tween.tween_interval(0.08)
+	_tween.tween_property(self, "glow", 0.32, 0.37).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+	_tween.tween_interval(0.10)
 	if _best >= Economy.Rarity.EPIC:
-		_sparks = _particles(null, ray_color, 18, 1.0)
+		_sparks = _particles(null, ChestLight.WARM, 10, 1.0)
 		_sparks.position = CHEST_AT + Vector2(0, -20)
 		_sparks.one_shot = false
 		_sparks.explosiveness = 0.0
@@ -256,19 +264,18 @@ func _open() -> void:
 	if _sparks != null:
 		_sparks.emitting = false
 	_tween.kill()
-	# The better the loot, the longer and harder the wind-up. For epic and up the light
-	# starts white and only turns to the rarity colour as the chest is about to burst.
+	# Warm light belongs to the chest; rarity color belongs to its reward cards.
 	var windup: float = [0.35, 0.45, 0.65, 0.85][_best]
-	var reveal := _best_light()
-	if _best >= Economy.Rarity.EPIC:
-		glow_color = Color.WHITE
 	_tween = create_tween()
 	_tween.set_parallel()
 	_tween.tween_property(self, "charge", 1.0, windup).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	_tween.tween_property(self, "chest_squash", Vector2(1.14, 0.84), windup)
 	_tween.tween_property(self, "glow", 1.8, windup)
-	_tween.tween_property(self, "glow_color", reveal, windup).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN)
+	_tween.tween_property(self, "glow_color", ChestLight.WARM.lightened(0.18), windup)
 	SoundLib.play("charge", -4.0, 0.0)
+	# A short still beat makes the opening feel released rather than constantly shaking.
+	_tween.chain().tween_callback(func(): charge = 0.0)
+	_tween.chain().tween_interval(0.08)
 	_tween.chain().tween_callback(_burst)
 	_tween.tween_property(self, "chest_squash", Vector2(0.86, 1.18), 0.08)
 	_tween.tween_property(self, "lid_offset", Vector2(110, -420), 0.6).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
@@ -285,11 +292,11 @@ func _burst() -> void:
 	charge = 0.0
 	glow = 1.0
 	ray_center = CHEST_AT + Vector2(0, -40)
-	_flash(0.9 if _best >= Economy.Rarity.EPIC else 0.6)
-	_ring(CHEST_AT, ray_color)
-	_fx("blast", CHEST_AT + Vector2(0, -50), 1.5, ray_color.lightened(0.3))
+	_flash(0.62 if _best >= Economy.Rarity.EPIC else 0.42)
+	_ring(CHEST_AT, ChestLight.WARM)
+	_fx("blast", CHEST_AT + Vector2(0, -50), 1.2, ChestLight.WARM)
 	_shake(14.0 if _best >= Economy.Rarity.EPIC else 7.0, 0.35)
-	var stars := _particles(null, _best_light(), 36, 1.0)
+	var stars := _particles(null, ChestLight.WARM, 20 if _best >= Economy.Rarity.EPIC else 8, 0.8)
 	stars.position = CHEST_AT
 	stars.spread = 70.0
 	stars.initial_velocity_min = 350.0
@@ -319,7 +326,7 @@ func _next_card() -> void:
 	move_child(_card, _hint.get_index())
 	# The halo behind the card back already hints at the rarity.
 	ray_color = Economy.RARITY_COLORS[rarity]
-	halo_color = ray_color
+	halo_color = ChestLight.WARM if rarity == Economy.Rarity.COMMON else ray_color.lightened(0.20)
 	halo = 0.0
 	sweep = -1.0
 	_fx("dust", CHEST_AT + Vector2(0, -20), 1.4, Color(_best_light(), 0.8))
@@ -343,7 +350,8 @@ func _next_card() -> void:
 		SoundLib.play("flip")
 		_set_face(_card, true)
 		if rarity >= Economy.Rarity.RARE:
-			_flash(0.5 if rarity >= Economy.Rarity.EPIC else 0.25))
+			_flash(0.42 if rarity >= Economy.Rarity.EPIC else 0.24, CARD_AT,
+				halo_color.lightened(0.25), Vector2(240, 280)))
 	_tween.chain().tween_property(_card, "scale:x", CARD_SCALE, 0.13).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	_tween.chain().tween_callback(_hold.bind(id, rarity, special))
 
@@ -367,6 +375,8 @@ func _hold(id: String, rarity: int, special: bool) -> void:
 # Epic / legendary / new troop: banner, shake, burst; guaranteed to stay SPECIAL_MIN seconds.
 func _special(id: String, rarity: int) -> void:
 	_special_until = _time + SPECIAL_MIN
+	if rarity >= Economy.Rarity.EPIC:
+		MusicLib.duck(1.6)
 	SoundLib.play("legend" if rarity >= Economy.Rarity.LEGENDARY else ("epic" if rarity >= Economy.Rarity.EPIC else "rare"), 0.0, 0.0)
 	var text := ""
 	if rarity >= Economy.Rarity.LEGENDARY:
@@ -453,6 +463,9 @@ func _to_tray() -> void:
 
 func _show_summary() -> void:
 	_stage = "summary"
+	if _flash_tween != null and _flash_tween.is_valid():
+		_flash_tween.kill()
+	flash = 0.0
 	_clear_extras()
 	if _sparks != null:
 		_sparks.queue_free()
@@ -598,71 +611,64 @@ func _close() -> void:
 
 # --- Drawing ------------------------------------------------------------------------------
 
-# Background: the dim, two layers of turning rays and a soft glow, plus the card's halo.
+# Eight softly fading rays sit behind the reward, with no full-screen light wash.
 func _draw() -> void:
 	draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(0.02, 0.03, 0.05, dim * (0.5 if _menu_pattern else 1.0)))
 	if ray_alpha > 0.0:
+		var ink := ChestLight.WARM.lerp(ray_color, 0.28)
 		for i in RAYS:
-			var angle := _time * 0.35 + i * TAU / RAYS
-			_ray(ray_center, angle, 0.13, Color(ray_color, 0.11 * ray_alpha))
-		for i in RAYS:
-			var angle := -_time * 0.6 + (i + 0.5) * TAU / RAYS
-			_ray(ray_center, angle, 0.04, Color(ray_color.lightened(0.4), 0.12 * ray_alpha))
-		_soft_glow(ray_center, 220.0, ray_color, 0.2 * ray_alpha)
+			var angle := _time * 0.10 + i * TAU / RAYS
+			ChestLight.shaft(self, ray_center, Vector2.from_angle(angle),
+				760.0, 8.0, 125.0, ink, 0.12 * ray_alpha)
+		_soft_glow(ray_center, 260.0, ink, 0.16 * ray_alpha)
 	if halo > 0.0 and _card != null:
-		var pulse := 1.0 + 0.06 * sin(_time * 9.0)
-		_soft_glow(_card_center(), 190.0 * halo * pulse, halo_color, 0.5 * minf(halo, 1.0))
-
-
-func _ray(from: Vector2, angle: float, half_width: float, color: Color) -> void:
-	var a := from + Vector2.from_angle(angle - half_width) * 1000.0
-	var b := from + Vector2.from_angle(angle + half_width) * 1000.0
-	draw_colored_polygon(PackedVector2Array([from, a, b]), color)
+		var pulse := 1.0 + 0.035 * sin(_time * 3.2)
+		_soft_glow(_card_center(), 240.0 * halo * pulse, halo_color, 0.40 * minf(halo, 1.0))
 
 
 func _soft_glow(at: Vector2, radius: float, color: Color, alpha: float) -> void:
-	for i in 5:
-		var f := 1.0 - i * 0.18
-		draw_circle(at, radius * f, Color(color.lightened(i * 0.12), alpha * 0.35))
+	ChestLight.glow(self, at, Vector2(radius, radius * 1.1), color, alpha)
 
 
 func _draw_chest() -> void:
 	var w := _chest_size
 	var light := glow_color
 	var closed := lid_alpha > 0.5 and lid_offset == Vector2.ZERO
-	# Once the lid is off, a beam pours out behind the cards.
+	# The light starts inside the mouth and fades before reaching the header.
 	if mouth > 0.0:
-		var beam := PackedVector2Array([Vector2(-w * 0.44, 0), Vector2(w * 0.44, 0), Vector2(w * 1.0, -620), Vector2(-w * 1.0, -620)])
-		_chest.draw_colored_polygon(beam, Color(light, 0.2 * mouth * chest_alpha))
-		var core := PackedVector2Array([Vector2(-w * 0.25, 0), Vector2(w * 0.25, 0), Vector2(w * 0.45, -620), Vector2(-w * 0.45, -620)])
-		_chest.draw_colored_polygon(core, Color(light.lightened(0.5), 0.14 * mouth * chest_alpha))
-	# The closed rays rise behind the prop, keeping the latch and its contour intact.
+		var source := Vector2(0, -w * 0.04)
+		ChestLight.shaft(_chest, source, Vector2.UP, 470.0,
+			w * 0.33, w * 0.58, light, 0.28 * mouth * chest_alpha)
+		ChestLight.shaft(_chest, source, Vector2.UP, 350.0,
+			w * 0.14, w * 0.27, light.lightened(0.35), 0.25 * mouth * chest_alpha)
+		ChestLight.glow(_chest, source + Vector2(0, -22), Vector2(w * 0.5, 88),
+			light, 0.34 * mouth * chest_alpha)
+	# A low soft spill replaces needle-like closed rays. The prop occludes its base.
 	if glow > 0.0 and closed:
-		var bright := minf(glow, 1.0)
-		for i in 7:
-			var x := (i - 3) * w * 0.16
-			var reach := w * 0.34 + 60.0 * glow * (1.0 - absf(i - 3) * 0.2)
-			var tip := Vector2(x * 1.7, -reach)
-			_chest.draw_colored_polygon(PackedVector2Array([Vector2(x - 8, 0), Vector2(x + 8, 0), tip]), Color(light, 0.26 * bright * chest_alpha))
+		ChestLight.glow(_chest, Vector2(0, -w * 0.13),
+			Vector2(w * 0.64, w * (0.38 + glow * 0.09)), light,
+			(0.08 + glow * 0.14) * chest_alpha)
 	ChestArt.draw(_chest, Vector2.ZERO, w, _style, chest_alpha, lid_offset, lid_rotation, lid_alpha,
 		Color(light, mouth) if mouth > 0.0 else Color(0, 0, 0, 0))
 	if glow > 0.0 and closed:
-		# Light escapes along the seam on either side of the foreground cat latch.
-		var latch_width := 44.0 if _style.get("kind", "wood") == "gold" else 32.0
-		var latch_clearance := w * latch_width / ChestArt.AUTHOR_WIDTH
-		var leak := Color(light.lightened(0.3), 0.95 * minf(glow, 1.0) * chest_alpha)
+		# Light stays on either side of the selected chest's fixed lock plate.
+		var art: Dictionary = ChestArt.asset_for(_style.get("kind", "wood"))
+		var latch_clearance := w * (float(art["latch_half_width"]) + 3.0) / ChestArt.AUTHOR_WIDTH
 		for side in [-1.0, 1.0]:
-			var x := -w * 0.5 if side < 0.0 else latch_clearance
-			_chest.draw_rect(Rect2(Vector2(x, -3.0), Vector2(w * 0.5 - latch_clearance, 6.0)), leak)
+			var x: float = side * (w * 0.48 + latch_clearance) * 0.5
+			var half_width := (w * 0.48 - latch_clearance) * 0.5
+			ChestLight.glow(_chest, Vector2(x, 0), Vector2(half_width, 10 + 3 * glow),
+				light, (0.18 + 0.40 * minf(glow, 1.6)) * chest_alpha)
+			ChestLight.glow(_chest, Vector2(x, 0), Vector2(half_width * 0.96, 3.2),
+				light.lightened(0.35), 0.75 * minf(glow, 1.0) * chest_alpha)
 
 
 # Over everything: shockwave ring, card shine, sparkles, the cards-left badge and the flash.
 func _draw_front() -> void:
 	if ring > 0.0 and ring < 1.0:
-		var r := lerpf(40.0, 620.0, ring)
+		var r := lerpf(40.0, 440.0, ring)
 		var fade := 1.0 - ring
-		_front.draw_arc(ring_center, r, 0.0, TAU, 64, Color(ring_color.lightened(0.5), 0.8 * fade), 26.0 * fade + 2.0, true)
-		_front.draw_arc(ring_center, r * 0.8, 0.0, TAU, 64, Color(Color.WHITE, 0.4 * fade), 8.0 * fade + 1.0, true)
+		_front.draw_arc(ring_center, r, 0.0, TAU, 64, Color(ring_color.lightened(0.3), 0.55 * fade), 12.0 * fade + 1.0, true)
 	if _card != null and sweep >= 0.0 and _card.get_node("Front").visible:
 		_draw_sweep()
 	if twinkle > 0.0 and _card != null:
@@ -688,7 +694,7 @@ func _draw_front() -> void:
 		_front.draw_string_outline(font, at + Vector2(-width / 2.0, 11), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 30, 6, Color("24170e"))
 		_front.draw_string(font, at + Vector2(-width / 2.0, 11), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 30, Color.WHITE)
 	if flash > 0.0:
-		_front.draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(1, 1, 0.95, flash))
+		ChestLight.glow(_front, flash_center, flash_radius, flash_color, flash)
 
 
 # A diagonal band of light crossing the face-up card, clipped to the card.
@@ -788,9 +794,15 @@ func _fx(effect: String, at: Vector2, effect_scale: float, color := Color.WHITE,
 		move_child(fx, _card.get_index())
 
 
-func _flash(strength: float) -> void:
+func _flash(strength: float, at := CHEST_AT, color := ChestLight.WARM, radius := Vector2(270, 210)) -> void:
+	if _flash_tween != null and _flash_tween.is_valid():
+		_flash_tween.kill()
+	flash_center = at
+	flash_color = color
+	flash_radius = radius
 	flash = strength
-	create_tween().tween_property(self, "flash", 0.0, 0.35).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	_flash_tween = create_tween()
+	_flash_tween.tween_property(self, "flash", 0.0, 0.16).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
 
 func _ring(at: Vector2, color: Color) -> void:

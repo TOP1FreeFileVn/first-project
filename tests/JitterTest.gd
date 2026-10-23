@@ -20,7 +20,6 @@ var _moved := 0.0
 func _ready() -> void:
 	PlayerData.persist = false
 	PlayerData._reset()
-	PlayerData.hero = ""
 	_battle = load("res://game/battle/Battle.tscn").instantiate()
 	add_child(_battle)
 	var troops := ["warrior", "archer", "pawn"]

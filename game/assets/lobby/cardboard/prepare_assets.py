@@ -25,10 +25,16 @@ copies = []
 def copy(source, relative):
     target = HERE / relative
     target.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, target)
+    # Rebuilding the older V4 extraction must retain the newer editable SVG
+    # designs already installed in production. Their current bytes are recorded.
+    preserve_vector = (HERE / "props/manifest.json").is_file() and relative.split("/")[0] in {"tunnel", "bed"} and target.is_file()
+    if preserve_vector:
+        source = target
+    else:
+        shutil.copyfile(source, target)
     assert sha(source) == sha(target)
     copies.append({"asset": relative, "source": source.relative_to(REPO).as_posix(),
-                   "sha256": sha(target), "exact_copy": True})
+                   "sha256": sha(target), "exact_copy": True, "preserved_current_vector": preserve_vector})
 
 copy(V4 / "processed/terrain-background.png", "source/terrain-approved-v4.png")
 copy(V4 / "processed/castle-layer.png", "castle-layer.png")

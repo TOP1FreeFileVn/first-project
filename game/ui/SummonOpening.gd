@@ -1,11 +1,11 @@
 extends Control
 
-# Full-screen hero summon:
+# Full-screen equipment summon:
 #   charge   - a summoning circle spins up; its light starts white and turns to the colour
 #              of the best result (longer and stronger for epic / legendary);
 #   burst    - flash and shockwave, the cards fly out face down into place;
-#   reveal   - they flip one by one; epic and legendary heroes stop for a banner and shake;
-#   showcase - every new hero steps out large with its buff (tap to continue);
+#   reveal   - they flip one by one; epic and legendary items stop for a banner and shake;
+#   showcase - every epic or legendary item is shown large with its stats (tap to continue);
 #   done     - the results stay on screen with DONE and SUMMON AGAIN.
 # The results are already granted, so SKIP or closing never loses anything.
 
@@ -14,7 +14,7 @@ signal closed
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
-const Heroes = preload("res://game/core/Heroes.gd")
+const HeroCat = preload("res://game/core/HeroCat.gd")
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
 
 const SCREEN := Vector2(720, 1280)
@@ -56,7 +56,7 @@ func setup(results: Array, featured: String, on_again := Callable()) -> void:
 	_on_again = on_again
 	for result in results:
 		_best = maxi(_best, _rank(result))
-		if result["type"] == "hero" and result["new"]:
+		if result["rarity"] >= 2:
 			_showcase_queue.append(result["id"])
 
 
@@ -245,6 +245,7 @@ func _reveal_next() -> void:
 
 func _special(card: Control, result: Dictionary, rank: int) -> void:
 	_special_until = _time + 0.45
+	MusicLib.duck(1.6)
 	SoundLib.play("legend" if rank >= 3 else "epic", 0.0, 0.0)
 	var color: Color = Economy.RARITY_COLORS[rank]
 	var text := "HUYỀN THOẠI!" if rank >= 3 else "SỬ THI!"
@@ -283,7 +284,7 @@ func _after_reveal() -> void:
 		_next_showcase()
 
 
-# One new hero at a time, large, with its name and buff.
+# One epic / legendary item at a time, large, with its name and stats.
 func _next_showcase() -> void:
 	_clear_extras()
 	if _showcase_queue.is_empty():
@@ -294,8 +295,8 @@ func _next_showcase() -> void:
 	_hint.text = "Chạm để tiếp tục"
 	var id: String = _showcase_queue.pop_front()
 	SoundLib.play("hero", 0.0, 0.0)
-	var hero: Dictionary = Heroes.HEROES[id]
-	var color: Color = Economy.RARITY_COLORS[hero["rarity"]]
+	var d: Dictionary = HeroCat.ITEMS[id]
+	var color: Color = Economy.RARITY_COLORS[d["rarity"]]
 	light = color.lightened(0.3)
 	for card in _cards:
 		card.modulate.a = 0.15
@@ -306,18 +307,15 @@ func _next_showcase() -> void:
 	add_child(shade)
 	move_child(shade, _hint.get_index())
 	_extras.append(shade)
-	var sprite := AnimatedSprite2D.new()
-	sprite.sprite_frames = SpriteLib.unit_frames(hero["unit"], "Blue")
-	sprite.material = UiKit.hero_material(id)
-	sprite.offset = Vector2(0, -SpriteLib.foot_offset(hero["unit"]))
-	sprite.position = Vector2(360, 700)
-	sprite.scale = Vector2(0.2, 0.2)
-	sprite.play("attack")
-	sprite.animation_finished.connect(func(): sprite.play("idle"))
-	add_child(sprite)
-	_extras.append(sprite)
-	sprite.create_tween().tween_property(sprite, "scale", Vector2(2.4, 2.4), 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	_fx("blast", Vector2(360, 620), 2.2, color.lightened(0.3))
+	var big := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(d["rarity"]), "", 240.0)
+	big.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	big.pivot_offset = Vector2(120, 120)
+	big.position = Vector2(240, 470)
+	big.scale = Vector2(0.2, 0.2)
+	add_child(big)
+	_extras.append(big)
+	big.create_tween().tween_property(big, "scale", Vector2.ONE, 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	_fx("blast", Vector2(360, 590), 2.2, color.lightened(0.3))
 	flash = 0.7
 	create_tween().tween_property(self, "flash", 0.0, 0.4)
 	var box := UiKit.vbox(4)
@@ -326,18 +324,26 @@ func _next_showcase() -> void:
 	box.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(box)
 	_extras.append(box)
-	var tag := UiKit.label("TƯỚNG MỚI!", 44, UiKit.GOLD_TEXT)
+	var tag := UiKit.label(Economy.RARITY_NAMES[d["rarity"]].to_upper() + "!", 44, UiKit.GOLD_TEXT)
 	tag.add_theme_constant_override("outline_size", 10)
 	tag.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(tag)
-	var name_label := UiKit.label(hero["name"], 32, color)
+	var name_label := UiKit.label(d["name"], 32, color)
 	name_label.add_theme_constant_override("outline_size", 8)
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(name_label)
-	var buff := UiKit.label("✦ " + Heroes.bonus_text(id, 1, 1), 22, Color("9ff0a0"))
-	buff.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	box.add_child(buff)
-
+	var parts := []
+	for key in d["stats"]:
+		parts.append("+%d %s" % [d["stats"][key], HeroCat.STAT_NAMES[key]])
+	var stats := UiKit.label("✦ " + " · ".join(parts), 22, Color("9ff0a0"))
+	stats.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	box.add_child(stats)
+	if d.has("skill"):
+		var skill := UiKit.label(d["skill"], 20)
+		skill.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		skill.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		skill.custom_minimum_size.x = SCREEN.x - 80
+		box.add_child(skill)
 
 func _done() -> void:
 	_stage = "done"
@@ -420,12 +426,7 @@ func _draw_front() -> void:
 # --- Pieces -------------------------------------------------------------------------------
 
 func _rank(result: Dictionary) -> int:
-	match result["type"]:
-		"hero":
-			return Heroes.HEROES[result["id"]]["rarity"]
-		"shards":
-			return 1 if result["id"] == _featured else 0
-	return 0
+	return int(result.get("rarity", 0))
 
 
 func _make_card(result: Dictionary) -> Control:
@@ -446,34 +447,17 @@ func _make_card(result: Dictionary) -> Control:
 	var column := UiKit.vbox(0)
 	column.alignment = BoxContainer.ALIGNMENT_CENTER
 	front.add_child(column)
-	match result["type"]:
-		"hero":
-			var hero: Dictionary = Heroes.HEROES[result["id"]]
-			column.add_child(_center(UiKit.label(Economy.RARITY_NAMES[rank], 13)))
-			column.add_child(_center(UiKit.hero_portrait(result["id"], 64)))
-			var name_label := UiKit.label(hero["name"], 12)
-			name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-			name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-			name_label.custom_minimum_size.x = CARD_SIZE.x - 20
-			column.add_child(name_label)
-			column.add_child(_center(UiKit.tag("Mới!") if result["new"] else UiKit.label("+%d mảnh" % Heroes.DUPLICATE_SHARDS, 13)))
-		"shards":
-			column.add_child(_center(UiKit.label("Mảnh tướng", 13)))
-			var icons := Control.new()
-			icons.custom_minimum_size = Vector2(90, 76)
-			var portrait := UiKit.hero_portrait(result["id"], 68)
-			portrait.position = Vector2(0, 4)
-			icons.add_child(portrait)
-			var shard := UiKit.shard_icon(result["id"], 40)
-			shard.position = Vector2(56, 44)
-			shard.size = Vector2(40, 40)
-			icons.add_child(shard)
-			column.add_child(_center(icons))
-			column.add_child(_center(UiKit.label("x%d" % result["count"], 22)))
-		_:
-			column.add_child(_center(UiKit.label("Vàng", 13)))
-			column.add_child(_center(UiKit.icon(UiKit.coin_texture(128), 62)))
-			column.add_child(_center(UiKit.label(UiKit.format_number(result["amount"]), 22)))
+	var d: Dictionary = HeroCat.ITEMS[result["id"]]
+	column.add_child(_center(UiKit.label(Economy.RARITY_NAMES[rank], 13)))
+	var face := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(rank), "", 76.0)
+	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	column.add_child(_center(face))
+	var name_label := UiKit.label(d["name"], 12)
+	name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	name_label.custom_minimum_size.x = CARD_SIZE.x - 20
+	column.add_child(name_label)
+	column.add_child(_center(UiKit.label("+%d đá rèn" % result["stones"], 13)))
 	card.add_child(front)
 	_set_face(card, false)
 	return card

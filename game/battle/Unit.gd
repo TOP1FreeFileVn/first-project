@@ -7,10 +7,11 @@ extends Node2D
 
 const TroopData = preload("res://game/data/TroopData.gd")
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
-const Heroes = preload("res://game/core/Heroes.gd")
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Economy = preload("res://game/core/Economy.gd")
-const HERO_SCALE := 1.5
+const SoldierRig = preload("res://game/battle/SoldierRig.gd")
+## Cats with a skeleton (tools/ui/make_cat_rigs.py) animate with it: game/assets/units/<id>/<id>.json.
+const RIG_DIR := "res://game/assets/units/"
 const Ability = TroopData.Ability
 const Role = TroopData.Role
 
@@ -47,12 +48,10 @@ var damage := 1.0
 var rally := Vector2.ZERO
 ## Cat soldiers are one baked texture; _animate_cat bobs and swings it.
 var _cat := false
+## The cat's skeleton, when it has one. The AnimatedSprite2D then stays as the state clock
+## (animation name, flip, playing) and the rig draws in its place.
+var _rig: Node2D
 var _cat_clock := randf() * 10.0
-## Set for the leading hero: fights like its troop, looks like the hero.
-var hero_id := ""
-# Behind the sprite (which itself draws behind this node): the hero's aura and cape.
-var _hero_back: Node2D
-
 var _dead := false
 var _target = null
 var _attack_target = null
@@ -100,30 +99,58 @@ func setup(p_battle, p_troop: Resource, p_team: int, p_tier: int, hp_mult: float
 func _ready() -> void:
 	# A general fights with its base troop's numbers but always looks like itself (the base
 	# troops are now monsters, so borrowing their art turned the general into a skeleton).
-	var look: String = Heroes.HEROES[hero_id]["unit"] if hero_id != "" else troop.unit_key
+	var look: String = troop.unit_key
 	sprite.sprite_frames = SpriteLib.unit_frames(look, _sprite_color())
 	sprite.offset = Vector2(0, -SpriteLib.foot_offset(look))
 	var s: float = BASE_SCALE * troop.sprite_scale * (1.0 + 0.07 * (tier - 1)) * (1.35 if elite else 1.0)
 	_tint = troop.tint
-	if hero_id != "":
-		s = BASE_SCALE * HERO_SCALE
-		sprite.material = UiKit.hero_material(hero_id)
-		_tint = Color.WHITE
-		_hero_back = Node2D.new()
-		_hero_back.show_behind_parent = true
-		_hero_back.draw.connect(_draw_hero_back)
-		add_child(_hero_back)
-		move_child(_hero_back, 0)
 	sprite.scale = Vector2(s, s)
 	sprite.flip_h = randf() < 0.5
 	sprite.modulate = _tint
 	if SpriteLib.is_cat(look):
 		_cat = true
 		sprite.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	_setup_rig(look)
 	sprite.play("idle")
 	_retarget = randf() * RETARGET_INTERVAL
 	_ability_clock = troop.ability_cooldown * randf_range(0.3, 0.7)
 
+
+func _setup_rig(look: String) -> void:
+	if not look.begins_with("art:"):
+		return
+	var id := look.substr(4)
+	var path := RIG_DIR + id + "/" + id + ".json"
+	if not FileAccess.file_exists(path):
+		return
+	_rig = SoldierRig.new()
+	_rig.name = "Rig"
+	_rig.load_skeleton(path)
+	_rig.material = sprite.material
+	_rig.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	_rig.event.connect(_on_rig_event)
+	add_child(_rig)
+	move_child(_rig, sprite.get_index() + 1)
+	sprite.self_modulate.a = 0.0
+	_sync_rig()
+
+# Rig skeleton units are the 256x240 art's pixels; the baked sprite showed that art at half size.
+func _sync_rig() -> void:
+	var s := sprite.scale.x * 0.5
+	_rig.scale = Vector2(-s if sprite.flip_h else s, sprite.scale.y * 0.5)
+	_rig.position = sprite.position + Vector2(0, 4.0)
+	_rig.modulate = sprite.modulate
+	_rig.rotation = sprite.rotation if _celebrating else 0.0
+	var anim := String(sprite.animation)
+	if anim == "guard" or not _rig.has_animation(anim):
+		anim = "idle"
+	_rig.play(anim)
+
+func _on_rig_event(name: String) -> void:
+	# The rig's "hit" lands the blow at the frame the weapon strikes.
+	if name == "hit" and _hit_timer >= 0.0:
+		_hit_timer = -1.0
+		_resolve_hit()
 
 func is_dead() -> bool:
 	return _dead
@@ -244,7 +271,9 @@ func _process(delta: float) -> void:
 				_settle_goal = goal
 			_play("idle")
 	_separate(delta)
-	if _cat:
+	if _rig != null:
+		_sync_rig()
+	elif _cat:
 		_animate_cat(delta)
 	queue_redraw()
 
@@ -325,10 +354,6 @@ func _tick_ability(delta: float) -> void:
 
 
 func _draw() -> void:
-	if hero_id != "":
-		_hero_back.queue_redraw()
-		if Heroes.HEROES[hero_id]["rarity"] >= 3:
-			DrawnIcon.draw_crown(self, Vector2(0, -sprite.scale.y * 86.0 - 14.0), 24.0)
 	# Ability auras sit under the feet.
 	if troop.ability == Ability.COMMAND:
 		var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 250.0)
@@ -345,55 +370,22 @@ func _draw() -> void:
 		draw_arc(Vector2(0, -22), 30.0, 0.0, TAU, 28, Color(1.0, 0.9, 0.4, 0.9), 3.0, true)
 	elif _armor_time > 0.0:
 		draw_arc(Vector2(0, -22), 24.0, 0.0, TAU, 24, Color(0.6, 0.85, 1.0, 0.55), 2.0, true)
-	if troop.rarity >= 3 and hero_id == "":
+	if troop.rarity >= 3:
 		var head := -sprite.scale.y * 86.0 - 2.0
 		DrawnIcon.draw_crown(self, Vector2(0, head - 10.0), 20.0)
 	if _command_time > 0.0:
 		draw_circle(Vector2(0, -sprite.scale.y * 86.0 - 16.0), 3.5, Color(1.0, 0.8, 0.3))
 
-	if hp >= max_hp and not elite and troop.rarity < 3 and hero_id == "":
+	if hp >= max_hp and not elite and troop.rarity < 3:
 		return
-	var width := 60.0 if hero_id != "" else (46.0 if elite or troop.rarity >= 3 else 30.0)
+	var width := 46.0 if elite or troop.rarity >= 3 else 30.0
 	var top := -sprite.scale.y * 86.0 - 8.0
 	draw_rect(Rect2(-width / 2.0 - 1.0, top - 1.0, width + 2.0, 6.0), Color(0.08, 0.1, 0.13, 0.9))
 	var fill := Color("7fd66b") if team == PLAYER else Color("f0605a")
-	if hero_id != "":
-		fill = Color("ffd35c")
 	draw_rect(Rect2(-width / 2.0, top, width * clampf(hp / max_hp, 0.0, 1.0), 4.0), fill)
 
 
-# The hero's extras under the sprite: an aura ring in its rarity colour and a cape that
-# trails behind it and waves.
-func _draw_hero_back() -> void:
-	var ci := _hero_back
-	var hero: Dictionary = Heroes.HEROES[hero_id]
-	var color: Color = Economy.RARITY_COLORS[hero["rarity"]]
-	var t := Time.get_ticks_msec() / 1000.0
-	ci.draw_set_transform(Vector2(0, 2), 0.0, Vector2(1.0, 0.42))
-	ci.draw_circle(Vector2.ZERO, 40.0, Color(color, 0.16 + 0.08 * sin(t * 4.0)))
-	ci.draw_arc(Vector2.ZERO, 40.0, 0.0, TAU, 36, Color(color, 0.85), 3.0, true)
-	ci.draw_arc(Vector2.ZERO, 30.0, t * 2.0, t * 2.0 + PI, 18, Color(color.lightened(0.4), 0.8), 2.0, true)
-	ci.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-	var s := sprite.scale.y
-	var back := 1.0 if sprite.flip_h else -1.0
-	var moving := 1.0 if sprite.animation == "run" else 0.4
-	var wave := sin(t * 8.0) * 5.0 * moving
-	# Hangs from the shoulders to the heels and trails away from where it faces.
-	var trail := back * 12.0 * moving + wave
-	var cape := PackedVector2Array([
-		Vector2(-26.0 * s, -58.0 * s), Vector2(26.0 * s, -58.0 * s),
-		Vector2(40.0 * s + trail, -8.0), Vector2(trail * 1.6, -2.0), Vector2(-40.0 * s + trail, -8.0)])
-	var cape_color: Color = hero["cape"]
-	var outline := cape.duplicate()
-	outline.append(cape[0])
-	ci.draw_polyline(outline, Color("24170e"), 3.0, true)
-	ci.draw_colored_polygon(cape, cape_color)
-	ci.draw_line(cape[0], cape[4], cape_color.lightened(0.25), 2.0, true)
-
-
 func _sprite_color() -> String:
-	if hero_id != "":
-		return "Blue"
 	if team == ENEMY:
 		return "Black" if elite else "Red"
 	return SpriteLib.player_color(tier)
@@ -500,6 +492,14 @@ func _start_attack() -> void:
 	sprite.play("attack")
 	var frames := sprite.sprite_frames
 	_hit_timer = frames.get_frame_count("attack") / frames.get_animation_speed("attack") * 0.55
+	if _rig != null:
+		# Restart the swing; the rig's "hit" event resolves the blow, the timer is a fallback.
+		_rig.play("attack", true)
+		var at: float = _rig.event_time("hit")
+		if at >= 0.0:
+			_hit_timer = at + 0.1
+		# The swing outlasts the old frame strip; keep the sprite clock on "attack" for it.
+		frames.set_animation_speed("attack", frames.get_frame_count("attack") / maxf(_rig.length("attack"), 0.1))
 
 
 func _resolve_hit() -> void:
@@ -559,8 +559,8 @@ func celebrate() -> void:
 	sprite.play("idle")
 
 
-# Hops on the spot with a squash on landing, turning around every other hop. Heroes and
-# legendary troops also swing their weapon at the top of a hop.
+# Hops on the spot with a squash on landing, turning around every other hop. Legendary
+# troops also swing their weapon at the top of a hop.
 func _dance(delta: float) -> void:
 	var before := _dance_phase
 	_dance_phase += delta
@@ -572,10 +572,12 @@ func _dance(delta: float) -> void:
 	var squash := 1.0 - 0.18 * (1.0 - hop) * (1.0 - hop) + 0.06 * hop
 	var s := _base_scale()
 	sprite.scale = Vector2(s * (2.0 - squash), s * squash)
+	if _rig != null:
+		_sync_rig()
 	if int(before / period) != int(_dance_phase / period):
 		sprite.flip_h = not sprite.flip_h
 		SoundLib.play("jump", -6.0, 0.2)
-		if hero_id != "" or troop.rarity >= 3:
+		if troop.rarity >= 3:
 			sprite.play("attack")
 		elif sprite.animation != "idle":
 			sprite.play("idle")
@@ -584,7 +586,7 @@ func _dance(delta: float) -> void:
 
 func _base_scale() -> float:
 	var s: float = BASE_SCALE * troop.sprite_scale * (1.0 + 0.07 * (tier - 1)) * (1.35 if elite else 1.0)
-	return BASE_SCALE * HERO_SCALE if hero_id != "" else s
+	return s
 
 
 func _face(direction_x: float) -> void:

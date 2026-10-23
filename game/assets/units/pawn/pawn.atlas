@@ -1,0 +1,8 @@
+pawn.png
+size:1024,301
+filter:Linear,Linear
+body
+bounds:0,0,384,301
+face
+bounds:386,0,133,86
+

@@ -1,8 +1,9 @@
 extends RefCounted
 
-# Approved low-lid chest: broad flat boards, brass corner shoes and a cat latch.
-# Native draw data is exported from the exact canvas proposal, never reauthored.
-const Paths = preload("res://game/ui/art_sources/ChestPaths.gd")
+# Selected B strongboxes. Source-preserving raster layers share one seam frame;
+# the body and lock stay fixed while the actual lid moves independently.
+const Metadata = preload("res://game/ui/art/chests/strongbox-b/assets.gd")
+const ASSET_ROOT := "res://game/ui/art/chests/strongbox-b/"
 const INK := Color("583f21")
 const STYLES := {
 	"wood": {"kind": "wood", "body": Color("eca966"), "dark": Color("d88f4f"), "light": Color("eca966"), "inset": Color("f3b879"),
@@ -20,10 +21,8 @@ const STYLES := {
 }
 # Existing reward and shop tints still select the same tiers.
 const TINTS := {"wood": Color("a0673a"), "silver": Color("aeb8c2"), "gold": Color("e8b93c")}
-const BASE_H := 88.0 / 208.0
-const LID_H := 62.0 / 208.0
 const AUTHOR_WIDTH := 208.0
-static var _geometry: Dictionary = {}
+static var _textures: Dictionary = {}
 
 
 static func style_for(tint: Color) -> Dictionary:
@@ -38,67 +37,66 @@ static func style_for(tint: Color) -> Dictionary:
 	return STYLES[best]
 
 
+static func asset_for(kind: String) -> Dictionary:
+	return Metadata.DATA["tiers"][kind]
+
+
+static func textures_for(kind: String) -> Dictionary:
+	if not _textures.has(kind):
+		var layers: Dictionary = {}
+		for layer in ["closed", "body", "lid", "latch"]:
+			layers[layer] = load(ASSET_ROOT + kind + "/" + layer + ".png")
+		_textures[kind] = layers
+	return _textures[kind]
+
+
 ## seam and offset remain in caller coordinates; rotation remains radians.
-## Body and latch stay fixed; lid and its corner caps share one flight transform.
+## Closed art uses the intact source; opening uses its aligned extracted parts.
 static func draw(ci: CanvasItem, seam: Vector2, w: float, style: Dictionary, alpha := 1.0,
 		lid_offset := Vector2.ZERO, lid_rotation := 0.0, lid_alpha := 1.0, mouth := Color(0, 0, 0, 0)) -> void:
 	if w <= 0.0 or alpha <= 0.0:
 		return
 	var opened := mouth.a > 0.0 or lid_offset.length_squared() > 0.001 or absf(lid_rotation) > 0.001 or lid_alpha < 0.999
-	var tier := "gold_" if style.get("kind", "wood") == "gold" else "basic_"
-	var key := tier + ("small" if w < 48.0 else "full") + ("_open" if opened else "_closed")
-	var layers := _layers(key)
+	var kind: String = style.get("kind", "wood")
+	var data := asset_for(kind)
+	var layers := textures_for(kind)
+	var values: Array = data["texture_rect"]
+	var frame := Rect2(values[0], values[1], values[2], values[3])
+	var tint := Color(1.0, 1.0, 1.0, alpha)
 	var scale := Vector2.ONE * (w / AUTHOR_WIDTH)
+	# DrawnIcon also appears on standalone CanvasItems outside Home's filtering.
+	if ci.texture_filter != CanvasItem.TEXTURE_FILTER_LINEAR:
+		ci.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	ci.draw_set_transform(seam, 0.0, scale)
-	if opened:
-		_draw_layer(ci, layers["mouth"], style, alpha, mouth)
-	_draw_layer(ci, layers["body"], style, alpha)
-	if lid_alpha > 0.0:
-		ci.draw_set_transform(seam + lid_offset, lid_rotation, scale)
-		_draw_layer(ci, layers["lid"], style, alpha * lid_alpha)
-	ci.draw_set_transform(seam, 0.0, scale)
-	_draw_layer(ci, layers["latch"], style, alpha)
+	if not opened:
+		ci.draw_texture_rect(layers["closed"], frame, false, tint)
+	else:
+		_draw_mouth(ci, data, style, alpha, mouth)
+		ci.draw_texture_rect(layers["body"], frame, false, tint)
+		# Complete the newly exposed body rim; the fixed clasp occludes its centre.
+		var rim_width: float = data["main_width"]
+		ci.draw_line(Vector2(-AUTHOR_WIDTH * 0.48, 0), Vector2(AUTHOR_WIDTH * 0.48, 0),
+			Color(INK, alpha), rim_width, true)
+		if lid_alpha > 0.0:
+			ci.draw_set_transform(seam + lid_offset, lid_rotation, scale)
+			ci.draw_texture_rect(layers["lid"], frame, false, Color(1, 1, 1, alpha * lid_alpha))
+		ci.draw_set_transform(seam, 0.0, scale)
+		ci.draw_texture_rect(layers["latch"], frame, false, tint)
 	ci.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 
-static func _layers(key: String) -> Dictionary:
-	if _geometry.has(key):
-		return _geometry[key]
-	var layers: Dictionary = {}
-	for layer in Paths.DATA[key]:
-		var ops: Array = []
-		for source in Paths.DATA[key][layer]:
-			var op: Dictionary = source.duplicate()
-			for field in ["points", "joins"]:
-				var points := PackedVector2Array()
-				for point in source[field]:
-					points.append(Vector2(point[0], point[1]))
-				op[field] = points
-			ops.append(op)
-		layers[layer] = ops
-	_geometry[key] = layers
-	return layers
-
-
-static func _ink(style: Dictionary, role: String, alpha: float) -> Color:
-	return Color(INK if role == "ink" else style[role], alpha)
-
-
-static func _draw_layer(ci: CanvasItem, ops: Array, style: Dictionary, alpha: float,
-		fill_overlay := Color(0, 0, 0, 0)) -> void:
-	for op in ops:
-		if (op["fill"] == "grain" or op["stroke"] == "grain") and not style["planks"]:
-			continue
-		var points: PackedVector2Array = op["points"]
-		if not op["fill"].is_empty():
-			ci.draw_colored_polygon(points, _ink(style, op["fill"], alpha))
-			if fill_overlay.a > 0.0:
-				# Animation light stays behind the exposed opening's main contour.
-				ci.draw_colored_polygon(points, Color(fill_overlay, fill_overlay.a * alpha))
-		if not op["stroke"].is_empty():
-			var ink := _ink(style, op["stroke"], alpha)
-			var width: float = op["width"]
-			ci.draw_polyline(points, ink, width, true)
-			# Godot polylines use sharp joins; authored joins/caps are rounded.
-			for point in op["joins"]:
-				ci.draw_circle(point, width * 0.5, ink, true, -1.0, true)
+static func _draw_mouth(ci: CanvasItem, data: Dictionary, style: Dictionary,
+		alpha: float, light: Color) -> void:
+	var values: Array = data["cavity_rect"]
+	var rect := Rect2(values[0], values[1], values[2], values[3])
+	var rim := StyleBoxFlat.new()
+	rim.bg_color = Color(INK, alpha)
+	rim.set_corner_radius_all(12)
+	rim.anti_aliasing = true
+	ci.draw_style_box(rim, rect)
+	var inside := StyleBoxFlat.new()
+	var cavity: Color = style["cavity"]
+	inside.bg_color = Color(cavity.lerp(Color(light, 1.0), light.a), alpha)
+	inside.set_corner_radius_all(8)
+	inside.anti_aliasing = true
+	ci.draw_style_box(inside, rect.grow(-float(data["main_width"])))

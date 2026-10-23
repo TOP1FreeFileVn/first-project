@@ -1,5 +1,29 @@
 # Asset sảnh lâu đài giấy đã duyệt
 
+## Cập nhật đồ vật theo thành — 2026-10-23
+
+Runtime hiện dùng `terrain-props-clean.png` và bộ SVG phẳng đồng bộ với
+`castle-tier-2-body.svg`: màu bìa `#e8bb7c`, mảng tối `#d4a065`, viền `#583f21`.
+Nét chính khoảng 6px, nét phụ 3px ở canvas game 720px; số đo local của nhà/khay
+đã bù scale 0.82/0.86. Không sửa hình mèo hoặc đường đi.
+
+- `tunnel/` và `bed/`: SVG tách lớp hiện tại, giữ nguyên cửa và mốc đặt chân.
+- `props/scratching-post.svg`: origin (80,176), ground (590,780).
+- `props/yarn.svg`: origin (40,74), ground (214,854).
+- `props/pillow.svg`: origin (75,80), ground (630,903).
+
+Cả ba đồ tĩnh đã tách khỏi bitmap và được Y-sort theo điểm chạm đất. Bản nền
+cũ `terrain-clean.png` được giữ để truy nguồn; `terrain-props-clean.png` xóa
+đúng ba đồ cũ và bóng của chúng trong các mask đã lưu. Pixel ngoài mask giữ nguyên.
+`props/manifest.json` ghi hash, palette và vị trí. Tái tạo ba SVG tĩnh và nền sạch:
+
+```powershell
+python tools/ui/restyle_lobby_props.py
+```
+
+Phần dưới mô tả bộ V4 lịch sử. `prepare_assets.py` là bước nhập V4 ban đầu;
+các SVG nhà/khay hiện tại là bản thiết kế mới hơn và phải được giữ khi tái nhập.
+
 Ngày: **2026-10-20**. Bộ này đưa art V4, ống chui, khay nghỉ và mèo gốc vào vùng
 asset production. Không thiết kế lại hoặc sửa hình mèo. Các quyết định nguồn,
 tọa độ và SHA-256 được ghi trong [integration-manifest.json](integration-manifest.json).

@@ -1,0 +1,232 @@
+{
+	"captures": [
+		"shop-360x640.png",
+		"shop-450x800.png",
+		"insufficient-funds-450x800.png",
+		"cooldown-and-next-pity-450x800.png",
+		"exchange-scrolled-450x800.png",
+		"rates-sheet-450x800.png",
+		"actual-gold-opening-450x800.png"
+	],
+	"checks": 102,
+	"failures": [],
+	"layouts": [
+		{
+			"nodes": [
+				{
+					"node": "FeaturedChest",
+					"rect": [
+						24.0,
+						226.0,
+						664.0,
+						363.0
+					]
+				},
+				{
+					"node": "SupplyChestGrid",
+					"rect": [
+						24.0,
+						655.0,
+						664.0,
+						365.0
+					]
+				},
+				{
+					"node": "SupplyChest_wood",
+					"rect": [
+						24.0,
+						655.0,
+						324.0,
+						365.0
+					]
+				},
+				{
+					"node": "SupplyChest_silver",
+					"rect": [
+						364.0,
+						655.0,
+						324.0,
+						365.0
+					]
+				},
+				{
+					"node": "GoldOpen",
+					"rect": [
+						310.0,
+						387.0,
+						356.0,
+						88.0
+					]
+				},
+				{
+					"node": "WoodOpen",
+					"rect": [
+						40.0,
+						918.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "SilverOpen",
+					"rect": [
+						380.0,
+						917.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "ShopRates",
+					"rect": [
+						478.0,
+						483.0,
+						188.0,
+						88.0
+					]
+				},
+				{
+					"node": "GoldPity",
+					"rect": [
+						46.0,
+						491.0,
+						420.0,
+						71.0
+					]
+				},
+				{
+					"node": "GoldGuarantee",
+					"rect": [
+						310.0,
+						345.0,
+						356.0,
+						37.0
+					]
+				},
+				{
+					"node": "GemExchange",
+					"rect": [
+						24.0,
+						1036.0,
+						664.0,
+						168.0
+					]
+				}
+			],
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"nodes": [
+				{
+					"node": "FeaturedChest",
+					"rect": [
+						24.0,
+						226.0,
+						664.0,
+						363.0
+					]
+				},
+				{
+					"node": "SupplyChestGrid",
+					"rect": [
+						24.0,
+						655.0,
+						664.0,
+						365.0
+					]
+				},
+				{
+					"node": "SupplyChest_wood",
+					"rect": [
+						24.0,
+						655.0,
+						324.0,
+						365.0
+					]
+				},
+				{
+					"node": "SupplyChest_silver",
+					"rect": [
+						364.0,
+						655.0,
+						324.0,
+						365.0
+					]
+				},
+				{
+					"node": "GoldOpen",
+					"rect": [
+						310.0,
+						387.0,
+						356.0,
+						88.0
+					]
+				},
+				{
+					"node": "WoodOpen",
+					"rect": [
+						40.0,
+						918.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "SilverOpen",
+					"rect": [
+						380.0,
+						917.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "ShopRates",
+					"rect": [
+						478.0,
+						483.0,
+						188.0,
+						88.0
+					]
+				},
+				{
+					"node": "GoldPity",
+					"rect": [
+						46.0,
+						491.0,
+						420.0,
+						71.0
+					]
+				},
+				{
+					"node": "GoldGuarantee",
+					"rect": [
+						310.0,
+						345.0,
+						356.0,
+						37.0
+					]
+				},
+				{
+					"node": "GemExchange",
+					"rect": [
+						24.0,
+						1036.0,
+						664.0,
+						168.0
+					]
+				}
+			],
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/shop-teal-integration-profile/Roaming/Godot/app_userdata/Gear Defenders",
+	"scope": "Production Home.tscn and normal ShopPage; selected teal surfaces; actual pointer rates/purchase; live account states; preserved navigation."
+}

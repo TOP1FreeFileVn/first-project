@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=6 format=3]
+[gd_resource type="Resource" load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://game/data/LevelData.gd" id="1_level"]
 [ext_resource type="Resource" path="res://game/data/troops/pawn.tres" id="2_pawn"]
@@ -6,8 +6,14 @@
 [ext_resource type="Resource" path="res://game/data/troops/archer.tres" id="4_archer"]
 [ext_resource type="Resource" path="res://game/data/troops/lancer.tres" id="5_lancer"]
 
+[ext_resource type="Texture2D" path="res://game/assets/battle/regions/02-doi-da.png" id="battlefield"]
+
+[ext_resource type="Texture2D" path="res://game/assets/lobby/map-titles/02-doi-da.png" id="lobby_banner"]
+
 [resource]
 script = ExtResource("1_level")
+lobby_banner = ExtResource("lobby_banner")
+battlefield = ExtResource("battlefield")
 display_name = "Màn 2 · Đồi Đá"
 troop_pool = [ExtResource("2_pawn"), ExtResource("3_warrior"), ExtResource("4_archer"), ExtResource("5_lancer")]
 start_meat = 7.0

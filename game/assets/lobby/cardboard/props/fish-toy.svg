@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="184" viewBox="0 0 160 184">
+<g stroke-linecap="round" stroke-linejoin="round">
+  <!-- Hangs from the bracket at (137, 42); the game swings it around that point. -->
+  <path d="M137 42 V76" fill="none" stroke="#583f21" stroke-width="3"/>
+  <!-- One teal toy echoes the castle flag, with the same brown outline. -->
+  <path d="M134 77 C123 77 122 90 129 101 L125 112 Q124 116 128 115 L137 110 L145 116 Q149 118 148 113 L145 102 C152 92 147 79 139 77 Z" fill="#70b1a5" stroke="#583f21" stroke-width="4"/>
+  <circle cx="132" cy="86" r="2" fill="#583f21"/>
+</g>
+</svg>

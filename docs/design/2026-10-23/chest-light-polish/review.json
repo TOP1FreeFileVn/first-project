@@ -1,0 +1,2206 @@
+{
+	"captures": [
+		{
+			"charge": 0.0,
+			"file": "common-wait_360x640.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0,
+			"stage": "wait",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "common-open-mouth_360x640.png",
+			"flash": 0.0407328164577484,
+			"mouth": 0.572608351707459,
+			"ray_alpha": 0.327204763889313,
+			"stage": "open",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "common-card_360x640.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"ray_alpha": 1.0,
+			"stage": "card",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "rare-wait_360x640.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0,
+			"stage": "wait",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "rare-open-mouth_360x640.png",
+			"flash": 0.0330053615570068,
+			"mouth": 0.591770827770233,
+			"ray_alpha": 0.338154792785645,
+			"stage": "open",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "rare-card_360x640.png",
+			"flash": 0.00459388732910157,
+			"mouth": 1.0,
+			"ray_alpha": 1.0,
+			"stage": "card",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "epic-wait_360x640.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0,
+			"stage": "wait",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "epic-open-mouth_360x640.png",
+			"flash": 0.0421939361095428,
+			"mouth": 0.592009961605072,
+			"ray_alpha": 0.338291436433792,
+			"stage": "open",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "epic-card_360x640.png",
+			"flash": 0.00706035017967221,
+			"mouth": 1.0,
+			"ray_alpha": 1.0,
+			"stage": "card",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "fast-summary_360x640.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0535714287310839,
+			"stage": "summary",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "common-wait_450x800.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0,
+			"stage": "wait",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "common-open-mouth_450x800.png",
+			"flash": 0.0434646463394165,
+			"mouth": 0.577299058437347,
+			"ray_alpha": 0.329885184764862,
+			"stage": "open",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "common-card_450x800.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"ray_alpha": 1.0,
+			"stage": "card",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "rare-wait_450x800.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0,
+			"stage": "wait",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "rare-open-mouth_450x800.png",
+			"flash": 0.0514718055725097,
+			"mouth": 0.554027020931244,
+			"ray_alpha": 0.316586881875992,
+			"stage": "open",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "rare-card_450x800.png",
+			"flash": 0.00836470127105712,
+			"mouth": 1.0,
+			"ray_alpha": 1.0,
+			"stage": "card",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "epic-wait_450x800.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0,
+			"stage": "wait",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "epic-open-mouth_450x800.png",
+			"flash": 0.0609143543243408,
+			"mouth": 0.565909087657928,
+			"ray_alpha": 0.323376625776291,
+			"stage": "open",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "epic-card_450x800.png",
+			"flash": 0.00858914852142334,
+			"mouth": 1.0,
+			"ray_alpha": 1.0,
+			"stage": "card",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"charge": 0.0,
+			"file": "fast-summary_450x800.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"ray_alpha": 0.0704874940216541,
+			"stage": "summary",
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "production_home_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_fixture_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_reaches_wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_wait_lid_closed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_common-wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_000",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_001",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_002",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_003",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_004",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_005",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_006",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_007",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_tap_starts_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_008",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_009",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_010",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_011",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_012",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_common-open-mouth",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_013",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_014",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_015",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_016",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_017",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_018",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_019",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_020",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_021",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_022",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_023",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_common-card",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_024",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_actual_charge_animated",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_actual_open_mouth_captured",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_actual_face_up_card_captured",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_card_keeps_open_chest",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_025",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_026",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_027",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_028",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sequence_frame_029",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_cycle_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_cycle_opening_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_cycle_closed_emitted_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_cycle_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "common_presentation_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_fixture_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_reaches_wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_wait_lid_closed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_rare-wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_tap_starts_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_rare-open-mouth",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_rare-card",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_actual_charge_animated",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_actual_open_mouth_captured",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_actual_face_up_card_captured",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_card_keeps_open_chest",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_cycle_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_cycle_opening_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_cycle_closed_emitted_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_cycle_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rare_presentation_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_fixture_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_reaches_wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_wait_lid_closed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_epic-wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_tap_starts_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_epic-open-mouth",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_epic-card",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_actual_charge_animated",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_actual_open_mouth_captured",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_actual_face_up_card_captured",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_card_keeps_open_chest",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_cycle_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_cycle_opening_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_cycle_closed_emitted_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_cycle_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "epic_presentation_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_skip_fixture_wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_native_skip_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_opening_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_closed_emitted_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "wait_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_skip_fixture_wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip_during_charge_before_burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_native_skip_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_opening_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_closed_emitted_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "charge_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_skip_fixture_wait",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip_during_card_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_native_skip_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_opening_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_closed_emitted_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reveal_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_fast-summary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_opening_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_closed_emitted_once",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fast_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_home_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_fixture_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_reaches_wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_wait_lid_closed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_common-wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_tap_starts_charge",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_common-open-mouth",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_common-card",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_actual_charge_animated",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_actual_open_mouth_captured",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_actual_face_up_card_captured",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_card_keeps_open_chest",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_cycle_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_cycle_opening_layer_freed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_cycle_closed_emitted_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_cycle_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "common_presentation_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_fixture_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_reaches_wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_wait_lid_closed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_rare-wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_tap_starts_charge",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_rare-open-mouth",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_rare-card",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_actual_charge_animated",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_actual_open_mouth_captured",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_actual_face_up_card_captured",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_card_keeps_open_chest",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_cycle_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_cycle_opening_layer_freed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_cycle_closed_emitted_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_cycle_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rare_presentation_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_fixture_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_reaches_wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_wait_lid_closed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_epic-wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_tap_starts_charge",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_epic-open-mouth",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_epic-card",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_actual_charge_animated",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_actual_open_mouth_captured",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_actual_face_up_card_captured",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_card_keeps_open_chest",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_cycle_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_cycle_opening_layer_freed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_cycle_closed_emitted_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_cycle_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "epic_presentation_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_skip_fixture_wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_native_skip_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_opening_layer_freed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_closed_emitted_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "wait_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_skip_fixture_wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "skip_during_charge_before_burst",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_native_skip_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_opening_layer_freed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_closed_emitted_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "charge_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_skip_fixture_wait",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "skip_during_card_reveal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_native_skip_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_opening_layer_freed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_closed_emitted_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "reveal_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_skip_reaches_summary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_summary_hides_active_reveal",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_summary_clears_charge_and_chest",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_fast-summary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_native_done_button_receives_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_opening_layer_freed",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_closed_emitted_once",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_returns_to_home_shop",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fast_skip_does_not_grant_loot",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "no_persistent_save_change",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_profile_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_persist_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_home_tab_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"frames": [
+		{
+			"charge": 0.0,
+			"file": "frames/frame_000.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7067
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_001.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7144
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_002.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7233
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_003.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7310
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_004.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7399
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_005.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7492
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_006.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7569
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_007.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "wait",
+			"time_ms": 7660
+		},
+		{
+			"charge": 0.00439505930989981,
+			"file": "frames/frame_008.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "open",
+			"time_ms": 7763
+		},
+		{
+			"charge": 0.158754453063011,
+			"file": "frames/frame_009.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "open",
+			"time_ms": 7876
+		},
+		{
+			"charge": 0.549983263015747,
+			"file": "frames/frame_010.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "open",
+			"time_ms": 7992
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_011.png",
+			"flash": 0.0,
+			"mouth": 0.0,
+			"stage": "open",
+			"time_ms": 8113
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_012.png",
+			"flash": 0.164436757564545,
+			"mouth": 0.321175009012222,
+			"stage": "open",
+			"time_ms": 8236
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_013.png",
+			"flash": 0.0,
+			"mouth": 0.934635043144226,
+			"stage": "open",
+			"time_ms": 8364
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_014.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "open",
+			"time_ms": 8497
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_015.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "open",
+			"time_ms": 8633
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_016.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "open",
+			"time_ms": 8765
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_017.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "open",
+			"time_ms": 8908
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_018.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "open",
+			"time_ms": 9036
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_019.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "open",
+			"time_ms": 9171
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_020.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 9299
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_021.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 9425
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_022.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 9556
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_023.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 9695
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_024.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 9869
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_025.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 9913
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_026.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 9992
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_027.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 10074
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_028.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 10162
+		},
+		{
+			"charge": 0.0,
+			"file": "frames/frame_029.png",
+			"flash": 0.0,
+			"mouth": 1.0,
+			"stage": "card",
+			"time_ms": 10249
+		}
+	],
+	"original_persist_restored": true,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/chest-light-review-profile/Godot/app_userdata/Gear Defenders",
+	"save_after": "absent",
+	"save_before": "absent",
+	"scope": "Production Home + ChestOpening, safe presentation-only fixtures; native Skip/Done interactions, charge/reveal/fast routes, state restoration."
+}

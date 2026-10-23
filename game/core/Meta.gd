@@ -3,16 +3,16 @@ extends RefCounted
 # Retention features: the 7-day login gift, daily quests with activity milestones, and
 # the avatars / frames for the player profile. Rewards are dictionaries that
 # PlayerData.grant() understands: {"gold": n}, {"gems": n}, {"cards": n} (random troop
-# cards), {"shards": [hero id or "featured", n]}, {"hero": id}.
+# cards), {"stones": n} (Forge Stones), {"item": rarity} (a random hero-cat item).
 
 const LOGIN_REWARDS := [
 	{"gold": 300},
 	{"gems": 20},
 	{"cards": 8},
-	{"shards": ["featured", 10]},
+	{"stones": 60},
 	{"gems": 50},
 	{"gold": 1500},
-	{"hero": "sage"},
+	{"item": 2},
 ]
 
 ## Quests reset every day. "login" completes itself.
@@ -20,15 +20,15 @@ const QUESTS := [
 	{"id": "login", "text": "Đăng nhập trò chơi", "goal": 1, "reward": {"gold": 100}},
 	{"id": "win", "text": "Thắng 2 trận", "goal": 2, "reward": {"gold": 300}},
 	{"id": "chest", "text": "Mở 1 rương", "goal": 1, "reward": {"gems": 5}},
-	{"id": "upgrade", "text": "Nâng cấp lính hoặc tướng 2 lần", "goal": 2, "reward": {"gold": 200}},
+	{"id": "upgrade", "text": "Nâng cấp lính hoặc trang bị 2 lần", "goal": 2, "reward": {"gold": 200}},
 	{"id": "patrol", "text": "Thu hoạch tuần tra 1 lần", "goal": 1, "reward": {"gold": 150}},
-	{"id": "summon", "text": "Triệu hồi tướng 1 lần", "goal": 1, "reward": {"gems": 10}},
+	{"id": "summon", "text": "Triệu hồi trang bị 1 lần", "goal": 1, "reward": {"gems": 10}},
 ]
 const QUEST_POINTS := 20
 const QUEST_MILESTONES := [
 	{"points": 40, "reward": {"gold": 400}},
 	{"points": 80, "reward": {"gems": 20}},
-	{"points": 120, "reward": {"shards": ["featured", 5]}},
+	{"points": 120, "reward": {"stones": 30}},
 ]
 
 const AVATAR_COUNT := 25
@@ -40,7 +40,7 @@ const FRAMES := {
 	"wood": {"name": "Gỗ", "color": Color("9a6a3a"), "need": "Mặc định"},
 	"silver": {"name": "Bạc", "color": Color("d6dee6"), "need": "Qua 3 màn"},
 	"gold": {"name": "Vàng", "color": Color("f2c14e"), "need": "Nhận đủ quà 7 ngày"},
-	"royal": {"name": "Hoàng gia", "color": Color("c28bff"), "need": "Có tướng Huyền thoại"},
+	"royal": {"name": "Hoàng gia", "color": Color("c28bff"), "need": "Có trang bị Huyền thoại"},
 }
 
 

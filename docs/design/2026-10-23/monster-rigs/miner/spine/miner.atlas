@@ -1,0 +1,16 @@
+miner.png
+size:1024,370
+filter:Linear,Linear
+head
+bounds:0,0,367,271
+body
+bounds:369,0,339,199
+leg_l
+bounds:710,0,107,140
+leg_r
+bounds:819,0,107,140
+paw_l
+bounds:0,273,101,97
+paw_r
+bounds:103,273,101,97
+

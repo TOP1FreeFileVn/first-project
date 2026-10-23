@@ -62,11 +62,7 @@ func _ready() -> void:
 	PlayerData.team = ["kiem", "cung", "giao", "katana"]
 	PlayerData.workshop = {"meat_regen": 2, "start_meat": 1}
 	PlayerData.patrol_last_claim = PlayerData.now() - 3 * 3600
-	PlayerData.heroes["storm"]["owned"] = true
-	PlayerData.heroes["storm"]["level"] = 7
-	PlayerData.heroes["storm"]["stars"] = 2
-	PlayerData.heroes["ember"]["shards"] = 18
-	PlayerData.hero = "storm"
+	PlayerData.forge_stones = 180
 	PlayerData.login_claimed = 3
 	PlayerData.login_day = PlayerData.today() - 1
 	PlayerData.track("win", 2)
@@ -74,7 +70,7 @@ func _ready() -> void:
 	PlayerData.claim_quest("login")
 	PlayerData.claim_quest("win")
 	PlayerData.player_name = "Dang"
-	PlayerData.avatar = "hero:storm"
+	PlayerData.avatar = "7"
 	PlayerData.frame = "royal"
 	_home = load("res://game/menu/Home.tscn").instantiate()
 	add_child(_home)

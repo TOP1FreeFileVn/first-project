@@ -7,7 +7,7 @@ extends RefCounted
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
-const Heroes = preload("res://game/core/Heroes.gd")
+const HeroCat = preload("res://game/core/HeroCat.gd")
 const Meta = preload("res://game/core/Meta.gd")
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
 const PatrolPage = preload("res://game/menu/pages/PatrolPage.gd")
@@ -55,10 +55,10 @@ static func got_text(got: Dictionary) -> String:
 		cards += got["cards"][id]
 	if cards > 0:
 		parts.append("%d thẻ lính" % cards)
-	for id in got.get("shards", {}):
-		parts.append("%d mảnh %s" % [got["shards"][id], Heroes.HEROES[id]["name"]])
-	for id in got.get("heroes", []):
-		parts.append("tướng %s" % Heroes.HEROES[id]["name"])
+	if got.get("stones", 0) > 0:
+		parts.append("%d đá rèn" % got["stones"])
+	for id in got.get("items", []):
+		parts.append(HeroCat.ITEMS[id]["name"])
 	return "Nhận: " + ", ".join(parts)
 
 
@@ -101,10 +101,9 @@ static func open_events(home: Control) -> void:
 	box.add_child(Ui.menu_section("events", "Sự kiện khác", list))
 
 
-## The featured event: a purple card as wide as the window, the featured hero on a glow at
-## the left, name + countdown in the middle, the summon button at the right.
+## The featured event: a purple card as wide as the window, a legendary item on a glow at
+## the left, the title and pity in the middle, the summon button at the right.
 static func _summon_banner(home: Control, box: VBoxContainer) -> Control:
-	var featured := PlayerData.summon_featured()
 	var free := PlayerData.summon_free_ready()
 	var root := Control.new()
 	root.custom_minimum_size = Vector2(0, 196)
@@ -119,27 +118,28 @@ static func _summon_banner(home: Control, box: VBoxContainer) -> Control:
 	var glow := Ui.icon("badge_flower", 128)
 	glow.modulate = Color(1, 1, 1, 0.35)
 	Ui.pin(stage, glow, Vector2(-64, -66), Control.PRESET_CENTER)
-	var hero := UiKit.hero_portrait(featured, 144)
-	Ui.pin(stage, hero, Vector2(-72, -84), Control.PRESET_CENTER)
+	var best: Dictionary = HeroCat.ITEMS["katana_nguyet"]
+	var item := Ui.gear_card(best["icon"], HeroCat.SLOT_ICONS[best["slot"]], HeroCat.tone(best["rarity"]), "", 112.0)
+	item.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	Ui.pin(stage, item, Vector2(-56, -60), Control.PRESET_CENTER)
 	row.add_child(stage)
 
 	var text := Ui.vbox(4, BoxContainer.ALIGNMENT_CENTER)
 	text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	var title := Ui.label("Triệu hồi Tướng Quân", "", 24)
+	var title := Ui.label("Triệu hồi Trang bị", "", 24)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	title.custom_minimum_size.y = 36
 	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	text.add_child(title)
-	var star := Ui.label("Nổi bật: " + Heroes.HEROES[featured]["name"], "LabelSmall", 18)
+	var star := Ui.label("Vũ khí · Mũ · Giáp · Giày cho mèo anh hùng", "LabelSmall", 18)
 	star.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	star.custom_minimum_size.y = 27
 	star.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	star.add_theme_constant_override("outline_size", 3)
 	text.add_child(star)
-	var left := PlayerData.summon_seconds_left()
-	var clock := Ui.counter("rail_online", "Còn %dn %02d:%02d" % [left / 86400, (left / 3600) % 24, (left / 60) % 60])
-	clock.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-	text.add_child(clock)
+	var pity := Ui.counter("rail_online", "Còn %d lượt ra Huyền thoại" % PlayerData.summon_pity_left())
+	pity.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
+	text.add_child(pity)
 	row.add_child(text)
 
 	var go: Button
@@ -233,7 +233,7 @@ static func open_login(home: Control) -> void:
 
 static func _fill_login(home: Control, box: VBoxContainer) -> void:
 	_clear(box)
-	box.add_child(_note("Đăng nhập mỗi ngày để nhận quà. Ngày 7 nhận tướng %s!" % Heroes.HEROES["sage"]["name"]))
+	box.add_child(_note("Đăng nhập mỗi ngày để nhận quà. Ngày 7 nhận một trang bị Sử thi!"))
 	var claimed := PlayerData.login_progress()
 	var ready := PlayerData.login_can_claim()
 	var grid := GridContainer.new()
@@ -272,16 +272,18 @@ static func _login_card(day: int, claimed: int, ready: bool, card_size: Vector2)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	column.add_child(title)
 	var reward: Dictionary = Meta.LOGIN_REWARDS[day]
-	if reward.has("hero"):
+	if reward.has("item"):
+		var rarity := int(reward["item"])
 		var row := UiKit.hbox(14)
 		row.alignment = BoxContainer.ALIGNMENT_CENTER
-		row.add_child(UiKit.hero_portrait(reward["hero"], 84))
+		var face := Ui.gear_card("eq_armor", HeroCat.SLOT_ICONS["armor"], HeroCat.tone(rarity), "?", 84.0)
+		face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		row.add_child(face)
 		var text := UiKit.vbox(0)
-		var hero: Dictionary = Heroes.HEROES[reward["hero"]]
-		var hero_name := UiKit.ink(hero["name"], 22)
-		hero_name.add_theme_color_override("font_color", Economy.RARITY_COLORS[hero["rarity"]].darkened(0.45))
-		text.add_child(hero_name)
-		text.add_child(UiKit.ink("Tướng " + Economy.RARITY_NAMES[hero["rarity"]], 16))
+		var item_name := UiKit.ink("Trang bị ngẫu nhiên", 22)
+		item_name.add_theme_color_override("font_color", Economy.RARITY_COLORS[rarity].darkened(0.45))
+		text.add_child(item_name)
+		text.add_child(UiKit.ink("Phẩm " + Economy.RARITY_NAMES[rarity], 16))
 		row.add_child(text)
 		column.add_child(row)
 	else:
@@ -401,8 +403,8 @@ static func _reward_words(reward: Dictionary) -> String:
 		parts.append("%s vàng" % UiKit.format_number(reward["gold"]))
 	if reward.has("gems"):
 		parts.append("%d kim cương" % reward["gems"])
-	if reward.has("shards"):
-		parts.append("%d mảnh tướng nổi bật" % reward["shards"][1])
+	if reward.has("stones"):
+		parts.append("%d đá rèn" % reward["stones"])
 	return ", ".join(parts)
 
 
@@ -504,7 +506,7 @@ static func _fill_profile(home: Control, box: VBoxContainer) -> void:
 		["Màn đã qua", "%d/%d" % [PlayerData.levels_cleared(), PlayerData.LEVELS.size()]],
 		["Tổng sao", "%d ★" % stars],
 		["Sức mạnh đội", UiKit.format_number(PlayerData.team_power())],
-		["Tướng", "%d/%d" % [PlayerData.heroes_owned(), Heroes.ORDER.size()]],
+		["Trang bị", "%d món" % PlayerData.hero_cat["bag"].size()],
 	]
 	for entry in entries:
 		stats.add_child(UiKit.ink(entry[0], 16))
@@ -521,8 +523,6 @@ static func _fill_profile(home: Control, box: VBoxContainer) -> void:
 	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	for i in range(1, Meta.AVATAR_COUNT + 1):
 		grid.add_child(_avatar_choice(home, box, str(i), "Qua %d màn" % Meta.avatar_need(i)))
-	for id in Heroes.ORDER:
-		grid.add_child(_avatar_choice(home, box, "hero:" + id, "Có tướng"))
 	box.add_child(grid)
 
 	box.add_child(UiKit.ink("Khung", 20))

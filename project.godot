@@ -21,6 +21,7 @@ SpriteLib="*res://game/core/SpriteLib.gd"
 Balance="*res://game/core/Balance.gd"
 PlayerData="*res://game/core/PlayerData.gd"
 SoundLib="*res://game/core/SoundLib.gd"
+MusicLib="*res://game/core/MusicLib.gd"
 
 [display]
 

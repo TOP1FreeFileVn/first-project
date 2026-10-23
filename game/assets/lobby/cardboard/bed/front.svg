@@ -1,12 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
 <g id="front" stroke-linecap="round" stroke-linejoin="round">
-  <!-- Two separate front side walls leave the centre open all the way to ground. -->
-  <path d="M24 212 V183 L29 164 Q30 161 33 165 L43 179 L69 189 Q76 192 76 199 V224 H36 Q24 224 24 212 Z" fill="#e9bd7a" stroke="#583f21" stroke-width="5"/>
-  <path d="M232 212 V183 L227 164 Q226 161 223 165 L213 179 L187 189 Q180 192 180 199 V224 H220 Q232 224 232 212 Z" fill="#e9bd7a" stroke="#583f21" stroke-width="5"/>
-  <path d="M29 184 L32 171 L39 181 Z M227 184 L224 171 L217 181 Z" fill="#d8a762"/>
-  <path d="M37 197 V212 H48 M219 197 V212 H208" fill="none"
-        stroke="#b58950" stroke-width="2.5"/>
-  <path d="M49 188 L62 193" fill="none" stroke="#b58950" stroke-width="2.5"/>
-  <path d="M194 193 L207 188" fill="none" stroke="#b58950" stroke-width="2.5"/>
+  <!-- Separate folded side walls leave x76..180 open down to ground. -->
+  <path d="M24 212 V184 L31 164 L44 178 L69 189 Q76 192 76 199 V224 H36 Q24 224 24 212 Z" fill="#e8bb7c"/>
+  <path d="M65 188 L69 189 Q76 192 76 199 V224 H65 Z" fill="#d4a065"/>
+  <path d="M232 212 V184 L225 164 L212 178 L187 189 Q180 192 180 199 V224 H220 Q232 224 232 212 Z" fill="#e8bb7c"/>
+  <path d="M220 181 L232 184 V212 Q232 224 220 224 H219 Z" fill="#d4a065"/>
+  <path d="M24 212 V184 L31 164 L44 178 L69 189 Q76 192 76 199 V224 H36 Q24 224 24 212 Z M232 212 V184 L225 164 L212 178 L187 189 Q180 192 180 199 V224 H220 Q232 224 232 212 Z" fill="none" stroke="#583f21" stroke-width="7"/>
+  <path d="M40 190 L62 200 M216 190 L194 200" fill="none" stroke="#b07c45" stroke-width="3.5"/>
 </g>
 </svg>

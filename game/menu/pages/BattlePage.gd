@@ -52,7 +52,8 @@ func _fill() -> void:
 	var level_name: String = parts[parts.size() - 1] if parts.size() > 1 else level.display_name
 
 	var top_gap := Control.new()
-	top_gap.custom_minimum_size.y = 32
+	# Content begins at y112; include the column's 6px separation for y128.
+	top_gap.custom_minimum_size.y = 10
 	_column.add_child(top_gap)
 	var header_margin := Ui.margin(40, 0, 40, 0)
 	var pager := Ui.hbox(12)
@@ -63,6 +64,24 @@ func _fill() -> void:
 	prev.pressed.connect(func(): _go(-1))
 	prev.disabled = index == 0
 	pager.add_child(prev)
+	var title_panel := Control.new()
+	title_panel.name = "LobbyTitlePanel"
+	title_panel.custom_minimum_size = Vector2(476, 106)
+	title_panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	title_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	pager.add_child(title_panel)
+	if level.lobby_banner != null:
+		var backdrop := TextureRect.new()
+		backdrop.name = "LobbyTitleBackdrop"
+		backdrop.texture = level.lobby_banner
+		backdrop.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		backdrop.stretch_mode = TextureRect.STRETCH_SCALE
+		backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		title_panel.add_child(backdrop)
+		backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		# A shorter, unframed panorama stays centred with the title and arrows.
+		backdrop.offset_top = 8
+		backdrop.offset_bottom = -8
 	var title := Ui.label("Màn %d · %s" % [index + 1, level_name], "", 28)
 	title.name = "LobbyTitle"
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -70,7 +89,10 @@ func _fill() -> void:
 	title.add_theme_color_override("font_color", Color.WHITE)
 	title.add_theme_color_override("font_outline_color", Color("583f21"))
 	title.add_theme_constant_override("outline_size", 3)
-	pager.add_child(title)
+	title_panel.add_child(title)
+	title.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	title.offset_left = 9
+	title.offset_right = -9
 	var next := _page_arrow(true)
 	next.name = "LobbyNext"
 	next.pressed.connect(func(): _go(1))
@@ -145,6 +167,7 @@ func _fill() -> void:
 ## Both directions use the same fixed icon and face-centred layout.
 func _page_arrow(flip: bool) -> Button:
 	var button := Ui.button("", "Blue", Vector2(70, 62))
+	button.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	var arrow := Ui.icon("back", 34)
 	arrow.name = "LobbyPageArrow"
 	arrow.flip_h = flip
@@ -192,7 +215,8 @@ func _on_stage_input(event: InputEvent) -> void:
 				_go(-1)
 			else:
 				_snap_back()
-				if at.distance_to(_drag_start) < 14.0:
+				# A tap (not a swipe) pets a courtyard cat first, else opens the castle.
+				if at.distance_to(_drag_start) < 14.0 and not home.pet_cat_at(at):
 					home.open_castle_details_at(at)
 	elif event is InputEventMouseMotion and _drag_from >= 0.0:
 		# Keep the gesture local to this transparent region; courtyard actors stay in place.

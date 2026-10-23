@@ -1,0 +1,103 @@
+{
+  "style_reference": "game/assets/lobby/castle-tiers/castle-tier-2-body.svg",
+  "contour": {
+    "main_color": "#583f21",
+    "main_world_px": 6,
+    "secondary_world_px": 3
+  },
+  "terrain": {
+    "file": "terrain-props-clean.png",
+    "source": "terrain-clean.png",
+    "source_sha256": "41378bca41f70240e404aa252224f380aa0beb60fd5e031e3e168b8626bd4811",
+    "sha256": "7e38f001bcc7f892ea4af5943fac64c3c30c535fa4a0d8dd5cd7ba152b7b7a51",
+    "pixels_outside_masks_unchanged": true,
+    "masks": [
+      "scratching-post",
+      "yarn",
+      "pillow"
+    ]
+  },
+  "props": [
+    {
+      "file": "props/scratching-post.svg",
+      "origin": [
+        80,
+        176
+      ],
+      "ground": [
+        590,
+        780
+      ],
+      "sha256": "ea4db4f48005b9ea205fc7c847c35a44a828be23a872a020e1257cba5d2b01d8"
+    },
+    {
+      "file": "props/yarn.svg",
+      "origin": [
+        40,
+        74
+      ],
+      "ground": [
+        214,
+        854
+      ],
+      "sha256": "485034ea55c6627f2661847607121d7003909375ea28c2bf351ae376aff530c2"
+    },
+    {
+      "file": "props/pillow.svg",
+      "origin": [
+        75,
+        80
+      ],
+      "ground": [
+        630,
+        903
+      ],
+      "sha256": "4aa6e696209add7f9762e0e22947f2ad0b94ebce07804b92e47cc949bd325617"
+    }
+  ],
+  "layered_props": [
+    {
+      "kind": "tunnel",
+      "origin": [
+        128,
+        224
+      ],
+      "scale": 0.82,
+      "main_local_px": 7.3,
+      "secondary_local_px": 3.65,
+      "files": {
+        "front.svg": "4143466c88d356ffc8b439051c9406f262d6d3f1d8a79180f50bc51db8f69f48",
+        "interior.svg": "f33c29e8b6cd106990b5f77b3968b08e9a17d40a272cc6af32683233ddf969f5",
+        "rear.svg": "ca110c4692038228aa7a7d191432b6b959b179bce54c712ab88d1053d8ec2cd0",
+        "shadow.svg": "fa61aade521dbd43389fcfaf117fe1f3607c8738982f96d5e03e5a54ae42b8d8",
+        "source.svg": "1b90e73da8dfee49ace93d99b6636c01b0410aa609cb291902d8cccda082f760"
+      }
+    },
+    {
+      "kind": "bed",
+      "origin": [
+        128,
+        224
+      ],
+      "scale": 0.86,
+      "main_local_px": 7,
+      "secondary_local_px": 3.5,
+      "files": {
+        "front.svg": "429f2ae1cd941347d5bbcc0964b7b6f10e82d1b75641697a9917eb4141d7f725",
+        "interior.svg": "73702e916fa0e45cace314897bb84d858dee3302fbad973d9413f9f2da6bb4cd",
+        "rear.svg": "c7fb449fbd754f5918a1b951d8e10a006fd8850245fc47572b705d9d910dd4b8",
+        "shadow.svg": "000b7b46ae451e3817c8ad74a091a9704611a602c8cb2f9f4bcdf7e4b2b29ca5",
+        "source.svg": "e43e8292e0bdc1284975f9e5c26d916c7e9783bcf613b45f8755756085351637"
+      }
+    }
+  ],
+  "layer_rule": "Each static prop uses foot Y-sort; tunnel/bed retain rear, interior, cat slot, front.",
+  "palette": {
+    "cardboard": "#e8bb7c",
+    "side": "#d4a065",
+    "detail": "#b07c45",
+    "tape": "#f3dfae",
+    "inside": "#6b4a2b",
+    "teal": "#70b1a5"
+  }
+}

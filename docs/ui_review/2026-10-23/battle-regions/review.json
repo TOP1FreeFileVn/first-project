@@ -1,0 +1,500 @@
+{
+	"failures": [],
+	"level_resources": [
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/01-dong-co.png",
+			"stage": 1
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/02-doi-da.png",
+			"stage": 2
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/03-phao-dai-do.png",
+			"stage": 3
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/04-rung-thong.png",
+			"stage": 4
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/05-hem-nui.png",
+			"stage": 5
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/06-lang-bo-hoang.png",
+			"stage": 6
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/07-dam-lay.png",
+			"stage": 7
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/08-thanh-da-den.png",
+			"stage": 8
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/09-cong-phao-dai.png",
+			"stage": 9
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			},
+			"expected": "res://game/assets/battle/regions/10-vua-do.png",
+			"stage": 10
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"deployment_lines_preserved": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"legacy_stage_retains_fallback": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"save_disabled": true
+			},
+			"expected": "",
+			"stage": 11
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"deployment_lines_preserved": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"legacy_stage_retains_fallback": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"save_disabled": true
+			},
+			"expected": "",
+			"stage": 12
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"deployment_lines_preserved": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"legacy_stage_retains_fallback": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"save_disabled": true
+			},
+			"expected": "",
+			"stage": 13
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"deployment_lines_preserved": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"legacy_stage_retains_fallback": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"save_disabled": true
+			},
+			"expected": "",
+			"stage": 14
+		},
+		{
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"deployment_lines_preserved": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"legacy_stage_retains_fallback": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"save_disabled": true
+			},
+			"expected": "",
+			"stage": 15
+		}
+	],
+	"no_save_file_created": true,
+	"scope": "Actual production Battle scene, 10 region textures in live combat, 5 legacy-stage fallbacks, native next-level/restart navigation. No script overrides.",
+	"screenshots": [
+		{
+			"allies": 10,
+			"background": "res://game/assets/battle/regions/01-dong-co.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 3,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-01.png",
+			"stage": 1
+		},
+		{
+			"allies": 9,
+			"background": "res://game/assets/battle/regions/02-doi-da.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 4,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-02.png",
+			"stage": 2
+		},
+		{
+			"allies": 9,
+			"background": "res://game/assets/battle/regions/03-phao-dai-do.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 4,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-03.png",
+			"stage": 3
+		},
+		{
+			"allies": 10,
+			"background": "res://game/assets/battle/regions/04-rung-thong.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 6,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-04.png",
+			"stage": 4
+		},
+		{
+			"allies": 10,
+			"background": "res://game/assets/battle/regions/05-hem-nui.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 6,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-05.png",
+			"stage": 5
+		},
+		{
+			"allies": 10,
+			"background": "res://game/assets/battle/regions/06-lang-bo-hoang.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 5,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-06.png",
+			"stage": 6
+		},
+		{
+			"allies": 9,
+			"background": "res://game/assets/battle/regions/07-dam-lay.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 5,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-07.png",
+			"stage": 7
+		},
+		{
+			"allies": 10,
+			"background": "res://game/assets/battle/regions/08-thanh-da-den.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 5,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-08.png",
+			"stage": 8
+		},
+		{
+			"allies": 9,
+			"background": "res://game/assets/battle/regions/09-cong-phao-dai.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 6,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-09.png",
+			"stage": 9
+		},
+		{
+			"allies": 9,
+			"background": "res://game/assets/battle/regions/10-vua-do.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 6,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-10.png",
+			"stage": 10
+		},
+		{
+			"allies": 9,
+			"background": "res://game/assets/battle/regions/10-vua-do.png",
+			"capture": {
+				"png_saved": true,
+				"viewport_size": true
+			},
+			"combat": {
+				"allies_present": true,
+				"enemies_present": true,
+				"fight_phase": true
+			},
+			"enemies": 6,
+			"path": "res://docs/ui_review/2026-10-23/battle-regions/live-10-small.png",
+			"stage": 10
+		}
+	],
+	"transitions": [
+		{
+			"action": "Battle.next_level 09 to 10",
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"next_level_created_new_battle": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"save_disabled": true
+			}
+		},
+		{
+			"action": "Battle.restart stage 10",
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"correct_regional_texture": true,
+				"deployment_lines_preserved": true,
+				"direct_packable_resource_dependency": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"regional_size_720x740": true,
+				"restart_created_new_battle": true,
+				"save_disabled": true
+			}
+		},
+		{
+			"action": "Battle.next_level 10 to 11 fallback",
+			"checks": {
+				"background_bound_to_level": true,
+				"castle_foreground_preserved": true,
+				"correct_level_selection": true,
+				"deployment_lines_preserved": true,
+				"exported_texture_property": true,
+				"gear_origin_preserved": true,
+				"legacy_stage_retains_fallback": true,
+				"next_level_created_new_battle": true,
+				"real_background_script": true,
+				"real_battle_script": true,
+				"save_disabled": true
+			}
+		}
+	],
+	"user_data_dir": "C:/Users/dangp/GodotProjects/first-project/tmp/battle-regional-profile-576660c561ee497a9e92600ec7b82420/Godot/app_userdata/Gear Defenders"
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="184" viewBox="0 0 160 184">
+<g stroke-linecap="round" stroke-linejoin="round">
+  <ellipse cx="80" cy="175" rx="64" ry="6" fill="#583f21" opacity="0.14"/>
+  <!-- Broad flat cardboard foot, like the castle's front plane and side band. -->
+  <path d="M20 153 C20 143 47 136 80 136 C113 136 140 143 140 153 V163 C140 172 113 179 80 179 C47 179 20 172 20 163 Z" fill="#d4a065" stroke="#583f21" stroke-width="6"/>
+  <ellipse cx="80" cy="151" rx="60" ry="15" fill="#e8bb7c"/>
+  <path d="M22 153 C34 162 57 166 80 166 C103 166 126 162 138 153" fill="none" stroke="#b07c45" stroke-width="3"/>
+  <!-- Fixed bracket behind the post; no painted bevel or fine texture. -->
+  <path d="M99 28 H130 Q137 28 137 34 V40 H99 Z" fill="#e8bb7c" stroke="#583f21" stroke-width="6"/>
+  <path d="M58 25 H102 V142 C102 149 58 149 58 142 Z" fill="#f3dfae" stroke="#583f21" stroke-width="6"/>
+  <path d="M94 28 H99 V140 Q97 144 94 143 Z" fill="#d4a065"/>
+  <path d="M59 47 Q80 55 101 47 M59 63 Q80 71 101 63 M59 79 Q80 87 101 79 M59 95 Q80 103 101 95 M59 111 Q80 119 101 111 M59 127 Q80 135 101 127" fill="none" stroke="#b07c45" stroke-width="3"/>
+  <ellipse cx="80" cy="25" rx="22" ry="9" fill="#e8bb7c" stroke="#583f21" stroke-width="6"/>
+</g>
+</svg>

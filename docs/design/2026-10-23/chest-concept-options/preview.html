@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="vi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Các phương án rương · 23.10.2026</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+*{box-sizing:border-box}body{margin:0;background:#e4ebe0;color:#583f21;font-family:Game,sans-serif}main{max-width:1500px;padding:28px;margin:auto}h1{font-size:clamp(26px,4vw,46px);margin:0 0 12px}h2{font-size:clamp(23px,3vw,34px);margin:0}p{font-family:Game,sans-serif;line-height:1.65;color:#7b725d;margin:10px 0 18px}a{color:inherit;text-underline-offset:4px}nav{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}nav a,button{background:#fcf8ed;color:#583f21;border:0;border-radius:12px;padding:12px 17px;font:inherit;cursor:pointer;text-decoration:none}section{margin:36px 0;scroll-margin-top:22px}.sheet{width:100%;display:block;border-radius:18px;cursor:zoom-in}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:20px 0}.card{background:#fcf8ed;border-radius:18px;padding:18px}.card h3{font-size:21px;margin:0 0 10px}.art{width:100%;height:clamp(120px,22vw,310px);object-fit:contain;display:block;cursor:zoom-in}.links{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}.empty{padding:28px;border-radius:18px;background:#fcf8ed}.note{font-size:14px}.hidden{display:none}dialog{border:0;border-radius:18px;padding:18px;background:#f3eee0;color:#583f21;width:min(96vw,1700px);max-height:96vh}dialog::backdrop{background:#2b241bd9}dialog .tools{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}dialog img{display:block;max-width:100%;max-height:80vh;object-fit:contain;margin:auto}dialog button{background:#e4ebe0}footer{padding:24px 0 35px;color:#7b725d;font-size:14px}@media(max-width:650px){main{padding:20px}.grid{gap:9px}.card{padding:10px}.card h3{font-size:16px}.art{height:145px}.links{font-size:13px}nav a{padding:9px 12px}}
+</style>
+<main>
+  <h1>Chọn thiết kế rương</h1>
+  <p>Bốn hướng tạo hình, mỗi hướng gồm Gỗ · Bạc · Vàng. Chọn cả bộ hoặc ghép từng mẫu bằng mã A1–D3.</p>
+  <nav id="nav"><a href="#overview">Tất cả mẫu</a><a href="#proof">Xem cỡ nhỏ</a></nav>
+  <div id="empty" class="empty">Ảnh ý tưởng đang được chuẩn bị. Trang này sẽ hiển thị các mẫu sau khi ghép bảng duyệt.</div>
+  <section id="overview" class="hidden"><img class="sheet" src="overview.png" alt="Bảng so sánh tất cả phương án rương"><p class="note">Ảnh ý tưởng để chọn thiết kế; rương và hoạt ảnh hiện tại trong game chưa thay đổi.</p></section>
+  <div id="families"></div>
+  <section id="proof" class="hidden"><h2>Kiểm tra ở cỡ nhỏ</h2><p>Cùng một thiết kế trong ô 96 px và 64 px; giữ nguyên tỉ lệ.</p><img class="sheet" src="small-size-proof.png" alt="Các rương khi thu nhỏ về 96 và 64 pixel"></section>
+  <footer>Chỉ tách nền sáng đơn giản nếu nhận diện được chắc chắn, cắt ảnh và đổi kích thước đồng đều. Bản gen gốc được giữ để đối chiếu.</footer>
+</main>
+<dialog id="viewer"><div class="tools"><span id="caption"></span><button id="close" type="button">Đóng ✕</button></div><img id="large" alt=""></dialog>
+<script src="review-data.js"></script>
+<script>
+const data=window.CHEST_REVIEW;
+const familyRoot=document.getElementById('families');
+const viewer=document.getElementById('viewer');
+const large=document.getElementById('large');
+function enlarge(src,label){large.src=src;large.alt=label;document.getElementById('caption').textContent=label;viewer.showModal()}
+document.getElementById('close').onclick=()=>viewer.close();
+viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});
+if(data&&Object.keys(data.families).length){
+ document.getElementById('empty').classList.add('hidden');
+ document.getElementById('overview').classList.remove('hidden');
+ document.getElementById('proof').classList.remove('hidden');
+ for(const[code,family]of Object.entries(data.families)){
+  const anchor=document.createElement('a');anchor.href='#family-'+code;anchor.textContent=code+' · '+family.title;document.getElementById('nav').append(anchor);
+  const section=document.createElement('section');section.id='family-'+code;
+  const heading=document.createElement('h2');heading.textContent=code+' · '+family.title;section.append(heading);
+  const grid=document.createElement('div');grid.className='grid';
+  for(const item of family.items){
+   const card=document.createElement('article');card.className='card';
+   const title=document.createElement('h3');title.textContent=item.code+' · '+item.tier;
+   const img=document.createElement('img');img.className='art';img.src='png/'+item.code+'.png';img.alt=title.textContent;img.onclick=()=>enlarge(img.src,img.alt);
+   card.append(title,img);grid.append(card);
+  }
+  section.append(grid);
+  const links=document.createElement('div');links.className='links';
+  for(const[label,url]of [['Mở bảng ba cấp','family-'+code+'.png'],['Xem bản gen gốc','../../../../'+family.source]]){
+   const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener';link.textContent=label;links.append(link);
+  }
+  section.append(links);familyRoot.append(section);
+ }
+}
+document.querySelectorAll('.sheet').forEach(img=>img.onclick=()=>enlarge(img.src,img.alt));
+</script>
+</html>

@@ -1,5 +1,5 @@
 {
-  "status": "isolated_vector_pilot_not_production_approval",
+  "status": "castle_style_flat_cardboard_revision_for_review",
   "canvas": [
     256,
     240
@@ -29,9 +29,9 @@
     "entry_at_ground": true,
     "horizontal_bottom_stroke": false,
     "interior_floor_path_unchanged": "M70 157 C70 122 94 96 128 96 C162 96 186 122 186 157 V193 C186 207 179 214 165 214 H91 C77 214 70 207 70 193 Z",
-    "max_clear_width_after_5px_stroke": 111,
-    "raster_clearance_report": "qa.json",
-    "front_alpha_is_true": true
+    "front_alpha_is_true": true,
+    "max_clear_width_after_main_stroke": 108.7,
+    "main_stroke": 7.3
   },
   "anchors": {
     "approach_feet": [
@@ -53,20 +53,47 @@
   },
   "front_outline": "M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z",
   "scale_reference": {
-    "prop_canvas_width_world": 220,
-    "cat_canvas_width_world": 90,
-    "prop_main_stroke_world": 4.296875,
-    "cat_main_stroke_world": 4.21875,
-    "max_clear_opening_world": 95.390625,
+    "runtime_prop_scale": 0.82,
+    "prop_canvas_width_world": 209.92,
+    "runtime_cat_scale": 0.37,
+    "cat_canvas_width_world": 94.72,
+    "prop_main_stroke_world": 5.986,
+    "prop_secondary_stroke_world": 2.993,
+    "cat_main_stroke_world": 4.44,
+    "max_clear_opening_world": 89.134,
     "cat_painted_width_world_approx": 72
   },
   "stroke": {
-    "main": 5,
-    "secondary": 2.5,
-    "tape_marks": 2,
+    "main": 7.3,
+    "secondary": 3.65,
+    "tape_outline": 2.2,
     "main_color": "#583f21",
-    "secondary_color": "#b58950"
+    "secondary_color": "#b07c45",
+    "linecap": "round",
+    "linejoin": "round"
   },
   "occlusion_rule": "Use rear/interior, actor, front only while actor is assigned to the doorway/inside zone. Outside actors remain foot-sorted with the whole prop.",
-  "cat_not_embedded": true
+  "cat_not_embedded": true,
+  "palette": {
+    "outline": "#583f21",
+    "front": "#e8bb7c",
+    "shadow": "#d4a065",
+    "detail": "#b07c45",
+    "tape": "#f3dfae",
+    "interior": "#6b4a2b",
+    "inner_ears": "#f2b6a8"
+  },
+  "style_reference": "res://game/assets/lobby/castle-tiers/castle-tier-2-body.svg",
+  "side_treatment": "No outside extrusion. The coplanar rear follows the original U silhouette; the right shadow band stays inside the front face.",
+  "ground_shadow": {
+    "center": [
+      124,
+      228
+    ],
+    "radii": [
+      101,
+      9
+    ],
+    "opacity": 0.14
+  }
 }

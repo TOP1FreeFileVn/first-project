@@ -2,10 +2,17 @@ extends Node
 
 # Production integration review. Run with an isolated APPDATA/LOCALAPPDATA profile.
 # The fixture stays in RAM; this harness never starts a battle or changes game saves.
-const OUT := "res://docs/ui_review/2026-10-20/approved-integration"
+const OUT := "res://docs/ui_review/2026-10-23/courtyard-props-style"
 const HOME = preload("res://game/menu/Home.tscn")
 const HeroCat = preload("res://game/core/HeroCat.gd")
 const SIZES := [Vector2i(720, 1280), Vector2i(450, 800), Vector2i(360, 640)]
+const INTERACTION_PHASES := [
+	{"name": "rest", "clock": 0.0, "actor": "cream", "state": "rest_inside"},
+	{"name": "tunnel-exit", "clock": 8.05, "actor": "cream", "state": "exit"},
+	{"name": "bed-exit", "clock": 6.05, "actor": "calico", "state": "exit"},
+	{"name": "tunnel-enter", "clock": 24.0, "actor": "cream", "state": "enter"},
+	{"name": "bed-enter", "clock": 22.0, "actor": "calico", "state": "enter"},
+]
 
 var _home
 var _world
@@ -57,6 +64,8 @@ func _ready() -> void:
 		await _check_shop_round_trip(requested)
 		await _check_castle_round_trip(requested)
 		await _check_login_rail(requested)
+		if requested != SIZES[0]:
+			await _capture_interactions(requested)
 	await _check_hero_preview(SIZES[-1])
 	_finish()
 
@@ -176,6 +185,27 @@ func _check_hero_preview(requested: Vector2i) -> void:
 			await _settle()
 
 
+func _capture_interactions(requested: Vector2i) -> void:
+	var saved_clock: float = _world.get("_clock")
+	var was_processing: bool = _world.is_processing()
+	_world.set_process(false)
+	for phase: Dictionary in INTERACTION_PHASES:
+		_world.set("_clock", phase.clock)
+		_world.call("_pose")
+		await get_tree().process_frame
+		var actors: Array = _state().get("actors", [])
+		var expected_state := false
+		for actor: Dictionary in actors:
+			if actor.name == phase.actor:
+				expected_state = actor.state == phase.state and actor.facing == "front"
+		_check(expected_state, "interaction_phase_" + phase.name, requested)
+		await _capture("interaction-" + phase.name, requested)
+	_world.set("_clock", saved_clock)
+	_world.call("_pose")
+	_world.set_process(was_processing)
+	_check(_same_entities() and _world.is_processing() == was_processing, "phase_capture_preserves_world_and_processing", requested)
+
+
 func _uniform_scale(value: Vector2) -> bool:
 	return value.x > 0.0 and is_equal_approx(value.x, value.y)
 
@@ -291,10 +321,13 @@ func _json_state(state: Dictionary) -> Dictionary:
 
 
 func _finish() -> void:
+	var no_save := not FileAccess.file_exists("user://save.json") and not FileAccess.file_exists("user://save.json.tmp") and not FileAccess.file_exists("user://progress.cfg")
+	_check(no_save, "no_save_file_created")
 	var result := {"profile": OS.get_user_data_dir(), "persist": PlayerData.persist,
-		"scope": "Production Home integration, real UI clicks, RAM fixture; no battle start.",
+		"scope": "Production Home integration, real UI clicks and deterministic courtyard rest/exit/entry phases at 450 and 360 pixels; RAM fixture, no battle start.",
 		"checks": _checks, "captures": _captures, "failures": _failures,
-		"persistent_world_id": _world_id, "moving_actor_id": _actor_id}
+		"persistent_world_id": _world_id, "moving_actor_id": _actor_id,
+		"no_save_file_created": no_save}
 	var file := FileAccess.open(OUT.path_join("manifest.json"), FileAccess.WRITE)
 	if file != null:
 		file.store_string(JSON.stringify(result, "\t"))

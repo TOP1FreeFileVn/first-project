@@ -1,0 +1,178 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "source_set": "output/imagegen/battle-regions",
+  "scope": "Regional ground art for all 15 playable stages; castles, flags, actors and board remain separate.",
+  "draw_rect": [
+    0,
+    0,
+    720,
+    740
+  ],
+  "maps": [
+    {
+      "stage": 1,
+      "name": "Đồng Cỏ",
+      "file": "01-dong-co.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "e22a8bce16d8f83ef35acde73740520cac46b8f62239321b2a97d4c740b76ac0",
+      "source": "output/imagegen/battle-regions/01-dong-co/battlefield.png"
+    },
+    {
+      "stage": 2,
+      "name": "Đồi Đá",
+      "file": "02-doi-da.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "b02e290981ad82cab239f335b62977fe51e69d9a8a0a41927335a46825447135",
+      "source": "output/imagegen/battle-regions/02-doi-da/battlefield.png"
+    },
+    {
+      "stage": 3,
+      "name": "Pháo Đài Đỏ",
+      "file": "03-phao-dai-do.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "d94cb8e41f52d9df398fe61b70c76e475f65d7048fe6d9b86155c98ba84d98ac",
+      "source": "output/imagegen/battle-regions/03-phao-dai-do/battlefield.png"
+    },
+    {
+      "stage": 4,
+      "name": "Rừng Thông",
+      "file": "04-rung-thong.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "41d8f3263718386352ac86d21760f6f37fc6e9fd3d01fdbb44c19c10a087915e",
+      "source": "output/imagegen/battle-regions/04-rung-thong/battlefield.png"
+    },
+    {
+      "stage": 5,
+      "name": "Hẻm Núi",
+      "file": "05-hem-nui.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "3eca38718fac8b9a4a666978d3f84c134fe8996c17d8f9dbf7a3d6218824bfd7",
+      "source": "output/imagegen/battle-regions/05-hem-nui/battlefield.png"
+    },
+    {
+      "stage": 6,
+      "name": "Làng Bỏ Hoang",
+      "file": "06-lang-bo-hoang.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "e48a025f33f4f008b05c9db7ccce23393b60ace703d1b81c00da62280f8fd7f5",
+      "source": "output/imagegen/battle-regions/06-lang-bo-hoang/battlefield.png"
+    },
+    {
+      "stage": 7,
+      "name": "Đầm Lầy",
+      "file": "07-dam-lay.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "71421f58cafd2f54ab6f13a4a0e2bd9c770863006540c07c9de1a78123b1f7eb",
+      "source": "output/imagegen/battle-regions/07-dam-lay/battlefield.png"
+    },
+    {
+      "stage": 8,
+      "name": "Thành Đá Đen",
+      "file": "08-thanh-da-den.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "02c2d112b3dcd4a2d7bce643a87fe5dedf58e408ada6d15b30cd47efb720da3a",
+      "source": "output/imagegen/battle-regions/08-thanh-da-den/battlefield.png"
+    },
+    {
+      "stage": 9,
+      "name": "Cổng Pháo Đài",
+      "file": "09-cong-phao-dai.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "3ace268c11a549d02b6491f19e502dabdc1044d7c4a05c9be3f53b2741ea2b42",
+      "source": "output/imagegen/battle-regions/09-cong-phao-dai/battlefield.png"
+    },
+    {
+      "stage": 10,
+      "name": "Vua Đỏ",
+      "file": "10-vua-do.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "626b92212c0001c3248b9a60b9d1b7353d710629ba4c84e41223b796a28c8983",
+      "source": "output/imagegen/battle-regions/10-vua-do/battlefield.png"
+    },
+    {
+      "stage": 11,
+      "name": "Bến Cảng",
+      "file": "11-ben-cang.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "d9d9591afd04216b1abf35aab1381455347370f0e4e9335019a82bd3d4fe68aa",
+      "source": "output/imagegen/battle-regions/11-ben-cang/battlefield.png"
+    },
+    {
+      "stage": 12,
+      "name": "Rừng Sương",
+      "file": "12-rung-suong.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "ad3fb6f3d67945d524f5a1a105410bfc5be08885a02462decfbbd369a0cbcb07",
+      "source": "output/imagegen/battle-regions/12-rung-suong/battlefield.png"
+    },
+    {
+      "stage": 13,
+      "name": "Đồi Cừu",
+      "file": "13-doi-cuu.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "8b84aaac870546175a0bbf9edb37397de43468a1b33fda67b7797bcb1cf9cb40",
+      "source": "output/imagegen/battle-regions/13-doi-cuu/battlefield.png"
+    },
+    {
+      "stage": 14,
+      "name": "Mỏ Vàng",
+      "file": "14-mo-vang.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "f00be46168ea296c33558c4f0f95dc5e0db9099d7dbc071e17b8b47a5248c3c3",
+      "source": "output/imagegen/battle-regions/14-mo-vang/battlefield.png"
+    },
+    {
+      "stage": 15,
+      "name": "Cầu Đá",
+      "file": "15-cau-da.png",
+      "size": [
+        720,
+        740
+      ],
+      "sha256": "c259a615a402edbee05015843652d2843fa3c730ce31686c3002bfb7e37872f4",
+      "source": "output/imagegen/battle-regions/15-cau-da/battlefield.png"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Castle tiers</title>
+<style>
+  body { margin: 0; background: #d8e4de; font: 600 15px system-ui, sans-serif; color: #583f21; }
+  .row { display: flex; gap: 10px; padding: 12px; align-items: flex-end; }
+  .card { background: #eaf0e9; border-radius: 14px; padding: 10px; text-align: center; }
+  canvas { display: block; margin-top: 6px; }
+  small { font-weight: 500; opacity: .75; }
+</style>
+<div class="row" id="big"></div>
+<div class="row" id="small"></div>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="castle.js"></script>
+<script>
+  const lv = ['1–2', '3–4', '5–6', '7–8', '9–10'];
+  for (const [id, size] of [['big', 236], ['small', 128]]) {
+    const host = document.getElementById(id);
+    Castle.TIERS.forEach((name, i) => {
+      const card = document.createElement('div'); card.className = 'card';
+      card.innerHTML = size > 200 ? `${i + 1} · ${name}<br><small>cấp ${lv[i]}</small>` : `${size}px`;
+      const c = document.createElement('canvas'); c.width = size; c.height = Math.round(size * 380 / 440);
+      card.appendChild(c); host.appendChild(card);
+      Pen.toCanvas(Castle.draw(i + 1, size), c.getContext('2d'));
+    });
+  }
+</script>

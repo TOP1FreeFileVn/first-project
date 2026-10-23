@@ -33,7 +33,7 @@ const TROOPS_TAB := 3
 const SUMMON_TAB := 4
 const TOP_HEIGHT := 112.0
 const NAV_HEIGHT := 204.0
-const SHOP_SKY := Color("4e78a3")
+const SHOP_SKY := Color("355e65")
 const SHOP_AWNING_SIZE := Vector2(720, 104)
 const SCREEN := Vector2(720, 1280)
 
@@ -73,6 +73,7 @@ func _ready() -> void:
 	theme = UiKit.make_theme()
 	# The skin is smooth SVG art; pixel portraits set nearest on themselves.
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	MusicLib.play("lobby")
 	_pattern_backdrop = Ui.pattern_bg(SHOP_SKY)
 	_pattern_backdrop.name = "MenuPatternBackground"
 	_pattern_backdrop.visible = false
@@ -264,6 +265,10 @@ func _update_backdrop() -> void:
 		var paint := Ui.menu_pattern_color(context)
 		_pattern_backdrop.color = paint
 		_pattern_backdrop.material.set_shader_parameter("sky", paint)
+		# The selected teal shop keeps its moving motifs quiet behind the offers.
+		_pattern_backdrop.material.set_shader_parameter("pattern_strength", 0.35 if context == "shop" else 1.0)
+		_pattern_backdrop.material.set_shader_parameter("top_light", 1.04 if context == "shop" else 1.08)
+		_pattern_backdrop.material.set_shader_parameter("bottom_light", 0.96 if context == "shop" else 0.94)
 	_shop_awning.visible = _current == SHOP_TAB and not full_screen
 	_content.visible = _overlay == null and not full_screen
 	_header.visible = not full_screen and _current != HERO_TAB
@@ -488,6 +493,10 @@ func _open_castle_details() -> void:
 
 
 ## A short tap on the illustration opens stats and the workshop; swipes stay in BattlePage.
+## A tap on the battle tab's stage: pets the courtyard cat under it, if any.
+func pet_cat_at(global_at: Vector2) -> bool:
+	return _current == BATTLE_TAB and _lobby_world.is_visible_in_tree() and _lobby_world.pet_at(global_at)
+
 func open_castle_details_at(global_at: Vector2) -> bool:
 	if _current != BATTLE_TAB or active_menu_context() != "battle" or not Rect2(160, 345, 435, 300).has_point(global_at):
 		return false
@@ -533,6 +542,19 @@ func _open_settings() -> void:
 		PlayerData.set_sound(on)
 		SoundLib.play("click"))
 	box.add_child(sound)
+	var music := CheckBox.new()
+	music.text = "Nhạc nền"
+	music.button_pressed = PlayerData.music_on
+	music.focus_mode = Control.FOCUS_NONE
+	for key in ["font_color", "font_pressed_color", "font_hover_color", "font_hover_pressed_color"]:
+		music.add_theme_color_override(key, UiKit.INK)
+	music.add_theme_constant_override("outline_size", 0)
+	music.add_theme_font_size_override("font_size", 18)
+	music.toggled.connect(func(on):
+		PlayerData.set_music(on)
+		MusicLib.refresh()
+		SoundLib.play("click"))
+	box.add_child(music)
 	var reset := UiKit.button("XOÁ DỮ LIỆU", Vector2(260, 60), func(): pass, true)
 	reset.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	# Two taps within a few seconds, so a stray tap can't wipe the save.

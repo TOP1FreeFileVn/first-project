@@ -99,7 +99,19 @@
     "inner": "#c09559",
     "teal": "#77b3b3",
     "tealDark": "#568f91",
-    "stamp": "#ac854b"
+    "stamp": "#ac854b",
+    "pink": "#f2b6a8",
+    "gold": "#f0c457",
+    "glow": "#ffd77a",
+    "hole": "#6b4a2b",
+    "roof": "#cf9b5c",
+    "roofShade": "#b07c45",
+    "felt": "#6aa9a8",
+    "feltShade": "#4f8b8a",
+    "sisal": "#d9c39a",
+    "sisalShade": "#b89d6d",
+    "yarn": "#e07a6b",
+    "cream": "#fbf1dc"
   },
   "notes": [
     "No side windows, projecting jamb leaves, receding side faces or recessed floor.",

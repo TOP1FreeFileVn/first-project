@@ -1,5 +1,5 @@
 {
-  "status": "isolated_second_prop_vector_pilot",
+  "status": "castle_matched_flat_cardboard_tray",
   "canvas": [
     256,
     240
@@ -24,9 +24,10 @@
     "interior.svg",
     "front.svg"
   ],
+  "actor_layer_position": "between interior.svg and front.svg",
   "front_paths": {
-    "left": "M24 212 V183 L29 164 Q30 161 33 165 L43 179 L69 189 Q76 192 76 199 V224 H36 Q24 224 24 212 Z",
-    "right": "M232 212 V183 L227 164 Q226 161 223 165 L213 179 L187 189 Q180 192 180 199 V224 H220 Q232 224 232 212 Z"
+    "left": "M24 212 V184 L31 164 L44 178 L69 189 Q76 192 76 199 V224 H36 Q24 224 24 212 Z",
+    "right": "M232 212 V184 L225 164 L212 178 L187 189 Q180 192 180 199 V224 H220 Q232 224 232 212 Z"
   },
   "entry": {
     "centre_x": 128,
@@ -37,12 +38,11 @@
     "open_to_floor": true,
     "horizontal_sill": false,
     "geometric_ground_clearance": 104,
-    "nominal_clearance_after_main_stroke": 99,
+    "nominal_clearance_after_main_stroke": 97,
     "full_width_entry_y_range": [
       199,
       224
-    ],
-    "raster_report": "qa.json"
+    ]
   },
   "anchors": {
     "approach_feet": [
@@ -64,26 +64,26 @@
   },
   "palette": {
     "main_ink": "#583f21",
-    "secondary_ink": "#b58950",
-    "front_cardboard": "#e9bd7a",
-    "rear_cardboard": "#d3a15f",
-    "floor": "#e9c68a",
-    "cushion_tape": "#fff0be",
-    "ear_fold": "#d8a762",
-    "cushion_detail": "#d8bc86"
+    "secondary_ink": "#b07c45",
+    "front_cardboard": "#e8bb7c",
+    "shadow_cardboard": "#d4a065",
+    "tape": "#f3dfae",
+    "deep_shadow": "#6b4a2b"
   },
   "stroke": {
-    "main": 5,
-    "secondary": 2.5
+    "main": 7,
+    "secondary": 3.5
   },
-  "example_scale": {
-    "prop": 1.18,
-    "native_cat_visual": 0.5,
-    "prop_main_world": 5.9,
-    "cat_main_world": 6,
-    "nominal_entry_world": 116.82
+  "runtime_scale": {
+    "prop": 0.86,
+    "native_cat_visual": 0.37,
+    "prop_main_world": 6.02,
+    "prop_secondary_world": 3.01,
+    "geometric_entry_world": 89.44,
+    "nominal_entry_world": 83.42
   },
   "pose_rule": "Cats always display their original front face, including entering and leaving.",
-  "occlusion_rule": "Outside: foot-sort whole prop with cat. Enter/rest: rear and interior, cat, front side walls. Do not add a front sill across the centre.",
-  "cat_embedded": false
+  "occlusion_rule": "Outside: foot-sort whole prop with cat. Enter/rest: rear and interior, cat, front side walls. Never place a front sill across x76..180.",
+  "cat_embedded": false,
+  "design": "Flat castle palette, broad structural folds, narrow right shadow bands, one rear tape strip, no cushion or decorative scratches."
 }

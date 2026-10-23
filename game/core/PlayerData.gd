@@ -8,7 +8,6 @@ signal changed
 
 const Economy = preload("res://game/core/Economy.gd")
 const Content = preload("res://game/core/Content.gd")
-const Heroes = preload("res://game/core/Heroes.gd")
 const Meta = preload("res://game/core/Meta.gd")
 const HeroCat = preload("res://game/core/HeroCat.gd")
 
@@ -48,6 +47,7 @@ var fast_chest := false
 var ui_skin := "cozy"
 ## Settings: sound effects on.
 var sound_on := true
+var music_on := true
 ## The first-battle tutorial has been finished (or skipped).
 var tutorial_done := false
 ## Special board cells the player has already been shown (see GearBoard.TILE_INFO).
@@ -56,9 +56,9 @@ var seen_tiles: Array = []
 var hero_cat: Dictionary = {}
 ## Set once any admin cheat touched this save, so balance feedback can be discounted.
 var cheated := false
-## Heroes: id -> {"owned", "level", "stars", "shards"}. `hero` leads the team.
-var heroes := {}
-var hero := ""
+## Forge Stones (đá rèn): what hero-cat equipment levels with (HeroCat.upgrade_cost).
+var forge_stones := 0
+## Equipment summon: pulls since the last legendary (pity), free daily pull, total pulls.
 var summon_pity := 0
 var summon_free_day := -1
 var summon_total := 0
@@ -300,7 +300,6 @@ func team_power() -> int:
 	var total := 0.0
 	for id in battle_team():
 		total += troop_power(id)
-	total *= hero_hp_multiplier() * hero_damage_multiplier()
 	return roundi(sqrt(total) * 10.0)
 
 
@@ -370,7 +369,7 @@ func can_improve_castle() -> bool:
 
 # Battle-facing modifiers.
 func core_hp_multiplier() -> float:
-	return castle_stats()["hp"] * (1.0 + hero_bonus("core") / 100.0)
+	return castle_stats()["hp"] * (1.0 + hero_cat_stats().get("hp", 0) / CASTLE_HP_PER_PCT / 100.0)
 
 
 func max_meat() -> float:
@@ -383,7 +382,7 @@ func unlocked_cells() -> int:
 
 ## Extra meat per cleared wave from the Meat Oven workshop.
 func round_income_bonus() -> int:
-	return workshop_value("meat_regen") + floori(hero_bonus("income"))
+	return workshop_value("meat_regen")
 
 
 func start_meat_bonus() -> float:
@@ -391,16 +390,23 @@ func start_meat_bonus() -> float:
 
 
 func spawn_speed_multiplier() -> float:
-	return 1.0 + (workshop_value("master_gear") + hero_bonus("spawn")) / 100.0
+	return 1.0 + workshop_value("master_gear") / 100.0
 
 
-## Unit HP and damage multipliers from the leading hero.
-func hero_hp_multiplier() -> float:
-	return 1.0 + hero_bonus("hp") / 100.0
+## Hero-cat HP that adds 1% castle HP (the starter kit's ~1700 HP gives about +17%).
+const CASTLE_HP_PER_PCT := 100.0
 
+## Extra damage (a multiplier) for a troop class the equipped weapon pairs with, else 1.
+func class_damage_multiplier(klass: int) -> float:
+	var uid := HeroCat.equipped_uid(hero_cat, "weapon")
+	var d := HeroCat.def(hero_cat, uid)
+	if d.is_empty() or not klass in d.get("pairs", []):
+		return 1.0
+	return 1.0 + (HeroCat.PAIR_DAMAGE_PCT + floorf(int(HeroCat.item(hero_cat, uid)["level"]) / 10.0)) / 100.0
 
-func hero_damage_multiplier() -> float:
-	return 1.0 + hero_bonus("damage") / 100.0
+## Share of each blow to the wall that the hero cat's armour blocks.
+func wall_block() -> float:
+	return minf(HeroCat.DEF_BLOCK_MAX, hero_cat_stats().get("def", 0) * HeroCat.DEF_BLOCK)
 
 
 # --- Shop -----------------------------------------------------------------------------
@@ -515,8 +521,14 @@ func patrol_stored() -> int:
 	return mini(floori(patrol_rate() * hours), patrol_capacity())
 
 
+## Forge Stones waiting at the patrol (same hours and cap as its gold).
+func patrol_stones() -> int:
+	var hours := minf(maxf(0.0, (now() - patrol_last_claim) / 3600.0), float(Economy.PATROL_MAX_HOURS))
+	return floori(HeroCat.PATROL_STONES_PER_HOUR * hours)
+
 func claim_patrol() -> int:
 	var amount := patrol_stored()
+	forge_stones += patrol_stones()
 	gold += amount
 	patrol_last_claim = now()
 	if amount > 0:
@@ -542,6 +554,7 @@ func quick_patrol() -> int:
 	else:
 		gems -= Economy.PATROL_QUICK_GEMS
 	var amount := floori(patrol_rate() * Economy.PATROL_QUICK_HOURS)
+	forge_stones += floori(HeroCat.PATROL_STONES_PER_HOUR * Economy.PATROL_QUICK_HOURS)
 	gold += amount
 	track("patrol")
 	_commit()
@@ -560,10 +573,12 @@ func _refresh_patrol_day() -> void:
 ## Pays out a finished battle. Returns what was granted, for the end-of-battle panel:
 ## {"gold", "gems", "cards": {id: n}, "first_clear", "gift", "new": [ids unlocked now]}.
 func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictionary:
-	var reward := {"gold": 0, "gems": 0, "cards": {}, "first_clear": false, "gift": "", "new": []}
+	var reward := {"gold": 0, "gems": 0, "stones": 0, "cards": {}, "first_clear": false, "gift": "", "new": []}
 	if not won:
 		reward["gold"] = Economy.loss_gold(waves_cleared)
+		reward["stones"] = HeroCat.LOSS_STONES if waves_cleared > 0 else 0
 		gold += reward["gold"]
+		forge_stones += reward["stones"]
 		_commit()
 		return reward
 	track("win")
@@ -580,6 +595,8 @@ func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictiona
 	if stars == 3 and stars_for(index) < 3:
 		reward["gems"] = Economy.FIRST_THREE_STAR_GEMS
 	reward["gold"] = gold_won
+	reward["stones"] = (HeroCat.WIN_STONES + HeroCat.WIN_STONES_PER_LEVEL * index) * (2 if first_clear else 1)
+	forge_stones += reward["stones"]
 	var chest: Dictionary = Economy.CHESTS["victory"]
 	var chest_cards: Dictionary = _roll_cards(chest["cards"] + (1 if stars == 3 else 0), 0, false)["cards"]
 	for id in chest_cards:
@@ -594,148 +611,24 @@ func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictiona
 	return reward
 
 
-# --- Heroes ---------------------------------------------------------------------------
-
-func hero_state(id: String) -> Dictionary:
-	return heroes[id]
-
-
-func owns_hero(id: String) -> bool:
-	return heroes.has(id) and heroes[id]["owned"]
-
-
-## The hero leading the team, or "" if none is owned.
-func leader() -> String:
-	return hero if owns_hero(hero) else ""
-
-
-func select_hero(id: String) -> void:
-	if owns_hero(id):
-		hero = id
-		_commit()
-
-
-func heroes_owned() -> int:
-	var count := 0
-	for id in Heroes.ORDER:
-		if owns_hero(id):
-			count += 1
-	return count
-
-
-## The leader's bonus of this kind ("hp", "damage", "spawn", "income", "core"), else 0.
-func hero_bonus(kind: String) -> float:
-	var id := leader()
-	if id == "" or Heroes.HEROES[id]["buff"] != kind:
-		return 0.0
-	return Heroes.bonus(id, heroes[id]["level"], heroes[id]["stars"])
-
-
-func hero_level_cap(id: String) -> int:
-	return heroes[id]["stars"] * Heroes.LEVELS_PER_STAR
-
-
-func hero_level_cost(id: String) -> int:
-	if not owns_hero(id) or heroes[id]["level"] >= hero_level_cap(id):
-		return -1
-	return Heroes.level_cost(heroes[id]["level"])
-
-
-func hero_level_up(id: String) -> bool:
-	var cost := hero_level_cost(id)
-	if cost < 0 or gold < cost:
-		return false
-	gold -= cost
-	heroes[id]["level"] += 1
-	track("upgrade")
-	_commit()
-	return true
-
-
-func hero_star_cost(id: String) -> int:
-	if not owns_hero(id) or heroes[id]["stars"] >= Heroes.MAX_STARS:
-		return -1
-	return Heroes.STAR_SHARDS[heroes[id]["stars"] - 1]
-
-
-func hero_star_up(id: String) -> bool:
-	var cost := hero_star_cost(id)
-	if cost < 0 or heroes[id]["shards"] < cost:
-		return false
-	heroes[id]["shards"] -= cost
-	heroes[id]["stars"] += 1
-	track("upgrade")
-	_commit()
-	return true
-
-
-func hero_can_unlock(id: String) -> bool:
-	return not owns_hero(id) and heroes[id]["shards"] >= Heroes.UNLOCK_SHARDS
-
-
-func hero_unlock(id: String) -> bool:
-	if not hero_can_unlock(id):
-		return false
-	heroes[id]["shards"] -= Heroes.UNLOCK_SHARDS
-	add_hero(id)
-	_commit()
-	return true
-
-
-func hero_can_improve(id: String) -> bool:
-	if hero_can_unlock(id):
-		return true
-	var level_cost := hero_level_cost(id)
-	var star_cost := hero_star_cost(id)
-	return (level_cost >= 0 and gold >= level_cost) or (star_cost >= 0 and heroes[id]["shards"] >= star_cost)
-
-
-## Gives a hero. Returns true if it is new; a duplicate turns into shards instead.
-func add_hero(id: String) -> bool:
-	var h: Dictionary = heroes[id]
-	if h["owned"]:
-		h["shards"] += Heroes.DUPLICATE_SHARDS
-		return false
-	h["owned"] = true
-	if leader() == "":
-		hero = id
-	return true
-
-
-# --- Hero summon event ------------------------------------------------------------------
-
-func summon_week() -> int:
-	return floori(now() / float(Heroes.WEEK))
-
-
-func summon_featured() -> String:
-	return Heroes.featured_for(summon_week())
-
-
-func summon_seconds_left() -> int:
-	return (summon_week() + 1) * Heroes.WEEK - now()
-
+# --- Equipment summon (bottom tab "Triệu hồi") -----------------------------------------
 
 func summon_free_ready() -> bool:
 	return summon_free_day != today()
 
-
 func summon_cost(count: int) -> int:
 	if count == 1 and summon_free_ready():
 		return 0
-	return Heroes.SUMMON_COST[count]
-
+	return HeroCat.SUMMON_COST[count]
 
 func can_summon(count: int) -> bool:
 	return gems >= summon_cost(count)
 
-
 func summon_pity_left() -> int:
-	return Heroes.SUMMON_PITY - summon_pity
+	return HeroCat.SUMMON_PITY - summon_pity
 
-
-## Pays for and rolls `count` pulls (1 or 10). Each result is {"type": "hero", "id", "new"},
-## {"type": "shards", "id", "count"} or {"type": "gold", "amount"}. [] if refused.
+## Pays for and rolls `count` pulls (1 or 10). Each result is {"type": "item", "id", "uid",
+## "rarity", "stones"}. A x10 holds at least one epic. [] if refused.
 func summon(count: int) -> Array:
 	if not can_summon(count):
 		return []
@@ -746,83 +639,66 @@ func summon(count: int) -> Array:
 	var results := []
 	for i in count:
 		results.append(_summon_one())
-	# A ten-pull always has at least one hero.
-	if count >= 10 and not results.any(func(r): return r["type"] == "hero"):
-		results[count - 1] = _hero_result(Heroes.of_rarity(1).pick_random())
+	if count == 10 and results.all(func(r): return r["rarity"] < 2):
+		# Swap the last pull for a guaranteed epic.
+		hero_cat["bag"].erase(results[9]["uid"])
+		forge_stones -= results[9]["stones"]
+		results[9] = _summon_item(2)
 	track("summon", count)
 	_commit()
 	return results
 
-
 func _summon_one() -> Dictionary:
 	summon_pity += 1
 	summon_total += 1
-	var featured := summon_featured()
-	var kind: String = "featured" if summon_pity >= Heroes.SUMMON_PITY else _roll_summon_kind()
-	match kind:
-		"featured":
-			return _hero_result(featured)
-		"legendary", "epic", "rare":
-			var pool := Heroes.of_rarity({"legendary": 3, "epic": 2, "rare": 1}[kind])
-			pool.erase(featured)
-			return _hero_result(pool.pick_random() if not pool.is_empty() else featured)
-		"featured_shards":
-			return _shard_result(featured, Heroes.FEATURED_SHARDS)
-		"shards":
-			return _shard_result(Heroes.ORDER.pick_random(), Heroes.RANDOM_SHARDS)
-	gold += Heroes.SUMMON_GOLD
-	return {"type": "gold", "amount": Heroes.SUMMON_GOLD}
+	var rarity := 3
+	if summon_pity < HeroCat.SUMMON_PITY:
+		var roll := randf() * 100.0
+		rarity = 0
+		for r in HeroCat.SUMMON_RARITY.size():
+			roll -= HeroCat.SUMMON_RARITY[r]
+			if roll < 0.0:
+				rarity = r
+				break
+	return _summon_item(rarity)
 
-
-func _roll_summon_kind() -> String:
-	var pick := randf() * 100.0
-	for row in Heroes.SUMMON_TABLE:
-		pick -= row[1]
-		if pick <= 0.0:
-			return row[0]
-	return "gold"
-
-
-func _hero_result(id: String) -> Dictionary:
-	if id == summon_featured():
+func _summon_item(rarity: int) -> Dictionary:
+	var id := HeroCat.random_of_rarity(rarity)
+	var real: int = HeroCat.ITEMS[id]["rarity"]
+	if real >= 3:
 		summon_pity = 0
-	return {"type": "hero", "id": id, "new": add_hero(id)}
-
-
-func _shard_result(id: String, count: int) -> Dictionary:
-	heroes[id]["shards"] += count
-	return {"type": "shards", "id": id, "count": count}
-
+	var uid := HeroCat.add_item(hero_cat, id)
+	forge_stones += HeroCat.SUMMON_STONES
+	return {"type": "item", "id": id, "uid": uid, "rarity": real, "stones": HeroCat.SUMMON_STONES}
 
 # --- Rewards ----------------------------------------------------------------------------
 
 ## Grants a Meta reward dictionary. Returns what was given, for display:
-## {"gold", "gems", "cards": {troop: n}, "new": [troops], "shards": {hero: n}, "heroes": [ids]}.
+## {"gold", "gems", "stones", "cards": {troop: n}, "new": [troops], "items": [item ids]}.
+## Reward keys: gold, gems, stones (Forge Stones), cards (random troop cards), item (rarity).
 func grant(reward: Dictionary) -> Dictionary:
-	var got := {"gold": int(reward.get("gold", 0)), "gems": int(reward.get("gems", 0)), "cards": {}, "new": [], "shards": {}, "heroes": []}
+	var got := {"gold": int(reward.get("gold", 0)), "gems": int(reward.get("gems", 0)),
+		"stones": int(reward.get("stones", 0)), "cards": {}, "new": [], "items": []}
 	gold += got["gold"]
 	gems += got["gems"]
+	forge_stones += got["stones"]
 	if reward.has("cards"):
-		var cards: Dictionary = _roll_cards(int(reward["cards"]), 0, false)["cards"]
-		for id in cards:
-			if not is_unlocked(id):
+		var before := {}
+		for id in TROOP_ORDER:
+			before[id] = troops[id]["unlocked"]
+		var rolled: Dictionary = _roll_cards(int(reward["cards"]), 0, false)
+		got["cards"] = rolled["cards"]
+		_apply_loot(rolled)
+		for id in got["cards"]:
+			if troops[id]["unlocked"] and not before[id]:
 				got["new"].append(id)
-			add_cards(id, cards[id])
-		got["cards"] = cards
-	if reward.has("shards"):
-		var id: String = reward["shards"][0]
-		if id == "featured":
-			id = summon_featured()
-		heroes[id]["shards"] += int(reward["shards"][1])
-		got["shards"][id] = int(reward["shards"][1])
-	if reward.has("hero"):
-		var id: String = reward["hero"]
-		if add_hero(id):
-			got["heroes"].append(id)
-		else:
-			got["shards"][id] = got["shards"].get(id, 0) + Heroes.DUPLICATE_SHARDS
+	if reward.has("item"):
+		# {"item": rarity}: a random hero-cat item of that rarity.
+		var id := HeroCat.random_of_rarity(int(reward["item"]))
+		HeroCat.add_item(hero_cat, id)
+		got["items"].append(id)
+	_commit()
 	return got
-
 
 # --- 7-day login ------------------------------------------------------------------------
 
@@ -915,8 +791,6 @@ func claim_milestone(index: int) -> Dictionary:
 # --- Profile ----------------------------------------------------------------------------
 
 func avatar_unlocked(value: String) -> bool:
-	if value.begins_with("hero:"):
-		return owns_hero(value.substr(5))
 	return value.is_valid_int() and levels_cleared() >= Meta.avatar_need(int(value))
 
 
@@ -933,8 +807,9 @@ func frame_unlocked(id: String) -> bool:
 		"gold":
 			return login_cycles >= 1
 		"royal":
-			for hero_id in Heroes.of_rarity(3):
-				if owns_hero(hero_id):
+			# Owns a legendary hero-cat item.
+			for uid in hero_cat.get("bag", {}):
+				if HeroCat.def(hero_cat, uid).get("rarity", 0) >= 3:
 					return true
 			return false
 	return id == "wood"
@@ -966,11 +841,13 @@ func patrol_alert() -> bool:
 	return patrol_stored() >= patrol_capacity() / 2.0
 
 
+## Something to do on the hero cat page: an affordable level-up on a worn item, or a fuse.
 func hero_alert() -> bool:
-	for id in Heroes.ORDER:
-		if hero_can_improve(id):
+	for slot in HeroCat.SLOTS:
+		var uid := HeroCat.equipped_uid(hero_cat, slot)
+		if uid != "" and hero_cat_can_upgrade(uid):
 			return true
-	return false
+	return not hero_cat_fusable().is_empty()
 
 
 func events_alert() -> bool:
@@ -993,10 +870,12 @@ func reset_progress() -> void:
 	var keep_fast := fast_chest
 	var keep_skin := ui_skin
 	var keep_sound := sound_on
+	var keep_music := music_on
 	_reset()
 	fast_chest = keep_fast
 	ui_skin = keep_skin
 	sound_on = keep_sound
+	music_on = keep_music
 	current_level = 0
 	_commit()
 
@@ -1019,10 +898,7 @@ func _reset() -> void:
 	patrol_quick_day = floori(now() / 86400.0)
 	cheated = false
 	fast_chest = false
-	heroes = {}
-	for id in Heroes.ORDER:
-		heroes[id] = {"owned": id == Heroes.STARTER, "level": 1, "stars": 1, "shards": 0}
-	hero = Heroes.STARTER
+	forge_stones = 0
 	summon_pity = 0
 	summon_free_day = -1
 	summon_total = 0
@@ -1063,6 +939,10 @@ func set_sound(on: bool) -> void:
 	_commit()
 
 
+func set_music(on: bool) -> void:
+	music_on = on
+	_commit()
+
 func set_fast_chest(on: bool) -> void:
 	fast_chest = on
 	_commit()
@@ -1089,15 +969,78 @@ func hero_cat_equip(uid: String) -> void:
 	_commit()
 
 
+func hero_cat_can_upgrade(uid: String) -> bool:
+	var stones := HeroCat.upgrade_cost(hero_cat, uid)
+	return stones >= 0 and forge_stones >= stones and gold >= HeroCat.upgrade_gold(hero_cat, uid)
+
+## Levels an item with Forge Stones (and a little gold).
 func hero_cat_upgrade(uid: String) -> bool:
-	var cost := HeroCat.upgrade_cost(hero_cat, uid)
-	if cost < 0 or gold < cost:
+	if not hero_cat_can_upgrade(uid):
 		return false
-	gold -= cost
+	forge_stones -= HeroCat.upgrade_cost(hero_cat, uid)
+	gold -= HeroCat.upgrade_gold(hero_cat, uid)
 	hero_cat["bag"][uid]["level"] += 1
+	track("upgrade")
 	_commit()
 	return true
 
+## Item ids with enough copies to fuse (FUSE_COUNT, a worn one counts) and a higher rarity.
+func hero_cat_fusable() -> Array:
+	var out := []
+	var seen := {}
+	for uid in hero_cat["bag"]:
+		var id: String = hero_cat["bag"][uid]["id"]
+		if seen.has(id) or not HeroCat.ITEMS.has(id):
+			continue
+		seen[id] = true
+		if HeroCat.copies(hero_cat, id).size() >= HeroCat.FUSE_COUNT and HeroCat.fuse_target(id) != "":
+			out.append(id)
+	return out
+
+## Fuses three copies of `id` into the next rarity. The new item keeps the best level and
+## takes over a worn copy's slot. Returns the new uid, or "".
+func hero_cat_fuse(id: String) -> String:
+	if not hero_cat_fusable().has(id):
+		return ""
+	var target := HeroCat.fuse_target(id)
+	var used: Array = HeroCat.copies(hero_cat, id).slice(-HeroCat.FUSE_COUNT)
+	var level := 1
+	var worn := false
+	for uid in used:
+		level = maxi(level, int(hero_cat["bag"][uid]["level"]))
+		worn = worn or HeroCat.is_equipped(hero_cat, uid)
+	for uid in used:
+		hero_cat["bag"].erase(uid)
+	var new_uid := HeroCat.add_item(hero_cat, target)
+	hero_cat["bag"][new_uid]["level"] = mini(level, HeroCat.MAX_LEVEL)
+	if worn:
+		hero_cat["equipped"][HeroCat.ITEMS[target]["slot"]] = new_uid
+	_commit()
+	return new_uid
+
+## Breaks an unworn item into Forge Stones. Returns the stones, or 0 if refused.
+func hero_cat_salvage(uid: String) -> int:
+	if HeroCat.is_equipped(hero_cat, uid) or HeroCat.item(hero_cat, uid).is_empty():
+		return 0
+	var stones := HeroCat.salvage_value(hero_cat, uid)
+	hero_cat["bag"].erase(uid)
+	forge_stones += stones
+	_commit()
+	return stones
+
+## One-time refund for a save that still has the old Tướng heroes: shards and the levels and
+## stars bought become Forge Stones (5 per shard, 1 per 40 gold spent on levels).
+func _legacy_hero_refund(list: Dictionary) -> int:
+	var stones := 0
+	var star_shards := [10, 20, 40, 80]
+	for id in list:
+		var h: Dictionary = list[id]
+		stones += 5 * int(h.get("shards", 0))
+		for lv in range(1, int(h.get("level", 1))):
+			stones += roundi(200.0 * pow(1.22, lv - 1)) / 40
+		for st in range(1, int(h.get("stars", 1))):
+			stones += 5 * star_shards[mini(st - 1, 3)]
+	return stones
 
 func _commit() -> void:
 	changed.emit()
@@ -1109,7 +1052,7 @@ func _commit() -> void:
 func to_dict() -> Dictionary:
 	return {
 		"version": SAVE_VERSION,
-		"settings": {"fast_chest": fast_chest, "ui_skin": ui_skin, "sound": sound_on},
+		"settings": {"fast_chest": fast_chest, "ui_skin": ui_skin, "sound": sound_on, "music": music_on},
 		"cheated": cheated,
 		"gold": gold,
 		"gems": gems,
@@ -1120,8 +1063,8 @@ func to_dict() -> Dictionary:
 		"workshop": workshop,
 		"shop": {"free_chest_at": free_chest_at, "gold_chest_pity": gold_chest_pity},
 		"patrol": {"last_claim": patrol_last_claim, "quick_left": patrol_quick_left, "quick_day": patrol_quick_day},
-		"heroes": {"list": heroes, "leader": hero},
-		"summon": {"pity": summon_pity, "free_day": summon_free_day, "total": summon_total},
+		"forge_stones": forge_stones,
+		"summon": {"pity": summon_pity, "free_day": summon_free_day, "total": summon_total, "kind": "equipment"},
 		"login": {"claimed": login_claimed, "day": login_day, "cycles": login_cycles},
 		"quests": {"day": quest_day, "progress": quest_progress, "claimed": quest_claimed, "milestones": quest_milestones},
 		"profile": {"name": player_name, "avatar": avatar, "frame": frame},
@@ -1139,6 +1082,7 @@ func from_dict(data: Dictionary) -> void:
 	fast_chest = bool(data.get("settings", {}).get("fast_chest", false))
 	ui_skin = str(data.get("settings", {}).get("ui_skin", "cozy"))
 	sound_on = bool(data.get("settings", {}).get("sound", true))
+	music_on = bool(data.get("settings", {}).get("music", true))
 	var levels: Dictionary = data.get("levels", {})
 	unlocked_levels = clampi(int(levels.get("unlocked", 1)), 1, LEVELS.size())
 	# JSON turns int keys into strings.
@@ -1174,22 +1118,15 @@ func from_dict(data: Dictionary) -> void:
 	patrol_last_claim = mini(int(patrol.get("last_claim", now())), now())
 	patrol_quick_left = int(patrol.get("quick_left", Economy.PATROL_QUICK_FREE))
 	patrol_quick_day = int(patrol.get("quick_day", 0))
-	var saved_heroes: Dictionary = data.get("heroes", {})
-	var hero_list: Dictionary = saved_heroes.get("list", {})
-	for id in Heroes.ORDER:
-		if hero_list.has(id):
-			var h: Dictionary = hero_list[id]
-			heroes[id] = {
-				"owned": bool(h.get("owned", false)),
-				"level": int(h.get("level", 1)),
-				"stars": clampi(int(h.get("stars", 1)), 1, Heroes.MAX_STARS),
-				"shards": int(h.get("shards", 0)),
-			}
-	hero = str(saved_heroes.get("leader", Heroes.STARTER))
+	forge_stones = int(data.get("forge_stones", 0))
 	var summon_data: Dictionary = data.get("summon", {})
-	summon_pity = int(summon_data.get("pity", 0))
-	summon_free_day = int(summon_data.get("free_day", -1))
-	summon_total = int(summon_data.get("total", 0))
+	if summon_data.get("kind", "") == "equipment":
+		summon_pity = int(summon_data.get("pity", 0))
+		summon_free_day = int(summon_data.get("free_day", -1))
+		summon_total = int(summon_data.get("total", 0))
+	elif data.has("heroes"):
+		# Saves from the old hero (Tướng) system: pay back what was put into it, once.
+		forge_stones += _legacy_hero_refund(data["heroes"].get("list", {}))
 	var login: Dictionary = data.get("login", {})
 	login_claimed = clampi(int(login.get("claimed", 0)), 0, Meta.LOGIN_REWARDS.size())
 	login_day = int(login.get("day", -1))

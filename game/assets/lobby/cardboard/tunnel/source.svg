@@ -1,34 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
 <g id="shadow">
-  <ellipse cx="130" cy="228" rx="108" ry="9" fill="#583f21" opacity="0.14"/>
-</g><g id="rear" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M202 51 L235 63 Q242 66 242 75 V201 Q242 209 235 213 L215 223
-           L216 121 C216 91 211 66 202 51 Z" fill="#d3a15f"/>
-  <path d="M202 51 L235 63 Q242 66 242 75 V201 Q242 209 235 213 L215 223"
-        fill="none" stroke="#583f21" stroke-width="5"/>
-  <path d="M224 80 L236 84 V106 L225 102 Z" fill="#fff0be"/>
-  <path d="M230 119 V177" fill="none" stroke="#a57a48" stroke-width="2.5"/>
-  <path d="M224 199 L235 194" fill="none" stroke="#a57a48" stroke-width="2.5"/>
-</g><defs>
+  <ellipse cx="124" cy="228" rx="101" ry="9" fill="#583f21" opacity="0.14"/>
+</g>
+<g id="rear" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Coplanar cardboard backing; no projecting side wall or floor sill. -->
+  <path d="M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z" fill="#d4a065"/>
+</g>
+<defs>
   <clipPath id="opening-clip"><path d="M70 157 C70 122 94 96 128 96 C162 96 186 122 186 157 V193 C186 207 179 214 165 214 H91 C77 214 70 207 70 193 Z"/></clipPath>
 </defs>
 <g id="interior" clip-path="url(#opening-clip)">
-  <path d="M70 157 C70 122 94 96 128 96 C162 96 186 122 186 157 V193 C186 207 179 214 165 214 H91 C77 214 70 207 70 193 Z" fill="#79582f"/>
-  <path d="M70 106 L87 113 V190 L70 207 Z" fill="#694b28"/>
-  <path d="M70 204 L87 188 H172 L186 204 V222 H70 Z" fill="#b88e54"/>
-  <path d="M87 188 H172" fill="none" stroke="#9b713e" stroke-width="2.5"
-        stroke-linecap="round"/>
-</g><g id="front" stroke-linecap="round" stroke-linejoin="round">
-  <!-- One U-shaped contour opens to ground. No closed sill crosses the actor. -->
-  <path d="M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z" fill="#e9bd7a"
-        stroke="#583f21" stroke-width="5"/>
-  <path d="M39 91 Q41 68 46 58 L67 78 Z" fill="#d8a762"/>
-  <path d="M185 78 L202 60 Q208 78 210 94 Z" fill="#d8a762"/>
-  <path d="M79 79 Q125 69 173 79" fill="none" stroke="#b58950" stroke-width="2.5"/>
-  <path d="M33 151 L48 151 L47 156 L50 160 L47 165 L50 169 L47 174 L33 174 Z"
-        fill="#fff0be"/>
-  <path d="M34 158 H44 M34 167 H44" fill="none" stroke="#d5b77b" stroke-width="2"/>
-  <path d="M52 194 V209 H64" fill="none" stroke="#b58950" stroke-width="2.5"/>
-  <path d="M198 151 V175" fill="none" stroke="#b58950" stroke-width="2.5"/>
+  <path d="M70 157 C70 122 94 96 128 96 C162 96 186 122 186 157 V193 C186 207 179 214 165 214 H91 C77 214 70 207 70 193 Z" fill="#6b4a2b"/>
+  <path d="M70 106 L83 113 V190 L70 204 Z" fill="#583f21"/>
+  <path d="M70 204 L87 188 H172 L186 204 V222 H70 Z" fill="#b07c45"/>
+</g>
+<g id="front" stroke-linecap="round" stroke-linejoin="round">
+  <!-- The original U-shaped cut stays open to ground for the resident cat. -->
+  <path d="M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z" fill="#e8bb7c"/>
+  <!-- One narrow flat shadow band, contained within the front silhouette. -->
+  <path d="M203 88 Q216 103 216 124 V216 Q216 220 212 220 H203 Z" fill="#d4a065"/>
+  <path d="M44 83 Q45 68 49 61 L65 77 Z" fill="#f2b6a8"/>
+  <path d="M187 78 L201 62 Q206 77 208 88 Z" fill="#f2b6a8"/>
+  <path d="M81 83 Q128 74 173 83" fill="none" stroke="#b07c45" stroke-width="3.65"/>
+  <!-- Broad tape joins use the same pale paper and brown edge as the castle. -->
+  <path d="M98 77 L106 79 L114 77 L150 77 L157 79 L155 83 L158 87 H105 L98 85 L101 81 Z" fill="#f3dfae" stroke="#b07c45" stroke-width="2.2"/>
+  <path d="M35 153 L43 155 L51 153 L58 155 V172 L50 170 L42 173 L35 171 Z" fill="#f3dfae" stroke="#b07c45" stroke-width="2.2"/>
+  <!-- Main contours are 5.986px after the existing 0.82 world scale. -->
+  <path d="M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z" fill="none" stroke="#583f21" stroke-width="7.3"/>
 </g>
 </svg>

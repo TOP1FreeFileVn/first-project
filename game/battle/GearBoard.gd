@@ -389,6 +389,7 @@ func _input(event: InputEvent) -> void:
 				_drag = gears[cell]
 				_drag_from = cell
 				_drag.z_index = 20
+				SoundLib.play("gear_pick", 0.0, 0.03)
 				get_viewport().set_input_as_handled()
 			elif not event.pressed and _drag != null:
 				if drag_over_sell_zone():
@@ -413,10 +414,11 @@ func _drop(cell: Vector2i) -> void:
 	var other = gears.get(cell)
 	if cell == NO_CELL or cell == _drag_from:
 		gear.position = cell_center(_drag_from)
+		SoundLib.play("gear_back", 0.0, 0.02)
 	elif other == null:
 		gears.erase(_drag_from)
 		_place(gear, cell)
-		SoundLib.play("place")
+		_play_place(gear)
 	elif can_merge(gear, other):
 		gears.erase(_drag_from)
 		gear.queue_free()
@@ -425,9 +427,13 @@ func _drop(cell: Vector2i) -> void:
 	else:
 		_place(other, _drag_from)
 		_place(gear, cell)
-		SoundLib.play("place")
+		_play_place(gear)
 	_update_power()
 
+
+## Higher tiers settle a little lower and heavier.
+func _play_place(gear) -> void:
+	SoundLib.play("gear_place", 0.0, 0.025, maxf(0.78, 1.0 - 0.05 * (gear.tier - 1)))
 
 func _place(gear, cell: Vector2i) -> void:
 	gears[cell] = gear

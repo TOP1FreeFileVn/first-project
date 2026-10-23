@@ -3,6 +3,11 @@ extends Resource
 # One playable level: castle HP, starting meat and the enemy waves to survive.
 
 @export var display_name := ""
+## Ground-only art (720x740). The castle and gear table are separate battle layers.
+## Null keeps the original woodland field for levels without regional art yet.
+@export var battlefield: Texture2D
+## Regional panorama behind the separately rendered stage name in Home.
+@export var lobby_banner: Texture2D
 ## Unused since teams replaced per-level troop pools (kept so old .tres files load).
 @export var troop_pool: Array = []
 @export var start_meat := 6.0

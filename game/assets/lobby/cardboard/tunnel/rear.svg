@@ -1,11 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
 <g id="rear" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M202 51 L235 63 Q242 66 242 75 V201 Q242 209 235 213 L215 223
-           L216 121 C216 91 211 66 202 51 Z" fill="#d3a15f"/>
-  <path d="M202 51 L235 63 Q242 66 242 75 V201 Q242 209 235 213 L215 223"
-        fill="none" stroke="#583f21" stroke-width="5"/>
-  <path d="M224 80 L236 84 V106 L225 102 Z" fill="#fff0be"/>
-  <path d="M230 119 V177" fill="none" stroke="#a57a48" stroke-width="2.5"/>
-  <path d="M224 199 L235 194" fill="none" stroke="#a57a48" stroke-width="2.5"/>
+  <!-- Coplanar cardboard backing; no projecting side wall or floor sill. -->
+  <path d="M28 216 V124 C28 99 32 69 41 51 Q44 44 51 49 L78 74 Q126 64 175 74 L198 51 Q205 46 209 55 C216 77 220 99 220 124 V216 Q220 224 212 224 H186 V157 C186 122 162 96 128 96 C94 96 70 122 70 157 V224 H36 Q28 224 28 216 Z" fill="#d4a065"/>
 </g>
 </svg>

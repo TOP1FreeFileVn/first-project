@@ -1,0 +1,10 @@
+assassin.png
+size:1024,303
+filter:Linear,Linear
+body
+bounds:0,0,239,303
+wing_l
+bounds:241,0,209,205
+wing_r
+bounds:452,0,209,205
+

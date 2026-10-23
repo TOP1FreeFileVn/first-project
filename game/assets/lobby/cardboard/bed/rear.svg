@@ -1,12 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="240" viewBox="0 0 256 240">
 <g id="rear" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M24 185 L36 151 Q39 144 48 144 H208 Q217 144 220 152 L232 185
-           V212 Q232 224 220 224 H36 Q24 224 24 212 Z" fill="#d3a15f"/>
-  <!-- The front parts own the near edges; do not double-stroke their seams. -->
-  <path d="M24 185 L36 151 Q39 144 48 144 H208 Q217 144 220 152 L232 185"
-        fill="none" stroke="#583f21" stroke-width="5"/>
-  <path d="M43 165 H213" fill="none" stroke="#b58950" stroke-width="2.5"/>
-  <path d="M115 145 H141 L139 149 L142 153 L139 157 L141 161 H115
-           L117 157 L114 153 L117 149 Z" fill="#fff0be"/>
+  <path d="M24 184 L37 151 Q40 144 48 144 H208 Q216 144 219 151 L232 184 V212 Q232 224 220 224 H36 Q24 224 24 212 Z" fill="#e8bb7c"/>
+  <path d="M207 145 L219 151 L232 184 V212 Q232 224 220 224 H217 V183 Z" fill="#d4a065"/>
+  <!-- Front walls own the near perimeter; the back rim is stroked once. -->
+  <path d="M24 184 L37 151 Q40 144 48 144 H208 Q216 144 219 151 L232 184" fill="none" stroke="#583f21" stroke-width="7"/>
+  <path d="M46 166 H210" fill="none" stroke="#b07c45" stroke-width="3.5"/>
+  <path d="M115 148 H141 L139 153 L142 158 L139 163 H115 L117 158 L114 153 Z" fill="#f3dfae"/>
 </g>
 </svg>

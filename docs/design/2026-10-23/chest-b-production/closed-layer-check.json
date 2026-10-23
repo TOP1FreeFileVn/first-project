@@ -1,0 +1,32 @@
+{
+  "wood": {
+    "max_RGBA_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "pixels_with_channel_difference_over_3": 0,
+    "solid_pixels_difference_over_3": 0
+  },
+  "silver": {
+    "max_RGBA_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "pixels_with_channel_difference_over_3": 0,
+    "solid_pixels_difference_over_3": 0
+  },
+  "gold": {
+    "max_RGBA_difference": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "pixels_with_channel_difference_over_3": 0,
+    "solid_pixels_difference_over_3": 0
+  }
+}

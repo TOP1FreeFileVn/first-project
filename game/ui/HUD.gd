@@ -116,6 +116,12 @@ func show_end(won: bool, stars: int, detail: String, reward: Dictionary) -> void
 			c.add_child(Ui.icon(item[0], 40))
 			c.add_child(Ui.label(UiKit.format_number(item[1]), "LabelDark", 24))
 			loot.add_child(c)
+	if reward.get("stones", 0) > 0:
+		# Forge Stones for the hero cat's equipment.
+		var st := Ui.hbox(6)
+		st.add_child(UiKit.forge_stone_icon(40))
+		st.add_child(Ui.label(UiKit.format_number(reward["stones"]), "LabelDark", 24))
+		loot.add_child(st)
 	_end_box.add_child(Ui.panel("Well", loot))
 	var cards: Dictionary = reward.get("cards", {})
 	if not cards.is_empty():

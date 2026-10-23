@@ -1,0 +1,1 @@
+{"order": ["leg_l", "leg_r", "body", "paw_l", "head", "weapon", "paw_r"], "pivots": {"leg_l": [90, 190], "leg_r": [166, 190], "body": [128, 200], "paw_l": [104, 150], "head": [128, 132], "weapon": [156, 168], "paw_r": [152, 150]}}

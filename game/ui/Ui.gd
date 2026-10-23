@@ -121,7 +121,7 @@ static func pattern_bg(sky := Color("6fa3e0")) -> ColorRect:
 ## One family of quiet scrolling menu backdrops. Light roster colors preserve
 ## the brown headings; darker blue/violet support the shop and summon artwork.
 const MENU_PATTERN_COLORS := {
-	"shop": Color("4e78a3"),
+	"shop": Color("355e65"),
 	"hero": Color("96b5ae"),
 	"troops": Color("b1c6a3"),
 	"summon": Color("81749f"),
@@ -754,12 +754,14 @@ static func gear_card(icon_name: String, type_icon: String, tone: String, level:
 	var badge := icon(type_icon, size * 0.26)
 	badge.name = "SlotBadge"
 	pin(root, badge, Vector2(5, 5))
-	var lv := label("Lv." + level, "LabelTiny", int(size * 0.15))
-	lv.name = "EquipmentLevel"
-	lv.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	pin(root, lv, Vector2(-size * 0.62, 4), Control.PRESET_TOP_RIGHT)
-	lv.offset_right = -8
-	lv.offset_bottom = lv.offset_top + size * 0.24
+	# An empty `level` (a preview of an item kind, e.g. summon results) shows no level tag.
+	if level != "":
+		var lv := label("Lv." + level, "LabelTiny", int(size * 0.15))
+		lv.name = "EquipmentLevel"
+		lv.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		pin(root, lv, Vector2(-size * 0.62, 4), Control.PRESET_TOP_RIGHT)
+		lv.offset_right = -8
+		lv.offset_bottom = lv.offset_top + size * 0.24
 	if can_upgrade:
 		var up := icon("badge_up", size * 0.3)
 		up.name = "EquipmentUpgrade"

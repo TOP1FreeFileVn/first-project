@@ -1,0 +1,14 @@
+monk.png
+size:1024,373
+filter:Linear,Linear
+head
+bounds:0,0,439,231
+body
+bounds:441,0,304,179
+weapon
+bounds:747,0,124,170
+leg_l
+bounds:873,0,107,140
+leg_r
+bounds:0,233,107,140
+
