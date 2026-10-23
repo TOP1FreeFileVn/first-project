@@ -1,0 +1,31 @@
+<!doctype html><html lang="vi"><meta charset="utf-8">
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+body{margin:0;background:#79583e;color:#fff1d1;font:18px Game}canvas{display:block;margin:auto}
+</style>
+<canvas id="art" width="760" height="360"></canvas>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="boots.js"></script>
+<script>
+const ctx=document.querySelector('canvas').getContext('2d');
+function badge(x,y,size,color){
+ ctx.save();ctx.translate(x,y);ctx.scale(size/36,size/36);
+ ctx.fillStyle='#583f21';ctx.beginPath();ctx.roundRect(0,0,36,36,4);ctx.fill();
+ ctx.fillStyle='#f9e8bf';ctx.beginPath();ctx.roundRect(2,2,32,32,3);ctx.fill();
+ ctx.fillStyle=color;ctx.beginPath();ctx.roundRect(4,4,28,28,2);ctx.fill();
+ const layer=document.createElement('canvas');layer.width=256;layer.height=256;
+ const ink=layer.getContext('2d');Pen.toCanvas(BootsBadge.icon(256),ink);
+ const data=ink.getImageData(0,0,256,256).data;let l=256,t=256,r=0,b=0;
+ for(let y=0;y<256;y++)for(let x=0;x<256;x++)if(data[(y*256+x)*4+3]){l=Math.min(l,x);t=Math.min(t,y);r=Math.max(r,x);b=Math.max(b,y);}
+ const w=r-l+1,h=b-t+1,k=24/Math.max(w,h);
+ ctx.drawImage(layer,l,t,w,h,18-w*k/2,18-h*k/2,w*k,h*k);ctx.restore();
+}
+document.fonts.load('24px Game').then(()=>{
+ ctx.fillStyle='#fff1d1';ctx.font='24px Game';ctx.fillText('HAI CHIẾC GIÀY SO LE',28,42);
+ badge(80,86,210,'#347f9d');
+ ctx.font='17px Game';ctx.fillText('Thu nhỏ trong huy hiệu',360,102);
+ ['#5b813e','#347f9d','#8659ac','#b56c33'].forEach((c,i)=>badge(366+i*77,127,42,c));
+ ctx.fillText('Kích thước trong game',360,228);
+ ['#5b813e','#347f9d','#8659ac','#b56c33'].forEach((c,i)=>badge(377+i*77,251,18,c));
+});
+</script></html>

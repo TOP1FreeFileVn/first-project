@@ -11,6 +11,7 @@ const Ui = preload("res://game/ui/Ui.gd")
 const CartonNav = preload("res://game/ui/CartonNav.gd")
 const LobbyShortcut = preload("res://game/ui/LobbyShortcut.gd")
 const CastleBubble = preload("res://game/ui/CastleBubble.gd")
+const PaperboardFrame = preload("res://game/ui/PaperboardFrame.gd")
 const AdminGate = preload("res://game/admin/AdminGate.gd")
 const AdminPanel = preload("res://game/admin/AdminPanel.gd")
 const MetaPopups = preload("res://game/menu/popups/MetaPopups.gd")
@@ -43,6 +44,7 @@ var _content: Control
 var _pages: Array = []
 var _current := -1
 var _pattern_backdrop: ColorRect
+var _hero_backdrop: PanelContainer
 var _shop_awning: Control
 var _menu_surfaces: Array = []
 var _lobby_world: Control
@@ -82,6 +84,13 @@ func _ready() -> void:
 	awning.stretch_mode = TextureRect.STRETCH_SCALE
 	awning.size = SHOP_AWNING_SIZE
 	_pattern_backdrop.add_child(awning)
+	_hero_backdrop = PaperboardFrame.new()
+	_hero_backdrop.name = "HeroPaperboardBackground"
+	_hero_backdrop.kind = "background"
+	_hero_backdrop.grain = Ui.tex("paper_grain")
+	_hero_backdrop.visible = false
+	add_child(_hero_backdrop)
+	_hero_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_lobby_world = CardboardLobby.new()
 	add_child(_lobby_world)
 	_content = Control.new()
@@ -126,7 +135,8 @@ func select_tab(index: int, animate := true) -> void:
 	last_tab = index
 	# The shop canopy sits above the shared HUD row.
 	_header.position.y = SHOP_AWNING_SIZE.y if index == SHOP_TAB else 0.0
-	_content.position.y = TOP_HEIGHT + _header.position.y
+	# The equipment screen uses this space itself, without the shared currency HUD.
+	_content.position.y = 0.0 if index == HERO_TAB else TOP_HEIGHT + _header.position.y
 	_content.size.y = SCREEN.y - _content.position.y - NAV_HEIGHT
 	for i in _pages.size():
 		_pages[i].visible = i == index
@@ -247,14 +257,16 @@ func _update_backdrop() -> void:
 		if is_instance_valid(node) and not node.is_queued_for_deletion() and node is CanvasLayer:
 			full_screen = true
 			break
-	_pattern_backdrop.visible = context != "battle"
+	# One paper surface continues behind the inventory and the transparent nav.
+	_hero_backdrop.visible = _current == HERO_TAB and context == "hero"
+	_pattern_backdrop.visible = context != "battle" and not _hero_backdrop.visible
 	if _pattern_backdrop.visible:
 		var paint := Ui.menu_pattern_color(context)
 		_pattern_backdrop.color = paint
 		_pattern_backdrop.material.set_shader_parameter("sky", paint)
 	_shop_awning.visible = _current == SHOP_TAB and not full_screen
 	_content.visible = _overlay == null and not full_screen
-	_header.visible = not full_screen
+	_header.visible = not full_screen and _current != HERO_TAB
 	_nav_holder.visible = not full_screen
 	if _overlay != null:
 		_overlay.visible = not full_screen

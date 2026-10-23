@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "options": [
+    {
+      "icon": "Kim cương bè",
+      "gemLoaded": true,
+      "brokenImages": 0,
+      "bottomTabs": 5,
+      "gearSlots": 4,
+      "overflow": false
+    },
+    {
+      "icon": "Viên thoi bo góc",
+      "gemLoaded": true,
+      "brokenImages": 0,
+      "bottomTabs": 5,
+      "gearSlots": 4,
+      "overflow": false
+    },
+    {
+      "icon": "Pha lê ngắn",
+      "gemLoaded": true,
+      "brokenImages": 0,
+      "bottomTabs": 5,
+      "gearSlots": 4,
+      "overflow": false
+    }
+  ]
+}

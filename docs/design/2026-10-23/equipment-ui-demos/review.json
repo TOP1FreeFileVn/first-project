@@ -1,0 +1,60 @@
+{
+  "errors": [],
+  "variants": [
+    {
+      "design": "paperboard",
+      "width": 390,
+      "height": 694,
+      "bag": 221,
+      "card": 69,
+      "overflow": false,
+      "nativeNavPresent": true,
+      "nativeNavTabs": 5,
+      "headerWidth": 390,
+      "brokenImages": 0
+    }
+  ],
+  "interactions": [
+    {
+      "design": "paperboard",
+      "opened": true,
+      "equippedSkill": "Sao băng",
+      "weaponFilterCount": 11,
+      "sortLabel": "Độ hiếm ↑"
+    }
+  ],
+  "responsive": [
+    {
+      "design": "paperboard",
+      "hostWidth": 288,
+      "phoneWidth": 288,
+      "overflow": false,
+      "gearCount": 4,
+      "navVisible": true
+    },
+    {
+      "design": "paperboard",
+      "hostWidth": 328,
+      "phoneWidth": 328,
+      "overflow": false,
+      "gearCount": 4,
+      "navVisible": true
+    },
+    {
+      "design": "paperboard",
+      "hostWidth": 418,
+      "phoneWidth": 390,
+      "overflow": false,
+      "gearCount": 4,
+      "navVisible": true
+    },
+    {
+      "design": "paperboard",
+      "hostWidth": 704,
+      "phoneWidth": 390,
+      "overflow": false,
+      "gearCount": 4,
+      "navVisible": true
+    }
+  ]
+}

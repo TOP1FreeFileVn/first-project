@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><title>Combat power icon canvas review</title>
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+body{margin:0;background:#e4c394;color:#583f21;font:16px Game,sans-serif;padding:30px}
+h1{font-size:23px;margin:0 0 24px} .row{display:flex;gap:28px}.option{width:280px;text-align:center}
+.large{width:160px;height:160px;display:block;margin:0 auto 16px}
+.plaque{margin:16px auto;display:flex;align-items:center;justify-content:center;gap:5px;width:115px;height:27px;background:#583f21;color:#f9edcc;font-size:17px;clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%)}
+.samples{display:flex;align-items:center;justify-content:center;gap:14px;min-height:52px}
+.sample{display:flex;flex-direction:column;align-items:center;gap:4px;font:12px Game,sans-serif}
+</style>
+<h1>Icon lực chiến · so nét ở kích thước thật</h1><div class="row">
+<section class="option" data-icon="crossed"><canvas class="large" width="320" height="320"></canvas><div>Hai kiếm chéo</div><div class="plaque"><canvas width="42" height="42" style="width:21px;height:21px"></canvas>2.480</div><div class="samples"></div></section>
+<section class="option" data-icon="fist"><canvas class="large" width="320" height="320"></canvas><div>Nắm đấm mèo</div><div class="plaque"><canvas width="42" height="42" style="width:21px;height:21px"></canvas>2.480</div><div class="samples"></div></section>
+</div>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script><script src="icons.js"></script>
+<script>
+document.querySelectorAll('[data-icon]').forEach(el=>{const pen=new Pen();PowerIconOptions.draw[el.dataset.icon](pen);for(const size of [21,24,32]){const wrap=document.createElement('div');wrap.className='sample';wrap.innerHTML=`<canvas width="${size*2}" height="${size*2}" style="width:${size}px;height:${size}px"></canvas><span>${size} px</span>`;el.querySelector('.samples').append(wrap)}el.querySelectorAll('canvas').forEach(c=>{const ctx=c.getContext('2d');ctx.scale(c.width/96,c.height/96);Pen.toCanvas(pen.ops,ctx)})});
+</script></html>

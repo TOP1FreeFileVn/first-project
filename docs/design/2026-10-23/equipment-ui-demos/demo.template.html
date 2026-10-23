@@ -1,0 +1,211 @@
+<div id="cat-equipment-demos">
+  <div class="eq-paper-preview viz-dotted-background" aria-label="Thử giao diện bìa giấy">
+    <section aria-label="Bìa giấy"><div class="eq-stage" data-design="paperboard"></div></section>
+  </div>
+</div>
+<style>
+@font-face{font-family:CatGame;src:url("__FONT__") format("truetype");font-weight:400;font-display:swap}
+#cat-equipment-demos{width:100%}
+#cat-equipment-demos *{box-sizing:border-box}
+#cat-equipment-demos .eq-stage{padding:0;display:flex;justify-content:center;align-items:flex-start}
+#cat-equipment-demos .eq-phone{--ink:#583f21;--cream:#f9edcf;--hero:#eadbb9;--bag:#65483c;--bag-ink:#fcebc9;--edge:#b78e61;--accent:#efc874;--soft:#e3c393;--rim:#62452b;--rare-green:#a7ce87;--rare-blue:#8fc6de;--rare-purple:#b99adf;--rare-orange:#efb479;--selected:#fff0a2;position:relative;width:min(390px,100%);height:694px;display:flex;flex-direction:column;background:var(--hero);border:3px solid var(--ink);border-radius:19px;overflow:hidden;font-family:CatGame,sans-serif;font-size:13px;font-weight:400;color:var(--ink);isolation:isolate}
+#cat-equipment-demos button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation}
+#cat-equipment-demos button:focus-visible{outline:3px solid #fff4a2;outline-offset:2px;z-index:6}
+#cat-equipment-demos .eq-phone h2,#cat-equipment-demos .eq-phone p{margin:0}
+#cat-equipment-demos .eq-top{height:43px;flex-shrink:0;background:var(--soft);display:flex;align-items:center;padding:5px 10px;gap:8px;border-bottom:2px solid var(--ink);z-index:2}
+#cat-equipment-demos .eq-top h2{font-size:18px;letter-spacing:.2px;line-height:1.2;margin-right:auto}
+#cat-equipment-demos .eq-back{width:27px;height:28px;background:none;border:0;padding:3px}
+#cat-equipment-demos .eq-top img{width:23px;height:23px;object-fit:contain}
+#cat-equipment-demos .eq-currency{display:flex;align-items:center;gap:3px;font-size:12px}
+#cat-equipment-demos .eq-hero{height:264px;flex-shrink:0;padding:8px 11px 6px;position:relative;background:var(--hero)}
+#cat-equipment-demos .eq-hero::before{content:"";position:absolute;inset:0;background-image:url("__PATTERN__");background-size:135px;opacity:.4;pointer-events:none}
+#cat-equipment-demos .eq-doll{height:177px;display:grid;grid-template-columns:76px minmax(0,1fr) 76px;gap:4px;position:relative;align-items:center}
+#cat-equipment-demos .eq-side{display:grid;gap:9px;align-content:center}
+#cat-equipment-demos .eq-center{height:177px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;min-width:0}
+#cat-equipment-demos .eq-name{position:absolute;top:0;font-size:12px;color:#72553e;z-index:1}
+#cat-equipment-demos .eq-cat{position:absolute;left:50%;top:20px;transform:translateX(-50%);width:190px;height:143px;object-fit:contain;max-width:none;pointer-events:none}
+#cat-equipment-demos .eq-center::before{content:"";position:absolute;width:120px;height:120px;top:22px;border-radius:50%;background:#f7e8b9;opacity:.8}
+#cat-equipment-demos .eq-power{position:absolute;bottom:0;display:flex;align-items:center;justify-content:center;gap:5px;min-width:130px;height:27px;border:2px solid var(--ink);border-radius:7px;background:var(--accent);font-size:18px;line-height:1;color:var(--ink)}
+#cat-equipment-demos .eq-power img{width:24px;height:24px}
+#cat-equipment-demos .eq-stats{height:35px;display:flex;align-items:center;gap:5px;position:relative;margin-top:6px}
+#cat-equipment-demos .eq-stat{display:flex;align-items:center;justify-content:center;gap:5px;flex:1;min-width:0;height:27px;background:var(--rim);border-radius:16px;color:#fff2d4;font-size:13px;line-height:1}
+#cat-equipment-demos .eq-stat img{width:23px;height:23px;object-fit:contain}
+#cat-equipment-demos .eq-skill{display:flex;align-items:center;gap:6px;height:30px;position:relative;font-size:11px;white-space:nowrap}
+#cat-equipment-demos .eq-skill img{height:23px;width:23px;object-fit:contain}
+#cat-equipment-demos .eq-skill .eq-skill-label{font-size:12px;margin-right:auto;display:flex;align-items:center;gap:5px}
+#cat-equipment-demos .eq-skill .eq-pair{display:flex;align-items:center;gap:2px}
+#cat-equipment-demos .eq-skill .eq-small-note{opacity:.75;margin-left:4px}
+#cat-equipment-demos .eq-gear{position:relative;display:block;min-width:0;width:100%;aspect-ratio:1;border:2.5px solid var(--rim);border-radius:10px;background:var(--rarity);padding:0;isolation:isolate;overflow:visible;transition:transform .12s ease}
+#cat-equipment-demos .eq-gear:hover{transform:translateY(-2px)}
+#cat-equipment-demos .eq-gear:active{transform:translateY(1px)}
+#cat-equipment-demos .eq-gear::before{content:"";position:absolute;inset:5px;border:1.5px solid #fff6db7d;border-radius:5px;pointer-events:none}
+#cat-equipment-demos .eq-item{position:absolute;inset:12% 10% 10%;width:80%;height:78%;object-fit:contain;pointer-events:none}
+#cat-equipment-demos .eq-slot{position:absolute;top:2px;left:2px;width:16px;height:16px;object-fit:contain;z-index:2}
+#cat-equipment-demos .eq-lv{position:absolute;top:2px;right:3px;color:#fff;font-size:11px;line-height:14px;paint-order:stroke fill;-webkit-text-stroke:2px #241c1c;z-index:3}
+#cat-equipment-demos .eq-grade{position:absolute;left:4px;bottom:2px;color:#fff3b3;font-size:10px;paint-order:stroke fill;-webkit-text-stroke:1.7px #3c2b20;line-height:13px;z-index:3}
+#cat-equipment-demos .eq-worn{position:absolute;left:0;right:0;bottom:3px;text-align:center;font-size:10px;line-height:12px;color:#fff;paint-order:stroke fill;-webkit-text-stroke:1.8px #241c1c;z-index:2}
+#cat-equipment-demos .eq-arrow{position:absolute;right:-4px;top:18px;font-size:27px;line-height:1;color:#8fea58;paint-order:stroke fill;-webkit-text-stroke:2px #365224;z-index:4;filter:drop-shadow(0 1px #fffd)}
+#cat-equipment-demos .eq-phone[data-design="carton"] .eq-gear{border-width:4px;border-color:#af8153;border-radius:7px;outline:1.5px solid #583f21;outline-offset:-1px}
+#cat-equipment-demos .eq-phone[data-design="carton"] .eq-gear::after{content:"";position:absolute;top:-4px;left:30%;width:30%;height:5px;background:#ecd9ae;transform:rotate(-5deg);z-index:1}
+#cat-equipment-demos .eq-inventory{background:var(--bag);color:var(--bag-ink);flex:1;min-height:0;padding:0 10px 8px;position:relative;border-top:3px solid var(--ink);display:flex;flex-direction:column}
+#cat-equipment-demos .eq-bag-heading{height:34px;flex-shrink:0;display:flex;align-items:center;gap:7px;font-size:16px}
+#cat-equipment-demos .eq-capacity{font-size:11px;opacity:.78;margin-left:auto}
+#cat-equipment-demos .eq-tools{height:33px;flex-shrink:0;display:flex;align-items:center;gap:5px;margin-bottom:8px}
+#cat-equipment-demos .eq-filter{height:27px;min-width:44px;border:1.5px solid #261e1c;background:#ffffff12;border-radius:6px;color:var(--bag-ink);padding:0 8px;font-size:11px}
+#cat-equipment-demos .eq-filter[aria-pressed="true"]{background:var(--accent);color:var(--ink);border-color:var(--ink)}
+#cat-equipment-demos .eq-sort{height:27px;min-width:77px;margin-left:auto;border:0;border-radius:5px;background:url("__BUTTON_YELLOW__") center/100% 100% no-repeat;color:#fff;padding:0 8px 3px;paint-order:stroke fill;-webkit-text-stroke:1.5px #583f21;font-size:11px}
+#cat-equipment-demos .eq-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;align-content:start;overflow-y:auto;overflow-x:hidden;padding:2px 1px 4px;scrollbar-width:thin;scrollbar-color:var(--edge) transparent}
+#cat-equipment-demos .eq-bottom{height:55px;flex-shrink:0;background:var(--soft);border-top:2px solid var(--ink);display:flex;align-items:stretch;justify-content:space-around;padding:2px 4px 0;z-index:3}
+#cat-equipment-demos .eq-nav{border:0;background:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;flex:1;position:relative;font-size:10px;color:var(--ink);padding:2px}
+#cat-equipment-demos .eq-nav img{width:29px;height:29px;object-fit:contain;z-index:1}
+#cat-equipment-demos .eq-nav[aria-current="page"]::before{content:"";position:absolute;inset:3px 3px 0;border-radius:9px 9px 0 0;background:var(--accent)}
+#cat-equipment-demos .eq-nav span{z-index:1}
+#cat-equipment-demos .eq-phone[data-design="workshop"]{--hero:#b9cfbf;--bag:#24444a;--soft:#83a99b;--bag-ink:#e8f4dc;--edge:#739c93;--accent:#e5d587;--rim:#30484a;--rare-green:#99c594;--rare-blue:#80b8cb;--rare-purple:#ad97d0;--rare-orange:#e9b077}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-hero{height:226px;padding-top:6px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-doll{height:145px;grid-template-columns:65px minmax(0,1fr) 65px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-center{height:145px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-center::before{background:#dce9ba;width:112px;height:112px;top:8px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-name{top:0;color:#354c3d}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-cat{width:167px;height:115px;top:19px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-power{background:#f5e6a6;bottom:0;height:24px;min-width:125px;font-size:17px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-gear{border-radius:13px 6px 13px 6px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-gear::before{inset:4px;border:none;background:#fff3;clip-path:polygon(0 0,100% 0,0 100%);border-radius:7px;z-index:-1}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-stats{background:#29494b;border-radius:8px;margin-top:6px;height:31px;padding:2px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-stat{background:none;border-radius:0;font-size:12px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-stat+.eq-stat{border-left:1px solid #9fbeb35e}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-skill{height:28px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-inventory{border-radius:15px 15px 0 0;border-top:0;padding-top:2px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-tools{order:2;height:32px;margin-top:5px;margin-bottom:0}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-grid{flex:1;gap:6px}
+#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-bag-heading{height:35px}
+#cat-equipment-demos .eq-phone[data-design="dossier"]{--hero:#d6cbd9;--bag:#493b50;--soft:#bba8bf;--edge:#9a779f;--bag-ink:#f5e8ef;--accent:#e9c689;--rim:#493844;--rare-green:#a5c69d;--rare-blue:#96bed5;--rare-purple:#b8a1da;--rare-orange:#eab57f}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-hero{height:236px;padding-top:10px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-doll{grid-template-columns:minmax(0,1fr) 147px;gap:4px;height:153px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-equipped-cluster{display:grid;grid-template-columns:1fr 1fr;gap:7px;height:147px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-center{height:153px;grid-column:1;grid-row:1}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-name{top:-2px;color:#5e4659}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-cat{width:177px;height:124px;top:17px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-center::before{background:#e9dfd4;top:8px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-power{height:24px;font-size:17px;min-width:128px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-gear{border-radius:5px;border-width:2px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-gear::before{border:none;background:var(--rim);inset:0 0 auto;height:15px;border-radius:2px 2px 0 0;z-index:0}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-slot{top:0;width:15px;height:15px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-lv{top:0}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-item{inset:21% 8% 5%;width:84%;height:74%}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-grade{bottom:1px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-stats{margin-top:6px;height:31px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-stat{border-radius:5px;height:27px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-skill{height:28px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-inventory{padding-left:9px;padding-right:9px;border-top:0}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-bag-heading{margin:0 -9px;padding:0 11px;background:#b99bb8;color:#392b39;height:32px}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-tools{height:30px;margin:5px 0}
+#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-grid{gap:5px}
+#cat-equipment-demos .eq-overlay{position:absolute;inset:0;background:#201b22a6;z-index:10;display:flex;align-items:flex-end;justify-content:center;padding:9px}
+#cat-equipment-demos .eq-overlay[hidden]{display:none}
+#cat-equipment-demos .eq-detail{width:100%;border:3px solid var(--ink);border-radius:16px;background:var(--cream);color:var(--ink);padding:14px}
+#cat-equipment-demos .eq-detail-header{display:flex;align-items:center;justify-content:space-between;font-size:18px;margin-bottom:11px}
+#cat-equipment-demos .eq-close{border:0;width:29px;height:29px;background:url("__BUTTON_RED__") center/100% 100%;color:white;font-size:18px;padding:0 0 4px;paint-order:stroke fill;-webkit-text-stroke:1px #583f21}
+#cat-equipment-demos .eq-detail-body{display:flex;gap:14px;align-items:center;margin-bottom:13px}
+#cat-equipment-demos .eq-detail-image{width:94px;height:94px;object-fit:contain;background:var(--detail-rarity);border:2px solid var(--ink);border-radius:9px;padding:6px}
+#cat-equipment-demos .eq-detail-copy{font-size:13px;line-height:1.7}
+#cat-equipment-demos .eq-detail-copy .eq-gain{color:#267a33}
+#cat-equipment-demos .eq-actions{display:flex;gap:8px}
+#cat-equipment-demos .eq-action{height:42px;flex:1;border:none;background:url("__BUTTON_GREEN__") center/100% 100%;font-size:16px;color:#fff;paint-order:stroke fill;-webkit-text-stroke:2px #583f21;padding-bottom:4px}
+#cat-equipment-demos .eq-action-secondary{background-image:url("__BUTTON_YELLOW__")}
+#cat-equipment-demos .eq-toast{position:absolute;top:52px;left:14px;right:14px;z-index:15;background:#fbebba;color:#583f21;border:2px solid #583f21;border-radius:8px;padding:9px;text-align:center;font-size:13px}
+#cat-equipment-demos .eq-toast[hidden]{display:none}
+@media(max-width:360px){#cat-equipment-demos .eq-stage{padding:8px 0;min-height:720px}#cat-equipment-demos .eq-phone{height:694px}#cat-equipment-demos .eq-doll{grid-template-columns:67px minmax(0,1fr) 67px}#cat-equipment-demos .eq-cat{width:158px}#cat-equipment-demos .eq-skill .eq-small-note{display:none}#cat-equipment-demos .eq-top h2{font-size:16px}#cat-equipment-demos .eq-currency{font-size:11px}#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-doll{grid-template-columns:minmax(0,1fr) 132px}#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-equipped-cluster{height:132px}#cat-equipment-demos .eq-phone[data-design="dossier"] .eq-cat{width:158px}#cat-equipment-demos .eq-filter{padding:0 6px}#cat-equipment-demos .eq-phone[data-design="workshop"] .eq-cat{width:158px}}
+@media(prefers-reduced-motion:reduce){#cat-equipment-demos .eq-gear{transition:none}}
+#cat-equipment-demos .eq-phone[data-design="paperboard"]{--hero:#dfbb87;--bag:#79583e;--soft:#d3ac77;--bag-ink:#fff1d1;--edge:#c49e70;--accent:#edcc8a;--rim:#63472d;--rare-green:#abd08c;--rare-blue:#91c8dd;--rare-purple:#c1a4e2;--rare-orange:#efba7d;background:#b98d5d;border:0;border-radius:0}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-top{height:57px;padding:0;border:0;background:none}
+#cat-equipment-demos .eq-game-header{width:100%;height:100%;object-fit:fill;display:block}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-top .eq-game-header{width:100%;height:100%;object-fit:fill;flex:1}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-hero{height:225px;margin:15px 8px 8px;padding:10px 9px 3px;background:var(--hero);border:2px solid var(--ink);border-radius:0 10px 7px 7px;background-image:url("__PAPER__");isolation:isolate}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-hero::before{inset:2px;background-size:154px;opacity:.14;z-index:-1}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-hero::after{content:"TRANG BỊ";position:absolute;left:-2px;top:-17px;width:111px;height:20px;border:2px solid var(--ink);border-bottom:0;border-radius:7px 9px 0 0;background:#dfbb87;font-size:11px;letter-spacing:1px;padding:1px 10px;line-height:16px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-doll{height:145px;grid-template-columns:67px minmax(0,1fr) 67px;gap:8px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-side{gap:8px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-center{height:145px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-center::before{width:126px;height:110px;background:#f0d7aa;border-radius:48% 52% 43% 47%;top:13px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-name{top:-5px;color:#64472d;font-size:10px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-cat{height:121px;width:169px;top:10px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-power{bottom:0;min-width:117px;height:28px;border:0;border-radius:0;background:#583f21;clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%);font-size:17px;color:#583f21;gap:4px;isolation:isolate}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-power::before{content:"";position:absolute;inset:1.5px;background:#f6e4b8;clip-path:polygon(8% 0,92% 0,100% 50%,92% 100%,8% 100%,0 50%);z-index:-1}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-power img{width:25px;height:25px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-stats{height:29px;margin-top:4px;gap:0;border-top:1px solid #a47a48;border-bottom:1px solid #a47a48}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-stat{height:24px;background:none;border-radius:0;color:#51391f;font-size:12px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-stat img{height:21px;width:21px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-stat+.eq-stat{border-left:1px solid #a47a48}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-skill{height:28px;color:#64472d;font-size:10px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-skill .eq-skill-label{font-size:11px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-skill img{height:20px;width:20px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-inventory{border-top:2px solid var(--ink);padding:0 10px 5px;background-color:var(--bag);background-image:url("__PAPER__");overflow:hidden}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-bag-heading{height:32px;font-size:14px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-bag-heading>span:first-child{background:#dfbb87;color:#51391f;padding:2px 12px;border-radius:0 0 7px 7px;border:1.5px solid #583f21;border-top:0;align-self:flex-start;font-size:13px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-capacity{font-size:10px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-tools{height:28px;margin-bottom:6px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-filter{height:25px;border:0;border-radius:4px;font-size:10px;padding:0 10px;background:#5c412c}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-filter[aria-pressed="true"]{background:#edd3a1;color:#51391f}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-sort{height:26px;font-size:10px;min-width:84px;padding:0 2px 2px;background:none;border:5px solid transparent;border-image:url("__BUTTON_YELLOW__") 28 fill / 8px stretch;line-height:14px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-grid{gap:6px;padding:2px 0 4px;flex:1}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-gear{border:0;border-radius:0;clip-path:polygon(0 0,89% 0,100% 11%,100% 100%,11% 100%,0 89%);background:#583f21;padding:0}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-gear::before{inset:1.7px;background:#d8ae77;border:0;border-radius:0;clip-path:polygon(0 0,90% 0,100% 10%,100% 100%,10% 100%,0 90%);z-index:0}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-gear::after{content:"";position:absolute;inset:5px;background:var(--rarity);border-radius:1px;z-index:0}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-item{z-index:1;inset:14% 12% 10%;width:76%;height:76%}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-slot{left:4px;top:4px;width:13px;height:13px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-lv{right:6px;top:4px;font-size:10px;line-height:12px;-webkit-text-stroke:1.7px #241c1c}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-worn{bottom:5px;font-size:8px;line-height:10px;-webkit-text-stroke:1.5px #241c1c}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-arrow{right:0;top:19px;font-size:24px;-webkit-text-stroke:1.5px #365224}
+#cat-equipment-demos .eq-native-bottom{flex:0 0 auto;width:100%;aspect-ratio:450/110;position:relative;z-index:3;background:#a3c3ba}
+#cat-equipment-demos .eq-native-bottom>img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:fill}
+#cat-equipment-demos .eq-native-hit{position:absolute;top:0;bottom:0;border:0;background:transparent;padding:0;font-size:0}
+#cat-equipment-demos .eq-native-hit:nth-of-type(1){left:0;width:19%}
+#cat-equipment-demos .eq-native-hit:nth-of-type(2){left:19%;width:23%}
+#cat-equipment-demos .eq-native-hit:nth-of-type(3){left:42%;width:19%}
+#cat-equipment-demos .eq-native-hit:nth-of-type(4){left:61%;width:19%}
+#cat-equipment-demos .eq-native-hit:nth-of-type(5){left:80%;width:20%}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-action{background:none;border:8px solid transparent;border-image:url("__BUTTON_GREEN__") 28 fill / 12px stretch;line-height:20px;padding:0 0 4px}
+#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-action-secondary{border-image-source:url("__BUTTON_YELLOW__")}
+@media(max-width:360px){#cat-equipment-demos .eq-stage{padding:0;min-height:0}#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-doll{grid-template-columns:59px minmax(0,1fr) 59px;gap:4px}#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-cat{width:147px;height:117px}#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-name{font-size:9px}#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-worn{font-size:7px}#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-hero{height:219px}#cat-equipment-demos .eq-phone[data-design="paperboard"] .eq-sort{min-width:74px}}
+</style>
+<script>
+(()=>{
+const root=document.getElementById('cat-equipment-demos');
+const art=__ASSETS__;
+const items=[
+ {id:'sword',name:'Kiếm Gỗ',slot:'weapon',kind:'Vũ khí',rarity:'green',grade:'Thường',lv:8,stat:'Công +74',skill:'Chém xoáy',hero:'heroSword'},
+ {id:'bow',name:'Cung Săn',slot:'weapon',kind:'Vũ khí',rarity:'blue',grade:'Hiếm',lv:6,stat:'Công +83',skill:'Mưa tên',hero:'heroBow'},
+ {id:'staff',name:'Gậy Sao',slot:'weapon',kind:'Vũ khí',rarity:'purple',grade:'Sử thi',lv:5,stat:'Công +111',skill:'Sao băng',hero:'heroStaff'},
+ {id:'axe',name:'Rìu Lửa',slot:'weapon',kind:'Vũ khí',rarity:'purple',grade:'Sử thi',lv:7,stat:'Công +141',skill:'Chẻ lửa',hero:'heroAxe'},
+ {id:'katana',name:'Katana Nguyệt',slot:'weapon',kind:'Vũ khí',rarity:'orange',grade:'Huyền thoại',lv:4,stat:'Công +156',skill:'Trảm nguyệt',hero:'heroKatana'},
+ {id:'helmet',name:'Mũ Sắt',slot:'helmet',kind:'Mũ',rarity:'blue',grade:'Hiếm',lv:8,stat:'Máu +442 · Giáp +18'},
+ {id:'armor',name:'Giáp Vảy Rồng',slot:'armor',kind:'Giáp',rarity:'orange',grade:'Huyền thoại',lv:6,stat:'Máu +1.024 · Giáp +48'},
+ {id:'boots',name:'Giày Gió',slot:'boots',kind:'Giày',rarity:'blue',grade:'Hiếm',lv:5,stat:'Máu +266 · Công +12'}
+];
+const bag=[2,4,3,1,5,6,7,0,5,7,1,2,6,0,3,5,1,7,2,6].map((n,i)=>({...items[n],key:'bag-'+i,lv:[5,4,7,6,8,6,5,3,2,4,2,1,3,1,2,3,4,2,5,1][i]}));
+const image=(id,cls='',alt='')=>`<img class="${cls}" src="${art[id]}" alt="${alt}" draggable="false">`;
+const category={weapon:'slotWeapon',helmet:'slotHelmet',armor:'slotArmor',boots:'slotBoots'};
+function gear(item,worn=false,upgrade=false){return `<button type="button" class="eq-gear" data-key="${item.key||item.id}" aria-label="${item.name}, ${item.grade}, Lv.${item.lv}${worn?', đang mặc':''}" style="--rarity:var(--rare-${item.rarity})">${image(item.id,'eq-item')}${image(category[item.slot],'eq-slot')}<span class="eq-lv">Lv.${item.lv}</span>${worn?'<span class="eq-worn">Đang mặc</span>':''}${upgrade?'<span class="eq-arrow" aria-label="Có thể nâng cấp">⬆</span>':''}</button>`}
+const nav=()=>`<nav class="eq-native-bottom" aria-label="Bottom bar carton hiện tại của game">${image('gameBottom','','Bottom bar carton gốc, đang chọn Anh hùng')}${['Cửa hàng','Anh hùng','Trận chiến','Lính','Triệu hồi'].map((label,i)=>`<button type="button" class="eq-native-hit" aria-label="${label}" ${i===1?'aria-current="page"':''} data-nav="${label}"></button>`).join('')}</nav>`;
+const stats=()=>`<div class="eq-stats">${[['heart','4.86K'],['sword','312'],['armor','128']].map(([id,n])=>`<div class="eq-stat">${image(id)}<span>${n}</span></div>`).join('')}</div>`;
+root.querySelectorAll('.eq-stage').forEach((stage,index)=>{
+ const design=stage.dataset.design;
+ const state={filter:'all',descending:true,selected:null,equipped:{weapon:{...items[0]},helmet:{...items[5]},armor:{...items[6]},boots:{...items[7]}}};
+ stage.innerHTML=`<article class="eq-phone" data-design="${design}" aria-label="Demo ${['Tủ đồ carton','Xưởng mèo','Hồ sơ anh hùng'][index]}"><header class="eq-top"><button type="button" class="eq-back" aria-label="Quay lại">${image('back')}</button><h2>Anh hùng</h2><span class="eq-currency">${image('coin')}24.8K</span><span class="eq-currency">${image('gem')}360</span></header><div class="eq-hero"><div class="eq-doll"></div>${stats()}<div class="eq-skill"><span class="eq-skill-label">${image('gear')} <span class="eq-current-skill">Chém xoáy</span></span><span class="eq-small-note">Hợp lính</span><span class="eq-pair">${image('sword')}${image('spear')}</span></div></div><section class="eq-inventory" aria-label="Túi trang bị"><div class="eq-bag-heading"><span>Túi trang bị</span><span class="eq-capacity">20 món</span></div><div class="eq-tools"><button class="eq-filter" type="button" data-filter="all" aria-pressed="true">Tất cả</button><button class="eq-filter" type="button" data-filter="weapon" aria-pressed="false">Vũ khí</button><button class="eq-filter" type="button" data-filter="gear" aria-pressed="false">Phòng thủ</button><button type="button" class="eq-sort">Độ hiếm ↓</button></div><div class="eq-grid"></div></section>${nav()}<div class="eq-overlay" hidden role="dialog" aria-label="Chi tiết trang bị" aria-modal="true"><div class="eq-detail"><div class="eq-detail-header"><span class="eq-detail-title"></span><button type="button" class="eq-close" aria-label="Đóng chi tiết">×</button></div><div class="eq-detail-body"><img class="eq-detail-image" alt=""><div class="eq-detail-copy"></div></div><div class="eq-actions"><button type="button" class="eq-action eq-action-secondary" data-action="upgrade">Nâng cấp</button><button type="button" class="eq-action" data-action="equip">Trang bị</button></div></div></div><div class="eq-toast" hidden role="status" aria-live="polite"></div></article>`;
+ stage.querySelector('.eq-top').innerHTML=image('gameHeader','eq-game-header','Thanh tài nguyên hiện tại của game');
+ stage.querySelector('.eq-phone').setAttribute('aria-label','Demo trang bị · Bìa giấy');
+ const phone=stage.querySelector('.eq-phone'),overlay=phone.querySelector('.eq-overlay'),grid=phone.querySelector('.eq-grid');
+ let lastFocus=null,toastTimer;
+ const center=()=>`<div class="eq-center"><span class="eq-name">Mèo anh hùng · Lv.12</span>${image(state.equipped.weapon.hero,'eq-cat','Mèo anh hùng đang cầm vũ khí')}<div class="eq-power">${image('power')}<span>2.480</span></div></div>`;
+ function renderHero(){const e=state.equipped;phone.querySelector('.eq-doll').innerHTML=design==='dossier'?`${center()}<div class="eq-equipped-cluster">${gear(e.weapon,true,true)}${gear(e.helmet,true,false)}${gear(e.armor,true,true)}${gear(e.boots,true,false)}</div>`:`<div class="eq-side">${gear(e.weapon,true,true)}${gear(e.helmet,true,false)}</div>${center()}<div class="eq-side">${gear(e.armor,true,true)}${gear(e.boots,true,false)}</div>`;phone.querySelector('.eq-current-skill').textContent=e.weapon.skill;}
+ function renderBag(){const order={green:0,blue:1,purple:2,orange:3};let shown=bag.filter(it=>state.filter==='all'||(state.filter==='weapon'?it.slot==='weapon':it.slot!=='weapon'));if(!state.descending)shown=[...shown].sort((a,b)=>order[b.rarity]-order[a.rarity]);grid.innerHTML=shown.map(it=>gear(it)).join('');phone.querySelector('.eq-capacity').textContent=shown.length+' món';}
+ function toast(msg){const el=phone.querySelector('.eq-toast');el.textContent=msg;el.hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>{el.hidden=true},1800);}
+ function close(){overlay.hidden=true;lastFocus?.focus();}
+ function show(item){state.selected=item;lastFocus=document.activeElement;phone.querySelector('.eq-detail-title').textContent=item.name;const img=phone.querySelector('.eq-detail-image');img.src=art[item.id];img.alt=item.name;img.style.setProperty('--detail-rarity',`var(--rare-${item.rarity})`);phone.querySelector('.eq-detail-copy').innerHTML=`<div>${item.grade} · ${item.kind}</div><div>Lv.${item.lv} / 20</div><div class="eq-gain">${item.stat}</div>${item.skill?`<div>${item.skill}</div>`:''}`;const wearing=Object.values(state.equipped).includes(item);phone.querySelector('[data-action="equip"]').textContent=wearing?'Đang mặc':'Trang bị';phone.querySelector('[data-action="upgrade"]').textContent='Nâng cấp · 240';overlay.hidden=false;phone.querySelector('.eq-close').focus();}
+ phone.addEventListener('click',ev=>{const card=ev.target.closest('.eq-gear');if(card){const key=card.dataset.key;show(bag.find(it=>it.key===key)||Object.values(state.equipped).find(it=>it.key===key||it.id===key));return}const filter=ev.target.closest('[data-filter]');if(filter){state.filter=filter.dataset.filter;phone.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===filter)));renderBag();return}if(ev.target.closest('.eq-sort')){state.descending=!state.descending;phone.querySelector('.eq-sort').textContent=state.descending?'Độ hiếm ↓':'Độ hiếm ↑';renderBag();return}if(ev.target.closest('.eq-close')||ev.target===overlay){close();return}if(ev.target.closest('[data-action="equip"]')){const it=state.selected;state.equipped[it.slot]=it;renderHero();close();toast('Đã trang bị '+it.name+' · bản thử');return}if(ev.target.closest('[data-action="upgrade"]')){state.selected.lv=Math.min(20,state.selected.lv+1);renderHero();renderBag();show(state.selected);toast('Đã nâng cấp · bản thử');return}if(ev.target.closest('[data-nav]'))toast('Đang xem thử giao diện Anh hùng');if(ev.target.closest('.eq-back'))toast('Bản demo trang bị');});
+ overlay.addEventListener('keydown',ev=>{if(ev.key==='Escape')close();if(ev.key==='Tab'){const controls=[...overlay.querySelectorAll('button')];const first=controls[0],last=controls.at(-1);if(ev.shiftKey&&document.activeElement===first){ev.preventDefault();last.focus()}else if(!ev.shiftKey&&document.activeElement===last){ev.preventDefault();first.focus()}}});
+ renderHero();renderBag();
+ if(globalThis.Tweak){const palette={hero:getComputedStyle(phone).getPropertyValue('--hero').trim(),bag:getComputedStyle(phone).getPropertyValue('--bag').trim()};const tweak=new Tweak({container:phone,onChange:()=>{phone.style.setProperty('--hero',palette.hero);phone.style.setProperty('--bag',palette.bag)}});tweak.addColorPicker(palette,'hero',{label:'Nền anh hùng',reference:'--hero'});tweak.addColorPicker(palette,'bag',{label:'Nền túi đồ',reference:'--bag'});}
+});
+})();
+</script>

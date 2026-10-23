@@ -1,0 +1,15 @@
+{
+  "errors": [],
+  "options": [
+    {
+      "icon": "Hai kiếm chéo",
+      "svgIcon": true,
+      "brokenImages": 0,
+      "bottomTabs": 5,
+      "gearSlots": 4,
+      "overflow": false,
+      "plaqueText": "rgb(88, 63, 33)",
+      "plaqueFill": "rgb(246, 228, 184)"
+    }
+  ]
+}

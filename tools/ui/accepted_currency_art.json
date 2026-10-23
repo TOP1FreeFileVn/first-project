@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "operation": "Approved paths unchanged; resize root viewport only",
+  "plural_policy": "coins and gems alias the approved single icons; no unapproved stack is introduced",
+  "runtime_priority": "Ui.tex loads game/ui/art before generated game/ui/skin",
+  "selections": [
+    {
+      "selection": "Bright front-facing gold coin with a small gear stamp",
+      "source": "game/ui/art_sources/currency_coin.svg",
+      "source_sha256": "af2cf9b335108b08b92b9e4924be2b35c43987ca39aaabc574608c61be2b4e26",
+      "review_source": "docs/design/2026-10-23/gold-icons-bright/svg/gold-classic-96.svg",
+      "outputs": [
+        {
+          "path": "game/ui/art/icon_coin_32.svg",
+          "size": 32,
+          "sha256": "96764028a739d731f32786421646198069fad67a587fc6f0f11cc621adcaa09e"
+        },
+        {
+          "path": "game/ui/art/icon_coin_48.svg",
+          "size": 48,
+          "sha256": "fb8cbfac7517b94ed88a8c851d591e9d0d6945b53955db2e4e3c6676739124a6"
+        },
+        {
+          "path": "game/ui/art/icon_coin_64.svg",
+          "size": 64,
+          "sha256": "c546274981aeb1970a6c2cb2be57efd190aabb3f55f0baa9e9b6b7ead718b0db"
+        },
+        {
+          "path": "game/ui/art/icon_coin_96.svg",
+          "size": 96,
+          "sha256": "af2cf9b335108b08b92b9e4924be2b35c43987ca39aaabc574608c61be2b4e26"
+        },
+        {
+          "path": "game/ui/art/icon_coin.svg",
+          "size": 128,
+          "sha256": "5fca2a51b8ce2849a795eb78995f6b1333941d93b66722b5badd0d0e27ca5b53"
+        },
+        {
+          "path": "game/ui/art/icon_coins_32.svg",
+          "size": 32,
+          "sha256": "96764028a739d731f32786421646198069fad67a587fc6f0f11cc621adcaa09e"
+        },
+        {
+          "path": "game/ui/art/icon_coins_48.svg",
+          "size": 48,
+          "sha256": "fb8cbfac7517b94ed88a8c851d591e9d0d6945b53955db2e4e3c6676739124a6"
+        },
+        {
+          "path": "game/ui/art/icon_coins_64.svg",
+          "size": 64,
+          "sha256": "c546274981aeb1970a6c2cb2be57efd190aabb3f55f0baa9e9b6b7ead718b0db"
+        },
+        {
+          "path": "game/ui/art/icon_coins_96.svg",
+          "size": 96,
+          "sha256": "af2cf9b335108b08b92b9e4924be2b35c43987ca39aaabc574608c61be2b4e26"
+        },
+        {
+          "path": "game/ui/art/icon_coins.svg",
+          "size": 128,
+          "sha256": "5fca2a51b8ce2849a795eb78995f6b1333941d93b66722b5badd0d0e27ca5b53"
+        }
+      ]
+    },
+    {
+      "selection": "Wide brilliant purple diamond",
+      "source": "game/ui/art_sources/currency_gem.svg",
+      "source_sha256": "db5d0adf58b5ec3eba1253ab7690ada93d13b2518ddb6d79400ce3c7d586d5a8",
+      "review_source": "docs/design/2026-10-23/diamond-icons/svg/diamond-brilliant-96.svg",
+      "outputs": [
+        {
+          "path": "game/ui/art/icon_gem_32.svg",
+          "size": 32,
+          "sha256": "a19af006a35b4676839856a64710ad0dd33283321de705fb780042107dc0a328"
+        },
+        {
+          "path": "game/ui/art/icon_gem_48.svg",
+          "size": 48,
+          "sha256": "64ed51e0b5ae6ae9d48138c1020c3bb26d41fc093133016f9d2fc586a2d5da32"
+        },
+        {
+          "path": "game/ui/art/icon_gem_64.svg",
+          "size": 64,
+          "sha256": "6a61db64d9640728f51d83d06995fe2678c48bb2d3c392534104bcaae57e048e"
+        },
+        {
+          "path": "game/ui/art/icon_gem_96.svg",
+          "size": 96,
+          "sha256": "db5d0adf58b5ec3eba1253ab7690ada93d13b2518ddb6d79400ce3c7d586d5a8"
+        },
+        {
+          "path": "game/ui/art/icon_gem.svg",
+          "size": 128,
+          "sha256": "6ead65878917c57ce4178a70ed1bd98063266977169e18f32413684c6bbc8ab2"
+        },
+        {
+          "path": "game/ui/art/icon_gems_32.svg",
+          "size": 32,
+          "sha256": "a19af006a35b4676839856a64710ad0dd33283321de705fb780042107dc0a328"
+        },
+        {
+          "path": "game/ui/art/icon_gems_48.svg",
+          "size": 48,
+          "sha256": "64ed51e0b5ae6ae9d48138c1020c3bb26d41fc093133016f9d2fc586a2d5da32"
+        },
+        {
+          "path": "game/ui/art/icon_gems_64.svg",
+          "size": 64,
+          "sha256": "6a61db64d9640728f51d83d06995fe2678c48bb2d3c392534104bcaae57e048e"
+        },
+        {
+          "path": "game/ui/art/icon_gems_96.svg",
+          "size": 96,
+          "sha256": "db5d0adf58b5ec3eba1253ab7690ada93d13b2518ddb6d79400ce3c7d586d5a8"
+        },
+        {
+          "path": "game/ui/art/icon_gems.svg",
+          "size": 128,
+          "sha256": "6ead65878917c57ce4178a70ed1bd98063266977169e18f32413684c6bbc8ab2"
+        }
+      ]
+    },
+    {
+      "selection": "Crossed swords for total combat power",
+      "source": "game/ui/art_sources/power_crossed.svg",
+      "source_sha256": "9b3ac760326277151055aec8c8d41f7d6be94e75bdeb75bda5e34239a325a21b",
+      "review_source": "docs/design/2026-10-23/power-icons/svg/power-crossed-96.svg",
+      "outputs": [
+        {
+          "path": "game/ui/art/icon_power_32.svg",
+          "size": 32,
+          "sha256": "de0af7b3eef13c31b3b44fce5ac9507630290434677d1ce2ae7d9f705e8035ee"
+        },
+        {
+          "path": "game/ui/art/icon_power_48.svg",
+          "size": 48,
+          "sha256": "56dfd448f6f84d34aa290913aae0b3f0e7e102bae966cc6500f7964a68c4a13e"
+        },
+        {
+          "path": "game/ui/art/icon_power_64.svg",
+          "size": 64,
+          "sha256": "6017307e5c951f9b8710ab64a0a8fb722d5864ac9a70c28fee3c9df685640f10"
+        },
+        {
+          "path": "game/ui/art/icon_power_96.svg",
+          "size": 96,
+          "sha256": "9b3ac760326277151055aec8c8d41f7d6be94e75bdeb75bda5e34239a325a21b"
+        },
+        {
+          "path": "game/ui/art/icon_power.svg",
+          "size": 128,
+          "sha256": "986265e772db065dde717119b50c32753c5244e65dce5213e442fdc6b71b723a"
+        }
+      ]
+    }
+  ]
+}

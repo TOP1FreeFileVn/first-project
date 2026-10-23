@@ -1,0 +1,435 @@
+{
+	"badge_overhang": 8,
+	"measurements": [
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 3,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "boots",
+			"source_alpha_bounds": [
+				21,
+				53,
+				209,
+				150
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 3,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "boots",
+			"source_alpha_bounds": [
+				21,
+				53,
+				209,
+				150
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 3,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "boots",
+			"source_alpha_bounds": [
+				21,
+				53,
+				209,
+				150
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 3,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "boots",
+			"source_alpha_bounds": [
+				21,
+				53,
+				209,
+				150
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 3,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "boots",
+			"source_alpha_bounds": [
+				21,
+				53,
+				209,
+				150
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 3,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 2,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "weapon",
+			"source_alpha_bounds": [
+				29,
+				37,
+				190,
+				193
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 1,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "helmet",
+			"source_alpha_bounds": [
+				56,
+				50,
+				144,
+				145
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "armor",
+			"source_alpha_bounds": [
+				37,
+				56,
+				182,
+				155
+			]
+		},
+		{
+			"center_error": 0.0,
+			"rarity": 0,
+			"slot": "boots",
+			"source_alpha_bounds": [
+				21,
+				53,
+				209,
+				150
+			]
+		}
+	],
+	"scope": "Review-only runtime overrides; no production changes or save writes"
+}
