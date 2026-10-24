@@ -99,6 +99,9 @@ const SUMMON_PITY := 60
 
 ## Three identical items of the same rarity (any level) fuse into one of the next rarity.
 const FUSE_COUNT := 3
+## Weapon fuse lines, so each epic weapon has a way in: the bow (ranged) becomes the star
+## staff, the axe (melee) the moon katana. Unlisted items use fuse_target's default.
+const FUSE_INTO := {"cung_san": "gay_sao", "riu_lua": "katana_nguyet", "gay_sao": "katana_nguyet"}
 
 ## The skill gear each weapon brings into battle: it charges while it turns on the board
 ## (`cooldown` = production seconds) and then the hero casts it. `power` scales the hero's
@@ -155,6 +158,8 @@ static func restore_state(saved: Dictionary) -> Dictionary:
 			record["id"] = str(record.get("id", ""))
 			record["level"] = int(record.get("level", 1))
 			if collection == "bag" and ITEMS.has(record["id"]):
+				# Older saves used one cap for every rarity: keep levels inside today's cap.
+				record["level"] = clampi(record["level"], 1, LEVEL_CAP[ITEMS[record["id"]]["rarity"]])
 				state["bag"][uid] = record
 			else:
 				state["retired_items"][uid] = record
@@ -333,9 +338,15 @@ static func fuse_target(id: String) -> String:
 		return ""
 	for r in range(d["rarity"] + 1, 4):
 		var pool := ids_of(d["slot"], r)
-		if not pool.is_empty():
-			pool.sort()
-			return pool[0]
+		if pool.is_empty():
+			continue
+		pool.sort()
+		if FUSE_INTO.has(id) and pool.has(FUSE_INTO[id]):
+			return FUSE_INTO[id]
+		# A weapon stays its kind (melee into melee, ranged into ranged); other slots have
+		# one item per rarity anyway.
+		var same_kind: Array = pool.filter(func(other): return ITEMS[other].get("range", "") == d.get("range", ""))
+		return same_kind[0] if not same_kind.is_empty() else pool[0]
 	return ""
 
 

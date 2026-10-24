@@ -11,6 +11,7 @@ const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const ChestOpening = preload("res://game/ui/ChestOpening.gd")
+const SettingsSheet = preload("res://game/ui/SettingsSheet.gd")
 const Coach = preload("res://game/ui/Coach.gd")
 
 const INFO := Color("fff2c2")
@@ -134,7 +135,7 @@ func show_end(won: bool, stars: int, detail: String, reward: Dictionary) -> void
 			card.add_child(col)
 			card_row.add_child(card)
 		_end_box.add_child(card_row)
-	if reward.get("gift", "") != "":
+	if reward.get("gift", "") != "" and reward.get("new", []).has(reward["gift"]):
 		_end_box.add_child(Ui.label("Mở khoá lính mới: %s!" % PlayerData.TROOPS[reward["gift"]].display_name, "LabelDark", 19))
 
 	var buttons := Ui.hbox(10)
@@ -205,7 +206,7 @@ func _on_leave_pressed() -> void:
 		battle.go_home()
 		return
 	var now := Time.get_ticks_msec() / 1000.0
-	if now < _leave_armed_until:
+	if now < _leave_armed_until or not PlayerData.confirm_leave:
 		battle.go_home()
 	else:
 		_leave_armed_until = now + LEAVE_CONFIRM_TIME
@@ -233,6 +234,11 @@ func _build_top_bar(root: Control) -> void:
 	_speed_button = Ui.button("x1", "Blue", Vector2(80, 56), 22)
 	_speed_button.pressed.connect(_toggle_speed)
 	top.add_child(_speed_button)
+	# Settings pause the fight while open (SettingsSheet).
+	var settings := Ui.button("", "Tab", Vector2(60, 56), 0, "gear")
+	settings.name = "BattleSettings"
+	settings.pressed.connect(func(): SettingsSheet.open(_root, true, battle))
+	top.add_child(settings)
 
 	var stats := Ui.hbox(10, BoxContainer.ALIGNMENT_BEGIN)
 	rows.add_child(stats)
@@ -392,6 +398,8 @@ func _build_end_panel(root: Control) -> void:
 
 func _toggle_speed() -> void:
 	Engine.time_scale = 1.0 if Engine.time_scale > 1.5 else 2.0
+	# Remembered: the next battle starts at this speed too (Cài đặt › Tốc độ khi vào trận).
+	PlayerData.set_setting("battle_speed", roundi(Engine.time_scale))
 
 
 # --- Between-wave shop ------------------------------------------------------------------

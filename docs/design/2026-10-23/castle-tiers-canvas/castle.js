@@ -98,7 +98,10 @@
       ['L', kx1 - earIn, ky], ['Q', kx1 - 40, earTip + 10, kx1 - 16, earTip], ['Q', kx1 + 2, earTip + 8, kx1, ky + 6],
       ['L', kx1, ground], ['Z']];
     P.shape(keep, { fill: CARD });
-    P.shape([['M', kx1 - 16, ky + 12], ['L', kx1, ky + 6], ['L', kx1, ground], ['L', kx1 - 16, ground], ['Z']], { fill: SHADE });
+    // Cardboard edge shade: a thin even band on both side walls, starting below the ears'
+    // roots, so the two ears match and nothing pokes up past the outline.
+    for (const [a, b] of [[kx0, kx0 + 10], [kx1 - 10, kx1]])
+      P.shape([['M', a, ky + 30], ['L', b, ky + 30], ['L', b, ground], ['L', a, ground], ['Z']], { fill: SHADE });
     for (const s of [-1, 1]) {   // inner ear
       const wx = s < 0 ? kx0 : kx1, k = -s;
       const inner = [['M', wx + k * 12, ky + 4], ['Q', wx + k * 12, earTip + 20, wx + k * 19, earTip + 14], ['Q', wx + k * 34, earTip + 18, wx + k * 38, ky + 4], ['Z']];
@@ -116,7 +119,9 @@
       // A roofed tower has a plain wall top: the roof sits on it, not inside battlements.
       const shape = t >= 3 ? [['M', x, 330], ['L', x, towerTop + 6], ['L', x + w, towerTop + 6], ['L', x + w, 330], ['Z']] : towerShape(x, towerTop, w);
       P.shape(shape, { fill: CARD });
-      P.shape([['M', x + w - 14, towerTop + 2], ['L', x + w, towerTop], ['L', x + w, ground], ['L', x + w - 14, ground], ['Z']], { fill: SHADE });
+      const fold = towerTop + (t >= 3 ? 30 : 24);
+      for (const [a, b] of [[x, x + 8], [x + w - 8, x + w]])
+        P.shape([['M', a, fold], ['L', b, fold], ['L', b, ground], ['L', a, ground], ['Z']], { fill: SHADE });
       P.shape([['M', x + 5, towerTop + (t >= 3 ? 30 : 24)], ['L', x + w - 5, towerTop + (t >= 3 ? 30 : 24)]], { stroke: DEEP, width: S });
       if (t >= 4) sisal(P, x, w, towerTop + 120, ground - 2);
       // window + paw print

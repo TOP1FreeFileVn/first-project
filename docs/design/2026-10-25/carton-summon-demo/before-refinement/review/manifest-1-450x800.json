@@ -1,0 +1,146 @@
+{
+	"captures": [
+		{
+			"file": "x1-arrival-450x800.png",
+			"stage": "arrival",
+			"time": 0.32
+		},
+		{
+			"file": "x1-boxes-450x800.png",
+			"stage": "boxes",
+			"time": 1.0
+		},
+		{
+			"file": "x1-paw-450x800.png",
+			"stage": "paw",
+			"time": 2.1875
+		},
+		{
+			"file": "x1-light-450x800.png",
+			"stage": "light",
+			"time": 2.729
+		},
+		{
+			"file": "x1-reveal-450x800.png",
+			"stage": "reveal",
+			"time": 3.89
+		},
+		{
+			"file": "x1-results-450x800.png",
+			"stage": "results",
+			"time": 5.09
+		}
+	],
+	"checks": [
+		{
+			"name": "native_size_arrival",
+			"passed": true
+		},
+		{
+			"name": "saved_arrival",
+			"passed": true
+		},
+		{
+			"name": "native_size_boxes",
+			"passed": true
+		},
+		{
+			"name": "saved_boxes",
+			"passed": true
+		},
+		{
+			"name": "native_size_paw",
+			"passed": true
+		},
+		{
+			"name": "saved_paw",
+			"passed": true
+		},
+		{
+			"name": "native_size_light",
+			"passed": true
+		},
+		{
+			"name": "saved_light",
+			"passed": true
+		},
+		{
+			"name": "native_size_reveal",
+			"passed": true
+		},
+		{
+			"name": "saved_reveal",
+			"passed": true
+		},
+		{
+			"name": "native_size_results",
+			"passed": true
+		},
+		{
+			"name": "saved_results",
+			"passed": true
+		},
+		{
+			"name": "all_results_visible",
+			"passed": true
+		},
+		{
+			"name": "final_state_settles",
+			"passed": true
+		},
+		{
+			"name": "no_player_data_changes",
+			"passed": true
+		},
+		{
+			"name": "native_open_all_button",
+			"passed": true
+		},
+		{
+			"name": "open_all_finishes",
+			"passed": true
+		},
+		{
+			"name": "native_single_button",
+			"passed": true
+		},
+		{
+			"name": "single_restarts_cleanly",
+			"passed": true
+		},
+		{
+			"name": "native_replay_button",
+			"passed": true
+		},
+		{
+			"name": "replay_rewinds",
+			"passed": true
+		},
+		{
+			"name": "native_batch_button",
+			"passed": true
+		},
+		{
+			"name": "batch_builds_ten",
+			"passed": true
+		},
+		{
+			"name": "replay_and_switch_preserve_player_data",
+			"passed": true
+		}
+	],
+	"count": 1,
+	"duration": 5.09,
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/carton-summon-demo-review-profile/x1-450x800/Roaming/Godot/app_userdata/Gear Defenders",
+	"recording": {
+		"directory": "res://tmp/carton-summon-demo/x1-450x800",
+		"fps": 24,
+		"frames": 135
+	},
+	"window": [
+		450,
+		800
+	]
+}

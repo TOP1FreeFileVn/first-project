@@ -6,13 +6,15 @@
 <path d="M234 34 Q246 25 258 34 Q246 43 234 34 Z M258 34 L265 28 L265 40 Z" fill="#fbf1dc" stroke="#583f21" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M222 18 Q252 11 282 21 L273 36 L282 52 Q252 44 222 52 Z" fill="none" stroke="#583f21" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M132 330 L132 118 Q130 74 148 66 Q172 76 186 112 L186 112 L199.6 112 L199.6 124 L213.2 124 L213.2 112 L226.8 112 L226.8 124 L240.4 124 L240.4 112 L254 112 L254 112 Q268 76 292 66 Q310 74 308 118 L308 330 Z" fill="#e8bb7c" />
-<path d="M292 124 L308 118 L308 330 L292 330 Z" fill="#d4a065" />
+<path d="M132 142 L142 142 L142 330 L132 330 Z" fill="#d4a065" />
+<path d="M298 142 L308 142 L308 330 L298 330 Z" fill="#d4a065" />
 <path d="M144 116 Q144 86 151 80 Q166 84 170 116 Z" fill="#f2b6a8" />
 <path d="M296 116 Q296 86 289 80 Q274 84 270 116 Z" fill="#f2b6a8" />
 <path d="M138 138 L302 138" fill="none" stroke="#b07c45" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M132 330 L132 118 Q130 74 148 66 Q172 76 186 112 L186 112 L199.6 112 L199.6 124 L213.2 124 L213.2 112 L226.8 112 L226.8 124 L240.4 124 L240.4 112 L254 112 L254 112 Q268 76 292 66 Q310 74 308 118 L308 330 Z" fill="none" stroke="#583f21" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M38 330 L38 174 L136 174 L136 330 Z" fill="#e8bb7c" />
-<path d="M122 170 L136 168 L136 330 L122 330 Z" fill="#d4a065" />
+<path d="M38 198 L46 198 L46 330 L38 330 Z" fill="#d4a065" />
+<path d="M128 198 L136 198 L136 330 L128 330 Z" fill="#d4a065" />
 <path d="M43 198 L131 198" fill="none" stroke="#b07c45" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M75 240 L75 218 Q75 206 87 206 Q99 206 99 218 L99 240 Z" fill="#ffd77a" stroke="#583f21" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M87 208 L87 239 M76 224 L98 224" fill="none" stroke="#583f21" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />
@@ -31,7 +33,8 @@
 <path d="M87 102 Q108.6 138 147 182 L106.2 182 Z" fill="#b07c45" />
 <path d="M27 182 Q65.4 138 87 102 Q108.6 138 147 182 Z" fill="none" stroke="#583f21" stroke-width="6" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M304 330 L304 174 L402 174 L402 330 Z" fill="#e8bb7c" />
-<path d="M388 170 L402 168 L402 330 L388 330 Z" fill="#d4a065" />
+<path d="M304 198 L312 198 L312 330 L304 330 Z" fill="#d4a065" />
+<path d="M394 198 L402 198 L402 330 L394 330 Z" fill="#d4a065" />
 <path d="M309 198 L397 198" fill="none" stroke="#b07c45" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M341 240 L341 218 Q341 206 353 206 Q365 206 365 218 L365 240 Z" fill="#ffd77a" stroke="#583f21" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" />
 <path d="M353 208 L353 239 M342 224 L364 224" fill="none" stroke="#583f21" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" />

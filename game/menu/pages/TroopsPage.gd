@@ -4,7 +4,7 @@ extends "res://game/menu/pages/MenuPage.gd"
 # one spot per cat (Cats.gd), with a live idle rig and drag-to-field / drag-to-bench
 # interactions (how many cats fight grows with the castle). Below, one column per cat with its four versions
 # (one per world) stacked top to bottom; those cards stay still, the fighting one only gets
-# a gold frame and a tick. Tapping a card opens the training screen, whose team button
+# a gold frame and a tick (pirate cards retain their rarity rim). Tapping a card opens the training screen, whose team button
 # picks that version.
 
 const Ui = preload("res://game/ui/Ui.gd")
@@ -15,6 +15,7 @@ const Cats = preload("res://game/data/Cats.gd")
 const FormationMeadow = preload("res://game/ui/FormationMeadow.gd")
 const MeadowSectionHeader = preload("res://game/ui/MeadowSectionHeader.gd")
 const TroopDragButton = preload("res://game/ui/TroopDragButton.gd")
+const PirateTroopCard = preload("res://game/ui/PirateTroopCard.gd")
 const RIG_DIR := "res://game/assets/units/"
 const CARD_SIZE := Vector2(0, 150)
 const STAGE_HEIGHT := 140.0
@@ -227,6 +228,7 @@ func _card(id: String, fighting: bool) -> Button:
 	var t: Dictionary = PlayerData.troop(id)
 	var unlocked: bool = t["unlocked"]
 	var world := Cats.world_of(id)
+	var pirate := world == "hai_tac"
 	var card := TroopDragButton.new()
 	card.name = "TroopCard_" + id
 	card.troop_id = id
@@ -243,11 +245,15 @@ func _card(id: String, fighting: bool) -> Button:
 	card.tooltip_text = troop.display_name + (" · Giữ rồi kéo lên đội hình" if unlocked else " · Chưa mở khóa")
 	var face := _card_style(WORLD_TINTS[world], troop.rarity, fighting, unlocked)
 	for state in ["normal", "hover", "disabled", "focus"]:
-		card.add_theme_stylebox_override(state, face)
+		card.add_theme_stylebox_override(state, StyleBoxEmpty.new() if pirate else face)
 	var pressed := face.duplicate() as StyleBoxFlat
 	pressed.bg_color = face.bg_color.darkened(0.12)
-	card.add_theme_stylebox_override("pressed", pressed)
+	card.add_theme_stylebox_override("pressed", StyleBoxEmpty.new() if pirate else pressed)
+	if pirate:
+		card.add_theme_stylebox_override("hover_pressed", StyleBoxEmpty.new())
 	card.pressed.connect(_open_detail.bind(id))
+	if pirate:
+		card.add_child(_pirate_layer(id, troop.rarity, unlocked, fighting, false))
 
 	var column := Ui.vbox(0, BoxContainer.ALIGNMENT_END)
 	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -255,7 +261,7 @@ func _card(id: String, fighting: bool) -> Button:
 	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	column.offset_top = 22
 	column.offset_bottom = -4
-	var art := _troop_art(troop, t, 76)
+	var art := _troop_art(troop, t, 60 if pirate else 76)
 	art.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	column.add_child(art)
 	if unlocked:
@@ -265,6 +271,24 @@ func _card(id: String, fighting: bool) -> Button:
 	world_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	world_label.clip_text = true
 	column.add_child(world_label)
+	if pirate:
+		# Reuse the real portrait, stars and caption; only the pirate world gets
+		# the ship composition. The near hull sits in front of the feet, below UI.
+		var stars := column.get_node_or_null("TroopStars") as Control
+		art.reparent(card)
+		if stars != null:
+			stars.reparent(card)
+		world_label.reparent(card)
+		card.remove_child(column)
+		column.queue_free()
+		card.add_child(_pirate_layer(id, troop.rarity, unlocked, fighting, true))
+		card.move_child(art, 1)
+		if stars != null:
+			card.move_child(stars, card.get_child_count() - 1)
+		card.move_child(world_label, card.get_child_count() - 1)
+		var place := _place_pirate_contents.bind(card, art, stars, world_label)
+		card.resized.connect(place)
+		place.call_deferred()
 	# Top strip: level on the left, class on the right.
 	if unlocked:
 		Ui.pin(card, _level_badge(t["level"]), Vector2(8, 2))
@@ -300,6 +324,38 @@ func _card(id: String, fighting: bool) -> Button:
 			dot.add_theme_stylebox_override("panel", dot_style)
 			Ui.pin(card, dot, Vector2(-8, -8), Control.PRESET_TOP_RIGHT)
 	return card
+
+
+func _pirate_layer(id: String, rarity: int, unlocked: bool, fighting: bool, front: bool) -> Control:
+	var layer := PirateTroopCard.new()
+	layer.name = "PirateShipFront" if front else "PirateTroopCard"
+	layer.troop_id = id
+	layer.rarity = rarity
+	layer.unlocked = unlocked
+	layer.fighting = fighting
+	layer.front_only = front
+	layer.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	return layer
+
+
+func _place_pirate_contents(card: Control, art: Control, stars: Control, caption: Label) -> void:
+	# Ship fits the entire 160x150 frame. A slightly leftward cat leaves the
+	# aft sail's skull and stern cabin visible beside it.
+	var center := card.size.x * 0.5
+	art.set_anchors_preset(Control.PRESET_TOP_LEFT)
+	art.size = Vector2(60, 60)
+	art.position = Vector2(center - 40, 41)
+	if stars != null:
+		for star in stars.get_children():
+			(star as Control).custom_minimum_size = Vector2(16, 16)
+		stars.set_anchors_preset(Control.PRESET_TOP_LEFT)
+		stars.position = Vector2(0, 114)
+		stars.size = Vector2(card.size.x, 16)
+	caption.add_theme_font_size_override("font_size", 16)
+	caption.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	caption.set_anchors_preset(Control.PRESET_TOP_LEFT)
+	caption.position = Vector2(0, 126)
+	caption.size = Vector2(card.size.x, 23)
 
 ## World tint fill; a rarity-coloured rim, a thick gold one on the fighting version.
 static func _card_style(tint: Color, rarity: int, fighting: bool, unlocked: bool) -> StyleBoxFlat:

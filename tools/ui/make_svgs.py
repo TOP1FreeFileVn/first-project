@@ -16,7 +16,7 @@ LINE = "#503737"
 ICON_LINE = "#3c1e0c"
 SHADOW = 'fill="#000000" fill-opacity="0.2"'
 # Visible lobby/event features share the flat palette and brown line of the cats.
-FLAT_FEATURE_ICONS = frozenset(("rail_limited", "rail_quest", "rail_online", "rail_checkin",
+FLAT_FEATURE_ICONS = frozenset(("badge_dot", "rail_limited", "rail_quest", "rail_online", "rail_checkin",
                                 "rail_castle", "rail_patrol", "rail_event"))
 
 
@@ -658,9 +658,9 @@ def make_icons():
     ic.shape(circle_d(64, 64, 50), "#6ee67d", "#55dd66", 60)
     ic.line("M40 66 L57 82 L88 48", 18)
     icons["badge_check"] = ic
+    # The alert badge: a plain red dot with no "!", the same as the bottom nav's (CartonNav).
     ic = Icon()
-    ic.shape(circle_d(64, 64, 50), "#f25c5c", "#d93f3f", 56)
-    ic.raw(rr_d(56, 28, 16, 46, 8).join(['<path d="', '" fill="#ffffff"/>']) + '<circle cx="64" cy="92" r="9" fill="#ffffff"/>')
+    ic.shape(circle_d(64, 64, 50), "#ed7154", "#ed7154", 56)
     icons["badge_dot"] = ic
     ic = Icon()
     ic.shape(circle_d(64, 64, 50), "#7bea82", "#59d961", 60)

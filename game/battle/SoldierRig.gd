@@ -61,6 +61,14 @@ func play(anim: String, restart := false) -> void:
 func has_animation(anim: String) -> bool:
 	return _anims.has(anim)
 
+## A bone's transform in this node's space as last drawn (identity before the first draw),
+## for props pinned to a paw, e.g. the lobby's building hammers.
+func bone_transform(bone_name: String) -> Transform2D:
+	for i in _bones.size():
+		if _bones[i]["name"] == bone_name and i < _world.size():
+			return _world[i]
+	return Transform2D.IDENTITY
+
 ## Seconds into the current animation where its first `name` event sits, or -1.
 func event_time(name: String) -> float:
 	for e in _anims.get(animation, {}).get("events", []):

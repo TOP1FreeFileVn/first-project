@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420">
+  <!-- Standalone approval concept. Main contour 9; structure 5; rigging 4. -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <!-- Two functional ropes, kept behind the large sails. -->
+    <g fill="none" stroke="#805c38" stroke-width="4">
+      <path d="M185 66 Q142 158 88 279"/>
+      <path d="M302 41 Q355 120 403 280"/>
+    </g>
+    <!-- Short chunky masts, seated on the deck rather than floating. -->
+    <path d="M180 310 L180 70 Q180 64 186 64 Q192 64 192 70 L192 310 Z" fill="#d7ae78" stroke="#583f21" stroke-width="7"/>
+    <path d="M296 310 L296 40 Q296 34 302 34 Q308 34 308 40 L308 310 Z" fill="#d7ae78" stroke="#583f21" stroke-width="7"/>
+
+    <!-- Main aft sail: a wide, soft billow, not a narrow waving flag. -->
+    <g transform="translate(612 0) scale(-1 1)">
+    <path d="M258 149 Q306 141 353 151 Q365 195 350 240 Q304 230 258 242 Q274 195 258 149 Z" fill="#3e4847" stroke="#583f21" stroke-width="9"/>
+    <path d="M258 149 Q307 143 355 150" fill="none" stroke="#583f21" stroke-width="9"/>
+    <!-- One broad material shadow, with no little seams or distress marks. -->
+    <path d="M338 153 Q351 194 338 235 L349 238 Q364 195 353 153 Z" fill="#303b3b"/>
+    </g>
+
+    <!-- Upper sail. Its plain face keeps the stack readable when small. -->
+    <g transform="translate(604 0) scale(-1 1)">
+    <path d="M269 71 Q302 66 336 71 Q347 98 335 128 Q301 122 269 130 Q279 99 269 71 Z" fill="#3e4847" stroke="#583f21" stroke-width="8"/>
+    <path d="M266 70 Q301 65 340 70" fill="none" stroke="#583f21" stroke-width="8"/>
+    </g>
+
+    <!-- Fore sail: round-bellied silhouette matches the cat's visual weight. -->
+    <g transform="translate(370 0) scale(-1 1)">
+    <path d="M133 157 Q185 148 237 158 Q250 207 231 253 Q182 240 132 254 Q148 205 133 157 Z" fill="#3e4847" stroke="#583f21" stroke-width="9"/>
+    <path d="M130 157 Q184 149 240 157" fill="none" stroke="#583f21" stroke-width="9"/>
+    <path d="M222 160 Q236 205 220 247 L230 250 Q248 206 237 160 Z" fill="#303b3b"/>
+    </g>
+
+    <!-- The same simple ivory skull on the two large sails. -->
+    <g fill="none" stroke="#fff0cf" stroke-width="6">
+      <path d="M165 199 L207 228 M165 228 L207 199"/>
+      <path d="M288 184 L327 212 M288 212 L327 184"/>
+    </g>
+    <g fill="#fff0cf">
+      <path d="M168 202 Q168 184 186 184 Q204 184 204 202 Q204 211 197 215 L197 222 Q186 225 175 222 L175 215 Q168 211 168 202 Z"/>
+      <path d="M291 187 Q291 171 307 171 Q323 171 323 187 Q323 196 317 200 L317 207 Q307 210 297 207 L297 200 Q291 196 291 187 Z"/>
+    </g>
+    <g fill="#3e4847">
+      <ellipse cx="178" cy="203" rx="4.4" ry="5.5"/>
+      <ellipse cx="194" cy="203" rx="4.4" ry="5.5"/>
+      <ellipse cx="300" cy="188" rx="4" ry="5"/>
+      <ellipse cx="314" cy="188" rx="4" ry="5"/>
+    </g>
+
+    <!-- A raised stern cabin, one rounded block and one readable window. -->
+    <path d="M336 300 L336 223 Q336 216 344 216 L390 216 Q399 216 402 225 L416 300 Z" fill="#d7ae78" stroke="#583f21" stroke-width="8"/>
+    <path d="M331 221 Q367 208 402 216" fill="none" stroke="#583f21" stroke-width="9"/>
+    <path d="M349 232 Q349 228 354 228 L380 228 Q385 228 386 233 L388 247 L349 247 Z" fill="#3e4847" stroke="#583f21" stroke-width="5"/>
+    <path d="M368 229 L369 247" fill="none" stroke="#d7ae78" stroke-width="5"/>
+
+    <!-- Short blunt bowsprit: no sharp spear projecting out of the canvas. -->
+    <path d="M88 274 L52 249 Q48 246 45 251 Q43 255 48 258 L82 283 Z" fill="#d7ae78" stroke="#583f21" stroke-width="7"/>
+
+    <!-- Card grounding plane: the same approved hull/rail edges, one flat wood fill. -->
+    <path id="card_deck_plane" d="M68 273 Q130 291 230 291 Q338 291 425 260 Q350 298 247 300 Q148 303 69 273 Z" fill="#d7ae78" stroke="none"/>
+  </g>
+</svg>

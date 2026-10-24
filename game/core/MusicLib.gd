@@ -75,8 +75,8 @@ func refresh() -> void:
 	_apply(0.3)
 
 func _apply(time := FADE) -> void:
-	var on := PlayerData.music_on
-	var level := BASE_DB - _duck if on else SILENT_DB
+	var on := PlayerData.music_on and PlayerData.music_volume > 0.01
+	var level := BASE_DB - _duck + linear_to_db(maxf(PlayerData.music_volume, 0.01)) if on else SILENT_DB
 	_fade(_main[_active], level, false, time)
 	var drive_level := SILENT_DB
 	if on and _intensity > 0.0:

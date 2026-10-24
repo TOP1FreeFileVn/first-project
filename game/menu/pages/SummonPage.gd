@@ -11,7 +11,7 @@ const HeroCat = preload("res://game/core/HeroCat.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const SummonOpening = preload("res://game/ui/SummonOpening.gd")
 const Cats = preload("res://game/data/Cats.gd")
-const SummonPortal = preload("res://game/ui/SummonPortal.gd")
+const CartonSummonBox = preload("res://game/ui/CartonSummonBox.gd")
 const BANNER_MIN_HEIGHT := 460.0
 
 func build() -> void:
@@ -79,30 +79,31 @@ func _banner(color: Color) -> Control:
 	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	column.add_child(sub)
 
-	# The banner and the actual reveal share the cat-paw portal artwork.
+	# The daily cast sits behind the same carton used by the summon reveal.
 	var art := Control.new()
 	art.custom_minimum_size.y = 220
 	art.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	art.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	art.clip_contents = true
 	column.add_child(art)
-	var portal := SummonPortal.new()
-	portal.name = "SummonBannerPortal"
-	portal.ambient = true
-	portal.accent = color
-	art.add_child(portal)
 	var row := UiKit.hbox(14)
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	for id in Cats.world_versions(world):
 		row.add_child(UiKit.troop_portrait(PlayerData.TROOPS[id], 120))
 	art.add_child(row)
+	var carton := CartonSummonBox.new()
+	carton.name = "SummonBannerCarton"
+	art.add_child(carton)
+	carton.set_process(false)
 	var fit := func():
-		row.size = Vector2(art.size.x, 0)
-		row.position = Vector2(0, art.size.y * 0.62 - 56)
-		var portal_scale := minf(art.size.x / 535.0, art.size.y / 210.0)
-		portal.scale = Vector2.ONE * portal_scale
-		portal.position = Vector2(art.size.x * 0.5, art.size.y * 0.83 - 150.0 * portal_scale)
+		var row_scale := minf(1.0, art.size.x / 522.0)
+		row.scale = Vector2.ONE * row_scale
+		row.size = Vector2(art.size.x / maxf(row_scale, 0.01), 120)
+		row.position = Vector2(0, maxf(4.0, art.size.y * 0.06))
+		var carton_scale := minf(0.52, minf(art.size.x / 535.0, art.size.y / 420.0))
+		carton.scale = Vector2.ONE * carton_scale
+		carton.position = Vector2(art.size.x * 0.5, art.size.y - 4.0)
 	art.resized.connect(fit)
 	art.ready.connect(fit)
 

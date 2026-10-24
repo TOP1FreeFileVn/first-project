@@ -232,7 +232,8 @@
   }
  ],
  "events": {
-  "swipe": {}
+  "swipe": {},
+  "bang": {}
  },
  "animations": {
   "idle": {
@@ -1531,6 +1532,257 @@
      ]
     }
    }
+  },
+  "hammer": {
+   "bones": {
+    "paw_r": {
+     "rotate": [
+      {
+       "value": 0
+      },
+      {
+       "time": 0.18,
+       "value": 110
+      },
+      {
+       "time": 0.3,
+       "value": -30
+      },
+      {
+       "time": 0.38,
+       "value": -10
+      },
+      {
+       "time": 0.5,
+       "value": 0
+      }
+     ],
+     "translate": [
+      {
+       "x": 0,
+       "y": 0
+      },
+      {
+       "time": 0.18,
+       "x": -6,
+       "y": 46
+      },
+      {
+       "time": 0.3,
+       "x": 8,
+       "y": -6
+      },
+      {
+       "time": 0.38,
+       "x": 4,
+       "y": 0
+      },
+      {
+       "time": 0.5,
+       "x": 0,
+       "y": 0
+      }
+     ]
+    },
+    "paw_l": {
+     "rotate": [
+      {
+       "value": 0
+      },
+      {
+       "time": 0.18,
+       "value": -10
+      },
+      {
+       "time": 0.3,
+       "value": 6
+      },
+      {
+       "time": 0.38,
+       "value": 0
+      },
+      {
+       "time": 0.5,
+       "value": 0
+      }
+     ]
+    },
+    "body": {
+     "rotate": [
+      {
+       "value": 0
+      },
+      {
+       "time": 0.18,
+       "value": 6
+      },
+      {
+       "time": 0.3,
+       "value": -8
+      },
+      {
+       "time": 0.38,
+       "value": -4
+      },
+      {
+       "time": 0.5,
+       "value": 0
+      }
+     ]
+    },
+    "hip": {
+     "translate": [
+      {
+       "x": 0,
+       "y": 0
+      },
+      {
+       "time": 0.18,
+       "x": 0,
+       "y": 4
+      },
+      {
+       "time": 0.3,
+       "x": 0,
+       "y": -5
+      },
+      {
+       "time": 0.38,
+       "x": 0,
+       "y": -2
+      },
+      {
+       "time": 0.5,
+       "x": 0,
+       "y": 0
+      }
+     ],
+     "scale": [
+      {
+       "x": 1,
+       "y": 1
+      },
+      {
+       "time": 0.18,
+       "x": 0.98,
+       "y": 1.04
+      },
+      {
+       "time": 0.3,
+       "x": 1.06,
+       "y": 0.92
+      },
+      {
+       "time": 0.38,
+       "x": 1.02,
+       "y": 0.98
+      },
+      {
+       "time": 0.5,
+       "x": 1,
+       "y": 1
+      }
+     ]
+    },
+    "head": {
+     "rotate": [
+      {
+       "value": 0
+      },
+      {
+       "time": 0.18,
+       "value": -6
+      },
+      {
+       "time": 0.3,
+       "value": 8
+      },
+      {
+       "time": 0.38,
+       "value": 4
+      },
+      {
+       "time": 0.5,
+       "value": 0
+      }
+     ]
+    },
+    "ear_l": {
+     "rotate": [
+      {
+       "value": 0
+      },
+      {
+       "time": 0.18,
+       "value": 0
+      },
+      {
+       "time": 0.3,
+       "value": 10
+      },
+      {
+       "time": 0.38,
+       "value": 4
+      },
+      {
+       "time": 0.5,
+       "value": 0
+      }
+     ]
+    },
+    "ear_r": {
+     "rotate": [
+      {
+       "value": 0
+      },
+      {
+       "time": 0.18,
+       "value": 0
+      },
+      {
+       "time": 0.3,
+       "value": -10
+      },
+      {
+       "time": 0.38,
+       "value": -4
+      },
+      {
+       "time": 0.5,
+       "value": 0
+      }
+     ]
+    },
+    "tail": {
+     "rotate": [
+      {
+       "value": 0
+      },
+      {
+       "time": 0.18,
+       "value": 18
+      },
+      {
+       "time": 0.3,
+       "value": -14
+      },
+      {
+       "time": 0.38,
+       "value": -6
+      },
+      {
+       "time": 0.5,
+       "value": 0
+      }
+     ]
+    }
+   },
+   "events": [
+    {
+     "time": 0.3,
+     "name": "bang"
+    }
+   ]
   }
  }
 }

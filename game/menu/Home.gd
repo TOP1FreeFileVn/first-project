@@ -16,6 +16,7 @@ const AdminPanel = preload("res://game/admin/AdminPanel.gd")
 const MetaPopups = preload("res://game/menu/popups/MetaPopups.gd")
 const SummonPage = preload("res://game/menu/pages/SummonPage.gd")
 const CastlePage = preload("res://game/menu/pages/CastlePage.gd")
+const SettingsSheet = preload("res://game/ui/SettingsSheet.gd")
 const CardboardLobby = preload("res://game/menu/lobby/CardboardLobby.gd")
 const FormationMeadow = preload("res://game/ui/FormationMeadow.gd")
 const PAGES := [
@@ -573,57 +574,4 @@ func open_admin():
 
 
 func _open_settings() -> void:
-	var box := UiKit.popup(self, 520, "Cài đặt")
-	box.add_child(UiKit.ink("Gear Defenders · bản thử nghiệm", 18))
-	box.add_child(UiKit.ink("Tiến độ được lưu tự động trên máy.", 16))
-	var fast := CheckBox.new()
-	fast.text = "Mở rương nhanh (bỏ hoạt ảnh)"
-	fast.button_pressed = PlayerData.fast_chest
-	fast.focus_mode = Control.FOCUS_NONE
-	fast.add_theme_color_override("font_color", UiKit.INK)
-	fast.add_theme_color_override("font_pressed_color", UiKit.INK)
-	fast.add_theme_color_override("font_hover_color", UiKit.INK)
-	fast.add_theme_constant_override("outline_size", 0)
-	fast.add_theme_font_size_override("font_size", 18)
-	fast.toggled.connect(func(on): PlayerData.set_fast_chest(on))
-	box.add_child(fast)
-	var sound := CheckBox.new()
-	sound.text = "Âm thanh"
-	sound.button_pressed = PlayerData.sound_on
-	sound.focus_mode = Control.FOCUS_NONE
-	for key in ["font_color", "font_pressed_color", "font_hover_color", "font_hover_pressed_color"]:
-		sound.add_theme_color_override(key, UiKit.INK)
-	sound.add_theme_constant_override("outline_size", 0)
-	sound.add_theme_font_size_override("font_size", 18)
-	sound.toggled.connect(func(on):
-		PlayerData.set_sound(on)
-		SoundLib.play("click"))
-	box.add_child(sound)
-	var music := CheckBox.new()
-	music.text = "Nhạc nền"
-	music.button_pressed = PlayerData.music_on
-	music.focus_mode = Control.FOCUS_NONE
-	for key in ["font_color", "font_pressed_color", "font_hover_color", "font_hover_pressed_color"]:
-		music.add_theme_color_override(key, UiKit.INK)
-	music.add_theme_constant_override("outline_size", 0)
-	music.add_theme_font_size_override("font_size", 18)
-	music.toggled.connect(func(on):
-		PlayerData.set_music(on)
-		MusicLib.refresh()
-		SoundLib.play("click"))
-	box.add_child(music)
-	var reset := UiKit.button("XOÁ DỮ LIỆU", Vector2(260, 60), func(): pass, true)
-	reset.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	# Two taps within a few seconds, so a stray tap can't wipe the save.
-	reset.pressed.connect(func():
-		if reset.get_meta("armed", false):
-			PlayerData.reset_progress()
-			UiKit.close_popup(box)
-		else:
-			reset.set_meta("armed", true)
-			reset.text = "CHẠM LẦN NỮA ĐỂ XOÁ"
-			get_tree().create_timer(3.0).timeout.connect(func():
-				if is_instance_valid(reset):
-					reset.set_meta("armed", false)
-					reset.text = "XOÁ DỮ LIỆU"))
-	box.add_child(reset)
+	SettingsSheet.open(self)

@@ -1,0 +1,49 @@
+{
+  "cases": [
+    {
+      "count": 1,
+      "window": [
+        450,
+        800
+      ],
+      "animation": {
+        "file": "x1-preview.gif",
+        "frames": 135,
+        "fps": 24.0,
+        "seconds": 5.625
+      },
+      "storyboard": "x1-storyboard.png",
+      "native_manifest": "review/manifest-1-450x800.json"
+    },
+    {
+      "count": 10,
+      "window": [
+        450,
+        800
+      ],
+      "animation": {
+        "file": "x10-preview.gif",
+        "frames": 323,
+        "fps": 24.0,
+        "seconds": 13.458
+      },
+      "storyboard": "x10-storyboard.png",
+      "native_manifest": "review/manifest-10-450x800.json"
+    },
+    {
+      "count": 10,
+      "window": [
+        360,
+        640
+      ],
+      "animation": {
+        "file": "x10-360x640-preview.gif",
+        "frames": 323,
+        "fps": 24.0,
+        "seconds": 13.458
+      },
+      "storyboard": "x10-360x640-storyboard.png",
+      "native_manifest": "review/manifest-10-360x640.json"
+    }
+  ]
+}

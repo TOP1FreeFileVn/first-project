@@ -1,0 +1,126 @@
+{
+  "cases": [
+    {
+      "count": 1,
+      "window": [
+        450,
+        800
+      ],
+      "animation": {
+        "file": "x1-preview.gif",
+        "frames": 193,
+        "fps": 24.0,
+        "seconds": 8.042,
+        "source_frames": [
+          0,
+          193
+        ],
+        "source_seconds": [
+          0.0,
+          8.042
+        ]
+      },
+      "storyboard": "x1-storyboard.png",
+      "native_manifest": "review/manifest-1-450x800.json"
+    },
+    {
+      "count": 10,
+      "window": [
+        450,
+        800
+      ],
+      "animation": {
+        "file": "x10-preview.gif",
+        "frames": 532,
+        "fps": 24.0,
+        "seconds": 22.167,
+        "source_frames": [
+          0,
+          532
+        ],
+        "source_seconds": [
+          0.0,
+          22.167
+        ]
+      },
+      "storyboard": "x10-storyboard.png",
+      "native_manifest": "review/manifest-10-450x800.json"
+    },
+    {
+      "count": 10,
+      "window": [
+        360,
+        640
+      ],
+      "animation": {
+        "file": "x10-360x640-preview.gif",
+        "frames": 532,
+        "fps": 24.0,
+        "seconds": 22.167,
+        "source_frames": [
+          0,
+          532
+        ],
+        "source_seconds": [
+          0.0,
+          22.167
+        ]
+      },
+      "storyboard": "x10-360x640-storyboard.png",
+      "native_manifest": "review/manifest-10-360x640.json"
+    }
+  ],
+  "gold": {
+    "animation": {
+      "file": "paw-continuous-preview.gif",
+      "frames": 132,
+      "fps": 24.0,
+      "seconds": 5.5,
+      "source_frames": [
+        384,
+        516
+      ],
+      "source_seconds": [
+        16.0,
+        21.5
+      ]
+    },
+    "beat": {
+      "cat_visible_at": 19.6326299536228,
+      "end": 21.14,
+      "full_light_at": 17.82,
+      "open_at": 18.74,
+      "rank": 3,
+      "rise_at": 19.46,
+      "start": 16.37
+    },
+    "full_light_before_cat_seconds": 1.813,
+    "context_seconds": 0.35
+  },
+  "paw_comparison": {
+    "file": "paw-continuous-comparison.png",
+    "before": "before-continuous-paw/gold-open.png",
+    "after": "review/gold-open.png",
+    "native_crop": [
+      110,
+      280,
+      340,
+      520
+    ],
+    "scale": 1.5
+  },
+  "wrist_comparison": {
+    "file": "paw-continuous-wrist-comparison.png",
+    "before": "before-continuous-paw/wrist-open.png",
+    "after": "res://tmp/carton-summon-demo/x1-450x800/frame-0108.png",
+    "native_crop": [
+      110,
+      280,
+      340,
+      520
+    ],
+    "scale": 1.5,
+    "sample_seconds": 4.5,
+    "frame_index": 108
+  }
+}

@@ -374,7 +374,7 @@ static func lock(b: Button) -> Button:
 	return b
 
 
-## Red "!" on a control's top-right corner.
+## Red alert dot on a control's top-right corner (the same plain dot as the bottom nav).
 static func dot(host: Control, at := Vector2(-18, -8)) -> Control:
 	return pin(host, icon("badge_dot", 30), at, Control.PRESET_TOP_RIGHT)
 

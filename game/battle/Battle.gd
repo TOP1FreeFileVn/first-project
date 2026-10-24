@@ -103,6 +103,7 @@ func _ready() -> void:
 	fish_cap = Economy.FISH_CAP
 	board.place_new(_pool[0], 1)
 	_place_skill_gear()
+	Engine.time_scale = float(PlayerData.battle_speed)
 	_open_shop()
 	hud.show_message("Lượt nghỉ: mua gear, ghép gear giống nhau rồi bấm SẴN SÀNG.")
 
@@ -194,6 +195,8 @@ func reroll() -> bool:
 
 
 func toggle_lock() -> void:
+	if phase != "shop":
+		return
 	shop_locked = not shop_locked
 	shop_changed.emit()
 
@@ -237,6 +240,7 @@ func sell_gear(gear) -> void:
 
 
 func on_gear_merged(gear) -> void:
+	PlayerData.vibrate(30)
 	# Each tier climbs a whole step, so progress is audible.
 	SoundLib.play("merge", 0.0, 0.0, minf(1.5, pow(1.122, gear.tier - 2)))
 	spawn_effect("dust", gear.global_position + Vector2(0, 10), 2.2)
@@ -488,6 +492,8 @@ func spawn_effect(effect: String, at: Vector2, effect_scale := 1.0) -> void:
 ## A short "CHÍ MẠNG!" that floats up where a critical hit landed. Throttled so a big
 ## fight doesn't fill the screen with text.
 func show_crit(at: Vector2) -> void:
+	if not PlayerData.crit_text_on:
+		return
 	var now := Time.get_ticks_msec()
 	if now - _last_crit_text < CRIT_TEXT_GAP:
 		return
@@ -580,6 +586,7 @@ func _on_all_waves_cleared() -> void:
 	var reward: Dictionary = PlayerData.grant_battle_rewards(true, stars, level.waves.size())
 	# The troops dance first; the result panel follows.
 	SoundLib.play("victory", 0.0, 0.0)
+	PlayerData.vibrate(120)
 	_celebrate()
 	# A child Timer, not a SceneTreeTimer: leaving during the dance frees it with the scene,
 	# so the panel never tries to open on a freed HUD. (The chest is already queued.)
@@ -640,6 +647,7 @@ func _on_core_destroyed() -> void:
 	MusicLib.set_intensity(0.0)
 	MusicLib.duck(3.5, 14.0)
 	SoundLib.play("defeat", 0.0, 0.0)
+	PlayerData.vibrate(220)
 	SoundLib.play("explosion", -8.0)
 	waves.stop()
 	units_layer.process_mode = Node.PROCESS_MODE_DISABLED

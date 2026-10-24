@@ -64,6 +64,21 @@ var ui_skin := "cozy"
 ## Settings: sound effects on.
 var sound_on := true
 var music_on := true
+## Settings: volumes 0..1 (applied on top of the on/off switches).
+var music_volume := 0.8
+var sound_volume := 1.0
+## Settings: short vibrations on mobile (merges, wins, the castle hit hard).
+var vibration_on := true
+## Settings: the speed a battle starts at (1 or 2).
+var battle_speed := 1
+## Settings: show the "CHÍ MẠNG!" text on critical hits.
+var crit_text_on := true
+## Settings: leaving a battle needs a second tap.
+var confirm_leave := true
+
+## Every setting, so reset_progress keeps them and the save writes them in one place.
+const SETTINGS := ["fast_chest", "ui_skin", "sound_on", "music_on", "music_volume", "sound_volume",
+	"vibration_on", "battle_speed", "crit_text_on", "confirm_leave"]
 ## The first-battle tutorial has been finished (or skipped).
 var tutorial_done := false
 ## Special board cells the player has already been shown (see GearBoard.TILE_INFO).
@@ -88,7 +103,7 @@ var quest_day := -1
 var quest_progress := {}
 var quest_claimed: Array = []
 var quest_milestones: Array = []
-## Profile: name, avatar ("1".."25" for the pack avatars, "hero:<id>" for a hero) and frame.
+## Profile: name, avatar ("1".."21", the cat pictures in Meta.AVATARS) and frame.
 var player_name := "Chỉ Huy"
 var avatar := "1"
 var frame := "wood"
@@ -675,9 +690,9 @@ func quick_patrol() -> int:
 
 
 func _refresh_patrol_day() -> void:
-	var today := floori(now() / 86400.0)
-	if today != patrol_quick_day:
-		patrol_quick_day = today
+	var day := today()
+	if day != patrol_quick_day:
+		patrol_quick_day = day
 		patrol_quick_left = Economy.PATROL_QUICK_FREE
 
 
@@ -713,7 +728,7 @@ func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictiona
 		plans += HeroCat.BOSS_BLUEPRINTS
 	reward["blueprints"] = _grant_blueprints(plans * (2 if first_clear else 1))
 	var chest: Dictionary = Economy.CHESTS["victory"]
-	var chest_cards: Dictionary = _roll_cards(chest["cards"] + (1 if stars == 3 else 0), 0, false)["cards"]
+	var chest_cards: Dictionary = _roll_cards(chest["cards"] + (1 if stars == 3 else 0), int(chest.get("min_rare", 0)), false)["cards"]
 	for id in chest_cards:
 		reward["cards"][id] = reward["cards"].get(id, 0) + chest_cards[id]
 	level_stars[index] = maxi(stars_for(index), stars)
@@ -999,15 +1014,12 @@ func quest_alert() -> bool:
 # --- Save -----------------------------------------------------------------------------
 
 func reset_progress() -> void:
-	var keep_fast := fast_chest
-	var keep_skin := ui_skin
-	var keep_sound := sound_on
-	var keep_music := music_on
+	var kept := {}
+	for key in SETTINGS:
+		kept[key] = get(key)
 	_reset()
-	fast_chest = keep_fast
-	ui_skin = keep_skin
-	sound_on = keep_sound
-	music_on = keep_music
+	for key in kept:
+		set(key, kept[key])
 	current_level = 0
 	_commit()
 
@@ -1029,7 +1041,7 @@ func _reset() -> void:
 	shop_gold_day = -1
 	patrol_last_claim = now()
 	patrol_quick_left = Economy.PATROL_QUICK_FREE
-	patrol_quick_day = floori(now() / 86400.0)
+	patrol_quick_day = today()
 	cheated = false
 	fast_chest = false
 	blueprints = {}
@@ -1082,6 +1094,18 @@ func set_music(on: bool) -> void:
 func set_fast_chest(on: bool) -> void:
 	fast_chest = on
 	_commit()
+
+## Sets any setting in SETTINGS and saves (the settings sheet uses this for every row).
+func set_setting(key: String, value) -> void:
+	if not key in SETTINGS:
+		return
+	set(key, value)
+	_commit()
+
+## A short buzz on phones, when the player allows it.
+func vibrate(ms := 40) -> void:
+	if vibration_on and OS.has_feature("mobile"):
+		Input.vibrate_handheld(ms)
 
 
 ## Saves a change made from the admin panel (marks the save as cheated).
@@ -1207,7 +1231,9 @@ func _commit() -> void:
 func to_dict() -> Dictionary:
 	return {
 		"version": SAVE_VERSION,
-		"settings": {"fast_chest": fast_chest, "ui_skin": ui_skin, "sound": sound_on, "music": music_on},
+		"settings": {"fast_chest": fast_chest, "ui_skin": ui_skin, "sound": sound_on, "music": music_on,
+			"music_volume": music_volume, "sound_volume": sound_volume, "vibration": vibration_on,
+			"battle_speed": battle_speed, "crit_text": crit_text_on, "confirm_leave": confirm_leave},
 		"cheated": cheated,
 		"gold": gold,
 		"gems": gems,
@@ -1239,6 +1265,13 @@ func from_dict(data: Dictionary) -> void:
 	ui_skin = str(data.get("settings", {}).get("ui_skin", "cozy"))
 	sound_on = bool(data.get("settings", {}).get("sound", true))
 	music_on = bool(data.get("settings", {}).get("music", true))
+	var settings: Dictionary = data.get("settings", {})
+	music_volume = clampf(float(settings.get("music_volume", 0.8)), 0.0, 1.0)
+	sound_volume = clampf(float(settings.get("sound_volume", 1.0)), 0.0, 1.0)
+	vibration_on = bool(settings.get("vibration", true))
+	battle_speed = clampi(int(settings.get("battle_speed", 1)), 1, 2)
+	crit_text_on = bool(settings.get("crit_text", true))
+	confirm_leave = bool(settings.get("confirm_leave", true))
 	var levels: Dictionary = data.get("levels", {})
 	unlocked_levels = clampi(int(levels.get("unlocked", 1)), 1, LEVELS.size())
 	# JSON turns int keys into strings.
@@ -1248,11 +1281,13 @@ func from_dict(data: Dictionary) -> void:
 	for id in TROOP_ORDER:
 		if saved_troops.has(id):
 			var t: Dictionary = saved_troops[id]
+			# Keep stars and levels inside today's rules (an admin may have changed them).
+			var stars := clampi(int(t.get("stars", 1)), 1, Economy.MAX_STARS)
 			troops[id] = {
 				"unlocked": bool(t.get("unlocked", false)),
-				"level": int(t.get("level", 1)),
-				"stars": int(t.get("stars", 1)),
-				"cards": int(t.get("cards", 0)),
+				"level": clampi(int(t.get("level", 1)), 1, stars * Economy.LEVELS_PER_STAR),
+				"stars": stars,
+				"cards": maxi(0, int(t.get("cards", 0))),
 			}
 	castle_level = clampi(int(data.get("castle", {}).get("level", 1)), 1, castle_max_level())
 	# Saves from before teams existed get the strongest troops they own.

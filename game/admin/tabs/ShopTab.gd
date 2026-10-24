@@ -2,7 +2,7 @@ extends "res://game/admin/tabs/AdminTab.gd"
 
 # Troop-card rarity weights (victory chest), every chest's contents and price, and a
 # 1,000-chest simulation that shows what those numbers actually hand out (the player's
-# save is not touched). Shop chests hold hero-cat equipment + Forge Stones; the victory
+# save is not touched). Shop chests hold hero-cat equipment + Blueprints; the victory
 # chest after a won battle holds troop cards.
 
 const HeroCat = preload("res://game/core/HeroCat.gd")

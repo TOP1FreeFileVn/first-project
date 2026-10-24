@@ -84,13 +84,16 @@
     // Cat-head gate notch stays exactly where it was; only the top grows.
     const top = 80, crenel = top + 14;   // the canvas top leaves no room to stack a box here
     const earTip = top - 40;
-    const x0 = 254, x1 = 464;
+    const x0 = 255, x1 = 465;   // symmetric around the gate's centre, x 360
     const d = [['M',x0,218],['L',x0,top + 6],['Q',x0 - 2,earTip + 8,x0 + 16,earTip],['Q',x0 + 40,earTip + 10,x0 + 52,top],
-      ['L',298,top],['L',298,crenel],['L',331,crenel],['L',331,top],['L',354,top],['L',354,crenel],['L',387,crenel],['L',387,top],['L',410,top],['L',410,crenel],['L',x1 - 52,crenel],['L',x1 - 52,top],
+      ...[0, 1, 2, 3, 4].flatMap((i) => {
+        const step = (x1 - x0 - 104) / 5, a = x0 + 52 + i * step, y = i % 2 === 0 ? top : crenel;
+        return [['L', a, y], ['L', a + step, y]];
+      }),
       ['Q',x1 - 40,earTip + 10,x1 - 16,earTip],['Q',x1 + 2,earTip + 8,x1,top + 6],
       ['L',x1,218],['L',407,218],['L',407,181],['Q',407,166,399,157],['L',396,140],['Q',395,134,389,140],['L',375,148],['Q',360,144,345,148],['L',331,140],['Q',325,134,323,140],['L',320,157],['Q',313,166,313,181],['L',313,218],['Z']];
     // Keep flag pole stands behind the middle merlon.
-    pole(P, 357, top + 10, top - 70, true);
+    pole(P, 360, top + 10, top - 70, true);
     path(P, d, C.board, null, 0);
     for (const s of [-1, 1]) {   // inner ears
       const wx = s < 0 ? x0 : x1, k = -s;
@@ -111,8 +114,8 @@
 
   function wings(P) {
     const leftEdge = MAIN / 2, rightEdge = 720 - MAIN / 2;
-    path(P,[['M',leftEdge,175],['L',leftEdge,160],['L',18,160],['L',18,175],['L',44,175],['L',44,160],['L',65,160],['L',65,175],['L',254,175],['L',254,218],['L',leftEdge,218],['Z']],C.board);
-    path(P,[['M',464,175],['L',655,175],['L',655,160],['L',676,160],['L',676,175],['L',702,175],['L',702,160],['L',rightEdge,160],['L',rightEdge,218],['L',464,218],['Z']],C.board);
+    path(P,[['M',leftEdge,175],['L',leftEdge,160],['L',18,160],['L',18,175],['L',44,175],['L',44,160],['L',65,160],['L',65,175],['L',255,175],['L',255,218],['L',leftEdge,218],['Z']],C.board);
+    path(P,[['M',465,175],['L',655,175],['L',655,160],['L',676,160],['L',676,175],['L',702,175],['L',702,160],['L',rightEdge,160],['L',rightEdge,218],['L',465,218],['Z']],C.board);
   }
 
   // rear: bare poles that stand behind units (low tiers' tower flags).
@@ -121,10 +124,10 @@
     const P = new Pen(); ANCHORS = [];
     const back = new Pen(), front = new Pen();
     // Tower flags on battlemented tiers sit behind the wall (rear); roofed ones ride the roof (facade).
-    if (tier < 3) { pole(back, 123, 134, 73, false); pole(back, 591, 134, 73, false); }
+    if (tier < 3) { pole(back, 123, 134, 73, false); pole(back, 720 - 123, 134, 73, false); }
     wings(front);
     tower(front, 66, tier, false);
-    tower(front, 510, tier, true);
+    tower(front, 720 - 66 - 141, tier, true);
     keep(front, tier);
     const ops = name === 'rear' ? back.ops : name === 'facade' ? front.ops : back.ops.concat(front.ops);
     return { ops, anchors: ANCHORS.slice() };

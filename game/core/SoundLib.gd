@@ -88,7 +88,10 @@ func play(name: String, volume_db := 0.0, jitter := 0.06, pitch := 1.0) -> void:
 		jitter = minf(jitter, 0.018)
 	else:
 		player.stream = SOUNDS[name]
-	player.volume_db = volume_db
+	# The settings volume: 0 is silent, 1 leaves the sound as designed.
+	if PlayerData.sound_volume <= 0.01:
+		return
+	player.volume_db = volume_db + linear_to_db(PlayerData.sound_volume)
 	player.pitch_scale = pitch + randf_range(-jitter, jitter)
 	player.play()
 

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="420" viewBox="0 0 480 420">
+  <!-- Standalone approval concept. Main contour 9; structure 5; rigging 4. -->
+  <g stroke-linejoin="round" stroke-linecap="round">
+    <!-- A complete deep hull with a round belly and a high, stepped stern. -->
+    <path d="M68 273 Q130 291 230 291 Q338 291 425 260 L416 304 Q409 350 349 370 Q286 389 208 379 Q133 374 103 343 Q80 320 68 273 Z" fill="#d7ae78" stroke="#583f21" stroke-width="9"/>
+    <path d="M101 332 Q183 354 272 353 Q355 353 409 319 Q394 353 348 367 Q281 385 209 376 Q141 372 113 345 Z" fill="#bb8c59"/>
+    <!-- One broad rail, echoing the rounded hull instead of repeated trim. -->
+    <path d="M69 273 Q148 303 247 300 Q350 298 425 260" fill="none" stroke="#583f21" stroke-width="12"/>
+    <path d="M70 272 Q148 301 247 298 Q349 296 424 259" fill="none" stroke="#edcb92" stroke-width="5"/>
+    <path d="M111 327 Q216 351 365 325" fill="none" stroke="#805c38" stroke-width="4"/>
+
+    <!-- Three large portholes; no grain, rivet rows, ladders or rope mesh. -->
+    <g fill="#3e4847" stroke="#583f21" stroke-width="6">
+      <circle cx="151" cy="319" r="10"/>
+      <circle cx="243" cy="326" r="11"/>
+      <circle cx="337" cy="314" r="10"/>
+    </g>
+    <g fill="#718a84">
+      <path d="M144 316 Q147 310 154 312 Q148 312 147 319 Z"/>
+      <path d="M235 323 Q239 316 246 318 Q240 318 239 326 Z"/>
+      <path d="M330 311 Q333 305 340 307 Q334 307 333 314 Z"/>
+    </g>
+  </g>
+</svg>

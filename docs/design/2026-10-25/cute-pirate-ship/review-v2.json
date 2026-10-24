@@ -1,0 +1,13 @@
+{
+  "raster_size": [
+    960,
+    840
+  ],
+  "structural_join_checks": {
+    "fore_mast_into_hull": true,
+    "aft_mast_into_hull": true,
+    "cabin_into_hull": true
+  },
+  "sail_direction": "left edge convex, right edge concave; toward bow at left",
+  "production_changed": false
+}

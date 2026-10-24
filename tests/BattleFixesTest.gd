@@ -105,5 +105,21 @@ func _ready() -> void:
 			if t["unlocked"] and t["cards"] < 0:
 				bad += 1
 	_check(bad == 0, "x10 summons never leave negative cards")
+	# Fusing: every epic weapon has a way in; the bow line stays ranged.
+	var HeroCat = load("res://game/core/HeroCat.gd")
+	var targets := []
+	for id in HeroCat.ITEMS:
+		targets.append(HeroCat.fuse_target(id))
+	_check(targets.has("riu_lua") or HeroCat.FUSE_INTO.values().has("riu_lua") or HeroCat.ITEMS["riu_lua"]["rarity"] == 2, "Rìu Lửa is an epic weapon")
+	_check(HeroCat.fuse_target("cung_san") == "gay_sao" and HeroCat.fuse_target("riu_lua") == "katana_nguyet", "weapon fuse lines")
+	# An old save's over-cap item level is clamped to today's rarity cap.
+	var old := PlayerData.to_dict()
+	old["hero_cat"]["bag"]["999"] = {"id": "kiem_go", "level": 20}
+	PlayerData.from_dict(JSON.parse_string(JSON.stringify(old)))
+	_check(PlayerData.hero_cat["bag"]["999"]["level"] == HeroCat.LEVEL_CAP[0], "an over-cap item is clamped on load")
+	# Patrol quick-claims reset on the local day, like quests.
+	PlayerData.patrol_quick_day = -1
+	PlayerData._refresh_patrol_day()
+	_check(PlayerData.patrol_quick_day == PlayerData.today(), "quick patrol day is the local day")
 	print("BattleFixesTest: fails=%d" % _fails)
 	get_tree().quit(1 if _fails > 0 else 0)

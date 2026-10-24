@@ -683,7 +683,6 @@ func _fill_detail() -> void:
 	_style_detail_surface()
 
 
-# Turns a gold cost_button into a Forge Stone one: the stone icon and count, then the gold.
 # Turns a gold cost_button into a Blueprint one: the slot's blueprint icon and have/need.
 func _blueprint_cost(button: Button, slot: String, plans: int) -> void:
 	var row: HBoxContainer = button.get_child(0).get_child(1)

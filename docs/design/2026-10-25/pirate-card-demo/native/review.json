@@ -1,0 +1,390 @@
+{
+	"captures": [
+		"in-game.png",
+		"four-cards.png",
+		"card-cu_kiem@3x.png",
+		"card-gay_phep@3x.png",
+		"card-dai_bac@3x.png",
+		"card-dao@3x.png"
+	],
+	"cards": [
+		{
+			"content_local_rects": {
+				"TroopPortrait": [
+					37.0,
+					24.0,
+					86.0,
+					86.0
+				],
+				"TroopStars": [
+					0.0,
+					110.0,
+					160.0,
+					16.0
+				],
+				"TroopWorld": [
+					0.0,
+					126.0,
+					160.0,
+					23.0
+				]
+			},
+			"id": "cu_kiem",
+			"logical_rect": [
+				24.0,
+				856.0,
+				160.0,
+				150.0
+			],
+			"rarity": 1
+		},
+		{
+			"content_local_rects": {
+				"TroopPortrait": [
+					37.0,
+					24.0,
+					86.0,
+					86.0
+				],
+				"TroopStars": [
+					0.0,
+					110.0,
+					160.0,
+					16.0
+				],
+				"TroopWorld": [
+					0.0,
+					126.0,
+					160.0,
+					23.0
+				]
+			},
+			"id": "gay_phep",
+			"logical_rect": [
+				192.0,
+				856.0,
+				160.0,
+				150.0
+			],
+			"rarity": 0
+		},
+		{
+			"content_local_rects": {
+				"TroopPortrait": [
+					37.0,
+					24.0,
+					86.0,
+					86.0
+				],
+				"TroopStars": [
+					0.0,
+					110.0,
+					160.0,
+					16.0
+				],
+				"TroopWorld": [
+					0.0,
+					126.0,
+					160.0,
+					23.0
+				]
+			},
+			"id": "dai_bac",
+			"logical_rect": [
+				360.0,
+				856.0,
+				160.0,
+				150.0
+			],
+			"rarity": 3
+		},
+		{
+			"content_local_rects": {
+				"TroopPortrait": [
+					37.0,
+					24.0,
+					86.0,
+					86.0
+				],
+				"TroopStars": [
+					0.0,
+					110.0,
+					160.0,
+					16.0
+				],
+				"TroopWorld": [
+					0.0,
+					126.0,
+					160.0,
+					23.0
+				]
+			},
+			"id": "dao",
+			"logical_rect": [
+				528.0,
+				856.0,
+				160.0,
+				150.0
+			],
+			"rarity": 2
+		}
+	],
+	"checks": [
+		{
+			"key": "cu_kiem_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "gay_phep_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dai_bac_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dao_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "all_sixteen_original_cards_retained",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "only_four_pirate_cards_receive_review_art",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cu_kiem_fully_visible_at_roster_bottom",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cu_kiem_original_portrait_and_game_caption_retained",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "gay_phep_fully_visible_at_roster_bottom",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "gay_phep_original_portrait_and_game_caption_retained",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dai_bac_fully_visible_at_roster_bottom",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dai_bac_original_portrait_and_game_caption_retained",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dao_fully_visible_at_roster_bottom",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dao_original_portrait_and_game_caption_retained",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_is_450x800",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "in-game.png_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "four-cards.png_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cu_kiem_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "cu_kiem_rerendered_at_three_times_native_logical_size",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card-cu_kiem@3x.png_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "gay_phep_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "gay_phep_rerendered_at_three_times_native_logical_size",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card-gay_phep@3x.png_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dai_bac_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dai_bac_rerendered_at_three_times_native_logical_size",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card-dai_bac@3x.png_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dao_backdrop_behind_original_content_and_ignores_input",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "dao_rerendered_at_three_times_native_logical_size",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "card-dao@3x.png_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "review_never_writes_save",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "original_profile_restored_in_memory",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"production_changed": false,
+	"standalone_padding_logical": 10,
+	"standalone_render_scale": 3,
+	"window": [
+		450,
+		800
+	]
+}

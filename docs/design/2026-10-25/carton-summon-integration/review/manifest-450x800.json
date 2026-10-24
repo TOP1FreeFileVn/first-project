@@ -1,0 +1,571 @@
+{
+	"captures": [
+		{
+			"file": "summon-page-450x800.png"
+		},
+		{
+			"count": 1,
+			"file": "x1-paw-450x800.png",
+			"stage": "carton"
+		},
+		{
+			"count": 1,
+			"file": "x1-gold-hold-450x800.png",
+			"stage": "carton"
+		},
+		{
+			"count": 1,
+			"file": "x1-exposed-wrist-450x800.png",
+			"stage": "carton"
+		},
+		{
+			"count": 1,
+			"file": "x1-new-showcase-450x800.png",
+			"stage": "showcase"
+		},
+		{
+			"count": 1,
+			"file": "x1-results-450x800.png",
+			"stage": "done"
+		},
+		{
+			"count": 10,
+			"file": "x10-arrived-boxes-450x800.png",
+			"stage": "carton"
+		},
+		{
+			"count": 10,
+			"file": "x10-paw-450x800.png",
+			"stage": "carton"
+		},
+		{
+			"count": 10,
+			"file": "x10-best-light-450x800.png",
+			"stage": "carton"
+		},
+		{
+			"count": 10,
+			"file": "x10-results-450x800.png",
+			"stage": "done"
+		},
+		{
+			"count": 10,
+			"file": "insufficient-repeat-450x800.png",
+			"stage": "done"
+		}
+	],
+	"checks": [
+		{
+			"name": "native_capture_summon-page",
+			"passed": true
+		},
+		{
+			"name": "x1_page_button_ready",
+			"passed": true
+		},
+		{
+			"name": "x1_button_reachable",
+			"passed": true
+		},
+		{
+			"name": "x1_native_pull_input",
+			"passed": true
+		},
+		{
+			"name": "x1_opens_one_production_layer",
+			"passed": true
+		},
+		{
+			"name": "x1_has_exact_real_results",
+			"passed": true
+		},
+		{
+			"name": "x1_hides_underlying_home",
+			"passed": true
+		},
+		{
+			"name": "free_x1_costs_zero",
+			"passed": true
+		},
+		{
+			"name": "free_x1_grants_once",
+			"passed": true
+		},
+		{
+			"name": "free_x1_consumes_daily_free",
+			"passed": true
+		},
+		{
+			"name": "real_pity_is_legendary",
+			"passed": true
+		},
+		{
+			"name": "real_first_legendary_is_new",
+			"passed": true
+		},
+		{
+			"name": "new_legendary_already_unlocked_before_animation",
+			"passed": true
+		},
+		{
+			"name": "opening_uses_production_carton_stage",
+			"passed": true
+		},
+		{
+			"name": "natural_clock_reaches_2.5972",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x1-paw",
+			"passed": true
+		},
+		{
+			"name": "natural_clock_reaches_3.77",
+			"passed": true
+		},
+		{
+			"name": "natural_gold_hold_precedes_cat",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x1-gold-hold",
+			"passed": true
+		},
+		{
+			"name": "natural_clock_reaches_4.5",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x1-exposed-wrist",
+			"passed": true
+		},
+		{
+			"name": "natural_new_legendary_reaches_showcase",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x1-new-showcase",
+			"passed": true
+		},
+		{
+			"name": "showcases_reach_done",
+			"passed": true
+		},
+		{
+			"name": "natural_x1_stable_done_result_count",
+			"passed": true
+		},
+		{
+			"name": "natural_x1_one_set_of_result_controls",
+			"passed": true
+		},
+		{
+			"name": "natural_x1_skip_hidden",
+			"passed": true
+		},
+		{
+			"name": "natural_x1_all_results_visible",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x1-results",
+			"passed": true
+		},
+		{
+			"name": "natural_animation_does_not_regrant",
+			"passed": true
+		},
+		{
+			"name": "natural_x1_native_done_input",
+			"passed": true
+		},
+		{
+			"name": "natural_x1_layer_freed",
+			"passed": true
+		},
+		{
+			"name": "natural_x1_restores_page_and_home_chrome",
+			"passed": true
+		},
+		{
+			"name": "natural_close_does_not_regrant",
+			"passed": true
+		},
+		{
+			"name": "x10_page_button_ready",
+			"passed": true
+		},
+		{
+			"name": "x10_button_reachable",
+			"passed": true
+		},
+		{
+			"name": "x10_native_pull_input",
+			"passed": true
+		},
+		{
+			"name": "x10_opens_one_production_layer",
+			"passed": true
+		},
+		{
+			"name": "x10_has_exact_real_results",
+			"passed": true
+		},
+		{
+			"name": "x10_hides_underlying_home",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_charges_exact_cost",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_increments_total_once",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_tracks_quest_once",
+			"passed": false
+		},
+		{
+			"name": "paid_x10_retains_x10_epic_guarantee",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_result_rarity_and_new_flags_match_grants",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_inventory_and_duplicate_gold_granted_once",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x10-arrived-boxes",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x10-paw",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x10-best-light",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_native_skip",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_skip_stable_done_result_count",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_skip_one_set_of_result_controls",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_skip_skip_hidden",
+			"passed": true
+		},
+		{
+			"name": "paid_x10_skip_all_results_visible",
+			"passed": true
+		},
+		{
+			"name": "skip_repeated_does_not_regrant_or_charge",
+			"passed": true
+		},
+		{
+			"name": "native_capture_x10-results",
+			"passed": true
+		},
+		{
+			"name": "funded_repeat_is_enabled",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_x10_input",
+			"passed": true
+		},
+		{
+			"name": "repeat_replaces_old_layer",
+			"passed": true
+		},
+		{
+			"name": "repeat_frees_old_opening",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_x10_charges_exact_cost",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_x10_increments_total_once",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_x10_tracks_quest_once",
+			"passed": false
+		},
+		{
+			"name": "native_repeat_x10_retains_x10_epic_guarantee",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_x10_result_rarity_and_new_flags_match_grants",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_x10_inventory_and_duplicate_gold_granted_once",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_done_stable_done_result_count",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_done_one_set_of_result_controls",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_done_skip_hidden",
+			"passed": true
+		},
+		{
+			"name": "native_repeat_done_all_results_visible",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_target_exists",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_creates_one_opening",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_grants_one_batch",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_charges_once",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_done_stable_done_result_count",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_done_one_set_of_result_controls",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_done_skip_hidden",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_done_all_results_visible",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_native_done_input",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_layer_freed",
+			"passed": true
+		},
+		{
+			"name": "duplicate_repeat_restores_page_and_home_chrome",
+			"passed": true
+		},
+		{
+			"name": "repeat_skip_close_keeps_post_grant_data",
+			"passed": true
+		},
+		{
+			"name": "x10_page_button_ready",
+			"passed": true
+		},
+		{
+			"name": "x10_button_reachable",
+			"passed": true
+		},
+		{
+			"name": "x10_native_pull_input",
+			"passed": true
+		},
+		{
+			"name": "x10_opens_one_production_layer",
+			"passed": true
+		},
+		{
+			"name": "x10_has_exact_real_results",
+			"passed": true
+		},
+		{
+			"name": "x10_hides_underlying_home",
+			"passed": true
+		},
+		{
+			"name": "max_star_real_x10_converts_exactly_ten_cards",
+			"passed": true
+		},
+		{
+			"name": "max_star_conversion_does_not_add_inventory_cards",
+			"passed": true
+		},
+		{
+			"name": "max_star_results_are_duplicates",
+			"passed": true
+		},
+		{
+			"name": "showcases_reach_done",
+			"passed": true
+		},
+		{
+			"name": "max_star_natural_boundary_stable_done_result_count",
+			"passed": true
+		},
+		{
+			"name": "max_star_natural_boundary_one_set_of_result_controls",
+			"passed": true
+		},
+		{
+			"name": "max_star_natural_boundary_skip_hidden",
+			"passed": true
+		},
+		{
+			"name": "max_star_natural_boundary_all_results_visible",
+			"passed": true
+		},
+		{
+			"name": "carton_completion_and_showcase_do_not_double_convert",
+			"passed": true
+		},
+		{
+			"name": "max_star_native_done_input",
+			"passed": true
+		},
+		{
+			"name": "max_star_layer_freed",
+			"passed": true
+		},
+		{
+			"name": "max_star_restores_page_and_home_chrome",
+			"passed": true
+		},
+		{
+			"name": "insufficient_x1_page_disabled",
+			"passed": true
+		},
+		{
+			"name": "insufficient_x10_page_disabled",
+			"passed": true
+		},
+		{
+			"name": "refused_pull_opens_nothing_and_changes_nothing",
+			"passed": true
+		},
+		{
+			"name": "x10_page_button_ready",
+			"passed": true
+		},
+		{
+			"name": "x10_button_reachable",
+			"passed": true
+		},
+		{
+			"name": "x10_native_pull_input",
+			"passed": true
+		},
+		{
+			"name": "x10_opens_one_production_layer",
+			"passed": true
+		},
+		{
+			"name": "x10_has_exact_real_results",
+			"passed": true
+		},
+		{
+			"name": "x10_hides_underlying_home",
+			"passed": true
+		},
+		{
+			"name": "last_batch_disables_repeat",
+			"passed": true
+		},
+		{
+			"name": "native_capture_insufficient-repeat",
+			"passed": true
+		},
+		{
+			"name": "insufficient_repeat_native_done_input",
+			"passed": true
+		},
+		{
+			"name": "insufficient_repeat_layer_freed",
+			"passed": true
+		},
+		{
+			"name": "insufficient_repeat_restores_page_and_home_chrome",
+			"passed": true
+		},
+		{
+			"name": "disabled_repeat_and_close_do_not_charge",
+			"passed": true
+		},
+		{
+			"name": "x1_page_button_ready",
+			"passed": true
+		},
+		{
+			"name": "x1_button_reachable",
+			"passed": true
+		},
+		{
+			"name": "x1_native_pull_input",
+			"passed": true
+		},
+		{
+			"name": "x1_opens_one_production_layer",
+			"passed": true
+		},
+		{
+			"name": "x1_has_exact_real_results",
+			"passed": true
+		},
+		{
+			"name": "x1_hides_underlying_home",
+			"passed": true
+		},
+		{
+			"name": "mid_close_occurs_during_carton",
+			"passed": true
+		},
+		{
+			"name": "mid_close_frees_active_layer",
+			"passed": true
+		},
+		{
+			"name": "mid_close_preserves_already_granted_result",
+			"passed": true
+		},
+		{
+			"name": "mid_close_restores_summon_page",
+			"passed": true
+		},
+		{
+			"name": "profile_never_persists",
+			"passed": true
+		}
+	],
+	"failures": 2,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/carton-summon-integration-profile/450x800/Roaming/Godot/app_userdata/Gear Defenders",
+	"scope": "Production Home, real free/paid x1/x10, natural new legendary, skip/close/repeat, stale duplicate activation and max-star conversion",
+	"window": [
+		450,
+		800
+	]
+}

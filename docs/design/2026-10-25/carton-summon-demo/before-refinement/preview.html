@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="vi"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demo triệu hồi bằng thùng carton</title>
+<style>
+:root{color-scheme:light;font:16px/1.55 "Segoe UI",sans-serif;color:#493924;background:#eee6d7}*{box-sizing:border-box}
+body{margin:0}main{max-width:1120px;margin:auto;padding:30px 24px 50px}h1{font-size:29px;line-height:1.2;margin:0 0 12px}
+p{max-width:760px}button,a{font:inherit}button{background:#fff5df;color:#583f21;border:2px solid #886a43;border-radius:12px;padding:9px 17px;cursor:pointer}
+button[aria-pressed=true]{background:#c6b4d8;box-shadow:0 3px 0 #886a43}nav{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.layout{display:grid;grid-template-columns:minmax(280px,390px) 1fr;gap:28px}
+.panel{background:#f9f3e7;border:2px solid #baa17e;border-radius:20px;padding:20px}.phone{display:block;width:100%;max-width:350px;height:auto;border-radius:13px;margin:14px auto;background:#ded3bd}
+.stage{display:block;width:100%;max-width:450px;height:auto;margin:14px auto;border-radius:12px}input{width:100%;accent-color:#8c71a7}.stage-buttons{display:flex;gap:7px;flex-wrap:wrap}.stage-buttons button{font-size:13px;padding:5px 9px}
+small{color:#79664d}a{color:#725089}code{overflow-wrap:anywhere}.links{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}details{margin-top:26px}pre{white-space:pre-wrap;background:#fff6e5;padding:16px;border-radius:12px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}main{padding:23px 14px}h1{font-size:25px}}
+</style>
+<main><h1>Triệu hồi bằng thùng carton</h1>
+<p>Demo riêng để xem nhịp thùng đáp xuống, dấu chân mèo, ánh sáng và đồng đội xuất hiện. Chọn lượt x1 hoặc x10, rồi kéo từng mốc để xem bố cục.</p>
+<p>Để thử nút x1, x10, xem lại và mở tất cả trong cửa sổ Godot có âm thanh, chạy từ thư mục dự án:</p>
+<pre>powershell -NoProfile -ExecutionPolicy Bypass -File docs/design/2026-10-25/carton-summon-demo/run.ps1 -Interactive -Count 10</pre>
+<nav id="cases"></nav><div class="layout">
+<section class="panel"><strong id="animation-title"></strong><img class="phone" id="animation" alt="Hoạt ảnh demo triệu hồi">
+<button id="replay">Phát lại</button><p><small id="animation-meta"></small></p></section>
+<section class="panel"><strong id="stage-title"></strong><div class="stage-buttons" id="stage-buttons"></div>
+<input id="stage-slider" type="range" min="0" max="5" step="1" value="0" aria-label="Chọn mốc hoạt ảnh">
+<img class="stage" id="stage-image" alt="Ảnh gốc của mốc hoạt ảnh"><div class="links"><a id="native-link" target="_blank">Mở ảnh gốc</a><a id="board-link" target="_blank">Xem cả 6 mốc</a></div>
+</section></div>
+<details><summary>Tạo lại ảnh và GIF</summary><p>Chạy từ thư mục dự án:</p>
+<pre>powershell -NoProfile -ExecutionPolicy Bypass -File docs/design/2026-10-25/carton-summon-demo/run.ps1 -Record
+python docs/design/2026-10-25/carton-summon-demo/build_preview.py</pre>
+<p>Bản chạy xem thử dùng profile riêng trong workspace. Ảnh và manifest gốc nằm trong <code>review/</code>.</p></details>
+</main><script>
+const cases=[{"title": "x1 · 450 × 800", "animation": "x1-preview.gif", "animation_meta": "135 khung hình · 24 fps · 5.625 giây", "storyboard": "x1-storyboard.png", "stages": [{"title": "01 · Thùng đến", "file": "review/x1-arrival-450x800.png"}, {"title": "02 · Đáp xuống", "file": "review/x1-boxes-450x800.png"}, {"title": "03 · Dấu chân mèo", "file": "review/x1-paw-450x800.png"}, {"title": "04 · Ánh sáng", "file": "review/x1-light-450x800.png"}, {"title": "05 · Đồng đội xuất hiện", "file": "review/x1-reveal-450x800.png"}, {"title": "06 · Kết quả", "file": "review/x1-results-450x800.png"}]}, {"title": "x10 · 450 × 800", "animation": "x10-preview.gif", "animation_meta": "323 khung hình · 24 fps · 13.458 giây", "storyboard": "x10-storyboard.png", "stages": [{"title": "01 · Thùng đến", "file": "review/x10-arrival-450x800.png"}, {"title": "02 · Đáp xuống", "file": "review/x10-boxes-450x800.png"}, {"title": "03 · Dấu chân mèo", "file": "review/x10-paw-450x800.png"}, {"title": "04 · Ánh sáng", "file": "review/x10-light-450x800.png"}, {"title": "05 · Đồng đội xuất hiện", "file": "review/x10-reveal-450x800.png"}, {"title": "06 · Kết quả", "file": "review/x10-results-450x800.png"}]}, {"title": "x10 · 360 × 640", "animation": "x10-360x640-preview.gif", "animation_meta": "323 khung hình · 24 fps · 13.458 giây", "storyboard": "x10-360x640-storyboard.png", "stages": [{"title": "01 · Thùng đến", "file": "review/x10-arrival-360x640.png"}, {"title": "02 · Đáp xuống", "file": "review/x10-boxes-360x640.png"}, {"title": "03 · Dấu chân mèo", "file": "review/x10-paw-360x640.png"}, {"title": "04 · Ánh sáng", "file": "review/x10-light-360x640.png"}, {"title": "05 · Đồng đội xuất hiện", "file": "review/x10-reveal-360x640.png"}, {"title": "06 · Kết quả", "file": "review/x10-results-360x640.png"}]}];let selected=0;const byId=id=>document.getElementById(id);
+function stage(index){const item=cases[selected],shot=item.stages[index];byId('stage-slider').value=index;byId('stage-title').textContent=shot.title;byId('stage-image').src=shot.file;byId('native-link').href=shot.file;byId('board-link').href=item.storyboard;document.querySelectorAll('#stage-buttons button').forEach((b,i)=>b.setAttribute('aria-pressed',i===index));}
+function choose(index){selected=index;const item=cases[index];byId('animation-title').textContent=item.title;byId('animation').src=item.animation||item.stages[0].file;byId('animation-meta').textContent=item.animation_meta||'Ảnh mốc từ bản chạy native';byId('stage-buttons').replaceChildren(...item.stages.map((s,i)=>{let b=document.createElement('button');b.textContent=i+1;b.title=s.title;b.onclick=()=>stage(i);return b;}));document.querySelectorAll('#cases button').forEach((b,i)=>b.setAttribute('aria-pressed',i===index));stage(0);}
+cases.forEach((item,i)=>{let b=document.createElement('button');b.textContent=item.title;b.onclick=()=>choose(i);byId('cases').append(b);});byId('stage-slider').oninput=e=>stage(Number(e.target.value));byId('replay').onclick=()=>{let image=byId('animation'),source=cases[selected].animation||cases[selected].stages[0].file;image.src='';requestAnimationFrame(()=>image.src=source+'?replay='+Date.now());};choose(0);
+</script></html>

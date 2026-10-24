@@ -243,10 +243,9 @@ func _draw() -> void:
 	draw_set_transform(face_offset * base_scale, 0.0, base_scale * face_scale)
 	if _alert:
 		# Only icon, caption and badge respond; Home's shared mask stays still.
-		draw_circle(Vector2(92, 13), 7.0, Color("e77859"), true, -1.0, true)
-		draw_arc(Vector2(92, 13), 7.0, 0, TAU, 32, INK, 2.0, true)
-		draw_line(Vector2(92, 9), Vector2(92, 13), PAPER, 1.8, true)
-		draw_circle(Vector2(92, 16), 0.9, PAPER, true, -1.0, true)
+		# The same plain red dot as the bottom nav (CartonNav), sized for this larger icon.
+		draw_circle(Vector2(90, 14), 6.0, Color("ed7154"), true, -1.0, true)
+		draw_arc(Vector2(90, 14), 6.0, 0, TAU, 32, INK, 1.6, true)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 
 

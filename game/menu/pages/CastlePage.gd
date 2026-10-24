@@ -4,11 +4,15 @@ extends "res://game/menu/pages/MenuPage.gd"
 
 const GridPreview = preload("res://game/menu/widgets/GridPreview.gd")
 const CastleTiers = preload("res://game/menu/lobby/CastleTiers.gd")
-const CASTLE_ART := [
-	preload("res://game/assets/lobby/castle-tiers/castle-tier-1.svg"), preload("res://game/assets/lobby/castle-tiers/castle-tier-2.svg"),
-	preload("res://game/assets/lobby/castle-tiers/castle-tier-3.svg"), preload("res://game/assets/lobby/castle-tiers/castle-tier-4.svg"),
-	preload("res://game/assets/lobby/castle-tiers/castle-tier-5.svg"),
-]
+const CastleBuild = preload("res://game/menu/lobby/CastleBuild.gd")
+## The castle picture: the live tiered castle (waving flags), scaled into the stage.
+const STAGE_HEIGHT := 250.0
+const STAGE_SCALE := 0.6
+
+## The building scene plays in the stage; the page waits to rebuild until it ends.
+var _building := false
+var _castle_root: Node2D
+var _castle_tiers: Node2D
 
 
 func build() -> void:
@@ -18,14 +22,25 @@ func build() -> void:
 	var now: Dictionary = PlayerData.castle_stats()
 	var next: Dictionary = Economy.CASTLE[level] if level < max_level else now
 
-	var art_stage := CenterContainer.new()
+	var art_stage := Control.new()
 	art_stage.name = "CastleStage"
-	art_stage.custom_minimum_size.y = 210
+	art_stage.custom_minimum_size.y = STAGE_HEIGHT
+	art_stage.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	body.add_child(art_stage)
-	var castle_art := UiKit.icon(CASTLE_ART[CastleTiers.tier_for(level) - 1], 210)
-	castle_art.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-	castle_art.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	art_stage.add_child(castle_art)
+	# Gate foot at the stage's bottom middle; the build scene uses the same space.
+	var root := Node2D.new()
+	root.name = "CastleStageRoot"
+	root.scale = Vector2.ONE * STAGE_SCALE
+	art_stage.add_child(root)
+	art_stage.resized.connect(func(): root.position = Vector2(art_stage.size.x * 0.5, art_stage.size.y - 4.0))
+	_castle_root = Node2D.new()
+	_castle_root.name = "CastleStageCastle"
+	root.add_child(_castle_root)
+	_castle_tiers = CastleTiers.new()
+	_castle_tiers.position = -CastleTiers.GATE_FOOT
+	_castle_tiers.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	_castle_root.add_child(_castle_tiers)
+	_castle_tiers.set_level(level)
 	var castle := section("Thành cấp %d / %d" % [level, max_level], 10)
 
 	var stats := GridContainer.new()
@@ -48,7 +63,7 @@ func build() -> void:
 	castle.add_child(legend)
 
 	var cost := PlayerData.castle_upgrade_cost()
-	var upgrade := UiKit.button("", Vector2(360, 80), func(): PlayerData.upgrade_castle())
+	var upgrade := UiKit.button("", Vector2(360, 80), _upgrade)
 	upgrade.name = "CastleDetailsUpgrade"
 	upgrade.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	upgrade.add_theme_font_size_override("font_size", 24)
@@ -110,3 +125,26 @@ func _workshop_row(box: VBoxContainer, id: String) -> void:
 		b.add_theme_constant_override("icon_max_width", 28)
 		b.disabled = PlayerData.gold < cost
 	row.add_child(b)
+
+
+## Buys the next level and plays the building scene over the castle picture: cats hammer
+## at it, then it stands at its new tier. The page rebuilds (new numbers) when it ends.
+func _upgrade() -> void:
+	if _building or not is_instance_valid(_castle_root):
+		return
+	_building = true
+	if not PlayerData.upgrade_castle():
+		_building = false
+		return
+	var build := CastleBuild.new()
+	build.name = "CastleBuild"
+	_castle_root.get_parent().add_child(build)
+	build.start(_castle_root, func(): _castle_tiers.set_level(PlayerData.castle_level), func():
+		_building = false
+		refresh())
+
+
+func refresh() -> void:
+	if _building:
+		return
+	super()
