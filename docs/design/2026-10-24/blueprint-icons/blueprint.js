@@ -1,30 +1,35 @@
 // Blueprint (bản vẽ) icons, one per equipment slot. 256 x 256 frame.
-// A blueprint sheet: blue paper with a rolled top edge, a faint grid, and the slot's item
-// drawn as white construction lines with a few dimension ticks. Flat cat style: one even
-// #583f21 outline around the sheet, no gradients or shine. The item lines are white
-// strokes (the blueprint's ink), not filled, so the four read as plans, not as items.
+// A torn piece of cardboard, like the castle and the menu cartons: tan board with a
+// darker torn edge, the corrugation showing along the torn side, two strips of tape
+// holding it, and the slot's item drawn on it in brown marker. Flat cat style: one even
+// #583f21 outline, no gradients or shine. The item is outline strokes (marker), not
+// filled, so the four read as plans, not as items. (Blue version: blueprint-blue.js.)
 (function () {
-  const INK = '#583f21', PAPER = '#4f86c6', PAPER_DARK = '#3d6ea8', GRID = '#6c9bd2',
-    LINE = '#f4f8ff', ROLL = '#d9e8f7', ROLL_SHADE = '#a9c3e2', PIN = '#e46a5a';
-  const MAIN = 12, PLAN = 11, THIN = 3;
+  const INK = '#583f21', CARD = '#e8bb7c', CARD_SHADE = '#d4a065', FLUTE = '#b07c45',
+    TAPE = '#f3dfae', TAPE_EDGE = '#c9a56a', LINE = '#583f21';
+  // A marker swatch behind each item tells the slots apart at a glance.
+  const SWATCH = { weapon: '#f2a65a', helmet: '#8fc1e3', armor: '#a8d58a', boots: '#e6a3c8' };
+  const MAIN = 12, PLAN = 12, THIN = 3;
   const C = Pen.circle;
 
   function sheet(P) {
-    // Sheet slightly tilted, a curl at the top-right corner, a pin top-left.
-    const body = [['M', 46, 58], ['L', 206, 50], ['Q', 214, 50, 214, 58], ['L', 222, 206], ['Q', 222, 214, 214, 214],
-      ['L', 50, 222], ['Q', 42, 222, 42, 214], ['L', 38, 66], ['Q', 38, 58, 46, 58], ['Z']];
-    P.shape(body, { fill: PAPER });
-    // Bottom shade band, then the grid (clipped by hand: only inside the paper rectangle).
-    P.shape([['M', 42, 196], ['L', 221, 188], ['L', 222, 206], ['Q', 222, 214, 214, 214], ['L', 50, 222], ['Q', 42, 222, 42, 214], ['Z']], { fill: PAPER_DARK });
-    for (let x = 70; x <= 190; x += 30) P.shape([['M', x, 62], ['L', x + 6, 208]], { stroke: GRID, width: THIN });
-    for (let y = 90; y <= 180; y += 30) P.shape([['M', 44, y + 2], ['L', 216, y - 6]], { stroke: GRID, width: THIN });
+    // A slightly tilted board; the bottom edge is torn (zigzag), the rest cut straight.
+    const torn = [];
+    for (let i = 0; i <= 10; i++) torn.push(['L', 220 - i * 17.6, 210 + (i % 2 ? 10 : 0) - i * 0.8]);
+    const body = [['M', 42, 56], ['L', 208, 48], ['Q', 216, 48, 216, 56], ['L', 220, 210], ...torn, ['L', 40, 64], ['Q', 40, 56, 42, 56], ['Z']];
+    P.shape(body, { fill: CARD });
+    // Torn strip: the inner corrugated layer shows along the tear.
+    const strip = [['M', 42, 196], ['L', 219, 188], ['L', 220, 210], ...torn, ['Z']];
+    P.shape(strip, { fill: CARD_SHADE });
+    for (let x = 52; x <= 208; x += 13) P.shape([['M', x, 196 - (x - 42) * 0.045], ['L', x - 2, 214 - (x - 42) * 0.045]], { stroke: FLUTE, width: THIN + 1 });
     P.shape(body, { stroke: INK, width: MAIN });
-    // Rolled top edge: a paper tube along the top.
-    const roll = [['M', 34, 46], ['L', 212, 36], ['Q', 230, 36, 230, 54], ['Q', 230, 72, 212, 72], ['L', 36, 82], ['Q', 18, 82, 18, 64], ['Q', 18, 46, 34, 46], ['Z']];
-    P.shape(roll, { fill: ROLL });
-    P.shape([['M', 22, 72], ['L', 214, 62], ['Q', 226, 62, 229, 58], ['Q', 228, 72, 212, 72], ['L', 36, 82], ['Q', 22, 82, 20, 74], ['Z']], { fill: ROLL_SHADE });
-    P.shape(roll, { stroke: INK, width: MAIN });
-    P.shape(C(40, 64, 8), { fill: PIN, stroke: INK, width: 5 });
+    // Two strips of tape over the top corners.
+    for (const [x, y, a] of [[56, 58, -38], [204, 50, 38]]) {
+      P.save(); P.translate(x, y); P.rotate(a);
+      const t = [['M', -30, -11], ['L', 30, -11], ['L', 27, -4], ['L', 30, 3], ['L', 27, 11], ['L', -30, 11], ['L', -27, 4], ['L', -30, -3], ['Z']];
+      P.shape(t, { fill: TAPE, stroke: TAPE_EDGE, width: 3 });
+      P.restore();
+    }
   }
 
   // A dimension mark: a short line with end ticks, in the plan ink.
@@ -34,6 +39,10 @@
     for (const [x, y] of [[x1, y1], [x2, y2]]) P.shape([['M', x - dx * k, y - dy * k], ['L', x + dx * k, y + dy * k]], { stroke: LINE, width: THIN + 1 });
   }
   const plan = (P, d) => P.shape(d, { stroke: LINE, width: PLAN });
+  // A soft round marker scribble behind the drawing.
+  function swatch(P, slot) {
+    P.shape([['M', 74, 104], ['Q', 130, 86, 188, 102], ['Q', 206, 146, 186, 184], ['Q', 128, 198, 76, 184], ['Q', 56, 146, 74, 104], ['Z']], { fill: SWATCH[slot] });
+  }
 
   const ITEMS = {
     weapon(P) {   // a sword, point up-right
@@ -65,6 +74,7 @@
     draw(slot, size) {
       const P = new Pen(); P.scale(size / 256);
       sheet(P);
+      swatch(P, slot);
       ITEMS[slot](P);
       return P.ops;
     },

@@ -5,7 +5,7 @@ one rounded body with its coat marks kept inside it, two leg stubs drawn behind 
 (only the feet show), hook paws at the chest, the right paw drawn again over the weapon grip.
 Clothes, headgear, capes and weapons come from make_units.py so every cat keeps its look.
 
-    python -I tools/ui/make_cat_rigs.py [unit_id ...]     (default: all 16 soldiers + 6 generals)
+    python -I tools/ui/make_cat_rigs.py [unit_id ...]     (default: all 16 soldiers)
 Writes game/assets/units/<unit_id>/<unit_id>.{json,atlas,png} (Spine 4.2) via make_soldier_spine.
 Work files (part SVGs, renders): docs/design/2026-10-23/cat-rigs/<unit_id>/.
 """
@@ -99,8 +99,6 @@ def parts(kind, klass, rarity, weapon_name, general=False):
 def roster():
     for tid, klass, rarity, weapon_name in U.SOLDIERS:
         yield tid, (U.COAT[klass], klass, rarity, weapon_name, False)
-    for hid, (kind, klass, rarity, weapon_name) in U.GENERALS.items():
-        yield "hero_" + hid, (kind, klass, rarity, weapon_name, True)
 
 def build(uid, spec):
     kind, klass, rarity, weapon_name, general = spec

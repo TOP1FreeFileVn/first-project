@@ -6,17 +6,19 @@
   .row { display: flex; gap: 12px; padding: 12px; align-items: flex-end; }
   .card { background: #eaf0e9; border-radius: 12px; padding: 8px; text-align: center; }
   .dark { background: #5c412c; color: #fff1d1; }
+  .tan { background: #dfbb87; }
   canvas { display: block; margin: 4px auto 0; }
 </style>
 <div class="row" id="big"></div>
 <div class="row" id="small"></div>
+<div class="row" id="tan"></div>
 <script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
 <script src="blueprint.js"></script>
 <script>
   const names = { weapon: 'Vũ khí', helmet: 'Mũ', armor: 'Giáp', boots: 'Giày' };
-  for (const [id, size, dark] of [['big', 200, false], ['small', 48, true]]) {
+  for (const [id, size, dark] of [['big', 200, false], ['small', 48, true], ['tan', 48, 'tan']]) {
     for (const slot of Blueprint.SLOTS) {
-      const card = document.createElement('div'); card.className = 'card' + (dark ? ' dark' : '');
+      const card = document.createElement('div'); card.className = 'card' + (dark === 'tan' ? ' tan' : dark ? ' dark' : '');
       card.textContent = size > 100 ? names[slot] : size + 'px';
       for (const s of size > 100 ? [size] : [48, 32, 26]) {
         const c = document.createElement('canvas'); c.width = s; c.height = s; card.appendChild(c);

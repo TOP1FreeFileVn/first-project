@@ -228,7 +228,7 @@ func _build_hero(troop: Resource, state: Dictionary) -> void:
 
 func _build_stats(troop: Resource, state: Dictionary) -> void:
 	if not state.unlocked:
-		var locked := _text("Mở rương ở Cửa hàng để nhận thẻ và mở khóa lính này.", 26)
+		var locked := _text("Triệu hồi lính hoặc thắng trận để nhận thẻ và mở khóa lính này.", 26)
 		locked.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		_content.add_child(Ui.menu_panel("troops", "Board", locked))
 		_build_ability(troop)
@@ -318,7 +318,7 @@ func _build_footer(state: Dictionary) -> void:
 	var hint := ""
 	var action := "NÂNG CẤP" if mode == "level" else "LÊN SAO"
 	if not state.unlocked:
-		hint = "Thu thập thẻ lính từ rương ở Cửa hàng"
+		hint = "Thu thập thẻ lính từ Triệu hồi và rương chiến thắng"
 		action = "CHƯA MỞ KHÓA"
 	elif cost < 0:
 		if mode == "level" and state.stars < Economy.MAX_STARS:

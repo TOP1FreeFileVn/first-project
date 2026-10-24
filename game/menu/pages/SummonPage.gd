@@ -140,7 +140,7 @@ func _summon(count: int) -> void:
 	if results.is_empty():
 		return
 	var opening = SummonOpening.new()
-	opening.setup(results, "", func(): _summon(count))
+	opening.setup(results, func(): _summon(count))
 	opening.attach(home)
 
 func _show_rates() -> void:

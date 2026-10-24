@@ -35,7 +35,6 @@ const UiKit := preload("res://game/ui/UiKit.gd")
 ## Seconds of victory dance before the result panel.
 const VICTORY_DANCE_TIME := 1.8
 ## Where the leading hero comes out: in front of the middle of the wall.
-const HERO_AT := Vector2(360, DEPLOY_Y)
 ## Milliseconds between two "CHÍ MẠNG!" texts.
 const CRIT_TEXT_GAP := 90
 
@@ -137,13 +136,6 @@ func start_wave() -> void:
 	MusicLib.set_intensity(1.0)
 	waves.start_next()
 	shop_changed.emit()
-
-
-func can_buy(slot: int) -> bool:
-	if phase != "shop" or slot < 0 or slot >= shop.size():
-		return false
-	var offer: Dictionary = shop[slot]
-	return not offer["sold"] and core.can_afford(offer["price"]) and not board.is_full()
 
 
 ## Buys the offer in `slot` onto the board. Returns the new gear or null.

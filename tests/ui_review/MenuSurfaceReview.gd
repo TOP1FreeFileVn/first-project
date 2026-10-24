@@ -68,7 +68,7 @@ func _admin_case() -> void:
 func _chest_case() -> void:
 	var before := _player_snapshot()
 	var opening := ChestOpening.new()
-	opening.setup("Rương Gỗ", Color("a0673a"), {"gold": 83, "cards": {"giao": 1, "kiem": 2}}, [], false)
+	opening.setup("Rương Gỗ", Color("a0673a"), {"gold": 83, "stones": 12, "items": [{"id": "kiem_go", "uid": "r1", "rarity": 0}, {"id": "mu_sat", "uid": "r2", "rarity": 1}]}, [], false)
 	opening.attach(_home)
 	await get_tree().create_timer(0.85).timeout
 	_check(_home.active_menu_context() == "shop", "chest_from_battle_uses_shop_pattern")
@@ -93,7 +93,7 @@ func _summon_case() -> void:
 	_home.select_tab(_home.SHOP_TAB, false)
 	await _settle()
 	var opening := SummonOpening.new()
-	opening.setup([{"type": "item", "id": "kiem_go", "uid": "", "rarity": 0, "stones": 5}], "")
+	opening.setup([{"type": "card", "id": "kiem", "rarity": 0, "new": false}])
 	opening.attach(_home)
 	await get_tree().create_timer(0.32).timeout
 	_check(_home.active_menu_context() == "summon", "summon_over_shop_uses_violet_pattern")
@@ -147,7 +147,7 @@ func _page_opening_case() -> void:
 
 func _teardown_case() -> void:
 	var opening := SummonOpening.new()
-	opening.setup([{"type": "item", "id": "kiem_go", "uid": "", "rarity": 0, "stones": 5}], "")
+	opening.setup([{"type": "card", "id": "kiem", "rarity": 0, "new": false}])
 	opening.attach(_home)
 	await _settle()
 	_home.queue_free()
@@ -167,7 +167,7 @@ func _non_home_case() -> void:
 	opening._close()
 	await _settle()
 	var summon := SummonOpening.new()
-	summon.setup([{"type": "item", "id": "kiem_go", "uid": "", "rarity": 0, "stones": 5}], "")
+	summon.setup([{"type": "card", "id": "kiem", "rarity": 0, "new": false}])
 	summon.attach(host)
 	await get_tree().create_timer(0.32).timeout
 	_check(not summon._menu_pattern and is_equal_approx(summon.dim, 0.9), "non_home_summon_preserves_legacy_dim_fallback")

@@ -5,7 +5,8 @@ const here=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(here,'
 for(const f of [path.join(root,'.claude/skills/canvas-vector-art/scripts/pen.js'),path.join(here,'castle.js')])(0,eval)(fs.readFileSync(f,'utf8'));
 const out=path.join(root,'game/assets/battle/cardboard-castle');
 fs.mkdirSync(out,{recursive:true});
-for(const name of ['rear','facade','composite'])fs.writeFileSync(path.join(out,name+'.svg'),Pen.toSvg(CardboardCastle.layer(name),720,240));
+// The game uses only the tiered files below (Background.gd); the old single-tier
+// rear/facade/composite files were removed.
 // Upgrade tiers 1-5: rear (bare poles behind units) + facade (wall in front). Cloths are drawn
 // by the game from tiers.json anchors, reusing the lobby flag art.
 const tiers={};

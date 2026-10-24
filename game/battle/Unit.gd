@@ -97,8 +97,6 @@ func setup(p_battle, p_troop: Resource, p_team: int, p_tier: int, hp_mult: float
 
 
 func _ready() -> void:
-	# A general fights with its base troop's numbers but always looks like itself (the base
-	# troops are now monsters, so borrowing their art turned the general into a skeleton).
 	var look: String = troop.unit_key
 	sprite.sprite_frames = SpriteLib.unit_frames(look, _sprite_color())
 	sprite.offset = Vector2(0, -SpriteLib.foot_offset(look))
@@ -204,7 +202,7 @@ func apply_burn(dps: float, duration: float) -> void:
 		_fire.play("default")
 
 
-## Damage of the next hit, with the general's command bonus.
+## Damage of the next hit, with a commander troop's aura bonus.
 func hit_damage() -> float:
 	return damage * (1.0 + (_command_bonus if _command_time > 0.0 else 0.0))
 

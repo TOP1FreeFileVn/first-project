@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ydgkqk4frp5"
-path="res://.godot/imported/soldier_kiem.png-104eb28421026c3a108892a084f08cad.ctex"
+uid="uid://o7vyjage0ew4"
+path="res://.godot/imported/1-hero-page.png-c1a31f292824e51828d757802ba22edc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/assets/units/soldier_kiem/soldier_kiem.png"
-dest_files=["res://.godot/imported/soldier_kiem.png-104eb28421026c3a108892a084f08cad.ctex"]
+source_file="res://docs/design/2026-10-24/blueprint-icons/in-game/1-hero-page.png"
+dest_files=["res://.godot/imported/1-hero-page.png-c1a31f292824e51828d757802ba22edc.ctex"]
 
 [params]
 

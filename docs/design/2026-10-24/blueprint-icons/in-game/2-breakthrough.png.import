@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj11st3grpbmr"
-path="res://.godot/imported/hero_valor.png-c05bdaa602c10ebff1b92314f0cc736c.ctex"
+uid="uid://b3yv14e1ujjti"
+path="res://.godot/imported/2-breakthrough.png-3d176ad8d908b10935057fb87d0b6b01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/assets/units/hero_valor/hero_valor.png"
-dest_files=["res://.godot/imported/hero_valor.png-c05bdaa602c10ebff1b92314f0cc736c.ctex"]
+source_file="res://docs/design/2026-10-24/blueprint-icons/in-game/2-breakthrough.png"
+dest_files=["res://.godot/imported/2-breakthrough.png-3d176ad8d908b10935057fb87d0b6b01.ctex"]
 
 [params]
 

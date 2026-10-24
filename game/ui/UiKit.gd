@@ -34,7 +34,6 @@ const COZY_PANEL := "Containers/Containers/ContainerAdvanced4.png"
 const COZY_PLANK := "Containers/Containers/WoodenContainer1.png"
 const COZY_CLOSE := "Icons/Icons Default/64px/IconsDefault25_64px.png"
 const COZY_PLUS := "Icons/Icons Default/64px/IconsDefault19_64px.png"
-const COZY_HEART := "Icons/Icons Default/64px/IconsDefault38_64px.png"
 const COZY_CHECKED := "Checkboxes/Checkbox2_checked.png"
 const COZY_UNCHECKED := "Checkboxes/Checkbox2_unchecked.png"
 
@@ -151,10 +150,6 @@ static func tag(text: String, fill := Color("ff5a4a")) -> PanelContainer:
 	return p
 
 
-static func fish_texture() -> Texture2D:
-	return Ui.icon_tex("fish", 64)
-
-
 ## `size`: the largest size it is shown at (bigger reveals need the 128 art).
 static func coin_texture(size := 64) -> Texture2D:
 	return Ui.icon_tex("coin", size)
@@ -213,14 +208,6 @@ static func icon_button(texture: Texture2D, button_size: float, on_pressed: Call
 
 
 ## The "+" next to the currencies.
-static func plus_button(on_pressed: Callable) -> Button:
-	if is_game():
-		return icon_button(Ui.icon_tex("badge_plus", 48), 40, on_pressed)
-	if is_cozy():
-		return icon_button(SpriteLib.cozy(COZY_PLUS), 42, on_pressed)
-	return button("+", Vector2(40, 40), on_pressed)
-
-
 ## A red close button (popup headers).
 static func close_button(on_pressed: Callable) -> Button:
 	if is_game():

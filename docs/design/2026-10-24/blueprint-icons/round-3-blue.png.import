@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0coomwae06v"
-path="res://.godot/imported/unit_hero_valor.svg-2b07c0276f5cdb8e80a13a9ed4d3221e.ctex"
+uid="uid://dvgmi222r10l1"
+path="res://.godot/imported/round-3-blue.png-f40190f3cca16d2b5c288a43bf436775.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/ui/skin/unit_hero_valor.svg"
-dest_files=["res://.godot/imported/unit_hero_valor.svg-2b07c0276f5cdb8e80a13a9ed4d3221e.ctex"]
+source_file="res://docs/design/2026-10-24/blueprint-icons/round-3-blue.png"
+dest_files=["res://.godot/imported/round-3-blue.png-f40190f3cca16d2b5c288a43bf436775.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

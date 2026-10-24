@@ -8,7 +8,7 @@ extends Node2D
 const SoldierRig := preload("res://game/battle/SoldierRig.gd")
 const TERRAIN := preload("res://game/assets/lobby/cardboard/terrain-clean.png")
 const GOBLIN := preload("res://game/ui/skin/unit_warrior.svg")
-const SKELETON := "res://game/assets/units/soldier_kiem/soldier_kiem.json"
+const SKELETON := "res://game/assets/units/kiem/kiem.json"
 const START := Vector2(413, 725)
 const FOE_AT := Vector2(305, 925)
 const REACH := 92.0

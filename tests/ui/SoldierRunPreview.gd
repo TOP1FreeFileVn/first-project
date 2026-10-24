@@ -6,7 +6,7 @@ extends Node2D
 
 const SoldierRig := preload("res://game/battle/SoldierRig.gd")
 const TERRAIN := preload("res://game/assets/lobby/cardboard/terrain-clean.png")
-const SKELETON := "res://game/assets/units/soldier_kiem/soldier_kiem.json"
+const SKELETON := "res://game/assets/units/kiem/kiem.json"
 ## Centreline of the dirt road in the 720x1280 lobby art (traced from terrain-clean.png),
 ## from the castle gate down past the scratching post.
 const PATH := [Vector2(348, 650), Vector2(395, 690), Vector2(413, 725), Vector2(403, 760), Vector2(361, 800),

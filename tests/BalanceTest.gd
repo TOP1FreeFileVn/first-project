@@ -5,6 +5,7 @@ extends Node
 # Run: Godot --headless --path . res://tests/BalanceTest.tscn
 
 const Economy = preload("res://game/core/Economy.gd")
+const Content = preload("res://game/core/Content.gd")
 
 var _failures := 0
 var _checks := 0
@@ -21,8 +22,8 @@ func _ready() -> void:
 func _check_formulas_match_old_code() -> void:
 	for level in range(1, 31):
 		_eq("level_cost %d" % level, Economy.level_cost(level), roundi(50.0 * pow(1.35, level - 1)))
-		for stars in range(1, 4):
-			_eq("troop_multiplier %d/%d" % [level, stars], Economy.troop_multiplier(level, stars), (1.0 + 0.08 * (level - 1)) * pow(1.2, stars - 1))
+		for stars in range(1, 6):
+			_eq("troop_multiplier %d/%d" % [level, stars], Economy.troop_multiplier(level, stars), (1.0 + 0.08 * (level - 1)) * pow(1.12, stars - 1))
 	for tier in range(1, 6):
 		_eq("tier %d" % tier, Economy.tier_multiplier(tier), pow(1.75, tier - 1))
 		for base in [2.6, 4.5, 6.0]:
@@ -54,7 +55,7 @@ func _check_formulas_match_old_code() -> void:
 		for level in range(0, 6):
 			_eq("workshop %s %d" % [id, level], Economy.workshop_cost(id, level), roundi(old_workshop[id][0] * pow(old_workshop[id][1], level)))
 	for index in range(0, 10):
-		for stars in range(1, 4):
+		for stars in range(1, 6):
 			_eq("win %d/%d" % [index, stars], Economy.win_gold(index, stars), 60 + 40 * (index + 1) + 20 * stars)
 	for waves in range(0, 9):
 		_eq("loss %d" % waves, Economy.loss_gold(waves), 15 * waves)
@@ -64,8 +65,8 @@ func _check_formulas_match_old_code() -> void:
 		var ratio := i / 100.0
 		_eq("stars %s" % ratio, Economy.battle_stars(ratio), 3 if ratio >= 0.8 else (2 if ratio >= 0.45 else 1))
 	_eq("castle table", Economy.CASTLE.size(), 10)
-	_eq("max stars", Economy.MAX_STARS, 3)
-	_eq("gift", Economy.FIRST_CLEAR_GIFT[0], "lancer")
+	_eq("max stars", Economy.MAX_STARS, 5)
+	_eq("gift", Economy.FIRST_CLEAR_GIFT[0], "giao")
 
 
 func _check_editing() -> void:
@@ -127,7 +128,8 @@ func _check_crit() -> void:
 			_eq("%s never crits" % id, t.crit_factor(), 1.0)
 	var assassin: Resource = PlayerData.TROOPS["assassin"]
 	_eq("assassin crit factor", assassin.crit_factor(), 1.0 + 0.25 * (2.0 - 1.0))
-	_ok("assassin crits most", PlayerData.TROOPS.values().all(func(t): return t.crit_chance <= assassin.crit_chance))
+	# The assassin is the critting enemy; cat soldiers have their own crit tuning.
+	_ok("assassin crits most among enemies", PlayerData.TROOPS.values().filter(func(t): return t.id in Content.ENEMY_ORDER).all(func(t): return t.crit_chance <= assassin.crit_chance))
 
 
 func _eq(name: String, actual, expected) -> void:

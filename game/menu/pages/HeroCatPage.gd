@@ -302,7 +302,7 @@ func _bag() -> Control:
 	var contents: Control = grid
 	if spare.is_empty():
 		grid.free()
-		var empty_text := "Chưa có trang bị loại này." if count > 0 else "Túi trống · Nhận trang bị ở tab Triệu hồi"
+		var empty_text := "Chưa có trang bị loại này." if count > 0 else "Túi trống · Mở rương ở Cửa hàng để nhận trang bị"
 		var empty := _paper_text(empty_text, 20, Color("fff1d1"))
 		empty.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		empty.custom_minimum_size.x = 600

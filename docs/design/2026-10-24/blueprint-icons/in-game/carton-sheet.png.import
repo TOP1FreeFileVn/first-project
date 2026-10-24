@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blhs4op0gdapq"
-path="res://.godot/imported/facade.svg-d035fcaae9b98e8eaa9d8aa9f21b8aec.ctex"
+uid="uid://1b06vipo4k7d"
+path="res://.godot/imported/carton-sheet.png-e8054d6df2eba3cffa9efaf647a5988f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/assets/battle/cardboard-castle/facade.svg"
-dest_files=["res://.godot/imported/facade.svg-d035fcaae9b98e8eaa9d8aa9f21b8aec.ctex"]
+source_file="res://docs/design/2026-10-24/blueprint-icons/in-game/carton-sheet.png"
+dest_files=["res://.godot/imported/carton-sheet.png-e8054d6df2eba3cffa9efaf647a5988f.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

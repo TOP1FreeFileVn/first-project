@@ -203,5 +203,5 @@ def main(folder, name, style="slash"):
     print(out / f"{name}.json", f"{len(bones)} bones, {len(slots)} slots, page {page[0]}x{page[1]}")
 
 if __name__ == "__main__":
-    main(Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT, sys.argv[2] if len(sys.argv) > 2 else "soldier_kiem",
+    main(Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT, sys.argv[2] if len(sys.argv) > 2 else "kiem",
          sys.argv[3] if len(sys.argv) > 3 else "slash")

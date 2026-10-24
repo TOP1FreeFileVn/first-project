@@ -86,7 +86,7 @@ const ITEMS := {
 	"giay_than": {"slot": "boots", "name": "Giày Thần Tốc", "icon": "eq_boots", "rarity": 3, "stats": {"hp": 380, "atk": 22}},
 }
 
-# --- Odds shared by the troop summon (bottom tab "Triệu hồi") and chest equipment rolls ---
+# --- Rarity odds: the troop summon (tab "Triệu hồi") and chest equipment rolls share them ---
 const SUMMON_COST := {1: 30, 10: 270}
 ## Rarity odds in %, common → legendary. A x10 summon always holds at least one epic card.
 const SUMMON_RARITY := [62.0, 28.0, 8.5, 1.5]

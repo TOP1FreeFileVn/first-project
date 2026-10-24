@@ -18,7 +18,7 @@ const DEFAULT_TEAM_SLOTS := 3
 
 static var RARITY_WEIGHTS: Array = []
 static var STAR_CARD_COST: Array = []
-static var MAX_STARS := 3
+static var MAX_STARS := 5
 static var LEVELS_PER_STAR := 10
 static var SPARE_CARD_GOLD := 20
 static var CASTLE: Array = []

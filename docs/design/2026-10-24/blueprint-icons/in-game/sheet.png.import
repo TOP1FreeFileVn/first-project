@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2bf2ed13x6x0"
-path="res://.godot/imported/hero_ember.png-fbbf236ce4ad7c9e19db97547155dac3.ctex"
+uid="uid://d1b3at14uxpt5"
+path="res://.godot/imported/sheet.png-dcebe98c977fb067da321f4345bc64ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/assets/units/hero_ember/hero_ember.png"
-dest_files=["res://.godot/imported/hero_ember.png-fbbf236ce4ad7c9e19db97547155dac3.ctex"]
+source_file="res://docs/design/2026-10-24/blueprint-icons/in-game/sheet.png"
+dest_files=["res://.godot/imported/sheet.png-dcebe98c977fb067da321f4345bc64ac.ctex"]
 
 [params]
 

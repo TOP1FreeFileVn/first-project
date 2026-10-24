@@ -22,7 +22,6 @@ const CIRCLE_AT := Vector2(360, 600)
 const CARD_SIZE := Vector2(122, 168)
 
 var _results: Array = []
-var _featured := ""
 var _menu_pattern := false
 var _on_again: Callable
 var _best := 0
@@ -52,9 +51,8 @@ var _skip: Button
 var _extras: Array = []
 
 
-func setup(results: Array, featured: String, on_again := Callable()) -> void:
+func setup(results: Array, on_again := Callable()) -> void:
 	_results = results
-	_featured = featured
 	_on_again = on_again
 	for result in results:
 		_best = maxi(_best, _rank(result))
