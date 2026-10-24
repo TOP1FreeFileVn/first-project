@@ -3,7 +3,8 @@ extends RefCounted
 # Retention features: the 7-day login gift, daily quests with activity milestones, and
 # the avatars / frames for the player profile. Rewards are dictionaries that
 # PlayerData.grant() understands: {"gold": n}, {"gems": n}, {"cards": n} (random troop
-# cards), {"stones": n} (Forge Stones), {"item": rarity} (a random hero-cat item).
+# cards), {"stones": n} (Forge Stones), {"blueprints": n} (random-slot Blueprints),
+# {"item": rarity} (a random hero-cat item).
 
 const LOGIN_REWARDS := [
 	{"gold": 300},
@@ -22,13 +23,13 @@ const QUESTS := [
 	{"id": "chest", "text": "Mở 1 rương", "goal": 1, "reward": {"gems": 5}},
 	{"id": "upgrade", "text": "Nâng cấp lính hoặc trang bị 2 lần", "goal": 2, "reward": {"gold": 200}},
 	{"id": "patrol", "text": "Thu hoạch tuần tra 1 lần", "goal": 1, "reward": {"gold": 150}},
-	{"id": "summon", "text": "Triệu hồi trang bị 1 lần", "goal": 1, "reward": {"gems": 10}},
+	{"id": "summon", "text": "Triệu hồi lính 1 lần", "goal": 1, "reward": {"gems": 10}},
 ]
 const QUEST_POINTS := 20
 const QUEST_MILESTONES := [
 	{"points": 40, "reward": {"gold": 400}},
-	{"points": 80, "reward": {"gems": 20}},
-	{"points": 120, "reward": {"stones": 30}},
+	{"points": 80, "reward": {"gems": 20, "blueprints": 2}},
+	{"points": 120, "reward": {"stones": 30, "blueprints": 3}},
 ]
 
 const AVATAR_COUNT := 25

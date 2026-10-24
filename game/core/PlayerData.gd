@@ -58,6 +58,8 @@ var hero_cat: Dictionary = {}
 var cheated := false
 ## Forge Stones (đá rèn): what hero-cat equipment levels with (HeroCat.upgrade_cost).
 var forge_stones := 0
+## Blueprints (bản vẽ) by equipment slot: what breakthroughs past level 10/20/30 need.
+var blueprints := {}
 ## Equipment summon: pulls since the last legendary (pity), free daily pull, total pulls.
 var summon_pity := 0
 var summon_free_day := -1
@@ -415,36 +417,94 @@ func free_chest_seconds_left() -> int:
 	return maxi(0, free_chest_at - now())
 
 
-func can_open_chest(kind: String) -> bool:
+func can_open_chest(kind: String, count: int = 1) -> bool:
+	if not kind in Economy.CHEST_ORDER or not Economy.CHESTS.has(kind):
+		return false
+	if count != 1 and (kind != "gold" or count != 10):
+		return false
 	var chest: Dictionary = Economy.CHESTS[kind]
 	if kind == "wood":
 		return free_chest_seconds_left() == 0
-	return gold >= chest["gold"] and gems >= chest["gems"]
+	return gold >= int(chest["gold"]) * count and gems >= int(chest["gems"]) * count
 
 
-## Pays for and opens a chest. Returns {"cards": {id: count}, "gold": n} or {} if refused.
-func open_chest(kind: String) -> Dictionary:
-	if not can_open_chest(kind):
+## Pays for and opens a chest. Chests hold hero-cat equipment and Forge Stones (troop cards
+## come from the summon tab and battles). Returns {"items": [{"id", "uid", "rarity"}],
+## "stones": n, "gold": n} or {} if refused. Gold supports 1 or 10 chests at the
+## ordinary per-chest price. A batch keeps each chest's guarantees and pity roll.
+func open_chest(kind: String, count: int = 1) -> Dictionary:
+	if not can_open_chest(kind, count):
 		return {}
 	var chest: Dictionary = Economy.CHESTS[kind]
-	gold -= chest["gold"]
-	gems -= chest["gems"]
+	# Check the full bill before granting anything; a batch never opens partially.
+	gold -= int(chest["gold"]) * count
+	gems -= int(chest["gems"]) * count
 	if kind == "wood":
 		free_chest_at = now() + Economy.FREE_CHEST_COOLDOWN
+	var result := {"items": [], "stones": 0, "gold": 0}
+	for i in count:
+		var loot := _grant_chest_loot(kind)
+		result["items"].append_array(loot["items"])
+		result["stones"] += loot["stones"]
+		result["gold"] += loot["gold"]
+		if loot.has("blueprints"):
+			if not result.has("blueprints"):
+				result["blueprints"] = {}
+			for slot in loot["blueprints"]:
+				result["blueprints"][slot] = int(result["blueprints"].get(slot, 0)) + int(loot["blueprints"][slot])
+	if count > 1:
+		result["chests"] = count
+	track("chest", count)
+	_commit()
+	return result
+
+
+## Grants one chest's ordinary roll, including its own floor and pity; caller pays
+## the entire batch and commits once. Item order keeps each chest's rewards together.
+func _grant_chest_loot(kind: String) -> Dictionary:
+	var chest: Dictionary = Economy.CHESTS[kind]
 	var guaranteed_epic := false
 	if kind == "gold":
 		gold_chest_pity += 1
 		if gold_chest_pity >= Economy.GOLD_CHEST_PITY:
 			guaranteed_epic = true
 			gold_chest_pity = 0
-	var result := _roll_cards(chest["cards"], chest["min_rare"], guaranteed_epic)
+	var rarities := []
+	for i in int(chest.get("items", 1)):
+		rarities.append(_roll_gear_rarity())
+	# "min_rare" is the floor rarity; "min_count" (default 1) items are lifted to it.
+	# The lowest rolls are lifted, so the item count never changes.
+	rarities.sort()
+	var floor_rarity := int(chest.get("min_rare", 0))
+	if floor_rarity > 0:
+		for i in mini(int(chest.get("min_count", 1)), rarities.size()):
+			rarities[i] = maxi(rarities[i], floor_rarity)
+	if guaranteed_epic and rarities.max() < 2:
+		rarities[0] = 2
+	var items := []
+	for rarity in rarities:
+		var id := HeroCat.random_of_rarity(rarity)
+		items.append({"id": id, "uid": HeroCat.add_item(hero_cat, id), "rarity": HeroCat.ITEMS[id]["rarity"]})
+	var stones_range: Array = chest.get("stones", [0, 0])
+	var stones := randi_range(int(stones_range[0]), int(stones_range[1]))
+	forge_stones += stones
 	var bonus: Array = chest["bonus_gold"]
-	result["gold"] = randi_range(bonus[0], bonus[1]) if bonus[1] > 0 else 0
-	_apply_loot(result)
-	track("chest")
-	_commit()
+	var result := {"items": items, "stones": stones, "gold": randi_range(bonus[0], bonus[1]) if bonus[1] > 0 else 0}
+	var plans := int(HeroCat.CHEST_BLUEPRINTS.get(kind, 0))
+	if plans > 0:
+		result["blueprints"] = _grant_blueprints(plans)
+	gold += result["gold"]
 	return result
 
+
+## Equipment rarity for a chest roll, by HeroCat.SUMMON_RARITY odds.
+func _roll_gear_rarity() -> int:
+	var roll := randf() * 100.0
+	for r in HeroCat.SUMMON_RARITY.size():
+		roll -= HeroCat.SUMMON_RARITY[r]
+		if roll < 0.0:
+			return r
+	return 0
 
 func gold_chest_pity_left() -> int:
 	return Economy.GOLD_CHEST_PITY - gold_chest_pity
@@ -597,6 +657,8 @@ func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictiona
 	reward["gold"] = gold_won
 	reward["stones"] = (HeroCat.WIN_STONES + HeroCat.WIN_STONES_PER_LEVEL * index) * (2 if first_clear else 1)
 	forge_stones += reward["stones"]
+	if is_boss_level(index):
+		reward["blueprints"] = _grant_blueprints(HeroCat.BOSS_BLUEPRINTS * (2 if first_clear else 1))
 	var chest: Dictionary = Economy.CHESTS["victory"]
 	var chest_cards: Dictionary = _roll_cards(chest["cards"] + (1 if stars == 3 else 0), 0, false)["cards"]
 	for id in chest_cards:
@@ -627,8 +689,8 @@ func can_summon(count: int) -> bool:
 func summon_pity_left() -> int:
 	return HeroCat.SUMMON_PITY - summon_pity
 
-## Pays for and rolls `count` pulls (1 or 10). Each result is {"type": "item", "id", "uid",
-## "rarity", "stones"}. A x10 holds at least one epic. [] if refused.
+## Pays for and rolls `count` pulls (1 or 10). Each result is a troop card:
+## {"type": "card", "id", "rarity", "new"}. A x10 holds at least one epic. [] if refused.
 func summon(count: int) -> Array:
 	if not can_summon(count):
 		return []
@@ -640,10 +702,11 @@ func summon(count: int) -> Array:
 	for i in count:
 		results.append(_summon_one())
 	if count == 10 and results.all(func(r): return r["rarity"] < 2):
-		# Swap the last pull for a guaranteed epic.
-		hero_cat["bag"].erase(results[9]["uid"])
-		forge_stones -= results[9]["stones"]
-		results[9] = _summon_item(2)
+		# The last pull becomes a guaranteed epic (its card was already given; take it back).
+		var swapped: Dictionary = results[9]
+		if not swapped["new"]:
+			troops[swapped["id"]]["cards"] = maxi(0, troops[swapped["id"]]["cards"] - 1)
+		results[9] = _summon_card(2)
 	track("summon", count)
 	_commit()
 	return results
@@ -660,16 +723,16 @@ func _summon_one() -> Dictionary:
 			if roll < 0.0:
 				rarity = r
 				break
-	return _summon_item(rarity)
+	return _summon_card(rarity)
 
-func _summon_item(rarity: int) -> Dictionary:
-	var id := HeroCat.random_of_rarity(rarity)
-	var real: int = HeroCat.ITEMS[id]["rarity"]
+func _summon_card(rarity: int) -> Dictionary:
+	var id := _random_troop_of(rarity)
+	var real: int = TROOPS[id].rarity
 	if real >= 3:
 		summon_pity = 0
-	var uid := HeroCat.add_item(hero_cat, id)
-	forge_stones += HeroCat.SUMMON_STONES
-	return {"type": "item", "id": id, "uid": uid, "rarity": real, "stones": HeroCat.SUMMON_STONES}
+	var fresh: bool = not troops[id]["unlocked"]
+	add_cards(id, 1)
+	return {"type": "card", "id": id, "rarity": real, "new": fresh}
 
 # --- Rewards ----------------------------------------------------------------------------
 
@@ -692,6 +755,8 @@ func grant(reward: Dictionary) -> Dictionary:
 		for id in got["cards"]:
 			if troops[id]["unlocked"] and not before[id]:
 				got["new"].append(id)
+	if reward.has("blueprints"):
+		got["blueprints"] = _grant_blueprints(int(reward["blueprints"]))
 	if reward.has("item"):
 		# {"item": rarity}: a random hero-cat item of that rarity.
 		var id := HeroCat.random_of_rarity(int(reward["item"]))
@@ -899,6 +964,9 @@ func _reset() -> void:
 	cheated = false
 	fast_chest = false
 	forge_stones = 0
+	blueprints = {}
+	for slot in HeroCat.SLOTS:
+		blueprints[slot] = 0
 	summon_pity = 0
 	summon_free_day = -1
 	summon_total = 0
@@ -971,18 +1039,36 @@ func hero_cat_equip(uid: String) -> void:
 
 func hero_cat_can_upgrade(uid: String) -> bool:
 	var stones := HeroCat.upgrade_cost(hero_cat, uid)
-	return stones >= 0 and forge_stones >= stones and gold >= HeroCat.upgrade_gold(hero_cat, uid)
+	if stones < 0 or forge_stones < stones or gold < HeroCat.upgrade_gold(hero_cat, uid):
+		return false
+	var slot: String = HeroCat.def(hero_cat, uid)["slot"]
+	return blueprints.get(slot, 0) >= HeroCat.breakthrough_cost(hero_cat, uid)
 
 ## Levels an item with Forge Stones (and a little gold).
 func hero_cat_upgrade(uid: String) -> bool:
 	if not hero_cat_can_upgrade(uid):
 		return false
+	var slot: String = HeroCat.def(hero_cat, uid)["slot"]
+	blueprints[slot] -= HeroCat.breakthrough_cost(hero_cat, uid)
 	forge_stones -= HeroCat.upgrade_cost(hero_cat, uid)
 	gold -= HeroCat.upgrade_gold(hero_cat, uid)
 	hero_cat["bag"][uid]["level"] += 1
 	track("upgrade")
 	_commit()
 	return true
+
+## Every fifth level (5, 10, 15) is a boss level: it pays Blueprints.
+func is_boss_level(index: int) -> bool:
+	return (index + 1) % 5 == 0
+
+## Adds `count` Blueprints to random slots. Returns {slot: n} as given.
+func _grant_blueprints(count: int) -> Dictionary:
+	var got := {}
+	for i in count:
+		var slot: String = HeroCat.SLOTS.pick_random()
+		blueprints[slot] = blueprints.get(slot, 0) + 1
+		got[slot] = got.get(slot, 0) + 1
+	return got
 
 ## Item ids with enough copies to fuse (FUSE_COUNT, a worn one counts) and a higher rarity.
 func hero_cat_fusable() -> Array:
@@ -1012,7 +1098,7 @@ func hero_cat_fuse(id: String) -> String:
 	for uid in used:
 		hero_cat["bag"].erase(uid)
 	var new_uid := HeroCat.add_item(hero_cat, target)
-	hero_cat["bag"][new_uid]["level"] = mini(level, HeroCat.MAX_LEVEL)
+	hero_cat["bag"][new_uid]["level"] = mini(level, HeroCat.level_cap(hero_cat, new_uid))
 	if worn:
 		hero_cat["equipped"][HeroCat.ITEMS[target]["slot"]] = new_uid
 	_commit()
@@ -1023,6 +1109,8 @@ func hero_cat_salvage(uid: String) -> int:
 	if HeroCat.is_equipped(hero_cat, uid) or HeroCat.item(hero_cat, uid).is_empty():
 		return 0
 	var stones := HeroCat.salvage_value(hero_cat, uid)
+	var d := HeroCat.def(hero_cat, uid)
+	blueprints[d["slot"]] = blueprints.get(d["slot"], 0) + HeroCat.SALVAGE_BLUEPRINTS[d["rarity"]]
 	hero_cat["bag"].erase(uid)
 	forge_stones += stones
 	_commit()
@@ -1064,6 +1152,7 @@ func to_dict() -> Dictionary:
 		"shop": {"free_chest_at": free_chest_at, "gold_chest_pity": gold_chest_pity},
 		"patrol": {"last_claim": patrol_last_claim, "quick_left": patrol_quick_left, "quick_day": patrol_quick_day},
 		"forge_stones": forge_stones,
+		"blueprints": blueprints,
 		"summon": {"pity": summon_pity, "free_day": summon_free_day, "total": summon_total, "kind": "equipment"},
 		"login": {"claimed": login_claimed, "day": login_day, "cycles": login_cycles},
 		"quests": {"day": quest_day, "progress": quest_progress, "claimed": quest_claimed, "milestones": quest_milestones},
@@ -1119,6 +1208,9 @@ func from_dict(data: Dictionary) -> void:
 	patrol_quick_left = int(patrol.get("quick_left", Economy.PATROL_QUICK_FREE))
 	patrol_quick_day = int(patrol.get("quick_day", 0))
 	forge_stones = int(data.get("forge_stones", 0))
+	var saved_blueprints: Dictionary = data.get("blueprints", {})
+	for slot in HeroCat.SLOTS:
+		blueprints[slot] = int(saved_blueprints.get(slot, 0))
 	var summon_data: Dictionary = data.get("summon", {})
 	if summon_data.get("kind", "") == "equipment":
 		summon_pity = int(summon_data.get("pity", 0))

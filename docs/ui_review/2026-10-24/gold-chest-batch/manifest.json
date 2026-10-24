@@ -1,0 +1,292 @@
+{
+	"captures": [
+		"funded-360x640.png",
+		"x1-only-360x640.png",
+		"insufficient-360x640.png",
+		"funded-450x800.png",
+		"x1-only-450x800.png",
+		"insufficient-450x800.png",
+		"rates-sheet-450x800.png",
+		"actual-x1-opening-450x800.png",
+		"actual-x1-card-450x800.png",
+		"actual-x1-summary-450x800.png",
+		"actual-x10-opening-450x800.png",
+		"actual-x10-summary-450x800.png",
+		"actual-x10-summary-scrolled-450x800.png"
+	],
+	"checks": 199,
+	"failures": [],
+	"layouts": [
+		{
+			"nodes": [
+				{
+					"node": "FeaturedChest",
+					"rect": [
+						24.0,
+						308.0,
+						664.0,
+						348.0
+					]
+				},
+				{
+					"node": "GoldRewardBubble",
+					"rect": [
+						304.0,
+						394.0,
+						364.0,
+						141.0
+					]
+				},
+				{
+					"node": "GoldOpen",
+					"rect": [
+						304.0,
+						544.0,
+						177.0,
+						100.0
+					]
+				},
+				{
+					"node": "GoldOpenTen",
+					"rect": [
+						491.0,
+						544.0,
+						177.0,
+						100.0
+					]
+				},
+				{
+					"node": "GoldMaterials",
+					"rect": [
+						324.0,
+						452.0,
+						324.0,
+						33.0
+					]
+				},
+				{
+					"node": "GoldGuarantee",
+					"rect": [
+						324.0,
+						488.0,
+						324.0,
+						34.0
+					]
+				},
+				{
+					"node": "ShopRates",
+					"rect": [
+						562.0,
+						320.0,
+						106.0,
+						64.0
+					]
+				},
+				{
+					"node": "SupplyChestGrid",
+					"rect": [
+						24.0,
+						754.0,
+						664.0,
+						367.0
+					]
+				},
+				{
+					"node": "SupplyChest_wood",
+					"rect": [
+						24.0,
+						754.0,
+						324.0,
+						367.0
+					]
+				},
+				{
+					"node": "SupplyChest_silver",
+					"rect": [
+						364.0,
+						754.0,
+						324.0,
+						367.0
+					]
+				},
+				{
+					"node": "WoodOpen",
+					"rect": [
+						40.0,
+						1016.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "SilverOpen",
+					"rect": [
+						380.0,
+						1019.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "GemPackGrid",
+					"rect": [
+						24.0,
+						1267.0,
+						664.0,
+						857.0
+					]
+				}
+			],
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"nodes": [
+				{
+					"node": "FeaturedChest",
+					"rect": [
+						24.0,
+						308.0,
+						664.0,
+						348.0
+					]
+				},
+				{
+					"node": "GoldRewardBubble",
+					"rect": [
+						304.0,
+						394.0,
+						364.0,
+						141.0
+					]
+				},
+				{
+					"node": "GoldOpen",
+					"rect": [
+						304.0,
+						544.0,
+						177.0,
+						100.0
+					]
+				},
+				{
+					"node": "GoldOpenTen",
+					"rect": [
+						491.0,
+						544.0,
+						177.0,
+						100.0
+					]
+				},
+				{
+					"node": "GoldMaterials",
+					"rect": [
+						324.0,
+						452.0,
+						324.0,
+						33.0
+					]
+				},
+				{
+					"node": "GoldGuarantee",
+					"rect": [
+						324.0,
+						488.0,
+						324.0,
+						34.0
+					]
+				},
+				{
+					"node": "ShopRates",
+					"rect": [
+						562.0,
+						320.0,
+						106.0,
+						64.0
+					]
+				},
+				{
+					"node": "SupplyChestGrid",
+					"rect": [
+						24.0,
+						754.0,
+						664.0,
+						367.0
+					]
+				},
+				{
+					"node": "SupplyChest_wood",
+					"rect": [
+						24.0,
+						754.0,
+						324.0,
+						367.0
+					]
+				},
+				{
+					"node": "SupplyChest_silver",
+					"rect": [
+						364.0,
+						754.0,
+						324.0,
+						367.0
+					]
+				},
+				{
+					"node": "WoodOpen",
+					"rect": [
+						40.0,
+						1016.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "SilverOpen",
+					"rect": [
+						380.0,
+						1019.0,
+						292.0,
+						88.0
+					]
+				},
+				{
+					"node": "GemPackGrid",
+					"rect": [
+						24.0,
+						1267.0,
+						664.0,
+						857.0
+					]
+				}
+			],
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/gold-chest-batch-profile/Roaming/Godot/app_userdata/Gear Defenders",
+	"purchases": [
+		{
+			"blueprints": 6,
+			"cost": 120,
+			"count": 1,
+			"items": 6,
+			"stones": 86,
+			"title": "Rương Vàng"
+		},
+		{
+			"blueprints": 60,
+			"cost": 1200,
+			"count": 10,
+			"items": 60,
+			"stones": 816,
+			"title": "Rương Vàng ×10"
+		}
+	],
+	"scope": "Serialized production Home and normal ShopPage, selected A gold card only, preserved supply cards and navigation, real pointer x1/x10 purchases and aggregated ChestOpening summary."
+}

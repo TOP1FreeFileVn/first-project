@@ -122,6 +122,11 @@ func show_end(won: bool, stars: int, detail: String, reward: Dictionary) -> void
 		st.add_child(UiKit.forge_stone_icon(40))
 		st.add_child(Ui.label(UiKit.format_number(reward["stones"]), "LabelDark", 24))
 		loot.add_child(st)
+	for slot in reward.get("blueprints", {}):
+		var bp := Ui.hbox(4)
+		bp.add_child(UiKit.blueprint_icon(slot, 40))
+		bp.add_child(Ui.label(str(reward["blueprints"][slot]), "LabelDark", 24))
+		loot.add_child(bp)
 	_end_box.add_child(Ui.panel("Well", loot))
 	var cards: Dictionary = reward.get("cards", {})
 	if not cards.is_empty():

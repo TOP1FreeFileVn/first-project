@@ -1,16 +1,16 @@
 extends "res://game/menu/pages/MenuPage.gd"
 
-# The equipment summon (bottom tab "Triệu hồi"): gems buy random items for the hero cat
-# (weapons, helmets, armour, boots) plus some Forge Stones with every pull. A banner with
-# the four item kinds, the pity counter toward a legendary, the rates, and x1 / x10 buttons.
-# Results play in SummonOpening. Numbers live in HeroCat (SUMMON_*).
+# The troop summon (bottom tab "Triệu hồi"): gems recruit random troop cards. A first card
+# unlocks the troop; more cards raise its stars on the Lính tab. A banner with the four best
+# troops, the pity counter toward a legendary, the rates, and x1 / x10 buttons. Results play
+# in SummonOpening. Numbers live in HeroCat (SUMMON_*). Equipment comes from shop chests.
 
 const HeroCat = preload("res://game/core/HeroCat.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const SummonOpening = preload("res://game/ui/SummonOpening.gd")
 const BANNER_MIN_HEIGHT := 460.0
-## The items shown standing on the banner, one per slot, best first.
-const SHOWCASE := ["katana_nguyet", "mu_rong", "giap_rong", "giay_than"]
+## The troops shown standing on the banner: the legendary of each class.
+const SHOWCASE := ["katana", "dai_bac", "dua_phep", "bua"]
 
 func build() -> void:
 	fill_available_height()
@@ -19,7 +19,7 @@ func build() -> void:
 	body.add_child(_banner(color))
 
 	var box := UiKit.vbox(10)
-	var pity := UiKit.ink("Còn %d lượt chắc chắn ra trang bị Huyền thoại" % PlayerData.summon_pity_left(), 22)
+	var pity := UiKit.ink("Còn %d lượt chắc chắn ra lính Huyền thoại" % PlayerData.summon_pity_left(), 22)
 	pity.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)
@@ -28,7 +28,7 @@ func build() -> void:
 	bar.max_value = HeroCat.SUMMON_PITY
 	bar.value = PlayerData.summon_pity
 	box.add_child(bar)
-	var note := UiKit.ink("Gói x10 chắc chắn có ít nhất 1 Sử thi · Mỗi lượt kèm %d đá rèn · 3 món giống nhau ghép thành 1 món phẩm cao hơn" % HeroCat.SUMMON_STONES, 22)
+	var note := UiKit.ink("Gói x10 chắc chắn có ít nhất 1 thẻ Sử thi · Thẻ đầu tiên mở khoá lính, thẻ trùng dùng để lên sao", 22)
 	note.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	note.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(note)
@@ -63,16 +63,16 @@ func _banner(color: Color) -> Control:
 	var column := UiKit.vbox(8)
 	banner.add_child(column)
 
-	var title := UiKit.label("TRIỆU HỒI TRANG BỊ", 30, UiKit.GOLD_TEXT)
+	var title := UiKit.label("TRIỆU HỒI LÍNH", 30, UiKit.GOLD_TEXT)
 	title.add_theme_constant_override("outline_size", 5)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	column.add_child(title)
-	var sub := _secondary("Vũ khí · Mũ · Giáp · Giày cho mèo anh hùng", 22)
+	var sub := _secondary("Bộ binh · Tầm xa · Pháp sư · Kỵ binh", 22)
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	column.add_child(sub)
 
-	# The four best items stand on a turning summoning circle.
+	# The four legendary troops stand on a turning summoning circle.
 	var art := Control.new()
 	art.custom_minimum_size.y = 220
 	art.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -83,8 +83,8 @@ func _banner(color: Color) -> Control:
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	for id in SHOWCASE:
-		var d: Dictionary = HeroCat.ITEMS[id]
-		row.add_child(Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(d["rarity"]), "", 112.0))
+		if PlayerData.TROOPS.has(id):
+			row.add_child(UiKit.troop_portrait(PlayerData.TROOPS[id], 120))
 	art.add_child(row)
 	var fit := func():
 		row.size = Vector2(art.size.x, 0)
@@ -113,7 +113,7 @@ func _banner(color: Color) -> Control:
 	tag.add_child(tag_box)
 	for caption in [
 		_secondary("HUYỀN THOẠI · %s%%" % str(HeroCat.SUMMON_RARITY[3]).replace(".", ","), 20, color),
-		UiKit.label("Vũ khí đổi chiêu của mèo và tăng sát thương 2 lớp lính hợp", 22),
+		UiKit.label("Lên đến 5★ · mỗi sao mở thêm 10 cấp", 22),
 	]:
 		caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		caption.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -150,11 +150,11 @@ func _show_rates() -> void:
 	grid.add_theme_constant_override("h_separation", 40)
 	grid.add_theme_constant_override("v_separation", 8)
 	for r in HeroCat.SUMMON_RARITY.size():
-		var name_label := UiKit.ink("Trang bị " + Economy.RARITY_NAMES[r], 22)
+		var name_label := UiKit.ink("Lính " + Economy.RARITY_NAMES[r], 22)
 		name_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		grid.add_child(name_label)
 		grid.add_child(UiKit.ink(("%.1f%%" % HeroCat.SUMMON_RARITY[r]).replace(".", ","), 22))
 	box.add_child(grid)
-	var pity := UiKit.ink("Bảo hiểm: lượt thứ %d chắc chắn ra trang bị Huyền thoại. Món ra ngẫu nhiên trong 4 loại; loại nào chưa có phẩm đó thì ra phẩm thấp hơn gần nhất." % HeroCat.SUMMON_PITY, 22)
+	var pity := UiKit.ink("Bảo hiểm: lượt thứ %d chắc chắn ra lính Huyền thoại. Lính đã tối đa sao thì thẻ trùng đổi thành vàng." % HeroCat.SUMMON_PITY, 22)
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)

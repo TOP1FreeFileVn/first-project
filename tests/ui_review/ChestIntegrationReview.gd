@@ -111,7 +111,7 @@ func _shop(dimensions: Vector2i) -> void:
 	var basic_width := 0.0
 	for icon: Control in icons:
 		var kind := _kind(icon.tint)
-		var expected := 248.0 if kind == "gold" else 160.0
+		var expected := 238.0 if kind == "gold" else 160.0
 		_check(icon.size == Vector2(expected, expected), kind + " Shop uses its current production control size")
 		var stage := icon.get_parent() as Control
 		_check(stage.size == Vector2(expected, expected * 0.74), kind + " stage crops only empty square margins")

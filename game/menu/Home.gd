@@ -356,7 +356,11 @@ func _build_top_bar() -> void:
 	gems.name = "CurrencyGems"
 	_gem_label = gems.get_node("CurrencyValue")
 	for pill in [gold, gems]:
-		var hit := _tap(pill, func(): select_tab(SHOP_TAB))
+		var is_gems: bool = pill == gems
+		var hit := _tap(pill, func():
+			select_tab(SHOP_TAB)
+			if is_gems:
+				_pages[SHOP_TAB].focus_gem_packs())
 		hit.name = "GoldButton" if pill == gold else "GemsButton"
 		hit.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		hit.size_flags_vertical = Control.SIZE_SHRINK_CENTER

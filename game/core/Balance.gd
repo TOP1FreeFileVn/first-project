@@ -54,8 +54,32 @@ func _ready() -> void:
 	if FileAccess.file_exists(OVERRIDE_PATH):
 		var saved = JSON.parse_string(FileAccess.get_file_as_string(OVERRIDE_PATH))
 		if saved is Dictionary:
-			overrides = saved
+			overrides = _drop_stale(saved)
 	_rebuild()
+
+## An admin override saved against an older balance.json can miss keys the game now
+## reads (e.g. chests that used to hold cards and now hold "items"). Such a section falls
+## back to the shipped one instead of crashing the screen that reads it.
+func _drop_stale(saved: Dictionary) -> Dictionary:
+	for key in ["chests", "castle", "workshop", "battle_shop"]:
+		if not saved.has(key) or not defaults.has(key):
+			continue
+		if not _same_shape(saved[key], defaults[key]):
+			push_warning("Balance: ignoring the saved '%s' override; it predates the current data layout." % key)
+			saved.erase(key)
+	return saved
+
+static func _same_shape(a, b) -> bool:
+	if b is Dictionary:
+		if not a is Dictionary:
+			return false
+		for k in b:
+			if not a.has(k) or not _same_shape(a[k], b[k]):
+				return false
+		return true
+	if b is Array:
+		return a is Array and (b.is_empty() or a.is_empty() or _same_shape(a[0], b[0]))
+	return true
 
 
 # --- Reading ---------------------------------------------------------------------------
@@ -250,7 +274,7 @@ func revert_to_saved() -> void:
 	if FileAccess.file_exists(OVERRIDE_PATH):
 		var saved = JSON.parse_string(FileAccess.get_file_as_string(OVERRIDE_PATH))
 		if saved is Dictionary:
-			overrides = saved
+			overrides = _drop_stale(saved)
 	_undo.clear()
 	dirty = false
 	_rebuild()

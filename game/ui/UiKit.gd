@@ -723,6 +723,16 @@ static func forge_stone_icon(icon_size: float) -> Control:
 	stone.tint = FORGE_STONE_TINT
 	return stone
 
+## Blueprint (bản vẽ) for an equipment slot: a blueprint sheet with that slot's item drawn
+## on it (game/ui/art/icon_blueprint_<slot>, from docs/design/2026-10-24/blueprint-icons).
+## An empty slot (random-slot rewards) shows the weapon sheet.
+static func blueprint_icon(slot: String, icon_size: float) -> Control:
+	var r := Ui.icon("blueprint_" + (slot if slot in HeroCat.SLOTS else "weapon"), icon_size)
+	r.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	r.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	r.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	return r
+
 ## The player's avatar in its frame. `value`/`frame_id` default to the profile's.
 static func avatar(avatar_size: float, value := "", frame_id := "") -> Control:
 	if value == "":
@@ -824,6 +834,19 @@ static func reward_row(reward: Dictionary, font_size := 18) -> HBoxContainer:
 			item.add_child(troop_portrait(PlayerData.TROOPS[id], font_size * 2.0))
 			item.add_child(label("x%d" % cards[id], font_size))
 			row.add_child(item)
+	# {"blueprints": n} (promised, random slots) or {"blueprints": {slot: n}} (as given).
+	var plans = reward.get("blueprints", null)
+	if plans is int and plans > 0:
+		var p := hbox(2)
+		p.add_child(blueprint_icon("", font_size * 1.6))
+		p.add_child(label("%d bản vẽ" % plans, font_size))
+		row.add_child(p)
+	elif plans is Dictionary:
+		for slot in plans:
+			var p := hbox(2)
+			p.add_child(blueprint_icon(slot, font_size * 1.6))
+			p.add_child(label("%d" % plans[slot], font_size))
+			row.add_child(p)
 	if int(reward.get("stones", 0)) > 0:
 		var stones := hbox(2)
 		stones.add_child(forge_stone_icon(font_size * 1.5))

@@ -1,11 +1,11 @@
 extends Control
 
-# Full-screen equipment summon:
+# Full-screen troop summon:
 #   charge   - a summoning circle spins up; its light starts white and turns to the colour
 #              of the best result (longer and stronger for epic / legendary);
 #   burst    - flash and shockwave, the cards fly out face down into place;
-#   reveal   - they flip one by one; epic and legendary items stop for a banner and shake;
-#   showcase - every epic or legendary item is shown large with its stats (tap to continue);
+#   reveal   - they flip one by one; epic and legendary cards stop for a banner and shake;
+#   showcase - every new troop and every epic or legendary card steps out large (tap to continue);
 #   done     - the results stay on screen with DONE and SUMMON AGAIN.
 # The results are already granted, so SKIP or closing never loses anything.
 
@@ -14,7 +14,7 @@ signal closed
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
-const HeroCat = preload("res://game/core/HeroCat.gd")
+const TroopData = preload("res://game/data/TroopData.gd")
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
 
 const SCREEN := Vector2(720, 1280)
@@ -32,6 +32,8 @@ var _tween: Tween
 var _cards: Array = []
 var _next := 0
 var _showcase_queue: Array = []
+## Troops this summon unlocked (their first card).
+var _fresh := {}
 var _special_until := 0.0
 
 # Drawn state.
@@ -56,7 +58,9 @@ func setup(results: Array, featured: String, on_again := Callable()) -> void:
 	_on_again = on_again
 	for result in results:
 		_best = maxi(_best, _rank(result))
-		if result["rarity"] >= 2:
+		if result["new"]:
+			_fresh[result["id"]] = true
+		if (result["rarity"] >= 2 or result["new"]) and not _showcase_queue.has(result["id"]):
 			_showcase_queue.append(result["id"])
 
 
@@ -284,7 +288,7 @@ func _after_reveal() -> void:
 		_next_showcase()
 
 
-# One epic / legendary item at a time, large, with its name and stats.
+# One troop at a time, large and running, with its name, class and ability.
 func _next_showcase() -> void:
 	_clear_extras()
 	if _showcase_queue.is_empty():
@@ -295,8 +299,8 @@ func _next_showcase() -> void:
 	_hint.text = "Chạm để tiếp tục"
 	var id: String = _showcase_queue.pop_front()
 	SoundLib.play("hero", 0.0, 0.0)
-	var d: Dictionary = HeroCat.ITEMS[id]
-	var color: Color = Economy.RARITY_COLORS[d["rarity"]]
+	var troop: Resource = PlayerData.TROOPS[id]
+	var color: Color = Economy.RARITY_COLORS[troop.rarity]
 	light = color.lightened(0.3)
 	for card in _cards:
 		card.modulate.a = 0.15
@@ -307,14 +311,16 @@ func _next_showcase() -> void:
 	add_child(shade)
 	move_child(shade, _hint.get_index())
 	_extras.append(shade)
-	var big := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(d["rarity"]), "", 240.0)
-	big.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	big.pivot_offset = Vector2(120, 120)
-	big.position = Vector2(240, 470)
-	big.scale = Vector2(0.2, 0.2)
-	add_child(big)
-	_extras.append(big)
-	big.create_tween().tween_property(big, "scale", Vector2.ONE, 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	var sprite := AnimatedSprite2D.new()
+	sprite.sprite_frames = SpriteLib.unit_frames(troop.unit_key, "Blue")
+	sprite.offset = Vector2(0, -SpriteLib.foot_offset(troop.unit_key))
+	sprite.position = Vector2(360, 700)
+	sprite.scale = Vector2(0.2, 0.2)
+	sprite.play("attack")
+	sprite.animation_finished.connect(func(): sprite.play("idle"))
+	add_child(sprite)
+	_extras.append(sprite)
+	sprite.create_tween().tween_property(sprite, "scale", Vector2(2.4, 2.4), 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	_fx("blast", Vector2(360, 590), 2.2, color.lightened(0.3))
 	flash = 0.7
 	create_tween().tween_property(self, "flash", 0.0, 0.4)
@@ -324,22 +330,19 @@ func _next_showcase() -> void:
 	box.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(box)
 	_extras.append(box)
-	var tag := UiKit.label(Economy.RARITY_NAMES[d["rarity"]].to_upper() + "!", 44, UiKit.GOLD_TEXT)
+	var tag := UiKit.label("LÍNH MỚI!" if _fresh.has(id) else Economy.RARITY_NAMES[troop.rarity].to_upper() + "!", 44, UiKit.GOLD_TEXT)
 	tag.add_theme_constant_override("outline_size", 10)
 	tag.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(tag)
-	var name_label := UiKit.label(d["name"], 32, color)
+	var name_label := UiKit.label(troop.display_name, 32, color)
 	name_label.add_theme_constant_override("outline_size", 8)
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(name_label)
-	var parts := []
-	for key in d["stats"]:
-		parts.append("+%d %s" % [d["stats"][key], HeroCat.STAT_NAMES[key]])
-	var stats := UiKit.label("✦ " + " · ".join(parts), 22, Color("9ff0a0"))
-	stats.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	box.add_child(stats)
-	if d.has("skill"):
-		var skill := UiKit.label(d["skill"], 20)
+	var klass := UiKit.label("✦ %s · %s" % [TroopData.KLASS_NAMES[troop.klass], Economy.RARITY_NAMES[troop.rarity]], 22, Color("9ff0a0"))
+	klass.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	box.add_child(klass)
+	if troop.ability_text != "":
+		var skill := UiKit.label(troop.ability_text, 20)
 		skill.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		skill.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		skill.custom_minimum_size.x = SCREEN.x - 80
@@ -447,17 +450,15 @@ func _make_card(result: Dictionary) -> Control:
 	var column := UiKit.vbox(0)
 	column.alignment = BoxContainer.ALIGNMENT_CENTER
 	front.add_child(column)
-	var d: Dictionary = HeroCat.ITEMS[result["id"]]
+	var troop: Resource = PlayerData.TROOPS[result["id"]]
 	column.add_child(_center(UiKit.label(Economy.RARITY_NAMES[rank], 13)))
-	var face := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(rank), "", 76.0)
-	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	column.add_child(_center(face))
-	var name_label := UiKit.label(d["name"], 12)
+	column.add_child(_center(UiKit.troop_portrait(troop, 70)))
+	var name_label := UiKit.label(troop.display_name, 12)
 	name_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	name_label.custom_minimum_size.x = CARD_SIZE.x - 20
 	column.add_child(name_label)
-	column.add_child(_center(UiKit.label("+%d đá rèn" % result["stones"], 13)))
+	column.add_child(_center(UiKit.tag("Mới!") if result["new"] else UiKit.label("+1 thẻ", 13)))
 	card.add_child(front)
 	_set_face(card, false)
 	return card

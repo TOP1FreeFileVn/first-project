@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Blueprint icons</title>
+<style>
+  body { margin: 0; background: #d8e4de; font: 600 14px system-ui; color: #583f21; }
+  .row { display: flex; gap: 12px; padding: 12px; align-items: flex-end; }
+  .card { background: #eaf0e9; border-radius: 12px; padding: 8px; text-align: center; }
+  .dark { background: #5c412c; color: #fff1d1; }
+  canvas { display: block; margin: 4px auto 0; }
+</style>
+<div class="row" id="big"></div>
+<div class="row" id="small"></div>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="blueprint.js"></script>
+<script>
+  const names = { weapon: 'Vũ khí', helmet: 'Mũ', armor: 'Giáp', boots: 'Giày' };
+  for (const [id, size, dark] of [['big', 200, false], ['small', 48, true]]) {
+    for (const slot of Blueprint.SLOTS) {
+      const card = document.createElement('div'); card.className = 'card' + (dark ? ' dark' : '');
+      card.textContent = size > 100 ? names[slot] : size + 'px';
+      for (const s of size > 100 ? [size] : [48, 32, 26]) {
+        const c = document.createElement('canvas'); c.width = s; c.height = s; card.appendChild(c);
+        Pen.toCanvas(Blueprint.draw(slot, s), c.getContext('2d'));
+      }
+      document.getElementById(id).appendChild(card);
+    }
+  }
+</script>

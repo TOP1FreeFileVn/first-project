@@ -26,6 +26,10 @@ try {
     if (-not $shopProcess.WaitForExit(90000)) { Stop-Process -Id $shopProcess.Id; throw 'Shop teal native integration capture timed out.' }
     Get-Content (Join-Path $PSScriptRoot 'godot-run.log') -Tail 8
     Get-Content (Join-Path $PSScriptRoot 'godot-errors.log')
+    $shopRunLog = [IO.File]::ReadAllText((Join-Path $PSScriptRoot 'godot-run.log'))
+    if ($shopRunLog -notmatch '(?m)^SHOP_TEAL_INTEGRATION_COMPLETE\s+checks=\d+\s+captures=\d+\s+failures=\[\]\s*$') {
+        throw 'Shop teal integration did not report successful completion with an empty failure list. Inspect the native logs.'
+    }
     exit $shopProcess.ExitCode
 }
 finally {

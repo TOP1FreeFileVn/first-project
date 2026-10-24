@@ -29,7 +29,7 @@ func _ready() -> void:
 		_check_layout(dimensions)
 		await _snap("shop", dimensions)
 	await _data_states()
-	await _exchange_scroll()
+	await _gem_pack_scroll()
 	await _pattern_context()
 	await _rates_pointer()
 	await _purchase_pointer()
@@ -78,7 +78,7 @@ func _item(title: String) -> Control:
 func _check_layout(dimensions: Vector2i) -> void:
 	var records: Array = []
 	var viewport_width: float = _home.size.x
-	for title in ["FeaturedChest", "SupplyChestGrid", "SupplyChest_wood", "SupplyChest_silver", "GoldOpen", "WoodOpen", "SilverOpen", "ShopRates", "GoldPity", "GoldGuarantee", "GemExchange"]:
+	for title in ["FeaturedChest", "SupplyChestGrid", "SupplyChest_wood", "SupplyChest_silver", "GoldOpen", "GoldOpenTen", "WoodOpen", "SilverOpen", "ShopRates", "GoldRewardBubble", "GoldGuarantee", "GemPackGrid", "ShopSection_premium", "ShopSection_supply", "ShopSection_gems"]:
 		var node := _item(title)
 		_check(node != null, title + " exists at " + str(dimensions))
 		if node == null:
@@ -125,8 +125,8 @@ func _data_states() -> void:
 	_check((_item("WoodOpen") as Button).disabled, "Wood action observes its free chest cooldown")
 	var status := _item("WoodStatus") as Label
 	_check(status != null and status.is_visible_in_tree() and not status.text.is_empty(), "Wood cooldown explains the remaining wait")
-	var pity := _item("GoldPity") as Label
-	_check(pity != null and int(pity.get_meta("pity_left", -1)) == 1, "Gold pity shows one remaining purchase before guarantee")
+	var guarantee := _item("GoldGuarantee") as Label
+	_check(guarantee != null and guarantee.text.contains(Economy.RARITY_NAMES[int(Economy.CHESTS["gold"]["min_rare"])]), "Gold offer explains the guaranteed rarity per chest")
 	await _snap("cooldown-and-next-pity", SIZES[1])
 	# Tick changes the time-dependent state without rebuilding the page.
 	PlayerData.free_chest_at = PlayerData.now() - 1
@@ -135,15 +135,16 @@ func _data_states() -> void:
 	_check(not (_item("WoodStatus") as Label).visible, "Expired cooldown copy is hidden")
 
 
-func _exchange_scroll() -> void:
+func _gem_pack_scroll() -> void:
 	var scroll := _shop().get_child(0) as ScrollContainer
 	scroll.scroll_vertical = 10000
 	await _settle()
-	var exchange := _item("GemExchange")
-	_check(scroll.scroll_vertical > 0, "The production shop scrolls to the exchange offer")
-	_check(exchange != null and _home._content.get_global_rect().intersects(exchange.get_global_rect()), "Gem exchange can be reached inside the shop viewport")
+	var packs := _item("GemPackGrid") as GridContainer
+	_check(_item("GemExchange") == null and _item("GemExchangeAction") == null, "Retired diamond-to-gold exchange is absent from production Shop")
+	_check(scroll.scroll_vertical > 0, "The production shop scrolls to the gem packs")
+	_check(packs != null and packs.columns == 3 and packs.get_child_count() == 6 and _home._content.get_global_rect().intersects(packs.get_global_rect()), "All six gem packs occupy the reachable three-column shop grid")
 	_check(_home._nav_holder.is_visible_in_tree(), "Navigation remains visible after scrolling")
-	await _snap("exchange-scrolled", SIZES[1])
+	await _snap("gem-packs-scrolled", SIZES[1])
 	scroll.scroll_vertical = 0
 	await _settle()
 

@@ -52,15 +52,12 @@ func _test_summon_rates() -> void:
 	PlayerData.gems = 10000000
 	var counts := [0, 0, 0, 0]
 	var pulls := 20000
-	# Inventory and persistence are checked separately. Discard rate samples so
-	# these simulations keep a bounded bag while preserving real summon/pity logic.
 	for i in pulls / 10:
 		for result in PlayerData.summon(10):
 			counts[result["rarity"]] += 1
-			PlayerData.hero_cat["bag"].erase(result["uid"])
 	var legendary: float = counts[3] * 100.0 / pulls
 	print("  summon %d pulls by rarity: %s (legendary %.2f%%)" % [pulls, counts, legendary])
-	_check(counts[0] > counts[1] and counts[1] > counts[2] and counts[2] > counts[3], "rarer items come less often")
+	_check(counts[0] > counts[1] and counts[1] > counts[2] and counts[2] > counts[3], "rarer troops come less often")
 	# 1.5% base plus the 60-pull pity.
 	_check(legendary > 1.4 and legendary < 3.5, "legendary rate with pity about 2%% (%.2f)" % legendary)
 	PlayerData._reset()
@@ -73,7 +70,6 @@ func _test_summon_rates() -> void:
 		if result["rarity"] >= 3:
 			longest = maxi(longest, since)
 			since = 0
-		PlayerData.hero_cat["bag"].erase(result["uid"])
 	_check(longest <= HeroCat.SUMMON_PITY, "pity: never more than %d pulls without a legendary (%d)" % [HeroCat.SUMMON_PITY, longest])
 
 
@@ -89,6 +85,7 @@ func _test_summon_rules() -> void:
 	var results := PlayerData.summon(10)
 	_check(results.size() == 10 and PlayerData.gems == 0, "ten-pull costs 270")
 	_check(results.any(func(r): return r["rarity"] >= 2), "ten-pull has an epic or better")
+	_check(results.all(func(r): return r["type"] == "card"), "summon gives troop cards")
 
 
 func _test_login() -> void:
@@ -122,8 +119,9 @@ func _test_quests() -> void:
 	_check(PlayerData.quest_done("upgrade"), "a troop and an equipment upgrade complete the quest")
 	var gems := PlayerData.gems
 	PlayerData.free_chest_at = 0
-	PlayerData.open_chest("wood")
+	var wood: Dictionary = PlayerData.open_chest("wood")
 	_check(PlayerData.quest_done("chest"), "opening a chest counts")
+	_check(wood.get("items", []).size() == 1 and wood.get("stones", 0) > 0, "wood chest gives an item and Forge Stones")
 	PlayerData.claim_quest("chest")
 	_check(PlayerData.gems == gems + 5, "chest quest pays 5 gems")
 	_check(PlayerData.claim_quest("chest").is_empty(), "no double claim")

@@ -41,3 +41,8 @@ docs/**/Godot/
 # Python runtime caches
 __pycache__/
 *.py[cod]
+
+# Scratch files from tools and review runs
+tmp/
+docs/**/*.err
+docs/**/*.pid

@@ -3,13 +3,14 @@ extends Control
 # Full-screen chest opening, gacha style:
 #   drop    - the chest falls in, squashes on landing and kicks up dust;
 #   wait    - it bobs and rattles, warm light breathing along the lid seam,
-#             with a badge counting the cards;
+#             with a badge counting what is inside;
 #   open    - on tap it winds up (longer for better loot), pauses, then bursts:
 #             a brief local flash, shockwave, the lid
 #             flies off and light pours out;
-#   card    - cards shoot out one by one (rarest last). Their halo hints at the rarity
-#             before the flip; epic and legendary cards shake first. After the flip a
-#             shine sweeps the card, with an extra beat for epic/legendary and new troops;
+#   card    - cards shoot out one by one (rarest last): hero-cat equipment from shop chests,
+#             troop cards from the victory chest. Their halo hints at the rarity before the
+#             flip; epic and legendary cards shake first. After the flip a shine sweeps the
+#             card, with an extra beat for epic/legendary items and new troops;
 #   summary - everything received.
 # The loot is granted before this plays, so SKIP or closing early never loses anything.
 # Tapping hurries the current step; the special beats still show briefly.
@@ -22,6 +23,7 @@ const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const ChestArt = preload("res://game/ui/ChestArt.gd")
+const HeroCat = preload("res://game/core/HeroCat.gd")
 const ChestBurst = preload("res://game/ui/ChestBurst.gd")
 const ChestLight = preload("res://game/ui/ChestLight.gd")
 
@@ -42,6 +44,8 @@ var _style: Dictionary
 var _chest_size := CHEST_SIZE
 var _loot := {}
 var _new_ids: Array = []
+## Equipment in this chest: "item:<uid>" -> {"id", "uid", "rarity"}.
+var _items := {}
 var _fast := false
 var _menu_pattern := false
 var _on_view_troops: Callable
@@ -106,10 +110,14 @@ func setup(chest_name: String, chest_color: Color, loot: Dictionary, new_ids: Ar
 	_on_view_troops = on_view_troops
 	var cards: Dictionary = loot.get("cards", {})
 	_order = cards.keys()
+	# Equipment: one card per item, keyed "item:<uid>" so two of a kind stay two cards.
+	for it in loot.get("items", []):
+		_items["item:" + str(it["uid"])] = it
+		_order.append("item:" + str(it["uid"]))
 	# Weakest first, so the best card is the last thing revealed.
 	_order.sort_custom(func(a, b): return _rank(a) < _rank(b))
 	for id in _order:
-		_best = maxi(_best, PlayerData.rarity_of(id))
+		_best = maxi(_best, _rarity(id))
 
 
 ## Puts the opening on its own layer above everything in `host` and starts it.
@@ -308,16 +316,18 @@ func _burst() -> void:
 
 func _next_card() -> void:
 	_clear_extras()
-	if _next >= _order.size():
+	# Batch purchases share one chest burst, then show every reward in the scrollable
+	# summary instead of making the player wait through dozens of individual flips.
+	if int(_loot.get("chests", 1)) > 1 or _next >= _order.size():
 		_show_summary()
 		return
 	_stage = "card"
 	_hint.text = "Chạm để lật nhanh"
 	var id: String = _order[_next]
 	_next += 1
-	var rarity := PlayerData.rarity_of(id)
+	var rarity := _rarity(id)
 	var special := rarity >= Economy.Rarity.EPIC or _new_ids.has(id)
-	_card = _make_card(id, _loot["cards"][id], true)
+	_card = _make_card(id, _loot.get("cards", {}).get(id, 1), true)
 	_card.position = CHEST_AT - CARD_SIZE / 2.0
 	_card.scale = Vector2(0.2, 0.2)
 	_card.rotation = -0.6
@@ -539,22 +549,33 @@ func _show_summary() -> void:
 	ordered.reverse()
 	var small := 1.12 if _order.size() <= 3 else 0.86
 	var delay := 0.0
+	var delay_step := minf(0.05, 0.6 / maxf(ordered.size() - 1, 1)) if int(_loot.get("chests", 1)) > 1 else 0.05
 	for id in ordered:
 		var holder := Control.new()
 		holder.name = "Reward_" + id
 		holder.custom_minimum_size = CARD_SIZE * small
 		holder.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		grid.add_child(holder)
-		var card := _make_card(id, _loot["cards"][id], true)
+		var card := _make_card(id, _loot.get("cards", {}).get(id, 1), true)
 		card.scale = Vector2(small, small) * 0.2
 		card.pivot_offset = Vector2.ZERO
 		holder.add_child(card)
 		card.create_tween().tween_property(card, "scale", Vector2(small, small), 0.22).set_delay(delay).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-		delay += 0.05
+		delay += delay_step
 	if _loot.get("gold", 0) > 0:
 		var gold := UiKit.price("gold", _loot["gold"], 28)
 		gold.name = "ChestSummaryGold"
 		rewards.add_child(gold)
+	if not _loot.get("blueprints", {}).is_empty():
+		rewards.add_child(UiKit.reward_row({"blueprints": _loot["blueprints"]}, 26))
+	if _loot.get("stones", 0) > 0:
+		var stones := UiKit.hbox(6)
+		stones.name = "ChestSummaryStones"
+		stones.alignment = BoxContainer.ALIGNMENT_CENTER
+		stones.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		stones.add_child(UiKit.forge_stone_icon(36))
+		stones.add_child(UiKit.label("%d đá rèn" % _loot["stones"], 28))
+		rewards.add_child(stones)
 	if not _new_ids.is_empty():
 		var names := []
 		for id in _new_ids:
@@ -570,7 +591,7 @@ func _show_summary() -> void:
 	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
 	buttons.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	if _on_view_troops.is_valid():
-		var view := UiKit.button("XEM LÍNH", Vector2(250, 88), func():
+		var view := UiKit.button("XEM TRANG BỊ" if not _items.is_empty() else "XEM LÍNH", Vector2(250, 88), func():
 			_close()
 			_on_view_troops.call(), true)
 		view.name = "ChestViewTroopsButton"
@@ -731,6 +752,8 @@ func _best_light() -> Color:
 
 ## A card with a back (question mark) and a front (portrait, name, count, star progress).
 func _make_card(id: String, count: int, face_up: bool) -> Control:
+	if _items.has(id):
+		return _make_item_card(id, face_up)
 	var troop: Resource = PlayerData.TROOPS[id]
 	var rarity: int = troop.rarity
 	var card := Control.new()
@@ -774,6 +797,39 @@ func _make_card(id: String, count: int, face_up: bool) -> Control:
 	_set_face(card, face_up)
 	return card
 
+
+# A hero-cat equipment card: rarity, the item's gear face, its name and slot.
+func _make_item_card(id: String, face_up: bool) -> Control:
+	var d: Dictionary = HeroCat.ITEMS[_items[id]["id"]]
+	var rarity: int = d["rarity"]
+	var card := Control.new()
+	card.size = CARD_SIZE
+	card.pivot_offset = CARD_SIZE / 2.0
+	card.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	card.add_child(UiKit.card_back_face(CARD_SIZE))
+	var front := PanelContainer.new()
+	front.name = "Front"
+	front.add_theme_stylebox_override("panel", UiKit.rarity_card(rarity))
+	front.size = CARD_SIZE
+	front.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var column := UiKit.vbox(2)
+	front.add_child(column)
+	var rarity_label := UiKit.label(Economy.RARITY_NAMES[rarity], 15)
+	rarity_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	column.add_child(rarity_label)
+	var face := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(rarity), "", 100.0)
+	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	face.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	column.add_child(face)
+	var name_label := UiKit.label(d["name"], 19)
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	column.add_child(name_label)
+	var slot_label := UiKit.label(HeroCat.SLOT_NAMES[d["slot"]], 18)
+	slot_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	column.add_child(slot_label)
+	card.add_child(front)
+	_set_face(card, face_up)
+	return card
 
 func _set_face(card: Control, up: bool) -> void:
 	card.get_node("Back").visible = not up
@@ -873,5 +929,8 @@ func _clear_extras() -> void:
 	_extras.clear()
 
 
+func _rarity(id: String) -> int:
+	return int(_items[id]["rarity"]) if _items.has(id) else PlayerData.rarity_of(id)
+
 func _rank(id: String) -> int:
-	return PlayerData.rarity_of(id) * 10 + (5 if _new_ids.has(id) else 0)
+	return _rarity(id) * 10 + (5 if _new_ids.has(id) else 0)

@@ -234,6 +234,10 @@ func _bag() -> Control:
 	stones.name = "HeroForgeStones"
 	stones.add_child(UiKit.forge_stone_icon(28))
 	stones.add_child(_paper_text(UiKit.format_number(PlayerData.forge_stones), 20, Color("fff1d1")))
+	# Blueprints per slot, for breakthroughs.
+	for slot in HeroCat.SLOTS:
+		stones.add_child(UiKit.blueprint_icon(slot, 26))
+		stones.add_child(_paper_text(str(PlayerData.blueprints.get(slot, 0)), 18, Color("fff1d1")))
 	heading.add_child(stones)
 	heading.add_child(Ui.spacer())
 	var capacity := _paper_text("%d món" % count, 20, Color("fff1d1"))
@@ -468,7 +472,7 @@ func _fill_detail() -> void:
 		head.add_child(arrow)
 	head.add_child(_captioned(uid, "Đang mặc" if wearing else "Món này"))
 	box.add_child(head)
-	var kind := "%s · %s · Lv.%d/%d" % [Economy.RARITY_NAMES[d["rarity"]], HeroCat.SLOT_NAMES[d["slot"]], it["level"], HeroCat.MAX_LEVEL]
+	var kind := "%s · %s · Lv.%d/%d" % [Economy.RARITY_NAMES[d["rarity"]], HeroCat.SLOT_NAMES[d["slot"]], it["level"], HeroCat.level_cap(state, uid)]
 	box.add_child(Ui.label(kind, "LabelDark", 18))
 	if d["slot"] == "weapon":
 		var weapon_info := Ui.vbox(8)
@@ -517,11 +521,16 @@ func _fill_detail() -> void:
 	var actions := Ui.hbox(14)
 	var upgrade: Button
 	if cost < 0:
-		upgrade = Ui.button("Cấp tối đa", "Yellow", Vector2(240, 96), 22)
+		# At the rarity cap: fusing to the next rarity is what raises it.
+		var at_top: bool = d["rarity"] >= HeroCat.LEVEL_CAP.size() - 1
+		upgrade = Ui.button("Cấp tối đa" if at_top else "Ghép để mở cấp", "Yellow", Vector2(240, 96), 22)
 		upgrade.disabled = true
 	else:
 		upgrade = Ui.cost_button("Nâng cấp", UiKit.format_number(cost), "coin", "Yellow", Vector2(240, 96))
 		_stone_cost(upgrade, cost, HeroCat.upgrade_gold(state, uid))
+		var plans := HeroCat.breakthrough_cost(state, uid)
+		if plans > 0:
+			_blueprint_cost(upgrade, d["slot"], plans)
 		upgrade.disabled = not PlayerData.hero_cat_can_upgrade(uid)
 	upgrade.pressed.connect(func():
 		if PlayerData.hero_cat_upgrade(uid):
@@ -572,6 +581,18 @@ func _stone_cost(button: Button, stones: int, gold: int) -> void:
 	if gold > 0:
 		row.add_child(Ui.icon("coin", 22))
 		row.add_child(Ui.label(UiKit.format_number(gold), "LabelSmall", 18))
+
+# A breakthrough level also costs Blueprints of the slot: title and the plan count.
+func _blueprint_cost(button: Button, slot: String, plans: int) -> void:
+	var box: VBoxContainer = button.get_child(0)
+	(box.get_child(0) as Label).text = "Đột phá"
+	var row: HBoxContainer = box.get_child(1)
+	row.add_child(UiKit.blueprint_icon(slot, 24))
+	var have: int = PlayerData.blueprints.get(slot, 0)
+	var label := Ui.label("%d/%d" % [have, plans], "LabelSmall", 18)
+	if have < plans:
+		label.add_theme_color_override("font_color", Color("ff8f80"))
+	row.add_child(label)
 
 func _style_detail_surface() -> void:
 	var overlay := _detail.get_meta("overlay", null) as Control

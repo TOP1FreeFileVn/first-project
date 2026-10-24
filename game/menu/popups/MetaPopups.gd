@@ -118,20 +118,18 @@ static func _summon_banner(home: Control, box: VBoxContainer) -> Control:
 	var glow := Ui.icon("badge_flower", 128)
 	glow.modulate = Color(1, 1, 1, 0.35)
 	Ui.pin(stage, glow, Vector2(-64, -66), Control.PRESET_CENTER)
-	var best: Dictionary = HeroCat.ITEMS["katana_nguyet"]
-	var item := Ui.gear_card(best["icon"], HeroCat.SLOT_ICONS[best["slot"]], HeroCat.tone(best["rarity"]), "", 112.0)
-	item.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	Ui.pin(stage, item, Vector2(-56, -60), Control.PRESET_CENTER)
+	var best := UiKit.troop_portrait(PlayerData.TROOPS["katana"], 140)
+	Ui.pin(stage, best, Vector2(-70, -78), Control.PRESET_CENTER)
 	row.add_child(stage)
 
 	var text := Ui.vbox(4, BoxContainer.ALIGNMENT_CENTER)
 	text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	var title := Ui.label("Triệu hồi Trang bị", "", 24)
+	var title := Ui.label("Triệu hồi Lính", "", 24)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	title.custom_minimum_size.y = 36
 	title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	text.add_child(title)
-	var star := Ui.label("Vũ khí · Mũ · Giáp · Giày cho mèo anh hùng", "LabelSmall", 18)
+	var star := Ui.label("Thẻ lính: mở khoá và lên sao", "LabelSmall", 18)
 	star.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
 	star.custom_minimum_size.y = 27
 	star.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART

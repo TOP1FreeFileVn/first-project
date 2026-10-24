@@ -1,0 +1,18 @@
+{
+	"captures": [
+		"a-reference-360x640.png",
+		"b-paper-360x640.png",
+		"c-floating-360x640.png",
+		"a-reference-450x800.png",
+		"a-reference-scrolled-450x800.png",
+		"b-paper-450x800.png",
+		"b-paper-scrolled-450x800.png",
+		"c-floating-450x800.png",
+		"c-floating-scrolled-450x800.png",
+		"b-unavailable-450x800.png"
+	],
+	"checks": 90,
+	"failures": [],
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/chest-bubble-demo-profile/Roaming/Godot/app_userdata/Gear Defenders"
+}

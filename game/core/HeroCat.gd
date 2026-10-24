@@ -10,9 +10,15 @@ extends RefCounted
 # stats (hp -> castle HP, def -> less damage to the wall, atk -> the hero's skill).
 #
 # Economy, kept apart from the troops so the two never fight over one currency:
-#   source  - the equipment summon (gems, see SUMMON_*) and Forge Stones from battles;
+#   source  - chests (balance.json "chests": items + Forge Stones) and Forge Stones from
+#             battles and the patrol;
 #   level   - Forge Stones (đá rèn) plus a little gold (upgrade_cost / upgrade_gold);
-#   rarity  - three identical items of one rarity fuse into the next rarity (fuse());
+#   cap     - an item's rarity sets its max level (LEVEL_CAP: 10/20/30/40);
+#   break   - levels 10, 20 and 30 are breakthroughs that also need Blueprints (bản vẽ) of
+#             the item's slot (BREAK_BLUEPRINTS). Blueprints come from boss levels, Silver and
+#             Gold chests, the daily quest milestones and salvaging items of that slot;
+#   rarity  - three identical items of one rarity fuse into the next rarity (fuse()), which
+#             is what raises the cap;
 #   spare   - an unworn item salvages back into Forge Stones (salvage_value()).
 # The save keeps {"equipped": {slot: uid}, "bag": {uid: {"id", "level"}}, "next": uid}
 # in PlayerData.hero_cat. Removed equipment is retained in a separate retired_items archive.
@@ -31,7 +37,16 @@ const STAT_ICONS := {"hp": "heart", "atk": "w_kiem", "def": "eq_armor"}
 const BASE := {"hp": 1200, "atk": 90, "def": 30}
 ## Each item level adds this share of the item's level-1 stats.
 const PER_LEVEL := 0.12
-const MAX_LEVEL := 20
+## Max level by rarity (common, rare, epic, legendary); MAX_LEVEL is the highest of them.
+const LEVEL_CAP := [10, 20, 30, 40]
+const MAX_LEVEL := 40
+## Going past these levels is a breakthrough: Blueprints of the item's slot, as well as stones.
+const BREAK_BLUEPRINTS := {10: 5, 20: 15, 30: 40}
+## Blueprints a salvaged item returns (of its own slot), by rarity.
+const SALVAGE_BLUEPRINTS := [0, 1, 3, 8]
+## Blueprints a won boss level gives (random slot), and a Silver / Gold chest gives.
+const BOSS_BLUEPRINTS := 3
+const CHEST_BLUEPRINTS := {"silver": 2, "gold": 6}
 
 ## A weapon adds this much damage to the two soldier classes it pairs with (and +1 per 10 levels).
 const PAIR_DAMAGE_PCT := 8.0
@@ -71,14 +86,12 @@ const ITEMS := {
 	"giay_than": {"slot": "boots", "name": "Giày Thần Tốc", "icon": "eq_boots", "rarity": 3, "stats": {"hp": 380, "atk": 22}},
 }
 
-# --- Equipment summon (the bottom tab "Triệu hồi") ---------------------------------------
+# --- Odds shared by the troop summon (bottom tab "Triệu hồi") and chest equipment rolls ---
 const SUMMON_COST := {1: 30, 10: 270}
-## Rarity odds in %, common → legendary. A x10 always holds at least one epic.
+## Rarity odds in %, common → legendary. A x10 summon always holds at least one epic card.
 const SUMMON_RARITY := [62.0, 28.0, 8.5, 1.5]
-## Pulls without a legendary before the next one is guaranteed.
+## Summon pulls without a legendary card before the next one is guaranteed.
 const SUMMON_PITY := 60
-## Forge Stones that come with every pull, so even a common is never a dud.
-const SUMMON_STONES := 5
 
 # --- Forge Stones (đá rèn) ---------------------------------------------------------------
 ## Stones a won battle gives: base + per level, x2 on first clear; a loss gives LOSS_STONES.
@@ -243,11 +256,21 @@ static func power(stats: Dictionary) -> int:
 	return roundi(stats.get("hp", 0) + stats.get("atk", 0) * 8.0 + stats.get("def", 0) * 12.0)
 
 
-## Forge Stones for the next level, or -1 at max.
+## Max level of an item: its rarity's cap.
+static func level_cap(state: Dictionary, uid: String) -> int:
+	var d := def(state, uid)
+	return LEVEL_CAP[d["rarity"]] if not d.is_empty() else 0
+
+## Blueprints (of the item's slot) the next level needs: >0 only at a breakthrough.
+static func breakthrough_cost(state: Dictionary, uid: String) -> int:
+	var it := item(state, uid)
+	return BREAK_BLUEPRINTS.get(int(it.get("level", 0)), 0) if upgrade_cost(state, uid) >= 0 else 0
+
+## Forge Stones for the next level, or -1 at the rarity's cap.
 static func upgrade_cost(state: Dictionary, uid: String) -> int:
 	var it := item(state, uid)
 	var definition := def(state, uid)
-	if it.is_empty() or definition.is_empty() or it["level"] >= MAX_LEVEL:
+	if it.is_empty() or definition.is_empty() or it["level"] >= LEVEL_CAP[definition["rarity"]]:
 		return -1
 	var rarity: int = definition["rarity"]
 	return roundi((4 + 3 * it["level"]) * (1.0 + 0.5 * rarity))

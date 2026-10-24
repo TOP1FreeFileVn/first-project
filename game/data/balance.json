@@ -12,7 +12,7 @@
 		"troop_multiplier": {
 			"label": "Hệ số sức mạnh lính theo cấp và sao",
 			"used_in": "Máu và sát thương lính trong trận",
-			"expr": "(1 + 0.08 * (level - 1)) * pow(1.2, stars - 1)",
+			"expr": "(1 + 0.08 * (level - 1)) * pow(1.12, stars - 1)",
 			"vars": ["level", "stars"],
 			"preview": {"x": "level", "from": 1, "to": 30, "step": 1, "series": "stars", "series_values": [1, 2, 3]},
 			"min": 0.01
@@ -128,7 +128,7 @@
 		"patrol_quick_gems": {"value": 20, "label": "Tuần tra nhanh: giá kim cương", "min": 0, "max": 1000, "step": 5},
 		"start_gems": {"value": 30, "label": "Kim cương khi bắt đầu game mới", "min": 0, "max": 10000, "step": 10}
 	},
-	"star_card_cost": [10, 30],
+	"star_card_cost": [3, 6, 12, 24],
 	"rarity_weights": [64, 32, 3.6, 0.4],
 	"castle": [
 		{"hp": 1.00, "meat": 20, "cells": 12, "team": 3, "cost": 0},
@@ -165,9 +165,9 @@
 		]
 	},
 	"chests": {
-		"wood": {"name": "Rương Gỗ", "cards": 3, "gold": 0, "gems": 0, "bonus_gold": [50, 100], "min_rare": 0},
-		"silver": {"name": "Rương Bạc", "cards": 8, "gold": 600, "gems": 0, "bonus_gold": [0, 0], "min_rare": 0},
-		"gold": {"name": "Rương Vàng", "cards": 25, "gold": 0, "gems": 120, "bonus_gold": [0, 0], "min_rare": 3},
+		"wood": {"name": "Rương Gỗ", "items": 1, "stones": [8, 14], "gold": 0, "gems": 0, "bonus_gold": [50, 100], "min_rare": 0},
+		"silver": {"name": "Rương Bạc", "items": 3, "stones": [25, 35], "gold": 600, "gems": 0, "bonus_gold": [0, 0], "min_rare": 1},
+		"gold": {"name": "Rương Vàng", "items": 6, "stones": [70, 90], "gold": 0, "gems": 120, "bonus_gold": [0, 0], "min_rare": 2, "min_count": 2},
 		"victory": {"name": "Rương chiến thắng", "cards": 2, "gold": 0, "gems": 0, "bonus_gold": [0, 0], "min_rare": 0}
 	}
 }
