@@ -1,0 +1,15 @@
+# Filled equipment category badges · 2026-10-24
+
+The user's reference changes the small category glyph at the upper left of an equipment card: a solid white symbol on a paler rarity-colored badge, with a modest interior accent related to the background. The upper-right equipment level is integrated separately by the page implementation.
+
+These four symbols are category menu glyphs, not detailed equipment illustrations. The sword has a broad diagonal blade and guard; the helmet has a dome and exposed face opening; armor uses a broad short-sleeved silhouette; boots preserve the approved staggered pair. No added buckles, laces, outer brown contour or hairline decoration. All authored shapes are closed opaque fills, with alpha zero outside.
+
+Encoding: `#ffffff` is the main fill; `#000000` is a small subordinate accent mask recolored by the runtime material to rarity-related ink. Black in these source files is not intended to display as final black. No gray intermediate color and no stroke outlines are encoded. This menu-symbol treatment intentionally differs from the detailed equipment's main/secondary stroke contract.
+
+`glyphs.js` authors the exact Canvas paths exported by `export.mjs` to `svg/` and the four production `game/ui/art/equipment_badge_*.svg` files. `before/` preserves the hollow source symbols. `preview.html` renders before/after, four pale rarity backgrounds and native 18 px badges with 12 px fitted glyphs. `render.cjs` uses the installed headless Edge/Playwright runtime without installing dependencies. Canvas/SVG geometry and alpha bounds are recorded in `geometry.json`.
+
+Final preview palettes match the user's follow-up correction: **badge background 20% darker**, with each initial pale-background RGB channel multiplied by 0.8. Green `#92a57e` / ink `#76965d`; blue `#87a3ae` / `#6596ad`; purple `#a291b2` / `#a184b9`; orange `#b79775` / `#bd8f62`. Accent inks remain unchanged. Runtime frame palettes belong to the shared UI implementation.
+
+Canvas review: `round-1.png` exposed the sword's long accent as too similar to the old hollow blade. `round-2.png` shortens that interior mark and leaves a broad uninterrupted white tip and blade base. `round-final.png` uses the actual runtime accent palette and final 20% darker background correction. Native-size examples are shown unscaled in the right column and in `native-size-sample.png`; the symbols retain their category at a 12 px fitted glyph size. SVG delivery is byte-identical to the reviewed path export.
+
+Native Godot verification: the production Home/Hero screen passed 283 checks with 18 captures and zero failures at 360×640 and 450×800. The fixture uses the current 17-item catalog and slot Blueprint upgrade costs; it runs with an isolated profile and does not write the player's save. Reviewed [full inventory at 450×800](native/full-bag_450x800.png), [360×640](native/full-bag_360x640.png), and [equipment detail](native/equipped-detail_450x800.png). White filled glyphs, rarity accents, darker badge backgrounds, centered placement, and upper-right outlined Lv labels remain readable. Results: [review.json](native/review.json).

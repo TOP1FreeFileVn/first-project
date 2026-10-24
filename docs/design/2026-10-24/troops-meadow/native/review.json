@@ -1,0 +1,1312 @@
+{
+	"captures": [
+		"formation-meadow_360x640.png",
+		"formation-meadow-roster-scrolled_360x640.png",
+		"formation-meadow-benched_360x640.png",
+		"formation-meadow_450x800.png",
+		"formation-meadow-roster-scrolled_450x800.png",
+		"formation-meadow-benched_450x800.png"
+	],
+	"checks": [
+		{
+			"key": "native_capture_dimensions_formation-meadow_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_formation-meadow_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "four_cat_roster_columns_preserved",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "all_sixteen_version_cards_preserved",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "fixture_has_one_version_per_cat_and_four_slots",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "muop_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "muop_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "muop_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tro_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tro_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tro_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tam_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tam_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tam_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bo_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bo_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bo_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_exists",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_matches_equipment_bar_surface",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_fills_page_width_at_height_52",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_uses_correct_game_caption",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_caption_centered",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_exists",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_matches_equipment_bar_surface",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_fills_page_width_at_height_52",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_uses_correct_game_caption",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_caption_centered",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "old_plain_team_count_title_removed",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "old_troops_heading_count_and_team_power_removed",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "muop_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tro_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tam_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bo_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "muop_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tro_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tam_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bo_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "page_owned_full_width_scenery_exists",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scenery_reaches_both_page_edges_without_roster_margins",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scenery_starts_with_meadow_below_formation_header",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scenery_reaches_formation_bottom",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scenery_stays_behind_controls_without_intercepting_taps",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "troops_sky_cap_visible_behind_hud",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "sky_reaches_screen_top_and_joins_page_without_gap",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "header_and_meadow_share_sky_color_without_intercepting_taps",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "shared_cardboard_castle_exists",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "castle_gate_is_centered_on_page",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_wheel_inside_roster_scrolls_version_cards",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "roster_wheel_keeps_formation_and_scenery_fixed",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "roster_wheel_does_not_move_any_of_four_cat_stages",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "roster_wheel_keeps_both_section_headers_fixed",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_formation-meadow-roster-scrolled_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_formation-meadow-roster-scrolled_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "roster_scroll_starts_below_fixed_roster_header_and_above_nav",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "roster_end_keeps_scenery_and_formation_fixed",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "wheel_over_fixed_team_does_not_scroll_roster_or_scenery",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scenery_keeps_fixed_meadow_position_after_scrolling",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tap_cat_opens_existing_detail_screen",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "detail_back_restores_meadow",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "toggle_can_bench_one_cat",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_formation-meadow-benched_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_formation-meadow-benched_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "toggle_can_field_cat_again",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "returning_cat_has_live_rig",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "original_bottom_nav_preserved",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_formation-meadow_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_formation-meadow_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "four_cat_roster_columns_preserved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "all_sixteen_version_cards_preserved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "fixture_has_one_version_per_cat_and_four_slots",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "muop_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "muop_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "muop_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tro_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tro_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tro_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tam_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tam_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tam_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bo_stage_and_toggle_visible",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bo_stage_and_toggle_within_view",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bo_stage_has_no_card_background",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_exists",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_matches_equipment_bar_surface",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_fills_page_width_at_height_52",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_uses_correct_game_caption",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_caption_centered",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_exists",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_matches_equipment_bar_surface",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_fills_page_width_at_height_52",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_uses_correct_game_caption",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_caption_centered",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "old_plain_team_count_title_removed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "old_troops_heading_count_and_team_power_removed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "muop_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tro_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tam_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bo_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "muop_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tro_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tam_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bo_idle_advances_and_moves",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "page_owned_full_width_scenery_exists",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scenery_reaches_both_page_edges_without_roster_margins",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scenery_starts_with_meadow_below_formation_header",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scenery_reaches_formation_bottom",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scenery_stays_behind_controls_without_intercepting_taps",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "troops_sky_cap_visible_behind_hud",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "sky_reaches_screen_top_and_joins_page_without_gap",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "header_and_meadow_share_sky_color_without_intercepting_taps",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "shared_cardboard_castle_exists",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "castle_gate_is_centered_on_page",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_wheel_inside_roster_scrolls_version_cards",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "roster_wheel_keeps_formation_and_scenery_fixed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "roster_wheel_does_not_move_any_of_four_cat_stages",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "roster_wheel_keeps_both_section_headers_fixed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_formation-meadow-roster-scrolled_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_formation-meadow-roster-scrolled_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "roster_scroll_starts_below_fixed_roster_header_and_above_nav",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "roster_end_keeps_scenery_and_formation_fixed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "wheel_over_fixed_team_does_not_scroll_roster_or_scenery",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scenery_keeps_fixed_meadow_position_after_scrolling",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tap_cat_opens_existing_detail_screen",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "detail_back_restores_meadow",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "toggle_can_bench_one_cat",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_formation-meadow-benched_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_formation-meadow-benched_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "toggle_can_field_cat_again",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "returning_cat_has_live_rig",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "original_bottom_nav_preserved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "review_never_writes_save",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "original_profile_restored_without_disk_write",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"geometry": [
+		{
+			"nav": [
+				0.0,
+				1076.0,
+				720.0,
+				204.0
+			],
+			"roster": [
+				24.0,
+				552.0,
+				664.0,
+				674.0
+			],
+			"size": [
+				360,
+				640
+			],
+			"stages": [
+				{
+					"cat": "muop",
+					"stage": [
+						34.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						34.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				},
+				{
+					"cat": "tro",
+					"stage": [
+						199.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						199.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				},
+				{
+					"cat": "tam",
+					"stage": [
+						364.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						364.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				},
+				{
+					"cat": "bo",
+					"stage": [
+						529.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						529.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				}
+			]
+		},
+		{
+			"backdrop": [
+				0.0,
+				164.0,
+				720.0,
+				320.0
+			],
+			"castle_gate": [
+				360.0,
+				334.0
+			],
+			"page": [
+				0.0,
+				112.0,
+				720.0,
+				964.0
+			],
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"backdrop_height": 320.0,
+			"backdrop_y": 52.0,
+			"original_height": 320.0,
+			"page_origin": 112.0,
+			"scroll_viewport": [
+				0.0,
+				536.0,
+				720.0,
+				540.0
+			],
+			"scroll_y": 220,
+			"size": [
+				360,
+				640
+			],
+			"stage_end": 484.0
+		},
+		{
+			"nav": [
+				0.0,
+				1076.0,
+				720.0,
+				204.0
+			],
+			"roster": [
+				24.0,
+				552.0,
+				664.0,
+				674.0
+			],
+			"size": [
+				450,
+				800
+			],
+			"stages": [
+				{
+					"cat": "muop",
+					"stage": [
+						34.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						34.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				},
+				{
+					"cat": "tro",
+					"stage": [
+						199.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						199.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				},
+				{
+					"cat": "tam",
+					"stage": [
+						364.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						364.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				},
+				{
+					"cat": "bo",
+					"stage": [
+						529.0,
+						260.0,
+						157.0,
+						140.0
+					],
+					"toggle": [
+						529.0,
+						433.0,
+						157.0,
+						44.0
+					]
+				}
+			]
+		},
+		{
+			"backdrop": [
+				0.0,
+				164.0,
+				720.0,
+				320.0
+			],
+			"castle_gate": [
+				360.0,
+				334.0
+			],
+			"page": [
+				0.0,
+				112.0,
+				720.0,
+				964.0
+			],
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"backdrop_height": 320.0,
+			"backdrop_y": 52.0,
+			"original_height": 320.0,
+			"page_origin": 112.0,
+			"scroll_viewport": [
+				0.0,
+				536.0,
+				720.0,
+				540.0
+			],
+			"scroll_y": 220,
+			"size": [
+				450,
+				800
+			],
+			"stage_end": 484.0
+		}
+	],
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/formation-meadow-preview/profile/Godot/app_userdata/Gear Defenders"
+}

@@ -1,508 +1,474 @@
 extends "res://game/menu/pages/MenuPage.gd"
 
-# Troop roster: the battle team pinned on top (slots grow with the castle), then the
-# collection with a rarity filter, which scrolls on its own. Tapping a card opens the
-# dedicated training screen with stats, skills, level-up / star-up and team actions. Joining
-# a full team enters "swap" mode: the team slots blink and the next slot tapped takes the
-# new troop. Troops can also be dragged: drag a card and drop it on a slot, drag a slot
-# onto another to swap them, or drag one out of the team panel to bench it.
+# Troop roster. The team stands on an open meadow beside the cardboard castle:
+# one spot per cat (Cats.gd), with a live idle rig and drag-to-field / drag-to-bench
+# interactions (how many cats fight grows with the castle). Below, one column per cat with its four versions
+# (one per world) stacked top to bottom; those cards stay still, the fighting one only gets
+# a gold frame and a tick. Tapping a card opens the training screen, whose team button
+# picks that version.
 
 const Ui = preload("res://game/ui/Ui.gd")
 const UpgradeHint = preload("res://game/ui/UpgradeHint.gd")
 const TroopUpgradeScreen = preload("res://game/menu/popups/TroopUpgradeScreen.gd")
-const CARD_SIZE := Vector2(116, 180)
-const ROSTER_COLUMNS := 5
-const SLOT_HEIGHT := 154.0
-const TEAM_PORTRAIT_HEIGHT := 112.0
-const MAX_SLOTS := 5
+const SoldierRig = preload("res://game/battle/SoldierRig.gd")
+const Cats = preload("res://game/data/Cats.gd")
+const FormationMeadow = preload("res://game/ui/FormationMeadow.gd")
+const MeadowSectionHeader = preload("res://game/ui/MeadowSectionHeader.gd")
+const TroopDragButton = preload("res://game/ui/TroopDragButton.gd")
+const RIG_DIR := "res://game/assets/units/"
+const CARD_SIZE := Vector2(0, 150)
+const STAGE_HEIGHT := 140.0
+## Rig pixels (256x240 art, feet at the origin) to stage pixels.
+const RIG_SCALE := 0.5
 const INK := Color("583f21")
 const MUTED_INK := Color("6b563b")
-## With a mouse a card picks up as soon as it moves. On a touch screen a vertical swipe
-## scrolls the list, so a card picks up after being held this long, or when the finger
-## moves sideways first. Team slots always pick up as soon as they move.
-const HOLD_TIME := 0.25
-const HOLD_SLOP := 14.0
+const GOLD := Color("ffc93c")
+## Card background per world, in Cats.WORLDS order.
+const WORLD_TINTS := {"carton": Color("e0b680"), "den_long": Color("ef8f7a"), "co_tich": Color("93c983"), "hai_tac": Color("7fb6dc")}
+const KLASS_ICONS := ["w_kiem", "w_cung", "w_gay_phep", "w_giao"]
 
 var _detail_screen: Control
 var _detail_id := ""
-## Troop waiting for a team slot (swap mode), or "".
-var _swap_id := ""
-## -1 = all rarities.
-var _filter := -1
-var _slots: Array = []
-var _blink := 0.0
-var _top: VBoxContainer
-var _team_panel: Control
-var _scroll: ScrollContainer
-# Drag and drop: the troop under the finger, the slot it came from (-1 = collection).
-var _press_id := ""
-var _press_slot := -1
-var _press_at := Vector2.ZERO
-var _press_time := 0.0
-# Pointer position (page coordinates) and button state, tracked from input events so the
-# drag never depends on the OS cursor.
-var _pointer := Vector2.ZERO
-var _pointer_down := false
-var _ghost: Control
-var _scroll_lock := 0
-var _eat_press := false
-
+var _formation_backdrop: Control
+var _formation_stage: Control
+var _formation_column: VBoxContainer
+var _roster_scroll: ScrollContainer
+var _roster_drop_cue: Panel
+var _drag_source: Control
+var _drag_id := ""
+var _drag_kind := ""
 
 func _init() -> void:
 	super()
 	theme = Ui.THEME
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-	# The team (and the filter) stay put; only the collection below scrolls.
-	_scroll = get_child(0)
 	# Upgrade prompts rise above the top card edge, including at maximum upward bob.
-	(_scroll.get_child(0) as MarginContainer).add_theme_constant_override("margin_top", 28)
-	var margin := MarginContainer.new()
-	margin.set_anchors_preset(Control.PRESET_TOP_WIDE)
-	for side in ["left", "right"]:
-		margin.add_theme_constant_override("margin_" + side, 24)
-	margin.add_theme_constant_override("margin_top", 16)
-	margin.add_theme_constant_override("margin_bottom", 4)
-	add_child(margin)
-	_top = Ui.vbox(10)
-	margin.add_child(_top)
-	margin.resized.connect(func(): _scroll.offset_top = margin.size.y)
+	(get_child(0).get_child(0) as MarginContainer).add_theme_constant_override("margin_top", 16)
+	_roster_scroll = get_child(0) as ScrollContainer
+	_roster_scroll.name = "TroopRosterScroll"
+	_roster_scroll.set_drag_forwarding(Callable(), _can_bench_drop, _receive_bench_drop)
+	_formation_backdrop = FormationMeadow.new()
+	_formation_backdrop.name = "TeamMeadowBackdrop"
+	add_child(_formation_backdrop)
+	move_child(_formation_backdrop, 0)
+	var fixed_header := Ui.margin(0, 0, 0, 0)
+	fixed_header.name = "TroopsFixedHeader"
+	add_child(fixed_header)
+	fixed_header.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
+	_formation_column = Ui.vbox(0)
+	fixed_header.add_child(_formation_column)
+	resized.connect(_fit_formation_backdrop, CONNECT_DEFERRED)
+	_roster_drop_cue = _drop_cue("RosterDropCue")
+	add_child(_roster_drop_cue)
+	_roster_drop_cue.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	_roster_drop_cue.offset_left = 8
+	_roster_drop_cue.offset_right = -8
+	_roster_drop_cue.offset_bottom = -8
+	visibility_changed.connect(_clear_drag_feedback)
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_DRAG_END:
+		_clear_drag_feedback.call_deferred()
+
+func refresh() -> void:
+	for child in _formation_column.get_children():
+		_formation_column.remove_child(child)
+		child.queue_free()
+	super()
 
 func build() -> void:
-	for child in _top.get_children():
-		_top.remove_child(child)
-		child.queue_free()
-	var heading := Ui.label("Lính", "LabelDark", 32)
-	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	heading.add_theme_color_override("font_color", INK)
-	_top.add_child(heading)
-	_build_team()
-	_build_filter()
-	var grid := GridContainer.new()
-	grid.name = "TroopGrid"
-	grid.columns = ROSTER_COLUMNS
-	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	grid.add_theme_constant_override("h_separation", 12)
-	grid.add_theme_constant_override("v_separation", 36)
-	for id in PlayerData.TROOP_ORDER:
-		if _filter < 0 or PlayerData.rarity_of(id) == _filter:
-			grid.add_child(_card(id))
-	body.add_child(grid)
-	grid.resized.connect(_fit_roster_cards.bind(grid))
-
+	body.add_theme_constant_override("separation", 12)
+	_formation_column.add_child(_section_heading("ĐỘI HÌNH", "TroopsFormationSectionHeader"))
+	_formation_column.add_child(_team_stage())
+	_formation_column.add_child(_section_heading("LÍNH", "TroopsRosterSectionHeader"))
+	body.add_child(_roster())
+	_fit_formation_backdrop.call_deferred()
 
 func has_alert() -> bool:
 	return PlayerData.any_troop_improvable()
 
+# --- Layout -----------------------------------------------------------------------------
 
-func _process(delta: float) -> void:
-	if not is_visible_in_tree():
-		_cancel_drag()
+## The approved honey-cream A strip, inset from both screen edges.
+func _section_heading(text: String, node_name: String) -> Control:
+	var header := MeadowSectionHeader.new()
+	header.name = node_name
+	header.heading = text
+	header.gutter = FormationMeadow.SKY_COLOR if text == "ĐỘI HÌNH" else Color("c3d8a8")
+	return header
+
+## The team: a spot per cat with the fighting version's rig playing idle.
+func _team_stage() -> Control:
+	var meadow := Control.new()
+	meadow.name = "TeamFormationMeadow"
+	meadow.custom_minimum_size.y = 276
+	meadow.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	meadow.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_formation_stage = meadow
+	meadow.item_rect_changed.connect(_fit_formation_backdrop, CONNECT_DEFERRED)
+	var row := Ui.hbox(8)
+	row.name = "TeamFormation"
+	for cat in Cats.ORDER:
+		row.add_child(_team_spot(cat))
+	meadow.add_child(row)
+	row.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	row.offset_left = 34
+	row.offset_top = 96
+	row.offset_right = -34
+	row.offset_bottom = -8
+	return meadow
+
+## The meadow, heading and team stay fixed. Only the roster below them scrolls.
+func _fit_formation_backdrop() -> void:
+	if not is_instance_valid(_formation_stage) or not is_inside_tree():
 		return
-	_watch_press(delta)
-	if _ghost != null:
-		# The list must not scroll under a dragged troop.
-		_scroll.scroll_vertical = _scroll_lock
-	if _swap_id == "" and _ghost == null:
-		return
-	_blink += delta
-	var glow := 1.0 + 0.35 * (0.5 + 0.5 * sin(_blink * 8.0))
-	var hovered := _slot_at(_pointer) if _ghost != null else -1
-	for i in _slots.size():
-		if is_instance_valid(_slots[i]):
-			_slots[i].modulate = Color(1.5, 1.5, 1.1) if i == hovered else Color(glow, glow, glow * 0.8)
+	var page_inverse := get_global_transform().affine_inverse()
+	var stage_start := page_inverse * _formation_stage.get_global_rect().position
+	var stage_end := page_inverse * _formation_stage.get_global_rect().end
+	_formation_backdrop.position = Vector2(0, stage_start.y)
+	_formation_backdrop.size = Vector2(size.x, stage_end.y - stage_start.y)
+	var fixed_end := page_inverse * _formation_column.get_global_rect().end
+	_roster_scroll.offset_top = fixed_end.y
+	_roster_drop_cue.offset_top = fixed_end.y + 4
 
-
-func _input(event: InputEvent) -> void:
-	if not is_visible_in_tree():
-		return
-	if event is InputEventMouseMotion:
-		_pointer = event.position
-		if _ghost != null:
-			_move_ghost(_pointer)
-	elif event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		_pointer = event.position
-		_pointer_down = event.pressed
-		if not event.pressed and _ghost != null:
-			_drop(_pointer)
-
-
-# --- Drag and drop ----------------------------------------------------------------------
-
-func _on_press(id: String, from_slot: int) -> void:
-	_press_id = id
-	_press_slot = from_slot
-	_press_at = _pointer
-	_press_time = 0.0
-
-
-# Turns a press into a drag (see HOLD_TIME). A vertical swipe on a touch screen is left to
-# the list's scrolling.
-func _watch_press(delta: float) -> void:
-	if _press_id == "" or _ghost != null:
-		return
-	if not _pointer_down:
-		_press_id = ""
-		return
-	var move := _pointer - _press_at
-	if move.length() > HOLD_SLOP:
-		var sideways := absf(move.x) > absf(move.y)
-		if _press_slot >= 0 or sideways or not DisplayServer.is_touchscreen_available():
-			_start_drag()
-		else:
-			_press_id = ""
+func _team_spot(cat: String) -> Control:
+	var column := Ui.vbox(2, BoxContainer.ALIGNMENT_CENTER)
+	column.name = "TeamSlot_" + cat
+	column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var fighting := PlayerData.team_same_cat(Cats.VERSIONS[cat][0])
+	var stage := TroopDragButton.new()
+	stage.name = "TeamStage_" + cat
+	stage.troop_id = fighting
+	stage.source = "team"
+	stage.cat = cat
+	_wire_drag(stage)
+	stage.drop_allowed = _can_team_drop.bind(cat)
+	stage.drop_receiver = _receive_team_drop.bind(cat)
+	stage.custom_minimum_size = Vector2(0, STAGE_HEIGHT)
+	stage.focus_mode = Control.FOCUS_NONE
+	for state in ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]:
+		stage.add_theme_stylebox_override(state, StyleBoxEmpty.new())
+	if fighting != "":
+		stage.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		stage.pressed.connect(_open_detail.bind(fighting))
+		stage.tooltip_text = "Chạm xem chi tiết · Kéo xuống danh sách để cho nghỉ"
+		_add_rig(stage, fighting)
 	else:
-		_press_time += delta
-		if _press_time >= HOLD_TIME:
-			_start_drag()
+		var empty := _small_text("Kéo lính\nvào đây", 20, true)
+		empty.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		empty.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+		stage.add_child(empty)
+		empty.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var cue := _drop_cue("TeamDropCue")
+	stage.add_child(cue)
+	stage.move_child(cue, 0)
+	cue.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	column.add_child(stage)
+	var caption: String = Cats.NAMES[cat]
+	if fighting != "":
+		caption += " · Lv %d" % PlayerData.troop(fighting)["level"]
+	var name_label := _small_text(caption, 20)
+	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	name_label.tooltip_text = Cats.BLURBS[cat]
+	column.add_child(name_label)
+	return column
 
+## The version's battle rig, feet on the spot's floor, playing idle at its own pace.
+func _add_rig(stage: Control, id: String) -> void:
+	var path := RIG_DIR + id + "/" + id + ".json"
+	if not FileAccess.file_exists(path):
+		var portrait := UiKit.troop_portrait(PlayerData.TROOPS[id], 110)
+		stage.add_child(portrait)
+		portrait.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+		return
+	var shadow := Panel.new()
+	shadow.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var shade := StyleBoxFlat.new()
+	shade.bg_color = Color(0.35, 0.24, 0.12, 0.18)
+	shade.set_corner_radius_all(40)
+	shadow.add_theme_stylebox_override("panel", shade)
+	stage.add_child(shadow)
+	var rig := SoldierRig.new()
+	rig.name = "TeamRig"
+	rig.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	rig.load_skeleton(path)
+	rig.play("idle")
+	rig.speed = randf_range(0.85, 1.1)
+	rig.scale = Vector2.ONE * RIG_SCALE
+	stage.add_child(rig)
+	var place := func():
+		var floor_at := Vector2(stage.size.x * 0.5, stage.size.y - 10.0)
+		rig.position = floor_at
+		shadow.position = floor_at + Vector2(-34, -6)
+		shadow.size = Vector2(68, 12)
+	stage.resized.connect(place)
+	place.call_deferred()
 
-func _start_drag() -> void:
-	var t: Dictionary = PlayerData.troop(_press_id)
-	_ghost = UiKit.troop_portrait(PlayerData.TROOPS[_press_id], 120, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
-	_ghost.top_level = true
-	_ghost.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_ghost.size = Vector2(120, 120)
-	_ghost.pivot_offset = Vector2(60, 60)
-	_ghost.z_index = 10
-	add_child(_ghost)
-	_move_ghost(_pointer)
-	_ghost.scale = Vector2(0.7, 0.7)
-	_ghost.create_tween().tween_property(_ghost, "scale", Vector2(1.1, 1.1), 0.12)
-	_scroll_lock = _scroll.scroll_vertical
-	_blink = 0.0
+## One column per cat, its four versions from top to bottom (world order).
+func _roster() -> Control:
+	var row := Ui.hbox(8)
+	row.name = "TroopGrid"
+	for cat in Cats.ORDER:
+		var column := Ui.vbox(10)
+		column.name = "CatColumn_" + cat
+		column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		var title := _small_text(Cats.NAMES[cat], 24)
+		title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		title.tooltip_text = Cats.BLURBS[cat]
+		column.add_child(title)
+		var fighting := PlayerData.team_same_cat(Cats.VERSIONS[cat][0])
+		for id in Cats.VERSIONS[cat]:
+			column.add_child(_card(id, id == fighting))
+		row.add_child(column)
+	return row
 
+func _card(id: String, fighting: bool) -> Button:
+	var troop: Resource = PlayerData.TROOPS[id]
+	var t: Dictionary = PlayerData.troop(id)
+	var unlocked: bool = t["unlocked"]
+	var world := Cats.world_of(id)
+	var card := TroopDragButton.new()
+	card.name = "TroopCard_" + id
+	card.troop_id = id
+	card.source = "roster"
+	card.cat = Cats.cat_of(id)
+	_wire_drag(card)
+	card.drop_allowed = _can_bench_drop
+	card.drop_receiver = _receive_bench_drop
+	card.set_meta("troop_id", id)
+	card.custom_minimum_size = CARD_SIZE
+	card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	card.focus_mode = Control.FOCUS_NONE
+	card.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	card.tooltip_text = troop.display_name + (" · Giữ rồi kéo lên đội hình" if unlocked else " · Chưa mở khóa")
+	var face := _card_style(WORLD_TINTS[world], troop.rarity, fighting, unlocked)
+	for state in ["normal", "hover", "disabled", "focus"]:
+		card.add_theme_stylebox_override(state, face)
+	var pressed := face.duplicate() as StyleBoxFlat
+	pressed.bg_color = face.bg_color.darkened(0.12)
+	card.add_theme_stylebox_override("pressed", pressed)
+	card.pressed.connect(_open_detail.bind(id))
 
-func _move_ghost(at: Vector2) -> void:
-	if _ghost != null:
-		_ghost.global_position = at - Vector2(60, 70)
+	var column := Ui.vbox(0, BoxContainer.ALIGNMENT_END)
+	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	card.add_child(column)
+	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	column.offset_top = 22
+	column.offset_bottom = -4
+	var art := _troop_art(troop, t, 76)
+	art.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	column.add_child(art)
+	if unlocked:
+		column.add_child(_earned_stars(t["stars"], 18))
+	var world_label := _card_text(Cats.WORLD_SHORT[world], 17)
+	world_label.name = "TroopWorld"
+	world_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	world_label.clip_text = true
+	column.add_child(world_label)
+	# Top strip: level on the left, class on the right.
+	if unlocked:
+		Ui.pin(card, _level_badge(t["level"]), Vector2(8, 2))
+	var klass := Ui.icon(KLASS_ICONS[clampi(troop.klass, 0, 3)], 26)
+	klass.name = "TroopClass"
+	klass.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	klass.modulate.a = 1.0 if unlocked else 0.5
+	Ui.pin(card, klass, Vector2(-32, 4), Control.PRESET_TOP_RIGHT)
+	if fighting:
+		var check := Ui.icon("badge_check", 26)
+		check.name = "TroopInTeam"
+		check.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		Ui.pin(card, check, Vector2(-16, -16), Control.PRESET_BOTTOM_RIGHT)
+	# Only a star-up (enough cards) earns the big arrow; a level-up a small dot.
+	if unlocked:
+		var star_cost := PlayerData.star_up_cost(id)
+		var level_cost := PlayerData.level_up_cost(id)
+		if star_cost >= 0 and t["cards"] >= star_cost:
+			var hint := UpgradeHint.new()
+			hint.name = "TroopStarReady"
+			hint.scale = Vector2(0.8, 0.7)
+			Ui.pin(card, hint, Vector2(-30, -22), Control.PRESET_TOP_RIGHT)
+		elif level_cost >= 0 and PlayerData.gold >= level_cost:
+			var dot := Panel.new()
+			dot.name = "TroopLevelReady"
+			dot.custom_minimum_size = Vector2(14, 14)
+			dot.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			var dot_style := StyleBoxFlat.new()
+			dot_style.bg_color = Color("4cc35a")
+			dot_style.set_corner_radius_all(7)
+			dot_style.border_color = Color.WHITE
+			dot_style.set_border_width_all(2)
+			dot.add_theme_stylebox_override("panel", dot_style)
+			Ui.pin(card, dot, Vector2(-8, -8), Control.PRESET_TOP_RIGHT)
+	return card
 
+## World tint fill; a rarity-coloured rim, a thick gold one on the fighting version.
+static func _card_style(tint: Color, rarity: int, fighting: bool, unlocked: bool) -> StyleBoxFlat:
+	var style := StyleBoxFlat.new()
+	style.bg_color = tint if unlocked else tint.lerp(Color("d9cfc0"), 0.6)
+	style.set_corner_radius_all(16)
+	style.border_color = GOLD if fighting else Economy.RARITY_COLORS[rarity].darkened(0.1)
+	style.set_border_width_all(6 if fighting else 4)
+	if fighting:
+		style.shadow_color = Color(1.0, 0.78, 0.2, 0.55)
+		style.shadow_size = 10
+	return style
 
-## Drops the dragged troop: on a slot it takes that slot (swapping if it was already in
-## the team); a team troop dropped outside the team panel leaves the team.
-func _drop(at: Vector2) -> void:
-	var id := _press_id
-	var from_slot := _press_slot
-	_cancel_drag()
-	# The button under the finger still sees this release as a tap; ignore it.
-	_eat_press = true
-	set_deferred("_eat_press", false)
-	var target := _slot_at(at)
-	if target >= 0:
-		if target != from_slot:
-			PlayerData.set_team_slot(target, id)
-	elif from_slot >= 0 and not _team_panel.get_global_rect().has_point(at):
-		if not PlayerData.remove_from_team(id):
-			_toast("Đội phải còn ít nhất 1 lính.")
-	refresh()
+func _squash(card: Control, target: float) -> void:
+	card.pivot_offset = card.size * 0.5
+	card.create_tween().tween_property(card, "scale", Vector2.ONE * target, 0.1).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 
+# --- Drag to field / bench --------------------------------------------------------------
 
-func _cancel_drag() -> void:
-	_press_id = ""
-	_press_slot = -1
-	if _ghost != null:
-		_ghost.queue_free()
-		_ghost = null
-		for slot in _slots:
-			if is_instance_valid(slot):
-				slot.modulate = Color.WHITE
+func _wire_drag(button: TroopDragButton) -> void:
+	button.drag_data_provider = _troop_drag_data.bind(button)
+	button.drag_preview_provider = _troop_drag_preview
+	button.drag_started.connect(_show_drag_feedback.bind(button))
 
+func _troop_drag_data(_at: Vector2, button: TroopDragButton) -> Variant:
+	if not is_visible_in_tree() or is_instance_valid(_detail_screen):
+		return null
+	var id := button.troop_id
+	if not PlayerData.TROOPS.has(id) or not PlayerData.is_unlocked(id):
+		return null
+	if button.source == "team" and not PlayerData.in_team(id):
+		return null
+	return {"kind": "troop", "troop_id": id, "source": button.source,
+		"cat": Cats.cat_of(id), "owner_id": get_instance_id()}
 
-func _slot_at(at: Vector2) -> int:
-	for i in _slots.size():
-		if is_instance_valid(_slots[i]) and _slots[i].get_global_rect().grow(8).has_point(at):
-			return i
-	return -1
+func _drop_payload(data: Variant) -> Dictionary:
+	if not data is Dictionary or data.get("kind") != "troop" or data.get("owner_id") != get_instance_id():
+		return {}
+	var id := str(data.get("troop_id", ""))
+	if not PlayerData.TROOPS.has(id) or not PlayerData.is_unlocked(id):
+		return {}
+	if not is_visible_in_tree() or is_instance_valid(_detail_screen):
+		return {}
+	return data
 
+func _can_team_drop(_at: Vector2, data: Variant, cat: String) -> bool:
+	var payload := _drop_payload(data)
+	if payload.is_empty() or Cats.cat_of(payload.troop_id) != cat:
+		return false
+	return PlayerData.team_same_cat(payload.troop_id) != "" or PlayerData.battle_team().size() < PlayerData.team_slots()
+
+func _receive_team_drop(at: Vector2, data: Variant, cat: String) -> void:
+	if _can_team_drop(at, data, cat):
+		_apply_team_drop.call_deferred(str(data.troop_id), false)
+
+func _can_bench_drop(_at: Vector2, data: Variant) -> bool:
+	var payload := _drop_payload(data)
+	return not payload.is_empty() and payload.get("source") == "team" and PlayerData.in_team(payload.troop_id) and PlayerData.battle_team().size() > 1
+
+func _receive_bench_drop(at: Vector2, data: Variant) -> void:
+	if _can_bench_drop(at, data):
+		_apply_team_drop.call_deferred(str(data.troop_id), true)
+
+func _apply_team_drop(id: String, bench: bool) -> void:
+	# Finish Godot's native drop before PlayerData.changed rebuilds the source.
+	_clear_drag_feedback()
+	var changed := PlayerData.remove_from_team(id) if bench else PlayerData.add_to_team(id)
+	if changed:
+		SoundLib.play("click")
+		if not is_instance_valid(home):
+			refresh()
+
+func _troop_drag_preview(data: Variant) -> Control:
+	var id := str(data.troop_id)
+	var root := Control.new()
+	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var face := PanelContainer.new()
+	face.custom_minimum_size = Vector2(124, 148)
+	face.position = Vector2(-62, -116)
+	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var style := StyleBoxFlat.new()
+	style.bg_color = WORLD_TINTS[Cats.world_of(id)]
+	style.border_color = INK
+	style.set_border_width_all(4)
+	style.set_corner_radius_all(12)
+	face.add_theme_stylebox_override("panel", style)
+	root.add_child(face)
+	var column := Ui.vbox(2)
+	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	column.add_child(_troop_art(PlayerData.TROOPS[id], PlayerData.troop(id), 100))
+	column.add_child(_small_text(Cats.NAMES[Cats.cat_of(id)], 20))
+	face.add_child(column)
+	return root
+
+func _drop_cue(node_name: String) -> Panel:
+	var cue := Panel.new()
+	cue.name = node_name
+	cue.visible = false
+	cue.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color(1.0, 0.93, 0.58, 0.18)
+	style.border_color = Color("6ca147")
+	style.set_border_width_all(4)
+	style.set_corner_radius_all(14)
+	cue.add_theme_stylebox_override("panel", style)
+	return cue
+
+func _show_drag_feedback(data: Variant, source: Control) -> void:
+	_drag_source = source
+	_drag_source.modulate.a = 0.45
+	_drag_id = str(data.troop_id)
+	_drag_kind = str(data.source)
+	for cat in Cats.ORDER:
+		var stage := find_child("TeamStage_" + cat, true, false) as Control
+		var cue := stage.get_node("TeamDropCue") as Panel
+		cue.visible = _drag_kind == "roster" and _can_team_drop(Vector2.ZERO, data, cat)
+	_roster_drop_cue.visible = _can_bench_drop(Vector2.ZERO, data)
+	var header := find_child("TroopsRosterSectionHeader", true, false) as MeadowSectionHeader
+	if _roster_drop_cue.visible:
+		header.heading = "THẢ ĐỂ CHO NGHỈ"
+
+func _clear_drag_feedback() -> void:
+	if is_instance_valid(_drag_source):
+		_drag_source.modulate.a = 1.0
+	_drag_source = null
+	_drag_id = ""
+	_drag_kind = ""
+	if is_instance_valid(_roster_drop_cue):
+		_roster_drop_cue.visible = false
+	for cue in find_children("TeamDropCue", "Panel", true, false):
+		cue.visible = false
+	var header := find_child("TroopsRosterSectionHeader", true, false) as MeadowSectionHeader
+	if header != null:
+		header.heading = "LÍNH"
 
 # --- Team -------------------------------------------------------------------------------
 
-## Card tone per rarity, the same as the battle shop: Thường green, Hiếm blue, Sử thi
-## purple, Huyền thoại orange.
-static func tone(rarity: int) -> String:
-	return ["Green", "Blue", "Purple", "Orange"][clampi(rarity, 0, 3)]
+## The strongest unlocked version of a cat, or "".
+func _best_owned(cat: String) -> String:
+	var best := ""
+	for id in Cats.VERSIONS[cat]:
+		if PlayerData.is_unlocked(id) and (best == "" or PlayerData.troop_power(id) > PlayerData.troop_power(best)):
+			best = id
+	return best
 
-
-## A quiet rarity frame with a separate pressed face.
-static func card_button(rarity: int, min_size: Vector2) -> Button:
-	var b := Button.new()
-	b.custom_minimum_size = min_size
-	b.focus_mode = Control.FOCUS_NONE
-	var face := Ui.THEME.get_stylebox("panel", "TroopCard" + tone(rarity))
-	for state in ["normal", "hover", "disabled"]:
-		b.add_theme_stylebox_override(state, face)
-	b.add_theme_stylebox_override("pressed", Ui.THEME.get_stylebox("panel", "TroopCard" + tone(rarity) + "Pressed"))
-	return b
-
-
-static func _small_text(text: String, font_size := 22, muted := false) -> Label:
-	var caption := Ui.label(text, "LabelDark", font_size)
-	caption.add_theme_color_override("font_color", MUTED_INK if muted else INK)
-	caption.add_theme_constant_override("outline_size", 0)
-	return caption
-
-
-## Compact card captions keep the game font legible over every rarity colour.
-static func _card_text(text: String, font_size := 22) -> Label:
-	var caption := Ui.label(text, "", font_size)
-	caption.add_theme_color_override("font_color", Color.WHITE)
-	caption.add_theme_color_override("font_outline_color", Color.BLACK)
-	# Keep the black contour visible when the 720 px layout shrinks to a phone.
-	caption.add_theme_constant_override("outline_size", 6)
-	return caption
-
-
-## The portrait and caption share the same full-card rarity colour.
-static func _portrait_field(portrait: Control, rarity: int, height: float, top_inset := 0.0) -> Control:
-	var field := Control.new()
-	field.name = "TroopRarityField"
-	field.set_meta("rarity", rarity)
-	field.custom_minimum_size.y = height
-	field.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	field.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var background := Ui.image("troop_portrait_" + tone(rarity).to_lower(), Vector2.ZERO)
-	background.name = "TroopRarityBackground"
-	background.stretch_mode = TextureRect.STRETCH_SCALE
-	field.add_child(background)
-	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	var center := Ui.center(portrait)
-	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	field.add_child(center)
-	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	center.offset_top = top_inset
-	return field
-
-
-static func _pin_state_badge(card: Control, badge: Control, at: Vector2, preset := Control.PRESET_TOP_LEFT) -> void:
-	Ui.pin(card, badge, at, preset)
-
-
-static func _level_badge(level: int) -> Control:
-	var badge := Control.new()
-	badge.name = "TroopLevelBadge"
-	badge.custom_minimum_size = Vector2(72, 28)
-	badge.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	# Keep the short prefix clear of the upgrade arrow in the five-column grid.
-	var caption := _card_text("Lv %d" % level, 22)
-	caption.name = "TroopLevel"
-	caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	badge.add_child(caption)
-	caption.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	return badge
-
-
-## Show earned stars only; the row remains centred as its count changes.
-static func _earned_stars(count: int, icon_size := 24.0) -> HBoxContainer:
-	# The SVGs have transparent side insets; overlap those, not the star artwork.
-	var row := Ui.hbox(-4)
-	row.name = "TroopStars"
-	row.custom_minimum_size.y = icon_size
-	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	for i in clampi(count, 0, Economy.MAX_STARS):
-		var star := Ui.icon("troop_star", icon_size)
-		star.name = "TroopStar_%d" % (i + 1)
-		row.add_child(star)
-	return row
-
-
-## A locked troop is a true black silhouette; the question mark stays light above it.
-static func _troop_art(troop: Resource, t: Dictionary, portrait_size: float) -> Control:
-	var portrait := UiKit.troop_portrait(troop, portrait_size, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
-	portrait.name = "TroopPortrait"
-	portrait.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	if t["unlocked"]:
-		return portrait
-	portrait.modulate = Color.BLACK
-	var mystery := Control.new()
-	mystery.name = "TroopLockedPortrait"
-	mystery.custom_minimum_size = Vector2.ONE * portrait_size
-	mystery.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	mystery.add_child(portrait)
-	portrait.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	var question := _small_text("?", roundi(portrait_size * 0.42))
-	question.name = "TroopLockedQuestion"
-	question.add_theme_color_override("font_color", Color("fff0d3"))
-	mystery.add_child(question)
-	question.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	return mystery
-
-
-func _fit_roster_cards(grid: GridContainer) -> void:
-	var gaps := grid.get_theme_constant("h_separation") * (grid.columns - 1)
-	var width := floorf((grid.size.x - gaps) / grid.columns)
-	for child in grid.get_children():
-		(child as Control).custom_minimum_size = Vector2(maxf(width, CARD_SIZE.x), CARD_SIZE.y)
-
-
-func _build_team() -> void:
-	var box := Ui.vbox(6)
-	var head := Ui.hbox(8, BoxContainer.ALIGNMENT_BEGIN)
-	head.add_child(Ui.spacer())
-	head.add_child(Ui.icon("star", 30))
-	head.add_child(_small_text(UiKit.format_number(PlayerData.team_power()), 24))
-	box.add_child(head)
-	if _swap_id != "":
-		var swap := Ui.hbox(8)
-		var text := _small_text("Chọn ô cho %s" % PlayerData.TROOPS[_swap_id].display_name.trim_prefix("Mèo "), 22)
-		text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		swap.add_child(text)
-		var cancel := Ui.button("Huỷ", "Red", Vector2(110, 56), 18)
-		cancel.pressed.connect(func():
-			_swap_id = ""
-			refresh())
-		swap.add_child(cancel)
-		box.add_child(swap)
-
-	var row := Ui.hbox(8)
-	row.name = "TeamFormation"
-	var team := PlayerData.battle_team()
-	_slots.clear()
-	for i in MAX_SLOTS:
-		if i < PlayerData.team_slots():
-			var slot := _team_slot(i, team[i] if i < team.size() else "")
-			_slots.append(slot)
-			row.add_child(slot)
-		else:
-			row.add_child(_locked_slot(i))
-	# Divide the width left by the Board's real padding. Fixed 122px slots made the
-	# whole header 746px wide, moving the title and clipping the Board's right edge.
-	row.resized.connect(_fit_team_slots.bind(row))
-	box.add_child(row)
-	if _swap_id == "":
-		box.add_child(_small_text("Chạm xem chi tiết · Giữ và kéo để đổi đội", 20))
-	_team_panel = Ui.menu_section("troops", "Đội hình %d/%d" % [team.size(), PlayerData.team_slots()], box)
-	_top.add_child(_team_panel)
-
-
-func _fit_team_slots(row: HBoxContainer) -> void:
-	var gaps := row.get_theme_constant("separation") * (MAX_SLOTS - 1)
-	var width := floorf((row.size.x - gaps) / float(MAX_SLOTS))
-	if width <= 0.0:
-		return
-	for child in row.get_children():
-		var slot := child as Control
-		slot.custom_minimum_size = Vector2(width, SLOT_HEIGHT)
-
-
-## Keep complete names on one line in the five-column collection.
-static func _fit_card_name(caption: Label, maximum_size := 22) -> void:
-	if caption.size.x <= 0.0:
-		return
-	var font := caption.get_theme_font("font")
-	var font_size := maximum_size
-	var available := caption.size.x - caption.get_theme_constant("outline_size") * 2.0
-	while font_size > 16 and font.get_string_size(caption.text, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x > available:
-		font_size -= 1
-	if caption.get_theme_font_size("font_size") != font_size:
-		caption.add_theme_font_size_override("font_size", font_size)
-
-
-func _team_slot(index: int, id: String) -> Button:
-	var slot := _formation_button(index)
-	slot.pressed.connect(_on_slot_pressed.bind(index, id))
-	if id != "":
-		slot.button_down.connect(_on_press.bind(id, index))
-		slot.tooltip_text = PlayerData.TROOPS[id].display_name
-	var column := _formation_visual(slot)
+func _field(id: String) -> void:
 	if id == "":
-		_formation_placeholder(column, "plus", "Trống")
-		return slot
-	var t: Dictionary = PlayerData.troop(id)
-	var portrait := UiKit.troop_portrait(PlayerData.TROOPS[id], TEAM_PORTRAIT_HEIGHT, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
-	portrait.name = "TeamTroopPortrait"
-	portrait.custom_minimum_size = Vector2(0, TEAM_PORTRAIT_HEIGHT)
-	portrait.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	column.add_child(portrait)
-	var level := _card_text("Lv %d" % t["level"], 24)
-	level.name = "TeamTroopLevel"
-	level.custom_minimum_size.y = 34
-	level.clip_text = true
-	level.resized.connect(_fit_card_name.bind(level, 24))
-	column.add_child(level)
-	# The cats respond without adding a card face or a ring under their feet.
-	slot.mouse_entered.connect(_animate_formation.bind(column, 1.04))
-	slot.mouse_exited.connect(_animate_formation.bind(column, 1.0))
-	slot.button_down.connect(_animate_formation.bind(column, 0.95))
-	slot.button_up.connect(_animate_formation.bind(column, 1.0))
-	return slot
-
-
-func _formation_button(index: int) -> Button:
-	var slot := Button.new()
-	slot.name = "TeamSlot_%d" % index
-	slot.custom_minimum_size = Vector2(0, SLOT_HEIGHT)
-	slot.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	slot.focus_mode = Control.FOCUS_NONE
-	slot.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	for state in ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]:
-		slot.add_theme_stylebox_override(state, StyleBoxEmpty.new())
-	return slot
-
-
-func _formation_visual(slot: Control) -> VBoxContainer:
-	var column := Ui.vbox(0, BoxContainer.ALIGNMENT_CENTER)
-	column.name = "TeamSlotVisual"
-	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	slot.add_child(column)
-	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	column.offset_left = 3
-	column.offset_right = -3
-	column.offset_top = 2
-	column.offset_bottom = -6
-	column.resized.connect(func(): column.pivot_offset = Vector2(column.size.x * 0.5, TEAM_PORTRAIT_HEIGHT))
-	return column
-
-
-func _formation_placeholder(column: VBoxContainer, icon_name: String, caption: String) -> void:
-	var space := Ui.center(Ui.icon(icon_name, 42))
-	space.custom_minimum_size.y = TEAM_PORTRAIT_HEIGHT
-	space.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	column.add_child(space)
-	var label := _card_text(caption, 20)
-	label.custom_minimum_size.y = 34
-	column.add_child(label)
-
-
-func _animate_formation(visual: Control, target_scale: float) -> void:
-	var previous: Tween = visual.get_meta("formation_tween") if visual.has_meta("formation_tween") else null
-	if previous != null and previous.is_valid():
-		previous.kill()
-	var tween := visual.create_tween()
-	visual.set_meta("formation_tween", tween)
-	tween.tween_property(visual, "scale", Vector2.ONE * target_scale, 0.12).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-
-
-func _locked_slot(index: int) -> Control:
-	var slot := _formation_button(index)
-	slot.disabled = true
-	slot.mouse_default_cursor_shape = Control.CURSOR_ARROW
-	var column := _formation_visual(slot)
-	var need := _castle_for_slot(index)
-	_formation_placeholder(column, "lock", "Thành %d" % need if need > 0 else "—")
-	return slot
-
-
-## Castle level that opens slot `index` (0-based), or -1 if no level does.
-func _castle_for_slot(index: int) -> int:
-	for level in range(1, PlayerData.castle_max_level() + 1):
-		if Economy.team_slots(level) > index:
-			return level
-	return -1
-
-
-func _on_slot_pressed(index: int, id: String) -> void:
-	if _eat_press:
 		return
-	if _swap_id != "":
-		PlayerData.set_team_slot(index, _swap_id)
-		_swap_id = ""
+	if PlayerData.add_to_team(id):
+		SoundLib.play("click")
 		refresh()
-	elif id != "":
-		_open_detail(id)
 	else:
-		_toast("Chọn một lính bên dưới rồi bấm VÀO ĐỘI.")
+		_toast("Đủ %d mèo ra trận · Nâng thành để mang thêm" % PlayerData.team_slots())
 
+func _bench(id: String) -> void:
+	if PlayerData.remove_from_team(id):
+		SoundLib.play("click")
+		refresh()
+	else:
+		_toast("Phải còn ít nhất 1 mèo ra trận.")
+
+## Picks a version from the training screen: it replaces its cat's version in the team.
+func _join_team(id: String) -> void:
+	if PlayerData.add_to_team(id):
+		_close_detail()
+		refresh()
+		return
+	_close_detail()
+	_toast("Đủ %d mèo ra trận · Cho một mèo nghỉ trước" % PlayerData.team_slots())
 
 func _toast(text: String) -> void:
 	var note := Ui.panel("InfoStrip", Ui.label(text, "LabelSmall", 18))
@@ -515,149 +481,7 @@ func _toast(text: String) -> void:
 	tween.tween_property(note, "modulate:a", 0.0, 0.3)
 	tween.tween_callback(note.queue_free)
 
-
-func _build_filter() -> void:
-	var row := Ui.hbox(6)
-	var names := ["Tất cả"] + Array(Economy.RARITY_NAMES)
-	for i in names.size():
-		var rarity := i - 1
-		var b := Button.new()
-		b.name = "TroopFilter_%d" % rarity
-		b.text = names[i]
-		b.alignment = HORIZONTAL_ALIGNMENT_CENTER
-		b.focus_mode = Control.FOCUS_NONE
-		b.custom_minimum_size = Vector2(0, 76)
-		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		b.add_theme_font_size_override("font_size", 22)
-		b.add_theme_constant_override("outline_size", 0)
-		for state in ["font_color", "font_hover_color", "font_pressed_color", "font_hover_pressed_color", "font_focus_color"]:
-			b.add_theme_color_override(state, Color("39291c"))
-		var tone_name := "btn_yellow" if rarity == _filter else "btn_tab"
-		var face := Ui.THEME.get_stylebox("normal", "BtnYellow" if rarity == _filter else "BtnTab").duplicate() as StyleBoxTexture
-		face.content_margin_left = 8
-		face.content_margin_right = 8
-		face.content_margin_top = 4
-		# Center visible glyphs, including Vietnamese marks, on the raised face.
-		# Its center is 9 px above the button center with the original SVG slices.
-		face.content_margin_bottom = 22.0 + 2.0 * _filter_ink_offset(names[i])
-		b.add_theme_stylebox_override("normal", face)
-		b.add_theme_stylebox_override("hover", face)
-		var pressed := face.duplicate() as StyleBoxTexture
-		pressed.texture = Ui.tex(tone_name + "_pressed")
-		# The original pressed artwork moves its face down exactly 7 px.
-		pressed.content_margin_top += 7
-		pressed.content_margin_bottom -= 7
-		b.add_theme_stylebox_override("pressed", pressed)
-		b.add_theme_stylebox_override("hover_pressed", pressed)
-		b.pressed.connect(func(): SoundLib.play("click"))
-		b.pressed.connect(func():
-			_filter = rarity
-			refresh())
-		row.add_child(b)
-	_top.add_child(row)
-
-
-static func _filter_ink_offset(caption: String) -> float:
-	var font := Ui.THEME.get_font("font", "Button")
-	var line := TextLine.new()
-	line.add_string(caption, font, 22)
-	var server := TextServerManager.get_primary_interface()
-	var top := INF
-	var bottom := -INF
-	for glyph in server.shaped_text_get_glyphs(line.get_rid()):
-		var rid: RID = glyph["font_rid"]
-		if not rid.is_valid():
-			continue
-		var font_size := Vector2i(glyph["font_size"], 0)
-		var offset := server.font_get_glyph_offset(rid, font_size, glyph["index"])
-		var extent := server.font_get_glyph_size(rid, font_size, glyph["index"])
-		if extent.y > 0:
-			var shaped_offset: Vector2 = glyph["offset"]
-			top = minf(top, shaped_offset.y + offset.y)
-			bottom = maxf(bottom, shaped_offset.y + offset.y + extent.y)
-	if not is_finite(top):
-		return 0.0
-	return (font.get_ascent(22) - font.get_descent(22) + top + bottom) * 0.5
-
-
-# --- Collection -------------------------------------------------------------------------
-
-func _card(id: String) -> Button:
-	var troop: Resource = PlayerData.TROOPS[id]
-	var t: Dictionary = PlayerData.troop(id)
-	var unlocked: bool = t["unlocked"]
-	var rarity: int = troop.rarity
-	var star_ready := false
-	var level_ready := false
-	if unlocked:
-		var star_cost := PlayerData.star_up_cost(id)
-		var level_cost := PlayerData.level_up_cost(id)
-		star_ready = star_cost >= 0 and t["cards"] >= star_cost
-		level_ready = level_cost >= 0 and PlayerData.gold >= level_cost
-	var card := card_button(rarity, CARD_SIZE)
-	card.name = "TroopCard_" + id
-	card.set_meta("troop_id", id)
-	card.pressed.connect(_on_card_pressed.bind(id))
-	if unlocked:
-		card.button_down.connect(_on_press.bind(id, -1))
-	var column := Ui.vbox(0)
-	column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	column.offset_left = 6
-	column.offset_right = -6
-	column.offset_top = 6
-	column.offset_bottom = -8
-	column.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	card.add_child(column)
-	var portrait := _troop_art(troop, t, 92)
-	# The level and upgrade cue occupy opposite corners above the smaller portrait.
-	column.add_child(_portrait_field(portrait, rarity, 112, 20))
-	var details := Ui.vbox(0)
-	details.name = "TroopCardDetails"
-	details.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	column.add_child(details)
-	var name_label := _card_text(troop.display_name.trim_prefix("Mèo "), 22)
-	name_label.name = "TroopName"
-	name_label.custom_minimum_size.y = 30
-	name_label.clip_text = true
-	name_label.resized.connect(_fit_card_name.bind(name_label))
-	details.add_child(name_label)
-	if unlocked:
-		Ui.pin(card, _level_badge(t["level"]), Vector2(8, 4))
-		details.add_child(_earned_stars(t["stars"]))
-	if unlocked and PlayerData.in_team(id):
-		var badge := Ui.icon("badge_check", 28)
-		badge.name = "TroopInTeam"
-		_pin_state_badge(card, badge, Vector2(-20, -20), Control.PRESET_BOTTOM_RIGHT)
-	if unlocked:
-		var ready: Control
-		if star_ready:
-			ready = UpgradeHint.new()
-			ready.name = "TroopStarReady"
-		elif level_ready:
-			ready = UpgradeHint.new()
-			ready.name = "TroopLevelReady"
-		if ready != null:
-			# Shorten the roster arrow while keeping its width and centred pivot.
-			ready.scale = Vector2(1.0, 0.84)
-			# Last child draws above the team marker without escaping the card's layer.
-			# Raising z_index here would also draw the arrow above later modal popups.
-			_pin_state_badge(card, ready, Vector2(-42, -18), Control.PRESET_TOP_RIGHT)
-	return card
-
-
-func _on_card_pressed(id: String) -> void:
-	if _eat_press:
-		return
-	# In swap mode a tap on another unlocked card picks that troop instead.
-	if _swap_id != "" and PlayerData.is_unlocked(id) and not PlayerData.in_team(id):
-		_swap_id = id
-		refresh()
-		return
-	_open_detail(id)
-
-
 func _open_detail(id: String) -> void:
-	_cancel_drag()
 	_close_detail()
 	_detail_id = id
 	var screen := TroopUpgradeScreen.new()
@@ -665,26 +489,85 @@ func _open_detail(id: String) -> void:
 	screen.team_requested.connect(_join_team)
 	screen.tree_exited.connect(func():
 		if _detail_screen == screen:
-			_detail_screen = null)
+			_detail_screen = null
+			refresh())
 	screen.attach(home, id)
-
 
 func _close_detail() -> void:
 	if is_instance_valid(_detail_screen):
 		_detail_screen.close()
 	_detail_screen = null
 
+# --- Shared card pieces (also used by the training screen and reviews) -------------------
 
-func _join_team(id: String) -> void:
-	if PlayerData.add_to_team(id):
-		_close_detail()
-		return
-	# Team full: pick the slot to replace.
-	_swap_id = id
-	_blink = 0.0
-	_close_detail()
-	refresh()
+## Card tone per rarity, the same as the battle shop: Thường green, Hiếm blue, Sử thi
+## purple, Huyền thoại orange.
+static func tone(rarity: int) -> String:
+	return ["Green", "Blue", "Purple", "Orange"][clampi(rarity, 0, 3)]
 
+static func _small_text(text: String, font_size := 22, muted := false) -> Label:
+	var caption := Ui.label(text, "LabelDark", font_size)
+	caption.add_theme_color_override("font_color", MUTED_INK if muted else INK)
+	caption.add_theme_constant_override("outline_size", 0)
+	return caption
+
+## Compact card captions keep the game font legible over every colour.
+static func _card_text(text: String, font_size := 22) -> Label:
+	var caption := Ui.label(text, "", font_size)
+	caption.add_theme_color_override("font_color", Color.WHITE)
+	caption.add_theme_color_override("font_outline_color", Color.BLACK)
+	# Keep the black contour visible when the 720 px layout shrinks to a phone.
+	caption.add_theme_constant_override("outline_size", 6)
+	return caption
+
+static func _level_badge(level: int) -> Control:
+	var badge := Control.new()
+	badge.name = "TroopLevelBadge"
+	badge.custom_minimum_size = Vector2(64, 26)
+	badge.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var caption := _card_text("Lv %d" % level, 20)
+	caption.name = "TroopLevel"
+	caption.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	badge.add_child(caption)
+	caption.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	return badge
+
+## Show earned stars only; the row remains centred as its count changes.
+static func _earned_stars(count: int, icon_size := 24.0) -> HBoxContainer:
+	var row := Ui.hbox(0)
+	row.name = "TroopStars"
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for i in clampi(count, 0, Economy.MAX_STARS):
+		var star := Ui.icon("troop_star", icon_size)
+		star.name = "TroopStar_%d" % (i + 1)
+		row.add_child(star)
+	return row
+
+## A locked troop is a soft silhouette with a light question mark.
+static func _troop_art(troop: Resource, t: Dictionary, portrait_size: float) -> Control:
+	var portrait := UiKit.troop_portrait(troop, portrait_size, SpriteLib.player_color(1 + 2 * (t["stars"] - 1)))
+	portrait.name = "TroopPortrait"
+	portrait.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	portrait.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if t["unlocked"]:
+		return portrait
+	portrait.modulate = Color(0.25, 0.2, 0.16, 0.45)
+	var mystery := Control.new()
+	mystery.name = "TroopLockedPortrait"
+	mystery.custom_minimum_size = Vector2.ONE * portrait_size
+	mystery.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	mystery.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	mystery.add_child(portrait)
+	portrait.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var question := _small_text("?", roundi(portrait_size * 0.42))
+	question.name = "TroopLockedQuestion"
+	question.add_theme_color_override("font_color", Color("fff0d3"))
+	question.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	question.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	mystery.add_child(question)
+	question.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	return mystery
 
 ## How fast a troop runs, in words: slow, normal, fast, very fast.
 static func speed_word(speed: float) -> String:

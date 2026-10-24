@@ -1,0 +1,2492 @@
+{
+	"captures": [
+		{
+			"file": "equipment-before-sort_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "filter-weapons_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "filter-defense_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "sort-menu-rarity_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "sort-ascending_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "sort-level-descending_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "sort-menu-level_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "sort-level-ascending_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "equipment-before-sort_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "filter-weapons_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "filter-defense_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "sort-menu-rarity_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "sort-ascending_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "sort-level-descending_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "sort-menu-level_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "sort-level-ascending_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "inventory_grid_five_columns",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "inventory_real_filtered_item_count_13",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "five_inventory_cards_fit_one_row",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_equipment-before-sort",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_weapon_filter_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "weapon_filter_shows_only_real_spare_weapons",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_filter-weapons",
+			"passed": false,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_defense_filter_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "defense_filter_shows_only_real_spare_armor",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_filter-defense",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_all_filter_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "inventory_grid_five_columns",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "inventory_real_filtered_item_count_13",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "five_inventory_cards_fit_one_row",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "default_sort_descending_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "default_sort_state_is_rarity_descending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_sort-menu-rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_ascending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rarity_ascending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_changes_to_ascending_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_sort-ascending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_descending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rarity_descending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_returns_to_descending_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_sort_option_level_descending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_descending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_criterion_keeps_descending_direction",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_sort_descending_uses_real_item_levels",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_sort-level-descending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_sort-menu-level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_sort_option_level_ascending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_ascending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "ascending_direction_keeps_level_criterion",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_sort_ascending_uses_real_item_levels",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_sort-level-ascending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_weapon_filter_after_level_sort",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_sort_weapon_filter_keeps_correct_members",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "weapon_filter_preserves_selected_level_sort",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_defense_filter_after_level_sort",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "level_sort_defense_filter_keeps_correct_members",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "defense_filter_preserves_selected_level_sort",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_all_filter_after_level_sort",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_native_outside_dismiss_target",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "outside_dismiss_point_is_outside_sort_surface",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_outside_tap_closes_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "dismiss_does_not_sort_or_mutate_inventory",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_ascending_restored",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rarity_ascending_restored_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rarity_criterion_keeps_ascending_direction",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_descending_restored",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "rarity_descending_restored_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sort_fixture_restores_default_rarity_order",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_sort_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_sort_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "inventory_grid_five_columns",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "inventory_real_filtered_item_count_13",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "five_inventory_cards_fit_one_row",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_equipment-before-sort",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_weapon_filter_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "weapon_filter_shows_only_real_spare_weapons",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_filter-weapons",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_defense_filter_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "defense_filter_shows_only_real_spare_armor",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_filter-defense",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_all_filter_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "inventory_grid_five_columns",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "inventory_real_filtered_item_count_13",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "five_inventory_cards_fit_one_row",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "default_sort_descending_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "default_sort_state_is_rarity_descending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_sort-menu-rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_ascending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rarity_ascending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_changes_to_ascending_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_sort-ascending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_descending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rarity_descending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_returns_to_descending_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_sort_option_level_descending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_descending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_criterion_keeps_descending_direction",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_sort_descending_uses_real_item_levels",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_sort-level-descending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_sort-menu-level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_sort_option_level_ascending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_ascending_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "ascending_direction_keeps_level_criterion",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_sort_ascending_uses_real_item_levels",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_sort-level-ascending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_weapon_filter_after_level_sort",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_sort_weapon_filter_keeps_correct_members",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "weapon_filter_preserves_selected_level_sort",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_defense_filter_after_level_sort",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "level_sort_defense_filter_keeps_correct_members",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "defense_filter_preserves_selected_level_sort",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_all_filter_after_level_sort",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_native_outside_dismiss_target",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "outside_dismiss_point_is_outside_sort_surface",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_outside_tap_closes_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "dismiss_does_not_sort_or_mutate_inventory",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_ascending_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rarity_ascending_restored_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rarity_criterion_keeps_ascending_direction",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_funnel_opens_sort_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_visible_after_funnel_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_stays_inside_visible_viewport",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_rarity",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortBy_level",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortDescending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_menu_has_option_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_option_fits_surface_EquipmentSortAscending",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "native_sort_option_rarity_descending_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "rarity_descending_restored_selection_applies_and_closes_menu",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sort_fixture_restores_default_rarity_order",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_sort_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_sort_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "no_player_save_write_during_review",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_in_memory_profile_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_restore_never_writes_save",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 1,
+	"geometry": [
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"context": "sort_menu",
+			"rect": [
+				342.0,
+				542.0,
+				360.0,
+				202.0
+			],
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"original_persist_restored": true,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/equipment-sort-review-profile/Godot/app_userdata/Gear Defenders",
+	"save_after": "absent",
+	"save_before": "absent",
+	"scope": "Actual production Home/Hero funnel dropdown at 360x640 and 450x800. Native mouse taps select rarity/level and ascending/descending order, retain sort through category filters and dismiss by tapping outside. Full inventory fixture includes levels 1 through 10. No visual overrides or persistent inventory writes."
+}

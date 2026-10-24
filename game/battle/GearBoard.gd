@@ -14,6 +14,7 @@ extends Node2D
 
 const Gear = preload("res://game/battle/Gear.gd")
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
+const Ui = preload("res://game/ui/Ui.gd")
 
 const COLS := 6
 const ROWS := 4
@@ -421,6 +422,9 @@ func _drop(cell: Vector2i) -> void:
 		_play_place(gear)
 	elif can_merge(gear, other):
 		gears.erase(_drag_from)
+		# The merged gear keeps counting the cats both gears already have on the field,
+		# so a merge never lets more than max_alive of them stand at once.
+		other.adopt_units(gear)
 		gear.queue_free()
 		other.tier_up()
 		battle.on_gear_merged(other)
@@ -484,7 +488,7 @@ static func draw_tile(ci: CanvasItem, kind: String, center: Vector2) -> void:
 	match kind:
 		"rock":
 			ci.draw_rect(rect, Color(0.18, 0.17, 0.16, 0.75))
-			var rock: Texture2D = SpriteLib.texture("Terrain/Decorations/Rocks/Rock3.png")
+			var rock: Texture2D = Ui.tex("battle_map_rock")
 			ci.draw_texture_rect(rock, Rect2(center - Vector2(40, 44), Vector2(80, 80)), false)
 		"gold":
 			ci.draw_rect(rect, Color(1.0, 0.78, 0.2, 0.28))

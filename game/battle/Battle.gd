@@ -34,7 +34,8 @@ const HeroCat := preload("res://game/core/HeroCat.gd")
 const UiKit := preload("res://game/ui/UiKit.gd")
 ## Seconds of victory dance before the result panel.
 const VICTORY_DANCE_TIME := 1.8
-## Where the leading hero comes out: in front of the middle of the wall.
+## Where the hero cat comes out: in front of the middle of the wall.
+const HERO_AT := Vector2(360, DEPLOY_Y)
 ## Milliseconds between two "CHÍ MẠNG!" texts.
 const CRIT_TEXT_GAP := 90
 
@@ -71,6 +72,8 @@ var _skill := {}
 var _basket_warned := false
 ## Skills cast this battle (tests read it).
 var skill_casts := 0
+## The hero cat on the field (null when it has fallen until the next wave).
+var hero_unit = null
 
 
 func _ready() -> void:
@@ -249,7 +252,8 @@ static func deployment_point(source: Vector2) -> Vector2:
 
 
 func spawn_player_unit(troop: Resource, tier: int, at: Vector2):
-	if player_units.size() >= Economy.MAX_PLAYER_UNITS or not can_feed(troop):
+	var soldiers := player_units.size() - (1 if hero_unit != null and is_instance_valid(hero_unit) else 0)
+	if soldiers >= Economy.MAX_PLAYER_UNITS or not can_feed(troop):
 		return null
 	var mult: float = _tier_mult[tier - 1] * PlayerData.troop_multiplier(troop.id)
 	var unit = UnitScene.instantiate()
@@ -278,7 +282,7 @@ func spawn_player_unit(troop: Resource, tier: int, at: Vector2):
 func fish_used() -> int:
 	var used := 0
 	for unit in player_units:
-		if is_instance_valid(unit):
+		if is_instance_valid(unit) and unit != hero_unit:
 			used += Economy.fish_cost(unit.troop.rarity)
 	return used
 
@@ -292,6 +296,31 @@ func can_feed(troop: Resource) -> bool:
 		hud.show_message("Giỏ cá đầy: mèo mới chờ tới khi có chỗ.", hud.WARN)
 	return false
 
+
+# --- Hero cat on the field ----------------------------------------------------------------
+
+## The hero cat fights as a big unit built from its equipment (HeroCat.field_troop). It comes
+## out from the wall when a wave starts and again each wave if it fell. It eats no fish and
+## does not count toward the unit cap.
+func _spawn_hero() -> void:
+	if hero_unit != null and is_instance_valid(hero_unit) and not hero_unit.is_dead():
+		# Still standing: it catches its breath between waves.
+		hero_unit.heal(hero_unit.max_hp)
+		return
+	var troop: Resource = HeroCat.field_troop(PlayerData.hero_cat)
+	var unit = UnitScene.instantiate()
+	# Its weapon's class bonus is for the soldiers it pairs with; the hero has its own atk.
+	unit.setup(self, troop, PLAYER, 1, 1.0, 1.0)
+	unit.is_hero = true
+	unit.position = HERO_AT
+	var hold := 130.0 if troop.role == TroopData.Role.RANGED else 20.0
+	unit.rally = deployment_point(Vector2((FIELD_LEFT + FIELD_RIGHT) / 2.0, RALLY_Y + hold))
+	units_layer.add_child(unit)
+	player_units.append(unit)
+	hero_unit = unit
+	spawn_effect("blast", HERO_AT + Vector2(0, -30), 0.9)
+	SoundLib.play("hero", -2.0, 0.0)
+	hud.show_message("Mèo anh hùng xuất trận!")
 
 # --- Hero skill gear ------------------------------------------------------------------------
 
@@ -322,6 +351,9 @@ func _skill_damage(gear) -> float:
 func cast_hero_skill(gear) -> bool:
 	if phase != "fight" or _skill.is_empty():
 		return false
+	# The hero casts it: none while it has fallen (it returns next wave).
+	if hero_unit == null or not is_instance_valid(hero_unit) or hero_unit.is_dead():
+		return false
 	var damage := _skill_damage(gear)
 	var foes: Array = enemy_units.filter(func(u): return is_instance_valid(u) and not u.is_dead())
 	if foes.is_empty():
@@ -330,8 +362,8 @@ func cast_hero_skill(gear) -> bool:
 	skill_casts += 1
 	hud.show_message("Anh hùng tung chiêu: %s!" % _skill["name"])
 	match _skill["kind"]:
-		"whirl":  # every foe near the front line of our cats
-			var center := Vector2((FIELD_LEFT + FIELD_RIGHT) / 2.0, RALLY_Y)
+		"whirl":  # every foe around the hero
+			var center: Vector2 = hero_unit.position
 			for u in foes:
 				if u.position.distance_to(center) < 220.0:
 					u.take_damage(damage)
@@ -375,6 +407,9 @@ func cast_hero_skill(gear) -> bool:
 
 func on_unit_died(unit) -> void:
 	SoundLib.play("death" if unit.team == PLAYER else "pop", -1.0, 0.12)
+	if unit == hero_unit:
+		hero_unit = null
+		hud.show_message("Mèo anh hùng đã ngã! Sẽ trở lại ở đợt sau.", hud.WARN)
 	if unit.team == PLAYER:
 		player_units.erase(unit)
 		spawn_effect("dust", unit.position + Vector2(0, -8), 1.1)
@@ -419,8 +454,7 @@ func spawn_arrow(shooter, target, amount: float, crit := false) -> void:
 			arrow.burn_time = troop.ability_duration
 			arrow.modulate = Color(1.0, 0.6, 0.3)
 	if arrow.texture == null:
-		var color := "Blue" if shooter.team == PLAYER else "Red"
-		arrow.texture = SpriteLib.texture("Units/%s Units/Archer/Arrow.png" % color)
+		arrow.texture = SpriteLib.fx_texture("arrow_blue" if shooter.team == PLAYER else "arrow_red")
 	projectiles.add_child(arrow)
 
 
@@ -518,6 +552,7 @@ func _spawn_enemy(troop_id: String, elite: bool) -> void:
 
 func _on_wave_started(index: int, total: int) -> void:
 	_basket_warned = false
+	_spawn_hero()
 	SoundLib.play("wave", 0.0, 0.0)
 	hud.show_message("Đợt %d/%d đang tới!" % [index + 1, total], hud.WARN)
 
@@ -546,8 +581,14 @@ func _on_all_waves_cleared() -> void:
 	# The troops dance first; the result panel follows.
 	SoundLib.play("victory", 0.0, 0.0)
 	_celebrate()
-	var delay := get_tree().create_timer(VICTORY_DANCE_TIME)
+	# A child Timer, not a SceneTreeTimer: leaving during the dance frees it with the scene,
+	# so the panel never tries to open on a freed HUD. (The chest is already queued.)
+	var delay := Timer.new()
+	delay.one_shot = true
+	delay.wait_time = VICTORY_DANCE_TIME
 	delay.timeout.connect(func(): hud.show_end(true, stars, "Thành còn %d%% máu" % roundi(ratio * 100.0), reward))
+	add_child(delay)
+	delay.start()
 
 
 ## Every soldier left standing jumps for joy, with confetti over the field.
@@ -555,11 +596,13 @@ func _celebrate() -> void:
 	for unit in player_units:
 		if is_instance_valid(unit) and not unit.is_dead():
 			unit.celebrate()
-	var colors := [Color("ffd35c"), Color("e0586a"), Color("5aa9e6"), Color("7fd66b"), Color("c28bff")]
+	var colors := [Color("ffd35c"), Color("e0586a"), Color("5aa9e6"), Color("7fd66b"), Color("c28bff"), Color("ff9a3c"), Color("ffffff")]
+	var strip := _confetti_strip()
 	for i in colors.size():
 		var confetti := CPUParticles2D.new()
+		confetti.texture = strip
 		confetti.position = Vector2(360, 60)
-		confetti.amount = 30
+		confetti.amount = 40
 		confetti.lifetime = 2.6
 		confetti.one_shot = true
 		confetti.explosiveness = 0.85
@@ -572,12 +615,24 @@ func _celebrate() -> void:
 		confetti.gravity = Vector2(0, 160)
 		confetti.angular_velocity_min = -360.0
 		confetti.angular_velocity_max = 360.0
-		confetti.scale_amount_min = 4.0
-		confetti.scale_amount_max = 7.0
+		confetti.scale_amount_min = 0.7
+		confetti.scale_amount_max = 1.2
+		confetti.damping_min = 20.0
+		confetti.damping_max = 50.0
+		# Side-to-side drift while falling, like paper.
+		confetti.tangential_accel_min = -40.0
+		confetti.tangential_accel_max = 40.0
 		confetti.color = colors[i]
 		effects.add_child(confetti)
 		confetti.emitting = true
 		confetti.finished.connect(confetti.queue_free)
+
+
+## A small paper strip for the confetti (tinted per particle colour).
+func _confetti_strip() -> Texture2D:
+	var image := Image.create_empty(6, 14, false, Image.FORMAT_RGBA8)
+	image.fill(Color.WHITE)
+	return ImageTexture.create_from_image(image)
 
 
 func _on_core_destroyed() -> void:

@@ -78,7 +78,7 @@ func _item(title: String) -> Control:
 func _check_layout(dimensions: Vector2i) -> void:
 	var records: Array = []
 	var viewport_width: float = _home.size.x
-	for title in ["FeaturedChest", "SupplyChestGrid", "SupplyChest_wood", "SupplyChest_silver", "GoldOpen", "GoldOpenTen", "WoodOpen", "SilverOpen", "ShopRates", "GoldRewardBubble", "GoldGuarantee", "GemPackGrid", "ShopSection_premium", "ShopSection_supply", "ShopSection_gems"]:
+	for title in ["FeaturedChest", "SupplyChestGrid", "SupplyChest_wood", "SupplyChest_silver", "GoldOpen", "GoldOpenTen", "WoodOpen", "SilverOpen", "ShopRates", "GoldRewardBubble", "GoldGuarantee", "GemPackGrid", "GoldExchangeGrid", "ShopSection_premium", "ShopSection_supply", "ShopSection_gems", "ShopSection_gold"]:
 		var node := _item(title)
 		_check(node != null, title + " exists at " + str(dimensions))
 		if node == null:
@@ -137,14 +137,18 @@ func _data_states() -> void:
 
 func _gem_pack_scroll() -> void:
 	var scroll := _shop().get_child(0) as ScrollContainer
-	scroll.scroll_vertical = 10000
+	var header := _item("ShopSection_gems")
+	scroll.scroll_vertical += roundi(header.get_global_rect().position.y - scroll.get_global_rect().position.y)
 	await _settle()
 	var packs := _item("GemPackGrid") as GridContainer
-	_check(_item("GemExchange") == null and _item("GemExchangeAction") == null, "Retired diamond-to-gold exchange is absent from production Shop")
 	_check(scroll.scroll_vertical > 0, "The production shop scrolls to the gem packs")
 	_check(packs != null and packs.columns == 3 and packs.get_child_count() == 6 and _home._content.get_global_rect().intersects(packs.get_global_rect()), "All six gem packs occupy the reachable three-column shop grid")
 	_check(_home._nav_holder.is_visible_in_tree(), "Navigation remains visible after scrolling")
 	await _snap("gem-packs-scrolled", SIZES[1])
+	scroll.scroll_vertical = 100000
+	await _settle()
+	var gold := _item("GoldExchangeGrid") as GridContainer
+	_check(gold != null and gold.columns == 3 and gold.get_child_count() == 6 and _home._content.get_global_rect().intersects(gold.get_global_rect()), "Daily free gold and five paid exchanges are reachable beneath the gem packs")
 	scroll.scroll_vertical = 0
 	await _settle()
 

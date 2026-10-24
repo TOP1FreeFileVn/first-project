@@ -31,6 +31,8 @@ const SCREEN := Vector2(720, 1280)
 const CHEST_AT := Vector2(360, 760)
 const CARD_AT := Vector2(360, 470)
 const CARD_SIZE := Vector2(170, 230)
+## Side of an equipment reveal's gear tile (it is shown without a card around it).
+const ITEM_TILE := 150.0
 const CARD_SCALE := 1.25
 const TRAY_Y := 1110.0
 const CHEST_SIZE := 250.0
@@ -322,8 +324,8 @@ func _next_card() -> void:
 		_show_summary()
 		return
 	_stage = "card"
-	_hint.text = "Chạm để lật nhanh"
 	var id: String = _order[_next]
+	_hint.text = "Chạm để mở nhanh" if _items.has(id) else "Chạm để lật nhanh"
 	_next += 1
 	var rarity := _rarity(id)
 	var special := rarity >= Economy.Rarity.EPIC or _new_ids.has(id)
@@ -331,7 +333,9 @@ func _next_card() -> void:
 	_card.position = CHEST_AT - CARD_SIZE / 2.0
 	_card.scale = Vector2(0.2, 0.2)
 	_card.rotation = -0.6
-	_set_face(_card, false)
+	# Equipment pops out of the chest face up; only troop cards are dealt face down and flipped.
+	var flips := not _items.has(id)
+	_set_face(_card, not flips)
 	add_child(_card)
 	move_child(_card, _hint.get_index())
 	# The halo behind the card back already hints at the rarity.
@@ -348,6 +352,17 @@ func _next_card() -> void:
 	_tween.tween_property(_card, "rotation", 0.0, 0.34)
 	_tween.tween_property(self, "ray_center", CARD_AT, 0.3)
 	_tween.tween_property(self, "halo", 0.6 if rarity < Economy.Rarity.EPIC else 0.8, 0.3)
+	if not flips:
+		# No card to turn over: a small pop, the rarity flash, then the hold.
+		_tween.chain().tween_property(_card, "scale", Vector2.ONE * CARD_SCALE * 1.08, 0.08).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+		_tween.chain().tween_callback(func():
+			SoundLib.play("coin", -4.0)
+			if rarity >= Economy.Rarity.RARE:
+				_flash(0.42 if rarity >= Economy.Rarity.EPIC else 0.24, CARD_AT,
+					halo_color.lightened(0.25), Vector2(240, 280)))
+		_tween.chain().tween_property(_card, "scale", Vector2.ONE * CARD_SCALE, 0.1).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		_tween.chain().tween_callback(_hold.bind(id, rarity, special))
+		return
 	if rarity >= Economy.Rarity.EPIC:
 		# Tease: the face-down card trembles while its halo swells.
 		var shakes := 6 if rarity >= Economy.Rarity.LEGENDARY else 4
@@ -547,7 +562,19 @@ func _show_summary() -> void:
 		grid = null
 	var ordered := _order.duplicate()
 	ordered.reverse()
-	var small := 1.12 if _order.size() <= 3 else 0.86
+	# Identical equipment shows once with a count, so a x10 chest builds one tile per kind
+	# (at most the catalog size) instead of sixty.
+	var stacks := {}
+	var stacked := []
+	for id in ordered:
+		var key: String = "kind:" + str(_items[id]["id"]) if _items.has(id) else id
+		if not stacks.has(key):
+			stacks[key] = 0
+			stacked.append(id)
+		stacks[key] += 1
+	ordered = stacked
+	grid.columns = clampi(ordered.size(), 1, 4)
+	var small := 1.12 if ordered.size() <= 3 else 0.86
 	var delay := 0.0
 	var delay_step := minf(0.05, 0.6 / maxf(ordered.size() - 1, 1)) if int(_loot.get("chests", 1)) > 1 else 0.05
 	for id in ordered:
@@ -557,6 +584,14 @@ func _show_summary() -> void:
 		holder.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		grid.add_child(holder)
 		var card := _make_card(id, _loot.get("cards", {}).get(id, 1), true)
+		var copies: int = stacks["kind:" + str(_items[id]["id"]) if _items.has(id) else id]
+		if copies > 1:
+			holder.set_meta("count", copies)
+			var count := UiKit.label("×%d" % copies, 30, UiKit.GOLD_TEXT)
+			count.name = "RewardCount"
+			count.add_theme_constant_override("outline_size", 8)
+			count.position = Vector2(CARD_SIZE.x - 64, 14)
+			card.add_child(count)
 		card.scale = Vector2(small, small) * 0.2
 		card.pivot_offset = Vector2.ZERO
 		holder.add_child(card)
@@ -568,14 +603,6 @@ func _show_summary() -> void:
 		rewards.add_child(gold)
 	if not _loot.get("blueprints", {}).is_empty():
 		rewards.add_child(UiKit.reward_row({"blueprints": _loot["blueprints"]}, 26))
-	if _loot.get("stones", 0) > 0:
-		var stones := UiKit.hbox(6)
-		stones.name = "ChestSummaryStones"
-		stones.alignment = BoxContainer.ALIGNMENT_CENTER
-		stones.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		stones.add_child(UiKit.forge_stone_icon(36))
-		stones.add_child(UiKit.label("%d đá rèn" % _loot["stones"], 28))
-		rewards.add_child(stones)
 	if not _new_ids.is_empty():
 		var names := []
 		for id in _new_ids:
@@ -722,6 +749,10 @@ func _draw_front() -> void:
 func _draw_sweep() -> void:
 	var center := _card_center()
 	var half := CARD_SIZE * absf(_card.scale.y) / 2.0
+	if _card.has_meta("equipment_uid"):
+		# An equipment reveal has no card face: shine over its gear tile only.
+		half = Vector2.ONE * ITEM_TILE * absf(_card.scale.y) / 2.0
+		center.y -= 14.0 * absf(_card.scale.y)
 	var rect := PackedVector2Array([center - half, center + Vector2(half.x, -half.y), center + half, center + Vector2(-half.x, half.y)])
 	var x := lerpf(-half.x - 120.0, half.x + 120.0, sweep)
 	var band := PackedVector2Array([
@@ -798,41 +829,40 @@ func _make_card(id: String, count: int, face_up: bool) -> Control:
 	return card
 
 
-# A hero-cat equipment card: rarity, the item's gear face, its name and slot.
+# A hero-cat equipment reveal: the item's own gear tile (it already has a rarity frame and
+# slot badge), big, with its name under it. No outer card and no back: it is never flipped.
 func _make_item_card(id: String, face_up: bool) -> Control:
 	var d: Dictionary = HeroCat.ITEMS[_items[id]["id"]]
 	var rarity: int = d["rarity"]
 	var card := Control.new()
+	card.set_meta("equipment_item_id", _items[id]["id"])
+	card.set_meta("equipment_uid", str(_items[id]["uid"]))
 	card.size = CARD_SIZE
 	card.pivot_offset = CARD_SIZE / 2.0
 	card.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	card.add_child(UiKit.card_back_face(CARD_SIZE))
-	var front := PanelContainer.new()
+	var front := VBoxContainer.new()
 	front.name = "Front"
-	front.add_theme_stylebox_override("panel", UiKit.rarity_card(rarity))
+	front.alignment = BoxContainer.ALIGNMENT_CENTER
+	front.add_theme_constant_override("separation", 6)
 	front.size = CARD_SIZE
 	front.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	var column := UiKit.vbox(2)
-	front.add_child(column)
-	var rarity_label := UiKit.label(Economy.RARITY_NAMES[rarity], 15)
-	rarity_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	column.add_child(rarity_label)
-	var face := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(rarity), "", 100.0)
+	var face := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(rarity), "", ITEM_TILE)
 	face.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	face.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	column.add_child(face)
-	var name_label := UiKit.label(d["name"], 19)
+	front.add_child(face)
+	var name_label := UiKit.label(d["name"], 21)
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	column.add_child(name_label)
-	var slot_label := UiKit.label(HeroCat.SLOT_NAMES[d["slot"]], 18)
-	slot_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	column.add_child(slot_label)
+	name_label.add_theme_color_override("font_color", Economy.RARITY_COLORS[rarity].lightened(0.35))
+	name_label.add_theme_constant_override("outline_size", 6)
+	front.add_child(name_label)
 	card.add_child(front)
 	_set_face(card, face_up)
 	return card
 
 func _set_face(card: Control, up: bool) -> void:
-	card.get_node("Back").visible = not up
+	# Equipment has no back.
+	if card.has_node("Back"):
+		card.get_node("Back").visible = not up
 	card.get_node("Front").visible = up
 	for child in card.get_children():
 		if child is Label:

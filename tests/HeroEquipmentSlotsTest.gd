@@ -17,7 +17,7 @@ func _ready() -> void:
 
 func _check_new_profile() -> void:
 	_check(HeroCat.SLOTS == ["weapon", "helmet", "armor", "boots"], "four active equipment families")
-	_check(HeroCat.ITEMS.size() == 13, "remaining catalog keeps thirteen items")
+	_check(HeroCat.ITEMS.size() == 17, "catalog holds 17 items (every slot has all four rarities)")
 	var state := HeroCat.new_state()
 	_check(state.bag.size() == 7 and state.equipped.size() == 3, "new profile keeps three worn and four spare items")
 	_check(state.retired_items.is_empty(), "new profile has no retired equipment")

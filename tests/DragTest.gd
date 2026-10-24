@@ -1,96 +1,49 @@
 extends Node
 
-# Drags a troop card onto a team slot with real (simulated) mouse events.
-# Run (windowed): Godot --path . res://tests/DragTest.tscn
+# The troop page's drag rules on the real page, in RAM (no save): a version dropped on its
+# cat's spot joins (swapping that cat's other version), on another cat's spot is refused,
+# and a fighter dropped on the roster benches (never the last one).
+# Run: Godot --headless --path . res://tests/DragTest.tscn
 
-var _home
-var _page
-var _t := 0.0
-var _step := 0
-var _from := Vector2.ZERO
-var _to := Vector2.ZERO
+const Cats = preload("res://game/data/Cats.gd")
 
+var _fails := 0
+
+func _check(ok: bool, what: String) -> void:
+	print(("DRAG_OK " if ok else "DRAG_FAIL ") + what)
+	if not ok:
+		_fails += 1
 
 func _ready() -> void:
 	PlayerData.persist = false
 	PlayerData._reset()
 	PlayerData.castle_level = 3
-	for id in ["giao", "dai_bac", "katana", "riu"]:
+	for id in PlayerData.TROOP_ORDER:
 		PlayerData.troops[id]["unlocked"] = true
-	PlayerData.team = ["kiem", "cung", "giao", "katana"]
-	_home = load("res://game/menu/Home.tscn").instantiate()
-	add_child(_home)
+	PlayerData.team = ["kiem", "no", "sach_phep"]
+	var home = load("res://game/menu/Home.tscn").instantiate()
+	add_child(home)
+	await get_tree().process_frame
+	home.select_tab(home.TROOPS_TAB, false)
+	await get_tree().process_frame
+	var page = home._pages[home.TROOPS_TAB]
+	var drag := func(id: String, source: String) -> Dictionary:
+		return {"kind": "troop", "troop_id": id, "source": source, "cat": Cats.cat_of(id), "owner_id": page.get_instance_id()}
 
-
-func _process(delta: float) -> void:
-	_t += delta
-	match _step:
-		0:
-			if _t < 1.0:
-				return
-			_home.select_tab(3, false)
-			_step = 1
-			_t = 0.0
-		1:
-			if _t < 0.5:
-				return
-			_page = _home._pages[3]
-			var card := _find_card("Thợ mỏ")
-			print("card: ", card, " slots: ", _page._slots.size())
-			_from = card.get_global_rect().get_center()
-			_to = _page._slots[1].get_global_rect().get_center()
-			print("from ", _from, " to ", _to)
-			_mouse_move(_from)
-			_mouse_button(_from, true)
-			_step = 2
-			_t = 0.0
-		2:
-			if _t < 0.05:
-				return
-			print("after press: press_id=", _page._press_id, " ghost=", _page._ghost)
-			for i in 10:
-				_mouse_move(_from.lerp(_to, (i + 1) / 10.0))
-			print("touchscreen: ", DisplayServer.is_touchscreen_available())
-			_step = 3
-			_t = 0.0
-		3:
-			if _t < 0.2:
-				return
-			print("before drop: ghost=", _page._ghost)
-			_mouse_button(_to, false)
-			_step = 4
-			_t = 0.0
-		4:
-			if _t < 0.3:
-				return
-			print("team now: ", PlayerData.battle_team())
-			get_tree().quit()
-
-
-func _find_card(text: String) -> Control:
-	var stack: Array = [_page]
-	while not stack.is_empty():
-		var node: Node = stack.pop_back()
-		if node is Button and node.get_parent() is GridContainer:
-			for label in node.find_children("*", "Label", true, false):
-				if label.text == text:
-					return node
-		stack.append_array(node.get_children())
-	return null
-
-
-func _mouse_move(at: Vector2) -> void:
-	var e := InputEventMouseMotion.new()
-	e.position = get_tree().root.get_final_transform() * at
-	e.global_position = e.position
-	e.button_mask = MOUSE_BUTTON_MASK_LEFT
-	Input.parse_input_event(e)
-
-
-func _mouse_button(at: Vector2, pressed: bool) -> void:
-	var e := InputEventMouseButton.new()
-	e.position = get_tree().root.get_final_transform() * at
-	e.global_position = e.position
-	e.button_index = MOUSE_BUTTON_LEFT
-	e.pressed = pressed
-	Input.parse_input_event(e)
+	# Mướp Súng onto Mướp's spot swaps out Mướp Kiếm.
+	_check(page._can_team_drop(Vector2.ZERO, drag.call("sung", "roster"), "muop"), "a Mướp version may drop on Mướp's spot")
+	_check(not page._can_team_drop(Vector2.ZERO, drag.call("sung", "roster"), "tro"), "a Mướp version may not drop on Tro's spot")
+	page._apply_team_drop("sung", false)
+	var team: Array = PlayerData.battle_team()
+	_check(team.has("sung") and not team.has("kiem") and team.size() == 3, "dropping swaps the cat's version in (%s)" % [team])
+	# Bơ joins the free fourth slot only if the castle has one.
+	_check(PlayerData.team_slots() == 4 or not page._can_team_drop(Vector2.ZERO, drag.call("bua", "roster"), "bo"), "a new cat needs a free slot")
+	# Bench a fighter; never the last one.
+	_check(page._can_bench_drop(Vector2.ZERO, drag.call("no", "team")), "a fighter can be benched")
+	page._apply_team_drop("no", true)
+	_check(not PlayerData.in_team("no"), "benched fighter left the team")
+	PlayerData.team = ["sung"]
+	_check(not page._can_bench_drop(Vector2.ZERO, drag.call("sung", "team")), "the last fighter cannot be benched")
+	_check(not page._can_team_drop(Vector2.ZERO, {"kind": "troop", "troop_id": "sung", "owner_id": 0}, "muop"), "foreign drag data is refused")
+	print("DragTest: fails=%d" % _fails)
+	get_tree().quit(1 if _fails > 0 else 0)

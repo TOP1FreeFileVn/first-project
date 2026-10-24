@@ -1,0 +1,338 @@
+{
+	"captures": [
+		"rarity-0-360x640.png",
+		"rarity-1-360x640.png",
+		"rarity-2-360x640.png",
+		"rarity-3-360x640.png",
+		"rarity-0-450x800.png",
+		"rarity-1-450x800.png",
+		"rarity-2-450x800.png",
+		"rarity-3-450x800.png"
+	],
+	"cards": [
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 0,
+			"slot": "boots",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 0,
+			"slot": "armor",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 0,
+			"slot": "helmet",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 0,
+			"slot": "weapon",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 1,
+			"slot": "boots",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 1,
+			"slot": "armor",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 1,
+			"slot": "helmet",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 1,
+			"slot": "weapon",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 2,
+			"slot": "boots",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 2,
+			"slot": "armor",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 2,
+			"slot": "helmet",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 2,
+			"slot": "weapon",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 3,
+			"slot": "boots",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 3,
+			"slot": "armor",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 3,
+			"slot": "helmet",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 3,
+			"slot": "weapon",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 0,
+			"slot": "boots",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 0,
+			"slot": "armor",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 0,
+			"slot": "helmet",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_kiem_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 0,
+			"slot": "weapon",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 1,
+			"slot": "boots",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 1,
+			"slot": "armor",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 1,
+			"slot": "helmet",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_cung_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 1,
+			"slot": "weapon",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 2,
+			"slot": "boots",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 2,
+			"slot": "armor",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 2,
+			"slot": "helmet",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_gay_phep_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 2,
+			"slot": "weapon",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_boots_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_boots.svg",
+			"rarity": 3,
+			"slot": "boots",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_armor_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_armor.svg",
+			"rarity": 3,
+			"slot": "armor",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_eq_helmet_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_helmet.svg",
+			"rarity": 3,
+			"slot": "helmet",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"art": "res://game/ui/art/icon_hero_w_katana_96.png",
+			"glyph": "res://game/ui/art/equipment_badge_weapon.svg",
+			"rarity": 3,
+			"slot": "weapon",
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": 410,
+	"failures": [],
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/chest-reward-review-profile/Godot/app_userdata/Gear Defenders",
+	"scope": "Actual ChestOpening summary with approved shared equipment frame and filled category badges, all four slots and all rarities at native 360/450 widths; no grants or saves."
+}

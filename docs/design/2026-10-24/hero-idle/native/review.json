@@ -1,0 +1,3055 @@
+{
+	"captures": [
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-0_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-1_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-2_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-3_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-4_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-5_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-6_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-7_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-8_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-9_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-10_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-11_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-12_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-13_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-14_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-15_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "2"
+			},
+			"file": "weapon-cung_san_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "3"
+			},
+			"file": "weapon-gay_sao_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "4"
+			},
+			"file": "weapon-riu_lua_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "5"
+			},
+			"file": "weapon-katana_nguyet_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8"
+			},
+			"file": "bare_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-0_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-1_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-2_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-3_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-4_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-5_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-6_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-7_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-8_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-9_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-10_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-11_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-12_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-13_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-14_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "1"
+			},
+			"file": "idle-15_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "2"
+			},
+			"file": "weapon-cung_san_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "3"
+			},
+			"file": "weapon-gay_sao_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "4"
+			},
+			"file": "weapon-riu_lua_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8",
+				"weapon": "5"
+			},
+			"file": "weapon-katana_nguyet_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"equipped": {
+				"armor": "11",
+				"boots": "13",
+				"helmet": "8"
+			},
+			"file": "bare_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "sword_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-1",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-2",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-4",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-5_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-5",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-6",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-7",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-8",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-9",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-10_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-10",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-11",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-12",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-13",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-14",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle-15_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_idle-15",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "idle_time_advances_without_manual_seeking",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "authored_idle_changes_bone_pose_in_natural_frames",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_native_item_card_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_equipped_weapon_updates_preview_family_ranged",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_weapon-cung_san",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_native_item_card_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_equipped_weapon_updates_preview_family_magic",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_weapon-gay_sao",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_native_item_card_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_equipped_weapon_updates_preview_family_heavy",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_weapon-riu_lua",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_native_item_card_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_equipped_weapon_updates_preview_family_katana",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "katana_nguyet_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_weapon-katana_nguyet",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_equipped_weapon_updates_preview_family_bare",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_plays_authored_idle",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "bare_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_bare",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "sword_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-1",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-2",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-4",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-5_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-5",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-6",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-7",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-8",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-9",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-10_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-10",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-11",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-12",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-13",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-14",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_equipped_weapon_updates_preview_family_melee",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle-15_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_idle-15",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "idle_time_advances_without_manual_seeking",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "authored_idle_changes_bone_pose_in_natural_frames",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_native_item_card_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_equipped_weapon_updates_preview_family_ranged",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-cung_san",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_native_item_card_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_equipped_weapon_updates_preview_family_magic",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-gay_sao",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_native_item_card_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_equipped_weapon_updates_preview_family_heavy",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-riu_lua",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_native_item_card_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_native_equip_button_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_equipped_in_actual_player_state",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_equipped_weapon_updates_preview_family_katana",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "katana_nguyet_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_weapon-katana_nguyet",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_one_real_spine_rig_in_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_equipped_weapon_updates_preview_family_bare",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_uses_production_family_spine_asset",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_rig_has_visible_loaded_parts",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_plays_authored_idle",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_painted_rig_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_inventory_retains_usable_height",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "bare_no_retired_circle_platform",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_bare",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "review_never_writes_save",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_in_memory_state_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/hero-idle-review-profile/Godot/app_userdata/Gear Defenders",
+	"samples": [
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "sword",
+			"painted_bounds": [
+				268.449005126953,
+				41.2422714233398,
+				179.299407958984,
+				181.079071044922
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.246728444444444,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "idle-5",
+			"painted_bounds": [
+				268.007202148438,
+				39.6496124267578,
+				185.351013183594,
+				183.116516113281
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.796849587301587,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "idle-10",
+			"painted_bounds": [
+				268.699096679688,
+				42.1406860351563,
+				178.451995849609,
+				179.928863525391
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 1.35817322222222,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "idle-15",
+			"painted_bounds": [
+				267.766418457031,
+				38.778450012207,
+				183.190673828125,
+				184.230133056641
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 1.91158955555556,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "ranged",
+			"label": "cung_san",
+			"painted_bounds": [
+				268.43408203125,
+				41.1885833740234,
+				179.345642089844,
+				181.147796630859
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/ranged/ranged.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.252012888888889,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "magic",
+			"label": "gay_sao",
+			"painted_bounds": [
+				268.430816650391,
+				41.1768493652344,
+				179.355712890625,
+				181.162811279297
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/magic/magic.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.253167571428571,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "heavy",
+			"label": "riu_lua",
+			"painted_bounds": [
+				268.43310546875,
+				41.1850738525391,
+				182.060913085938,
+				181.152297973633
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/heavy/heavy.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.252359555555556,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "katana",
+			"label": "katana_nguyet",
+			"painted_bounds": [
+				268.429107666016,
+				41.1707229614258,
+				179.360961914063,
+				181.170654296875
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/katana/katana.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.253771666666667,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 10,
+			"family": "bare",
+			"label": "bare",
+			"painted_bounds": [
+				268.446075439453,
+				41.2317352294922,
+				179.308532714844,
+				181.092559814453
+			],
+			"parts": 8,
+			"skeleton": "res://game/assets/hero/bare/bare.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.247766,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "sword",
+			"painted_bounds": [
+				268.428558349609,
+				41.1687393188477,
+				179.362640380859,
+				181.173187255859
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.253964777777778,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "idle-5",
+			"painted_bounds": [
+				268.062286376953,
+				39.8485641479492,
+				185.823303222656,
+				182.862121582031
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.816349333333334,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "idle-10",
+			"painted_bounds": [
+				268.555267333984,
+				41.6243133544922,
+				178.955963134766,
+				180.590042114258
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 1.40910022222222,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "melee",
+			"label": "idle-15",
+			"painted_bounds": [
+				267.928924560547,
+				39.3666152954102,
+				184.665466308594,
+				183.478363037109
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/melee/melee.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 1.96912833333333,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "ranged",
+			"label": "cung_san",
+			"painted_bounds": [
+				268.432525634766,
+				41.1829986572266,
+				179.350433349609,
+				181.154937744141
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/ranged/ranged.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.252562888888889,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "magic",
+			"label": "gay_sao",
+			"painted_bounds": [
+				268.443939208984,
+				41.2240676879883,
+				179.315155029297,
+				181.102386474609
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/magic/magic.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.248518222222222,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "heavy",
+			"label": "riu_lua",
+			"painted_bounds": [
+				268.445251464844,
+				41.2288055419922,
+				182.002899169922,
+				181.096328735352
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/heavy/heavy.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.248055666666667,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 11,
+			"family": "katana",
+			"label": "katana_nguyet",
+			"painted_bounds": [
+				268.432830810547,
+				41.1841506958008,
+				179.349456787109,
+				181.153472900391
+			],
+			"parts": 10,
+			"skeleton": "res://game/assets/hero/katana/katana.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.252449666666667,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"animation": "idle",
+			"bones": 10,
+			"family": "bare",
+			"label": "bare",
+			"painted_bounds": [
+				268.451263427734,
+				41.250373840332,
+				179.292388916016,
+				181.068725585938
+			],
+			"parts": 8,
+			"skeleton": "res://game/assets/hero/bare/bare.json",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"time": 0.245931,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"save_after": "absent",
+	"save_before": "absent",
+	"scope": "Production Home/Hero; natural Spine idle motion; native equip actions; rig and inventory bounds at two phone sizes."
+}

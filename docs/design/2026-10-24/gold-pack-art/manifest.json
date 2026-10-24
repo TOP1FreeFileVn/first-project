@@ -1,0 +1,483 @@
+{
+  "complete": true,
+  "missing_tiers": [],
+  "canvas": [
+    512,
+    512
+  ],
+  "maximum_art_extent": [
+    32,
+    32,
+    480,
+    480
+  ],
+  "alignment": "centered ink bbox on both axes",
+  "ink_alpha_threshold": 8,
+  "resampling": "premultiplied RGBA Lanczos",
+  "concept_policy": "One-to-one counterpart of each existing gem pack; replace gems with gold coins while retaining its container and composition.",
+  "model_note": "Requested model is not verified model identity. Only an explicitly reported image model is recorded as reported_image_model.",
+  "records": [
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        48,
+        280,
+        1201,
+        991
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        276
+      ],
+      "placement": [
+        32,
+        118
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        118,
+        480,
+        394
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        118,
+        480,
+        394
+      ],
+      "nonzero_alpha_pixels": 85795,
+      "partial_alpha_pixels": 84906,
+      "tier": 1,
+      "subject": "Three coins",
+      "gold": 500,
+      "concept_reference": "game/ui/art/shop_gem_packs/01.png",
+      "source": "output/imagegen/gold-packs-2026-10-24/01-raw.png",
+      "source_sha256": "9b9a8e66e5f92298f7d41622779be3e0d537289604338efa3ece65dba069acf7",
+      "output": "game/ui/art/shop_gold_packs/01.png",
+      "output_sha256": "8fe702d157f3c6adb1f1fc184c30d2d9e60194841dd9213bbdada1c2320af2b2",
+      "generation": {
+        "tier": 1,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T06:25:43.4034143Z",
+        "finished_utc": "2026-10-24T06:27:16.4754875Z",
+        "prompt": "prompts/01.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/shop_gem_packs/01.png",
+          "output/imagegen/gold-packs-2026-10-24/coin-reference.png"
+        ],
+        "output": "01-raw.png",
+        "response_model": null,
+        "revised_prompt": "Edit Image 1 using Image 2 for coin identity. Output only the isolated edited asset on transparent RGBA square canvas. Tier 1 has NO CONTAINER: replace its exactly three purple gems with exactly THREE bright yellow gear-stamped round gold coins, one large central foreground coin and two smaller coins behind at lower left and lower right, matching original triangular grouping, relative heights, compact broad silhouette, placement and clear canvas margins. Preserve Image 1 warm brown thick flat cartoon outline treatment. Central coin overlaps rear coins as central gem did. No additional coins or objects. Faces luminous #ffda20, flat warm gold #f5ae06 rim, closed warm brown #583f21 outlines. Each coin has a small simple flat darker ochre #cd8800 gear stamp with an open circular center showing yellow face, modeled on Image 2 but modest size. Clean flat 2D large solid color areas, no gradients or shading effects, no 3D, no sparkle, no text, no ground or shadow, no checkerboard. All purple removed. Keep entire illustration inside canvas. Do not include reference panels."
+      }
+    },
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        75,
+        65,
+        1169,
+        1177
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        441,
+        448
+      ],
+      "placement": [
+        35,
+        32
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        35,
+        32,
+        476,
+        480
+      ],
+      "ink_bbox_alpha8": [
+        35,
+        32,
+        476,
+        480
+      ],
+      "nonzero_alpha_pixels": 149499,
+      "partial_alpha_pixels": 148446,
+      "tier": 2,
+      "subject": "Drawstring pouch",
+      "gold": 500,
+      "concept_reference": "game/ui/art/shop_gem_packs/02.png",
+      "source": "output/imagegen/gold-packs-2026-10-24/02-raw.png",
+      "source_sha256": "9a4ef30ad524d763f2b4c20c7e41449eb5928cb8a4c73dc0eb028ac6806b4326",
+      "output": "game/ui/art/shop_gold_packs/02.png",
+      "output_sha256": "e7ebaa606c8aece05e2ae4e7e0c1cbe9949fd96ac7f69c51b6e58128706e2aa7",
+      "generation": {
+        "tier": 2,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T06:25:44.6287746Z",
+        "finished_utc": "2026-10-24T06:26:57.7442751Z",
+        "prompt": "prompts/02.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/shop_gem_packs/02.png",
+          "output/imagegen/gold-packs-2026-10-24/coin-reference.png"
+        ],
+        "output": "02-raw.png",
+        "response_model": null,
+        "revised_prompt": "Edit Image 1 only, using Image 2 solely as the coin identity reference. Produce a single isolated illustration on transparent RGBA square canvas, no text. Preserve the exact tan drawstring pouch from Image 1: identical placement, proportions, outline, gathered mouth and lip, warm tan material palette, fold shapes, front body, brown tie cords and knots, view and flat cartoon stroke hierarchy. Keep non-currency pixels as unchanged as possible. Replace ALL five purple gems in its compact overflowing mouth with overlapping bright yellow round/slightly elliptical gold coins in the same arrangement and approximate occupied areas. Replace its EXACTLY TWO loose foreground purple gems with exactly two gold coins, preserving their diagonal placement and overlap at lower right, one lower-left/front and one upper-right/behind. No additional loose currency. Coin design follows Image 2: luminous #ffda20 faces, warm #f5ae06 rims, warm brown #583f21 closed outlines matching target stroke thickness, small flat ochre #cd8800 gear stamps with empty circular centers on visible front faces. Coins are disks, never polygonal gems; no purple remains. Preserve pouch silhouette exactly, with natural currency substitution only. Flat large clean color areas, rounded contours, simple small gear stamps not intricate machinery, no gradients or rendering noise. Do not place stamps on the pouch. Maintain original compact abundance tier and full illustration inside canvas with clear empty margins. No separate reference panels, background, checkerboard, ground, shadow, sparkles, glow, ornaments, labels or watermark."
+      }
+    },
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        73,
+        280,
+        1183,
+        951
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        271
+      ],
+      "placement": [
+        32,
+        120
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        120,
+        480,
+        391
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        120,
+        480,
+        391
+      ],
+      "nonzero_alpha_pixels": 91099,
+      "partial_alpha_pixels": 90176,
+      "tier": 3,
+      "subject": "Shallow tray",
+      "gold": 2500,
+      "concept_reference": "game/ui/art/shop_gem_packs/03.png",
+      "source": "output/imagegen/gold-packs-2026-10-24/03-raw.png",
+      "source_sha256": "ff930cfce1dea0f0708e0b30da1436d078bb66ab58910ce758b0e60b6dd9a1fd",
+      "output": "game/ui/art/shop_gold_packs/03.png",
+      "output_sha256": "a5506528255a19886229d50f5728ee96c8ea757121f8600fbe6f23dfea670b48",
+      "generation": {
+        "tier": 3,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T06:25:45.9792278Z",
+        "finished_utc": "2026-10-24T06:26:47.7866942Z",
+        "prompt": "prompts/03.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/shop_gem_packs/03.png",
+          "output/imagegen/gold-packs-2026-10-24/coin-reference.png"
+        ],
+        "output": "03-raw.png",
+        "response_model": null,
+        "revised_prompt": "Edit Image 1 in place, using Image 2 solely as coin design reference. Output only one isolated illustration on a genuinely transparent RGBA square canvas. Strict precise currency substitution: preserve the exact low shallow warm-tan tray of Image 1, exact front rim, side edges, thickness, brown outlines, palette, view, placement, proportions, and all noncurrency areas. Replace EVERY purple/lilac diamond in the tray with clean bright yellow round or slightly elliptical gold coins, maintaining the original low wide pile silhouette, approximate count, item scale and overlaps. Replace the exact three loose front diamonds with three loose coins at the same locations and approximate sizes. Do not increase pile height or redesign container. Match Image 1's flat 2D casual cartoon rounded warm brown #583f21 thick closed contours and simpler internal strokes. Coins use luminous saturated #ffda20 faces, warm #f5ae06 rims and small flat ochre #cd8800 gear stamps with empty circular centers on readable front faces, as in Image 2; stamp is small, not ornate. Shared edges only once. Preserve tray pixels as closely as possible. Large flat clean color fields, no gradients, 3D, texture or shine. Whole illustration within canvas with clear margins. No remaining gems, purple, text, logos, panels, extra props, sparkles, ground, cast shadows or background. Gear emblems only on coins, never on tray."
+      }
+    },
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        76,
+        101,
+        1177,
+        1143
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        424
+      ],
+      "placement": [
+        32,
+        44
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        44,
+        480,
+        468
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        44,
+        480,
+        468
+      ],
+      "nonzero_alpha_pixels": 132598,
+      "partial_alpha_pixels": 131511,
+      "tier": 4,
+      "subject": "Deep carton box",
+      "gold": 5000,
+      "concept_reference": "game/ui/art/shop_gem_packs/04.png",
+      "source": "output/imagegen/gold-packs-2026-10-24/04-raw.png",
+      "source_sha256": "de67473ec661b9fe4853dd0725d7d772e5071dc8c164c7694b501c64b7a0f9ba",
+      "output": "game/ui/art/shop_gold_packs/04.png",
+      "output_sha256": "9497256688a26bec98bc1ff15c5486c25381db33f1bf548ca11e52b595b8ddc9",
+      "generation": {
+        "tier": 4,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T06:27:21.1038415Z",
+        "finished_utc": "2026-10-24T06:28:24.8984438Z",
+        "prompt": "prompts/04.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/shop_gem_packs/04.png",
+          "output/imagegen/gold-packs-2026-10-24/coin-reference.png"
+        ],
+        "output": "04-raw.png",
+        "response_model": null,
+        "revised_prompt": "Edit Image 1 using Image 2 solely as the gold coin identity reference. Exact object edit, not redesign: preserve the original open deep honey-tan cardboard carton, its exact silhouette, folded outward side flaps and their angles, frontal view, broad flat front panel, rim, material colors, placement and proportions and thick rounded brown outline treatment. Keep noncurrency areas unchanged as closely as possible. Replace EVERY purple/lilac diamond in the packed broad mound and the four loose foreground gems with clean round or slightly elliptical gold coin disks, preserving approximate number, overlap arrangement, mound height, compact foreground positions and overall occupied silhouette. Coins have luminous saturated yellow #ffda20 faces, warmer gold #f5ae06 rims, warm brown #583f21 outlines matching original stroke thickness, and a small flat darker ochre #cd8800 simple gear stamp with an empty circular center on readable coin faces, based on Image 2. Gear belongs only on coins. Flat casual mobile game 2D art, large clean color regions, simple rounded shapes, at most one broad light and shade area, no gradients or 3D effects. Preserve the carton exactly, no treasure chest, wood, pouch, handles, decoration, labels or added objects. No purple remains, no gems, sparkles, stars, text, numbers, logos, watermark, shadow or ground. Output only one isolated illustration centered on a square genuinely transparent RGBA canvas with clear margins, all carton flaps and foreground coins fully inside canvas. Do not display either reference as a panel."
+      }
+    },
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        72,
+        97,
+        1180,
+        1169
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        433
+      ],
+      "placement": [
+        32,
+        39
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        39,
+        480,
+        472
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        39,
+        480,
+        472
+      ],
+      "nonzero_alpha_pixels": 163373,
+      "partial_alpha_pixels": 162154,
+      "tier": 5,
+      "subject": "Open chest",
+      "gold": 12500,
+      "concept_reference": "game/ui/art/shop_gem_packs/05.png",
+      "source": "output/imagegen/gold-packs-2026-10-24/05-raw.png",
+      "source_sha256": "852df8aae281fc64e09596b26017fd5eeb340c630aedaa83739f1b90546414b0",
+      "output": "game/ui/art/shop_gold_packs/05.png",
+      "output_sha256": "bd87c82d728be7eee97479f28705432467ffa99d925ce6f5f0d4f8c609148521",
+      "generation": {
+        "tier": 5,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T06:27:21.0888741Z",
+        "finished_utc": "2026-10-24T06:28:29.5097912Z",
+        "prompt": "prompts/05.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/shop_gem_packs/05.png",
+          "output/imagegen/gold-packs-2026-10-24/coin-reference.png"
+        ],
+        "output": "05-raw.png",
+        "response_model": null,
+        "revised_prompt": "Edit Image 1 using Image 2 only as coin identity reference. Precise currency substitution, not redesign: preserve the exact honey-gold rectangular strongbox of Image 1, its placement, dimensions, silhouette, flat open lid behind pile, lid angle, corner brackets, front latch, panel divisions, brown outlines, flat colors and all non-currency areas as closely as possible. Replace EVERY purple/lilac diamond inside chest and loose in foreground with round or slightly elliptical bright yellow gold coins, naturally overlapping at the same locations. Preserve approximate quantity, abundance, mound height, overflow and front spill arrangement, and overall bounding box. Coins have luminous saturated #ffda20 faces, #f5ae06 warm yellow rims, warm brown #583f21 contours matching existing stroke thickness. Readable front-facing coins have a SMALL simple flat ochre #cd8800 gear stamp with empty circular center, modeled on Image 2, not oversized mechanisms. Keep flat 2D casual cartoon style, broad clean color areas, rounded outlines and simple internal stroke hierarchy. No remaining gems or purple. Do not alter chest or add emblem to it. Single isolated illustration on genuinely transparent RGBA background, centered square canvas with empty margins and entire chest and spill inside frame. No panels, text, numbers, UI, watermark, shadow, ground, checkerboard, gradients, photorealism, 3D, metallic texture, sparkles, stars, rays, extra ornaments, or extra objects."
+      }
+    },
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        37,
+        130,
+        1225,
+        1098
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        365
+      ],
+      "placement": [
+        32,
+        73
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        73,
+        480,
+        438
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        73,
+        480,
+        438
+      ],
+      "nonzero_alpha_pixels": 112374,
+      "partial_alpha_pixels": 111183,
+      "tier": 6,
+      "subject": "Overflowing chest",
+      "gold": 25000,
+      "concept_reference": "game/ui/art/shop_gem_packs/06.png",
+      "source": "output/imagegen/gold-packs-2026-10-24/06-raw.png",
+      "source_sha256": "a1bbaaf85ea0ff7296508470a00fd6ee6e6b8ca50c2fd80426e5ed2762388bfe",
+      "output": "game/ui/art/shop_gold_packs/06.png",
+      "output_sha256": "e5f56e32407b3a1a5f63725c59172784cc387eca6dbe39161ee8f4c9d218c5ef",
+      "generation": {
+        "tier": 6,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T06:28:19.8438192Z",
+        "finished_utc": "2026-10-24T06:30:00.6030672Z",
+        "prompt": "prompts/06.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/shop_gem_packs/06.png",
+          "output/imagegen/gold-packs-2026-10-24/coin-reference.png"
+        ],
+        "output": "06-raw.png",
+        "response_model": null,
+        "revised_prompt": "Edit Image 1 in place using Image 2 only as coin identity reference. Output one isolated transparent RGBA square illustration, no text. Strict currency substitution only: replace EVERY purple/lilac diamond in the central tall overflowing mountain and both foot-side heaps with abundant overlapping round or slightly elliptical bright gold coins. Preserve original pile silhouette, abundance and spill positions. Keep all non-currency areas as unchanged as possible: exact largest wide merchant chest, honey wood panels, flat open reinforced lid and its angle, brown outlines, rim, small side handles, corner reinforcements, front panel shape, dimensions, placement and material colors. Do not redesign or add a container. Coins have luminous saturated #ffda20 faces, warm #f5ae06 rims, warm brown #583f21 closed contours matching original stroke weight. On a few readable front-facing coins place small simple flat #cd8800 gear stamps with empty circular centers as in Image 2; stamps only on coins, never chest. Match Image 1 flat 2D casual cartoon with generous rounded shapes, clean large color fields and restrained shading, shared edges drawn once. Maintain exact framing and approximate original illustration bounds with clear empty margins, all spills contained. No purple remains. No gradients, 3D, metallic texture, extra ornament, sparkles, glow, ground, shadow, background color, checkerboard, labels or watermark. Return only the edited isolated illustration, not reference panels."
+      }
+    }
+  ]
+}

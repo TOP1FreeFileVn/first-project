@@ -116,12 +116,6 @@ func show_end(won: bool, stars: int, detail: String, reward: Dictionary) -> void
 			c.add_child(Ui.icon(item[0], 40))
 			c.add_child(Ui.label(UiKit.format_number(item[1]), "LabelDark", 24))
 			loot.add_child(c)
-	if reward.get("stones", 0) > 0:
-		# Forge Stones for the hero cat's equipment.
-		var st := Ui.hbox(6)
-		st.add_child(UiKit.forge_stone_icon(40))
-		st.add_child(Ui.label(UiKit.format_number(reward["stones"]), "LabelDark", 24))
-		loot.add_child(st)
 	for slot in reward.get("blueprints", {}):
 		var bp := Ui.hbox(4)
 		bp.add_child(UiKit.blueprint_icon(slot, 40))
@@ -156,12 +150,22 @@ func show_end(won: bool, stars: int, detail: String, reward: Dictionary) -> void
 		buttons.add_child(next)
 	_end_box.add_child(buttons)
 	_end_panel.visible = true
-	# The victory chest opens on top of the result panel; the simulator (no persist) and
-	# "fast chest" players just see the cards listed above.
-	if won and not cards.is_empty() and PlayerData.persist and not PlayerData.fast_chest:
-		var opening = ChestOpening.new()
-		opening.setup(Economy.CHESTS["victory"]["name"], Color("8a5a2b"), {"cards": cards, "gold": 0}, reward.get("new", []))
-		opening.attach(self)
+	# The victory chest waits for the lobby: it opens there, first thing (Home._ready).
+	# The simulator (no persist) and "fast chest" players just see the cards listed above.
+	# (PlayerData.grant_battle_rewards already queued the chest, saved.)
+	if won and not cards.is_empty() and PlayerData.victory_chest_waits():
+		_end_box.add_child(Ui.label("Rương chiến thắng sẽ mở khi về sảnh!", "LabelDark", 19))
+	_pop_in(_end_panel)
+
+
+## The result panel drops in with a little bounce.
+func _pop_in(panel: Control) -> void:
+	panel.pivot_offset = panel.size / 2.0
+	panel.scale = Vector2.ONE * 0.6
+	panel.modulate.a = 0.0
+	var tween := panel.create_tween().set_parallel()
+	tween.tween_property(panel, "scale", Vector2.ONE, 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tween.tween_property(panel, "modulate:a", 1.0, 0.2)
 
 
 func _process(_delta: float) -> void:

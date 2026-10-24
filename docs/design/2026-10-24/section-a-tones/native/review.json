@@ -1,0 +1,110 @@
+{
+	"captures": [
+		"flat.png",
+		"two-tone.png"
+	],
+	"checks": [
+		{
+			"key": "production_team_toggle_buttons_removed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_uses_production_honey_header",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_uses_production_honey_header",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "flat_keeps_scene_and_roster_geometry",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "flat_native_450x800",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "flat_capture_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "two-tone_keeps_scene_and_roster_geometry",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "two-tone_native_450x800",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "two-tone_capture_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tone_review_never_writes_save",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tone_review_restores_profile_in_memory",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"flat": "f3d79b",
+	"lower": "e8c782",
+	"production_two_tone_changed": false,
+	"side_inset_logical": 28.0,
+	"split_ratio": 0.45,
+	"stroke": "583f21",
+	"stroke_logical": 4,
+	"text": "503c25",
+	"upper": "f8e4b7",
+	"window": [
+		450,
+		800
+	]
+}

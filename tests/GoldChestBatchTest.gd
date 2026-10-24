@@ -55,7 +55,6 @@ func _sum(values: Dictionary) -> int:
 
 func _merge(into: Dictionary, loot: Dictionary) -> void:
 	into["items"].append_array(loot["items"])
-	into["stones"] += loot["stones"]
 	into["gold"] += loot["gold"]
 	for slot in loot.get("blueprints", {}):
 		into["blueprints"][slot] = int(into["blueprints"].get(slot, 0)) + int(loot["blueprints"][slot])
@@ -83,9 +82,6 @@ func _test_current_batch() -> void:
 	_check(batch["items"].size() == item_count * 10, "ten chests grant ten times the current item count")
 	_check(pd.gems == 0, "batch spends the exact current gem price times ten")
 	_check(pd.gold == int(batch["gold"]), "gold price and bonus are applied once per chest")
-	_check(pd.forge_stones == int(before["forge_stones"]) + int(batch["stones"]), "aggregate Forge Stones match the inventory delta")
-	var stones_range: Array = chest.get("stones", [0, 0])
-	_check(int(batch["stones"]) >= int(stones_range[0]) * 10 and int(batch["stones"]) <= int(stones_range[1]) * 10, "stones stay within ten independent current ranges")
 	_check(pd.quest_progress["chest"] == 13, "daily chest progress increases by ten, not one")
 	_check(pd.free_chest_at == int(before["shop"]["free_chest_at"]), "gold batch does not consume the wood cooldown")
 	_check(pd.troops == before["troops"] and not batch.has("cards"), "equipment chests do not grant or mutate troop cards")
@@ -108,8 +104,9 @@ func _test_current_batch() -> void:
 			if int(batch["items"][index]["rarity"]) >= floor_rarity:
 				at_floor += 1
 		_check(at_floor >= minimum, "gold chest %d keeps its own current rarity guarantee" % (chest_index + 1))
-	var plans: int = int(HeroCat.CHEST_BLUEPRINTS.get("gold", 0))
-	_check(_sum(batch.get("blueprints", {})) == int(plans) * 10, "blueprints are summed across all ten chest rolls")
+	var plans_range: Array = chest.get("blueprints", [0, 0])
+	var batch_plans: int = _sum(batch.get("blueprints", {}))
+	_check(batch_plans >= int(plans_range[0]) * 10 and batch_plans <= int(plans_range[1]) * 10, "blueprints stay within ten independent current ranges")
 	var blueprint_deltas_match: bool = true
 	for slot in HeroCat.SLOTS:
 		blueprint_deltas_match = blueprint_deltas_match and pd.blueprints[slot] == int(before["blueprints"][slot]) + int(batch.get("blueprints", {}).get(slot, 0))
@@ -119,7 +116,7 @@ func _test_current_batch() -> void:
 	pd.from_dict(before)
 	seed(791432)
 	_commits = 0
-	var singles: Dictionary = {"items": [], "stones": 0, "gold": 0, "blueprints": {}}
+	var singles: Dictionary = {"items": [], "gold": 0, "blueprints": {}}
 	for i in 10:
 		_merge(singles, pd.open_chest("gold"))
 	var comparable: Dictionary = batch.duplicate(true)
@@ -193,7 +190,7 @@ func _test_pity_and_bonus_fixture() -> void:
 	chest["min_count"] = 0
 	chest["gold"] = 5
 	chest["bonus_gold"] = [7, 7]
-	chest["stones"] = [3, 3]
+	chest["blueprints"] = [3, 3]
 	var item_count: int = int(chest.get("items", 1))
 	var pd = _player(true)
 	pd.gold = 49
@@ -205,7 +202,7 @@ func _test_pity_and_bonus_fixture() -> void:
 	_commits = 0
 	var batch: Dictionary = pd.open_chest("gold", 10)
 	_check(batch["gold"] == 70 and pd.gold == 70, "batch aggregates ten bonus-gold payouts after the full price")
-	_check(batch["stones"] == 30 and pd.forge_stones == 30, "batch aggregates ten stone payouts")
+	_check(_sum(batch.get("blueprints", {})) == 30 and _sum(pd.blueprints) == 30, "batch aggregates ten blueprint payouts")
 	_check(_commits == 1, "pity-crossing batch commits once")
 	var expected_pity: int = start_pity
 	for chest_index in 10:

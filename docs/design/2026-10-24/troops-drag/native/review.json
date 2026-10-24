@@ -1,0 +1,1263 @@
+{
+	"captures": [
+		"troops-drag-ready_360x640.png",
+		"drag-valid-target_360x640.png",
+		"troops-drag-replaced_360x640.png",
+		"troops-drag-benched_360x640.png",
+		"troops-drag-touch-result_360x640.png",
+		"troops-drag-ready_450x800.png",
+		"drag-valid-target_450x800.png",
+		"troops-drag-replaced_450x800.png",
+		"troops-drag-benched_450x800.png",
+		"troops-drag-touch-result_450x800.png"
+	],
+	"checks": [
+		{
+			"key": "all_four_team_toggle_buttons_removed",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "no_ra_tran_or_nghi_buttons_remain_on_page",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "four_roster_columns_preserved",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "all_sixteen_cards_preserved",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_exists",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_approved_inset_geometry",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_approved_A_palette_and_standard_stroke",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_approved_A_caption",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_exists",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_approved_inset_geometry",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_approved_A_palette_and_standard_stroke",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_approved_A_caption",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "original_carton_bottom_nav_preserved",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "initial_team_has_one_version_per_cat_and_respects_capacity",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "muop_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tro_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tam_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bo_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "muop_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tro_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tam_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bo_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-ready_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-ready_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_wheel_scrolls_roster_cards",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "scroll_keeps_team_scenery_and_headers_fixed",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "wheel_over_team_does_not_move_roster",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_pointer_crossed_drag_threshold",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_drag-valid-target_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_drag-valid-target_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_drag_replaces_same_cat_version",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "replacement_preserves_one_version_per_cat",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "drag_does_not_open_detail_by_accident",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-replaced_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-replaced_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "last_roster_row_can_drag_to_fixed_team",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "bottom_row_drop_keeps_fixed_formation_and_scroll_position",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "wrong_cat_slot_rejects_drop_without_changing_team",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "locked_card_cannot_enter_formation",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "canceled_drop_outside_targets_keeps_team",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_drag_from_team_to_roster_benches_cat",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "benched_cat_leaves_empty_drop_slot",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-benched_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-benched_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_drag_into_empty_slot_fields_cat",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "returned_cat_has_live_rig",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "drag_cannot_bench_last_fighting_cat",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "drag_cannot_exceed_castle_team_capacity",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tap_roster_card_still_opens_detail",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "detail_back_returns_to_drag_formation",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "tap_team_cat_still_opens_detail",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "detail_back_returns_to_drag_formation",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "quick_touch_swipe_does_not_change_team_or_open_detail",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "quick_touch_swipe_scrolls_roster_instead_of_starting_drag",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_touch_hold_starts_drag_preview",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_touch_hold_and_drag_replaces_same_cat",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "touch_release_finishes_drag_and_keeps_valid_team",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-touch-result_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-touch-result_360x640.png",
+			"passed": true,
+			"size": [
+				360,
+				640
+			]
+		},
+		{
+			"key": "all_four_team_toggle_buttons_removed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "no_ra_tran_or_nghi_buttons_remain_on_page",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "four_roster_columns_preserved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "all_sixteen_cards_preserved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_exists",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_approved_inset_geometry",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_approved_A_palette_and_standard_stroke",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_approved_A_caption",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_exists",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_approved_inset_geometry",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_approved_A_palette_and_standard_stroke",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_approved_A_caption",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "original_carton_bottom_nav_preserved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "initial_team_has_one_version_per_cat_and_respects_capacity",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "muop_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tro_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tam_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bo_authored_idle_loaded",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "muop_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tro_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tam_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bo_idle_keeps_animating",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-ready_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-ready_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_wheel_scrolls_roster_cards",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "scroll_keeps_team_scenery_and_headers_fixed",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "wheel_over_team_does_not_move_roster",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_pointer_crossed_drag_threshold",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_drag-valid-target_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_drag-valid-target_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_drag_replaces_same_cat_version",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "replacement_preserves_one_version_per_cat",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "drag_does_not_open_detail_by_accident",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-replaced_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-replaced_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "last_roster_row_can_drag_to_fixed_team",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "bottom_row_drop_keeps_fixed_formation_and_scroll_position",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "wrong_cat_slot_rejects_drop_without_changing_team",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "locked_card_cannot_enter_formation",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "canceled_drop_outside_targets_keeps_team",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_drag_from_team_to_roster_benches_cat",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "benched_cat_leaves_empty_drop_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-benched_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-benched_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_drag_into_empty_slot_fields_cat",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "returned_cat_has_live_rig",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "drag_cannot_bench_last_fighting_cat",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "drag_cannot_exceed_castle_team_capacity",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tap_roster_card_still_opens_detail",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "detail_back_returns_to_drag_formation",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "tap_team_cat_still_opens_detail",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "detail_back_returns_to_drag_formation",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "quick_touch_swipe_does_not_change_team_or_open_detail",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "quick_touch_swipe_scrolls_roster_instead_of_starting_drag",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_touch_hold_starts_drag_preview",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_touch_hold_and_drag_replaces_same_cat",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "touch_release_finishes_drag_and_keeps_valid_team",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_dimensions_troops-drag-touch-result_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "native_capture_saved_troops-drag-touch-result_450x800.png",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "review_never_writes_save",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "original_profile_restored_without_disk_write",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"geometry": [
+		{
+			"nav": [
+				0.0,
+				1076.0,
+				720.0,
+				204.0
+			],
+			"roster_viewport": [
+				0.0,
+				492.0,
+				720.0,
+				584.0
+			],
+			"size": [
+				360,
+				640
+			],
+			"team_stage": [
+				0.0,
+				164.0,
+				720.0,
+				276.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				104.0,
+				787.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"sung\", \"source\": \"roster\", \"cat\": \"muop\", \"owner_id\": 211795577843 }",
+			"to": [
+				112.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				104.0,
+				931.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"cu_kiem\", \"source\": \"roster\", \"cat\": \"muop\", \"owner_id\": 211795577843 }",
+			"to": [
+				112.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				440.0,
+				787.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"giao\", \"source\": \"roster\", \"cat\": \"tam\", \"owner_id\": 211795577843 }",
+			"to": [
+				277.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": false,
+			"from": [
+				272.0,
+				787.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "<null>",
+			"to": [
+				277.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				104.0,
+				627.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"kiem\", \"source\": \"roster\", \"cat\": \"muop\", \"owner_id\": 211795577843 }",
+			"to": [
+				354.0,
+				108.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				607.5,
+				330.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"bua\", \"source\": \"team\", \"cat\": \"bo\", \"owner_id\": 211795577843 }",
+			"to": [
+				104.0,
+				627.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				608.0,
+				627.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"bua\", \"source\": \"roster\", \"cat\": \"bo\", \"owner_id\": 211795577843 }",
+			"to": [
+				607.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				112.5,
+				330.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"kiem\", \"source\": \"team\", \"cat\": \"muop\", \"owner_id\": 211795577843 }",
+			"to": [
+				104.0,
+				627.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				608.0,
+				627.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"bua\", \"source\": \"roster\", \"cat\": \"bo\", \"owner_id\": 211795577843 }",
+			"to": [
+				607.5,
+				330.0
+			]
+		},
+		{
+			"nav": [
+				0.0,
+				1076.0,
+				720.0,
+				204.0
+			],
+			"roster_viewport": [
+				0.0,
+				492.0,
+				720.0,
+				584.0
+			],
+			"size": [
+				450,
+				800
+			],
+			"team_stage": [
+				0.0,
+				164.0,
+				720.0,
+				276.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				104.0,
+				787.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"sung\", \"source\": \"roster\", \"cat\": \"muop\", \"owner_id\": 384919670661 }",
+			"to": [
+				112.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				104.0,
+				931.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"cu_kiem\", \"source\": \"roster\", \"cat\": \"muop\", \"owner_id\": 384919670661 }",
+			"to": [
+				112.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				440.0,
+				787.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"giao\", \"source\": \"roster\", \"cat\": \"tam\", \"owner_id\": 384919670661 }",
+			"to": [
+				277.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": false,
+			"from": [
+				272.0,
+				787.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "<null>",
+			"to": [
+				277.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				104.0,
+				627.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"kiem\", \"source\": \"roster\", \"cat\": \"muop\", \"owner_id\": 384919670661 }",
+			"to": [
+				354.0,
+				108.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				607.5,
+				330.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"bua\", \"source\": \"team\", \"cat\": \"bo\", \"owner_id\": 384919670661 }",
+			"to": [
+				104.0,
+				627.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				608.0,
+				627.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"bua\", \"source\": \"roster\", \"cat\": \"bo\", \"owner_id\": 384919670661 }",
+			"to": [
+				607.5,
+				330.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				112.5,
+				330.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"kiem\", \"source\": \"team\", \"cat\": \"muop\", \"owner_id\": 384919670661 }",
+			"to": [
+				104.0,
+				627.0
+			]
+		},
+		{
+			"active_before_release": true,
+			"from": [
+				608.0,
+				627.0
+			],
+			"gesture": "mouse_drag",
+			"payload": "{ \"kind\": \"troop\", \"troop_id\": \"bua\", \"source\": \"roster\", \"cat\": \"bo\", \"owner_id\": 384919670661 }",
+			"to": [
+				607.5,
+				330.0
+			]
+		}
+	],
+	"input": "Viewport mouse button/motion/wheel and Input.parse_input_event ScreenTouch/ScreenDrag; production drop callbacks are never called directly.",
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/troops-drag-preview/profile/Godot/app_userdata/Gear Defenders"
+}

@@ -10,6 +10,7 @@ const Economy = preload("res://game/core/Economy.gd")
 const Content = preload("res://game/core/Content.gd")
 const Meta = preload("res://game/core/Meta.gd")
 const HeroCat = preload("res://game/core/HeroCat.gd")
+const Cats = preload("res://game/data/Cats.gd")
 
 const SAVE_PATH := "user://save.json"
 const LEGACY_SAVE_PATH := "user://progress.cfg"
@@ -18,7 +19,10 @@ const SAVE_VERSION := 1
 const LEVELS := Content.LEVELS
 const TROOP_ORDER := Content.TROOP_ORDER
 const ENEMY_ORDER := Content.ENEMY_ORDER
+## One common version each of Mướp, Bơ and Tro (see Cats.gd).
 const STARTER_TROOPS := ["kiem", "cung", "gay_phep"]
+## Of the pulls of one rarity, this share lands on the featured world's version.
+const FEATURED_SHARE := 0.5
 
 ## id -> TroopData, filled from Content.TROOP_ORDER (the same instances Balance edits).
 var TROOPS := {}
@@ -38,12 +42,24 @@ var team: Array = []
 var workshop := {}
 var free_chest_at := 0
 var gold_chest_pity := 0
+## Local calendar day when the shop's free daily gold was last claimed.
+var shop_gold_day := -1
 var patrol_last_claim := 0
 var patrol_quick_left := 0
 var patrol_quick_day := 0
 ## Settings: skip the chest-opening animation.
 var fast_chest := false
-## Settings: "cozy" (Cozy UI Pack) or "swords" (Tiny Swords UI art).
+## The victory chest of the last won battle, opened when the lobby shows again:
+## {"cards": {troop: n}, "new": [troops]} or {} (its cards are already granted).
+var pending_chest := {}
+## Tests turn this on to see the victory chest flow without touching the save.
+var victory_chest_in_tests := false
+
+## True when a won battle's victory chest is kept for the lobby (not the simulator, which
+## does not persist, nor "fast chest" players, who just see the cards).
+func victory_chest_waits() -> bool:
+	return (persist or victory_chest_in_tests) and not fast_chest
+## Settings: the legacy UI skin name ("cozy"); the game skin is always on.
 var ui_skin := "cozy"
 ## Settings: sound effects on.
 var sound_on := true
@@ -56,9 +72,7 @@ var seen_tiles: Array = []
 var hero_cat: Dictionary = {}
 ## Set once any admin cheat touched this save, so balance feedback can be discounted.
 var cheated := false
-## Forge Stones (đá rèn): what hero-cat equipment levels with (HeroCat.upgrade_cost).
-var forge_stones := 0
-## Blueprints (bản vẽ) by equipment slot: what breakthroughs past level 10/20/30 need.
+## Blueprints (bản vẽ) by equipment slot: what hero-cat equipment levels with.
 var blueprints := {}
 ## Equipment summon: pulls since the last legendary (pity), free daily pull, total pulls.
 var summon_pity := 0
@@ -218,13 +232,16 @@ func team_slots() -> int:
 	return Economy.team_slots(castle_level)
 
 
-## The team as it will play: unlocked, known, no duplicates, within the slot count, and
-## never empty.
+## The team as it will play: unlocked, known, one version per cat, within the slot count,
+## and never empty.
 func battle_team() -> Array:
 	var result := []
+	var cats := []
 	for id in team:
-		if TROOPS.has(id) and is_unlocked(id) and not result.has(id) and result.size() < team_slots():
+		var cat := Cats.cat_of(id)
+		if TROOPS.has(id) and is_unlocked(id) and not cats.has(cat) and result.size() < team_slots():
 			result.append(id)
+			cats.append(cat)
 	if result.is_empty():
 		result = auto_team()
 	return result
@@ -234,21 +251,41 @@ func in_team(id: String) -> bool:
 	return battle_team().has(id)
 
 
-## Strongest unlocked troops, one per slot (used for new saves and the simulator).
+## Each cat's strongest unlocked version, strongest first, one per slot (new saves and
+## the simulator).
 func auto_team() -> Array:
 	var ids := []
-	for id in TROOP_ORDER:
-		if is_unlocked(id):
-			ids.append(id)
+	for cat in Cats.ORDER:
+		var best := ""
+		for id in Cats.VERSIONS[cat]:
+			if is_unlocked(id) and (best == "" or troop_power(id) > troop_power(best)):
+				best = id
+		if best != "":
+			ids.append(best)
 	ids.sort_custom(func(a, b): return troop_power(a) > troop_power(b))
 	return ids.slice(0, team_slots())
 
 
-## Adds a troop to the first free slot. Returns false when the team is full.
+## The team member that is the same cat as `id` (another version of it), or "".
+func team_same_cat(id: String) -> String:
+	for other in battle_team():
+		if Cats.cat_of(other) == Cats.cat_of(id):
+			return other
+	return ""
+
+
+## Adds a troop to the first free slot; another version of the same cat is swapped out
+## in place. Returns false when the team is full.
 func add_to_team(id: String) -> bool:
 	var current := battle_team()
 	if current.has(id) or not is_unlocked(id):
 		return current.has(id)
+	var same := team_same_cat(id)
+	if same != "":
+		current[current.find(same)] = id
+		team = current
+		_commit()
+		return true
 	if current.size() >= team_slots():
 		return false
 	current.append(id)
@@ -272,6 +309,10 @@ func set_team_slot(index: int, id: String) -> void:
 	var current := battle_team()
 	if not is_unlocked(id) or index < 0 or index >= team_slots():
 		return
+	# Another version of the same cat steps out: this one takes its place, then moves.
+	var same := team_same_cat(id)
+	if same != "" and same != id:
+		current[current.find(same)] = id
 	var old := current.find(id)
 	if index >= current.size():
 		if old >= 0:
@@ -428,9 +469,9 @@ func can_open_chest(kind: String, count: int = 1) -> bool:
 	return gold >= int(chest["gold"]) * count and gems >= int(chest["gems"]) * count
 
 
-## Pays for and opens a chest. Chests hold hero-cat equipment and Forge Stones (troop cards
+## Pays for and opens a chest. Chests hold hero-cat equipment and Blueprints (troop cards
 ## come from the summon tab and battles). Returns {"items": [{"id", "uid", "rarity"}],
-## "stones": n, "gold": n} or {} if refused. Gold supports 1 or 10 chests at the
+## "blueprints": {slot: n}, "gold": n} or {} if refused. Gold supports 1 or 10 chests at the
 ## ordinary per-chest price. A batch keeps each chest's guarantees and pity roll.
 func open_chest(kind: String, count: int = 1) -> Dictionary:
 	if not can_open_chest(kind, count):
@@ -441,11 +482,10 @@ func open_chest(kind: String, count: int = 1) -> Dictionary:
 	gems -= int(chest["gems"]) * count
 	if kind == "wood":
 		free_chest_at = now() + Economy.FREE_CHEST_COOLDOWN
-	var result := {"items": [], "stones": 0, "gold": 0}
+	var result := {"items": [], "gold": 0}
 	for i in count:
 		var loot := _grant_chest_loot(kind)
 		result["items"].append_array(loot["items"])
-		result["stones"] += loot["stones"]
 		result["gold"] += loot["gold"]
 		if loot.has("blueprints"):
 			if not result.has("blueprints"):
@@ -485,12 +525,10 @@ func _grant_chest_loot(kind: String) -> Dictionary:
 	for rarity in rarities:
 		var id := HeroCat.random_of_rarity(rarity)
 		items.append({"id": id, "uid": HeroCat.add_item(hero_cat, id), "rarity": HeroCat.ITEMS[id]["rarity"]})
-	var stones_range: Array = chest.get("stones", [0, 0])
-	var stones := randi_range(int(stones_range[0]), int(stones_range[1]))
-	forge_stones += stones
 	var bonus: Array = chest["bonus_gold"]
-	var result := {"items": items, "stones": stones, "gold": randi_range(bonus[0], bonus[1]) if bonus[1] > 0 else 0}
-	var plans := int(HeroCat.CHEST_BLUEPRINTS.get(kind, 0))
+	var result := {"items": items, "gold": randi_range(bonus[0], bonus[1]) if bonus[1] > 0 else 0}
+	var plans_range: Array = chest.get("blueprints", [0, 0])
+	var plans := randi_range(int(plans_range[0]), int(plans_range[1]))
 	if plans > 0:
 		result["blueprints"] = _grant_blueprints(plans)
 	gold += result["gold"]
@@ -506,17 +544,32 @@ func _roll_gear_rarity() -> int:
 			return r
 	return 0
 
-func gold_chest_pity_left() -> int:
-	return Economy.GOLD_CHEST_PITY - gold_chest_pity
-
-
-func exchange_gems() -> bool:
-	if gems < Economy.EXCHANGE_GEMS:
+func exchange_gems(multiplier: int = 1) -> bool:
+	if multiplier not in Economy.EXCHANGE_MULTIPLIERS:
 		return false
-	gems -= Economy.EXCHANGE_GEMS
-	gold += Economy.EXCHANGE_GOLD
+	var price: int = Economy.EXCHANGE_GEMS * multiplier
+	var amount: int = Economy.EXCHANGE_GOLD * multiplier
+	if price <= 0 or amount <= 0 or gems < price:
+		return false
+	gems -= price
+	gold += amount
 	_commit()
 	return true
+
+
+func shop_gold_available() -> bool:
+	# A clock moved backwards must not make an already claimed day available again.
+	return Economy.DAILY_SHOP_GOLD > 0 and shop_gold_day < today()
+
+
+## Grants once per local calendar day; marking the day and gold are saved together.
+func claim_shop_gold() -> int:
+	if not shop_gold_available():
+		return 0
+	shop_gold_day = today()
+	gold += Economy.DAILY_SHOP_GOLD
+	_commit()
+	return Economy.DAILY_SHOP_GOLD
 
 
 func _roll_cards(count: int, min_rare: int, guaranteed_epic: bool) -> Dictionary:
@@ -581,14 +634,14 @@ func patrol_stored() -> int:
 	return mini(floori(patrol_rate() * hours), patrol_capacity())
 
 
-## Forge Stones waiting at the patrol (same hours and cap as its gold).
-func patrol_stones() -> int:
+## Blueprints waiting at the patrol (same hours and cap as its gold).
+func patrol_blueprints() -> int:
 	var hours := minf(maxf(0.0, (now() - patrol_last_claim) / 3600.0), float(Economy.PATROL_MAX_HOURS))
-	return floori(HeroCat.PATROL_STONES_PER_HOUR * hours)
+	return floori(HeroCat.PATROL_BLUEPRINTS_PER_HOUR * hours)
 
 func claim_patrol() -> int:
 	var amount := patrol_stored()
-	forge_stones += patrol_stones()
+	_grant_blueprints(patrol_blueprints())
 	gold += amount
 	patrol_last_claim = now()
 	if amount > 0:
@@ -614,7 +667,7 @@ func quick_patrol() -> int:
 	else:
 		gems -= Economy.PATROL_QUICK_GEMS
 	var amount := floori(patrol_rate() * Economy.PATROL_QUICK_HOURS)
-	forge_stones += floori(HeroCat.PATROL_STONES_PER_HOUR * Economy.PATROL_QUICK_HOURS)
+	_grant_blueprints(floori(HeroCat.PATROL_BLUEPRINTS_PER_HOUR * Economy.PATROL_QUICK_HOURS))
 	gold += amount
 	track("patrol")
 	_commit()
@@ -633,12 +686,12 @@ func _refresh_patrol_day() -> void:
 ## Pays out a finished battle. Returns what was granted, for the end-of-battle panel:
 ## {"gold", "gems", "cards": {id: n}, "first_clear", "gift", "new": [ids unlocked now]}.
 func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictionary:
-	var reward := {"gold": 0, "gems": 0, "stones": 0, "cards": {}, "first_clear": false, "gift": "", "new": []}
+	var reward := {"gold": 0, "gems": 0, "blueprints": {}, "cards": {}, "first_clear": false, "gift": "", "new": []}
 	if not won:
 		reward["gold"] = Economy.loss_gold(waves_cleared)
-		reward["stones"] = HeroCat.LOSS_STONES if waves_cleared > 0 else 0
 		gold += reward["gold"]
-		forge_stones += reward["stones"]
+		if waves_cleared > 0:
+			reward["blueprints"] = _grant_blueprints(HeroCat.LOSS_BLUEPRINTS)
 		_commit()
 		return reward
 	track("win")
@@ -655,10 +708,10 @@ func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictiona
 	if stars == 3 and stars_for(index) < 3:
 		reward["gems"] = Economy.FIRST_THREE_STAR_GEMS
 	reward["gold"] = gold_won
-	reward["stones"] = (HeroCat.WIN_STONES + HeroCat.WIN_STONES_PER_LEVEL * index) * (2 if first_clear else 1)
-	forge_stones += reward["stones"]
+	var plans := floori(HeroCat.WIN_BLUEPRINTS + HeroCat.WIN_BLUEPRINTS_PER_LEVEL * index)
 	if is_boss_level(index):
-		reward["blueprints"] = _grant_blueprints(HeroCat.BOSS_BLUEPRINTS * (2 if first_clear else 1))
+		plans += HeroCat.BOSS_BLUEPRINTS
+	reward["blueprints"] = _grant_blueprints(plans * (2 if first_clear else 1))
 	var chest: Dictionary = Economy.CHESTS["victory"]
 	var chest_cards: Dictionary = _roll_cards(chest["cards"] + (1 if stars == 3 else 0), 0, false)["cards"]
 	for id in chest_cards:
@@ -669,11 +722,25 @@ func grant_battle_rewards(won: bool, stars: int, waves_cleared: int) -> Dictiona
 		if not is_unlocked(id):
 			reward["new"].append(id)
 	_apply_loot(reward)
+	if not reward["cards"].is_empty() and victory_chest_waits():
+		_queue_victory_chest(reward["cards"], reward["new"])
 	_commit()
 	return reward
 
+## Adds a won battle's cards to the chest that opens in the lobby. Battles chained with
+## Màn tiếp / Chơi lại add up into one chest. Saved, so quitting before the lobby keeps it.
+func _queue_victory_chest(cards: Dictionary, fresh: Array) -> void:
+	var all_cards: Dictionary = pending_chest.get("cards", {}).duplicate()
+	for id in cards:
+		all_cards[id] = int(all_cards.get(id, 0)) + int(cards[id])
+	var all_new: Array = pending_chest.get("new", []).duplicate()
+	for id in fresh:
+		if not all_new.has(id):
+			all_new.append(id)
+	pending_chest = {"cards": all_cards, "new": all_new}
 
-# --- Equipment summon (bottom tab "Triệu hồi") -----------------------------------------
+
+# --- Troop summon (bottom tab "Triệu hồi") ---------------------------------------------
 
 func summon_free_ready() -> bool:
 	return summon_free_day != today()
@@ -700,18 +767,15 @@ func summon(count: int) -> Array:
 	gems -= cost
 	var results := []
 	for i in count:
-		results.append(_summon_one())
-	if count == 10 and results.all(func(r): return r["rarity"] < 2):
-		# The last pull becomes a guaranteed epic (its card was already given; take it back).
-		var swapped: Dictionary = results[9]
-		if not swapped["new"]:
-			troops[swapped["id"]]["cards"] = maxi(0, troops[swapped["id"]]["cards"] - 1)
-		results[9] = _summon_card(2)
+		# A x10 with no epic yet makes its last pull at least epic. The rarity is raised
+		# before that card is given, so nothing granted ever has to be taken back.
+		var floor_rarity := 2 if count == 10 and i == count - 1 and results.all(func(r): return r["rarity"] < 2) else 0
+		results.append(_summon_one(floor_rarity))
 	track("summon", count)
 	_commit()
 	return results
 
-func _summon_one() -> Dictionary:
+func _summon_one(floor_rarity := 0) -> Dictionary:
 	summon_pity += 1
 	summon_total += 1
 	var rarity := 3
@@ -723,10 +787,18 @@ func _summon_one() -> Dictionary:
 			if roll < 0.0:
 				rarity = r
 				break
-	return _summon_card(rarity)
+	return _summon_card(maxi(rarity, floor_rarity))
+
+## The world on today's summon banner (Cats.WORLDS).
+func featured_world() -> String:
+	return Cats.featured_world(today())
 
 func _summon_card(rarity: int) -> Dictionary:
 	var id := _random_troop_of(rarity)
+	if randf() < FEATURED_SHARE:
+		for featured in Cats.world_versions(featured_world()):
+			if TROOPS[featured].rarity == rarity:
+				id = featured
 	var real: int = TROOPS[id].rarity
 	if real >= 3:
 		summon_pity = 0
@@ -737,14 +809,13 @@ func _summon_card(rarity: int) -> Dictionary:
 # --- Rewards ----------------------------------------------------------------------------
 
 ## Grants a Meta reward dictionary. Returns what was given, for display:
-## {"gold", "gems", "stones", "cards": {troop: n}, "new": [troops], "items": [item ids]}.
-## Reward keys: gold, gems, stones (Forge Stones), cards (random troop cards), item (rarity).
+## {"gold", "gems", "blueprints": {slot: n}, "cards": {troop: n}, "new": [troops], "items": [ids]}.
+## Reward keys: gold, gems, blueprints (n, random slots), cards (random troop cards), item (rarity).
 func grant(reward: Dictionary) -> Dictionary:
 	var got := {"gold": int(reward.get("gold", 0)), "gems": int(reward.get("gems", 0)),
-		"stones": int(reward.get("stones", 0)), "cards": {}, "new": [], "items": []}
+		"cards": {}, "new": [], "items": []}
 	gold += got["gold"]
 	gems += got["gems"]
-	forge_stones += got["stones"]
 	if reward.has("cards"):
 		var before := {}
 		for id in TROOP_ORDER:
@@ -915,10 +986,6 @@ func hero_alert() -> bool:
 	return not hero_cat_fusable().is_empty()
 
 
-func events_alert() -> bool:
-	return patrol_alert() or summon_free_ready()
-
-
 func quest_alert() -> bool:
 	for q in Meta.QUESTS:
 		if quest_done(q["id"]) and not quest_is_claimed(q["id"]):
@@ -946,6 +1013,7 @@ func reset_progress() -> void:
 
 
 func _reset() -> void:
+	pending_chest = {}
 	gold = 0
 	gems = Economy.START_GEMS
 	unlocked_levels = 1
@@ -958,12 +1026,12 @@ func _reset() -> void:
 	workshop = {}
 	free_chest_at = now()
 	gold_chest_pity = 0
+	shop_gold_day = -1
 	patrol_last_claim = now()
 	patrol_quick_left = Economy.PATROL_QUICK_FREE
 	patrol_quick_day = floori(now() / 86400.0)
 	cheated = false
 	fast_chest = false
-	forge_stones = 0
 	blueprints = {}
 	for slot in HeroCat.SLOTS:
 		blueprints[slot] = 0
@@ -1038,20 +1106,15 @@ func hero_cat_equip(uid: String) -> void:
 
 
 func hero_cat_can_upgrade(uid: String) -> bool:
-	var stones := HeroCat.upgrade_cost(hero_cat, uid)
-	if stones < 0 or forge_stones < stones or gold < HeroCat.upgrade_gold(hero_cat, uid):
-		return false
-	var slot: String = HeroCat.def(hero_cat, uid)["slot"]
-	return blueprints.get(slot, 0) >= HeroCat.breakthrough_cost(hero_cat, uid)
+	var cost := HeroCat.upgrade_cost(hero_cat, uid)
+	return cost >= 0 and blueprints.get(HeroCat.def(hero_cat, uid)["slot"], 0) >= cost
 
-## Levels an item with Forge Stones (and a little gold).
+## Levels an item with Blueprints of its slot.
 func hero_cat_upgrade(uid: String) -> bool:
 	if not hero_cat_can_upgrade(uid):
 		return false
 	var slot: String = HeroCat.def(hero_cat, uid)["slot"]
-	blueprints[slot] -= HeroCat.breakthrough_cost(hero_cat, uid)
-	forge_stones -= HeroCat.upgrade_cost(hero_cat, uid)
-	gold -= HeroCat.upgrade_gold(hero_cat, uid)
+	blueprints[slot] -= HeroCat.upgrade_cost(hero_cat, uid)
 	hero_cat["bag"][uid]["level"] += 1
 	track("upgrade")
 	_commit()
@@ -1072,14 +1135,19 @@ func _grant_blueprints(count: int) -> Dictionary:
 
 ## Item ids with enough copies to fuse (FUSE_COUNT, a worn one counts) and a higher rarity.
 func hero_cat_fusable() -> Array:
-	var out := []
-	var seen := {}
+	# One pass counts copies of every id (copies() per id rescanned the bag each time).
+	var counts := {}
+	var order := []
 	for uid in hero_cat["bag"]:
 		var id: String = hero_cat["bag"][uid]["id"]
-		if seen.has(id) or not HeroCat.ITEMS.has(id):
+		if not HeroCat.ITEMS.has(id):
 			continue
-		seen[id] = true
-		if HeroCat.copies(hero_cat, id).size() >= HeroCat.FUSE_COUNT and HeroCat.fuse_target(id) != "":
+		if not counts.has(id):
+			order.append(id)
+		counts[id] = int(counts.get(id, 0)) + 1
+	var out := []
+	for id in order:
+		if counts[id] >= HeroCat.FUSE_COUNT and HeroCat.fuse_target(id) != "":
 			out.append(id)
 	return out
 
@@ -1104,20 +1172,19 @@ func hero_cat_fuse(id: String) -> String:
 	_commit()
 	return new_uid
 
-## Breaks an unworn item into Forge Stones. Returns the stones, or 0 if refused.
+## Breaks an unworn item into Blueprints of its slot. Returns how many, or 0 if refused.
 func hero_cat_salvage(uid: String) -> int:
 	if HeroCat.is_equipped(hero_cat, uid) or HeroCat.item(hero_cat, uid).is_empty():
 		return 0
-	var stones := HeroCat.salvage_value(hero_cat, uid)
+	var plans := HeroCat.salvage_value(hero_cat, uid)
 	var d := HeroCat.def(hero_cat, uid)
-	blueprints[d["slot"]] = blueprints.get(d["slot"], 0) + HeroCat.SALVAGE_BLUEPRINTS[d["rarity"]]
+	blueprints[d["slot"]] = blueprints.get(d["slot"], 0) + plans
 	hero_cat["bag"].erase(uid)
-	forge_stones += stones
 	_commit()
-	return stones
+	return plans
 
-## One-time refund for a save that still has the old Tướng heroes: shards and the levels and
-## stars bought become Forge Stones (5 per shard, 1 per 40 gold spent on levels).
+## One-time refund for a save that still has the old Tướng heroes, counted in Forge Stone
+## units (5 per shard, 1 per 40 gold spent on levels) and paid as Blueprints by from_dict.
 func _legacy_hero_refund(list: Dictionary) -> int:
 	var stones := 0
 	var star_shards := [10, 20, 40, 80]
@@ -1149,15 +1216,15 @@ func to_dict() -> Dictionary:
 		"castle": {"level": castle_level},
 		"team": battle_team(),
 		"workshop": workshop,
-		"shop": {"free_chest_at": free_chest_at, "gold_chest_pity": gold_chest_pity},
+		"shop": {"free_chest_at": free_chest_at, "gold_chest_pity": gold_chest_pity, "daily_gold_day": shop_gold_day},
 		"patrol": {"last_claim": patrol_last_claim, "quick_left": patrol_quick_left, "quick_day": patrol_quick_day},
-		"forge_stones": forge_stones,
 		"blueprints": blueprints,
 		"summon": {"pity": summon_pity, "free_day": summon_free_day, "total": summon_total, "kind": "equipment"},
 		"login": {"claimed": login_claimed, "day": login_day, "cycles": login_cycles},
 		"quests": {"day": quest_day, "progress": quest_progress, "claimed": quest_claimed, "milestones": quest_milestones},
 		"profile": {"name": player_name, "avatar": avatar, "frame": frame},
 		"tutorial": {"done": tutorial_done, "seen_tiles": seen_tiles},
+		"pending_chest": pending_chest,
 		"hero_cat": hero_cat,
 	}.duplicate(true)
 
@@ -1202,15 +1269,17 @@ func from_dict(data: Dictionary) -> void:
 	var shop: Dictionary = data.get("shop", {})
 	free_chest_at = int(shop.get("free_chest_at", now()))
 	gold_chest_pity = int(shop.get("gold_chest_pity", 0))
+	shop_gold_day = int(shop.get("daily_gold_day", -1))
 	var patrol: Dictionary = data.get("patrol", {})
 	# A clock set backwards must not create negative time; clamp to now.
 	patrol_last_claim = mini(int(patrol.get("last_claim", now())), now())
 	patrol_quick_left = int(patrol.get("quick_left", Economy.PATROL_QUICK_FREE))
 	patrol_quick_day = int(patrol.get("quick_day", 0))
-	forge_stones = int(data.get("forge_stones", 0))
 	var saved_blueprints: Dictionary = data.get("blueprints", {})
 	for slot in HeroCat.SLOTS:
 		blueprints[slot] = int(saved_blueprints.get(slot, 0))
+	# Saves from the Forge Stone era: the stones become Blueprints, spread over the slots.
+	var old_stones := int(data.get("forge_stones", 0))
 	var summon_data: Dictionary = data.get("summon", {})
 	if summon_data.get("kind", "") == "equipment":
 		summon_pity = int(summon_data.get("pity", 0))
@@ -1218,7 +1287,10 @@ func from_dict(data: Dictionary) -> void:
 		summon_total = int(summon_data.get("total", 0))
 	elif data.has("heroes"):
 		# Saves from the old hero (Tướng) system: pay back what was put into it, once.
-		forge_stones += _legacy_hero_refund(data["heroes"].get("list", {}))
+		old_stones += _legacy_hero_refund(data["heroes"].get("list", {}))
+	var refund := old_stones / HeroCat.STONES_PER_BLUEPRINT
+	for i in HeroCat.SLOTS.size():
+		blueprints[HeroCat.SLOTS[i]] += refund / HeroCat.SLOTS.size() + (1 if i < refund % HeroCat.SLOTS.size() else 0)
 	var login: Dictionary = data.get("login", {})
 	login_claimed = clampi(int(login.get("claimed", 0)), 0, Meta.LOGIN_REWARDS.size())
 	login_day = int(login.get("day", -1))
@@ -1239,6 +1311,16 @@ func from_dict(data: Dictionary) -> void:
 	player_name = str(profile.get("name", "Chỉ Huy"))
 	avatar = str(profile.get("avatar", "1"))
 	frame = str(profile.get("frame", "wood"))
+	var saved_chest = data.get("pending_chest", {})
+	pending_chest = {}
+	var saved_cards = saved_chest.get("cards", {}) if saved_chest is Dictionary else {}
+	if saved_cards is Dictionary:
+		var kept := {}
+		for id in saved_cards:
+			if TROOPS.has(str(id)):
+				kept[str(id)] = int(saved_cards[id])
+		if not kept.is_empty():
+			pending_chest = {"cards": kept, "new": Array(saved_chest.get("new", [])).filter(func(id): return kept.has(str(id)))}
 	var tutorial: Dictionary = data.get("tutorial", {})
 	# Saves from before the tutorial existed belong to players who already know the game.
 	tutorial_done = bool(tutorial.get("done", data.has("levels") and int(data.get("levels", {}).get("unlocked", 1)) > 1))

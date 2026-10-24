@@ -136,7 +136,7 @@ func _build_toolbar() -> void:
 	bar.add_child(_tool("JSON", _open_json, 84))
 	bar.add_child(_tool("L.SỬ", _open_history, 84))
 	var close_button := UiKit.button("", Vector2(52, 48), close, true)
-	close_button.icon = SpriteLib.texture(UiKit.UI + "Icons/Icon_09.png")
+	close_button.icon = Ui.icon_tex("close", 48)
 	close_button.expand_icon = true
 	bar.add_child(close_button)
 

@@ -1,0 +1,1628 @@
+{
+	"captures": [
+		{
+			"file": "banner_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 0,
+			"file": "x10-charge_360x640.png",
+			"stage": "charge",
+			"time": 0.356444444444445,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "x10-burst_360x640.png",
+			"stage": "burst",
+			"time": 1.64623877777778,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "x10-reveal_360x640.png",
+			"stage": "reveal",
+			"time": 2.49670544444445,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "x10-special_360x640.png",
+			"stage": "reveal",
+			"time": 3.33580911111112,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "x10-showcase_360x640.png",
+			"stage": "showcase",
+			"time": 7.83730911111116,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "x10-done_360x640.png",
+			"stage": "done",
+			"time": 9.84891411111115,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 0,
+			"file": "x1-charge_360x640.png",
+			"stage": "charge",
+			"time": 0.355463412698412,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 1,
+			"file": "x1-burst_360x640.png",
+			"stage": "burst",
+			"time": 1.09967777777778,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 1,
+			"file": "x1-reveal_360x640.png",
+			"stage": "reveal",
+			"time": 1.62739422222222,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 1,
+			"file": "x1-showcase_360x640.png",
+			"stage": "showcase",
+			"time": 2.21135859259259,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 1,
+			"file": "x1-done_360x640.png",
+			"stage": "done",
+			"time": 2.96540666666666,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "skip-flight-before_360x640.png",
+			"stage": "burst",
+			"time": 1.63866744444444,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "skip-flight-done_360x640.png",
+			"stage": "done",
+			"time": 2.71716955555557,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "skip-special-before_360x640.png",
+			"stage": "reveal",
+			"time": 2.61795833333335,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "skip-special-done_360x640.png",
+			"stage": "done",
+			"time": 3.69434533333337,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "skip-charge-done_360x640.png",
+			"stage": "done",
+			"time": 1.173536,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"card_count": 10,
+			"file": "quick-tap-rare-tease_360x640.png",
+			"stage": "reveal",
+			"time": 0.319444444444444,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "capture_native_size_banner",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_banner",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_charge_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_summon_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_opening_hides_underlying_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x10-charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x10-charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reached_stage_burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x10-burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x10-burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reached_stage_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x10-reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x10-reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x10-special",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x10-special",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reached_stage_showcase",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x10-showcase",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x10-showcase",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_flow_reaches_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_done_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_done_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_done_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_done_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_done_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_done_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_natural_done_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x10-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x10-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_presentation_keeps_rewards_and_currency_unchanged",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_native_done_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_restores_menu_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_restores_menu_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_restores_shop_awning",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x10_close_keeps_rewards_and_currency_unchanged",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_charge_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_summon_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_opening_hides_underlying_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x1-charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x1-charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reached_stage_burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x1-burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x1-burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reached_stage_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x1-reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x1-reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reached_stage_showcase",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x1-showcase",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x1-showcase",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_flow_reaches_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_done_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_done_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_done_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_done_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_done_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_done_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_natural_done_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_x1-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_x1-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_presentation_keeps_rewards_and_currency_unchanged",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_native_done_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_restores_menu_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_restores_menu_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_restores_shop_awning",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "x1_close_keeps_rewards_and_currency_unchanged",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "reached_stage_burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_target_phase_reached",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_skip-flight-before",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_skip-flight-before",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_native_skip_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_immediate_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_immediate_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_immediate_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_immediate_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_immediate_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_immediate_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_immediate_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_after_motion_settles_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_after_motion_settles_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_after_motion_settles_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_after_motion_settles_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_after_motion_settles_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_after_motion_settles_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_after_motion_settles_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_skip-flight-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_skip-flight-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_does_not_grant_or_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_native_done_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_restores_menu_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_restores_menu_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_restores_shop_awning",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-flight_close_does_not_grant_or_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_target_phase_reached",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_skip-special-before",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_skip-special-before",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_native_skip_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_immediate_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_immediate_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_immediate_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_immediate_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_immediate_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_immediate_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_immediate_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_after_motion_settles_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_after_motion_settles_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_after_motion_settles_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_after_motion_settles_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_after_motion_settles_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_after_motion_settles_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_after_motion_settles_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_skip-special-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_skip-special-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_does_not_grant_or_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_native_done_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_restores_menu_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_restores_menu_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_restores_shop_awning",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-special_close_does_not_grant_or_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_initial_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_native_skip_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_immediate_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_immediate_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_immediate_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_immediate_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_immediate_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_immediate_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_immediate_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_after_motion_settles_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_after_motion_settles_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_after_motion_settles_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_after_motion_settles_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_after_motion_settles_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_after_motion_settles_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_after_motion_settles_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_skip-charge-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_skip-charge-done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_native_done_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_restores_menu_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_restores_menu_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_restores_shop_awning",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "skip-charge_does_not_grant_or_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_charge_advances_to_burst",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_burst_deals_exactly_ten_cards",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_burst_advances_to_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_burst_cancels_card_flight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_rare_tease_holds_reveal",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_rare_tease_preserves_input_guard",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_native_size_quick-tap-rare-tease",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_saved_quick-tap-rare-tease",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_done_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_done_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_done_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_done_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_done_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_done_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_done_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_native_done_input",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_layer_freed",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_restores_menu_context",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_restores_menu_chrome",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_restores_shop_awning",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "quick-tap_does_not_grant_or_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_uses_fallback_background",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_preserves_point_nine_dim",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_done_stage_done",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_done_exact_result_count",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_done_cards_stay_at_home_scale_and_rotation",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_done_all_cards_face_up_and_opaque",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_done_one_done_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_done_one_again_button",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_done_skip_hidden",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_close_frees_layer",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "non-home_does_not_grant_or_charge",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "presentation_never_invokes_summon_again",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "review_finishes_under_55_seconds",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		}
+	],
+	"elapsed_seconds": 23.874,
+	"failures": 0,
+	"persist": false,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/summon-vfx-review-profile/360x640/Roaming/Godot/app_userdata/Gear Defenders",
+	"recording": {
+		"directory": "res://tmp/summon-vfx-frames/360x640",
+		"fps": 12,
+		"frames": 118
+	},
+	"window": [
+		360,
+		640
+	]
+}

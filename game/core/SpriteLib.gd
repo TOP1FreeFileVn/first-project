@@ -1,85 +1,36 @@
 extends Node
 
-# Builds and caches SpriteFrames and textures from the Tiny Swords pack at runtime, so
-# scenes don't need hand-made atlas resources for every unit and colour.
+# Builds and caches SpriteFrames and textures at runtime: the drawn cat and monster units,
+# the battle effects (game/assets/battle/fx, tools/ui/make_battle_fx.py) and the legacy Cozy UI.
 
-const ART := "res://Tiny Swords (Free Pack)/Tiny Swords (Free Pack)/"
+const FX := "res://game/assets/battle/fx/"
 const COZY := "res://DEMO_Cozy_UI_Pack_doboui/"
 
-# folder: unit folder in the pack (defaults to the key); frame: size of one square frame;
-# foot: pixels from frame centre down to the feet; guard: optional block animation.
-const UNIT_ANIMS := {
-	"Warrior": {"frame": 192, "foot": 34, "idle": "Warrior_Idle", "run": "Warrior_Run", "attack": "Warrior_Attack1"},
-	"Guard": {"folder": "Warrior", "frame": 192, "foot": 34, "idle": "Warrior_Idle", "run": "Warrior_Run", "attack": "Warrior_Attack1", "guard": "Warrior_Guard"},
-	"General": {"folder": "Warrior", "frame": 192, "foot": 34, "idle": "Warrior_Idle", "run": "Warrior_Run", "attack": "Warrior_Attack2"},
-	"Archer": {"frame": 192, "foot": 34, "idle": "Archer_Idle", "run": "Archer_Run", "attack": "Archer_Shoot"},
-	"Lancer": {"frame": 320, "foot": 32, "idle": "Lancer_Idle", "run": "Lancer_Run", "attack": "Lancer_Right_Attack"},
-	"Monk": {"frame": 192, "foot": 34, "idle": "Idle", "run": "Run", "attack": "Heal"},
-	"Pawn": {"frame": 192, "foot": 34, "idle": "Pawn_Idle Axe", "run": "Pawn_Run Axe", "attack": "Pawn_Interact Axe"},
-	"PawnPickaxe": {"folder": "Pawn", "frame": 192, "foot": 34, "idle": "Pawn_Idle Pickaxe", "run": "Pawn_Run Pickaxe", "attack": "Pawn_Interact Pickaxe"},
-	"PawnHammer": {"folder": "Pawn", "frame": 192, "foot": 34, "idle": "Pawn_Idle Hammer", "run": "Pawn_Run Hammer", "attack": "Pawn_Interact Hammer"},
-	"PawnKnife": {"folder": "Pawn", "frame": 192, "foot": 34, "idle": "Pawn_Idle Knife", "run": "Pawn_Run Knife", "attack": "Pawn_Interact Knife"},
-	# Meat and gold carriers have no attack strip; their idle stands in for it.
-	"PawnMeat": {"folder": "Pawn", "frame": 192, "foot": 34, "idle": "Pawn_Idle Meat", "run": "Pawn_Run Meat", "attack": "Pawn_Idle Meat"},
-	"PawnBomb": {"folder": "Pawn", "frame": 192, "foot": 34, "idle": "Pawn_Idle Gold", "run": "Pawn_Run Gold", "attack": "Pawn_Idle Gold"},
-}
-const ANIM_FPS := {"idle": 8.0, "run": 10.0, "attack": 12.0}
-
+## Battle effects: one horizontal strip of square frames each (frame = strip height).
 const EFFECTS := {
-	"dust": {"path": "Particle FX/Dust_01.png", "frame": 64},
-	"explosion": {"path": "Particle FX/Explosion_01.png", "frame": 192},
-	"blast": {"path": "Particle FX/Explosion_02.png", "frame": 192},
-	"fire": {"path": "Particle FX/Fire_01.png", "frame": 64, "loop": true},
-	"dust2": {"path": "Particle FX/Dust_02.png", "frame": 64},
-	"heal": {"path": "Units/Blue Units/Monk/Heal_Effect.png", "frame": 192},
+	"dust": {}, "dust2": {}, "explosion": {}, "blast": {},
+	"fire": {"loop": true}, "heal": {},
 }
 
 var _textures := {}
 var _frames := {}
-var _stitched := {}
 
 
-func texture(path: String) -> Texture2D:
-	if not _textures.has(path):
-		_textures[path] = load(ART + path)
-	return _textures[path]
+## A still from game/assets/battle/fx (the arrows).
+func fx_texture(name: String) -> Texture2D:
+	var key := "fx_tex/" + name
+	if not _textures.has(key):
+		_textures[key] = load(FX + name + ".png")
+	return _textures[key]
 
 
-func unit_frames(unit_key: String, color: String) -> SpriteFrames:
-	if is_cat(unit_key):
-		return _cat_frames(unit_key)
-	var key := unit_key + "/" + color
-	if _frames.has(key):
-		return _frames[key]
-	var spec: Dictionary = UNIT_ANIMS[unit_key]
-	var frames := SpriteFrames.new()
-	frames.remove_animation("default")
-	var folder: String = spec.get("folder", unit_key)
-	for anim in ["idle", "run", "attack", "guard"]:
-		if not spec.has(anim):
-			continue
-		var sheet := texture("Units/%s Units/%s/%s.png" % [color, folder, spec[anim]])
-		_add_strip(frames, anim, sheet, spec["frame"], ANIM_FPS.get(anim, 12.0), anim == "idle" or anim == "run")
-	_frames[key] = frames
-	return frames
+func unit_frames(unit_key: String, _color := "") -> SpriteFrames:
+	return _cat_frames(unit_key)
 
 
-# Head-and-shoulders crop of a unit's first idle frame, for cards and buttons.
-func portrait(unit_key: String, color := "Blue") -> Texture2D:
-	if is_cat(unit_key):
-		return cat_texture(unit_key)
-	var key := "portrait/%s/%s" % [unit_key, color]
-	if _textures.has(key):
-		return _textures[key]
-	var spec: Dictionary = UNIT_ANIMS[unit_key]
-	var frame: int = spec["frame"]
-	# Characters sit a little above the frame centre; crop a square around them.
-	var center := Vector2(frame / 2.0, frame / 2.0 - 4.0)
-	var atlas := AtlasTexture.new()
-	atlas.atlas = texture("Units/%s Units/%s/%s.png" % [color, spec.get("folder", unit_key), spec["idle"]])
-	atlas.region = Rect2(center - Vector2(56, 56), Vector2(112, 112))
-	_textures[key] = atlas
-	return atlas
+## Card and button picture of a unit (all units are drawn art now).
+func portrait(unit_key: String, _color := "") -> Texture2D:
+	return cat_texture(unit_key)
 
 
 ## A Cozy UI Pack image shrunk to `scale` (its art is drawn large and smooth), cached.
@@ -131,11 +82,9 @@ func player_color(tier: int) -> String:
 
 
 func foot_offset(unit_key: String) -> float:
-	if unit_key.begins_with("art:"):
+	if unit_key.begins_with("art:") or unit_key.begins_with("hero:"):
 		return ART_SIZE.y / 2.0 - 4.0
-	if is_cat(unit_key):
-		return CAT_CANVAS.y / 2.0 - 2.0
-	return UNIT_ANIMS[unit_key]["foot"]
+	return CAT_CANVAS.y / 2.0 - 2.0
 
 
 # --- Cat soldiers ----------------------------------------------------------------------------
@@ -159,7 +108,7 @@ const CAT_WEAPON_AT := Vector2i(62, 28)
 
 ## Drawn units (cats, generals, monsters) rather than the pixel-art pack.
 static func is_cat(unit_key: String) -> bool:
-	return unit_key.begins_with("cat:") or unit_key.begins_with("art:") or unit_key.begins_with("icon:")
+	return unit_key.begins_with("cat:") or unit_key.begins_with("art:") or unit_key.begins_with("icon:") or unit_key.begins_with("hero:")
 
 
 ## Size the drawn unit SVGs (256x240) are baked at.
@@ -174,8 +123,10 @@ func cat_texture(unit_key: String) -> Texture2D:
 		var face := ImageTexture.create_from_image(_skin_image("icon_" + unit_key.substr(5), Vector2i(112, 112)))
 		_textures[key] = face
 		return face
-	if unit_key.begins_with("art:"):
-		var art := ImageTexture.create_from_image(_skin_image("unit_" + unit_key.substr(4), ART_SIZE))
+	if unit_key.begins_with("art:") or unit_key.begins_with("hero:"):
+		# "hero:<family>" is the hero cat holding its weapon (game/ui/art/hero_cat_<family>.png).
+		var file := "unit_" + unit_key.substr(4) if unit_key.begins_with("art:") else "hero_cat_" + unit_key.substr(5)
+		var art := ImageTexture.create_from_image(_skin_image(file, ART_SIZE))
 		_textures[key] = art
 		return art
 	var parts := unit_key.split(":")
@@ -234,56 +185,15 @@ func _cat_frames(unit_key: String) -> SpriteFrames:
 	return frames
 
 
-## A looping animation from a horizontal strip of square frames (trees, sheep, bushes...).
-## A looping one-row strip. Frames are square unless `frame_width` says otherwise
-## (the trees are 192 wide and 256 tall).
-func strip_frames(path: String, fps := 8.0, frame_width := 0) -> SpriteFrames:
-	var key := "strip/" + path
-	if _frames.has(key):
-		return _frames[key]
-	var sheet := texture(path)
-	var frames := SpriteFrames.new()
-	var width: int = frame_width if frame_width > 0 else sheet.get_height()
-	frames.set_animation_speed("default", fps)
-	frames.set_animation_loop("default", true)
-	for i in sheet.get_width() / width:
-		var atlas := AtlasTexture.new()
-		atlas.atlas = sheet
-		atlas.region = Rect2(i * width, 0, width, sheet.get_height())
-		frames.add_frame("default", atlas)
-	_frames[key] = frames
-	return frames
-
-
 func effect_frames(effect: String) -> SpriteFrames:
 	var key := "fx/" + effect
 	if _frames.has(key):
 		return _frames[key]
-	var spec: Dictionary = EFFECTS[effect]
+	var sheet: Texture2D = load(FX + effect + ".png")
 	var frames := SpriteFrames.new()
-	_add_strip(frames, "default", texture(spec["path"]), spec["frame"], 16.0, spec.get("loop", false))
+	_add_strip(frames, "default", sheet, sheet.get_height(), 16.0, EFFECTS[effect].get("loop", false))
 	_frames[key] = frames
 	return frames
-
-
-# The pack ships 9-slice UI art as 64px pieces spaced 128px apart; pack them tight so
-# the result can back a StyleBoxTexture.
-func stitched(path: String, rows: Array, cols := [0, 128, 256], piece := 64, scale := 0.5) -> Texture2D:
-	var key := "%s|%s|%s" % [path, rows, scale]
-	if _stitched.has(key):
-		return _stitched[key]
-	var source := texture(path).get_image()
-	if source.is_compressed():
-		source.decompress()
-	var image := Image.create_empty(cols.size() * piece, rows.size() * piece, false, source.get_format())
-	for r in rows.size():
-		for c in cols.size():
-			image.blit_rect(source, Rect2i(cols[c], rows[r], piece, piece), Vector2i(c * piece, r * piece))
-	if scale != 1.0:
-		image.resize(roundi(image.get_width() * scale), roundi(image.get_height() * scale), Image.INTERPOLATE_NEAREST)
-	var result := ImageTexture.create_from_image(image)
-	_stitched[key] = result
-	return result
 
 
 func _add_strip(frames: SpriteFrames, anim: String, sheet: Texture2D, frame_size: int, fps: float, loop: bool) -> void:

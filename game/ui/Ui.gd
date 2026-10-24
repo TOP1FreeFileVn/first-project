@@ -11,18 +11,30 @@ const PATTERN_SHADER = preload("res://game/ui/pattern_scroll.gdshader")
 const MENU_SKY_SHADER = preload("res://game/ui/menu_sky.gdshader")
 const CartonNav = preload("res://game/ui/CartonNav.gd")
 const MenuSection = preload("res://game/ui/MenuSection.gd")
+const EquipmentCard = preload("res://game/ui/EquipmentCard.gd")
 const DARK_TEXT := Color("4b4444")
 
 
+## name -> resolved texture. Resolving touches the file system (ResourceLoader.exists),
+## which costs far more than a lookup, and a big bag asks for the same few images per card.
+static var _tex_cache := {}
+
 static func tex(name: String) -> Texture2D:
+	var cached: Texture2D = _tex_cache.get(name)
+	if cached != null:
+		return cached
 	# Accepted art lives outside the generated skin so a legacy rebuild cannot
 	# restore superseded assets. Raster overrides retain priority over vectors.
 	var accepted := "res://game/ui/art/" + name
+	var result: Texture2D
 	if ResourceLoader.exists(accepted + ".png"):
-		return load(accepted + ".png")
-	if ResourceLoader.exists(accepted + ".svg"):
-		return load(accepted + ".svg")
-	return load(SKIN + name + ".svg")
+		result = load(accepted + ".png")
+	elif ResourceLoader.exists(accepted + ".svg"):
+		result = load(accepted + ".svg")
+	else:
+		result = load(SKIN + name + ".svg")
+	_tex_cache[name] = result
+	return result
 
 
 ## Themed, full-rect screen root with smooth filtering for the SVG skin (the project
@@ -766,6 +778,7 @@ static func gear_card(icon_name: String, type_icon: String, tone: String, level:
 		var up := icon("badge_up", size * 0.3)
 		up.name = "EquipmentUpgrade"
 		pin(root, up, Vector2(-size * 0.3, -size * 0.32), Control.PRESET_BOTTOM_RIGHT)
+	EquipmentCard.apply(root, type_icon, tone, size)
 	return root
 
 

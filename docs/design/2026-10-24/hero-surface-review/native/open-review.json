@@ -1,0 +1,1532 @@
+{
+	"captures": [
+		{
+			"file": "open_360x640.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "open_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-kiem_go-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-cung_san-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-gay_sao-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "open-riu_lua-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				288.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				428.0
+			],
+			"variant": 3,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"label": "inventory_scroll_preserved",
+			"passed": true
+		},
+		{
+			"label": "larger_hero_clear_of_equipment_and_power",
+			"passed": true
+		},
+		{
+			"label": "usable_inventory_height",
+			"passed": true
+		},
+		{
+			"label": "single_hero_preview",
+			"passed": true
+		},
+		{
+			"label": "capture_open",
+			"passed": true
+		},
+		{
+			"label": "inventory_scroll_preserved",
+			"passed": true
+		},
+		{
+			"label": "larger_hero_clear_of_equipment_and_power",
+			"passed": true
+		},
+		{
+			"label": "usable_inventory_height",
+			"passed": true
+		},
+		{
+			"label": "single_hero_preview",
+			"passed": true
+		},
+		{
+			"label": "capture_open",
+			"passed": true
+		},
+		{
+			"label": "inventory_scroll_preserved",
+			"passed": true
+		},
+		{
+			"label": "larger_hero_clear_of_equipment_and_power",
+			"passed": true
+		},
+		{
+			"label": "usable_inventory_height",
+			"passed": true
+		},
+		{
+			"label": "single_hero_preview",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-00",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_0",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-01",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_1",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-02",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_2",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-03",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_3",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-04",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_4",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-05",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_5",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-06",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_6",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-07",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_7",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-08",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_8",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-09",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_9",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-10",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_10",
+			"passed": true
+		},
+		{
+			"label": "capture_open-kiem_go-idle-11",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_frame_clear_11",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_naturally_animated_bones",
+			"passed": true
+		},
+		{
+			"label": "inventory_scroll_preserved",
+			"passed": true
+		},
+		{
+			"label": "larger_hero_clear_of_equipment_and_power",
+			"passed": true
+		},
+		{
+			"label": "usable_inventory_height",
+			"passed": true
+		},
+		{
+			"label": "single_hero_preview",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-00",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_0",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-01",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_1",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-02",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_2",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-03",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_3",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-04",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_4",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-05",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_5",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-06",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_6",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-07",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_7",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-08",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_8",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-09",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_9",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-10",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_10",
+			"passed": true
+		},
+		{
+			"label": "capture_open-cung_san-idle-11",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_frame_clear_11",
+			"passed": true
+		},
+		{
+			"label": "cung_san_naturally_animated_bones",
+			"passed": true
+		},
+		{
+			"label": "inventory_scroll_preserved",
+			"passed": true
+		},
+		{
+			"label": "larger_hero_clear_of_equipment_and_power",
+			"passed": true
+		},
+		{
+			"label": "usable_inventory_height",
+			"passed": true
+		},
+		{
+			"label": "single_hero_preview",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-00",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_0",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-01",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_1",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-02",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_2",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-03",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_3",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-04",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_4",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-05",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_5",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-06",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_6",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-07",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_7",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-08",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_8",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-09",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_9",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-10",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_10",
+			"passed": true
+		},
+		{
+			"label": "capture_open-gay_sao-idle-11",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_frame_clear_11",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_naturally_animated_bones",
+			"passed": true
+		},
+		{
+			"label": "inventory_scroll_preserved",
+			"passed": true
+		},
+		{
+			"label": "larger_hero_clear_of_equipment_and_power",
+			"passed": true
+		},
+		{
+			"label": "usable_inventory_height",
+			"passed": true
+		},
+		{
+			"label": "single_hero_preview",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-00",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_0",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-01",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_1",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-02",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_2",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-03",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_3",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-04",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_4",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-05",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_5",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-06",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_6",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-07",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_7",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-08",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_8",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-09",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_9",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-10",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_10",
+			"passed": true
+		},
+		{
+			"label": "capture_open-riu_lua-idle-11",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_frame_clear_11",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_naturally_animated_bones",
+			"passed": true
+		},
+		{
+			"label": "player_save_unchanged",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"scope": "Review-only unframed equipment composition after rejection of A/B/C."
+}

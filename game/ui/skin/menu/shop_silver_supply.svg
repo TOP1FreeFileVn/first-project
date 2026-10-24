@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="324" height="440" viewBox="0 0 324 440">
+  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3F9F5"/>
+      <stop offset=".52" stop-color="#DDEEF0"/>
+      <stop offset="1" stop-color="#BED9E2"/>
+    </linearGradient>
+  </defs>
+  <!-- Keep the same quiet card shape; distinguish the tier through its backdrop. -->
+  <rect x="2.5" y="2.5" width="319" height="435" rx="27.5" fill="url(#face)" stroke="#583F21" stroke-width="5"/>
+</svg>

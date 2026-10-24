@@ -160,8 +160,11 @@ def chest_open() -> list[float]:
     return finish(room(mix(swish(0.35, 0.6, 29), sweep(220, 480, 0.12, 0.7, 0.05), sparkle), 0.1, 0.25, 3), 0.5)
 
 def flip() -> list[float]:
-    """A card turning: a soft papery flick."""
-    return finish(mix(swish(0.09, 0.6, 31), delay(mallet(hz(83), 0.1, 0.15, 0.03, 0.002, 0.0), 0.04)), 0.2)
+    """A card turning over onto felt: a muffled cardboard "thup" and a low, round wood
+    knock. No hiss and nothing above ~1.5 kHz, so ten flips in a row stay easy on the ear."""
+    thump = hush(0.12, 0.7, 31, 900, 0.03, 0.004)
+    knock = delay(mallet(hz(64), 0.16, 0.35, 0.05, 0.004, 0.0), 0.01)
+    return finish(soften(mix(thump, knock), 1_500), 0.16)
 
 def rare() -> list[float]:
     return finish(room(run([76, 80, 83], 0.08, 0.6, 0.5), 0.1, 0.25, 3), 0.4)

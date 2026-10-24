@@ -1,0 +1,1388 @@
+{
+	"captures": [
+		{
+			"file": "surface-0_360x640.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "surface-1_360x640.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 1,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "surface-2_360x640.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 2,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "surface-0_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "surface-1_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 1,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "surface-2_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 2,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "kiem_go-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "cung_san-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "gay_sao-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-00_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-01_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-02_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-03_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-04_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-05_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-06_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-07_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-08_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-09_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-10_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "riu_lua-idle-11_450x800.png",
+			"stage": [
+				156.0,
+				16.0,
+				408.0,
+				264.0
+			],
+			"surface": [
+				0.0,
+				0.0,
+				720.0,
+				404.0
+			],
+			"variant": 0,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"label": "production_hero_page_visible",
+			"passed": true
+		},
+		{
+			"label": "one_animated_hero",
+			"passed": true
+		},
+		{
+			"label": "capture_surface-0",
+			"passed": true
+		},
+		{
+			"label": "production_hero_page_visible",
+			"passed": true
+		},
+		{
+			"label": "one_animated_hero",
+			"passed": true
+		},
+		{
+			"label": "capture_surface-1",
+			"passed": true
+		},
+		{
+			"label": "production_hero_page_visible",
+			"passed": true
+		},
+		{
+			"label": "one_animated_hero",
+			"passed": true
+		},
+		{
+			"label": "capture_surface-2",
+			"passed": true
+		},
+		{
+			"label": "production_hero_page_visible",
+			"passed": true
+		},
+		{
+			"label": "one_animated_hero",
+			"passed": true
+		},
+		{
+			"label": "capture_surface-0",
+			"passed": true
+		},
+		{
+			"label": "production_hero_page_visible",
+			"passed": true
+		},
+		{
+			"label": "one_animated_hero",
+			"passed": true
+		},
+		{
+			"label": "capture_surface-1",
+			"passed": true
+		},
+		{
+			"label": "production_hero_page_visible",
+			"passed": true
+		},
+		{
+			"label": "one_animated_hero",
+			"passed": true
+		},
+		{
+			"label": "capture_surface-2",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-00",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-01",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-02",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-03",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-04",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-05",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-06",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-07",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-08",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-09",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-10",
+			"passed": true
+		},
+		{
+			"label": "capture_kiem_go-idle-11",
+			"passed": true
+		},
+		{
+			"label": "kiem_go_bones_move_in_natural_idle",
+			"passed": true
+		},
+		{
+			"label": "cung_san_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-00",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-01",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-02",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-03",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-04",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-05",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-06",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-07",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-08",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-09",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-10",
+			"passed": true
+		},
+		{
+			"label": "capture_cung_san-idle-11",
+			"passed": true
+		},
+		{
+			"label": "cung_san_bones_move_in_natural_idle",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-00",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-01",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-02",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-03",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-04",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-05",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-06",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-07",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-08",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-09",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-10",
+			"passed": true
+		},
+		{
+			"label": "capture_gay_sao-idle-11",
+			"passed": true
+		},
+		{
+			"label": "gay_sao_bones_move_in_natural_idle",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_idle_loaded",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-00",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-01",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-02",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-03",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-04",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-05",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-06",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-07",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-08",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-09",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-10",
+			"passed": true
+		},
+		{
+			"label": "capture_riu_lua-idle-11",
+			"passed": true
+		},
+		{
+			"label": "riu_lua_bones_move_in_natural_idle",
+			"passed": true
+		},
+		{
+			"label": "player_save_unchanged",
+			"passed": true
+		}
+	],
+	"failures": 0,
+	"scope": "Review-only outer surface alternatives; actual production hero, cards and navigation."
+}

@@ -7,17 +7,34 @@
       0
     ],
     "pixels_with_channel_difference_over_3": 0,
-    "solid_pixels_difference_over_3": 0
-  },
-  "silver": {
-    "max_RGBA_difference": [
+    "solid_pixels_difference_over_3": 0,
+    "pixels_with_visible_channel_difference": 0,
+    "comparison": "RGBA on union of nonzero-alpha pixels; hidden RGB in fully transparent pixels is not visible",
+    "raw_max_RGBA_difference_including_hidden_RGB": [
       0,
       0,
       0,
       0
+    ]
+  },
+  "silver": {
+    "max_RGBA_difference": [
+      1,
+      2,
+      2,
+      2
     ],
     "pixels_with_channel_difference_over_3": 0,
-    "solid_pixels_difference_over_3": 0
+    "solid_pixels_difference_over_3": 0,
+    "pixels_with_visible_channel_difference": 22801,
+    "comparison": "RGBA on union of nonzero-alpha pixels; hidden RGB in fully transparent pixels is not visible",
+    "raw_max_RGBA_difference_including_hidden_RGB": [
+      1,
+      2,
+      2,
+      2
+    ],
+    "note": "Closed runtime uses intact original RGBA. Extracted moving-lid strap repair lies behind the fixed partially transparent latch; residual blends are reported rather than forcing source alpha or colors."
   },
   "gold": {
     "max_RGBA_difference": [
@@ -27,6 +44,14 @@
       0
     ],
     "pixels_with_channel_difference_over_3": 0,
-    "solid_pixels_difference_over_3": 0
+    "solid_pixels_difference_over_3": 0,
+    "pixels_with_visible_channel_difference": 0,
+    "comparison": "RGBA on union of nonzero-alpha pixels; hidden RGB in fully transparent pixels is not visible",
+    "raw_max_RGBA_difference_including_hidden_RGB": [
+      0,
+      0,
+      0,
+      0
+    ]
   }
 }

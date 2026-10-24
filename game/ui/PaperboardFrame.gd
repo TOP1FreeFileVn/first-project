@@ -9,8 +9,13 @@ const RARITIES := {
 	"purple": Color("c1a4e2"), "orange": Color("efba7d"),
 }
 const BADGE_RARITIES := {
-	"green": Color("5b813e"), "blue": Color("347f9d"),
-	"purple": Color("8659ac"), "orange": Color("b56c33"),
+	"green": Color("92a57e"), "blue": Color("87a3ae"),
+	"purple": Color("a291b2"), "orange": Color("b79775"),
+}
+## Small construction accents inside the white category silhouettes.
+const BADGE_ACCENTS := {
+	"green": Color("76965d"), "blue": Color("6596ad"),
+	"purple": Color("a184b9"), "orange": Color("bd8f62"),
 }
 
 var kind := "folder":
@@ -21,6 +26,11 @@ var kind := "folder":
 var tone := "green"
 var heading := "TRANG BỊ"
 var grain: Texture2D
+## Hero and bag can retain their outlines over Home's continuous backdrop.
+var fill_surface := true:
+	set(value):
+		fill_surface = value
+		queue_redraw()
 
 
 func _init() -> void:
@@ -33,7 +43,7 @@ func _configure_margins() -> void:
 	var box := StyleBoxEmpty.new()
 	var margins := Vector4(18, 46, 18, 12)
 	match kind:
-		"hero": margins = Vector4(18, 16, 18, 12)
+		"hero": margins = Vector4(18, 24, 18, 16)
 		"bag": margins = Vector4(18, 0, 18, 8)
 		"plaque": margins = Vector4(12, 6, 12, 6)
 		"card", "halo", "background", "badge", "power_icon": margins = Vector4.ZERO
@@ -57,9 +67,11 @@ func _draw() -> void:
 		return
 	match kind:
 		"hero":
-			draw_style_box(_flat(KRAFT, 4), Rect2(Vector2.ZERO, size))
-			if grain != null:
-				draw_texture_rect(grain, Rect2(Vector2.ONE * 4, size - Vector2.ONE * 8), true)
+			var face := _flat(Color("f8f1d8") if fill_surface else Color.TRANSPARENT, 2, 20)
+			face.border_color = Color("c5aa7e")
+			draw_style_box(face, Rect2(Vector2.ONE * 8, size - Vector2.ONE * 16))
+			if fill_surface and grain != null:
+				draw_texture_rect(grain, Rect2(Vector2.ONE * 12, size - Vector2.ONE * 24), true)
 		"folder":
 			var body := _flat(KRAFT, 4, 16)
 			body.corner_radius_top_left = 0
@@ -76,9 +88,10 @@ func _draw() -> void:
 			draw_string(get_theme_font("font", "Label"), Vector2(20, 27), heading,
 				HORIZONTAL_ALIGNMENT_LEFT, 190, 20, INK)
 		"bag", "background":
-			draw_rect(Rect2(Vector2.ZERO, size), Color("79583e"))
-			if grain != null:
-				draw_texture_rect(grain, Rect2(Vector2.ZERO, size), true)
+			if fill_surface:
+				draw_rect(Rect2(Vector2.ZERO, size), Color("79583e"))
+				if grain != null:
+					draw_texture_rect(grain, Rect2(Vector2.ZERO, size), true)
 			if kind == "bag":
 				draw_line(Vector2.ZERO, Vector2(size.x, 0), INK, 4)
 		"card":
@@ -86,12 +99,20 @@ func _draw() -> void:
 			var outer := PackedVector2Array([Vector2.ZERO, Vector2(size.x - cut, 0),
 				Vector2(size.x, cut), size, Vector2(cut, size.y), Vector2(0, size.y - cut)])
 			draw_colored_polygon(outer, INK)
-			var inset := 3.2
-			var inner := PackedVector2Array([Vector2(inset, inset), Vector2(size.x - cut - 1, inset),
-				Vector2(size.x - inset, cut + 1), size - Vector2.ONE * inset,
-				Vector2(cut + 1, size.y - inset), Vector2(inset, size.y - cut - 1)])
+			# Line and kraft rim scale with the card (approved at ~116 px: 3.2 and 9.2 px), so a
+			# big card (the chest reveal) keeps the same proportions and its rarity insert
+			# stays inside the clipped corners instead of poking through them.
+			var k := size.x / 116.0
+			var inset := 3.2 * k
+			var inner := PackedVector2Array([Vector2(inset, inset), Vector2(size.x - cut - k, inset),
+				Vector2(size.x - inset, cut + k), size - Vector2.ONE * inset,
+				Vector2(cut + k, size.y - inset), Vector2(inset, size.y - cut - k)])
 			draw_colored_polygon(inner, Color("d8ae77"))
-			draw_rect(Rect2(Vector2.ONE * 9.2, size - Vector2.ONE * 18.4), RARITIES.get(tone, Color("cbbda5")))
+			var rim := 9.2 * k
+			var insert := PackedVector2Array([Vector2(rim, rim), Vector2(size.x - rim - cut * 0.4, rim),
+				Vector2(size.x - rim, rim + cut * 0.4), size - Vector2.ONE * rim,
+				Vector2(rim + cut * 0.4, size.y - rim), Vector2(rim, size.y - rim - cut * 0.4)])
+			draw_colored_polygon(insert, RARITIES.get(tone, Color("cbbda5")))
 		"badge":
 			draw_style_box(_flat(Color("f9e8bf"), 2, 4), Rect2(Vector2.ZERO, size))
 			draw_style_box(_flat(BADGE_RARITIES.get(tone, Color("79583e")), 0, 2),

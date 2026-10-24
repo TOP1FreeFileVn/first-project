@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://docs/design/2026-10-24/hero-surface-review/HeroOpenReview.gd" id="1"]
+
+[node name="HeroOpenReview" type="Node"]
+script = ExtResource("1")

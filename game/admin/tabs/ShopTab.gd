@@ -39,12 +39,12 @@ func build() -> void:
 	for kind in chests:
 		var spec: Dictionary = chests[kind]
 		var cards: bool = spec.has("cards")
-		var box := section(spec["name"] + ("  (thẻ lính, sau trận thắng)" if cards else "  (trang bị + đá rèn)"))
+		var box := section(spec["name"] + ("  (thẻ lính, sau trận thắng)" if cards else "  (trang bị + bản vẽ)"))
 		for f in (CARD_FIELDS if cards else ITEM_FIELDS):
 			number(box, f[1], spec.get(f[0], 1 if f[0] == "min_count" else 0), f[2], f[3], f[4], true, false, func(v): _set_chest(kind, f[0], v))
 		if not cards:
-			number(box, "Đá rèn tối thiểu", spec["stones"][0], 0, 100000, 1, true, false, func(v): _set_range(kind, "stones", 0, v))
-			number(box, "Đá rèn tối đa", spec["stones"][1], 0, 100000, 1, true, false, func(v): _set_range(kind, "stones", 1, v))
+			number(box, "Bản vẽ tối thiểu", spec["blueprints"][0], 0, 100000, 1, true, false, func(v): _set_range(kind, "blueprints", 0, v))
+			number(box, "Bản vẽ tối đa", spec["blueprints"][1], 0, 100000, 1, true, false, func(v): _set_range(kind, "blueprints", 1, v))
 		number(box, "Vàng thưởng tối thiểu", spec["bonus_gold"][0], 0, 100000, 10, true, false, func(v): _set_bonus(kind, 0, v))
 		number(box, "Vàng thưởng tối đa", spec["bonus_gold"][1], 0, 100000, 10, true, false, func(v): _set_bonus(kind, 1, v))
 
@@ -113,11 +113,11 @@ func _simulate() -> void:
 	_sim_text = "\n".join(lines)
 	rebuild()
 
-# Equipment chests: rarity mix (after the min_rare/min_count guarantee) and stones.
+# Equipment chests: rarity mix (after the min_rare/min_count guarantee) and Blueprints.
 func _simulate_items(spec: Dictionary) -> void:
 	var by_rarity := [0, 0, 0, 0]
 	var items_total := 0
-	var stones_total := 0
+	var plans_total := 0
 	for i in SIM_COUNT:
 		var rarities := []
 		for n in int(spec.get("items", 1)):
@@ -128,11 +128,10 @@ func _simulate_items(spec: Dictionary) -> void:
 		for r in rarities:
 			by_rarity[r] += 1
 			items_total += 1
-		stones_total += randi_range(int(spec["stones"][0]), int(spec["stones"][1]))
-	var lines := ["%s × %d: %s trang bị, TB %.1f đá rèn/rương" % [spec["name"], SIM_COUNT, UiKit.format_number(items_total), stones_total / float(SIM_COUNT)]]
+		plans_total += randi_range(int(spec["blueprints"][0]), int(spec["blueprints"][1]))
+	var lines := ["%s × %d: %s trang bị, TB %.1f bản vẽ/rương" % [spec["name"], SIM_COUNT, UiKit.format_number(items_total), plans_total / float(SIM_COUNT)]]
 	for r in by_rarity.size():
 		lines.append("%s: %.1f%%" % [Economy.RARITY_NAMES[r], 100.0 * by_rarity[r] / maxf(items_total, 1)])
-	lines.append("Bản vẽ mỗi rương: %d" % HeroCat.CHEST_BLUEPRINTS.get(_sim_kind, 0))
 	var cost := "%s vàng" % UiKit.format_number(spec["gold"]) if spec["gold"] > 0 else ("%s kim cương" % spec["gems"] if spec["gems"] > 0 else "miễn phí")
 	lines.append("Giá mỗi rương: %s" % cost)
 	_sim_text = "

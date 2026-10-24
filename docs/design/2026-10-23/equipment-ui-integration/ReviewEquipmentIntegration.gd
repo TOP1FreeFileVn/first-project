@@ -23,11 +23,17 @@ var _original_state: Dictionary = {}
 var _original_persist := true
 var _original_tab := 2
 var _nav_id := 0
+var _out := OUT
 
 
 func _ready() -> void:
 	AudioServer.set_bus_mute(0, true)
-	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(OUT))
+	for argument in OS.get_cmdline_user_args():
+		if argument.begins_with("--output-directory="):
+			var output_path := argument.trim_prefix("--output-directory=")
+			if not output_path.is_empty():
+				_out = output_path
+	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(_out))
 	_original_state = PlayerData.to_dict().duplicate(true)
 	_original_persist = PlayerData.persist
 	_original_tab = HOME_SCRIPT.last_tab
@@ -43,8 +49,8 @@ func _ready() -> void:
 		await _unmount()
 		_fixture("full")
 		await _mount()
-		_audit("full", 13, 4, 0)
-		_audit_grid(9)
+		_audit("full", HeroCat.ITEMS.size(), WORN.size(), 0)
+		_audit_grid(HeroCat.ITEMS.size() - WORN.size())
 		await _capture("full-bag")
 		await _filters_sort()
 		await _upgrade_equipped()
@@ -78,6 +84,8 @@ func _fixture(kind: String) -> void:
 	var state := {"equipped": {}, "bag": {}, "retired_items": {}, "next": 1}
 	if kind == "full":
 		PlayerData.gold = 50000
+		for slot in HeroCat.SLOTS:
+			PlayerData.blueprints[slot] = 1000
 		var index := 0
 		for id in HeroCat.ITEMS:
 			var uid := HeroCat.add_item(state, id)
@@ -224,21 +232,122 @@ func _filters_sort() -> void:
 	await _capture("filter-defense")
 	_check(await _tap(_filter_button("all", "Tất cả")), "native_all_filter_tap")
 	await _settle()
-	_audit_grid(9)
+	_audit_grid(HeroCat.ITEMS.size() - WORN.size())
 	_check(_rarity_sorted(_grid_uids(), true), "default_sort_descending_rarity")
-	_check(await _tap(_sort_button()), "native_sort_ascending_tap")
-	await _settle()
+	_check(_page._sort_by == "rarity" and _page._sort_descending, "default_sort_state_is_rarity_descending")
+	await _open_sort_menu("sort-menu-rarity")
+	await _choose_sort_option("EquipmentSortAscending", "rarity_ascending")
 	_check(_rarity_sorted(_grid_uids(), false), "sort_changes_to_ascending_rarity")
 	await _capture("sort-ascending")
-	_check(await _tap(_sort_button()), "native_sort_descending_tap")
-	await _settle()
+	await _open_sort_menu()
+	await _choose_sort_option("EquipmentSortDescending", "rarity_descending")
 	_check(_rarity_sorted(_grid_uids(), true), "sort_returns_to_descending_rarity")
+	await _open_sort_menu()
+	await _choose_sort_option("EquipmentSortBy_level", "level_descending")
+	_check(_page._sort_by == "level" and _page._sort_descending, "level_criterion_keeps_descending_direction")
+	_check(_items_sorted(_grid_uids(), "level", true), "level_sort_descending_uses_real_item_levels")
+	await _capture("sort-level-descending")
+	await _open_sort_menu("sort-menu-level")
+	await _choose_sort_option("EquipmentSortAscending", "level_ascending")
+	_check(_page._sort_by == "level" and not _page._sort_descending, "ascending_direction_keeps_level_criterion")
+	_check(_items_sorted(_grid_uids(), "level", false), "level_sort_ascending_uses_real_item_levels")
+	await _capture("sort-level-ascending")
+	_check(await _tap(_filter_button("weapon", "")), "native_weapon_filter_after_level_sort")
+	await _settle()
+	_check(_same_members(_grid_uids(), expected_weapons), "level_sort_weapon_filter_keeps_correct_members")
+	_check(_page._sort_by == "level" and not _page._sort_descending and _items_sorted(_grid_uids(), "level", false), "weapon_filter_preserves_selected_level_sort")
+	_check(await _tap(_filter_button("gear", "")), "native_defense_filter_after_level_sort")
+	await _settle()
+	_check(_same_members(_grid_uids(), expected_gear), "level_sort_defense_filter_keeps_correct_members")
+	_check(_items_sorted(_grid_uids(), "level", false), "defense_filter_preserves_selected_level_sort")
+	_check(await _tap(_filter_button("all", "")), "native_all_filter_after_level_sort")
+	await _settle()
+	await _open_sort_menu()
+	var order_before := _grid_uids()
+	var state_before: Dictionary = PlayerData.to_dict().duplicate(true)
+	var menu := _sort_menu()
+	var dismiss := _page.find_child("EquipmentSortDismiss", true, false) as Button
+	_check(dismiss != null and dismiss.is_visible_in_tree(), "sort_menu_has_native_outside_dismiss_target")
+	if menu != null and dismiss != null:
+		var outside := _outside_menu_point(menu, dismiss)
+		_check(not menu.get_global_rect().has_point(outside), "outside_dismiss_point_is_outside_sort_surface")
+		await _tap_at(outside)
+		await _settle()
+	_check(not _sort_menu_visible(), "native_outside_tap_closes_sort_menu")
+	_check(_grid_uids() == order_before and PlayerData.to_dict() == state_before, "dismiss_does_not_sort_or_mutate_inventory")
+	await _open_sort_menu()
+	await _choose_sort_option("EquipmentSortBy_rarity", "rarity_ascending_restored")
+	_check(_page._sort_by == "rarity" and not _page._sort_descending and _rarity_sorted(_grid_uids(), false), "rarity_criterion_keeps_ascending_direction")
+	await _open_sort_menu()
+	await _choose_sort_option("EquipmentSortDescending", "rarity_descending_restored")
+	_check(_rarity_sorted(_grid_uids(), true), "sort_fixture_restores_default_rarity_order")
+
+
+func _open_sort_menu(capture_label := "") -> void:
+	_check(await _tap(_sort_button()), "native_funnel_opens_sort_menu")
+	await _settle()
+	var menu := _sort_menu()
+	_check(menu != null and menu.is_visible_in_tree(), "sort_menu_visible_after_funnel_tap")
+	if menu == null:
+		return
+	var rect := menu.get_global_rect()
+	_check(get_viewport().get_visible_rect().grow(0.1).encloses(rect), "sort_menu_stays_inside_visible_viewport")
+	_geometry.append({"context": "sort_menu", "window": [_size.x, _size.y], "rect": _rect(rect)})
+	for option in ["EquipmentSortBy_rarity", "EquipmentSortBy_level", "EquipmentSortDescending", "EquipmentSortAscending"]:
+		var button := menu.find_child(option, true, false) as Button
+		_check(button != null and button.is_visible_in_tree(), "sort_menu_has_option_" + option)
+		if button != null:
+			_check(rect.grow(0.1).encloses(button.get_global_rect()), "sort_option_fits_surface_" + option)
+	if not capture_label.is_empty():
+		await _capture(capture_label)
+
+
+func _choose_sort_option(node_name: String, context: String) -> void:
+	_check(await _tap(_page.find_child(node_name, true, false) as Button), "native_sort_option_" + context)
+	await _settle()
+	_check(not _sort_menu_visible(), context + "_selection_applies_and_closes_menu")
+
+
+func _sort_menu() -> PanelContainer:
+	return _page.find_child("EquipmentSortMenu", true, false) as PanelContainer
+
+
+func _sort_menu_visible() -> bool:
+	var menu := _sort_menu()
+	return menu != null and menu.is_visible_in_tree()
+
+
+func _outside_menu_point(menu: Control, dismiss: Control) -> Vector2:
+	var area := dismiss.get_global_rect()
+	for point in [area.position + Vector2(8, 8), Vector2(area.end.x - 8, area.position.y + 8), area.end - Vector2(8, 8), Vector2(area.position.x + 8, area.end.y - 8)]:
+		if not menu.get_global_rect().grow(2.0).has_point(point):
+			return point
+	return area.position
+
+
+func _tap_at(point: Vector2) -> void:
+	var native := get_tree().root.get_final_transform() * point
+	var motion := InputEventMouseMotion.new()
+	motion.position = native
+	motion.global_position = native
+	Input.parse_input_event(motion)
+	await get_tree().process_frame
+	for pressed in [true, false]:
+		var event := InputEventMouseButton.new()
+		event.position = native
+		event.global_position = native
+		event.button_index = MOUSE_BUTTON_LEFT
+		event.pressed = pressed
+		Input.parse_input_event(event)
+		await get_tree().process_frame
 
 
 func _upgrade_equipped() -> void:
 	var uid: String = _uids.kiem_go
 	var before_level: int = HeroCat.item(PlayerData.hero_cat, uid).level
 	var gold_before: int = PlayerData.gold
+	var blueprints_before: Dictionary = PlayerData.blueprints.duplicate()
+	var slot: String = HeroCat.def(PlayerData.hero_cat, uid)["slot"]
 	var cost := HeroCat.upgrade_cost(PlayerData.hero_cat, uid)
 	_check(await _tap(_card_button(uid)), "native_worn_card_opens_detail")
 	await _settle()
@@ -250,7 +359,10 @@ func _upgrade_equipped() -> void:
 	_check(await _tap(_button_text(_page._detail, "Nâng cấp")), "native_upgrade_button_tap")
 	await _settle()
 	_check(HeroCat.item(PlayerData.hero_cat, uid).level == before_level + 1, "upgrade_increments_selected_item_once")
-	_check(PlayerData.gold == gold_before - cost, "upgrade_spends_exact_cost")
+	var expected_blueprints := blueprints_before.duplicate()
+	expected_blueprints[slot] -= cost
+	_check(PlayerData.blueprints == expected_blueprints, "upgrade_spends_exact_slot_blueprint_cost")
+	_check(PlayerData.gold == gold_before, "blueprint_upgrade_preserves_gold")
 	_check(_detail_visible(), "upgrade_keeps_detail_open_with_fresh_values")
 	_check(await _tap(_popup_close()), "native_close_upgrade_popup")
 	await _settle()
@@ -278,16 +390,19 @@ func _equip_spare() -> void:
 	_check(HeroCat.equipped_uid(PlayerData.hero_cat, "weapon") == uid, "equip_changes_real_weapon_uid")
 	_check(HeroCat.spare(PlayerData.hero_cat).has(previous) and not HeroCat.spare(PlayerData.hero_cat).has(uid), "equip_returns_previous_weapon_to_bag")
 	_check(not _detail_visible(), "equip_closes_popup")
-	_audit("after_equip", 13, 4, 0)
+	_audit("after_equip", HeroCat.ITEMS.size(), WORN.size(), 0)
 	await _capture("after-equip")
 
 
 func _rejected_api_actions() -> void:
 	var snapshot: Dictionary = PlayerData.to_dict().duplicate(true)
-	PlayerData.gold = 0
+	var slot: String = HeroCat.def(PlayerData.hero_cat, _uids.kiem_go)["slot"]
+	PlayerData.blueprints[slot] = 0
 	var before: Dictionary = PlayerData.hero_cat.duplicate(true)
-	_check(not PlayerData.hero_cat_upgrade(_uids.kiem_go), "api_rejects_upgrade_without_gold")
-	_check(PlayerData.gold == 0 and PlayerData.hero_cat == before, "rejected_upgrade_preserves_inventory_and_gold")
+	var blueprints_before: Dictionary = PlayerData.blueprints.duplicate()
+	var gold_before: int = PlayerData.gold
+	_check(not PlayerData.hero_cat_upgrade(_uids.kiem_go), "api_rejects_upgrade_without_slot_blueprints")
+	_check(PlayerData.gold == gold_before and PlayerData.blueprints == blueprints_before and PlayerData.hero_cat == before, "rejected_upgrade_preserves_inventory_and_currencies")
 	PlayerData.hero_cat_equip("missing-review-uid")
 	_check(PlayerData.hero_cat == before, "api_rejects_invalid_equipment_uid")
 	_check(not PlayerData.hero_cat_upgrade("missing-review-uid"), "api_rejects_invalid_upgrade_uid")
@@ -411,11 +526,15 @@ func _same_members(actual: Array, expected: Array) -> bool:
 
 
 func _rarity_sorted(uids: Array, descending: bool) -> bool:
-	if uids.size() != 9:
+	if uids.size() != HeroCat.ITEMS.size() - WORN.size():
 		return false
+	return _items_sorted(uids, "rarity", descending)
+
+
+func _items_sorted(uids: Array, criterion: String, descending: bool) -> bool:
 	for index in range(1, uids.size()):
-		var previous: int = HeroCat.def(PlayerData.hero_cat, uids[index - 1]).rarity
-		var current: int = HeroCat.def(PlayerData.hero_cat, uids[index]).rarity
+		var previous: int = HeroCat.item(PlayerData.hero_cat, uids[index - 1]).level if criterion == "level" else HeroCat.def(PlayerData.hero_cat, uids[index - 1]).rarity
+		var current: int = HeroCat.item(PlayerData.hero_cat, uids[index]).level if criterion == "level" else HeroCat.def(PlayerData.hero_cat, uids[index]).rarity
 		if (descending and previous < current) or (not descending and previous > current):
 			return false
 	return true
@@ -431,7 +550,7 @@ func _capture(label: String) -> void:
 	await RenderingServer.frame_post_draw
 	var image := get_viewport().get_texture().get_image()
 	var filename := "%s_%dx%d.png" % [label, _size.x, _size.y]
-	_check(image.get_size() == _size and image.save_png(OUT.path_join(filename)) == OK, "capture_" + label)
+	_check(image.get_size() == _size and image.save_png(_out.path_join(filename)) == OK, "capture_" + label)
 	_captures.append({"file": filename, "window": [_size.x, _size.y]})
 
 
@@ -454,7 +573,7 @@ func _finish() -> void:
 	var report := {"scope": "Actual production Home/Hero page, original CartonNav, nonpersistent fresh/full/empty fixtures; native mouse interaction, filter/sort, equip/upgrade and rejected API actions.",
 		"profile": OS.get_user_data_dir(), "original_persist_restored": PlayerData.persist == _original_persist,
 		"save_before": _save_before, "save_after": _save_hash(), "checks": _checks, "captures": _captures, "geometry": _geometry, "failures": _failures}
-	var file := FileAccess.open(OUT.path_join("review.json"), FileAccess.WRITE)
+	var file := FileAccess.open(_out.path_join("review.json"), FileAccess.WRITE)
 	file.store_string(JSON.stringify(report, "\t"))
 	file.close()
 	print("EQUIPMENT_INTEGRATION_REVIEW_COMPLETE checks=", _checks.size(), " captures=", _captures.size(), " failures=", _failures)

@@ -72,8 +72,9 @@ func _fly_bomb(delta: float) -> void:
 	if hits_core:
 		battle.damage_core(damage)
 	else:
-		for foe in battle.units_of(1 - team):
-			if not foe.is_dead() and foe.position.distance_to(point) <= splash_radius:
+		# A copy: a foe killed here leaves units_of() at once, which would skip the next one.
+		for foe in battle.units_of(1 - team).duplicate():
+			if is_instance_valid(foe) and not foe.is_dead() and foe.position.distance_to(point) <= splash_radius:
 				foe.take_damage(damage, true)
 	queue_free()
 

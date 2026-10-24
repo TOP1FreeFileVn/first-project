@@ -1,6 +1,6 @@
 extends Node
 
-# Screenshots every lobby tab, the team swap mode, the troop upgrade screen and each stage of a
+# Screenshots every lobby tab, a version swap, the troop upgrade screen and each stage of a
 # chest opening, on a throwaway profile (the real save is never touched).
 # Run (windowed): Godot --path . res://tests/MenuShots.tscn -- --shot-dir=C:/some/folder
 
@@ -13,9 +13,8 @@ const STEPS := [
 	["tab", 2], ["shot", "battle"],
 	["level", -1], ["wait", 0.4], ["shot", "battle_prev"], ["level", 1], ["wait", 0.4], ["level", 1], ["wait", 0.4], ["shot", "battle_locked"],
 	["tab", 3], ["shot", "troops"],
-	["swap", "dai_bac"], ["shot", "troops_swap"], ["unswap"],
-	["scroll", 400], ["drag", "dai_bac", 1], ["wait", 0.3], ["shot", "troops_drag"], ["drop", 1], ["wait", 0.3], ["shot", "troops_dropped"],
-	["filter", 3], ["shot", "troops_legend"], ["filter", -1],
+	["field", "dai_bac"], ["wait", 0.3], ["shot", "troops_swap"],
+	["scroll", 400], ["wait", 0.3], ["shot", "troops_scrolled"], ["scroll", 0],
 	["detail", "katana"], ["shot", "troop_detail"], ["close"],
 	["tab", 0], ["shot", "shop"],
 	["fake_chest"], ["wait", 1.3], ["shot", "chest_wait"],
@@ -23,7 +22,7 @@ const STEPS := [
 	["wait", 0.9], ["shot", "chest_card"],
 	["last_card"], ["wait", 0.55], ["shot", "chest_tease"], ["wait", 0.75], ["shot", "chest_legend"],
 	["skip"], ["wait", 0.8], ["shot", "chest_summary"], ["close_chest"],
-	["chest", "gold"], ["wait", 1.0], ["tap"], ["tap"], ["tap"], ["skip"], ["wait", 0.6], ["shot", "chest_real"], ["close_chest"],
+	["chest", "gold"], ["wait", 1.0], ["tap"], ["wait", 2.2], ["shot", "chest_item"], ["tap"], ["wait", 1.6], ["shot", "chest_item2"], ["tap"], ["tap"], ["skip"], ["wait", 0.6], ["shot", "chest_real"], ["close_chest"],
 	["tab", 1], ["shot", "heroes"], ["hero_item", "weapon"], ["wait", 0.3], ["shot", "hero_item"], ["close"], ["hero_item", "bag"], ["wait", 0.3], ["shot", "hero_compare"], ["close"],
 	["tab", 2], ["popup", "login"], ["shot", "login"], ["close"],
 	["popup", "quests"], ["shot", "quests"], ["close"],
@@ -62,7 +61,8 @@ func _ready() -> void:
 	PlayerData.team = ["kiem", "cung", "giao", "katana"]
 	PlayerData.workshop = {"meat_regen": 2, "start_meat": 1}
 	PlayerData.patrol_last_claim = PlayerData.now() - 3 * 3600
-	PlayerData.forge_stones = 180
+	for slot in PlayerData.blueprints:
+		PlayerData.blueprints[slot] = 180
 	PlayerData.login_claimed = 3
 	PlayerData.login_day = PlayerData.today() - 1
 	PlayerData.track("win", 2)
@@ -94,25 +94,13 @@ func _process(delta: float) -> void:
 			_home.select_tab(step[1], false)
 		"shot":
 			get_viewport().get_texture().get_image().save_png("%s/menu_%s.png" % [_dir, step[1]])
-		"swap":
-			troops_page._swap_id = step[1]
-			troops_page.refresh()
-			_wait = 0.25
+		"field":
+			# Picks another version of a cat (it swaps in for that cat's fighter).
+			troops_page._join_team(step[1])
 		"scroll":
-			troops_page._scroll.scroll_vertical = step[1]
-		"drag":
-			troops_page._press_id = step[1]
-			troops_page._press_slot = -1
-			troops_page._start_drag()
-			troops_page._move_ghost(troops_page._slots[step[2]].get_global_rect().get_center() + Vector2(20, 10))
-		"drop":
-			troops_page._drop(troops_page._slots[step[1]].get_global_rect().get_center())
-		"unswap":
-			troops_page._swap_id = ""
-			troops_page.refresh()
-		"filter":
-			troops_page._filter = step[1]
-			troops_page.refresh()
+			var roster: ScrollContainer = troops_page.get("_roster_scroll")
+			if roster != null:
+				roster.scroll_vertical = step[1]
 		"detail":
 			troops_page._open_detail(step[1])
 		"hero_item":

@@ -14,7 +14,7 @@
 		"actual-x10-summary-450x800.png",
 		"actual-x10-summary-scrolled-450x800.png"
 	],
-	"checks": 199,
+	"checks": 195,
 	"failures": [],
 	"layouts": [
 		{
@@ -133,7 +133,7 @@
 						24.0,
 						1267.0,
 						664.0,
-						857.0
+						662.0
 					]
 				}
 			],
@@ -258,7 +258,7 @@
 						24.0,
 						1267.0,
 						664.0,
-						857.0
+						662.0
 					]
 				}
 			],
@@ -269,22 +269,20 @@
 		}
 	],
 	"persist": false,
-	"profile": "C:/Users/dangp/GodotProjects/first-project/output/gold-chest-batch-profile/Roaming/Godot/app_userdata/Gear Defenders",
+	"profile": "C:/Users/dangp/AppData/Roaming/Godot/app_userdata/Gear Defenders",
 	"purchases": [
 		{
-			"blueprints": 6,
+			"blueprints": 19,
 			"cost": 120,
 			"count": 1,
 			"items": 6,
-			"stones": 86,
 			"title": "Rương Vàng"
 		},
 		{
-			"blueprints": 60,
+			"blueprints": 209,
 			"cost": 1200,
 			"count": 10,
 			"items": 60,
-			"stones": 816,
 			"title": "Rương Vàng ×10"
 		}
 	],

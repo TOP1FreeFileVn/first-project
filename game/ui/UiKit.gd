@@ -3,8 +3,8 @@ extends RefCounted
 # Shared UI building blocks: theme, buttons, labels, ribbons, panels, currency rows and a
 # modal popup. Used by the battle HUD and every menu page so the whole game looks the same.
 # The game skin (game/ui/Ui.gd: SVG skin + Theme) is on for every page; the older "cozy"
-# (Cozy UI Pack) and "swords" (Tiny Swords UI) branches stay below is_game() checks until
-# every page is rebuilt on Ui.gd directly.
+# (Cozy UI Pack) branches stay below is_game() checks until every page is rebuilt on Ui.gd
+# directly. The Tiny Swords art is gone; where a branch needed it, it uses the skin.
 
 const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
 const HeroCat = preload("res://game/core/HeroCat.gd")
@@ -20,9 +20,6 @@ const GOLD_TEXT := Color("ffd35c")
 const DARK := Color(0.235, 0.3, 0.45, 0.96)
 ## The skin's one outline colour.
 const LINE := Color("583f21")
-const UI := "UI Elements/UI Elements/"
-const MEAT := "Terrain/Resources/Meat/Meat Resource/Meat Resource.png"
-const COIN := UI + "Icons/Icon_03.png"
 
 enum Ribbon { BLUE = 0, RED = 2, YELLOW = 4, PURPLE = 6, GREY = 8 }
 
@@ -227,7 +224,7 @@ static func close_button(on_pressed: Callable) -> Button:
 	if is_cozy():
 		return icon_button(SpriteLib.cozy(COZY_CLOSE), 44, on_pressed)
 	var close := button("", Vector2(48, 48), on_pressed, true)
-	close.icon = SpriteLib.texture(UI + "Icons/Icon_09.png")
+	close.icon = Ui.icon_tex("close", 48)
 	close.expand_icon = true
 	return close
 
@@ -291,51 +288,25 @@ static func make_theme() -> Theme:
 	return theme
 
 
-## Tiny Swords button art by file name; in the Cozy skin the same names map to the
-## wooden ("Blue") or red plank, darker when "Pressed".
+## Legacy button art by name: the Cozy wooden ("Blue") or red plank, darker when "Pressed".
 static func button_style(file: String) -> StyleBoxTexture:
-	if is_cozy():
-		var cozy := cozy_button_style(file.contains("Red"), false, false)
-		if file.contains("Pressed"):
-			cozy.modulate_color = Color(0.85, 0.85, 0.85)
-		return cozy
-	var style := StyleBoxTexture.new()
-	style.texture = SpriteLib.texture(UI + "Buttons/" + file)
-	style.set_texture_margin_all(20)
-	style.content_margin_left = 14
-	style.content_margin_right = 14
-	style.content_margin_top = 6
-	style.content_margin_bottom = 10
-	return style
+	var cozy := cozy_button_style(file.contains("Red"), false, false)
+	if file.contains("Pressed"):
+		cozy.modulate_color = Color(0.85, 0.85, 0.85)
+	return cozy
 
 
 ## Popup / result panel. Cozy: a card whose wooden header band holds the title row.
 static func paper_style() -> StyleBoxTexture:
 	if is_game():
 		return skin_box("Sheet")
-	if is_cozy():
-		return cozy_style(COZY_POPUP, 0.6, [26, 56, 26, 30], [26, 6, 26, 30])
-	var style := StyleBoxTexture.new()
-	style.texture = SpriteLib.stitched(UI + "Papers/RegularPaper.png", [0, 128, 256])
-	style.set_texture_margin_all(32)
-	style.set_content_margin_all(30)
-	return style
+	return cozy_style(COZY_POPUP, 0.6, [26, 56, 26, 30], [26, 6, 26, 30])
 
 
 static func ribbon_style(color := Ribbon.BLUE) -> StyleBoxTexture:
 	if is_game():
 		return skin_box("TitlePlaque")
-	if is_cozy():
-		return cozy_style(COZY_PLANK, 0.1, [14, 8, 14, 10], [26, 2, 26, 8])
-	var style := StyleBoxTexture.new()
-	style.texture = SpriteLib.stitched(UI + "Ribbons/SmallRibbons.png", [color * 64])
-	style.texture_margin_left = 30
-	style.texture_margin_right = 30
-	style.content_margin_left = 32
-	style.content_margin_right = 32
-	style.content_margin_top = 2
-	style.content_margin_bottom = 6
-	return style
+	return cozy_style(COZY_PLANK, 0.1, [14, 8, 14, 10], [26, 2, 26, 8])
 
 
 static func dark_style(radius := 10, border := Color("5d9d8d")) -> StyleBoxFlat:
@@ -516,9 +487,9 @@ static func price(currency: String, amount: int, font_size := 18, on_paper := fa
 		"gems":
 			row.add_child(drawn(DrawnIcon.Kind.GEM, icon_size))
 		"meat":
-			row.add_child(icon(coin_texture() if is_game() else SpriteLib.texture(MEAT), icon_size))
+			row.add_child(icon(coin_texture(), icon_size))
 		_:
-			row.add_child(icon(coin_texture() if is_game() else SpriteLib.texture(COIN), icon_size))
+			row.add_child(icon(coin_texture(), icon_size))
 	row.add_child(ink(format_number(amount), font_size) if on_paper else label(format_number(amount), font_size))
 	return row
 
@@ -702,14 +673,6 @@ static func close_popup(box: Control) -> void:
 
 # --- Forge Stones, avatars, dark popups --------------------------------------------------
 
-## Forge Stone (đá rèn), the hero-cat equipment upgrade resource: a grey-blue cut stone.
-const FORGE_STONE_TINT := Color("8fa3b8")
-
-static func forge_stone_icon(icon_size: float) -> Control:
-	var stone := drawn(DrawnIcon.Kind.SHARD, icon_size)
-	stone.tint = FORGE_STONE_TINT
-	return stone
-
 ## Blueprint (bản vẽ) for an equipment slot: a blueprint sheet with that slot's item drawn
 ## on it (game/ui/art/icon_blueprint_<slot>, from docs/design/2026-10-24/blueprint-icons).
 ## An empty slot (random-slot rewards) shows the weapon sheet.
@@ -738,9 +701,9 @@ static func avatar(avatar_size: float, value := "", frame_id := "") -> Control:
 	holder.custom_minimum_size = Vector2(avatar_size, avatar_size)
 	holder.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	var inner := avatar_size * 0.8
-	var picture: Control
-	picture = icon(SpriteLib.texture(Meta.avatar_path(clampi(int(value), 1, Meta.AVATAR_COUNT))), inner)
-	picture.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	var picture := Ui.image(Meta.avatar_image(int(value)), Vector2(inner, inner))
+	picture.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	picture.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
 	picture.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	holder.add_child(picture)
 	return holder
@@ -834,11 +797,6 @@ static func reward_row(reward: Dictionary, font_size := 18) -> HBoxContainer:
 			p.add_child(blueprint_icon(slot, font_size * 1.6))
 			p.add_child(label("%d" % plans[slot], font_size))
 			row.add_child(p)
-	if int(reward.get("stones", 0)) > 0:
-		var stones := hbox(2)
-		stones.add_child(forge_stone_icon(font_size * 1.5))
-		stones.add_child(label("%d" % reward["stones"], font_size))
-		row.add_child(stones)
 	# {"item": rarity} (a promised random item) or {"items": [ids]} (what was granted).
 	var items: Array = reward.get("items", [])
 	if reward.has("item"):

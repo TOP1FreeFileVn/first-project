@@ -4,11 +4,11 @@
 		"shop-450x800.png",
 		"insufficient-funds-450x800.png",
 		"cooldown-and-next-pity-450x800.png",
-		"exchange-scrolled-450x800.png",
+		"gem-packs-scrolled-450x800.png",
 		"rates-sheet-450x800.png",
 		"actual-gold-opening-450x800.png"
 	],
-	"checks": 106,
+	"checks": 127,
 	"failures": [],
 	"layouts": [
 		{
@@ -17,7 +17,7 @@
 					"node": "FeaturedChest",
 					"rect": [
 						24.0,
-						226.0,
+						308.0,
 						664.0,
 						348.0
 					]
@@ -26,7 +26,7 @@
 					"node": "SupplyChestGrid",
 					"rect": [
 						24.0,
-						640.0,
+						754.0,
 						664.0,
 						367.0
 					]
@@ -35,7 +35,7 @@
 					"node": "SupplyChest_wood",
 					"rect": [
 						24.0,
-						640.0,
+						754.0,
 						324.0,
 						367.0
 					]
@@ -44,7 +44,7 @@
 					"node": "SupplyChest_silver",
 					"rect": [
 						364.0,
-						640.0,
+						754.0,
 						324.0,
 						367.0
 					]
@@ -53,7 +53,7 @@
 					"node": "GoldOpen",
 					"rect": [
 						304.0,
-						462.0,
+						544.0,
 						177.0,
 						100.0
 					]
@@ -62,7 +62,7 @@
 					"node": "GoldOpenTen",
 					"rect": [
 						491.0,
-						462.0,
+						544.0,
 						177.0,
 						100.0
 					]
@@ -71,7 +71,7 @@
 					"node": "WoodOpen",
 					"rect": [
 						40.0,
-						902.0,
+						1016.0,
 						292.0,
 						88.0
 					]
@@ -80,7 +80,7 @@
 					"node": "SilverOpen",
 					"rect": [
 						380.0,
-						905.0,
+						1019.0,
 						292.0,
 						88.0
 					]
@@ -89,7 +89,7 @@
 					"node": "ShopRates",
 					"rect": [
 						562.0,
-						238.0,
+						320.0,
 						106.0,
 						64.0
 					]
@@ -98,7 +98,7 @@
 					"node": "GoldRewardBubble",
 					"rect": [
 						304.0,
-						312.0,
+						394.0,
 						364.0,
 						141.0
 					]
@@ -107,18 +107,63 @@
 					"node": "GoldGuarantee",
 					"rect": [
 						324.0,
-						406.0,
+						488.0,
 						324.0,
 						34.0
 					]
 				},
 				{
-					"node": "GemExchange",
+					"node": "GemPackGrid",
 					"rect": [
 						24.0,
-						1023.0,
+						1267.0,
 						664.0,
-						168.0
+						662.0
+					]
+				},
+				{
+					"node": "GoldExchangeGrid",
+					"rect": [
+						24.0,
+						2027.0,
+						664.0,
+						702.0
+					]
+				},
+				{
+					"node": "ShopSection_premium",
+					"rect": [
+						24.0,
+						226.0,
+						664.0,
+						66.0
+					]
+				},
+				{
+					"node": "ShopSection_supply",
+					"rect": [
+						24.0,
+						672.0,
+						664.0,
+						66.0
+					]
+				},
+				{
+					"node": "ShopSection_gems",
+					"rect": [
+						24.0,
+						1137.0,
+						664.0,
+						66.0
+					]
+				},
+				{
+					"node": "ShopSection_gold",
+					"rect": [
+						24.0,
+						1945.0,
+						664.0,
+						66.0
 					]
 				}
 			],
@@ -133,7 +178,7 @@
 					"node": "FeaturedChest",
 					"rect": [
 						24.0,
-						226.0,
+						308.0,
 						664.0,
 						348.0
 					]
@@ -142,7 +187,7 @@
 					"node": "SupplyChestGrid",
 					"rect": [
 						24.0,
-						640.0,
+						754.0,
 						664.0,
 						367.0
 					]
@@ -151,7 +196,7 @@
 					"node": "SupplyChest_wood",
 					"rect": [
 						24.0,
-						640.0,
+						754.0,
 						324.0,
 						367.0
 					]
@@ -160,7 +205,7 @@
 					"node": "SupplyChest_silver",
 					"rect": [
 						364.0,
-						640.0,
+						754.0,
 						324.0,
 						367.0
 					]
@@ -169,7 +214,7 @@
 					"node": "GoldOpen",
 					"rect": [
 						304.0,
-						462.0,
+						544.0,
 						177.0,
 						100.0
 					]
@@ -178,7 +223,7 @@
 					"node": "GoldOpenTen",
 					"rect": [
 						491.0,
-						462.0,
+						544.0,
 						177.0,
 						100.0
 					]
@@ -187,7 +232,7 @@
 					"node": "WoodOpen",
 					"rect": [
 						40.0,
-						902.0,
+						1016.0,
 						292.0,
 						88.0
 					]
@@ -196,7 +241,7 @@
 					"node": "SilverOpen",
 					"rect": [
 						380.0,
-						905.0,
+						1019.0,
 						292.0,
 						88.0
 					]
@@ -205,7 +250,7 @@
 					"node": "ShopRates",
 					"rect": [
 						562.0,
-						238.0,
+						320.0,
 						106.0,
 						64.0
 					]
@@ -214,7 +259,7 @@
 					"node": "GoldRewardBubble",
 					"rect": [
 						304.0,
-						312.0,
+						394.0,
 						364.0,
 						141.0
 					]
@@ -223,18 +268,63 @@
 					"node": "GoldGuarantee",
 					"rect": [
 						324.0,
-						406.0,
+						488.0,
 						324.0,
 						34.0
 					]
 				},
 				{
-					"node": "GemExchange",
+					"node": "GemPackGrid",
 					"rect": [
 						24.0,
-						1023.0,
+						1267.0,
 						664.0,
-						168.0
+						662.0
+					]
+				},
+				{
+					"node": "GoldExchangeGrid",
+					"rect": [
+						24.0,
+						2027.0,
+						664.0,
+						702.0
+					]
+				},
+				{
+					"node": "ShopSection_premium",
+					"rect": [
+						24.0,
+						226.0,
+						664.0,
+						66.0
+					]
+				},
+				{
+					"node": "ShopSection_supply",
+					"rect": [
+						24.0,
+						672.0,
+						664.0,
+						66.0
+					]
+				},
+				{
+					"node": "ShopSection_gems",
+					"rect": [
+						24.0,
+						1137.0,
+						664.0,
+						66.0
+					]
+				},
+				{
+					"node": "ShopSection_gold",
+					"rect": [
+						24.0,
+						1945.0,
+						664.0,
+						66.0
 					]
 				}
 			],

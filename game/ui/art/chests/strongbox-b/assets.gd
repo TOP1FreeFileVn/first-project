@@ -81,50 +81,50 @@ const DATA := {
       "layer_notes": "Fixed body and latch; moving lid contains repaired strap/seam only where source lock occluded them. All four textures share texture_rect. Original generated contour/keyhole preserved; no ink dilation."
     },
     "silver": {
-      "source": "docs/design/2026-10-23/chest-concept-options/png/B2.png",
-      "source_sha256": "8c20a52aa4415c20bb7733943394b8f37fab5a3242808b0511484ba9439f1171",
+      "source": "docs/design/2026-10-24/silver-chest-upgrade/silver-source-crop.png",
+      "source_sha256": "15c15454b2ed3446e4c8fe810a42e6d09fb600799cfebefc8b84765a5aab37ac",
       "source_frame": [
-        425,
-        299
+        1168,
+        871
       ],
       "source_alpha_bbox": [
         8,
         8,
-        417,
-        291
+        1160,
+        863
       ],
       "source_seam": [
-        212.0,
-        114
+        583.5,
+        340
       ],
       "author_width": 208,
-      "scale_from_source": 0.508557457212714,
+      "scale_from_source": 0.18055555555555555,
       "texture_rect": [
-        -117.9853,
-        -68.1467,
-        236.4792,
-        172.401
+        -108.9653,
+        -65.0,
+        218.1111,
+        164.4861
       ],
-      "main_width": 6.866,
+      "main_width": 4.694,
       "main_measurement": {
         "method": "Opaque brown runs on straight source wall/bottom, away from rounded joins; source-R<120/G<100/A>240. Fitted by uniform208/sourceAlphaWidth.",
         "source_samples": {
           "left_wall_rows": [
-            150,
-            160,
-            180
+            404,
+            504,
+            624
           ],
           "left_wall_widths": [
-            14,
-            14,
-            14
+            26,
+            26,
+            26
           ],
-          "bottom_column": 140,
-          "bottom_width": 13
+          "bottom_column": 356,
+          "bottom_width": 26
         },
         "fitted_range": [
-          6.611,
-          7.12
+          4.694,
+          4.694
         ]
       },
       "cavity_rect": [
@@ -133,7 +133,7 @@ const DATA := {
         192,
         15
       ],
-      "latch_half_width": 27.716,
+      "latch_half_width": 27.535,
       "textures": {
         "closed": "game/ui/art/chests/strongbox-b/silver/closed.png",
         "body": "game/ui/art/chests/strongbox-b/silver/body.png",
@@ -141,11 +141,11 @@ const DATA := {
         "latch": "game/ui/art/chests/strongbox-b/silver/latch.png"
       },
       "palette": {
-        "main": "#583f21",
-        "body": "#9bcde0",
-        "metal": "#e7e8dc",
-        "metal_secondary": "#96aaa3",
-        "body_secondary": "#6a98ac"
+        "main": "#54391b",
+        "body": "#98d3ef",
+        "metal": "#e2e6e1",
+        "metal_highlight": "#fcfbf3",
+        "secondary": "#6995aa"
       },
       "layer_order": [
         "cavity",
@@ -153,7 +153,24 @@ const DATA := {
         "lid",
         "latch"
       ],
-      "layer_notes": "Fixed body and latch; moving lid contains repaired strap/seam only where source lock occluded them. All four textures share texture_rect. Original generated contour/keyhole preserved; no ink dilation."
+      "layer_notes": "Fixed body and latch; moving lid contains repaired strap/seam only where source lock occluded them. All four textures share texture_rect. Original generated contour/keyhole preserved; no ink dilation.",
+      "raw_source": "output/imagegen/silver-chest-2026-10-24/silver-raw.png",
+      "raw_source_sha256": "c2cd46904f2abf815e37cd6648a99ca316e2b90d0e4006df8efdc551f620505d",
+      "raw_crop": [
+        42,
+        196,
+        1210,
+        1067
+      ],
+      "palette_policy": "Original generated RGBA colors and alpha retained; no material quantization or edge recoloring.",
+      "normalization_alpha_threshold": 8,
+      "source_alpha_bbox_all": [
+        4,
+        0,
+        1162,
+        869
+      ],
+      "art_policy": "User requested a distinct silver chest with an arched lid, broad metal frame and four fasteners. Generated RGB and alpha are preserved; palette entries are representative samples, not quantized fills."
     },
     "gold": {
       "source": "docs/design/2026-10-23/chest-b-production/gold-source-crop.png",

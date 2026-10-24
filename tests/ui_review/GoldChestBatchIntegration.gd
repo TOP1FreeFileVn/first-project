@@ -119,7 +119,9 @@ func _check_layout(dimensions: Vector2i) -> void:
 		if card == null:
 			continue
 		var style := card.get_theme_stylebox("panel") as StyleBoxTexture
-		_check(style != null and style.texture != null and style.texture.resource_path == "res://game/ui/skin/menu/shop_teal_supply.svg", kind + " keeps the existing teal supply card art")
+		# Silver has its own cool backdrop to tell the tiers apart; wood keeps the teal paper.
+		var skin := "shop_silver_supply.svg" if kind == "silver" else "shop_teal_supply.svg"
+		_check(style != null and style.texture != null and style.texture.resource_path == "res://game/ui/skin/menu/" + skin, kind + " keeps its supply card art (" + skin + ")")
 		var arts := _chest_icons(card)
 		_check(arts.size() == 1 and arts[0].size == Vector2(160, 160), kind + " keeps the existing compact chest artwork")
 		var rewards := _item(kind.capitalize() + "Reward") as Label
@@ -171,7 +173,6 @@ func _purchase_pointer(count: int) -> void:
 	var before_gems: int = PlayerData.gems
 	var before_gold: int = PlayerData.gold
 	var before_items: int = PlayerData.hero_cat["bag"].size()
-	var before_stones: int = PlayerData.forge_stones
 	var before_plans := _blueprints_total()
 	var before_pity: int = PlayerData.gold_chest_pity
 	var action := _item("GoldOpenTen" if count == 10 else "GoldOpen") as Button
@@ -197,11 +198,10 @@ func _purchase_pointer(count: int) -> void:
 	var title: String = str(Economy.CHESTS["gold"]["name"]) + (" ×10" if count == 10 else "")
 	_check(opening._chest_name == title and _has_label(opening._title, title), "x%d opening title identifies the purchased count" % count)
 	_check(opening._stage == "wait", "x%d uses the normal wait-for-tap opening stage" % count)
-	_check(PlayerData.forge_stones - before_stones == int(loot.get("stones", 0)), "x%d grants its combined stones once" % count)
-	var stones: Array = Economy.CHESTS["gold"]["stones"]
-	_check(int(loot.get("stones", 0)) >= int(stones[0]) * count and int(loot.get("stones", 0)) <= int(stones[1]) * count, "x%d combined stones stay inside per-chest bounds" % count)
-	_check(_blueprints_total() - before_plans == int(HeroCat.CHEST_BLUEPRINTS["gold"]) * count, "x%d grants the unchanged per-chest blueprint total" % count)
-	_check(_loot_blueprints_total(loot) == int(HeroCat.CHEST_BLUEPRINTS["gold"]) * count, "x%d opening carries the complete combined blueprint total" % count)
+	var plans: Array = Economy.CHESTS["gold"]["blueprints"]
+	var loot_plans := _loot_blueprints_total(loot)
+	_check(_blueprints_total() - before_plans == loot_plans, "x%d grants its combined blueprints once" % count)
+	_check(loot_plans >= int(plans[0]) * count and loot_plans <= int(plans[1]) * count, "x%d combined blueprints stay inside per-chest bounds" % count)
 	await _snap("actual-x%d-opening" % count, SIZES[1])
 	await _tap_at(opening.get_global_rect().position + ChestOpening.CHEST_AT)
 	if count == 10:
@@ -213,7 +213,12 @@ func _purchase_pointer(count: int) -> void:
 	await get_tree().create_timer(0.95).timeout
 	_check(opening._stage == "summary", "x%d reaches the complete reward summary" % count)
 	var grid := opening.find_child("ChestRewardGrid", true, false) as GridContainer
-	_check(grid != null and grid.get_child_count() == expected_items, "x%d summary retains every granted item" % count)
+	# Identical items share one tile with a count; the counts still add up to every item.
+	var shown := 0
+	if grid != null:
+		for tile in grid.get_children():
+			shown += int(tile.get_meta("count", 1))
+	_check(grid != null and shown == expected_items, "x%d summary retains every granted item" % count)
 	var buttons := opening.find_child("ChestSummaryButtons", true, false) as Control
 	_check(buttons != null and opening.get_global_rect().encloses(buttons.get_global_rect()), "x%d summary keeps actions inside the visible screen" % count)
 	_check(PlayerData.gems == before_gems - expected_cost and PlayerData.hero_cat["bag"].size() == before_items + expected_items, "Skipping x%d does not charge or grant again" % count)
@@ -226,7 +231,7 @@ func _purchase_pointer(count: int) -> void:
 			_check(scroll.scroll_vertical > 0, "All sixty equipment rewards remain reachable by scrolling the summary")
 			_check(buttons != null and opening.get_global_rect().encloses(buttons.get_global_rect()), "x10 summary actions remain visible after scrolling all rewards")
 			await _snap("actual-x10-summary-scrolled", SIZES[1])
-	_purchases.append({"count": count, "cost": expected_cost, "items": expected_items, "stones": loot.get("stones", 0), "blueprints": _blueprints_total() - before_plans, "title": title})
+	_purchases.append({"count": count, "cost": expected_cost, "items": expected_items, "blueprints": _blueprints_total() - before_plans, "title": title})
 	# A repeated request while the opening owns the screen must never buy twice.
 	var paid_balance: int = PlayerData.gems
 	var granted_items: int = PlayerData.hero_cat["bag"].size()

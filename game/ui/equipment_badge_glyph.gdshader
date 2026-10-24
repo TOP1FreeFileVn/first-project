@@ -1,7 +1,8 @@
 shader_type canvas_item;
 
-// Reuse the category silhouettes in white while preserving parent UI fades.
-// Their original grey artwork remains unchanged for empty equipment slots.
+// Dedicated category glyphs contain solid white bodies and black accent masks.
+// Tint only the accent, preserving the authored alpha and parent UI fades.
+uniform vec4 accent_color : source_color = vec4(0.46, 0.59, 0.36, 1.0);
 varying vec4 canvas_tint;
 
 void vertex() {
@@ -9,5 +10,7 @@ void vertex() {
 }
 
 void fragment() {
-	COLOR = vec4(vec3(1.0), texture(TEXTURE, UV).a) * canvas_tint;
+	vec4 glyph = texture(TEXTURE, UV);
+	vec3 fill = mix(accent_color.rgb, vec3(1.0), glyph.r);
+	COLOR = vec4(fill, glyph.a) * canvas_tint;
 }

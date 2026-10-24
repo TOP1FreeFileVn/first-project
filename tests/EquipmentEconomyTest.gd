@@ -13,6 +13,12 @@ func _check(ok: bool, what: String) -> void:
 	if not ok:
 		_fails += 1
 
+func _plans(by_slot: Dictionary) -> int:
+	var total := 0
+	for slot in by_slot:
+		total += int(by_slot[slot])
+	return total
+
 func _initialize() -> void:
 	await process_frame
 	var pd = root.get_node("PlayerData")
@@ -24,24 +30,31 @@ func _initialize() -> void:
 		for r in 4:
 			_check(not HeroCat.ids_of(slot, r).is_empty() or r == 3 and slot == "weapon" and false, "item exists %s rarity %d" % [slot, r])
 
-	# Old save with Tướng heroes -> one-time Forge Stone refund; heroes dropped.
+	# Old save with Tướng heroes -> one-time refund, paid as Blueprints; heroes dropped.
 	var old: Dictionary = pd.to_dict()
-	old.erase("forge_stones")
+	old["blueprints"] = {}
 	old["summon"] = {"pity": 12, "free_day": -1, "total": 30}
 	old["heroes"] = {"list": {"iron": {"owned": true, "level": 5, "stars": 2, "shards": 14}}, "leader": "iron"}
 	pd.from_dict(old)
-	var refund: int = pd.forge_stones
-	_check(refund > 0, "old Tướng save refunds stones (%d)" % refund)
+	var refund := _plans(pd.blueprints)
+	_check(refund > 0, "old Tướng save refunds blueprints (%d)" % refund)
 	_check(pd.summon_pity == 0, "old hero summon pity does not carry into equipment pity")
 	_check(not pd.to_dict().has("heroes"), "save no longer writes heroes")
 	pd.from_dict(pd.to_dict())
-	_check(pd.forge_stones == refund, "refund happens once (reload keeps %d)" % pd.forge_stones)
+	_check(_plans(pd.blueprints) == refund, "refund happens once (reload keeps %d)" % _plans(pd.blueprints))
+	# A Forge Stone era save: its stones become Blueprints spread over the slots.
+	var stone_save: Dictionary = pd.to_dict()
+	stone_save["blueprints"] = {}
+	stone_save["forge_stones"] = 100
+	pd.from_dict(stone_save)
+	_check(_plans(pd.blueprints) == 100 / HeroCat.STONES_PER_BLUEPRINT and pd.blueprints["boots"] > 0, "old Forge Stones convert into %d blueprints" % _plans(pd.blueprints))
+	_check(not pd.to_dict().has("forge_stones"), "save no longer writes Forge Stones")
 
-	# Chests: equipment + Forge Stones, no troop cards.
+	# Chests: equipment + Blueprints, no troop cards.
 	pd.gems = 1000
 	pd.gold = 1000
 	var bag_before: int = pd.hero_cat["bag"].size()
-	var stones_before: int = pd.forge_stones
+	var plans_before := _plans(pd.blueprints)
 	var cards_before := 0
 	for id in pd.TROOP_ORDER:
 		cards_before += pd.troops[id]["cards"]
@@ -49,7 +62,10 @@ func _initialize() -> void:
 	_check(chest.get("items", []).size() == 3, "silver chest gives 3 items")
 	_check(pd.hero_cat["bag"].size() == bag_before + 3, "the items are in the bag")
 	_check(chest.get("items", []).any(func(it): return it["rarity"] >= 1), "silver chest has at least one rare")
-	_check(pd.forge_stones == stones_before + chest.get("stones", 0) and chest.get("stones", 0) >= 25, "chest gives %d Forge Stones" % chest.get("stones", 0))
+	var silver_plans := _plans(chest.get("blueprints", {}))
+	var silver_range: Array = load("res://game/core/Economy.gd").CHESTS["silver"]["blueprints"]
+	_check(_plans(pd.blueprints) == plans_before + silver_plans and silver_plans >= silver_range[0] and silver_plans <= silver_range[1], "silver chest gives %d blueprints" % silver_plans)
+	_check(not chest.has("stones"), "chests give no Forge Stones")
 	var cards_after := 0
 	for id in pd.TROOP_ORDER:
 		cards_after += pd.troops[id]["cards"]
@@ -86,18 +102,19 @@ func _initialize() -> void:
 	_check(pd.troops[t]["stars"] == 5 and pd.star_up_cost(t) == -1, "max at 5 stars")
 	_check(pd.level_cap(t) == 50, "5 stars open level 50")
 
-	# Upgrade costs stones, not (much) gold.
+	# Upgrade costs Blueprints of the item's slot only.
 	var weapon: String = HeroCat.equipped_uid(pd.hero_cat, "weapon")
-	pd.forge_stones = 1000
+	pd.blueprints["weapon"] = 1000
 	pd.gold = 1000
 	var lv: int = HeroCat.item(pd.hero_cat, weapon)["level"]
 	var cost: int = HeroCat.upgrade_cost(pd.hero_cat, weapon)
-	var gold_cost: int = HeroCat.upgrade_gold(pd.hero_cat, weapon)
-	_check(pd.hero_cat_upgrade(weapon), "upgrade with stones")
+	_check(cost > 0, "a level costs %d weapon blueprints" % cost)
+	_check(pd.hero_cat_upgrade(weapon), "upgrade with blueprints")
 	_check(HeroCat.item(pd.hero_cat, weapon)["level"] == lv + 1, "level went up")
-	_check(pd.forge_stones == 1000 - cost and pd.gold == 1000 - gold_cost, "spent %d stones + %d gold" % [cost, gold_cost])
-	pd.forge_stones = 0
-	_check(not pd.hero_cat_upgrade(weapon), "no stones, no upgrade")
+	_check(pd.blueprints["weapon"] == 1000 - cost and pd.gold == 1000, "spent %d blueprints and no gold" % cost)
+	pd.blueprints["weapon"] = 0
+	pd.blueprints["helmet"] = 999
+	_check(not pd.hero_cat_upgrade(weapon), "no weapon blueprints, no upgrade (other slots do not count)")
 
 	# Fuse: 3 copies -> next rarity, keeps the worn slot.
 	pd._reset()
@@ -114,18 +131,21 @@ func _initialize() -> void:
 
 	# Salvage: unworn only.
 	var spare: Array = HeroCat.spare(pd.hero_cat)
-	var s0: int = pd.forge_stones
+	var spare_slot: String = HeroCat.def(pd.hero_cat, spare[0])["slot"]
+	var s0: int = pd.blueprints[spare_slot]
 	var value: int = HeroCat.salvage_value(pd.hero_cat, spare[0])
-	_check(pd.hero_cat_salvage(spare[0]) == value and pd.forge_stones == s0 + value, "salvage gives %d stones" % value)
+	_check(pd.hero_cat_salvage(spare[0]) == value and pd.blueprints[spare_slot] == s0 + value, "salvage gives %d %s blueprints" % [value, spare_slot])
 	_check(pd.hero_cat_salvage(HeroCat.equipped_uid(pd.hero_cat, "weapon")) == 0, "worn item cannot be salvaged")
 
-	# Battle rewards give stones; gear stats reach the battle.
+	# Battle rewards give Blueprints; gear stats reach the battle.
 	pd._reset()
 	pd.current_level = 2
+	var start_plans := _plans(pd.blueprints)
 	var won: Dictionary = pd.grant_battle_rewards(true, 3, 5)
-	_check(won.get("stones", 0) > 0 and pd.forge_stones == won["stones"], "win gives %d stones" % won.get("stones", 0))
+	var won_plans := _plans(won.get("blueprints", {}))
+	_check(won_plans > 0 and _plans(pd.blueprints) == start_plans + won_plans, "win gives %d blueprints" % won_plans)
 	var lost: Dictionary = pd.grant_battle_rewards(false, 0, 2)
-	_check(lost.get("stones", 0) == HeroCat.LOSS_STONES, "loss with waves gives %d stones" % HeroCat.LOSS_STONES)
+	_check(_plans(lost.get("blueprints", {})) == HeroCat.LOSS_BLUEPRINTS, "loss with waves gives %d blueprints" % HeroCat.LOSS_BLUEPRINTS)
 	_check(pd.core_hp_multiplier() > pd.castle_stats()["hp"], "hero-cat HP raises castle HP")
 	_check(pd.wall_block() > 0.0, "hero-cat armour blocks wall damage (%.3f)" % pd.wall_block())
 	var pairs: Array = HeroCat.def(pd.hero_cat, HeroCat.equipped_uid(pd.hero_cat, "weapon"))["pairs"]
@@ -135,25 +155,18 @@ func _initialize() -> void:
 		other += 1
 	_check(is_equal_approx(pd.class_damage_multiplier(other), 1.0), "weapon does not buff other classes")
 
-	# Level cap by rarity and Blueprint breakthroughs.
+	# Level cap by rarity; only fusing raises it.
 	pd._reset()
 	var w: String = HeroCat.equipped_uid(pd.hero_cat, "weapon")    # common: cap 10
 	_check(HeroCat.level_cap(pd.hero_cat, w) == 10, "a common item caps at level 10")
-	pd.forge_stones = 100000
-	pd.gold = 100000
+	pd.blueprints["weapon"] = 100000
 	for i in 9:
 		pd.hero_cat_upgrade(w)
-	_check(HeroCat.item(pd.hero_cat, w)["level"] == 10 and not pd.hero_cat_upgrade(w), "common stops at 10")
+	_check(HeroCat.item(pd.hero_cat, w)["level"] == 10 and not pd.hero_cat_upgrade(w), "common stops at 10 even with blueprints left")
+	_check(pd.blueprints["weapon"] == 100000 - HeroCat.blueprints_spent(0, 10), "levels 1→10 cost %d blueprints" % HeroCat.blueprints_spent(0, 10))
 	var rare_uid: String = HeroCat.add_item(pd.hero_cat, "cung_san")       # rare: cap 20
 	pd.hero_cat["bag"][rare_uid]["level"] = 10
-	pd.blueprints["weapon"] = 0
-	_check(HeroCat.breakthrough_cost(pd.hero_cat, rare_uid) == 5, "level 10 → 11 needs 5 weapon blueprints")
-	_check(not pd.hero_cat_upgrade(rare_uid), "no blueprints, no breakthrough")
-	pd.blueprints["helmet"] = 99
-	_check(not pd.hero_cat_upgrade(rare_uid), "other-slot blueprints do not count")
-	pd.blueprints["weapon"] = 5
-	_check(pd.hero_cat_upgrade(rare_uid) and pd.blueprints["weapon"] == 0, "breakthrough spends 5 weapon blueprints")
-	_check(HeroCat.breakthrough_cost(pd.hero_cat, rare_uid) == 0, "ordinary levels need no blueprints")
+	_check(pd.hero_cat_upgrade(rare_uid), "a rare item levels past 10 with plain blueprints")
 	pd.hero_cat["bag"][rare_uid]["level"] = 20
 	_check(HeroCat.upgrade_cost(pd.hero_cat, rare_uid) == -1, "a rare item caps at 20")
 	# Fusing raises the cap; a fused item keeps its level within the new cap.
@@ -164,33 +177,29 @@ func _initialize() -> void:
 		pd.hero_cat["bag"][uid]["level"] = 10
 	var fused2: String = pd.hero_cat_fuse("giay_co")
 	_check(HeroCat.level_cap(pd.hero_cat, fused2) == 20 and HeroCat.item(pd.hero_cat, fused2)["level"] == 10, "fused rare keeps level 10 with cap 20")
-	# Sources: salvage, boss levels, chests, milestones.
+	# Sources: salvage, boss levels, chests.
 	var spare_epic: String = HeroCat.add_item(pd.hero_cat, "giap_bac")
 	var before_bp: int = pd.blueprints["armor"]
 	pd.hero_cat_salvage(spare_epic)
-	_check(pd.blueprints["armor"] == before_bp + HeroCat.SALVAGE_BLUEPRINTS[2], "salvaging an epic armour gives armour blueprints")
+	_check(pd.blueprints["armor"] == before_bp + HeroCat.SALVAGE_BLUEPRINTS[2], "salvaging a level-1 epic armour gives %d armour blueprints" % HeroCat.SALVAGE_BLUEPRINTS[2])
 	pd.current_level = 4
 	var boss: Dictionary = pd.grant_battle_rewards(true, 3, 5)
-	var boss_total := 0
-	for slot in boss.get("blueprints", {}):
-		boss_total += boss["blueprints"][slot]
-	_check(boss_total == HeroCat.BOSS_BLUEPRINTS * 2, "first clear of boss level 5 gives %d blueprints" % boss_total)
-	pd.current_level = 2
-	_check(not pd.grant_battle_rewards(true, 3, 5).has("blueprints"), "normal levels give no blueprints")
+	var boss_total := _plans(boss.get("blueprints", {}))
+	var boss_base := floori(HeroCat.WIN_BLUEPRINTS + HeroCat.WIN_BLUEPRINTS_PER_LEVEL * 4)
+	_check(boss_total == (boss_base + HeroCat.BOSS_BLUEPRINTS) * 2, "first clear of boss level 5 gives %d blueprints" % boss_total)
 	pd.gems = 1000
 	var gchest: Dictionary = pd.open_chest("gold")
-	var chest_total := 0
-	for slot in gchest.get("blueprints", {}):
-		chest_total += gchest["blueprints"][slot]
-	_check(chest_total == HeroCat.CHEST_BLUEPRINTS["gold"], "gold chest gives %d blueprints" % chest_total)
+	var chest_total := _plans(gchest.get("blueprints", {}))
+	var gold_range: Array = load("res://game/core/Economy.gd").CHESTS["gold"]["blueprints"]
+	_check(chest_total >= gold_range[0] and chest_total <= gold_range[1], "gold chest gives %d blueprints" % chest_total)
 	var saved: Dictionary = pd.to_dict()
 	pd._reset()
 	pd.from_dict(saved)
 	_check(pd.blueprints["armor"] == saved["blueprints"]["armor"], "blueprints survive a save")
 
-	# Meta rewards: stones and items.
-	var got: Dictionary = pd.grant({"stones": 25, "item": 2})
-	_check(got["stones"] == 25 and got["items"].size() == 1, "grant() gives stones and an item")
+	# Meta rewards: blueprints and items.
+	var got: Dictionary = pd.grant({"blueprints": 12, "item": 2})
+	_check(_plans(got.get("blueprints", {})) == 12 and got["items"].size() == 1, "grant() gives blueprints and an item")
 
 	print("EQUIP_SUMMARY fails=%d" % _fails)
 	quit(1 if _fails > 0 else 0)

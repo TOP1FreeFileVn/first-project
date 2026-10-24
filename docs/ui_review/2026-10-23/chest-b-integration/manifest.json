@@ -80,6 +80,7 @@
 		{
 			"kind": "silver",
 			"metadata": {
+				"art_policy": "User requested a distinct silver chest with an arched lid, broad metal frame and four fasteners. Generated RGB and alpha are preserved; palette entries are representative samples, not quantized fills.",
 				"author_width": 208,
 				"cavity_rect": [
 					-96,
@@ -87,7 +88,7 @@
 					192,
 					15
 				],
-				"latch_half_width": 27.716,
+				"latch_half_width": 27.535,
 				"layer_notes": "Fixed body and latch; moving lid contains repaired strap/seam only where source lock occluded them. All four textures share texture_rect. Original generated contour/keyhole preserved; no ink dilation.",
 				"layer_order": [
 					"cavity",
@@ -97,55 +98,71 @@
 				],
 				"main_measurement": {
 					"fitted_range": [
-						6.611,
-						7.12
+						4.694,
+						4.694
 					],
 					"method": "Opaque brown runs on straight source wall/bottom, away from rounded joins; source-R<120/G<100/A>240. Fitted by uniform208/sourceAlphaWidth.",
 					"source_samples": {
-						"bottom_column": 140,
-						"bottom_width": 13,
+						"bottom_column": 356,
+						"bottom_width": 26,
 						"left_wall_rows": [
-							150,
-							160,
-							180
+							404,
+							504,
+							624
 						],
 						"left_wall_widths": [
-							14,
-							14,
-							14
+							26,
+							26,
+							26
 						]
 					}
 				},
-				"main_width": 6.866,
+				"main_width": 4.694,
+				"normalization_alpha_threshold": 8,
 				"palette": {
-					"body": "#9bcde0",
-					"body_secondary": "#6a98ac",
-					"main": "#583f21",
-					"metal": "#e7e8dc",
-					"metal_secondary": "#96aaa3"
+					"body": "#98d3ef",
+					"main": "#54391b",
+					"metal": "#e2e6e1",
+					"metal_highlight": "#fcfbf3",
+					"secondary": "#6995aa"
 				},
-				"scale_from_source": 0.508557457212714,
-				"source": "docs/design/2026-10-23/chest-concept-options/png/B2.png",
+				"palette_policy": "Original generated RGBA colors and alpha retained; no material quantization or edge recoloring.",
+				"raw_crop": [
+					42,
+					196,
+					1210,
+					1067
+				],
+				"raw_source": "output/imagegen/silver-chest-2026-10-24/silver-raw.png",
+				"raw_source_sha256": "c2cd46904f2abf815e37cd6648a99ca316e2b90d0e4006df8efdc551f620505d",
+				"scale_from_source": 0.180555555555556,
+				"source": "docs/design/2026-10-24/silver-chest-upgrade/silver-source-crop.png",
 				"source_alpha_bbox": [
 					8,
 					8,
-					417,
-					291
+					1160,
+					863
+				],
+				"source_alpha_bbox_all": [
+					4,
+					0,
+					1162,
+					869
 				],
 				"source_frame": [
-					425,
-					299
+					1168,
+					871
 				],
 				"source_seam": [
-					212.0,
-					114
+					583.5,
+					340
 				],
-				"source_sha256": "8c20a52aa4415c20bb7733943394b8f37fab5a3242808b0511484ba9439f1171",
+				"source_sha256": "15c15454b2ed3446e4c8fe810a42e6d09fb600799cfebefc8b84765a5aab37ac",
 				"texture_rect": [
-					-117.9853,
-					-68.1467,
-					236.4792,
-					172.401
+					-108.9653,
+					-65.0,
+					218.1111,
+					164.4861
 				],
 				"textures": {
 					"body": "game/ui/art/chests/strongbox-b/silver/body.png",
@@ -657,9 +674,9 @@
 			"kind": "silver",
 			"painted": [
 				14,
-				19,
+				18,
 				24,
-				16
+				18
 			],
 			"size": 26
 		},
@@ -673,9 +690,9 @@
 			"kind": "silver",
 			"painted": [
 				26,
-				35,
+				33,
 				44,
-				30
+				33
 			],
 			"size": 48
 		},
@@ -689,9 +706,9 @@
 			"kind": "silver",
 			"painted": [
 				35,
-				46,
+				44,
 				58,
-				40
+				43
 			],
 			"size": 64
 		},
@@ -705,9 +722,9 @@
 			"kind": "silver",
 			"painted": [
 				53,
-				69,
+				66,
 				86,
-				60
+				65
 			],
 			"size": 96
 		},
@@ -721,9 +738,9 @@
 			"kind": "silver",
 			"painted": [
 				70,
-				92,
+				88,
 				116,
-				80
+				87
 			],
 			"size": 128
 		},
@@ -736,10 +753,10 @@
 			],
 			"kind": "silver",
 			"painted": [
-				141,
-				184,
-				231,
-				160
+				140,
+				176,
+				232,
+				174
 			],
 			"size": 256
 		},
@@ -874,53 +891,53 @@
 			"tiers": [
 				{
 					"control": [
-						248.0,
-						248.0
+						238.0,
+						238.0
 					],
 					"kind": "gold",
 					"painted_in_stage": [
-						12.59375,
-						24.9162521362305,
-						222.8125,
-						147.25
+						12.0859375,
+						23.9115600585938,
+						213.828125,
+						141.3125
 					],
 					"stage": [
-						248.0,
-						183.520004272461
+						238.0,
+						176.119995117188
 					]
 				},
 				{
 					"control": [
-						200.0,
-						200.0
+						160.0,
+						160.0
 					],
 					"kind": "wood",
 					"painted_in_stage": [
-						10.15625,
-						18.53125,
-						180.46875,
-						123.4375
+						8.125,
+						14.8250007629395,
+						144.375,
+						98.75
 					],
 					"stage": [
-						200.0,
-						148.0
+						160.0,
+						118.400001525879
 					]
 				},
 				{
 					"control": [
-						200.0,
-						200.0
+						160.0,
+						160.0
 					],
 					"kind": "silver",
 					"painted_in_stage": [
-						10.15625,
-						17.75,
-						180.46875,
-						125.0
+						7.5,
+						9.20000076293945,
+						145.0,
+						108.75
 					],
 					"stage": [
-						200.0,
-						148.0
+						160.0,
+						118.400001525879
 					]
 				}
 			]
@@ -933,53 +950,53 @@
 			"tiers": [
 				{
 					"control": [
-						248.0,
-						248.0
+						238.0,
+						238.0
 					],
 					"kind": "gold",
 					"painted_in_stage": [
-						12.59375,
-						24.9162521362305,
-						222.8125,
-						147.25
+						12.0859375,
+						23.9115600585938,
+						213.828125,
+						141.3125
 					],
 					"stage": [
-						248.0,
-						183.520004272461
+						238.0,
+						176.119995117188
 					]
 				},
 				{
 					"control": [
-						200.0,
-						200.0
+						160.0,
+						160.0
 					],
 					"kind": "wood",
 					"painted_in_stage": [
-						10.15625,
-						18.53125,
-						180.46875,
-						123.4375
+						8.125,
+						14.8250007629395,
+						144.375,
+						98.75
 					],
 					"stage": [
-						200.0,
-						148.0
+						160.0,
+						118.400001525879
 					]
 				},
 				{
 					"control": [
-						200.0,
-						200.0
+						160.0,
+						160.0
 					],
 					"kind": "silver",
 					"painted_in_stage": [
-						10.15625,
-						17.75,
-						180.46875,
-						125.0
+						7.5,
+						9.20000076293945,
+						145.0,
+						108.75
 					],
 					"stage": [
-						200.0,
-						148.0
+						160.0,
+						118.400001525879
 					]
 				}
 			]

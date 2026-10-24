@@ -37,14 +37,13 @@ func _test_hero_cat() -> void:
 	_check(PlayerData.core_hp_multiplier() > PlayerData.castle_stats()["hp"], "starter gear raises castle HP")
 	_check(PlayerData.round_income_bonus() == 0 and is_equal_approx(PlayerData.spawn_speed_multiplier(), 1.0), "no income/spawn buff without workshop")
 	var weapon := HeroCat.equipped_uid(PlayerData.hero_cat, "weapon")
-	PlayerData.gold = 0
-	PlayerData.forge_stones = 0
-	_check(not PlayerData.hero_cat_upgrade(weapon), "no stones, no level")
-	PlayerData.forge_stones = 1000
 	PlayerData.gold = 1000
-	_check(PlayerData.hero_cat_upgrade(weapon), "levels with Forge Stones")
+	PlayerData.blueprints["weapon"] = 0
+	_check(not PlayerData.hero_cat_upgrade(weapon), "no weapon blueprints, no level")
+	PlayerData.blueprints["weapon"] = 1000
+	_check(PlayerData.hero_cat_upgrade(weapon), "levels with weapon Blueprints")
 	_check(HeroCat.item(PlayerData.hero_cat, weapon)["level"] == 2, "level is 2")
-	_check(PlayerData.gold > 900, "an equipment level costs little gold (%d left)" % PlayerData.gold)
+	_check(PlayerData.gold == 1000, "an equipment level costs no gold")
 
 
 func _test_summon_rates() -> void:
@@ -114,14 +113,14 @@ func _test_quests() -> void:
 	_check(not PlayerData.quest_done("win"), "win quest not done")
 	PlayerData.gold = 100000
 	PlayerData.level_up(PlayerData.STARTER_TROOPS[0])
-	PlayerData.forge_stones = 100
+	PlayerData.blueprints["weapon"] = 100
 	PlayerData.hero_cat_upgrade(HeroCat.equipped_uid(PlayerData.hero_cat, "weapon"))
 	_check(PlayerData.quest_done("upgrade"), "a troop and an equipment upgrade complete the quest")
 	var gems := PlayerData.gems
 	PlayerData.free_chest_at = 0
 	var wood: Dictionary = PlayerData.open_chest("wood")
 	_check(PlayerData.quest_done("chest"), "opening a chest counts")
-	_check(wood.get("items", []).size() == 1 and wood.get("stones", 0) > 0, "wood chest gives an item and Forge Stones")
+	_check(wood.get("items", []).size() == 1 and not wood.get("blueprints", {}).is_empty(), "wood chest gives an item and Blueprints")
 	PlayerData.claim_quest("chest")
 	_check(PlayerData.gems == gems + 5, "chest quest pays 5 gems")
 	_check(PlayerData.claim_quest("chest").is_empty(), "no double claim")
@@ -135,14 +134,14 @@ func _test_quests() -> void:
 func _test_profile_and_save() -> void:
 	PlayerData._reset()
 	_check(PlayerData.avatar_unlocked("10") and not PlayerData.avatar_unlocked("11"), "rows 1-2 open, row 3 locked")
-	PlayerData.set_avatar("25")
+	PlayerData.set_avatar("21")
 	_check(PlayerData.avatar == "1", "locked avatar refused")
 	_check(not PlayerData.frame_unlocked("royal"), "royal frame needs a legendary item")
 	HeroCat.add_item(PlayerData.hero_cat, "katana_nguyet")
 	_check(PlayerData.frame_unlocked("royal"), "a legendary item unlocks the royal frame")
 	PlayerData.set_player_name("  Người Chơi Rất Dài Tên Quá  ")
 	_check(PlayerData.player_name.length() <= 16, "name trimmed to 16")
-	PlayerData.forge_stones = 321
+	PlayerData.blueprints["armor"] = 321
 	PlayerData.summon_pity = 17
 	PlayerData.login_claimed = 4
 	PlayerData.track("win", 2)
@@ -150,7 +149,7 @@ func _test_profile_and_save() -> void:
 	var text := JSON.stringify(data)
 	PlayerData._reset()
 	PlayerData.from_dict(JSON.parse_string(text))
-	_check(PlayerData.forge_stones == 321, "Forge Stones survive a save")
+	_check(PlayerData.blueprints["armor"] == 321, "Blueprints survive a save")
 	_check(PlayerData.summon_pity == 17 and PlayerData.login_claimed == 4, "summon and login survive a save")
 	_check(PlayerData.quest_count("win") == 2, "quest progress survives a save")
 	_check(PlayerData.hero_cat["bag"].values().any(func(it): return it["id"] == "katana_nguyet"), "equipment survives a save")

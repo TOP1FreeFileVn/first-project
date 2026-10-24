@@ -68,7 +68,7 @@ func _admin_case() -> void:
 func _chest_case() -> void:
 	var before := _player_snapshot()
 	var opening := ChestOpening.new()
-	opening.setup("Rương Gỗ", Color("a0673a"), {"gold": 83, "stones": 12, "items": [{"id": "kiem_go", "uid": "r1", "rarity": 0}, {"id": "mu_sat", "uid": "r2", "rarity": 1}]}, [], false)
+	opening.setup("Rương Gỗ", Color("a0673a"), {"gold": 83, "blueprints": {"weapon": 2, "boots": 1}, "items": [{"id": "kiem_go", "uid": "r1", "rarity": 0}, {"id": "mu_sat", "uid": "r2", "rarity": 1}]}, [], false)
 	opening.attach(_home)
 	await get_tree().create_timer(0.85).timeout
 	_check(_home.active_menu_context() == "shop", "chest_from_battle_uses_shop_pattern")

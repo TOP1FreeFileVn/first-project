@@ -55,8 +55,11 @@ static func got_text(got: Dictionary) -> String:
 		cards += got["cards"][id]
 	if cards > 0:
 		parts.append("%d thẻ lính" % cards)
-	if got.get("stones", 0) > 0:
-		parts.append("%d đá rèn" % got["stones"])
+	var plans := 0
+	for slot in got.get("blueprints", {}):
+		plans += int(got["blueprints"][slot])
+	if plans > 0:
+		parts.append("%d bản vẽ" % plans)
 	for id in got.get("items", []):
 		parts.append(HeroCat.ITEMS[id]["name"])
 	return "Nhận: " + ", ".join(parts)
@@ -401,8 +404,8 @@ static func _reward_words(reward: Dictionary) -> String:
 		parts.append("%s vàng" % UiKit.format_number(reward["gold"]))
 	if reward.has("gems"):
 		parts.append("%d kim cương" % reward["gems"])
-	if reward.has("stones"):
-		parts.append("%d đá rèn" % reward["stones"])
+	if reward.has("blueprints"):
+		parts.append("%d bản vẽ" % reward["blueprints"])
 	return ", ".join(parts)
 
 

@@ -9,6 +9,7 @@ const Ui = preload("res://game/ui/Ui.gd")
 const SectionHeader = preload("res://game/ui/ShopSectionHeader.gd")
 const ShopCatalog = preload("res://game/core/ShopCatalog.gd")
 const GemPackCard = preload("res://game/ui/GemPackCard.gd")
+const GoldOfferCard = preload("res://game/ui/GoldOfferCard.gd")
 const CHEST_COLORS := {"wood": Color("a0673a"), "silver": Color("aeb8c2"), "gold": Color("e8b93c")}
 const PAPER := Color("f2dcab")
 const PAPER_LIGHT := Color("f8e8c5")
@@ -17,6 +18,7 @@ const TEXT := Color("3b2b1e")
 const PURPLE := Color("69328c")
 const GOLD_PANEL = preload("res://game/ui/skin/menu/shop_teal_gold.svg")
 const SUPPLY_PANEL = preload("res://game/ui/skin/menu/shop_teal_supply.svg")
+const SILVER_PANEL = preload("res://game/ui/skin/menu/shop_silver_supply.svg")
 
 var _wood_button: Button
 var _wood_status: Label
@@ -27,9 +29,11 @@ var _silver_action: Button
 var _gold_deficit: Label
 var _silver_deficit: Label
 var _opening_pending := false
+var _gold_offer_cards: Array = []
 
 
 func build() -> void:
+	_gold_offer_cards.clear()
 	var margin := body.get_parent() as MarginContainer
 	margin.add_theme_constant_override("margin_top", 10)
 	margin.add_theme_constant_override("margin_bottom", 26)
@@ -49,6 +53,8 @@ func build() -> void:
 	body.add_child(supplies)
 	_section_header("gems", "Nạp kim cương", Color("bba6d6"))
 	_gem_packs()
+	_section_header("gold", "Vàng", Color("edc370"))
+	_gold_offers()
 	tick()
 
 
@@ -78,6 +84,14 @@ func tick() -> void:
 	_silver_deficit.text = "Thiếu %s vàng" % UiKit.format_number(missing_gold) if missing_gold > 0 else ""
 	_gold_deficit.visible = missing_gems > 0
 	_silver_deficit.visible = missing_gold > 0
+	for card in _gold_offer_cards:
+		var offer: Dictionary = ShopCatalog.gold_offer(card.offer_id)
+		card.update_offer(offer)
+		if card.offer_id == "daily_gold":
+			var available := PlayerData.shop_gold_available()
+			card.set_available(available, not available)
+		else:
+			card.set_available(PlayerData.gems >= int(offer["gems"]) and int(offer["gems"]) > 0 and int(offer["gold"]) > 0)
 
 
 func _featured_chest() -> void:
@@ -114,10 +128,7 @@ func _featured_chest() -> void:
 	var quantity := _gold_copy("%d trang bị / rương" % chest["items"], 29)
 	quantity.name = "GoldReward"
 	rewards.add_child(quantity)
-	var materials := "%d–%d đá rèn" % [chest["stones"][0], chest["stones"][1]]
-	var plans := int(HeroCat.CHEST_BLUEPRINTS.get("gold", 0))
-	if plans > 0:
-		materials += " · %d bản vẽ" % plans
+	var materials := "%d–%d bản vẽ" % [chest["blueprints"][0], chest["blueprints"][1]]
 	var materials_copy := _gold_copy(materials, 23)
 	materials_copy.name = "GoldMaterials"
 	rewards.add_child(materials_copy)
@@ -185,6 +196,10 @@ func _gold_rates() -> Button:
 func _supply_card(kind: String) -> PanelContainer:
 	var chest: Dictionary = Economy.CHESTS[kind]
 	var panel := _offer_panel(PAPER_LIGHT, 16, 14)
+	if kind == "silver":
+		var frame := panel.get_theme_stylebox("panel").duplicate() as StyleBoxTexture
+		frame.texture = SILVER_PANEL
+		panel.add_theme_stylebox_override("panel", frame)
 	panel.name = "SupplyChest_" + kind
 	panel.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	panel.set_meta("shop_chest_kind", kind)
@@ -192,13 +207,17 @@ func _supply_card(kind: String) -> PanelContainer:
 	panel.add_child(box)
 	var heading := _copy(chest["name"], 28)
 	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	if kind == "silver":
+		heading.add_theme_color_override("font_color", Color("344c59"))
 	box.add_child(heading)
 	box.add_child(_chest_art(kind, 160))
 	var benefits := UiKit.vbox(1)
 	benefits.custom_minimum_size.y = 74
 	benefits.alignment = BoxContainer.ALIGNMENT_CENTER
 	box.add_child(benefits)
-	var cards := _copy("%d trang bị · %d–%d đá rèn" % [chest["items"], chest["stones"][0], chest["stones"][1]], 26)
+	var cards := _copy("%d trang bị · %d–%d bản vẽ" % [chest["items"], chest["blueprints"][0], chest["blueprints"][1]], 26)
+	if kind == "silver":
+		cards.text = "%d trang bị\n%d–%d bản vẽ" % [chest["items"], chest["blueprints"][0], chest["blueprints"][1]]
 	cards.name = kind.capitalize() + "Reward"
 	cards.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	benefits.add_child(cards)
@@ -252,9 +271,9 @@ func _gem_packs() -> void:
 	body.add_child(note)
 	var grid := GridContainer.new()
 	grid.name = "GemPackGrid"
-	grid.columns = 2
-	grid.add_theme_constant_override("h_separation", 16)
-	grid.add_theme_constant_override("v_separation", 16)
+	grid.columns = 3
+	grid.add_theme_constant_override("h_separation", 14)
+	grid.add_theme_constant_override("v_separation", 14)
 	body.add_child(grid)
 	for pack in ShopCatalog.gem_packs():
 		var card := GemPackCard.new(pack)
@@ -267,11 +286,7 @@ func _show_gem_pack(pack_id: String) -> void:
 	# credit currency for a local button tap: real grants require verified payment.
 	if home.find_child("GemPackDetails", true, false) != null:
 		return
-	var selected: Dictionary = {}
-	for pack in ShopCatalog.gem_packs():
-		if pack["id"] == pack_id:
-			selected = pack
-			break
+	var selected: Dictionary = ShopCatalog.gem_pack(pack_id)
 	if selected.is_empty():
 		return
 	var box := UiKit.sheet_popup(home, 560, "Gói kim cương")
@@ -279,7 +294,10 @@ func _show_gem_pack(pack_id: String) -> void:
 	var overlay := box.get_meta("overlay") as Control
 	overlay.name = "GemPackDetails"
 	overlay.set_meta("shop_pack_id", pack_id)
-	box.add_child(Ui.center(Ui.icon("gem", 112)))
+	var illustration := load(str(selected["illustration"])) as Texture2D
+	var artwork := UiKit.icon(illustration, 180)
+	artwork.name = "GemPackDetailsIllustration"
+	box.add_child(Ui.center(artwork))
 	var amount := _copy("%s kim cương" % UiKit.format_number(int(selected["gems"])), 32)
 	amount.name = "GemPackAmount"
 	amount.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -296,6 +314,34 @@ func _show_gem_pack(pack_id: String) -> void:
 	close.name = "GemPackClose"
 	close.pressed.connect(func(): UiKit.close_popup(box))
 	box.add_child(close)
+
+
+func _gold_offers() -> void:
+	var grid := GridContainer.new()
+	grid.name = "GoldExchangeGrid"
+	grid.columns = 3
+	grid.add_theme_constant_override("h_separation", 14)
+	grid.add_theme_constant_override("v_separation", 14)
+	body.add_child(grid)
+	for offer in ShopCatalog.gold_offers():
+		var card := GoldOfferCard.new(offer)
+		card.selected.connect(_select_gold_offer)
+		grid.add_child(card)
+		_gold_offer_cards.append(card)
+
+
+func _select_gold_offer(offer_id: String) -> void:
+	var offer: Dictionary = ShopCatalog.gold_offer(offer_id)
+	if offer.is_empty():
+		return
+	var amount := 0
+	if offer_id == "daily_gold":
+		amount = PlayerData.claim_shop_gold()
+	elif PlayerData.exchange_gems(int(offer["multiplier"])):
+		amount = int(offer["gold"])
+	if amount > 0:
+		SoundLib.play("reward")
+		UiKit.toast(home, "+%s vàng" % UiKit.format_number(amount))
 
 
 func focus_gem_packs() -> void:
@@ -343,7 +389,7 @@ func _copy(text: String, font_size: int) -> Label:
 
 
 func has_alert() -> bool:
-	return PlayerData.free_chest_seconds_left() == 0
+	return PlayerData.free_chest_seconds_left() == 0 or PlayerData.shop_gold_available()
 
 
 func _chest_art(kind: String, icon_size: float) -> Control:

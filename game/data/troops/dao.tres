@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_troop")
 id = "dao"
-display_name = "Mèo Đao"
+display_name = "Bơ Đao"
 description = "Đao dài, vừa trâu vừa đau."
 rarity = 2
 unit_key = "art:dao"

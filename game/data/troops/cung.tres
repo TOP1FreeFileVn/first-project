@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_troop")
 id = "cung"
-display_name = "Mèo Cung"
+display_name = "Bơ Cung"
 description = "Bắn xa từ phía sau, máu giấy."
 rarity = 0
 unit_key = "art:cung"

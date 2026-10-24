@@ -1,0 +1,56 @@
+<!doctype html><html lang="vi"><meta charset="utf-8">
+<style>
+@font-face{font-family:Game;src:url('../../../../game/ui/fonts/PaytoneOne-Regular.ttf')}
+body{margin:0;background:#79583e;color:#fff1d1;font:18px Game}canvas{display:block}
+</style>
+<canvas id="art" width="1050" height="710"></canvas>
+<script src="../../../../.claude/skills/canvas-vector-art/scripts/pen.js"></script>
+<script src="glyphs.js"></script>
+<script>
+const ctx=document.querySelector('canvas').getContext('2d');
+const kinds=['weapon','helmet','armor','boots'];
+const labels=['Vũ khí','Mũ','Áo giáp','Giày'];
+// Final user correction: multiply each pale background RGB channel by 0.8.
+const palette=[['#92a57e','#76965d'],['#87a3ae','#6596ad'],['#a291b2','#a184b9'],['#b79775','#bd8f62']];
+const oldPalette=['#5b813e','#347f9d','#8659ac','#b56c33'];
+const oldImages={},geometry={};
+function measure(layer) {
+ const pixels=layer.getContext('2d').getImageData(0,0,256,256).data;
+ let l=256,t=256,r=-1,b=-1,white=0,black=0;
+ for(let y=0;y<256;y++)for(let x=0;x<256;x++) {
+  const q=(y*256+x)*4;if(pixels[q+3]<8)continue;
+  l=Math.min(l,x);t=Math.min(t,y);r=Math.max(r,x);b=Math.max(b,y);
+  if(pixels[q+3]>248){if(pixels[q]>248)white++;else if(pixels[q]<8)black++;}
+ }
+ return {alpha_bounds:[l,t,r+1,b+1],white_opaque_pixels:white,accent_opaque_pixels:black,accent_fraction:black/(white+black)};
+}
+function layer(kind,ink,old=false) {
+ const c=document.createElement('canvas');c.width=256;c.height=256;const p=c.getContext('2d');
+ if(old){p.drawImage(oldImages[kind],0,0);p.globalCompositeOperation='source-in';p.fillStyle='#ffffff';p.fillRect(0,0,256,256)}
+ else {Pen.toCanvas(EquipmentBadgeFilled.icon(kind),p);const a=p.getImageData(0,0,256,256),rgb=ink.match(/\w\w/g).map(q=>parseInt(q,16));for(let i=0;i<a.data.length;i+=4){if(a.data[i+3]&&a.data[i]<128){a.data[i]=rgb[0];a.data[i+1]=rgb[1];a.data[i+2]=rgb[2]}}p.putImageData(a,0,0)}
+ return c;
+}
+function badge(kind,x,y,size,index,old=false,target=24) {
+ ctx.save();ctx.translate(x,y);ctx.scale(size/36,size/36);
+ ctx.fillStyle='#583f21';ctx.beginPath();ctx.roundRect(0,0,36,36,4);ctx.fill();
+ ctx.fillStyle='#f9e8bf';ctx.beginPath();ctx.roundRect(2,2,32,32,3);ctx.fill();
+ ctx.fillStyle=old?oldPalette[index]:palette[index][0];ctx.beginPath();ctx.roundRect(4,4,28,28,2);ctx.fill();
+ const c=layer(kind,palette[index][1],old),m=measure(c),[l,t,r,b]=m.alpha_bounds,w=r-l,h=b-t,k=target/Math.max(w,h);
+ ctx.drawImage(c,l,t,w,h,18-w*k/2,18-h*k/2,w*k,h*k);ctx.restore();
+}
+async function main() {
+ await Promise.all(kinds.map(kind=>new Promise(resolve=>{const img=new Image();img.onload=()=>{oldImages[kind]=img;resolve()};img.src=`before/${kind}.svg`})));
+ await document.fonts.load('26px Game');await document.fonts.ready;
+ ctx.fillStyle='#fff1d1';ctx.font='24px Game';ctx.fillText('GLYPH ĐẶC TRẮNG · NỀN ĐẬM HƠN 20%',28,37);
+ ctx.font='16px Game';ctx.fillText('Trước',175,70);ctx.fillText('Sau',335,70);ctx.fillText('4 màu phẩm',550,70);ctx.fillText('Cỡ trong game',838,70);
+ kinds.forEach((kind,i)=>{
+  const y=93+i*148;ctx.font='18px Game';ctx.fillStyle='#fff1d1';ctx.fillText(labels[i],27,y+61);
+  badge(kind,154,y,104,1,true);badge(kind,312,y,104,1,false);
+  palette.forEach((_,j)=>badge(kind,492+j*76,y+27,48,j));
+  palette.forEach((_,j)=>badge(kind,857+j*38,y+45,18,j));
+  const c=document.createElement('canvas');c.width=256;c.height=256;Pen.toCanvas(EquipmentBadgeFilled.icon(kind),c.getContext('2d'));geometry[kind]=measure(c);
+ });
+ window.reviewGeometry=geometry;window.reviewReady=true;
+}
+main();
+</script></html>

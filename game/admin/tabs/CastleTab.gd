@@ -4,7 +4,7 @@ extends "res://game/admin/tabs/AdminTab.gd"
 # cell with a running gold total, and the workshop upgrades.
 
 const COLUMNS := [["hp", "Máu x", false], ["meat", "Xu", true], ["cells", "Ô gear", true], ["team", "Ô đội", true], ["cost", "Giá", true]]
-const MAX_TEAM := 5
+const MAX_TEAM := 4
 const MAX_CELLS := 23
 
 

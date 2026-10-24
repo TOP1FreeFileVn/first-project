@@ -1,0 +1,505 @@
+{
+  "complete": true,
+  "missing_tiers": [],
+  "canvas": [
+    512,
+    512
+  ],
+  "maximum_art_extent": [
+    32,
+    32,
+    480,
+    480
+  ],
+  "alignment": "centered ink bbox on both axes",
+  "ink_alpha_threshold": 8,
+  "resampling": "premultiplied RGBA Lanczos",
+  "model_note": "requested_image_model is the requested model only. response_model identifies the response orchestrator, not the image generator. reported_image_model records only an explicitly reported image model; a missing or null value means unknown. No image model identity is inferred.",
+  "records": [
+    {
+      "source_mode": "RGB",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        255,
+        255
+      ],
+      "method": "border_connected_offwhite_floodfill",
+      "border_median_rgb": [
+        247,
+        239,
+        221
+      ],
+      "per_channel_tolerance": 28,
+      "removed_background_pixels": 1106192,
+      "source_ink_bbox_alpha8": [
+        86,
+        309,
+        1168,
+        949
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        265
+      ],
+      "placement": [
+        32,
+        123
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        123,
+        480,
+        388
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        123,
+        480,
+        388
+      ],
+      "nonzero_alpha_pixels": 81602,
+      "partial_alpha_pixels": 3359,
+      "tier": 1,
+      "subject": "Three gems",
+      "gems": 120,
+      "source": "output/imagegen/gem-packs-2026-10-24/01-raw.png",
+      "source_sha256": "8393b4652f83d7082989513f1e613a2011a46a83d4ce0ce99cc975062be754d5",
+      "output": "game/ui/art/shop_gem_packs/01.png",
+      "output_sha256": "95326b591935a9eda667197d3a538ff30dfe46e72bef1aead8879ff69f7f8906",
+      "generation": {
+        "tier": 1,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T04:32:00.5160067Z",
+        "finished_utc": "2026-10-24T04:32:43.0216949Z",
+        "prompt": "prompts/01.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/cat_hero.png",
+          "game/ui/art/icon_chest.png"
+        ],
+        "output": "01-raw.png",
+        "response_model": null,
+        "revised_prompt": "Create exactly one square 1024x1024 isolated production game-shop illustration. Match the supplied cat reference's clean simple flat cartoon style, generous rounded shapes and thick warm-brown outlines, but DO NOT depict any cat, face, sword or chest. Subject: smallest purple gem currency pack, EXACTLY THREE broad purple cut diamonds in one compact grounded handful, no container. One generous central foreground diamond, two smaller diamonds nestled behind its lower left and lower right sides. Make all three distinctly countable, overlapping coherently, with central gem dominant. Low compact silhouette, not a mound. Straight-on flat 2D. Total composition approximately 76% of canvas width, centered, full object visible, minimum 10% empty margin on all sides. Each gem has a short flat top, chamfered shoulders, broad horizontal middle and short bottom point; rounded corners and broad simple faces, not long sharp crystal shards. Thick fully closed outer warm brown #583f21 contours approximately 26px, interior divisions approximately 12px in softer purple, shared edges drawn once. Main lavender #b787e4, pale lilac #e2d0fa highlight facet, violet #9362c4 shade facet. Only a few large flat facets per gem, at most one highlight face and one shade face, no fine facet mesh. Readable at 85 pixels wide. Background perfectly uniform solid warm off-white #f6f0df. No gradients, shadows, ground line, texture, 3D rendering, glow, sparkles or decorations. No text, digits, badges, coins, paws, crowns, stars, rays, halo, jewelry, UI, borders or watermark. Purpose-drawn distinct composition of three gems, not separate icons or copied repeated symbols."
+      }
+    },
+    {
+      "source_mode": "RGB",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        255,
+        255
+      ],
+      "method": "border_connected_offwhite_floodfill",
+      "border_median_rgb": [
+        248,
+        242,
+        223
+      ],
+      "per_channel_tolerance": 28,
+      "removed_background_pixels": 718165,
+      "source_ink_bbox_alpha8": [
+        97,
+        103,
+        1172,
+        1176
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        447
+      ],
+      "placement": [
+        32,
+        32
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        32,
+        480,
+        479
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        32,
+        480,
+        479
+      ],
+      "nonzero_alpha_pixels": 150690,
+      "partial_alpha_pixels": 4831,
+      "tier": 2,
+      "subject": "Drawstring pouch",
+      "gems": 600,
+      "source": "output/imagegen/gem-packs-2026-10-24/02-raw.png",
+      "source_sha256": "afe9bdade3708c10e8bc5f7e281035298d99f0a57f437d9719ea4f432ce90847",
+      "output": "game/ui/art/shop_gem_packs/02.png",
+      "output_sha256": "90b19c216261767deec0078cefcd594be3f09d2d8dc065869615d798d0955a00",
+      "generation": {
+        "tier": 2,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T04:33:09.4918451Z",
+        "finished_utc": "2026-10-24T04:33:51.7522018Z",
+        "prompt": "prompts/02.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/cat_hero.png",
+          "game/ui/art/icon_chest.png",
+          "output/imagegen/gem-packs-2026-10-24/01-raw.png"
+        ],
+        "output": "02-raw.png",
+        "response_model": null,
+        "revised_prompt": "Create exactly one square 1024x1024 isolated game-shop illustration, no UI or text. Use supplied cat image only as flat cartoon style reference, supplied chest only for simplicity, supplied gems for purple palette and broad diamond shape. Draw a NEW compact small soft tan drawstring pouch open at top, filled with FIVE large wide purple diamonds visibly clustered in its opening, plus TWO large purple diamonds resting against its foot. Seven gems total, coherent overlapping still-life, not separate icons. Frontal flat 2D with only slight view into pouch mouth. Rounded squat soft pouch, one simple brown tie at neck, large uncluttered tan fabric area, no seams, emblems or diamond badge. Purple gem cluster visually dominant. Broad cut gems with short flat top, chamfered shoulders, wide horizontal middle and short bottom point; few large flat facets, one pale highlight face and one violet shade face. Lavender #b787e4, pale lilac #e2d0fa, violet #9362c4. Confident rounded warm-brown #583f21 closed outer contours about 26px, minimal softer inner strokes about 12px, shared edges drawn once. Clean flat colors and generous simple silhouettes matching the supplied cartoon cat, excellent readability at 85 pixels wide. Entire centered composition occupies about 76 percent of canvas, minimum 10 percent empty margins all sides. Perfectly uniform solid warm off-white #f6f0df background. No ground line, shadows, gradients, texture, 3D rendering, isometric side walls, tiny facet mesh, glows, stars, sparkles, decoration, coins, cats, faces, paws, sword, crown, text, digits, watermark, logos, buttons or frame. Purpose-drawn pouch pack illustration, not copied arrangement of smallest pack."
+      }
+    },
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        58,
+        306,
+        1195,
+        1007
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        276
+      ],
+      "placement": [
+        32,
+        118
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        118,
+        480,
+        394
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        118,
+        480,
+        394
+      ],
+      "nonzero_alpha_pixels": 89210,
+      "partial_alpha_pixels": 88294,
+      "tier": 3,
+      "subject": "Shallow tray",
+      "gems": 1500,
+      "source": "output/imagegen/gem-packs-2026-10-24/03-raw.png",
+      "source_sha256": "d5449619a0108dfc3389c4a2cd228e3d07f7c8a5a3291f2e8943fea39c5a9ca7",
+      "output": "game/ui/art/shop_gem_packs/03.png",
+      "output_sha256": "5a855fd0b7e8938f4740ba6ae9adc0cc4fd9c7eb8dfb7e21a8dc77f828da3950",
+      "generation": {
+        "tier": 3,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T04:33:09.4918451Z",
+        "finished_utc": "2026-10-24T04:34:38.4491746Z",
+        "prompt": "prompts/03.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/cat_hero.png",
+          "game/ui/art/icon_chest.png",
+          "output/imagegen/gem-packs-2026-10-24/01-raw.png"
+        ],
+        "output": "03-raw.png",
+        "response_model": null,
+        "revised_prompt": "Create exactly one square 1024x1024 isolated production game-shop illustration matching the supplied flat cartoon references: bold warm brown rounded outlines, generous simple shapes, flat colors. Tier 3 purple gem pack: ONE centered compact wide low still-life of a shallow honey-tan folded CARTON TRAY with a low mound of approximately ten large individually readable purple cut diamonds inside, plus exactly three diamonds spilled immediately in front at its foot. New purpose-drawn composition, not repeated icon copies. Straight-on frontal 2D, very slight view into tray opening, NO perspective side walls, no isometric view. Tray is shallow, not a box or chest: one broad plain unobstructed tan front wall with softly clipped corners, no decorations or badge, with spilled gems low at its base leaving broad wall visible. Gems dominate overall silhouette and palette; arrange low staggered overlapping mound, distinguish each big gem cleanly, avoid excessive detail. Broad cut diamonds with short flat top, chamfered shoulders, wide horizontal middle, short bottom point. Main flat lavender #b787e4, single pale lilac #e2d0fa highlight face and single violet #9362c4 shade face per diamond, big simple facets without tiny meshes. Heavy closed outer contours #583f21 about 26 pixels on 1024 canvas, interior construction lines approximately 12 pixels in softer related purple or brown, shared edges drawn once. Rounded joins, confident clean hand-drawn flat cartoon in the style of supplied orange cat reference, but absolutely no cat, face, sword or paws. Uniform SOLID warm off-white #f6f0df background, no texture or gradient. Composition roughly 76% canvas width with at least 10% empty margins on every side, vertically centered and wide low silhouette. Readable at 85 pixels wide. No ground line, no cast or drop shadows, no glow, no 3D rendering, no gradients, no bevels, no grain, no scribbles. NO text, digits, letters, labels, watermark, logo, UI, buttons, frames, coins, stars, sparkles, rays, crowns, halos, glitter, jewelry, or extraneous decoration. Exactly one coherent illustration, not a sheet."
+      }
+    },
+    {
+      "source_mode": "RGB",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        255,
+        255
+      ],
+      "method": "border_connected_offwhite_floodfill",
+      "border_median_rgb": [
+        249,
+        242,
+        224
+      ],
+      "per_channel_tolerance": 28,
+      "removed_background_pixels": 778404,
+      "source_ink_bbox_alpha8": [
+        56,
+        115,
+        1198,
+        1152
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        407
+      ],
+      "placement": [
+        32,
+        52
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        52,
+        480,
+        459
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        52,
+        480,
+        459
+      ],
+      "nonzero_alpha_pixels": 124556,
+      "partial_alpha_pixels": 4648,
+      "tier": 4,
+      "subject": "Deep carton box",
+      "gems": 3300,
+      "source": "output/imagegen/gem-packs-2026-10-24/04-raw.png",
+      "source_sha256": "f8a0f950bee722fb6be412cb6dd3006636c3ee4b47b6940e6a42fe2104395f3a",
+      "output": "game/ui/art/shop_gem_packs/04.png",
+      "output_sha256": "0bba7c972298232313f210287cae7b1bba768fe22a36696fef15ac0e65c63fb8",
+      "generation": {
+        "tier": 4,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T04:35:55.2063014Z",
+        "finished_utc": "2026-10-24T04:36:50.7747247Z",
+        "prompt": "prompts/04.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/cat_hero.png",
+          "game/ui/art/icon_chest.png",
+          "output/imagegen/gem-packs-2026-10-24/01-raw.png"
+        ],
+        "output": "04-raw.png",
+        "response_model": null,
+        "revised_prompt": "Create exactly one square isolated production game shop illustration matching the supplied flat cartoon references: bold confident warm brown rounded contours and simple flat color shapes. Tier 4 purple gem currency pack: ONE deep open honey-tan CARDBOARD BOX seen straight-on frontal 2D, broad tall front wall, no visible perspective side walls, with two short compact side flaps angled outward. A generous tall domed mound of approximately EIGHTEEN individually shaped overlapping purple diamonds rises well above its rim, plus exactly FOUR purple gems resting together at the foot of the box. Purpose-drawn coherent compact still life, not repeated icon copies. Purple mound dominates, stronger taller volume than a shallow tray; tan front wall subordinate but clearly deep. One simple folded-edge construction line on front wall, absolutely no badge or decoration. Slight view into opening only. Center artwork within 76 percent of a 1024 square canvas, minimum 10 percent blank margin every side. Readable at 85 pixels wide. Diamonds have broad cut gem silhouettes, short flat tops, chamfered shoulders, wide horizontal middles, short bottom points, large simple facets, lavender #b787e4 main, pale lilac #e2d0fa highlight face, violet #9362c4 shade face. Flat solid colors only. Outer fully closed warm brown #583f21 contours about 26px, rounded joins; inner lines about 12px softer related brown or purple; shared edges drawn once. Match the orange cat reference's generous cartoon shapes but DO NOT draw cat, face, or sword. Uniform solid warm off-white #f6f0df backdrop. No ground line, no cast or drop shadows. No gradients, textures, glow, 3D rendering, bevels, fine facet mesh, isometric perspective. NO text, numbers, labels, price, logos, watermark, UI, frame, coins, cats, paws, crowns, sparkles, stars, rays, halos, glitter, jewelry or unrelated decorations. Exactly one finished illustration."
+      }
+    },
+    {
+      "source_mode": "RGB",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        255,
+        255
+      ],
+      "method": "border_connected_offwhite_floodfill",
+      "border_median_rgb": [
+        248,
+        241,
+        223
+      ],
+      "per_channel_tolerance": 28,
+      "removed_background_pixels": 728615,
+      "source_ink_bbox_alpha8": [
+        121,
+        170,
+        1146,
+        1155
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        431
+      ],
+      "placement": [
+        32,
+        40
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        40,
+        480,
+        471
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        40,
+        480,
+        471
+      ],
+      "nonzero_alpha_pixels": 163607,
+      "partial_alpha_pixels": 4758,
+      "tier": 5,
+      "subject": "Open chest",
+      "gems": 6900,
+      "source": "output/imagegen/gem-packs-2026-10-24/05-raw.png",
+      "source_sha256": "b4939e28ab6be2ac624a8e01dd89d1f87093a698f8bbd3ac0fd95325b31228e9",
+      "output": "game/ui/art/shop_gem_packs/05.png",
+      "output_sha256": "67eaf34bbe2c9b8fa3b77ba1f981711c760225346445a88ba6a94db85455029a",
+      "generation": {
+        "tier": 5,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T04:35:55.2477738Z",
+        "finished_utc": "2026-10-24T04:36:44.8447882Z",
+        "prompt": "prompts/05.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/cat_hero.png",
+          "game/ui/art/icon_chest.png",
+          "output/imagegen/gem-packs-2026-10-24/01-raw.png"
+        ],
+        "output": "05-raw.png",
+        "response_model": null,
+        "revised_prompt": "Create exactly one square isolated production illustration for a casual mobile game gem shop card, using supplied images as visual references. Match cat reference's flat chunky rounded cartoon style and warm brown contours; do NOT depict cat, face, sword. Tier 5 high-volume pack: ONE compact sturdy medium treasure STRONGBOX seen straight-on orthographic frontal 2D, flat lid OPEN upright behind a large heaped pile of approximately TWENTY-FIVE individually composed overlapping purple diamonds, with several generous diamonds spilling forward at its base. Clearly open chest, squat construction, quiet warm tan front wall, simple honey-gold corner reinforcements, one plain central clasp with no tiny lock details. Upright open lid visible behind gems but purple gems visually dominate, covering most of container. No perspective side walls, no isometric view. Gem heap abundant and tall, coherent unified silhouette, not separate icons or repeated identical copies. Broad cut diamonds with short flat tops, chamfered shoulders, wide horizontal middles and short bottom points. Vary orientation and partial occlusion naturally, keep large readable shapes at 85px wide. Gem palette main #b787e4, highlight #e2d0fa, shade #9362c4. Each diamond has only a few large flat facets, at most one highlight face and one shade face, no tiny facet mesh. Confident warm-brown #583f21 closed outer contours approximately 26px on 1024 canvas; inner construction lines approximately 12px in softer brown or purple. Shared edges drawn once. Flat solid colors ONLY, no gradients, rendered 3D, bevels, textures, grain or scribbles. Exactly one centered composition occupying approximately 76 percent of square canvas width and height, at least 10 percent empty margin on every side. Uniform solid warm off-white #f6f0df background, no shadows whatsoever, no ground line. Fully closed clean brown silhouette edges. No text, digits, labels, watermark, logo, UI, buttons, frames, coins, cats, paws, crowns, stars, sparkles, rays, halos, glitter, jewelry, or extra diamond badge on chest. Strong volume silhouette over intricate details. Purpose-drawn clean flat cartoon illustration."
+      }
+    },
+    {
+      "source_mode": "RGBA",
+      "source_size": [
+        1254,
+        1254
+      ],
+      "source_alpha_extrema": [
+        0,
+        255
+      ],
+      "method": "preserve_generated_alpha",
+      "removed_background_pixels": 0,
+      "source_ink_bbox_alpha8": [
+        42,
+        193,
+        1220,
+        1128
+      ],
+      "output_size": [
+        512,
+        512
+      ],
+      "output_mode": "RGBA",
+      "resized_crop_size": [
+        448,
+        356
+      ],
+      "placement": [
+        32,
+        78
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "alpha_bbox": [
+        32,
+        78,
+        480,
+        434
+      ],
+      "ink_bbox_alpha8": [
+        32,
+        78,
+        480,
+        434
+      ],
+      "nonzero_alpha_pixels": 109292,
+      "partial_alpha_pixels": 108132,
+      "tier": 6,
+      "subject": "Overflowing chest",
+      "gems": 15000,
+      "source": "output/imagegen/gem-packs-2026-10-24/06-raw.png",
+      "source_sha256": "a0dd4bcea253565f7d5cae50dff170b41ddb1b6800f5509bad1a96719e004b0c",
+      "output": "game/ui/art/shop_gem_packs/06.png",
+      "output_sha256": "89ac98192a2aa3f42fdf6008738a267454442e0c010685077d1cd91818adb0ed",
+      "generation": {
+        "tier": 6,
+        "status": "generated",
+        "transport": "User-selected 9Router local /v1/responses",
+        "requested_image_model": "gpt-image-2.5-sunburst",
+        "requested_size": "1024x1024",
+        "quality": "medium",
+        "started_utc": "2026-10-24T04:35:56.0935926Z",
+        "finished_utc": "2026-10-24T04:36:59.2703895Z",
+        "prompt": "prompts/06.txt",
+        "style_prompt": "prompts/style.txt",
+        "reference_files": [
+          "game/ui/art/cat_hero.png",
+          "game/ui/art/icon_chest.png",
+          "output/imagegen/gem-packs-2026-10-24/01-raw.png"
+        ],
+        "output": "06-raw.png",
+        "response_model": null,
+        "revised_prompt": "Create exactly one square isolated production game-shop illustration, using the supplied references for flat cartoon style and gem palette only. Largest tier purple gem pack: ONE wide warm honey-tan merchant treasure chest viewed straight on frontally, flat reinforced lid open behind an abundant tall mountain of purple diamonds, plus two broad connected heaps of diamonds spilling at its left and right foot. At least 30 visibly distinct large simplified overlapping cut-gem silhouettes (aim 34: 22 in mountain and 6 in each foot heap). Purpose-drawn coherent still life, not a sheet or copies of an icon. Purple mountain dominates; chest broad blank front visible in lower center, quiet warm brass straps and two compact side handles. Open lid visible behind mountain, no perspective side walls, no isometric view. Compact generous rounded silhouettes readable at 85 pixels wide. Entire artwork fits inside central 76 percent of square with at least 10 percent clean empty margin on ALL sides including handles and spilled gems. Uniform solid warm off-white #f6f0df background absolutely no texture, gradients, cast shadows or ground line. Match reference cat's confident thick warm-brown #583f21 outlines, approximately 26px outer contour at 1024 resolution; softer brown or purple inner construction strokes approximately 12px; shared edges once. Every diamond broad with short flat top, chamfered shoulders, wide horizontal middle and short lower point. Lavender #b787e4 main faces, pale lilac #e2d0fa single large highlight face, violet #9362c4 single shade face. Flat colors only, simple large facets, no tiny facet mesh. Warm honey carton tan chest, subdued brass reinforcements, broad front WITHOUT emblems or diamond badge. Fully closed clean brown silhouette contour for alpha extraction. NO text, digits, labels, logo, watermark, UI, frame, buttons, cats, faces, sword, coins, crowns, paws, jewelry, extra containers, unrelated decorations, floating sparkles, stars, rays, glows, glitter, halos. No rendered 3D, bevels, photorealism, grain, scribbles, thin gray lines or gradients. Grand abundant high piled volume but clean simplified flat hand-drawn casual mobile-game illustration."
+      }
+    }
+  ]
+}

@@ -15,6 +15,7 @@ const CHEST_ORDER := ["wood", "silver", "gold"]
 const FIRST_CLEAR_GIFT := {0: "giao", 1: "riu", 2: "no", 4: "thuoc", 6: "cu_kiem", 11: "dao", 14: "sung"}
 # Team slots when a castle row predates the "team" column.
 const DEFAULT_TEAM_SLOTS := 3
+const MAX_TEAM_SLOTS := 4
 
 static var RARITY_WEIGHTS: Array = []
 static var STAR_CARD_COST: Array = []
@@ -28,6 +29,9 @@ static var CHESTS: Dictionary = {}
 static var BATTLE_SHOP: Dictionary = {}
 static var FREE_CHEST_COOLDOWN := 0
 static var GOLD_CHEST_PITY := 10
+## Shop exchange tiers preserve the configured gem-to-gold rate at every size.
+const EXCHANGE_MULTIPLIERS := [1, 5, 10, 25, 50]
+const DAILY_SHOP_GOLD := 500
 static var EXCHANGE_GEMS := 20
 static var EXCHANGE_GOLD := 500
 static var FIRST_CLEAR_GOLD_MULT := 2.0
@@ -94,7 +98,8 @@ static func team_slots(castle_level: int) -> int:
 	if CASTLE.is_empty():
 		return DEFAULT_TEAM_SLOTS
 	var row: Dictionary = CASTLE[clampi(castle_level, 1, CASTLE.size()) - 1]
-	return maxi(1, int(row.get("team", DEFAULT_TEAM_SLOTS)))
+	# One version of each of the four cats at most (game/data/Cats.gd).
+	return clampi(int(row.get("team", DEFAULT_TEAM_SLOTS)), 1, MAX_TEAM_SLOTS)
 
 
 # --- Formulas (see the Formula tab of the admin panel) ---------------------------------

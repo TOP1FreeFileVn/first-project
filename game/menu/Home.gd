@@ -11,13 +11,13 @@ const Ui = preload("res://game/ui/Ui.gd")
 const CartonNav = preload("res://game/ui/CartonNav.gd")
 const LobbyShortcut = preload("res://game/ui/LobbyShortcut.gd")
 const CastleBubble = preload("res://game/ui/CastleBubble.gd")
-const PaperboardFrame = preload("res://game/ui/PaperboardFrame.gd")
 const AdminGate = preload("res://game/admin/AdminGate.gd")
 const AdminPanel = preload("res://game/admin/AdminPanel.gd")
 const MetaPopups = preload("res://game/menu/popups/MetaPopups.gd")
 const SummonPage = preload("res://game/menu/pages/SummonPage.gd")
 const CastlePage = preload("res://game/menu/pages/CastlePage.gd")
 const CardboardLobby = preload("res://game/menu/lobby/CardboardLobby.gd")
+const FormationMeadow = preload("res://game/ui/FormationMeadow.gd")
 const PAGES := [
 	preload("res://game/menu/pages/ShopPage.gd"),
 	preload("res://game/menu/pages/HeroCatPage.gd"),
@@ -44,7 +44,9 @@ var _content: Control
 var _pages: Array = []
 var _current := -1
 var _pattern_backdrop: ColorRect
-var _hero_backdrop: PanelContainer
+var _hero_backdrop: ColorRect
+var _hero_inventory_backdrop: ColorRect
+var _troops_sky_cap: ColorRect
 var _shop_awning: Control
 var _menu_surfaces: Array = []
 var _lobby_world: Control
@@ -85,15 +87,37 @@ func _ready() -> void:
 	awning.stretch_mode = TextureRect.STRETCH_SCALE
 	awning.size = SHOP_AWNING_SIZE
 	_pattern_backdrop.add_child(awning)
-	_hero_backdrop = PaperboardFrame.new()
-	_hero_backdrop.name = "HeroPaperboardBackground"
-	_hero_backdrop.kind = "background"
-	_hero_backdrop.grain = Ui.tex("paper_grain")
+	_hero_backdrop = Ui.pattern_bg(Color("f3e9c4"))
+	_hero_backdrop.name = "HeroPatternBackground"
+	var hero_material := _hero_backdrop.material as ShaderMaterial
+	hero_material.set_shader_parameter("pattern_strength", 0.06)
+	hero_material.set_shader_parameter("top_light", 1.02)
+	hero_material.set_shader_parameter("bottom_light", 0.98)
+	hero_material.set_shader_parameter("tile_px", 360.0)
 	_hero_backdrop.visible = false
 	add_child(_hero_backdrop)
 	_hero_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	# The lower inventory has its own quieter surface, including behind the nav.
+	_hero_inventory_backdrop = Ui.pattern_bg(Color("6a4b3f"))
+	_hero_inventory_backdrop.name = "HeroInventoryBackground"
+	var inventory_material := _hero_inventory_backdrop.material as ShaderMaterial
+	inventory_material.set_shader_parameter("pattern_strength", 0.10)
+	inventory_material.set_shader_parameter("top_light", 1.02)
+	inventory_material.set_shader_parameter("bottom_light", 0.92)
+	inventory_material.set_shader_parameter("tile_px", 360.0)
+	_hero_backdrop.add_child(_hero_inventory_backdrop)
+	_hero_inventory_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_lobby_world = CardboardLobby.new()
 	add_child(_lobby_world)
+	# Continue the troop courtyard sky behind the shared HUD up to the screen edge.
+	_troops_sky_cap = ColorRect.new()
+	_troops_sky_cap.name = "TroopsHeaderSky"
+	_troops_sky_cap.color = FormationMeadow.SKY_COLOR
+	_troops_sky_cap.position = Vector2.ZERO
+	_troops_sky_cap.size = Vector2(SCREEN.x, TOP_HEIGHT)
+	_troops_sky_cap.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_troops_sky_cap.visible = false
+	add_child(_troops_sky_cap)
 	_content = Control.new()
 	_content.position = Vector2(0, TOP_HEIGHT)
 	_content.size = Vector2(SCREEN.x, SCREEN.y - TOP_HEIGHT - NAV_HEIGHT)
@@ -106,6 +130,7 @@ func _ready() -> void:
 		_content.add_child(page)
 		page.build()
 		_pages.append(page)
+	_pages[HERO_TAB].inventory_layout_changed.connect(_sync_hero_inventory_background, CONNECT_DEFERRED)
 	_build_side_rails()
 	_build_castle_controls()
 	_build_top_bar()
@@ -122,6 +147,20 @@ func _ready() -> void:
 	add_child(timer)
 	select_tab(last_tab, false)
 	_update_header()
+	_open_pending_chest.call_deferred()
+
+
+## Back from a won battle: its victory chest opens before anything else.
+func _open_pending_chest() -> void:
+	var chest: Dictionary = PlayerData.pending_chest
+	if chest.is_empty():
+		return
+	PlayerData.pending_chest = {}
+	PlayerData._commit()
+	var opening = load("res://game/ui/ChestOpening.gd").new()
+	opening.setup(PlayerData.Economy.CHESTS["victory"]["name"], Color("8a5a2b"), {"cards": chest.get("cards", {}), "gold": 0},
+		chest.get("new", []), false, func(): select_tab(TROOPS_TAB))
+	opening.attach(self)
 
 
 func select_tab(index: int, animate := true) -> void:
@@ -139,6 +178,8 @@ func select_tab(index: int, animate := true) -> void:
 	# The equipment screen uses this space itself, without the shared currency HUD.
 	_content.position.y = 0.0 if index == HERO_TAB else TOP_HEIGHT + _header.position.y
 	_content.size.y = SCREEN.y - _content.position.y - NAV_HEIGHT
+	if index == HERO_TAB:
+		_content.size.y += PAGES[HERO_TAB].BOTTOM_MASK_OFFSET
 	for i in _pages.size():
 		_pages[i].visible = i == index
 	var page: Control = _pages[index]
@@ -250,6 +291,15 @@ func active_menu_context() -> String:
 	return "battle"
 
 
+## Follow the actual bag boundary after layout/rebuilds, outside the clipped page.
+func _sync_hero_inventory_background() -> void:
+	var inventory: Control = _pages[HERO_TAB].find_child("HeroPaperboardInventory", true, false)
+	if inventory == null:
+		return
+	var local_top := _hero_backdrop.get_global_transform().affine_inverse() * inventory.get_global_rect().position
+	_hero_inventory_backdrop.offset_top = clampf(local_top.y, 0.0, SCREEN.y)
+
+
 func _update_backdrop() -> void:
 	var context := active_menu_context()
 	var full_screen := false
@@ -258,8 +308,10 @@ func _update_backdrop() -> void:
 		if is_instance_valid(node) and not node.is_queued_for_deletion() and node is CanvasLayer:
 			full_screen = true
 			break
-	# One paper surface continues behind the inventory and the transparent nav.
+	# The inventory's darker surface continues behind the transparent nav.
 	_hero_backdrop.visible = _current == HERO_TAB and context == "hero"
+	if _hero_backdrop.visible:
+		_sync_hero_inventory_background.call_deferred()
 	_pattern_backdrop.visible = context != "battle" and not _hero_backdrop.visible
 	if _pattern_backdrop.visible:
 		var paint := Ui.menu_pattern_color(context)
@@ -270,6 +322,7 @@ func _update_backdrop() -> void:
 		_pattern_backdrop.material.set_shader_parameter("top_light", 1.04 if context == "shop" else 1.08)
 		_pattern_backdrop.material.set_shader_parameter("bottom_light", 0.96 if context == "shop" else 0.94)
 	_shop_awning.visible = _current == SHOP_TAB and not full_screen
+	_troops_sky_cap.visible = _current == TROOPS_TAB and context == "troops" and _overlay == null and not full_screen
 	_content.visible = _overlay == null and not full_screen
 	_header.visible = not full_screen and _current != HERO_TAB
 	_nav_holder.visible = not full_screen

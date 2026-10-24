@@ -41,21 +41,17 @@ SPECS = {
         },
     },
     "silver": {
-        "source": CONCEPT / "B2.png", "seam": 114,
-        "lock": [158, 99, 267, 203], "strap_sample_y": 94,
-        "lock_seam_left": [162, 158], "lock_seam_right": [263, 266], "seam_ink": [-6,8],
-        "main_source_width": 13.5,
-        "measurement_samples": {"left_wall_rows": [150,160,180], "left_wall_widths": [14,14,14], "bottom_column": 140, "bottom_width": 13},
-        "palette": {"main": INK, "body": (155,205,224),
-                    "metal": (231,232,220), "metal_secondary": (150,170,163),
-                    "body_secondary": (106,152,172)},
-        "anchors": {
-            "main": [(71,41,9),(80,48,13),(91,59,25),(104,83,55)],
-            "body": [(166,208,236),(151,195,224),(213,237,247),(154,201,230)],
-            "metal": [(227,223,211),(250,248,238),(218,215,204)],
-            "metal_secondary": [(129,124,111),(172,174,167),(150,151,140)],
-            "body_secondary": [(105,143,166),(115,153,174)],
-        },
+        "source": ROOT / "docs/design/2026-10-24/silver-chest-upgrade/silver-source-crop.png",
+        "raw": ROOT / "output/imagegen/silver-chest-2026-10-24/silver-raw.png",
+        "raw_alpha_threshold": 8, "preserve_palette": True,
+        "seam": 340, "lock": [430,280,735,567], "strap_sample_y": 264,
+        "lock_seam_left": [435,433], "lock_seam_right": [729,730], "seam_ink": [-20,20],
+        "main_source_width": 26.0,
+        "measurement_samples": {"left_wall_rows": [404,504,624], "left_wall_widths": [26,26,26], "bottom_column": 356, "bottom_width": 26},
+        "palette": {"main": (84,57,27), "body": (152,211,239),
+                    "metal": (226,230,225), "metal_highlight": (252,251,243),
+                    "secondary": (105,149,170)},
+        "art_policy": "User requested a distinct silver chest with an arched lid, broad metal frame and four fasteners. Generated RGB and alpha are preserved; palette entries are representative samples, not quantized fills.",
     },
     "gold": {
         "source": REVIEW / "gold-source-crop.png", "seam": 333,
@@ -94,6 +90,8 @@ def clean_palette(source, spec):
     two pixels of the already-existing alpha boundary. No pixel is added
     outside the source alpha. No morphological ink expansion is performed.
     """
+    if spec.get("preserve_palette", False):
+        return source.convert("RGBA").copy()
     a = np.asarray(source.convert("RGBA")).copy()
     rgb = a[..., :3].astype(np.float32)
     samples, targets = [], []
@@ -135,6 +133,39 @@ def clean_palette(source, spec):
     alpha[edge] *= coverage[edge]
     out[edge] = INK
     return Image.fromarray(np.dstack((out.astype(np.uint8), np.uint8(np.rint(alpha*255)))))
+
+
+def prepare_raw_source(spec):
+    """Crop a raw illustration, retaining generated alpha when present.
+
+    Opaque sources remove only border-connected pixels near their specified
+    matte. Enclosed pale hardware stays opaque; original files stay untouched.
+    """
+    raw = Image.open(spec["raw"]).convert("RGBA")
+    a = np.asarray(raw).copy()
+    if a[..., 3].min() == 255:
+        rgb = a[..., :3].astype(np.int16)
+        matte = np.array(spec.get("raw_matte", [246, 240, 224]))
+        tolerance = spec.get("raw_tolerance", 27)
+        candidate = np.max(np.abs(rgb - matte), axis=2) < tolerance
+        flood = Image.fromarray(np.uint8(candidate) * 255).copy()
+        w, h = raw.size
+        seeds = [(x, y) for x in range(w) for y in (0, h - 1)]
+        seeds += [(x, y) for y in range(h) for x in (0, w - 1)]
+        for point in seeds:
+            if flood.getpixel(point) == 255:
+                ImageDraw.floodfill(flood, point, 128)
+        a[np.asarray(flood) == 128, 3] = 0
+    unmatte = Image.fromarray(a)
+    alpha = unmatte.getchannel("A")
+    threshold = spec.get("raw_alpha_threshold", 1)
+    box = alpha.point(lambda value: 255 if value >= threshold else 0).getbbox()
+    if box is None:
+        raise ValueError(f"Empty raw illustration: {spec['raw']}")
+    box = (box[0] - 8, box[1] - 8, box[2] + 8, box[3] + 8)
+    spec["raw_crop"] = list(box)
+    spec["source"].parent.mkdir(parents=True, exist_ok=True)
+    unmatte.crop(box).save(spec["source"], optimize=True)
 
 
 def lock_mask(source, spec):
@@ -198,6 +229,12 @@ def make_layers(tier, spec):
     # pixels; opaque artwork and all contours remain unchanged.
     overlap=body_a[seam:last_lid_y+1,:,3]
     overlap[overlap<255]=0
+    if spec.get("preserve_palette", False):
+        # Generated alpha may be 254 throughout an otherwise solid fill.
+        # Give the lid ownership of its seam overlap and the fixed latch
+        # ownership of its body pixels, avoiding repeated alpha blending.
+        # Repaired lid artwork behind the latch remains for opening motion.
+        body_a[(lid_a[..., 3] > 0) | (lock > 0), 3] = 0
     # Latch is fixed. Its below-seam source pixels remain exactly under its
     # own overlay in body; no hidden detail is invented behind it.
     padding = 20
@@ -208,7 +245,9 @@ def make_layers(tier, spec):
     for name, image in images.items():
         pad(image,padding).save(outdir/f"{name}.png", optimize=True)
     Image.fromarray(lock).save(outdir/"latch-mask.png", optimize=True)
-    source_bbox = source.getchannel("A").getbbox()
+    source_alpha = source.getchannel("A")
+    threshold = spec.get("raw_alpha_threshold", 1)
+    source_bbox = source_alpha.point(lambda value: 255 if value >= threshold else 0).getbbox()
     width = source_bbox[2]-source_bbox[0]
     s = AUTHOR_WIDTH/width
     cx = (source_bbox[0]+source_bbox[2]-1)/2
@@ -233,11 +272,19 @@ def make_layers(tier, spec):
     if 'raw' in spec:
         record['raw_source']=relative(spec['raw'])
         record['raw_source_sha256']=digest(spec['raw'])
-        record['gloss_policy']='User requested a richer slightly polished gold shop chest; four authored gold tones retained, coral field flattened.'
+        if tier == 'gold':
+            record['gloss_policy']='User requested a richer slightly polished gold shop chest; four authored gold tones retained, coral field flattened.'
         record['raw_crop']=spec.get('raw_crop')
+    if spec.get('preserve_palette', False):
+        record['palette_policy']='Original generated RGBA colors and alpha retained; no material quantization or edge recoloring.'
+    if threshold > 1:
+        record['normalization_alpha_threshold']=threshold
+        record['source_alpha_bbox_all']=list(source_alpha.getbbox())
+    if 'art_policy' in spec:
+        record['art_policy']=spec['art_policy']
     for size in (128,96,64,48,32):
         icon=Image.new("RGBA",(size,size))
-        cropped=closed.crop(closed.getchannel('A').getbbox())
+        cropped=closed.crop(source_bbox)
         target_width=round(size*.90)
         resized=cropped.resize((target_width,round(cropped.height*target_width/cropped.width)),Image.Resampling.LANCZOS)
         icon.alpha_composite(resized,((size-resized.width)//2,(size-resized.height)//2))
@@ -253,8 +300,8 @@ def fit(image, rect):
     return target,(round(x+(w-target.width)/2),round(y+(h-target.height)/2))
 
 
-def review(all_results):
-    REVIEW.mkdir(parents=True,exist_ok=True)
+def review(all_results, destination=REVIEW):
+    destination.mkdir(parents=True,exist_ok=True)
     board=Image.new("RGB",(1420,1120),"#f3eee0")
     draw=ImageDraw.Draw(board)
     def label(x,y,t,size=26):
@@ -281,7 +328,7 @@ def review(all_results):
         tile,pos=fit(preview,(950,y+13,425,280))
         board.paste(tile,pos,tile)
     label(35,1090,"Same source contours • no new ornament • prototype layers",17)
-    board.save(REVIEW/'production-comparison.png',optimize=True)
+    board.save(destination/'production-comparison.png',optimize=True)
     thumbs=Image.new('RGB',(970,500),'#e6ece1')
     d=ImageDraw.Draw(thumbs)
     for i,tier in enumerate(all_results):
@@ -291,28 +338,18 @@ def review(all_results):
             x=170+j*155; y=15+i*150+(128-size)//2
             thumbs.paste(im,(x,y),im)
             d.text((x,144+i*150),str(size)+'px',font=ImageFont.truetype(str(FONT),16),fill=INK)
-    thumbs.save(REVIEW/'actual-size-icons.png',optimize=True)
+    thumbs.save(destination/'actual-size-icons.png',optimize=True)
 
 
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--tiers',nargs='+',default=['wood','silver','gold'])
+    parser.add_argument('--review-dir',type=Path,default=REVIEW)
     args=parser.parse_args()
     DEST.mkdir(parents=True,exist_ok=True)
-    if 'gold' in args.tiers:
-        REVIEW.mkdir(parents=True,exist_ok=True)
-        raw=Image.open(SPECS['gold']['raw']).convert('RGBA')
-        a=np.asarray(raw).copy()
-        rgb=a[...,:3].astype(np.int16)
-        candidate=(np.max(np.abs(rgb-np.array([246,240,224])),axis=2)<27)
-        flood=Image.fromarray(np.uint8(candidate)*255).copy()
-        ImageDraw.floodfill(flood,(0,0),128)
-        a[np.asarray(flood)==128,3]=0
-        unmatte=Image.fromarray(a)
-        box=unmatte.getchannel('A').getbbox()
-        box=(box[0]-8,box[1]-8,box[2]+8,box[3]+8)
-        SPECS['gold']['raw_crop']=list(box)
-        unmatte.crop(box).save(SPECS['gold']['source'],optimize=True)
+    for tier in args.tiers:
+        if 'raw' in SPECS[tier]:
+            prepare_raw_source(SPECS[tier])
     manifest_path=DEST/'manifest.json'
     manifest=json.loads(manifest_path.read_text('utf-8')) if manifest_path.exists() else {
         'schema':1,'family':'B strongboxes','author_width':AUTHOR_WIDTH,'tiers':{},
@@ -324,7 +361,7 @@ def main():
         result=make_layers(tier,SPECS[tier]); manifest['tiers'][tier]=result[0]; results[tier]=result
     manifest_path.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n','utf-8')
     (DEST/'assets.gd').write_text('# Generated by tools/ui/build_strongbox_chests.py; do not edit by hand.\nextends RefCounted\n\nconst DATA := '+json.dumps(manifest,ensure_ascii=False,indent=2)+'\n','utf-8')
-    review(results)
+    review(results,args.review_dir)
     print(json.dumps({'manifest':relative(manifest_path),'tiers':list(results)},indent=2))
 
 

@@ -5,6 +5,7 @@ const OUT := "res://docs/ui_review/2026-10-24/shop-sections"
 const HomeScene = preload("res://game/menu/Home.tscn")
 const ShopCatalog = preload("res://game/core/ShopCatalog.gd")
 const UiKit = preload("res://game/ui/UiKit.gd")
+const Economy = preload("res://game/core/Economy.gd")
 const SIZES := [Vector2i(360, 640), Vector2i(450, 800)]
 var _home: Control
 var _checks := 0
@@ -33,16 +34,17 @@ func _ready() -> void:
 		await _snap("gem-packs-top", dimensions)
 		var packs: Array = ShopCatalog.gem_packs()
 		await _pack_pointer(packs[0], dimensions, "first")
-		await _scroll_bottom()
+		await _scroll_to(_item("GemPack_" + str(packs[-1]["id"])))
 		await _snap("gem-packs-bottom", dimensions)
 		await _pack_pointer(packs[-1], dimensions, "last")
+		await _gold_offers_pointer(dimensions)
 		await _gem_shortcut_pointer(dimensions)
 		_check_navigation(dimensions)
 	_check(not PlayerData.persist, "Review never persists player changes")
 	var report := {"checks": _checks, "failures": _failures, "captures": _captures,
 		"layouts": _layouts, "selections": _selections, "catalog": ShopCatalog.gem_packs(),
 		"profile": OS.get_user_data_dir(), "persist": PlayerData.persist,
-		"scope": "Production Home/Shop; centered section placards; unchanged chest purchases; six proposed gem packs; actual first/last pack pointers and dismiss; no payment or currency grants."}
+		"scope": "Production Home/Shop; centered section placards; unchanged chest purchases; six proposed gem packs without payment; daily free gold with saved duplicate protection; five diamond-to-gold tiers with real first/last pointer purchases and exact currency deltas."}
 	var file := FileAccess.open(OUT + "/manifest.json", FileAccess.WRITE)
 	file.store_string(JSON.stringify(report, "\t"))
 	print("SHOP_SECTIONS_INTEGRATION_COMPLETE checks=", _checks, " captures=", _captures.size(), " failures=", _failures)
@@ -78,11 +80,8 @@ func _item(title: String) -> Control:
 
 
 func _check_layout(dimensions: Vector2i) -> void:
-	_check(_item("GemExchange") == null and _item("GemExchangeAction") == null, "Diamond-to-gold exchange is absent from the entire production Shop tree")
-	for copy in _shop().find_children("*", "Label", true, false):
-		_check(not copy.text.contains("Đổi kim cương"), "No retired exchange heading remains")
 	var sections: Array = []
-	for id in ["premium", "supply", "gems"]:
+	for id in ["premium", "supply", "gems", "gold"]:
 		var section := _item("ShopSection_" + id)
 		_check(section != null, "Section placard exists: " + id)
 		if section == null:
@@ -96,6 +95,7 @@ func _check_layout(dimensions: Vector2i) -> void:
 		sections.append({"id": id, "rect": _rect_values(section.get_global_rect())})
 	_check(_item("ShopSection_premium").get_global_rect().position.y < _item("ShopSection_supply").get_global_rect().position.y, "Premium chests precede supply chests")
 	_check(_item("ShopSection_supply").get_global_rect().position.y < _item("ShopSection_gems").get_global_rect().position.y, "Supply chests precede gem packs")
+	_check(_item("ShopSection_gems").get_global_rect().position.y < _item("ShopSection_gold").get_global_rect().position.y, "Gold offers follow gem packs")
 	for title in ["FeaturedChest", "GoldRewardBubble", "GoldOpen", "GoldOpenTen", "GoldMaterials", "GoldGuarantee", "ShopRates", "SupplyChestGrid", "SupplyChest_wood", "SupplyChest_silver", "WoodOpen", "SilverOpen", "GemPackGrid"]:
 		var node := _item(title)
 		_check(node != null, "Preserved or new production node exists: " + title)
@@ -106,7 +106,8 @@ func _check_layout(dimensions: Vector2i) -> void:
 	for id in ["wood", "silver"]:
 		var panel := _item("SupplyChest_" + id) as PanelContainer
 		var style := panel.get_theme_stylebox("panel") as StyleBoxTexture
-		_check(style != null and style.texture.resource_path == "res://game/ui/skin/menu/shop_teal_supply.svg", id + " retains its approved supply artwork")
+		var expected_skin := "shop_silver_supply.svg" if id == "silver" else "shop_teal_supply.svg"
+		_check(style != null and style.texture.resource_path == "res://game/ui/skin/menu/" + expected_skin, id + " uses its own intended supply frame")
 	_check(not (_item("GoldOpen") as Button).disabled and not (_item("GoldOpenTen") as Button).disabled, "Funded Gold x1/x10 actions remain available")
 	var grid := _item("GemPackGrid") as GridContainer
 	var packs: Array = ShopCatalog.gem_packs()
@@ -131,6 +132,40 @@ func _check_layout(dimensions: Vector2i) -> void:
 			_check(card.get_global_rect().grow(1.0).encloses(illustration.get_global_rect()), "Generated illustration stays within its pack card: " + id)
 			illustration_paths.append(path)
 	_check(illustration_paths.size() == 6, "All six pack illustrations have unique texture paths")
+	var gold_grid := _item("GoldExchangeGrid") as GridContainer
+	_check(gold_grid != null and gold_grid.columns == 3 and gold_grid.get_child_count() == 6, "Daily free gold and five exchange offers fit a three-column grid")
+	var gold_illustrations: Array = []
+	var gold_art_fingerprints: Array = []
+	for offer_data in ShopCatalog.gold_offers():
+		var id := str(offer_data["id"])
+		var offer := _item("GoldOffer_" + id)
+		_check(offer != null and _inside_horizontal(offer), "Gold offer fits the viewport: " + id)
+		var illustration := _item("GoldOfferIllustration_" + id) as TextureRect
+		_check(illustration != null and illustration.texture != null, "Gold offer uses a generated illustration: " + id)
+		if offer == null or illustration == null or illustration.texture == null:
+			continue
+		var expected_path := "res://game/ui/art/shop_gold_packs/%02d.png" % int(offer_data["art_level"])
+		var path := illustration.texture.resource_path
+		_check(path == expected_path and not gold_illustrations.has(path), "Gold offer assigns its distinct progression illustration: " + id)
+		gold_illustrations.append(path)
+		_check(offer.get_global_rect().grow(1.0).encloses(illustration.get_global_rect()), "Gold illustration stage stays within its offer card: " + id)
+		_check(illustration.expand_mode == TextureRect.EXPAND_IGNORE_SIZE and illustration.stretch_mode == TextureRect.STRETCH_KEEP_ASPECT_CENTERED, "Gold illustration keeps its full aspect and centered fit: " + id)
+		var image := illustration.texture.get_image()
+		var image_size := Vector2(image.get_size())
+		var stage := illustration.get_global_rect()
+		var fit := minf(stage.size.x / image_size.x, stage.size.y / image_size.y)
+		var painted := Rect2(image.get_used_rect())
+		painted.position = stage.position + (stage.size - image_size * fit) * 0.5 + painted.position * fit
+		painted.size *= fit
+		_check(painted.has_area() and stage.grow(1.0).encloses(painted), "Gold painted artwork is visible and fully contained: " + id)
+		_check(painted.get_center().distance_to(stage.get_center()) <= 1.0, "Gold painted artwork is centered horizontally and vertically: " + id)
+		var digest := HashingContext.new()
+		digest.start(HashingContext.HASH_SHA256)
+		digest.update(image.get_data())
+		var fingerprint := digest.finish().hex_encode()
+		_check(not gold_art_fingerprints.has(fingerprint), "Gold offer artwork differs from every other tier: " + id)
+		gold_art_fingerprints.append(fingerprint)
+	_check(gold_illustrations.size() == 6, "All six gold offers use unique generated textures")
 	if grid != null and grid.get_child_count() == 6:
 		for index in 6:
 			var card := grid.get_child(index) as Control
@@ -201,19 +236,94 @@ func _gem_shortcut_pointer(dimensions: Vector2i) -> void:
 	await _snap("header-gem-shortcut", dimensions)
 
 
+func _gold_offers_pointer(dimensions: Vector2i) -> void:
+	var saved: Dictionary = PlayerData.to_dict().duplicate(true)
+	PlayerData.gold = 1800
+	PlayerData.gems = 2400
+	PlayerData.shop_gold_day = -1
+	PlayerData.changed.emit()
+	await _settle()
+	await _scroll_to(_item("ShopSection_gold"))
+	_check(_visible_inside_content(_item("ShopSection_gold")), "Gold section is reachable at " + str(dimensions))
+	var daily := _item("DailyGoldClaim") as Button
+	_check(daily != null and not daily.disabled and PlayerData.shop_gold_available(), "Unclaimed daily gold is available")
+	await _snap("gold-offers-before-claim", dimensions)
+	if daily != null:
+		var gold_before: int = PlayerData.gold
+		var gems_before: int = PlayerData.gems
+		await _tap(daily)
+		await _settle()
+		_check(PlayerData.gold == gold_before + Economy.DAILY_SHOP_GOLD and PlayerData.gems == gems_before, "Daily gold pointer grants its stated gold once without spending gems")
+		_check(_home._gold_label.text == UiKit.format_number(PlayerData.gold) and _home._gem_label.text == UiKit.format_number(PlayerData.gems), "Daily claim updates both shared currency labels")
+		_check(not PlayerData.shop_gold_available(), "Daily claim locks immediately after receiving gold")
+		var claimed: Dictionary = PlayerData.to_dict().duplicate(true)
+		PlayerData.from_dict(claimed)
+		PlayerData.changed.emit()
+		await _settle()
+		await _scroll_to(_item("ShopSection_gold"))
+		daily = _item("DailyGoldClaim") as Button
+		var status := _item("DailyGoldStatus") as Label
+		_check(daily != null and daily.disabled, "Saved daily claim stays disabled after profile reload and UI rebuild")
+		_check(status != null and not status.text.is_empty(), "Claimed daily gold explains its unavailable state")
+		if daily != null:
+			await _tap(daily)
+			await _settle()
+		_check(PlayerData.claim_shop_gold() == 0 and PlayerData.to_dict() == claimed, "A second pointer and direct repeat claim grant no extra daily gold")
+		await _snap("gold-offers-after-claim", dimensions)
+	for multiplier in [1, 50]:
+		var id := "gold_" + str(multiplier)
+		var action := _item("GoldExchangeBuy_" + id) as Button
+		_check(action != null and not action.disabled, "Funded gold exchange is available: " + id)
+		if action == null:
+			continue
+		await _scroll_to(action)
+		_check(_visible_inside_content(action), "Paid gold action is fully reachable: " + id)
+		var gold_before: int = PlayerData.gold
+		var gems_before: int = PlayerData.gems
+		await _tap(action)
+		await _settle()
+		_check(PlayerData.gold == gold_before + Economy.EXCHANGE_GOLD * multiplier and PlayerData.gems == gems_before - Economy.EXCHANGE_GEMS * multiplier, "Real pointer exchanges exact gold and gems: " + id)
+		_check(_home._gold_label.text == UiKit.format_number(PlayerData.gold) and _home._gem_label.text == UiKit.format_number(PlayerData.gems), "Paid gold exchange updates both shared currency labels: " + id)
+	# Balance changes must reach the displayed offer before the next purchase,
+	# including a live tick that does not rebuild the production card.
+	var base_gems: int = Economy.EXCHANGE_GEMS
+	var base_gold: int = Economy.EXCHANGE_GOLD
+	var live_action := _item("GoldExchangeBuy_gold_1") as Button
+	var live_amount := _item("GoldOfferAmount_gold_1") as Label
+	Economy.EXCHANGE_GEMS = 13
+	Economy.EXCHANGE_GOLD = 333
+	_shop().tick()
+	_check(live_action != null and _item("GoldExchangeBuy_gold_1") == live_action, "A live rate update preserves the existing purchase control")
+	_check(live_amount != null and live_amount.text == UiKit.format_number(333), "A live tick updates the displayed gold amount to the new rate")
+	_check(live_action != null and live_action.text == UiKit.format_number(13) and not live_action.disabled, "A live tick updates the displayed gem price before spending")
+	if live_action != null:
+		await _scroll_to(live_action)
+		var gold_before: int = PlayerData.gold
+		var gems_before: int = PlayerData.gems
+		await _tap(live_action)
+		await _settle()
+		_check(PlayerData.gold == gold_before + 333 and PlayerData.gems == gems_before - 13, "Real pointer exchanges exactly the newly displayed live rate")
+	Economy.EXCHANGE_GEMS = base_gems
+	Economy.EXCHANGE_GOLD = base_gold
+	_shop().tick()
+	PlayerData.gems = maxi(0, Economy.EXCHANGE_GEMS - 1)
+	PlayerData.changed.emit()
+	await _settle()
+	for multiplier in [1, 5, 10, 25, 50]:
+		var action := _item("GoldExchangeBuy_gold_" + str(multiplier)) as Button
+		_check(action != null and action.disabled, "Gold exchange prevents an unaffordable purchase: " + str(multiplier))
+	PlayerData.from_dict(saved)
+	PlayerData.changed.emit()
+	await _settle()
+	_check(PlayerData.to_dict() == saved, "Gold interaction review restores the complete isolated account")
+
+
 func _scroll_to(node: Control) -> void:
 	if node == null:
 		return
 	var scroll := _shop().get_child(0) as ScrollContainer
 	scroll.scroll_vertical += roundi(node.get_global_rect().position.y - scroll.get_global_rect().position.y)
 	await _settle()
-
-
-func _scroll_bottom() -> void:
-	var scroll := _shop().get_child(0) as ScrollContainer
-	scroll.scroll_vertical = 100000
-	await _settle()
-	_check(scroll.scroll_vertical > 0, "Shop scroll reaches the final gem pack row")
 
 
 func _visible_inside_content(node: Control) -> bool:

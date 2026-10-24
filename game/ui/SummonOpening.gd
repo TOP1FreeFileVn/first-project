@@ -1,25 +1,25 @@
 extends Control
 
-# Full-screen troop summon:
-#   charge   - a summoning circle spins up; its light starts white and turns to the colour
-#              of the best result (longer and stronger for epic / legendary);
-#   burst    - flash and shockwave, the cards fly out face down into place;
-#   reveal   - they flip one by one; epic and legendary cards stop for a banner and shake;
+# Full-screen troop summon. A floating card gathers the paw portal's motes, compresses,
+# then releases the hand. Rarity is hinted only at the end of the charge.
+#   reveal   - cards flip one by one, with a local celebration for epic / legendary;
 #   showcase - every new troop and every epic or legendary card steps out large (tap to continue);
 #   done     - the results stay on screen with DONE and SUMMON AGAIN.
 # The results are already granted, so SKIP or closing never loses anything.
 
 signal closed
 
+const Cats = preload("res://game/data/Cats.gd")
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const Economy = preload("res://game/core/Economy.gd")
 const TroopData = preload("res://game/data/TroopData.gd")
-const DrawnIcon = preload("res://game/ui/DrawnIcon.gd")
+const SummonPortal = preload("res://game/ui/SummonPortal.gd")
 
 const SCREEN := Vector2(720, 1280)
 const CIRCLE_AT := Vector2(360, 600)
 const CARD_SIZE := Vector2(122, 168)
+const SOURCE_SIZE := Vector2(156, 212)
 
 var _results: Array = []
 var _menu_pattern := false
@@ -28,6 +28,7 @@ var _best := 0
 var _stage := "charge"
 var _time := 0.0
 var _tween: Tween
+var _motions: Array[Tween] = []
 var _cards: Array = []
 var _next := 0
 var _showcase_queue: Array = []
@@ -35,18 +36,17 @@ var _showcase_queue: Array = []
 var _fresh := {}
 var _special_until := 0.0
 
-# Drawn state.
+# Presentation only: no reward or currency changes happen in this layer.
 var dim := 0.0
-var spin := 0.0
 var charge := 0.0
 var circle_alpha := 1.0
-var light := Color.WHITE
-var flash := 0.0
-var ring := 0.0
-var ray_alpha := 0.0
+var light := Color("d7c2f4")
+var source_squash := Vector2.ONE
+var _portal: Node2D
+var _source_card: Control
 
-var _front: Control
 var _hint: Label
+var _status: Label
 var _skip: Button
 var _extras: Array = []
 
@@ -77,6 +77,14 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	theme = UiKit.make_theme()
+	_portal = SummonPortal.new()
+	_portal.name = "SummonPortal"
+	_portal.position = CIRCLE_AT
+	add_child(_portal)
+	_source_card = UiKit.card_back_face(SOURCE_SIZE, true)
+	_source_card.name = "SummonSourceCard"
+	_source_card.pivot_offset = SOURCE_SIZE / 2.0
+	add_child(_source_card)
 	_hint = UiKit.label("", 22, UiKit.INFO)
 	_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_hint.position = Vector2(0, 1040)
@@ -90,24 +98,29 @@ func _ready() -> void:
 	title.size = Vector2(SCREEN.x, 50)
 	title.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(title)
+	_status = UiKit.label("GỌI ĐỒNG ĐỘI", 26, Color("e7d6f6"))
+	_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_status.position = Vector2(40, 236)
+	_status.size = Vector2(SCREEN.x - 80, 42)
+	_status.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_status)
 	_skip = UiKit.button("BỎ QUA ≫", Vector2(170, 64), skip)
 	_skip.position = Vector2(530, 140)
 	add_child(_skip)
-	_front = Control.new()
-	_front.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	_front.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	_front.draw.connect(_draw_front)
-	add_child(_front)
 	_charge()
 
 
 func _process(delta: float) -> void:
 	_time += delta
-	spin += delta * (0.6 + charge * 6.0)
-	if _front.get_index() != get_child_count() - 1:
-		move_child(_front, -1)
+	_portal.energy = charge
+	_portal.opacity = circle_alpha
+	_portal.accent = light
+	if _stage == "charge":
+		_source_card.position = CIRCLE_AT - SOURCE_SIZE / 2.0 + Vector2(0, -24.0 - charge * 65.0 + sin(_time * 2.8) * 7.0)
+		_source_card.scale = Vector2.ONE * (0.8 + charge * 0.4) * source_squash
+		_source_card.rotation = sin(_time * 2.0) * 0.065 * (1.0 - charge * 0.6)
+	_motions = _motions.filter(func(motion: Tween): return motion.is_valid() and motion.is_running())
 	queue_redraw()
-	_front.queue_redraw()
 
 
 func _gui_input(event: InputEvent) -> void:
@@ -124,9 +137,9 @@ func _on_tap() -> void:
 			if _tween != null and _tween.is_valid():
 				_tween.custom_step(60.0)
 		"reveal":
-			# Flip everything left, still stopping for the specials.
+			# Finish an ordinary flip, but leave a rare card's hold on screen.
 			if _tween != null and _tween.is_valid():
-				_tween.custom_step(60.0)
+				_tween.custom_step(0.34)
 		"showcase":
 			_next_showcase()
 
@@ -136,10 +149,13 @@ func skip() -> void:
 		return
 	if _tween != null and _tween.is_valid():
 		_tween.kill()
+	_stop_motion()
 	_clear_extras()
+	_portal.clear_bursts()
+	_source_card.visible = false
 	_showcase_queue.clear()
 	charge = 0.0
-	circle_alpha = 0.35
+	circle_alpha = 0.45
 	if _cards.is_empty():
 		_deal(false)
 	for card in _cards:
@@ -154,14 +170,17 @@ func skip() -> void:
 
 func _charge() -> void:
 	_stage = "charge"
-	var target: Color = Economy.RARITY_COLORS[_best].lightened(0.3)
-	var time: float = [0.8, 0.9, 1.15, 1.45][_best] + (0.2 if _results.size() > 1 else 0.0)
+	_hint.text = "Chạm để gọi nhanh"
+	var target: Color = Economy.RARITY_COLORS[_best].lightened(0.22)
+	var time: float = [1.0, 1.1, 1.25, 1.45][_best] + (0.1 if _results.size() > 1 else 0.0)
 	_tween = create_tween()
 	_tween.set_parallel()
 	_tween.tween_property(self, "dim", 0.9, 0.25)
-	_tween.tween_property(self, "charge", 1.0, time).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	_tween.tween_property(self, "charge", 1.0, time - 0.16).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
 	# The colour gives the result away only near the end.
-	_tween.tween_property(self, "light", target, time).set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN)
+	_tween.tween_property(self, "light", target, 0.3).set_delay(time - 0.3).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_IN)
+	# A short compression gives the release weight without shaking the interface.
+	_tween.tween_property(self, "source_squash", Vector2(0.84, 1.12), 0.16).set_delay(time - 0.16)
 	_tween.chain().tween_callback(_burst)
 	SoundLib.play("charge", -2.0, 0.0)
 
@@ -170,17 +189,14 @@ func _burst() -> void:
 	_stage = "burst"
 	SoundLib.play("chest_open", 0.0, 0.0)
 	charge = 0.0
-	flash = 0.9 if _best >= 2 else 0.6
-	create_tween().tween_property(self, "flash", 0.0, 0.4)
-	ring = 0.001
-	create_tween().tween_property(self, "ring", 1.0, 0.6).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	_shake(12.0 if _best >= 2 else 6.0, 0.3)
-	_fx("blast", CIRCLE_AT, 1.8, light)
-	ray_alpha = 1.0
-	circle_alpha = 0.35
+	_source_card.visible = false
+	_status.text = "ĐỒNG ĐỘI ĐANG ĐẾN!"
+	_hint.text = ""
+	_portal.pulse(Vector2(0, -65), light, 1.45 if _best >= 2 else 1.0)
+	circle_alpha = 0.6
 	_deal(true)
 	_tween = create_tween()
-	_tween.tween_interval(0.55)
+	_tween.tween_interval(0.5 if _results.size() == 1 else 0.82)
 	_tween.tween_callback(_reveal_next)
 
 
@@ -204,19 +220,29 @@ func _deal(animate: bool) -> void:
 		move_child(card, _hint.get_index())
 		_cards.append(card)
 		if animate:
-			card.position = CIRCLE_AT - CARD_SIZE / 2.0
-			card.scale = Vector2(0.2, 0.2)
-			card.rotation = randf_range(-1.0, 1.0)
-			var fly := card.create_tween().set_parallel()
-			fly.tween_property(card, "position", home, 0.35).set_delay(i * 0.04).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-			fly.tween_property(card, "scale", Vector2.ONE * card_scale, 0.35).set_delay(i * 0.04)
-			fly.tween_property(card, "rotation", 0.0, 0.35).set_delay(i * 0.04)
+			card.position = CIRCLE_AT - CARD_SIZE / 2.0 - Vector2(0, 65)
+			card.scale = Vector2(0.15, 0.15)
+			card.modulate.a = 0.0
+			card.rotation = (float(i) - float(count - 1) / 2.0) * 0.12
+			var fly := _motion().set_parallel()
+			fly.tween_property(card, "position", home, 0.46).set_delay(i * 0.032).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+			fly.tween_property(card, "scale", Vector2.ONE * card_scale, 0.46).set_delay(i * 0.032).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+			fly.tween_property(card, "rotation", 0.0, 0.4).set_delay(i * 0.032)
+			fly.tween_property(card, "modulate:a", 1.0, 0.12).set_delay(i * 0.032)
 		else:
 			card.position = home
 			card.scale = Vector2.ONE * card_scale
 
 
 func _reveal_next() -> void:
+	if _stage == "burst":
+		# A tap can finish the burst timer before the staggered flights finish.
+		_stop_motion()
+		for dealt in _cards:
+			dealt.position = dealt.get_meta("home")
+			dealt.scale = Vector2.ONE * dealt.get_meta("scale")
+			dealt.rotation = 0.0
+			dealt.modulate.a = 1.0
 	_stage = "reveal"
 	_hint.text = "Chạm để lật nhanh"
 	if _next >= _cards.size():
@@ -225,27 +251,27 @@ func _reveal_next() -> void:
 	var card: Control = _cards[_next]
 	var result: Dictionary = _results[_next]
 	_next += 1
+	_status.text = "DẤU ẤN ĐỒNG ĐỘI · %d / %d" % [_next, _results.size()]
 	var rank := _rank(result)
 	var card_scale: float = card.get_meta("scale")
 	_tween = create_tween()
 	if rank >= 2:
 		# Tease: the face-down card trembles in its colour.
 		card.get_node("Back").self_modulate = Economy.RARITY_COLORS[rank].lightened(0.2)
-		for i in 4:
-			_tween.tween_property(card, "rotation", 0.1 * (1 if i % 2 == 0 else -1), 0.05)
-		_tween.tween_property(card, "rotation", 0.0, 0.04)
+		_tween.tween_property(card, "scale", Vector2.ONE * card_scale * 1.08, 0.15).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	_tween.tween_property(card, "scale:x", 0.0, 0.08)
 	_tween.tween_callback(func():
 		SoundLib.play("flip")
 		_set_face(card, true)
+		_portal.pulse(card.position + CARD_SIZE / 2.0 - CIRCLE_AT, Economy.RARITY_COLORS[rank], 0.65 if rank < 2 else 1.0)
 		if rank >= 2:
 			_special(card, result, rank))
-	_tween.tween_property(card, "scale:x", card_scale, 0.1).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	_tween.tween_property(card, "scale", Vector2.ONE * card_scale, 0.18).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	_tween.tween_interval(0.9 if rank >= 2 else 0.04)
 	_tween.tween_callback(_reveal_next)
 
 
-func _special(card: Control, result: Dictionary, rank: int) -> void:
+func _special(_card: Control, result: Dictionary, rank: int) -> void:
 	_special_until = _time + 0.45
 	MusicLib.duck(1.6)
 	SoundLib.play("legend" if rank >= 3 else "epic", 0.0, 0.0)
@@ -253,30 +279,23 @@ func _special(card: Control, result: Dictionary, rank: int) -> void:
 	var text := "HUYỀN THOẠI!" if rank >= 3 else "SỬ THI!"
 	if result.get("new", false):
 		text = "MỚI! " + text
-	var banner := UiKit.label(text, 52, color)
-	banner.add_theme_constant_override("outline_size", 12)
+	var banner := UiKit.label(text, 40, color.lightened(0.15))
+	banner.add_theme_constant_override("outline_size", 7)
 	banner.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	banner.position = Vector2(0, 200)
+	banner.position = Vector2(0, 302)
 	banner.size = Vector2(SCREEN.x, 70)
 	banner.pivot_offset = banner.size / 2.0
-	banner.scale = Vector2(2.2, 2.2)
+	banner.scale = Vector2(0.88, 0.88)
 	banner.modulate.a = 0.0
 	banner.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(banner)
 	_extras.append(banner)
-	var slam := banner.create_tween().set_parallel()
+	var slam := _motion().set_parallel()
 	slam.tween_property(banner, "scale", Vector2.ONE, 0.2).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	slam.tween_property(banner, "modulate:a", 1.0, 0.1)
 	slam.chain().tween_interval(0.5)
 	slam.chain().tween_property(banner, "modulate:a", 0.0, 0.25)
-	var center: Vector2 = card.position + card.pivot_offset
-	_fx("blast", center, 1.4, color.lightened(0.3))
-	_shake(10.0 if rank >= 3 else 6.0, 0.3)
-	flash = 0.5 if rank >= 3 else 0.3
-	create_tween().tween_property(self, "flash", 0.0, 0.3)
-	light = color.lightened(0.3)
-	ring = 0.001
-	create_tween().tween_property(self, "ring", 1.0, 0.5)
+	light = color.lightened(0.22)
 
 
 func _after_reveal() -> void:
@@ -288,11 +307,13 @@ func _after_reveal() -> void:
 
 # One troop at a time, large and running, with its name, class and ability.
 func _next_showcase() -> void:
+	_stop_motion()
 	_clear_extras()
 	if _showcase_queue.is_empty():
 		_done()
 		return
 	_stage = "showcase"
+	_status.text = "GẶP GỠ ĐỒNG ĐỘI"
 	_special_until = _time + 0.5
 	_hint.text = "Chạm để tiếp tục"
 	var id: String = _showcase_queue.pop_front()
@@ -303,7 +324,7 @@ func _next_showcase() -> void:
 	for card in _cards:
 		card.modulate.a = 0.15
 	var shade := ColorRect.new()
-	shade.color = Color(0, 0, 0, 0.5)
+	shade.color = Color(0.06, 0.03, 0.1, 0.65)
 	shade.size = SCREEN
 	shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(shade)
@@ -313,15 +334,24 @@ func _next_showcase() -> void:
 	sprite.sprite_frames = SpriteLib.unit_frames(troop.unit_key, "Blue")
 	sprite.offset = Vector2(0, -SpriteLib.foot_offset(troop.unit_key))
 	sprite.position = Vector2(360, 700)
-	sprite.scale = Vector2(0.2, 0.2)
+	sprite.scale = Vector2(1.8, 1.8)
+	sprite.modulate.a = 0.0
 	sprite.play("attack")
 	sprite.animation_finished.connect(func(): sprite.play("idle"))
 	add_child(sprite)
 	_extras.append(sprite)
-	sprite.create_tween().tween_property(sprite, "scale", Vector2(2.4, 2.4), 0.35).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	_fx("blast", Vector2(360, 590), 2.2, color.lightened(0.3))
-	flash = 0.7
-	create_tween().tween_property(self, "flash", 0.0, 0.4)
+	var arrive := _motion().set_parallel()
+	arrive.tween_property(sprite, "scale", Vector2(2.4, 2.4), 0.38).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	arrive.tween_property(sprite, "modulate:a", 1.0, 0.2)
+	# This celebration sits above the showcase shade, behind the unchanged cat.
+	var celebration := SummonPortal.new()
+	celebration.position = CIRCLE_AT
+	celebration.opacity = 0.7
+	celebration.accent = light
+	add_child(celebration)
+	move_child(celebration, sprite.get_index())
+	_extras.append(celebration)
+	celebration.pulse(Vector2(0, -30), color.lightened(0.2), 1.6)
 	var box := UiKit.vbox(4)
 	box.position = Vector2(0, 760)
 	box.size = Vector2(SCREEN.x, 0)
@@ -336,7 +366,7 @@ func _next_showcase() -> void:
 	name_label.add_theme_constant_override("outline_size", 8)
 	name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(name_label)
-	var klass := UiKit.label("✦ %s · %s" % [TroopData.KLASS_NAMES[troop.klass], Economy.RARITY_NAMES[troop.rarity]], 22, Color("9ff0a0"))
+	var klass := UiKit.label("✦ %s · %s · %s" % [TroopData.KLASS_NAMES[troop.klass], Economy.RARITY_NAMES[troop.rarity], Cats.WORLD_NAMES.get(Cats.world_of(id), "")], 22, Color("9ff0a0"))
 	klass.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	box.add_child(klass)
 	if troop.ability_text != "":
@@ -347,14 +377,20 @@ func _next_showcase() -> void:
 		box.add_child(skill)
 
 func _done() -> void:
+	if _stage == "done":
+		return
 	_stage = "done"
+	_stop_motion()
 	_clear_extras()
+	_source_card.visible = false
 	_skip.visible = false
 	_hint.text = ""
-	ray_alpha = 0.4
+	_status.text = "ĐỒNG ĐỘI ĐÃ SẴN SÀNG"
+	circle_alpha = 0.45
 	for card in _cards:
 		card.modulate.a = 1.0
 	var buttons := UiKit.hbox(18)
+	buttons.name = "SummonResultButtons"
 	buttons.alignment = BoxContainer.ALIGNMENT_CENTER
 	buttons.position = Vector2(0, 1010)
 	buttons.size = Vector2(SCREEN.x, 90)
@@ -371,6 +407,9 @@ func _done() -> void:
 
 
 func _close() -> void:
+	if _tween != null and _tween.is_valid():
+		_tween.kill()
+	_stop_motion()
 	closed.emit()
 	var layer := get_parent()
 	if layer is CanvasLayer:
@@ -383,45 +422,6 @@ func _close() -> void:
 
 func _draw() -> void:
 	draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(0.03, 0.02, 0.08, dim * (0.5 if _menu_pattern else 1.0)))
-	if ray_alpha > 0.0:
-		for i in 14:
-			var angle := _time * 0.3 + i * TAU / 14.0
-			draw_colored_polygon(PackedVector2Array([CIRCLE_AT, CIRCLE_AT + Vector2.from_angle(angle - 0.08) * 1000.0,
-				CIRCLE_AT + Vector2.from_angle(angle + 0.08) * 1000.0]), Color(light, 0.08 * ray_alpha))
-	# The summoning circle, flattened like a floor seal.
-	var glow := 0.3 + charge * 0.7
-	draw_set_transform(CIRCLE_AT + Vector2(0, 150), 0.0, Vector2(1.0, 0.36))
-	for i in 4:
-		draw_circle(Vector2.ZERO, 250.0 - i * 40.0, Color(light, (0.05 + 0.05 * i) * glow * circle_alpha))
-	draw_arc(Vector2.ZERO, 250.0, 0.0, TAU, 72, Color(light, 0.9 * circle_alpha), 6.0, true)
-	draw_arc(Vector2.ZERO, 205.0, spin, spin + TAU * 0.75, 60, Color(light.lightened(0.3), 0.8 * circle_alpha), 4.0, true)
-	draw_arc(Vector2.ZERO, 160.0, -spin * 1.4, -spin * 1.4 + TAU * 0.6, 48, Color(light, 0.7 * circle_alpha), 3.0, true)
-	for i in 12:
-		var at := Vector2.from_angle(spin + i * TAU / 12.0) * 228.0
-		draw_rect(Rect2(at - Vector2(6, 6), Vector2(12, 12)), Color(light.lightened(0.5), 0.9 * circle_alpha))
-	var star := PackedVector2Array()
-	for i in 12:
-		star.append(Vector2.from_angle(-spin + i * TAU / 12.0) * (140.0 if i % 2 == 0 else 60.0))
-	star.append(star[0])
-	draw_polyline(star, Color(light, 0.6 * circle_alpha), 3.0, true)
-	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-	# A pillar of light while charging.
-	if charge > 0.0:
-		var width := 60.0 + charge * 160.0
-		draw_colored_polygon(PackedVector2Array([CIRCLE_AT + Vector2(-width, 150), CIRCLE_AT + Vector2(width, 150),
-			CIRCLE_AT + Vector2(width * 0.6, -700), CIRCLE_AT + Vector2(-width * 0.6, -700)]), Color(light, 0.25 * charge))
-		for i in 6:
-			var t := fmod(_time * 1.5 + i * 0.37, 1.0)
-			var at := CIRCLE_AT + Vector2(sin(i * 2.1) * width * 0.8, 150 - t * 600.0)
-			draw_circle(at, 4.0 + 4.0 * charge, Color(light.lightened(0.5), (1.0 - t) * charge))
-
-
-func _draw_front() -> void:
-	if ring > 0.0 and ring < 1.0:
-		var r := lerpf(40.0, 700.0, ring)
-		_front.draw_arc(CIRCLE_AT, r, 0.0, TAU, 72, Color(light.lightened(0.4), 0.8 * (1.0 - ring)), 26.0 * (1.0 - ring) + 2.0, true)
-	if flash > 0.0:
-		_front.draw_rect(Rect2(Vector2(-60, -60), SCREEN + Vector2(120, 120)), Color(1, 1, 0.97, flash))
 
 
 # --- Pieces -------------------------------------------------------------------------------
@@ -472,28 +472,22 @@ func _set_face(card: Control, up: bool) -> void:
 	card.get_node("Front").visible = up
 
 
-func _fx(effect: String, at: Vector2, effect_scale: float, color := Color.WHITE) -> void:
-	var fx := AnimatedSprite2D.new()
-	fx.sprite_frames = SpriteLib.effect_frames(effect)
-	fx.position = at
-	fx.scale = Vector2(effect_scale, effect_scale)
-	fx.modulate = color
-	fx.animation_finished.connect(fx.queue_free)
-	add_child(fx)
-	fx.play("default")
+func _motion() -> Tween:
+	var motion := create_tween()
+	_motions.append(motion)
+	return motion
 
 
-func _shake(strength: float, duration: float) -> void:
-	var tween := create_tween()
-	var steps := int(duration / 0.04)
-	for i in steps:
-		var fall := 1.0 - float(i) / steps
-		tween.tween_property(self, "position", Vector2(randf_range(-1, 1), randf_range(-1, 1)) * strength * fall, 0.04)
-	tween.tween_property(self, "position", Vector2.ZERO, 0.04)
+func _stop_motion() -> void:
+	for motion in _motions:
+		if motion.is_valid():
+			motion.kill()
+	_motions.clear()
 
 
 func _clear_extras() -> void:
 	for node in _extras:
 		if is_instance_valid(node):
+			node.hide()
 			node.queue_free()
 	_extras.clear()

@@ -10,16 +10,14 @@ extends RefCounted
 # stats (hp -> castle HP, def -> less damage to the wall, atk -> the hero's skill).
 #
 # Economy, kept apart from the troops so the two never fight over one currency:
-#   source  - chests (balance.json "chests": items + Forge Stones) and Forge Stones from
-#             battles and the patrol;
-#   level   - Forge Stones (đá rèn) plus a little gold (upgrade_cost / upgrade_gold);
+#   items   - shop chests (balance.json "chests");
+#   level   - Blueprints (bản vẽ) of the item's slot, the only equipment resource
+#             (upgrade_cost). They come from chests, battles, the patrol, boss levels,
+#             quest milestones and salvaging items of that slot;
 #   cap     - an item's rarity sets its max level (LEVEL_CAP: 10/20/30/40);
-#   break   - levels 10, 20 and 30 are breakthroughs that also need Blueprints (bản vẽ) of
-#             the item's slot (BREAK_BLUEPRINTS). Blueprints come from boss levels, Silver and
-#             Gold chests, the daily quest milestones and salvaging items of that slot;
-#   rarity  - three identical items of one rarity fuse into the next rarity (fuse()), which
-#             is what raises the cap;
-#   spare   - an unworn item salvages back into Forge Stones (salvage_value()).
+#   rarity  - three identical items fuse into the next rarity (fuse()), the only way to
+#             raise the cap;
+#   spare   - an unworn item salvages back into Blueprints of its slot (salvage_value()).
 # The save keeps {"equipped": {slot: uid}, "bag": {uid: {"id", "level"}}, "next": uid}
 # in PlayerData.hero_cat. Removed equipment is retained in a separate retired_items archive.
 
@@ -40,13 +38,19 @@ const PER_LEVEL := 0.12
 ## Max level by rarity (common, rare, epic, legendary); MAX_LEVEL is the highest of them.
 const LEVEL_CAP := [10, 20, 30, 40]
 const MAX_LEVEL := 40
-## Going past these levels is a breakthrough: Blueprints of the item's slot, as well as stones.
-const BREAK_BLUEPRINTS := {10: 5, 20: 15, 30: 40}
-## Blueprints a salvaged item returns (of its own slot), by rarity.
-const SALVAGE_BLUEPRINTS := [0, 1, 3, 8]
-## Blueprints a won boss level gives (random slot), and a Silver / Gold chest gives.
-const BOSS_BLUEPRINTS := 3
-const CHEST_BLUEPRINTS := {"silver": 2, "gold": 6}
+## Blueprints a won battle gives (random slots): base + per level, x2 on a first clear;
+## a loss with a wave cleared gives LOSS_BLUEPRINTS; a boss level (every 5th) adds BOSS.
+const WIN_BLUEPRINTS := 2
+const WIN_BLUEPRINTS_PER_LEVEL := 0.5
+const LOSS_BLUEPRINTS := 1
+const BOSS_BLUEPRINTS := 6
+## Blueprints an hour of patrol makes (capped with the patrol).
+const PATROL_BLUEPRINTS_PER_HOUR := 1.0
+## Blueprints a level-1 unworn item salvages for (of its own slot), by rarity, plus half
+## of what was spent levelling it.
+const SALVAGE_BLUEPRINTS := [2, 4, 10, 25]
+## A save from the Forge Stone era: this many stones became one Blueprint.
+const STONES_PER_BLUEPRINT := 5
 
 ## A weapon adds this much damage to the two soldier classes it pairs with (and +1 per 10 levels).
 const PAIR_DAMAGE_PCT := 8.0
@@ -69,7 +73,7 @@ const ITEMS := {
 	"gay_sao": {"slot": "weapon", "name": "Gậy Sao", "icon": "hero_w_gay_phep", "rarity": 2, "stats": {"atk": 75},
 		"pairs": [MAG, RNG], "range": "Đánh xa", "skill": "Sao băng: mỗi 12 giây gọi sao rơi gây sát thương lan."},
 	"riu_lua": {"slot": "weapon", "name": "Rìu Lửa", "icon": "hero_w_riu", "rarity": 2, "stats": {"atk": 82},
-		"pairs": [INF, CAV], "range": "Cận chiến", "skill": "Chẻ lửa: đòn thứ 4 đốt cháy mục tiêu."},
+		"pairs": [INF, CAV], "range": "Cận chiến", "skill": "Chẻ lửa: mỗi 9 giây chém lửa 5 địch gần thành nhất, đốt cháy chúng."},
 	"katana_nguyet": {"slot": "weapon", "name": "Katana Nguyệt", "icon": "hero_w_katana", "rarity": 3, "stats": {"atk": 115},
 		"pairs": [INF, CAV], "range": "Cận chiến", "skill": "Trảm nguyệt: lướt qua hàng địch, chém mọi kẻ trên đường."},
 	"mu_da": {"slot": "helmet", "name": "Mũ Da", "icon": "eq_helmet", "rarity": 0, "stats": {"hp": 160, "def": 6}},
@@ -93,15 +97,6 @@ const SUMMON_RARITY := [62.0, 28.0, 8.5, 1.5]
 ## Summon pulls without a legendary card before the next one is guaranteed.
 const SUMMON_PITY := 60
 
-# --- Forge Stones (đá rèn) ---------------------------------------------------------------
-## Stones a won battle gives: base + per level, x2 on first clear; a loss gives LOSS_STONES.
-const WIN_STONES := 6
-const WIN_STONES_PER_LEVEL := 2
-const LOSS_STONES := 2
-## Stones an hour of patrol makes (capped with the patrol).
-const PATROL_STONES_PER_HOUR := 3
-## A level-1 unworn item salvages for this many stones, by rarity, plus half what was spent.
-const SALVAGE_STONES := [4, 10, 25, 60]
 ## Three identical items of the same rarity (any level) fuse into one of the next rarity.
 const FUSE_COUNT := 3
 
@@ -215,17 +210,35 @@ static func is_equipped(state: Dictionary, uid: String) -> bool:
 	return state["equipped"].values().has(uid)
 
 
-## Bag items not worn, best first (rarity, then level).
+## Bag items not worn, best first (rarity, then level). One pass builds an integer key per
+## item, so sorting a big bag compares ints rather than looking items up each time.
 static func spare(state: Dictionary) -> Array:
+	var bag: Dictionary = state["bag"]
+	var worn := {}
+	for slot in state["equipped"]:
+		worn[str(state["equipped"][slot])] = true
+	var keyed := []
+	for uid in bag:
+		var d: Dictionary = ITEMS.get(bag[uid]["id"], {})
+		if d.is_empty() or worn.has(uid):
+			continue
+		keyed.append([int(d["rarity"]) * 1000 + int(bag[uid]["level"]), uid])
+	keyed.sort_custom(func(a, b): return a[0] > b[0])
 	var uids := []
-	for uid in state["bag"]:
-		if not def(state, uid).is_empty() and not is_equipped(state, uid):
-			uids.append(uid)
-	uids.sort_custom(func(a, b):
-		var ra: int = def(state, a)["rarity"]
-		var rb: int = def(state, b)["rarity"]
-		return ra > rb or (ra == rb and item(state, a)["level"] > item(state, b)["level"]))
+	for entry in keyed:
+		uids.append(entry[1])
 	return uids
+
+## Number of unworn items, without sorting them.
+static func spare_count(state: Dictionary) -> int:
+	var worn := {}
+	for slot in state["equipped"]:
+		worn[str(state["equipped"][slot])] = true
+	var count := 0
+	for uid in state["bag"]:
+		if ITEMS.has(state["bag"][uid]["id"]) and not worn.has(uid):
+			count += 1
+	return count
 
 
 static func item_stats(state: Dictionary, uid: String, level := -1) -> Dictionary:
@@ -261,38 +274,32 @@ static func level_cap(state: Dictionary, uid: String) -> int:
 	var d := def(state, uid)
 	return LEVEL_CAP[d["rarity"]] if not d.is_empty() else 0
 
-## Blueprints (of the item's slot) the next level needs: >0 only at a breakthrough.
-static func breakthrough_cost(state: Dictionary, uid: String) -> int:
-	var it := item(state, uid)
-	return BREAK_BLUEPRINTS.get(int(it.get("level", 0)), 0) if upgrade_cost(state, uid) >= 0 else 0
-
-## Forge Stones for the next level, or -1 at the rarity's cap.
+## Blueprints of the item's slot for the next level, or -1 at the rarity's cap.
+## Grows with the level; rarer items cost a little more per level.
 static func upgrade_cost(state: Dictionary, uid: String) -> int:
 	var it := item(state, uid)
 	var definition := def(state, uid)
 	if it.is_empty() or definition.is_empty() or it["level"] >= LEVEL_CAP[definition["rarity"]]:
 		return -1
-	var rarity: int = definition["rarity"]
-	return roundi((4 + 3 * it["level"]) * (1.0 + 0.5 * rarity))
+	return level_cost(definition["rarity"], it["level"])
 
-## The small gold part of a level-up (troops keep the gold economy; this stays minor).
-static func upgrade_gold(state: Dictionary, uid: String) -> int:
-	var it := item(state, uid)
-	return -1 if upgrade_cost(state, uid) < 0 else 10 * int(it["level"])
+static func level_cost(rarity: int, level: int) -> int:
+	return roundi((1 + 0.5 * level) * (1.0 + 0.25 * rarity))
 
-## Stones spent to bring an item from level 1 to `level`.
-static func stones_spent(rarity: int, level: int) -> int:
+## Blueprints spent to bring an item from level 1 to `level`.
+static func blueprints_spent(rarity: int, level: int) -> int:
 	var total := 0
 	for lv in range(1, level):
-		total += roundi((4 + 3 * lv) * (1.0 + 0.5 * rarity))
+		total += level_cost(rarity, lv)
 	return total
 
-## Stones an unworn item salvages for: its rarity's base plus half the stones put into it.
+## Blueprints (of its slot) an unworn item salvages for: its rarity's base plus half of
+## what was spent levelling it.
 static func salvage_value(state: Dictionary, uid: String) -> int:
 	var d := def(state, uid)
 	if d.is_empty():
 		return 0
-	return SALVAGE_STONES[d["rarity"]] + stones_spent(d["rarity"], item(state, uid)["level"]) / 2
+	return SALVAGE_BLUEPRINTS[d["rarity"]] + blueprints_spent(d["rarity"], item(state, uid)["level"]) / 2
 
 ## Items of `slot` with exactly `rarity` (for summon picks and fusing).
 static func ids_of(slot: String, rarity: int) -> Array:
@@ -330,6 +337,49 @@ static func fuse_target(id: String) -> String:
 			pool.sort()
 			return pool[0]
 	return ""
+
+
+# --- On the field ----------------------------------------------------------------------
+## The hero cat fights as one big unit. Its HP and damage come from total_stats():
+## FIELD_HP x hp, FIELD_DAMAGE x atk (the hp/atk numbers are sized for the castle and the
+## skill, so the field unit uses a share of them). Melee or ranged follows the weapon.
+const FIELD_HP := 0.35
+const FIELD_DAMAGE := 0.22
+const FIELD_SCALE := 1.45
+## The art family for a weapon (game/ui/art/hero_cat_<family>.png); none worn = "bare".
+const FAMILIES := {
+	"kiem_go": "melee", "cung_san": "ranged", "gay_sao": "magic",
+	"riu_lua": "heavy", "katana_nguyet": "katana",
+}
+
+static func family(state: Dictionary) -> String:
+	var it := item(state, equipped_uid(state, "weapon"))
+	return FAMILIES.get(it.get("id", ""), "bare")
+
+## A TroopData describing the hero cat on the field, from its gear.
+static func field_troop(state: Dictionary) -> Resource:
+	var stats := total_stats(state)
+	var weapon := def(state, equipped_uid(state, "weapon"))
+	var ranged: bool = weapon.get("range", "") == "Đánh xa"
+	var t := TroopData.new()
+	t.id = "hero_cat"
+	t.display_name = "Mèo anh hùng"
+	t.rarity = 3
+	t.unit_key = "hero:" + family(state)
+	t.role = TroopData.Role.RANGED if ranged else TroopData.Role.MELEE
+	var pairs: Array = weapon.get("pairs", [INF])
+	t.klass = pairs[0]
+	t.sprite_scale = FIELD_SCALE
+	t.max_hp = float(stats["hp"]) * FIELD_HP
+	t.damage = float(stats["atk"]) * FIELD_DAMAGE
+	t.attack_range = 230.0 if ranged else 44.0
+	t.aggro_range = 300.0 if ranged else 240.0
+	t.attack_cooldown = 1.1 if ranged else 0.9
+	t.move_speed = 62.0
+	t.crit_chance = 0.15
+	t.crit_mult = 1.8
+	t.max_alive = 1
+	return t
 
 
 static func tone(rarity: int) -> String:

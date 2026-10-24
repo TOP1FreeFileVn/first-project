@@ -46,6 +46,8 @@ var max_hp := 1.0
 var hp := 1.0
 var damage := 1.0
 var rally := Vector2.ZERO
+## The hero cat (Battle._spawn_hero): a gold ring under it and a slightly longer HP bar.
+var is_hero := false
 ## Cat soldiers are one baked texture; _animate_cat bobs and swings it.
 var _cat := false
 ## The cat's skeleton, when it has one. The AnimatedSprite2D then stays as the state clock
@@ -352,7 +354,12 @@ func _tick_ability(delta: float) -> void:
 
 
 func _draw() -> void:
-	# Ability auras sit under the feet.
+	# Ability auras sit under the feet; the hero cat stands on a soft gold ring.
+	if is_hero:
+		draw_set_transform(Vector2(0, 2), 0.0, Vector2(1.0, 0.4))
+		draw_circle(Vector2.ZERO, 40.0, Color(1.0, 0.82, 0.3, 0.22))
+		draw_arc(Vector2.ZERO, 40.0, 0.0, TAU, 36, Color(1.0, 0.85, 0.35, 0.85), 3.0, true)
+		draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	if troop.ability == Ability.COMMAND:
 		var pulse := 0.5 + 0.5 * sin(Time.get_ticks_msec() / 250.0)
 		draw_set_transform(Vector2(0, 2), 0.0, Vector2(1.0, 0.45))
@@ -394,7 +401,16 @@ func _is_healer() -> bool:
 
 
 func _attacks_wall() -> bool:
-	return team == ENEMY and troop.role != Role.HEALER and troop.role != Role.SUPPORT
+	if team != ENEMY:
+		return false
+	if troop.role != Role.HEALER and troop.role != Role.SUPPORT:
+		return true
+	# Healers and supports stay back while their army fights; once they are the last ones
+	# standing they march on the wall too, so a wave can never stall on them.
+	for ally in battle.units_of(team):
+		if ally != self and not ally.is_dead() and ally.troop.role != Role.HEALER and ally.troop.role != Role.SUPPORT:
+			return false
+	return true
 
 
 func _alive(unit) -> bool:
@@ -469,11 +485,14 @@ func _find_target():
 func _goal() -> Vector2:
 	if _alive(_target):
 		return _target.position
+	# A hanging-back enemy that has turned on the wall walks all the way to it.
+	if team == ENEMY and (troop.role == Role.HEALER or troop.role == Role.SUPPORT) and _attacks_wall():
+		return Vector2(rally.x, battle.WALL_Y)
 	return rally
 
 
 func _in_range(goal: Vector2) -> bool:
-	if troop.role == Role.SUPPORT:
+	if troop.role == Role.SUPPORT and not _attacks_wall():
 		return false
 	if _alive(_target):
 		return position.distance_to(goal) <= troop.attack_range + REACH_PADDING + (ENGAGE_SLACK if _engaged else 0.0)
@@ -518,6 +537,9 @@ func _resolve_hit() -> void:
 				SoundLib.play("heal", -3.0)
 				_attack_target.heal(damage)
 				battle.spawn_effect("heal", _attack_target.position + Vector2(0, -16), 0.45)
+			elif _attacking_wall:
+				# A lone enemy healer pecks at the wall (see _attacks_wall).
+				battle.damage_core(amount)
 		Role.RANGED:
 			if _alive(_attack_target) or _attacking_wall:
 				battle.spawn_arrow(self, _attack_target if _alive(_attack_target) else null, amount, crit)

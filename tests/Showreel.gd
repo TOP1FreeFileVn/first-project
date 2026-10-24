@@ -55,7 +55,8 @@ func _ready() -> void:
 		PlayerData.troops[id]["level"] = 12
 		PlayerData.troops[id]["stars"] = 2
 	PlayerData.team = PlayerData.auto_team()
-	PlayerData.forge_stones = 240
+	for slot in PlayerData.blueprints:
+		PlayerData.blueprints[slot] = 240
 	PlayerData.frame = "royal"
 	_home = load("res://game/menu/Home.tscn").instantiate()
 	add_child(_home)

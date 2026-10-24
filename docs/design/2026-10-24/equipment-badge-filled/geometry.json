@@ -1,0 +1,46 @@
+{
+  "weapon": {
+    "alpha_bounds": [
+      37,
+      47,
+      213,
+      218
+    ],
+    "white_opaque_pixels": 8833,
+    "accent_opaque_pixels": 478,
+    "accent_fraction": 0.05133712812802062
+  },
+  "helmet": {
+    "alpha_bounds": [
+      51,
+      49,
+      205,
+      215
+    ],
+    "white_opaque_pixels": 18627,
+    "accent_opaque_pixels": 660,
+    "accent_fraction": 0.03421994089282937
+  },
+  "armor": {
+    "alpha_bounds": [
+      29,
+      52,
+      227,
+      216
+    ],
+    "white_opaque_pixels": 19535,
+    "accent_opaque_pixels": 672,
+    "accent_fraction": 0.033255802444697384
+  },
+  "boots": {
+    "alpha_bounds": [
+      30,
+      55,
+      194,
+      213
+    ],
+    "white_opaque_pixels": 14090,
+    "accent_opaque_pixels": 604,
+    "accent_fraction": 0.04110521301211379
+  }
+}

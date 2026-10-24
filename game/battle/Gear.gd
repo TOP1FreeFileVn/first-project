@@ -54,6 +54,13 @@ func spawn_interval() -> float:
 	return _interval
 
 
+## Takes over another gear's living units (merging two gears into this one).
+func adopt_units(from) -> void:
+	for unit in from._alive:
+		if is_instance_valid(unit) and not unit.is_dead() and not _alive.has(unit):
+			_alive.append(unit)
+
+
 func tier_up() -> void:
 	tier += 1
 	_interval = -1.0

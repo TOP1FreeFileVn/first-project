@@ -1,0 +1,2884 @@
+{
+	"captures": [
+		{
+			"file": "full-three-rows_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "melee-idle-0_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "melee-idle-3_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "ranged-idle-0_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "ranged-idle-3_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "magic-idle-0_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "magic-idle-3_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "heavy-idle-0_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "heavy-idle-3_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "fuse-scroll_360x640.png",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"file": "full-three-rows_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "melee-idle-0_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "melee-idle-3_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "ranged-idle-0_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "ranged-idle-3_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "magic-idle-0_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "magic-idle-3_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "heavy-idle-0_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "heavy-idle-3_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"file": "fuse-scroll_450x800.png",
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "initial_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "production_seventeen_items_thirteen_spares",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "inventory_grid_five_columns",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "inventory_real_filtered_item_count_13",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "five_inventory_cards_fit_one_row",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_production_sections_exist",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_three_full_rows_visible_without_scrolling",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_last_row_close_to_nav_without_overlap",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_hero_and_full_width_header_share_boundary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_larger_hero_and_compact_inventory_split",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_three_row_viewport_keeps_badge_padding",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_hero_and_inventory_stay_inside_page_bounds",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_three_rows_do_not_need_a_scrollbar",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "full_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_full-three-rows",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_correct_equipped_family",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_melee-idle-0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_melee-idle-3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "kiem_go_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_correct_equipped_family",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_ranged-idle-0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_ranged-idle-3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "cung_san_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_correct_equipped_family",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_magic-idle-0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_magic-idle-3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "gay_sao_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_correct_equipped_family",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_heavy-idle-0",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_heavy-idle-3",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "riu_lua_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fuse_state_shows_real_fuse_action",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fuse_state_header_stays_at_same_boundary",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fuse_state_uses_scroll_space_without_overflow",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fuse_state_inventory_stays_inside_page_width",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fuse_state_last_item_reachable_by_scrolling",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "fuse_state_inventory_stays_above_nav",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "capture_fuse-scroll",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_spacing_review_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "after_spacing_review_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"name": "native_hero_tab_tap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_hero_page_visible",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "initial_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "production_seventeen_items_thirteen_spares",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "inventory_grid_five_columns",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "inventory_real_filtered_item_count_13",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "five_inventory_cards_fit_one_row",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_production_sections_exist",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_three_full_rows_visible_without_scrolling",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_last_row_close_to_nav_without_overlap",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_hero_and_full_width_header_share_boundary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_larger_hero_and_compact_inventory_split",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_three_row_viewport_keeps_badge_padding",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_hero_and_inventory_stay_inside_page_bounds",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_three_rows_do_not_need_a_scrollbar",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "full_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_full-three-rows",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_correct_equipped_family",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_melee-idle-0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_melee-idle-3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "kiem_go_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_correct_equipped_family",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_ranged-idle-0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_ranged-idle-3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "cung_san_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_correct_equipped_family",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_magic-idle-0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_magic-idle-3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "gay_sao_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_preview_instance_preserved",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_exactly_one_hero_preview",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_correct_equipped_family",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_authored_idle_loaded",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_0_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_heavy-idle-0",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_1_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_2_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_fits_stage",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_clear_of_HeroEquipmentLeft",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_clear_of_HeroEquipmentRight",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_3_clear_of_HeroCombatPower",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_heavy-idle-3",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "riu_lua_idle_advances_and_moves_without_manual_seeking",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fuse_state_shows_real_fuse_action",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fuse_state_header_stays_at_same_boundary",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fuse_state_uses_scroll_space_without_overflow",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fuse_state_inventory_stays_inside_page_width",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fuse_state_last_item_reachable_by_scrolling",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "fuse_state_inventory_stays_above_nav",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "capture_fuse-scroll",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_spacing_review_original_carton_nav_instance_retained",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "after_spacing_review_five_cartons_hero_selected",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "no_player_save_write_during_review",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "original_in_memory_profile_restored",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"name": "profile_restore_never_writes_save",
+			"passed": true,
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"geometry": [
+		{
+			"clearance": 19.0,
+			"context": "full",
+			"header": [
+				18.0,
+				500.0,
+				684.0,
+				52.0
+			],
+			"hero": [
+				0.0,
+				0.0,
+				720.0,
+				500.0
+			],
+			"hero_layout_style": "StyleBoxEmpty",
+			"inventory": [
+				0.0,
+				500.0,
+				720.0,
+				576.0
+			],
+			"last_card_bottom": 1057.0,
+			"nav_top": 1076.0,
+			"row_tops": [
+				661.0,
+				797.0,
+				933.0
+			],
+			"scroll": [
+				18.0,
+				653.0,
+				684.0,
+				415.0
+			],
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"clearance": 19.0,
+			"context": "full",
+			"header": [
+				18.0,
+				500.0,
+				684.0,
+				52.0
+			],
+			"hero": [
+				0.0,
+				0.0,
+				720.0,
+				500.0
+			],
+			"hero_layout_style": "StyleBoxEmpty",
+			"inventory": [
+				0.0,
+				500.0,
+				720.0,
+				576.0
+			],
+			"last_card_bottom": 1057.0,
+			"nav_top": 1076.0,
+			"row_tops": [
+				661.0,
+				797.0,
+				933.0
+			],
+			"scroll": [
+				18.0,
+				653.0,
+				684.0,
+				415.0
+			],
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"idle_samples": [
+		{
+			"family": "melee",
+			"frame": 0,
+			"painted_bounds": [
+				248.925201416016,
+				66.0964279174805,
+				220.408538818359,
+				221.91162109375
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.706282317460317,
+			"weapon": "kiem_go",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "melee",
+			"frame": 1,
+			"painted_bounds": [
+				249.814544677734,
+				69.3062057495117,
+				223.200012207031,
+				217.806457519531
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.967806666666666,
+			"weapon": "kiem_go",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "melee",
+			"frame": 2,
+			"painted_bounds": [
+				250.516937255859,
+				71.8238220214844,
+				213.862670898438,
+				214.581695556641
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.17434966666666,
+			"weapon": "kiem_go",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "melee",
+			"frame": 3,
+			"painted_bounds": [
+				250.001403808594,
+				69.9774398803711,
+				215.104370117188,
+				216.947113037109
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.37724866666667,
+			"weapon": "kiem_go",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 0,
+			"painted_bounds": [
+				249.074096679688,
+				66.6355209350586,
+				216.905212402344,
+				221.222625732422
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.449933285714286,
+			"weapon": "cung_san",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 1,
+			"painted_bounds": [
+				248.9140625,
+				66.0560989379883,
+				220.304565429688,
+				221.963195800781
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.703008,
+			"weapon": "cung_san",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 2,
+			"painted_bounds": [
+				249.598449707031,
+				68.5285339355469,
+				225.895202636719,
+				218.801727294922
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.904259999999999,
+			"weapon": "cung_san",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 3,
+			"painted_bounds": [
+				250.284301757813,
+				70.9916381835938,
+				217.048370361328,
+				215.648101806641
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.10594,
+			"weapon": "cung_san",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 0,
+			"painted_bounds": [
+				249.068481445313,
+				66.6152572631836,
+				216.907806396484,
+				221.248565673828
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.451580333333333,
+			"weapon": "gay_sao",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 1,
+			"painted_bounds": [
+				248.938415527344,
+				66.1443405151367,
+				220.531646728516,
+				221.850402832031
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.710169969696969,
+			"weapon": "gay_sao",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 2,
+			"painted_bounds": [
+				249.642242431641,
+				68.6862640380859,
+				225.356109619141,
+				218.599899291992
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.917138666666667,
+			"weapon": "gay_sao",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 3,
+			"painted_bounds": [
+				250.326889038086,
+				71.1441421508789,
+				216.471694946289,
+				215.452728271484
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.11846566666667,
+			"weapon": "gay_sao",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 0,
+			"painted_bounds": [
+				249.083618164063,
+				66.6700134277344,
+				222.365966796875,
+				221.178558349609
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.447131111111111,
+			"weapon": "riu_lua",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 1,
+			"painted_bounds": [
+				248.94953918457,
+				66.1846466064453,
+				223.000839233398,
+				221.798934936523
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.713442,
+			"weapon": "riu_lua",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 2,
+			"painted_bounds": [
+				249.642211914063,
+				68.6861419677734,
+				225.356536865234,
+				218.600051879883
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.917129080808081,
+			"weapon": "riu_lua",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 3,
+			"painted_bounds": [
+				250.33203125,
+				71.1624908447266,
+				216.411712646484,
+				215.429214477539
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.119974,
+			"weapon": "riu_lua",
+			"window": [
+				360,
+				640
+			]
+		},
+		{
+			"family": "melee",
+			"frame": 0,
+			"painted_bounds": [
+				248.939880371094,
+				66.1496276855469,
+				220.545257568359,
+				221.843658447266
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.71060001010101,
+			"weapon": "kiem_go",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "melee",
+			"frame": 1,
+			"painted_bounds": [
+				249.827728271484,
+				69.3535995483398,
+				223.03271484375,
+				217.745788574219
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.971684393939393,
+			"weapon": "kiem_go",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "melee",
+			"frame": 2,
+			"painted_bounds": [
+				250.510452270508,
+				71.800651550293,
+				213.952682495117,
+				214.611389160156
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.17244196969697,
+			"weapon": "kiem_go",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "melee",
+			"frame": 3,
+			"painted_bounds": [
+				249.999725341797,
+				69.9713668823242,
+				215.1103515625,
+				216.954895019531
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.377745,
+			"weapon": "kiem_go",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 0,
+			"painted_bounds": [
+				249.072708129883,
+				66.6305313110352,
+				216.905868530273,
+				221.229034423828
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.45034,
+			"weapon": "cung_san",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 1,
+			"painted_bounds": [
+				248.880432128906,
+				65.9342346191406,
+				219.988830566406,
+				222.118927001953
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.693119,
+			"weapon": "cung_san",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 2,
+			"painted_bounds": [
+				249.564834594727,
+				68.4074020385742,
+				225.92204284668,
+				218.956665039063
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.894373333333333,
+			"weapon": "cung_san",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "ranged",
+			"frame": 3,
+			"painted_bounds": [
+				250.250122070313,
+				70.8692474365234,
+				217.508911132813,
+				215.804916381836
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.095889,
+			"weapon": "cung_san",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 0,
+			"painted_bounds": [
+				249.069366455078,
+				66.6184616088867,
+				216.907409667969,
+				221.244445800781
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.451320444444444,
+			"weapon": "gay_sao",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 1,
+			"painted_bounds": [
+				248.927124023438,
+				66.1034774780273,
+				220.426635742188,
+				221.902618408203
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.706852666666667,
+			"weapon": "gay_sao",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 2,
+			"painted_bounds": [
+				249.617736816406,
+				68.5979843139648,
+				225.658264160156,
+				218.712829589844
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.909930825396825,
+			"weapon": "gay_sao",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "magic",
+			"frame": 3,
+			"painted_bounds": [
+				250.316192626953,
+				71.1058349609375,
+				216.616912841797,
+				215.501800537109
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.11531784848485,
+			"weapon": "gay_sao",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 0,
+			"painted_bounds": [
+				249.048126220703,
+				66.5415802001953,
+				222.534149169922,
+				221.342727661133
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.457567301587301,
+			"weapon": "riu_lua",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 1,
+			"painted_bounds": [
+				248.912033081055,
+				66.0488052368164,
+				223.178237915039,
+				221.972503662109
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.702415878787878,
+			"weapon": "riu_lua",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 2,
+			"painted_bounds": [
+				249.602996826172,
+				68.5449371337891,
+				225.839263916016,
+				218.780715942383
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 0.905600333333333,
+			"weapon": "riu_lua",
+			"window": [
+				450,
+				800
+			]
+		},
+		{
+			"family": "heavy",
+			"frame": 3,
+			"painted_bounds": [
+				250.287658691406,
+				71.0036163330078,
+				217.003234863281,
+				215.632766723633
+			],
+			"stage": [
+				156.0,
+				24.0,
+				408.0,
+				344.0
+			],
+			"time": 1.10692233333333,
+			"weapon": "riu_lua",
+			"window": [
+				450,
+				800
+			]
+		}
+	],
+	"original_persist_restored": true,
+	"profile": "C:/Users/dangp/GodotProjects/first-project/output/hero-inventory-spacing-profile/Godot/app_userdata/Gear Defenders",
+	"save_after": "absent",
+	"save_before": "absent",
+	"scope": "Actual production hero/inventory spacing at two phone sizes; 17 real items, 13 spares in 3 visible five-column rows, four authored weapon idles, stable fuse header and reachable inventory. No visual overrides."
+}

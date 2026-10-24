@@ -15,6 +15,7 @@ try {
     if ($ImportAssets) {
         $sectionsImportArguments = @('--headless', '--editor', '--import', '--quit', '--path', ('"' + $sectionsRoot + '"'), '--rendering-method', 'gl_compatibility', '--audio-driver', 'Dummy')
         $sectionsImport = Start-Process -FilePath $sectionsGodot -ArgumentList $sectionsImportArguments -PassThru -WindowStyle Hidden -RedirectStandardOutput (Join-Path $PSScriptRoot 'godot-import.log') -RedirectStandardError (Join-Path $PSScriptRoot 'godot-import-errors.log')
+        $null = $sectionsImport.Handle
         if (-not $sectionsImport.WaitForExit(60000)) { Stop-Process -Id $sectionsImport.Id; throw 'Shop sections asset import timed out.' }
         if ($sectionsImport.ExitCode -ne 0) {
             Get-Content (Join-Path $PSScriptRoot 'godot-import-errors.log')
@@ -23,6 +24,7 @@ try {
     }
     $sectionsArguments = @('--path', ('"' + $sectionsRoot + '"'), '--rendering-method', 'gl_compatibility', '--audio-driver', 'Dummy', 'res://tests/ui_review/ShopSectionsIntegration.tscn')
     $sectionsProcess = Start-Process -FilePath $sectionsGodot -ArgumentList $sectionsArguments -PassThru -WindowStyle Hidden -RedirectStandardOutput (Join-Path $PSScriptRoot 'godot-run.log') -RedirectStandardError (Join-Path $PSScriptRoot 'godot-errors.log')
+    $null = $sectionsProcess.Handle
     if (-not $sectionsProcess.WaitForExit(90000)) { Stop-Process -Id $sectionsProcess.Id; throw 'Shop sections native capture timed out.' }
     Get-Content (Join-Path $PSScriptRoot 'godot-run.log') -Tail 8
     Get-Content (Join-Path $PSScriptRoot 'godot-errors.log')

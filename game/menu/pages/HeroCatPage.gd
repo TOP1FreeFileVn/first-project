@@ -1,19 +1,30 @@
 extends "res://game/menu/pages/MenuPage.gd"
 
-# Approved paperboard equipment layout: four slots around the cat, a light power
-# plaque, compact stat/skill rows and a five-column inventory with local filters.
-# Tapping a real item keeps the existing comparison, gold upgrade and equip flow.
+signal inventory_layout_changed
+
+# Approved paperboard equipment layout: four slots around the hero, inline combat
+# power, compact stat/skill rows and a five-column inventory with local filters.
+# Tapping a real item keeps the existing comparison, upgrade and equip flow.
 # Item data is placeholder until the design sheet's Hero&Weapon tab is filled (HeroCat.gd).
 
 const Ui = preload("res://game/ui/Ui.gd")
 const HeroCat = preload("res://game/core/HeroCat.gd")
 const TroopData = preload("res://game/data/TroopData.gd")
 const PaperboardFrame = preload("res://game/ui/PaperboardFrame.gd")
-const BADGE_GLYPH = preload("res://game/ui/equipment_badge_glyph.gdshader")
-const BOOTS_BADGE = preload("res://game/ui/art/equipment_badge_boots.svg")
+const HeroPreview = preload("res://game/ui/HeroPreview.gd")
 const SIDE_CARD := 124.0
 const SLOTS_PER_SIDE := 2
 const BAG_CARD := 124.0
+const BAG_COLUMNS := 5
+const BAG_GAP := 12.0
+const BAG_STEP := BAG_CARD + BAG_GAP
+## The bag grid's top margin inside its scroll (Ui.margin below), and rows built beyond view.
+const BAG_EDGE := 8.0
+const BAG_ROW_MARGIN := 1
+## Lower the inventory clipping edge slightly into the clear space above nav art.
+const BOTTOM_MASK_OFFSET := 12.0
+## Grow with the viewport so the hero and inventory header keep their positions.
+const BAG_HEIGHT := 576.0 + BOTTOM_MASK_OFFSET
 ## Soldier class -> its tier-1 weapon icon (how the classes are shown everywhere).
 const KLASS_ICONS := ["w_kiem", "w_cung", "w_gay_phep", "w_giao"]
 ## These are text accents on the light mint inset, not rarity-card fills.
@@ -24,13 +35,17 @@ var _column: VBoxContainer
 var _detail: VBoxContainer
 var _detail_uid := ""
 var _filter := "all"
+var _sort_by := "rarity"
 var _sort_descending := true
+var _sort_overlay: Control
 var _bag_scroll_y := 0
 var _reset_bag_scroll := false
 var _inventory_scroll: ScrollContainer
-var _paper_grain: Texture2D
-var _badge_material: ShaderMaterial
-var _badge_textures: Dictionary = {}
+## Virtual bag grid: the item uids in order and the cards built so far (index -> card).
+var _bag_grid: Control
+var _bag_uids: Array = []
+var _bag_built := {}
+var _hero_preview: HeroPreview
 
 
 func _init() -> void:
@@ -38,8 +53,8 @@ func _init() -> void:
 	body.get_parent().get_parent().visible = false
 	theme = Ui.THEME
 	texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
-	_badge_material = ShaderMaterial.new()
-	_badge_material.shader = BADGE_GLYPH
+	visibility_changed.connect(_close_sort_when_hidden)
+	resized.connect(_fit_sections, CONNECT_DEFERRED)
 
 
 func refresh() -> void:
@@ -49,20 +64,32 @@ func refresh() -> void:
 
 
 func build() -> void:
+	_close_sort_menu()
 	if _column != null:
 		if is_instance_valid(_inventory_scroll) and not _reset_bag_scroll:
 			_bag_scroll_y = _inventory_scroll.scroll_vertical
+		# Keep the idle phase when a stat/resource refresh rebuilds this page.
+		if is_instance_valid(_hero_preview):
+			_hero_preview.get_parent().remove_child(_hero_preview)
 		remove_child(_column)
 		_column.queue_free()
-	if _paper_grain == null:
-		_paper_grain = Ui.tex("paper_grain")
-	_column = Ui.vbox(12)
+	_column = Ui.vbox(0)
 	_column.name = "HeroPaperboardLayout"
 	add_child(_column)
 	_column.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_column.add_child(_doll())
 	_column.add_child(_bag())
+	_fit_sections.call_deferred()
 	_reset_bag_scroll = false
+
+
+func _fit_sections() -> void:
+	if not is_instance_valid(_column) or _column.get_child_count() != 2:
+		return
+	var hero := _column.get_child(0) as Control
+	var inventory := _column.get_child(1) as Control
+	# Shorter viewports give up some scroll height; taller ones grow the hero.
+	inventory.custom_minimum_size.y = minf(BAG_HEIGHT, maxf(0.0, size.y - hero.get_combined_minimum_size().y))
 
 
 func has_alert() -> bool:
@@ -80,50 +107,41 @@ func _doll() -> Control:
 	var sheet := PaperboardFrame.new()
 	sheet.name = "HeroPaperboardFolder"
 	sheet.kind = "hero"
-	sheet.grain = _paper_grain
+	sheet.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	var box := Ui.vbox(6)
 	sheet.add_child(box)
 
 	var row := Ui.hbox(14)
 	row.name = "HeroEquipmentRow"
+	row.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	var left := _slot_column(HeroCat.SLOTS.slice(0, SLOTS_PER_SIDE))
 	left.name = "HeroEquipmentLeft"
 	row.add_child(left)
 	var stage := Control.new()
 	stage.name = "HeroPreviewStage"
-	stage.custom_minimum_size = Vector2(0, SIDE_CARD * SLOTS_PER_SIDE + 16)
+	stage.custom_minimum_size = Vector2(0, 340)
 	stage.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	var halo := PaperboardFrame.new()
-	halo.kind = "halo"
-	halo.custom_minimum_size = Vector2(232, 204)
-	Ui.pin(stage, halo, Vector2(-116, 18), Control.PRESET_CENTER_TOP)
 	var name_label := _paper_text("Mèo anh hùng", 20)
 	stage.add_child(name_label)
 	name_label.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
 	name_label.offset_top = -8
 	name_label.offset_bottom = 24
-	var cat := Ui.image("cat_hero", Vector2(312, 224))
-	cat.name = "HeroPreview"
-	cat.texture = SpriteLib.hero_cat_texture(state)
-	Ui.pin(stage, cat, Vector2(-156, -246), Control.PRESET_CENTER_BOTTOM)
-	Ui.bob(cat, 3.0, 1.6)
+	if not is_instance_valid(_hero_preview):
+		_hero_preview = HeroPreview.new()
+		_hero_preview.name = "HeroPreview"
+	_hero_preview.custom_minimum_size = Vector2(312, 244)
+	_hero_preview.setup(state)
+	Ui.pin(stage, _hero_preview, Vector2(-156, -142), Control.PRESET_CENTER)
 	var stats := PlayerData.hero_cat_stats()
 	var power := Ui.hbox(10)
-	var seal := PaperboardFrame.new()
-	seal.kind = "power_icon"
-	seal.custom_minimum_size = Vector2(44, 44)
-	seal.add_child(Ui.center(Ui.icon("power", 36)))
-	power.add_child(seal)
+	power.name = "HeroCombatPower"
+	power.custom_minimum_size = Vector2(232, 56)
+	var power_icon := Ui.icon("power", 36)
+	power_icon.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	power.add_child(power_icon)
 	var power_value := _paper_text(UiKit.format_number(HeroCat.power(stats)), 32)
-	power_value.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	power.add_child(power_value)
-	var plaque := PaperboardFrame.new()
-	plaque.kind = "plaque"
-	plaque.name = "HeroCombatPower"
-	plaque.custom_minimum_size = Vector2(232, 56)
-	plaque.add_child(power)
-	# Center the entire paper label even when a longer power value widens it.
-	var power_holder := Ui.center(plaque)
+	var power_holder := Ui.center(power)
 	power_holder.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	stage.add_child(power_holder)
 	power_holder.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
@@ -134,31 +152,33 @@ func _doll() -> Control:
 	row.add_child(right)
 	box.add_child(row)
 
-	var totals := Ui.hbox(0)
-	totals.custom_minimum_size.y = 54
+	var totals := Ui.hbox(10)
+	totals.name = "HeroStatCards"
+	totals.custom_minimum_size.y = 58
 	for key in ["hp", "atk", "def"]:
-		if key != "hp":
-			var divider := VSeparator.new()
-			var line := StyleBoxLine.new()
-			line.color = Color("a47a48")
-			line.thickness = 2
-			line.vertical = true
-			divider.add_theme_stylebox_override("separator", line)
-			totals.add_child(divider)
+		var card := PanelContainer.new()
+		card.name = "HeroStatCard_" + key
+		card.custom_minimum_size = Vector2(200, 58)
+		card.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		card.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		var face := StyleBoxFlat.new()
+		face.bg_color = Color("efddb6")
+		face.border_color = Color("b99b70")
+		face.set_border_width_all(2)
+		face.set_corner_radius_all(12)
+		face.content_margin_left = 12
+		face.content_margin_right = 12
+		face.content_margin_top = 4
+		face.content_margin_bottom = 4
+		face.anti_aliasing = true
+		card.add_theme_stylebox_override("panel", face)
 		var stat := Ui.hbox(7)
-		stat.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		stat.name = "EquipmentStat_" + key
 		stat.add_child(Ui.icon(HeroCat.STAT_ICONS[key], 38))
 		stat.add_child(_paper_text(UiKit.format_number(stats[key]), 22))
-		totals.add_child(stat)
-	var stat_panel := PanelContainer.new()
-	var stat_style := StyleBoxFlat.new()
-	stat_style.bg_color = Color.TRANSPARENT
-	stat_style.border_color = Color("a47a48")
-	stat_style.border_width_top = 2
-	stat_style.border_width_bottom = 2
-	stat_panel.add_theme_stylebox_override("panel", stat_style)
-	stat_panel.add_child(totals)
-	box.add_child(stat_panel)
+		card.add_child(Ui.center(stat))
+		totals.add_child(card)
+	box.add_child(totals)
 	box.add_child(_weapon_strip(state))
 	return sheet
 
@@ -209,36 +229,36 @@ func _bag() -> Control:
 	var section := PaperboardFrame.new()
 	section.kind = "bag"
 	section.name = "HeroPaperboardInventory"
-	section.grain = _paper_grain
-	section.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	section.fill_surface = false
+	section.custom_minimum_size.y = BAG_HEIGHT
+	section.size_flags_vertical = Control.SIZE_FILL
+	section.item_rect_changed.connect(inventory_layout_changed.emit)
 	var box := Ui.vbox(8)
 	section.add_child(box)
+	var header := PanelContainer.new()
+	header.name = "HeroEquipmentSectionHeader"
+	header.custom_minimum_size.y = 52
+	var header_style := StyleBoxFlat.new()
+	header_style.bg_color = Color("4d352d")
+	header_style.border_color = Color("35261f")
+	header_style.border_width_top = 3
+	header_style.border_width_bottom = 3
+	# Draw to the screen edges without changing the inventory's content margins.
+	header_style.expand_margin_left = 18
+	header_style.expand_margin_right = 18
+	header.add_theme_stylebox_override("panel", header_style)
+	header.add_child(_paper_text("TRANG BỊ", 26, Color("fff1d1")))
+	box.add_child(header)
 	var heading := Ui.hbox(0)
-	heading.custom_minimum_size.y = 58
-	var tag := PanelContainer.new()
-	var tag_style := StyleBoxFlat.new()
-	tag_style.bg_color = Color("dfbb87")
-	tag_style.border_color = Color("583f21")
-	tag_style.set_border_width_all(3)
-	tag_style.border_width_top = 0
-	tag_style.corner_radius_bottom_left = 12
-	tag_style.corner_radius_bottom_right = 12
-	tag_style.content_margin_left = 22
-	tag_style.content_margin_right = 22
-	tag.add_theme_stylebox_override("panel", tag_style)
-	tag.add_child(_paper_text("Túi trang bị", 24))
-	heading.add_child(tag)
-	heading.add_child(Ui.spacer())
-	var count := HeroCat.spare(PlayerData.hero_cat).size()
-	var stones := Ui.hbox(4)
-	stones.name = "HeroForgeStones"
-	stones.add_child(UiKit.forge_stone_icon(28))
-	stones.add_child(_paper_text(UiKit.format_number(PlayerData.forge_stones), 20, Color("fff1d1")))
-	# Blueprints per slot, for breakthroughs.
+	heading.custom_minimum_size.y = 28
+	var count := HeroCat.spare_count(PlayerData.hero_cat)
+	# Blueprints per slot: what each slot's items level with.
+	var plans_row := Ui.hbox(4)
+	plans_row.name = "HeroBlueprints"
 	for slot in HeroCat.SLOTS:
-		stones.add_child(UiKit.blueprint_icon(slot, 26))
-		stones.add_child(_paper_text(str(PlayerData.blueprints.get(slot, 0)), 18, Color("fff1d1")))
-	heading.add_child(stones)
+		plans_row.add_child(UiKit.blueprint_icon(slot, 28))
+		plans_row.add_child(_paper_text(UiKit.format_number(PlayerData.blueprints.get(slot, 0)), 19, Color("fff1d1")))
+	heading.add_child(plans_row)
 	heading.add_child(Ui.spacer())
 	var capacity := _paper_text("%d món" % count, 20, Color("fff1d1"))
 	capacity.name = "HeroInventoryCount"
@@ -267,10 +287,14 @@ func _bag() -> Control:
 		choice.pressed.connect(_choose_filter.bind(filter[0]))
 		tools.add_child(choice)
 	tools.add_child(Ui.spacer())
-	var sort := Ui.button("Độ hiếm " + ("↓" if _sort_descending else "↑"), "Yellow", Vector2(154, 48), 18)
+	var sort := Ui.button("", "Yellow", Vector2(76, 48))
 	sort.name = "EquipmentSort"
-	sort.add_theme_constant_override("outline_size", 3)
-	sort.pressed.connect(_toggle_sort)
+	sort.tooltip_text = "Sắp xếp theo %s · %s" % ["độ hiếm" if _sort_by == "rarity" else "level", "giảm dần" if _sort_descending else "tăng dần"]
+	var sort_icon := Ui.center(Ui.image("icon_equipment_filter", Vector2(34, 34)))
+	sort_icon.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	sort.add_child(sort_icon)
+	sort_icon.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	sort.pressed.connect(_open_sort_menu.bind(sort))
 	tools.add_child(sort)
 	box.add_child(tools)
 	var fusable := PlayerData.hero_cat_fusable()
@@ -291,13 +315,17 @@ func _bag() -> Control:
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	_inventory_scroll = scroll
-	var grid := GridContainer.new()
+	# A virtual grid: a big bag only builds the rows on screen (plus a small margin) and
+	# reuses them while scrolling, so its cost no longer grows with the number of items.
+	var grid := Control.new()
 	grid.name = "HeroInventoryGrid"
-	grid.columns = 5
-	grid.add_theme_constant_override("h_separation", 12)
-	grid.add_theme_constant_override("v_separation", 12)
-	for uid in spare:
-		grid.add_child(_item_card(uid, BAG_CARD, false))
+	var rows := ceili(spare.size() / float(BAG_COLUMNS))
+	grid.custom_minimum_size = Vector2(BAG_COLUMNS * BAG_STEP - BAG_GAP, maxf(0.0, rows * BAG_STEP - BAG_GAP))
+	_bag_grid = grid
+	_bag_uids = spare
+	_bag_built = {}
+	scroll.get_v_scroll_bar().value_changed.connect(func(_v): _fill_bag_rows())
+	scroll.resized.connect(_fill_bag_rows)
 	# Keep partial rows at the same left edge as a full five-item row.
 	var contents: Control = grid
 	if spare.is_empty():
@@ -307,8 +335,9 @@ func _bag() -> Control:
 		empty.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		empty.custom_minimum_size.x = 600
 		contents = empty
-	# Keep clearance for the protruding badges at the scroll's top/left edge.
-	var bag_edge := Ui.margin(8, 8, 8, 8)
+	# Keep badge clearance at the top/left; the right gutter is reserved for the
+	# scrollbar so a longer inventory never widens the page or clips its frame.
+	var bag_edge := Ui.margin(8, 8, 0, 8)
 	bag_edge.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	contents.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	contents.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
@@ -316,17 +345,71 @@ func _bag() -> Control:
 	scroll.add_child(bag_edge)
 	box.add_child(scroll)
 	scroll.set_deferred("scroll_vertical", _bag_scroll_y)
+	_fill_bag_rows.call_deferred()
 	return section
 
 
+## Builds the bag cards of the rows in view and frees the ones scrolled far away.
+func _fill_bag_rows() -> void:
+	if not is_instance_valid(_bag_grid) or not is_instance_valid(_inventory_scroll):
+		return
+	var top := float(_inventory_scroll.scroll_vertical) - BAG_EDGE
+	var height := maxf(_inventory_scroll.size.y, BAG_CARD)
+	var first := maxi(0, floori(top / BAG_STEP) - BAG_ROW_MARGIN)
+	var last := ceili((top + height) / BAG_STEP) + BAG_ROW_MARGIN
+	var wanted := {}
+	for row in range(first, last + 1):
+		for col in BAG_COLUMNS:
+			var index := row * BAG_COLUMNS + col
+			if index >= _bag_uids.size():
+				break
+			wanted[index] = true
+			if _bag_built.has(index):
+				continue
+			var card := _item_card(_bag_uids[index], BAG_CARD, false)
+			card.position = Vector2(col * BAG_STEP, row * BAG_STEP)
+			card.size = Vector2.ONE * BAG_CARD
+			_bag_grid.add_child(card)
+			_bag_built[index] = card
+	for index in _bag_built.keys():
+		if not wanted.has(index):
+			_bag_built[index].queue_free()
+			_bag_built.erase(index)
+
+
+## Unworn items for the filter, in the chosen order. Each item gets one integer sort key
+## (primary, secondary, uid) computed once, so the sort compares plain ints instead of
+## looking items up on every comparison.
 func _visible_spare() -> Array:
 	var state: Dictionary = PlayerData.hero_cat
-	var visible := HeroCat.spare(state).filter(func(uid):
-		var slot: String = HeroCat.def(state, uid)["slot"]
-		return _filter == "all" or (_filter == "weapon" and slot == "weapon") or (_filter == "gear" and slot != "weapon"))
-	if not _sort_descending:
-		visible.reverse()
-	return visible
+	var bag: Dictionary = state["bag"]
+	var worn := {}
+	for slot in state["equipped"]:
+		worn[str(state["equipped"][slot])] = true
+	var keyed := []
+	for uid in bag:
+		if worn.has(uid):
+			continue
+		var d: Dictionary = HeroCat.ITEMS.get(bag[uid]["id"], {})
+		if d.is_empty():
+			continue
+		var slot: String = d["slot"]
+		if not (_filter == "all" or (_filter == "weapon" and slot == "weapon") or (_filter == "gear" and slot != "weapon")):
+			continue
+		var rarity: int = d["rarity"]
+		var level: int = bag[uid]["level"]
+		var primary := rarity if _sort_by == "rarity" else level
+		var secondary := level if _sort_by == "rarity" else rarity
+		var rank := primary * 1000 + secondary
+		if not _sort_descending:
+			rank = -rank
+		# Ties keep the oldest item first (uids are increasing numbers).
+		keyed.append([rank, -int(uid) if str(uid).is_valid_int() else 0, uid])
+	keyed.sort_custom(func(a, b): return a[0] > b[0] or (a[0] == b[0] and a[1] > b[1]))
+	var out := []
+	for entry in keyed:
+		out.append(entry[2])
+	return out
 
 
 func _choose_filter(value: String) -> void:
@@ -337,11 +420,98 @@ func _choose_filter(value: String) -> void:
 	build()
 
 
-func _toggle_sort() -> void:
-	_sort_descending = not _sort_descending
+func _choose_sort(criterion: String, descending: bool) -> void:
+	_sort_by = criterion
+	_sort_descending = descending
 	_reset_bag_scroll = true
 	_bag_scroll_y = 0
 	build()
+
+
+func _open_sort_menu(anchor: Button) -> void:
+	if is_instance_valid(_sort_overlay):
+		_close_sort_menu()
+		return
+	_sort_overlay = Control.new()
+	_sort_overlay.name = "EquipmentSortOverlay"
+	add_child(_sort_overlay)
+	_sort_overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var dismiss := Button.new()
+	dismiss.name = "EquipmentSortDismiss"
+	dismiss.flat = true
+	dismiss.focus_mode = Control.FOCUS_NONE
+	for state in ["normal", "hover", "pressed", "focus"]:
+		dismiss.add_theme_stylebox_override(state, StyleBoxEmpty.new())
+	_sort_overlay.add_child(dismiss)
+	dismiss.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	dismiss.pressed.connect(_close_sort_menu)
+	var panel := PanelContainer.new()
+	panel.name = "EquipmentSortMenu"
+	panel.custom_minimum_size.x = 360
+	panel.mouse_filter = Control.MOUSE_FILTER_STOP
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color("f3e1be")
+	style.border_color = Color("583f21")
+	style.set_border_width_all(3)
+	style.set_corner_radius_all(12)
+	style.set_content_margin_all(16)
+	panel.add_theme_stylebox_override("panel", style)
+	_sort_overlay.add_child(panel)
+	var options := Ui.vbox(10)
+	panel.add_child(options)
+	options.add_child(_paper_text("Sắp xếp", 24))
+	var by := Ui.hbox(8)
+	for choice in [["rarity", "Độ hiếm"], ["level", "Level"]]:
+		var button := Ui.button(choice[1], "Yellow" if _sort_by == choice[0] else "White", Vector2(152, 58), 20)
+		button.name = "EquipmentSortBy_" + choice[0]
+		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		button.pressed.connect(_choose_sort.bind(choice[0], _sort_descending))
+		by.add_child(button)
+	options.add_child(by)
+	var direction := Ui.hbox(8)
+	for descending in [true, false]:
+		var selected: bool = _sort_descending == descending
+		var button := Ui.button("Giảm dần" if descending else "Tăng dần", "Yellow" if selected else "White", Vector2(152, 58), 20)
+		button.name = "EquipmentSortDescending" if descending else "EquipmentSortAscending"
+		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		button.pressed.connect(_choose_sort.bind(_sort_by, descending))
+		direction.add_child(button)
+	options.add_child(direction)
+	panel.reset_size()
+	_position_sort_menu.call_deferred(panel, anchor)
+	panel.resized.connect(_position_sort_menu.bind(panel, anchor))
+
+
+func _position_sort_menu(panel: PanelContainer, anchor: Button) -> void:
+	if not is_instance_valid(panel) or not is_instance_valid(anchor):
+		return
+	var button_rect := anchor.get_global_rect()
+	var inverse := get_global_transform().affine_inverse()
+	var below: Vector2 = inverse * button_rect.end
+	var above: Vector2 = inverse * button_rect.position
+	var y := below.y + 8
+	if y + panel.size.y > size.y - 12:
+		y = above.y - panel.size.y - 8
+	panel.position = Vector2(clampf(below.x - panel.size.x, 12, maxf(12, size.x - panel.size.x - 12)),
+		clampf(y, 12, maxf(12, size.y - panel.size.y - 12)))
+
+
+func _close_sort_menu() -> void:
+	if is_instance_valid(_sort_overlay):
+		remove_child(_sort_overlay)
+		_sort_overlay.queue_free()
+	_sort_overlay = null
+
+
+func _close_sort_when_hidden() -> void:
+	if not is_visible_in_tree():
+		_close_sort_menu()
+
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if is_instance_valid(_sort_overlay) and event.is_action_pressed("ui_cancel"):
+		_close_sort_menu()
+		get_viewport().set_input_as_handled()
 
 
 func _paper_text(text: String, font_size: int, color := Color("583f21")) -> Label:
@@ -351,65 +521,12 @@ func _paper_text(text: String, font_size: int, color := Color("583f21")) -> Labe
 	return result
 
 
-## Center painted bounds, not each source SVG's different transparent margins.
-func _category_badge_texture(slot: String) -> Texture2D:
-	if _badge_textures.has(slot):
-		return _badge_textures[slot]
-	var source: Texture2D = BOOTS_BADGE if slot == "boots" else Ui.tex("icon_" + HeroCat.SLOT_ICONS[slot])
-	var bounds := source.get_image().get_used_rect()
-	if not bounds.has_area():
-		return source
-	var cropped := AtlasTexture.new()
-	cropped.atlas = source
-	cropped.region = bounds
-	cropped.filter_clip = true
-	_badge_textures[slot] = cropped
-	return cropped
-
-
 func _gear_face(uid: String, size: float, can_upgrade := false) -> Control:
 	var state: Dictionary = PlayerData.hero_cat
 	var d := HeroCat.def(state, uid)
 	var card := Ui.gear_card(d["icon"], HeroCat.SLOT_ICONS[d["slot"]], HeroCat.tone(d["rarity"]),
 		str(HeroCat.item(state, uid)["level"]), size, can_upgrade)
 	card.set_meta("equipment_uid", uid)
-	var old_frame := card.get_child(0)
-	card.remove_child(old_frame)
-	old_frame.queue_free()
-	var frame := PaperboardFrame.new()
-	frame.kind = "card"
-	frame.tone = HeroCat.tone(d["rarity"])
-	card.add_child(frame)
-	card.move_child(frame, 0)
-	frame.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	var badge_size := size * 0.29
-	var badge_position := Vector2(-2, -2)
-	var badge_frame := PaperboardFrame.new()
-	badge_frame.name = "EquipmentCategoryBadge"
-	badge_frame.kind = "badge"
-	badge_frame.tone = HeroCat.tone(d["rarity"])
-	badge_frame.custom_minimum_size = Vector2.ONE * badge_size
-	Ui.pin(card, badge_frame, badge_position)
-	var old_badge: TextureRect = card.get_node("SlotBadge")
-	var badge_index := old_badge.get_index()
-	card.remove_child(old_badge)
-	old_badge.queue_free()
-	card.move_child(badge_frame, badge_index)
-	# Build at the fitted size: shrinking the old glyph retains its cached minimum.
-	var badge := TextureRect.new()
-	badge.name = "SlotBadge"
-	badge.texture = _category_badge_texture(d["slot"])
-	badge.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	badge.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	badge.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	badge.custom_minimum_size = Vector2.ONE * (badge_size - 12)
-	badge.material = _badge_material
-	Ui.pin(card, badge, badge_position + Vector2.ONE * 6)
-	card.move_child(badge, badge_index + 1)
-	var level: Label = card.get_node("EquipmentLevel")
-	level.add_theme_color_override("font_color", Color.WHITE)
-	level.add_theme_color_override("font_outline_color", Color("241c1c"))
-	level.add_theme_constant_override("outline_size", 3)
 	var up: Control = card.get_node_or_null("EquipmentUpgrade")
 	if up != null:
 		up.set_anchors_preset(Control.PRESET_TOP_RIGHT)
@@ -527,10 +644,7 @@ func _fill_detail() -> void:
 		upgrade.disabled = true
 	else:
 		upgrade = Ui.cost_button("Nâng cấp", UiKit.format_number(cost), "coin", "Yellow", Vector2(240, 96))
-		_stone_cost(upgrade, cost, HeroCat.upgrade_gold(state, uid))
-		var plans := HeroCat.breakthrough_cost(state, uid)
-		if plans > 0:
-			_blueprint_cost(upgrade, d["slot"], plans)
+		_blueprint_cost(upgrade, d["slot"], cost)
 		upgrade.disabled = not PlayerData.hero_cat_can_upgrade(uid)
 	upgrade.pressed.connect(func():
 		if PlayerData.hero_cat_upgrade(uid):
@@ -558,7 +672,7 @@ func _fill_detail() -> void:
 				_fill_detail())
 		more.add_child(fuse)
 	if not wearing:
-		var salvage := Ui.button("Rã · +%d đá" % HeroCat.salvage_value(state, uid), "White", Vector2(240, 72), 22)
+		var salvage := Ui.button("Rã · +%d bản vẽ" % HeroCat.salvage_value(state, uid), "White", Vector2(240, 72), 22)
 		salvage.pressed.connect(func():
 			if PlayerData.hero_cat_salvage(uid) > 0:
 				SoundLib.play("sell")
@@ -570,26 +684,15 @@ func _fill_detail() -> void:
 
 
 # Turns a gold cost_button into a Forge Stone one: the stone icon and count, then the gold.
-func _stone_cost(button: Button, stones: int, gold: int) -> void:
-	var row: HBoxContainer = button.get_child(0).get_child(1)
-	var coin := row.get_child(0)
-	row.remove_child(coin)
-	coin.queue_free()
-	row.add_child(UiKit.forge_stone_icon(26))
-	row.move_child(row.get_child(row.get_child_count() - 1), 0)
-	(row.get_child(1) as Label).text = UiKit.format_number(stones)
-	if gold > 0:
-		row.add_child(Ui.icon("coin", 22))
-		row.add_child(Ui.label(UiKit.format_number(gold), "LabelSmall", 18))
-
-# A breakthrough level also costs Blueprints of the slot: title and the plan count.
+# Turns a gold cost_button into a Blueprint one: the slot's blueprint icon and have/need.
 func _blueprint_cost(button: Button, slot: String, plans: int) -> void:
-	var box: VBoxContainer = button.get_child(0)
-	(box.get_child(0) as Label).text = "Đột phá"
-	var row: HBoxContainer = box.get_child(1)
-	row.add_child(UiKit.blueprint_icon(slot, 24))
+	var row: HBoxContainer = button.get_child(0).get_child(1)
+	for child in row.get_children():
+		row.remove_child(child)
+		child.queue_free()
+	row.add_child(UiKit.blueprint_icon(slot, 26))
 	var have: int = PlayerData.blueprints.get(slot, 0)
-	var label := Ui.label("%d/%d" % [have, plans], "LabelSmall", 18)
+	var label := Ui.label("%s/%s" % [UiKit.format_number(have), UiKit.format_number(plans)], "LabelSmall", 20)
 	if have < plans:
 		label.add_theme_color_override("font_color", Color("ff8f80"))
 	row.add_child(label)

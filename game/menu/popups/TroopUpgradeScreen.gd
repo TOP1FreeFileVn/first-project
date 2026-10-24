@@ -7,6 +7,7 @@ signal team_requested(id: String)
 const Ui = preload("res://game/ui/Ui.gd")
 const UiKit = preload("res://game/ui/UiKit.gd")
 const Economy = preload("res://game/core/Economy.gd")
+const Cats = preload("res://game/data/Cats.gd")
 const INK := Color("583f21")
 const MUTED := Color("6b563b")
 const GAIN := Color("32663b")
@@ -209,6 +210,10 @@ func _build_hero(troop: Resource, state: Dictionary) -> void:
 	heading.name = "TroopUpgradeName"
 	heading.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_hero.add_child(heading)
+	var world := _text("Bản thể ở " + Cats.WORLD_NAMES.get(Cats.world_of(troop_id), ""), 21, MUTED)
+	world.name = "TroopUpgradeWorld"
+	world.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_hero.add_child(world)
 	var rank := Ui.hbox(10)
 	var level := _text("Cấp %d / %d" % [state.level, PlayerData.level_cap(troop_id)] if state.unlocked else "Chưa mở khóa", 23)
 	level.name = "TroopUpgradeLevel"
@@ -346,7 +351,10 @@ func _build_footer(state: Dictionary) -> void:
 	primary.pressed.connect(_upgrade)
 	actions.add_child(primary)
 	var in_team: bool = PlayerData.in_team(troop_id)
-	var team := Ui.button("RỜI ĐỘI" if in_team else "VÀO ĐỘI", "Yellow", Vector2(0, 96), 26)
+	# Another version of this cat in the team: joining swaps it out.
+	var same := PlayerData.team_same_cat(troop_id)
+	var join := "THAY BẢN THỂ" if same != "" and not in_team else "VÀO ĐỘI"
+	var team := Ui.button("RỜI ĐỘI" if in_team else join, "Yellow", Vector2(0, 96), 26)
 	team.name = "TroopUpgradeTeam"
 	team.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	team.disabled = not state.unlocked or (in_team and PlayerData.battle_team().size() <= 1)

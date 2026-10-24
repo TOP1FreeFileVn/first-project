@@ -6,6 +6,8 @@
 		"pack-first-details-360x640.png",
 		"gem-packs-bottom-360x640.png",
 		"pack-last-details-360x640.png",
+		"gold-offers-before-claim-360x640.png",
+		"gold-offers-after-claim-360x640.png",
 		"header-gem-shortcut-360x640.png",
 		"shop-top-450x800.png",
 		"supply-section-450x800.png",
@@ -13,64 +15,63 @@
 		"pack-first-details-450x800.png",
 		"gem-packs-bottom-450x800.png",
 		"pack-last-details-450x800.png",
+		"gold-offers-before-claim-450x800.png",
+		"gold-offers-after-claim-450x800.png",
 		"header-gem-shortcut-450x800.png"
 	],
 	"catalog": [
 		{
-			"art_level": 1,
 			"gems": 120,
 			"id": "gems_80",
+			"illustration": "res://game/ui/art/shop_gem_packs/01.png",
 			"name": "Gói 120 kim cương",
 			"price_vnd": 19000
 		},
 		{
-			"art_level": 2,
 			"gems": 600,
 			"id": "gems_400",
+			"illustration": "res://game/ui/art/shop_gem_packs/02.png",
 			"name": "Gói 600 kim cương",
 			"price_vnd": 89000
 		},
 		{
-			"art_level": 3,
 			"gems": 1500,
 			"id": "gems_1000",
+			"illustration": "res://game/ui/art/shop_gem_packs/03.png",
 			"name": "Gói 1.500 kim cương",
 			"price_vnd": 199000
 		},
 		{
-			"art_level": 4,
 			"gems": 3300,
 			"id": "gems_2200",
+			"illustration": "res://game/ui/art/shop_gem_packs/04.png",
 			"name": "Gói 3.300 kim cương",
 			"price_vnd": 399000
 		},
 		{
-			"art_level": 5,
 			"gems": 6900,
 			"id": "gems_4600",
+			"illustration": "res://game/ui/art/shop_gem_packs/05.png",
 			"name": "Gói 6.900 kim cương",
 			"price_vnd": 799000
 		},
 		{
-			"art_level": 6,
 			"gems": 15000,
 			"id": "gems_10000",
+			"illustration": "res://game/ui/art/shop_gem_packs/06.png",
 			"name": "Gói 15.000 kim cương",
 			"price_vnd": 1599000
 		}
 	],
-	"checks": 329,
-	"failures": [
-		"Header gem shortcut focuses the gem aisle directly at (360, 640)",
-		"Header gem shortcut focuses the gem aisle directly at (450, 800)"
-	],
+	"checks": 507,
+	"failures": [],
 	"layouts": [
 		{
 			"gem_grid": [
 				24.0,
 				1267.0,
 				664.0,
-				857.0
+				662.0
 			],
 			"sections": [
 				{
@@ -96,6 +97,15 @@
 					"rect": [
 						24.0,
 						1137.0,
+						664.0,
+						66.0
+					]
+				},
+				{
+					"id": "gold",
+					"rect": [
+						24.0,
+						1945.0,
 						664.0,
 						66.0
 					]
@@ -111,7 +121,7 @@
 				24.0,
 				1267.0,
 				664.0,
-				857.0
+				662.0
 			],
 			"sections": [
 				{
@@ -140,6 +150,15 @@
 						664.0,
 						66.0
 					]
+				},
+				{
+					"id": "gold",
+					"rect": [
+						24.0,
+						1945.0,
+						664.0,
+						66.0
+					]
 				}
 			],
 			"size": [
@@ -150,7 +169,7 @@
 	],
 	"persist": false,
 	"profile": "C:/Users/dangp/GodotProjects/first-project/output/shop-sections-profile/Roaming/Godot/app_userdata/Gear Defenders",
-	"scope": "Production Home/Shop; centered section placards; unchanged chest purchases; six proposed gem packs; actual first/last pack pointers and dismiss; no payment or currency grants.",
+	"scope": "Production Home/Shop; centered section placards; unchanged chest purchases; six proposed gem packs without payment; daily free gold with saved duplicate protection; five diamond-to-gold tiers with real first/last pointer purchases and exact currency deltas.",
 	"selections": [
 		{
 			"gems": 120,

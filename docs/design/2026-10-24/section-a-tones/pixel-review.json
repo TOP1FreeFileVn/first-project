@@ -1,0 +1,28 @@
+[
+  {
+    "sample": "flat",
+    "upper_fill_pixel": [
+      243,
+      215,
+      155
+    ],
+    "lower_fill_pixel": [
+      243,
+      215,
+      155
+    ]
+  },
+  {
+    "sample": "two-tone",
+    "upper_fill_pixel": [
+      248,
+      228,
+      183
+    ],
+    "lower_fill_pixel": [
+      232,
+      199,
+      130
+    ]
+  }
+]

@@ -3,14 +3,14 @@ extends RefCounted
 # Retention features: the 7-day login gift, daily quests with activity milestones, and
 # the avatars / frames for the player profile. Rewards are dictionaries that
 # PlayerData.grant() understands: {"gold": n}, {"gems": n}, {"cards": n} (random troop
-# cards), {"stones": n} (Forge Stones), {"blueprints": n} (random-slot Blueprints),
+# cards), {"blueprints": n} (random-slot Blueprints),
 # {"item": rarity} (a random hero-cat item).
 
 const LOGIN_REWARDS := [
 	{"gold": 300},
 	{"gems": 20},
 	{"cards": 8},
-	{"stones": 60},
+	{"blueprints": 12},
 	{"gems": 50},
 	{"gold": 1500},
 	{"item": 2},
@@ -29,11 +29,17 @@ const QUEST_POINTS := 20
 const QUEST_MILESTONES := [
 	{"points": 40, "reward": {"gold": 400}},
 	{"points": 80, "reward": {"gems": 20, "blueprints": 2}},
-	{"points": 120, "reward": {"stones": 30, "blueprints": 3}},
+	{"points": 120, "reward": {"blueprints": 8}},
 ]
 
-const AVATAR_COUNT := 25
-## Levels cleared to unlock each row of five avatars.
+## Profile pictures, all cats: the five cat faces, then the sixteen cat soldiers.
+const AVATARS := [
+	"head:tabby", "head:grey", "head:calico", "head:cream", "head:hero",
+	"kiem", "cung", "gay_phep", "giao", "riu", "no", "thuoc", "cu_kiem",
+	"dao", "sung", "sach_phep", "chuy", "katana", "dai_bac", "dua_phep", "bua",
+]
+const AVATAR_COUNT := 21
+## Levels cleared to unlock each row of five avatars (the last row holds one).
 const AVATAR_ROW_NEEDS := [0, 0, 3, 6, 9]
 
 const FRAME_ORDER := ["wood", "silver", "gold", "royal"]
@@ -45,8 +51,10 @@ const FRAMES := {
 }
 
 
-static func avatar_path(index: int) -> String:
-	return "UI Elements/UI Elements/Human Avatars/Avatars_%02d.png" % index
+## Skin image name of avatar `index` (1-based): a cat head or a cat soldier.
+static func avatar_image(index: int) -> String:
+	var key: String = AVATARS[clampi(index, 1, AVATAR_COUNT) - 1]
+	return "cat_head_" + key.substr(5) if key.begins_with("head:") else "unit_" + key
 
 
 static func avatar_need(index: int) -> int:

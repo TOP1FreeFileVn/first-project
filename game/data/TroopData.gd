@@ -26,8 +26,8 @@ const KLASS_NAMES := ["Bộ binh", "Tầm xa", "Pháp sư", "Kỵ binh"]
 @export_multiline var description := ""
 ## Economy.Rarity: 0 common, 1 rare, 2 epic, 3 legendary. Decides chest drop rates.
 @export_range(0, 3) var rarity := 0
-## Key in SpriteLib.UNIT_ANIMS (a Tiny Swords unit, or a Pawn holding a given tool).
-@export var unit_key := "Warrior"
+## Drawn unit art: "art:<id>" (game/ui/art or skin unit_<id>), see SpriteLib.cat_texture.
+@export var unit_key := "art:kiem"
 ## Gear art from "Buildings/Blue Buildings/" (without .png).
 @export var building := "Barracks"
 @export var role: Role = Role.MELEE

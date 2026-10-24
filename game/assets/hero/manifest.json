@@ -1,0 +1,1385 @@
+{
+  "revision": "2026-10-24-ginger-equipment-idle",
+  "canvas": [
+    256,
+    240
+  ],
+  "render_scale": 3,
+  "origin_canvas": [
+    128,
+    240
+  ],
+  "design_rect_godot": [
+    -128,
+    -240,
+    256,
+    240
+  ],
+  "identity": "Original approved ginger equipment hero; 9px source ink, blue cape, original front-facing face.",
+  "animation_source": {
+    "path": "docs/design/2026-10-23/cat-rigs/hero_valor/spine/hero_valor.json",
+    "sha256": "fbf746eecc60d156e73175751d7911ca13b3f18e3afe15d7d5f3466813009ddf",
+    "clip": "idle",
+    "duration": 1.2
+  },
+  "retarget": "Original hip breathing, head lift, tail swing and held-paw rotation tracks; ranged retargets right-paw track to left-paw. Feet remain static children of root.",
+  "appearance_rule": "Only the held weapon changes; helmet, armor and boots affect stats/icons only. No backdrop, circular halo or platform is part of these assets.",
+  "source_parts_manifest": "docs/design/2026-10-20/cat-spine-parts/manifest.json",
+  "families": {
+    "bare": {
+      "equipped_item": "",
+      "hand": null,
+      "skeleton": "game/assets/hero/bare/bare.json",
+      "atlas_size": [
+        2048,
+        581
+      ],
+      "setup_bounds_godot": [
+        -110.6667,
+        -232.6667,
+        120.0,
+        -0.3333
+      ],
+      "idle_bounds_godot": [
+        -112.88,
+        -240.64,
+        133.4581,
+        1.895
+      ],
+      "bounds_format": "min_x,min_y,max_x,max_y in Godot Y-down coordinates at feet origin",
+      "slots_back_to_front": [
+        "tail",
+        "cape",
+        "leg_l",
+        "leg_r",
+        "body",
+        "head",
+        "paw_l",
+        "paw_r"
+      ],
+      "regions": {
+        "tail": {
+          "bone": "tail",
+          "source_alpha_box_3x": [
+            499,
+            403,
+            744,
+            678
+          ],
+          "atlas_bounds": [
+            1747,
+            0,
+            245,
+            275
+          ]
+        },
+        "cape": {
+          "bone": "cape",
+          "source_alpha_box_3x": [
+            52,
+            370,
+            716,
+            719
+          ],
+          "atlas_bounds": [
+            547,
+            0,
+            664,
+            349
+          ]
+        },
+        "leg_l": {
+          "bone": "leg_l",
+          "source_alpha_box_3x": [
+            195,
+            557,
+            333,
+            711
+          ],
+          "atlas_bounds": [
+            0,
+            427,
+            138,
+            154
+          ]
+        },
+        "leg_r": {
+          "bone": "leg_r",
+          "source_alpha_box_3x": [
+            434,
+            557,
+            572,
+            711
+          ],
+          "atlas_bounds": [
+            141,
+            427,
+            138,
+            154
+          ]
+        },
+        "body": {
+          "bone": "body",
+          "source_alpha_box_3x": [
+            119,
+            334,
+            649,
+            639
+          ],
+          "atlas_bounds": [
+            1214,
+            0,
+            530,
+            305
+          ]
+        },
+        "head": {
+          "bone": "head",
+          "source_alpha_box_3x": [
+            112,
+            22,
+            656,
+            446
+          ],
+          "atlas_bounds": [
+            0,
+            0,
+            544,
+            424
+          ]
+        },
+        "paw_l": {
+          "bone": "paw_l",
+          "source_alpha_box_3x": [
+            238,
+            442,
+            343,
+            545
+          ],
+          "atlas_bounds": [
+            282,
+            427,
+            105,
+            103
+          ]
+        },
+        "paw_r": {
+          "bone": "paw_r",
+          "source_alpha_box_3x": [
+            425,
+            442,
+            530,
+            545
+          ],
+          "atlas_bounds": [
+            390,
+            427,
+            105,
+            103
+          ]
+        }
+      },
+      "weapon_socket_canvas": null,
+      "sources": [
+        {
+          "path": "docs/design/2026-10-24/hero-legs/tail.png",
+          "sha256": "3c44f06c09e9494d7bbdd0ff9934de0a6fc8a3310900d30da2578909fe6dbbf3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/back_accessories.png",
+          "sha256": "da8a4ab4e37bfe7f91bd6f2a1a96230973b963a1cb5600e25c6694caffe3b5ae"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_L_image.png",
+          "sha256": "4104a8111d64adea6bc1353a1745e913a63dd00046a67d06c2b34ac1b57c98ac"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_R_image.png",
+          "sha256": "5b1b282be5adbd06983161dead54c8ba279eab8bebb5d93c5b4eed1d5637c4c3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/body.png",
+          "sha256": "05e9af7268a5d2ed27cc1eab2b4d6e24c91c11d700b2813464d15fb0251f4e3f"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/head.png",
+          "sha256": "de399ecaa9398d2b6d9041751f056366659d3009482fef670f5c3e79ae59f25b"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_L_image.png",
+          "sha256": "21f80dc21cfd56f8d96a7662858026b9da9550143066472b94e35bf8c2dd3967"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_R_image.png",
+          "sha256": "a8be950395f0641e1eea3f08fc0fa7232b5aefebd54492d279a2e2e228167e8e"
+        }
+      ],
+      "production_static_reference": "game/ui/art/hero_cat_bare.png"
+    },
+    "melee": {
+      "equipped_item": "kiem_go",
+      "hand": "right",
+      "skeleton": "game/assets/hero/melee/melee.json",
+      "atlas_size": [
+        2048,
+        797
+      ],
+      "setup_bounds_godot": [
+        -110.6667,
+        -232.6667,
+        120.0,
+        -0.3333
+      ],
+      "idle_bounds_godot": [
+        -112.88,
+        -240.64,
+        133.4581,
+        1.895
+      ],
+      "bounds_format": "min_x,min_y,max_x,max_y in Godot Y-down coordinates at feet origin",
+      "slots_back_to_front": [
+        "tail",
+        "cape",
+        "leg_l",
+        "leg_r",
+        "body",
+        "head",
+        "weapon",
+        "palm",
+        "paw_l",
+        "paw_r"
+      ],
+      "regions": {
+        "tail": {
+          "bone": "tail",
+          "source_alpha_box_3x": [
+            499,
+            403,
+            744,
+            678
+          ],
+          "atlas_bounds": [
+            533,
+            492,
+            245,
+            275
+          ]
+        },
+        "cape": {
+          "bone": "cape",
+          "source_alpha_box_3x": [
+            52,
+            370,
+            716,
+            719
+          ],
+          "atlas_bounds": [
+            873,
+            0,
+            664,
+            349
+          ]
+        },
+        "leg_l": {
+          "bone": "leg_l",
+          "source_alpha_box_3x": [
+            195,
+            557,
+            333,
+            711
+          ],
+          "atlas_bounds": [
+            781,
+            492,
+            138,
+            154
+          ]
+        },
+        "leg_r": {
+          "bone": "leg_r",
+          "source_alpha_box_3x": [
+            434,
+            557,
+            572,
+            711
+          ],
+          "atlas_bounds": [
+            922,
+            492,
+            138,
+            154
+          ]
+        },
+        "body": {
+          "bone": "body",
+          "source_alpha_box_3x": [
+            119,
+            334,
+            649,
+            639
+          ],
+          "atlas_bounds": [
+            0,
+            492,
+            530,
+            305
+          ]
+        },
+        "head": {
+          "bone": "head",
+          "source_alpha_box_3x": [
+            112,
+            22,
+            656,
+            446
+          ],
+          "atlas_bounds": [
+            326,
+            0,
+            544,
+            424
+          ]
+        },
+        "weapon": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            393,
+            121,
+            716,
+            610
+          ],
+          "atlas_bounds": [
+            0,
+            0,
+            323,
+            489
+          ]
+        },
+        "palm": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            453,
+            468,
+            505,
+            529
+          ],
+          "atlas_bounds": [
+            1279,
+            492,
+            52,
+            61
+          ]
+        },
+        "paw_l": {
+          "bone": "paw_l",
+          "source_alpha_box_3x": [
+            238,
+            442,
+            343,
+            545
+          ],
+          "atlas_bounds": [
+            1063,
+            492,
+            105,
+            103
+          ]
+        },
+        "paw_r": {
+          "bone": "paw_r",
+          "source_alpha_box_3x": [
+            425,
+            442,
+            530,
+            545
+          ],
+          "atlas_bounds": [
+            1171,
+            492,
+            105,
+            103
+          ]
+        }
+      },
+      "weapon_socket_canvas": [
+        160,
+        166
+      ],
+      "sources": [
+        {
+          "path": "docs/design/2026-10-24/hero-legs/tail.png",
+          "sha256": "3c44f06c09e9494d7bbdd0ff9934de0a6fc8a3310900d30da2578909fe6dbbf3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/back_accessories.png",
+          "sha256": "da8a4ab4e37bfe7f91bd6f2a1a96230973b963a1cb5600e25c6694caffe3b5ae"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_L_image.png",
+          "sha256": "4104a8111d64adea6bc1353a1745e913a63dd00046a67d06c2b34ac1b57c98ac"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_R_image.png",
+          "sha256": "5b1b282be5adbd06983161dead54c8ba279eab8bebb5d93c5b4eed1d5637c4c3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/body.png",
+          "sha256": "05e9af7268a5d2ed27cc1eab2b4d6e24c91c11d700b2813464d15fb0251f4e3f"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/head.png",
+          "sha256": "de399ecaa9398d2b6d9041751f056366659d3009482fef670f5c3e79ae59f25b"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_L_image.png",
+          "sha256": "21f80dc21cfd56f8d96a7662858026b9da9550143066472b94e35bf8c2dd3967"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_R_image.png",
+          "sha256": "a8be950395f0641e1eea3f08fc0fa7232b5aefebd54492d279a2e2e228167e8e"
+        },
+        {
+          "path": "docs/design/2026-10-20/hero-equipment-v4/processed/melee-weapon-layer.png",
+          "sha256": "b0700a2dcec424d9592a16e53abcb3981dc9e2fea17c1f4b3e37308aa61302ab"
+        },
+        {
+          "path": "docs/design/2026-10-20/hero-equipment-v4/processed/right-palm-mask.png",
+          "sha256": "0d7c6348edf5854d1137a5266f82f7893349683dd057c79d8c146ba69663c7e7"
+        }
+      ],
+      "production_static_reference": "game/ui/art/hero_cat_melee.png"
+    },
+    "ranged": {
+      "equipped_item": "cung_san",
+      "hand": "left",
+      "skeleton": "game/assets/hero/ranged/ranged.json",
+      "atlas_size": [
+        2048,
+        702
+      ],
+      "setup_bounds_godot": [
+        -110.6667,
+        -232.6667,
+        120.0,
+        -0.3333
+      ],
+      "idle_bounds_godot": [
+        -112.88,
+        -240.64,
+        133.4581,
+        1.895
+      ],
+      "bounds_format": "min_x,min_y,max_x,max_y in Godot Y-down coordinates at feet origin",
+      "slots_back_to_front": [
+        "tail",
+        "cape",
+        "leg_l",
+        "leg_r",
+        "body",
+        "head",
+        "weapon",
+        "palm",
+        "paw_l",
+        "paw_r"
+      ],
+      "regions": {
+        "tail": {
+          "bone": "tail",
+          "source_alpha_box_3x": [
+            499,
+            403,
+            744,
+            678
+          ],
+          "atlas_bounds": [
+            0,
+            427,
+            245,
+            275
+          ]
+        },
+        "cape": {
+          "bone": "cape",
+          "source_alpha_box_3x": [
+            52,
+            370,
+            716,
+            719
+          ],
+          "atlas_bounds": [
+            739,
+            0,
+            664,
+            349
+          ]
+        },
+        "leg_l": {
+          "bone": "leg_l",
+          "source_alpha_box_3x": [
+            195,
+            557,
+            333,
+            711
+          ],
+          "atlas_bounds": [
+            248,
+            427,
+            138,
+            154
+          ]
+        },
+        "leg_r": {
+          "bone": "leg_r",
+          "source_alpha_box_3x": [
+            434,
+            557,
+            572,
+            711
+          ],
+          "atlas_bounds": [
+            389,
+            427,
+            138,
+            154
+          ]
+        },
+        "body": {
+          "bone": "body",
+          "source_alpha_box_3x": [
+            119,
+            334,
+            649,
+            639
+          ],
+          "atlas_bounds": [
+            1406,
+            0,
+            530,
+            305
+          ]
+        },
+        "head": {
+          "bone": "head",
+          "source_alpha_box_3x": [
+            112,
+            22,
+            656,
+            446
+          ],
+          "atlas_bounds": [
+            0,
+            0,
+            544,
+            424
+          ]
+        },
+        "weapon": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            155,
+            303,
+            344,
+            715
+          ],
+          "atlas_bounds": [
+            547,
+            0,
+            189,
+            412
+          ]
+        },
+        "palm": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            252,
+            466,
+            311,
+            530
+          ],
+          "atlas_bounds": [
+            746,
+            427,
+            59,
+            64
+          ]
+        },
+        "paw_l": {
+          "bone": "paw_l",
+          "source_alpha_box_3x": [
+            238,
+            442,
+            343,
+            545
+          ],
+          "atlas_bounds": [
+            530,
+            427,
+            105,
+            103
+          ]
+        },
+        "paw_r": {
+          "bone": "paw_r",
+          "source_alpha_box_3x": [
+            425,
+            442,
+            530,
+            545
+          ],
+          "atlas_bounds": [
+            638,
+            427,
+            105,
+            103
+          ]
+        }
+      },
+      "weapon_socket_canvas": [
+        94,
+        166
+      ],
+      "sources": [
+        {
+          "path": "docs/design/2026-10-24/hero-legs/tail.png",
+          "sha256": "3c44f06c09e9494d7bbdd0ff9934de0a6fc8a3310900d30da2578909fe6dbbf3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/back_accessories.png",
+          "sha256": "da8a4ab4e37bfe7f91bd6f2a1a96230973b963a1cb5600e25c6694caffe3b5ae"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_L_image.png",
+          "sha256": "4104a8111d64adea6bc1353a1745e913a63dd00046a67d06c2b34ac1b57c98ac"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_R_image.png",
+          "sha256": "5b1b282be5adbd06983161dead54c8ba279eab8bebb5d93c5b4eed1d5637c4c3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/body.png",
+          "sha256": "05e9af7268a5d2ed27cc1eab2b4d6e24c91c11d700b2813464d15fb0251f4e3f"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/head.png",
+          "sha256": "de399ecaa9398d2b6d9041751f056366659d3009482fef670f5c3e79ae59f25b"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_L_image.png",
+          "sha256": "21f80dc21cfd56f8d96a7662858026b9da9550143066472b94e35bf8c2dd3967"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_R_image.png",
+          "sha256": "a8be950395f0641e1eea3f08fc0fa7232b5aefebd54492d279a2e2e228167e8e"
+        },
+        {
+          "path": "docs/design/2026-10-22/hero-weapons-canvas/svg/bow-held-layer.svg",
+          "sha256": "3caa74079920746019457197bbf909dc8cd55622b1601f26a6f3a92d8348558b"
+        },
+        {
+          "path": "docs/design/2026-10-23/hero-equipment-integration/svg/hero-bow-768.svg",
+          "sha256": "86d4f8f23e05b57e7d38780f0b343cfc61c327f1e2708fcad496dc09ed06f2e2"
+        }
+      ],
+      "production_static_reference": "game/ui/art/hero_cat_ranged.png"
+    },
+    "magic": {
+      "equipped_item": "gay_sao",
+      "hand": "right",
+      "skeleton": "game/assets/hero/magic/magic.json",
+      "atlas_size": [
+        2048,
+        732
+      ],
+      "setup_bounds_godot": [
+        -110.6667,
+        -232.6667,
+        120.0,
+        -0.3333
+      ],
+      "idle_bounds_godot": [
+        -112.88,
+        -240.64,
+        133.4581,
+        1.895
+      ],
+      "bounds_format": "min_x,min_y,max_x,max_y in Godot Y-down coordinates at feet origin",
+      "slots_back_to_front": [
+        "tail",
+        "cape",
+        "leg_l",
+        "leg_r",
+        "body",
+        "head",
+        "weapon",
+        "palm",
+        "paw_l",
+        "paw_r"
+      ],
+      "regions": {
+        "tail": {
+          "bone": "tail",
+          "source_alpha_box_3x": [
+            499,
+            403,
+            744,
+            678
+          ],
+          "atlas_bounds": [
+            533,
+            427,
+            245,
+            275
+          ]
+        },
+        "cape": {
+          "bone": "cape",
+          "source_alpha_box_3x": [
+            52,
+            370,
+            716,
+            719
+          ],
+          "atlas_bounds": [
+            856,
+            0,
+            664,
+            349
+          ]
+        },
+        "leg_l": {
+          "bone": "leg_l",
+          "source_alpha_box_3x": [
+            195,
+            557,
+            333,
+            711
+          ],
+          "atlas_bounds": [
+            781,
+            427,
+            138,
+            154
+          ]
+        },
+        "leg_r": {
+          "bone": "leg_r",
+          "source_alpha_box_3x": [
+            434,
+            557,
+            572,
+            711
+          ],
+          "atlas_bounds": [
+            922,
+            427,
+            138,
+            154
+          ]
+        },
+        "body": {
+          "bone": "body",
+          "source_alpha_box_3x": [
+            119,
+            334,
+            649,
+            639
+          ],
+          "atlas_bounds": [
+            0,
+            427,
+            530,
+            305
+          ]
+        },
+        "head": {
+          "bone": "head",
+          "source_alpha_box_3x": [
+            112,
+            22,
+            656,
+            446
+          ],
+          "atlas_bounds": [
+            0,
+            0,
+            544,
+            424
+          ]
+        },
+        "weapon": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            394,
+            195,
+            700,
+            609
+          ],
+          "atlas_bounds": [
+            547,
+            0,
+            306,
+            414
+          ]
+        },
+        "palm": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            450,
+            466,
+            509,
+            530
+          ],
+          "atlas_bounds": [
+            1279,
+            427,
+            59,
+            64
+          ]
+        },
+        "paw_l": {
+          "bone": "paw_l",
+          "source_alpha_box_3x": [
+            238,
+            442,
+            343,
+            545
+          ],
+          "atlas_bounds": [
+            1063,
+            427,
+            105,
+            103
+          ]
+        },
+        "paw_r": {
+          "bone": "paw_r",
+          "source_alpha_box_3x": [
+            425,
+            442,
+            530,
+            545
+          ],
+          "atlas_bounds": [
+            1171,
+            427,
+            105,
+            103
+          ]
+        }
+      },
+      "weapon_socket_canvas": [
+        160,
+        166
+      ],
+      "sources": [
+        {
+          "path": "docs/design/2026-10-24/hero-legs/tail.png",
+          "sha256": "3c44f06c09e9494d7bbdd0ff9934de0a6fc8a3310900d30da2578909fe6dbbf3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/back_accessories.png",
+          "sha256": "da8a4ab4e37bfe7f91bd6f2a1a96230973b963a1cb5600e25c6694caffe3b5ae"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_L_image.png",
+          "sha256": "4104a8111d64adea6bc1353a1745e913a63dd00046a67d06c2b34ac1b57c98ac"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_R_image.png",
+          "sha256": "5b1b282be5adbd06983161dead54c8ba279eab8bebb5d93c5b4eed1d5637c4c3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/body.png",
+          "sha256": "05e9af7268a5d2ed27cc1eab2b4d6e24c91c11d700b2813464d15fb0251f4e3f"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/head.png",
+          "sha256": "de399ecaa9398d2b6d9041751f056366659d3009482fef670f5c3e79ae59f25b"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_L_image.png",
+          "sha256": "21f80dc21cfd56f8d96a7662858026b9da9550143066472b94e35bf8c2dd3967"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_R_image.png",
+          "sha256": "a8be950395f0641e1eea3f08fc0fa7232b5aefebd54492d279a2e2e228167e8e"
+        },
+        {
+          "path": "docs/design/2026-10-22/hero-weapons-canvas/svg/staff-held-layer.svg",
+          "sha256": "644cf82aab65b8d3a9a7d9b4e130e7e84b3d7fe8359e01bd818a2268d09ff3fd"
+        },
+        {
+          "path": "docs/design/2026-10-23/hero-equipment-integration/svg/hero-staff-768.svg",
+          "sha256": "9408b151ac3f758f8929d7ca461fa4ddad4b2717734dc34121a93a7bef1b9288"
+        }
+      ],
+      "production_static_reference": "game/ui/art/hero_cat_magic.png"
+    },
+    "heavy": {
+      "equipped_item": "riu_lua",
+      "hand": "right",
+      "skeleton": "game/assets/hero/heavy/heavy.json",
+      "atlas_size": [
+        2048,
+        732
+      ],
+      "setup_bounds_godot": [
+        -110.6667,
+        -232.6667,
+        122.6667,
+        -0.3333
+      ],
+      "idle_bounds_godot": [
+        -112.88,
+        -240.64,
+        133.4581,
+        1.895
+      ],
+      "bounds_format": "min_x,min_y,max_x,max_y in Godot Y-down coordinates at feet origin",
+      "slots_back_to_front": [
+        "tail",
+        "cape",
+        "leg_l",
+        "leg_r",
+        "body",
+        "head",
+        "weapon",
+        "palm",
+        "paw_l",
+        "paw_r"
+      ],
+      "regions": {
+        "tail": {
+          "bone": "tail",
+          "source_alpha_box_3x": [
+            499,
+            403,
+            744,
+            678
+          ],
+          "atlas_bounds": [
+            533,
+            427,
+            245,
+            275
+          ]
+        },
+        "cape": {
+          "bone": "cape",
+          "source_alpha_box_3x": [
+            52,
+            370,
+            716,
+            719
+          ],
+          "atlas_bounds": [
+            901,
+            0,
+            664,
+            349
+          ]
+        },
+        "leg_l": {
+          "bone": "leg_l",
+          "source_alpha_box_3x": [
+            195,
+            557,
+            333,
+            711
+          ],
+          "atlas_bounds": [
+            781,
+            427,
+            138,
+            154
+          ]
+        },
+        "leg_r": {
+          "bone": "leg_r",
+          "source_alpha_box_3x": [
+            434,
+            557,
+            572,
+            711
+          ],
+          "atlas_bounds": [
+            922,
+            427,
+            138,
+            154
+          ]
+        },
+        "body": {
+          "bone": "body",
+          "source_alpha_box_3x": [
+            119,
+            334,
+            649,
+            639
+          ],
+          "atlas_bounds": [
+            0,
+            427,
+            530,
+            305
+          ]
+        },
+        "head": {
+          "bone": "head",
+          "source_alpha_box_3x": [
+            112,
+            22,
+            656,
+            446
+          ],
+          "atlas_bounds": [
+            0,
+            0,
+            544,
+            424
+          ]
+        },
+        "weapon": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            401,
+            241,
+            752,
+            595
+          ],
+          "atlas_bounds": [
+            547,
+            0,
+            351,
+            354
+          ]
+        },
+        "palm": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            450,
+            466,
+            509,
+            530
+          ],
+          "atlas_bounds": [
+            1279,
+            427,
+            59,
+            64
+          ]
+        },
+        "paw_l": {
+          "bone": "paw_l",
+          "source_alpha_box_3x": [
+            238,
+            442,
+            343,
+            545
+          ],
+          "atlas_bounds": [
+            1063,
+            427,
+            105,
+            103
+          ]
+        },
+        "paw_r": {
+          "bone": "paw_r",
+          "source_alpha_box_3x": [
+            425,
+            442,
+            530,
+            545
+          ],
+          "atlas_bounds": [
+            1171,
+            427,
+            105,
+            103
+          ]
+        }
+      },
+      "weapon_socket_canvas": [
+        160,
+        166
+      ],
+      "sources": [
+        {
+          "path": "docs/design/2026-10-24/hero-legs/tail.png",
+          "sha256": "3c44f06c09e9494d7bbdd0ff9934de0a6fc8a3310900d30da2578909fe6dbbf3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/back_accessories.png",
+          "sha256": "da8a4ab4e37bfe7f91bd6f2a1a96230973b963a1cb5600e25c6694caffe3b5ae"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_L_image.png",
+          "sha256": "4104a8111d64adea6bc1353a1745e913a63dd00046a67d06c2b34ac1b57c98ac"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_R_image.png",
+          "sha256": "5b1b282be5adbd06983161dead54c8ba279eab8bebb5d93c5b4eed1d5637c4c3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/body.png",
+          "sha256": "05e9af7268a5d2ed27cc1eab2b4d6e24c91c11d700b2813464d15fb0251f4e3f"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/head.png",
+          "sha256": "de399ecaa9398d2b6d9041751f056366659d3009482fef670f5c3e79ae59f25b"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_L_image.png",
+          "sha256": "21f80dc21cfd56f8d96a7662858026b9da9550143066472b94e35bf8c2dd3967"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_R_image.png",
+          "sha256": "a8be950395f0641e1eea3f08fc0fa7232b5aefebd54492d279a2e2e228167e8e"
+        },
+        {
+          "path": "docs/design/2026-10-22/hero-weapons-canvas/svg/axe-held-layer.svg",
+          "sha256": "d276dfef0ba10cc708405a4e9082187b99646b0c51cee4491c16f7c3082db438"
+        },
+        {
+          "path": "docs/design/2026-10-22/hero-weapons-canvas/svg/hero-axe-768.svg",
+          "sha256": "752c2a1d2c97dbd2af58ffaaa356241dcc08dfad6a0718cc8c6532571b4ef4dd"
+        }
+      ],
+      "production_static_reference": "game/ui/art/hero_cat_heavy.png"
+    },
+    "katana": {
+      "equipped_item": "katana_nguyet",
+      "hand": "right",
+      "skeleton": "game/assets/hero/katana/katana.json",
+      "atlas_size": [
+        2048,
+        740
+      ],
+      "setup_bounds_godot": [
+        -110.6667,
+        -232.6667,
+        120.0,
+        -0.3333
+      ],
+      "idle_bounds_godot": [
+        -112.88,
+        -240.64,
+        133.4581,
+        1.895
+      ],
+      "bounds_format": "min_x,min_y,max_x,max_y in Godot Y-down coordinates at feet origin",
+      "slots_back_to_front": [
+        "tail",
+        "cape",
+        "leg_l",
+        "leg_r",
+        "body",
+        "head",
+        "weapon",
+        "palm",
+        "paw_l",
+        "paw_r"
+      ],
+      "regions": {
+        "tail": {
+          "bone": "tail",
+          "source_alpha_box_3x": [
+            499,
+            403,
+            744,
+            678
+          ],
+          "atlas_bounds": [
+            533,
+            435,
+            245,
+            275
+          ]
+        },
+        "cape": {
+          "bone": "cape",
+          "source_alpha_box_3x": [
+            52,
+            370,
+            716,
+            719
+          ],
+          "atlas_bounds": [
+            857,
+            0,
+            664,
+            349
+          ]
+        },
+        "leg_l": {
+          "bone": "leg_l",
+          "source_alpha_box_3x": [
+            195,
+            557,
+            333,
+            711
+          ],
+          "atlas_bounds": [
+            781,
+            435,
+            138,
+            154
+          ]
+        },
+        "leg_r": {
+          "bone": "leg_r",
+          "source_alpha_box_3x": [
+            434,
+            557,
+            572,
+            711
+          ],
+          "atlas_bounds": [
+            922,
+            435,
+            138,
+            154
+          ]
+        },
+        "body": {
+          "bone": "body",
+          "source_alpha_box_3x": [
+            119,
+            334,
+            649,
+            639
+          ],
+          "atlas_bounds": [
+            0,
+            435,
+            530,
+            305
+          ]
+        },
+        "head": {
+          "bone": "head",
+          "source_alpha_box_3x": [
+            112,
+            22,
+            656,
+            446
+          ],
+          "atlas_bounds": [
+            310,
+            0,
+            544,
+            424
+          ]
+        },
+        "weapon": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            398,
+            170,
+            705,
+            602
+          ],
+          "atlas_bounds": [
+            0,
+            0,
+            307,
+            432
+          ]
+        },
+        "palm": {
+          "bone": "weapon",
+          "source_alpha_box_3x": [
+            450,
+            466,
+            509,
+            530
+          ],
+          "atlas_bounds": [
+            1279,
+            435,
+            59,
+            64
+          ]
+        },
+        "paw_l": {
+          "bone": "paw_l",
+          "source_alpha_box_3x": [
+            238,
+            442,
+            343,
+            545
+          ],
+          "atlas_bounds": [
+            1063,
+            435,
+            105,
+            103
+          ]
+        },
+        "paw_r": {
+          "bone": "paw_r",
+          "source_alpha_box_3x": [
+            425,
+            442,
+            530,
+            545
+          ],
+          "atlas_bounds": [
+            1171,
+            435,
+            105,
+            103
+          ]
+        }
+      },
+      "weapon_socket_canvas": [
+        160,
+        166
+      ],
+      "sources": [
+        {
+          "path": "docs/design/2026-10-24/hero-legs/tail.png",
+          "sha256": "3c44f06c09e9494d7bbdd0ff9934de0a6fc8a3310900d30da2578909fe6dbbf3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/back_accessories.png",
+          "sha256": "da8a4ab4e37bfe7f91bd6f2a1a96230973b963a1cb5600e25c6694caffe3b5ae"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_L_image.png",
+          "sha256": "4104a8111d64adea6bc1353a1745e913a63dd00046a67d06c2b34ac1b57c98ac"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/foot_R_image.png",
+          "sha256": "5b1b282be5adbd06983161dead54c8ba279eab8bebb5d93c5b4eed1d5637c4c3"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/body.png",
+          "sha256": "05e9af7268a5d2ed27cc1eab2b4d6e24c91c11d700b2813464d15fb0251f4e3f"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/head.png",
+          "sha256": "de399ecaa9398d2b6d9041751f056366659d3009482fef670f5c3e79ae59f25b"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_L_image.png",
+          "sha256": "21f80dc21cfd56f8d96a7662858026b9da9550143066472b94e35bf8c2dd3967"
+        },
+        {
+          "path": "docs/design/2026-10-24/hero-legs/paw_R_image.png",
+          "sha256": "a8be950395f0641e1eea3f08fc0fa7232b5aefebd54492d279a2e2e228167e8e"
+        },
+        {
+          "path": "docs/design/2026-10-22/hero-weapons-canvas/svg/katana-held-layer.svg",
+          "sha256": "da5a8a0a8c53be876d580a048da75ad1c9b6a332ab4ced84ae8482438b003eae"
+        },
+        {
+          "path": "docs/design/2026-10-23/hero-equipment-integration/svg/hero-katana-768.svg",
+          "sha256": "77a74c87d4a79f9c52c841eb2f67b00743b8124b7f6fe574859e4186c8b750bb"
+        }
+      ],
+      "production_static_reference": "game/ui/art/hero_cat_katana.png"
+    }
+  }
+}

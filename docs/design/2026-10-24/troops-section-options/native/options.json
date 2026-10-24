@@ -1,0 +1,735 @@
+{
+	"border_width": 4,
+	"checks": [
+		{
+			"key": "TroopsFormationSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "A_caption_contrast_at_least_4_5",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "A_team_roster_scroll_buttons_nav_geometry_unchanged",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "A_native_capture_450x800",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "A_capture_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "B_caption_contrast_at_least_4_5",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "B_team_roster_scroll_buttons_nav_geometry_unchanged",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "B_native_capture_450x800",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "B_capture_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "C_caption_contrast_at_least_4_5",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "C_team_roster_scroll_buttons_nav_geometry_unchanged",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "C_native_capture_450x800",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "C_capture_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsFormationSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "TroopsRosterSectionHeader_balanced_28px_margins_and_52px_slot",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "D_caption_contrast_at_least_4_5",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "D_team_roster_scroll_buttons_nav_geometry_unchanged",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "D_native_capture_450x800",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "D_capture_saved",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "demo_never_writes_save",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		},
+		{
+			"key": "original_profile_restored_without_disk_write",
+			"passed": true,
+			"size": [
+				450,
+				800
+			]
+		}
+	],
+	"failures": 0,
+	"margin_logical": 28,
+	"margin_native_px": 17.5,
+	"options": [
+		{
+			"contrast": 7.44949860724205,
+			"file": "A.png",
+			"headers": [
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsFormationSectionHeader",
+					"rect_logical": [
+						28.0,
+						112.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				},
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsRosterSectionHeader",
+					"rect_logical": [
+						28.0,
+						484.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				}
+			],
+			"id": "A",
+			"name": "Kem mật ong",
+			"palette": {
+				"border": "583f21",
+				"fill": "f3d79b",
+				"text": "503c25"
+			},
+			"scene_geometry": {
+				"cats": [
+					{
+						"cat": "muop",
+						"stage": [
+							34.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							34.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tro",
+						"stage": [
+							199.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							199.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tam",
+						"stage": [
+							364.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							364.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "bo",
+						"stage": [
+							529.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							529.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					}
+				],
+				"nav": [
+					0.0,
+					1076.0,
+					720.0,
+					204.0
+				],
+				"roster": [
+					24.0,
+					552.0,
+					664.0,
+					674.0
+				],
+				"roster_scroll": [
+					0.0,
+					536.0,
+					720.0,
+					540.0
+				],
+				"team": [
+					0.0,
+					164.0,
+					720.0,
+					320.0
+				]
+			}
+		},
+		{
+			"contrast": 4.57003091263794,
+			"file": "B.png",
+			"headers": [
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsFormationSectionHeader",
+					"rect_logical": [
+						28.0,
+						112.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				},
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsRosterSectionHeader",
+					"rect_logical": [
+						28.0,
+						484.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				}
+			],
+			"id": "B",
+			"name": "Xanh lam",
+			"palette": {
+				"border": "583f21",
+				"fill": "4d7488",
+				"text": "fff3d7"
+			},
+			"scene_geometry": {
+				"cats": [
+					{
+						"cat": "muop",
+						"stage": [
+							34.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							34.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tro",
+						"stage": [
+							199.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							199.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tam",
+						"stage": [
+							364.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							364.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "bo",
+						"stage": [
+							529.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							529.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					}
+				],
+				"nav": [
+					0.0,
+					1076.0,
+					720.0,
+					204.0
+				],
+				"roster": [
+					24.0,
+					552.0,
+					664.0,
+					674.0
+				],
+				"roster_scroll": [
+					0.0,
+					536.0,
+					720.0,
+					540.0
+				],
+				"team": [
+					0.0,
+					164.0,
+					720.0,
+					320.0
+				]
+			}
+		},
+		{
+			"contrast": 5.1784917770092,
+			"file": "C.png",
+			"headers": [
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsFormationSectionHeader",
+					"rect_logical": [
+						28.0,
+						112.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				},
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsRosterSectionHeader",
+					"rect_logical": [
+						28.0,
+						484.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				}
+			],
+			"id": "C",
+			"name": "Đào đất",
+			"palette": {
+				"border": "583f21",
+				"fill": "dbaca0",
+				"text": "59372f"
+			},
+			"scene_geometry": {
+				"cats": [
+					{
+						"cat": "muop",
+						"stage": [
+							34.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							34.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tro",
+						"stage": [
+							199.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							199.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tam",
+						"stage": [
+							364.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							364.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "bo",
+						"stage": [
+							529.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							529.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					}
+				],
+				"nav": [
+					0.0,
+					1076.0,
+					720.0,
+					204.0
+				],
+				"roster": [
+					24.0,
+					552.0,
+					664.0,
+					674.0
+				],
+				"roster_scroll": [
+					0.0,
+					536.0,
+					720.0,
+					540.0
+				],
+				"team": [
+					0.0,
+					164.0,
+					720.0,
+					320.0
+				]
+			}
+		},
+		{
+			"contrast": 4.64367484660055,
+			"file": "D.png",
+			"headers": [
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsFormationSectionHeader",
+					"rect_logical": [
+						28.0,
+						112.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				},
+				{
+					"left_margin_logical": 28.0,
+					"left_margin_native_px": 17.5,
+					"name": "TroopsRosterSectionHeader",
+					"rect_logical": [
+						28.0,
+						484.0,
+						664.0,
+						52.0
+					],
+					"right_margin_logical": 28.0,
+					"right_margin_native_px": 17.5
+				}
+			],
+			"id": "D",
+			"name": "Tím khói",
+			"palette": {
+				"border": "583f21",
+				"fill": "756986",
+				"text": "fff3df"
+			},
+			"scene_geometry": {
+				"cats": [
+					{
+						"cat": "muop",
+						"stage": [
+							34.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							34.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tro",
+						"stage": [
+							199.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							199.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "tam",
+						"stage": [
+							364.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							364.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					},
+					{
+						"cat": "bo",
+						"stage": [
+							529.0,
+							260.0,
+							157.0,
+							140.0
+						],
+						"toggle": [
+							529.0,
+							433.0,
+							157.0,
+							44.0
+						]
+					}
+				],
+				"nav": [
+					0.0,
+					1076.0,
+					720.0,
+					204.0
+				],
+				"roster": [
+					24.0,
+					552.0,
+					664.0,
+					674.0
+				],
+				"roster_scroll": [
+					0.0,
+					536.0,
+					720.0,
+					540.0
+				],
+				"team": [
+					0.0,
+					164.0,
+					720.0,
+					320.0
+				]
+			}
+		}
+	],
+	"pose": "The same production idle frame is held for all four options; flags and pattern movement are frozen in RAM for comparison.",
+	"production_changed": false,
+	"radius": 12,
+	"save_changed": false,
+	"slot_height": 52,
+	"window": [
+		450,
+		800
+	]
+}

@@ -136,11 +136,11 @@
 		{"hp": 1.30, "meat": 22, "cells": 16, "team": 4, "cost": 250},
 		{"hp": 1.50, "meat": 22, "cells": 18, "team": 4, "cost": 400},
 		{"hp": 1.70, "meat": 24, "cells": 20, "team": 4, "cost": 600},
-		{"hp": 1.95, "meat": 24, "cells": 22, "team": 5, "cost": 850},
-		{"hp": 2.20, "meat": 26, "cells": 23, "team": 5, "cost": 1200},
-		{"hp": 2.50, "meat": 26, "cells": 23, "team": 5, "cost": 1650},
-		{"hp": 2.85, "meat": 28, "cells": 23, "team": 5, "cost": 2200},
-		{"hp": 3.20, "meat": 30, "cells": 23, "team": 5, "cost": 3000}
+		{"hp": 1.95, "meat": 24, "cells": 22, "team": 4, "cost": 850},
+		{"hp": 2.20, "meat": 26, "cells": 23, "team": 4, "cost": 1200},
+		{"hp": 2.50, "meat": 26, "cells": 23, "team": 4, "cost": 1650},
+		{"hp": 2.85, "meat": 28, "cells": 23, "team": 4, "cost": 2200},
+		{"hp": 3.20, "meat": 30, "cells": 23, "team": 4, "cost": 3000}
 	],
 	"workshop": {
 		"meat_regen": {"name": "Két xu", "desc": "+%d xu thu nhập mỗi đợt", "max": 5, "base": 120, "growth": 1.6, "step": 1},
@@ -165,9 +165,9 @@
 		]
 	},
 	"chests": {
-		"wood": {"name": "Rương Gỗ", "items": 1, "stones": [8, 14], "gold": 0, "gems": 0, "bonus_gold": [50, 100], "min_rare": 0},
-		"silver": {"name": "Rương Bạc", "items": 3, "stones": [25, 35], "gold": 600, "gems": 0, "bonus_gold": [0, 0], "min_rare": 1},
-		"gold": {"name": "Rương Vàng", "items": 6, "stones": [70, 90], "gold": 0, "gems": 120, "bonus_gold": [0, 0], "min_rare": 2, "min_count": 2},
+		"wood": {"name": "Rương Gỗ", "items": 1, "blueprints": [2, 3], "gold": 0, "gems": 0, "bonus_gold": [50, 100], "min_rare": 0},
+		"silver": {"name": "Rương Bạc", "items": 3, "blueprints": [6, 9], "gold": 600, "gems": 0, "bonus_gold": [0, 0], "min_rare": 1},
+		"gold": {"name": "Rương Vàng", "items": 6, "blueprints": [18, 24], "gold": 0, "gems": 120, "bonus_gold": [0, 0], "min_rare": 2, "min_count": 2},
 		"victory": {"name": "Rương chiến thắng", "cards": 2, "gold": 0, "gems": 0, "bonus_gold": [0, 0], "min_rare": 0}
 	}
 }

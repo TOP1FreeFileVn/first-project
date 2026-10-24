@@ -1,16 +1,18 @@
 extends "res://game/menu/pages/MenuPage.gd"
 
-# The troop summon (bottom tab "Triệu hồi"): gems recruit random troop cards. A first card
-# unlocks the troop; more cards raise its stars on the Lính tab. A banner with the four best
-# troops, the pity counter toward a legendary, the rates, and x1 / x10 buttons. Results play
+# The troop summon (bottom tab "Triệu hồi"): gems recruit random troop cards, each one of
+# the four cats as it lives in some world (Cats.gd). A first card unlocks that version; more
+# cards raise its stars on the Lính tab. The banner features one world a day (its four
+# versions are FEATURED_SHARE of the pulls of their rarity), then the pity counter toward
+# a legendary, the rates, and x1 / x10 buttons. Results play
 # in SummonOpening. Numbers live in HeroCat (SUMMON_*). Equipment comes from shop chests.
 
 const HeroCat = preload("res://game/core/HeroCat.gd")
 const Ui = preload("res://game/ui/Ui.gd")
 const SummonOpening = preload("res://game/ui/SummonOpening.gd")
+const Cats = preload("res://game/data/Cats.gd")
+const SummonPortal = preload("res://game/ui/SummonPortal.gd")
 const BANNER_MIN_HEIGHT := 460.0
-## The troops shown standing on the banner: the legendary of each class.
-const SHOWCASE := ["katana", "dai_bac", "dua_phep", "bua"]
 
 func build() -> void:
 	fill_available_height()
@@ -63,48 +65,46 @@ func _banner(color: Color) -> Control:
 	var column := UiKit.vbox(8)
 	banner.add_child(column)
 
-	var title := UiKit.label("TRIỆU HỒI LÍNH", 30, UiKit.GOLD_TEXT)
+	var world := PlayerData.featured_world()
+	var title := UiKit.label(Cats.WORLD_NAMES[world].to_upper(), 30, UiKit.GOLD_TEXT)
+	title.name = "SummonWorldTitle"
 	title.add_theme_constant_override("outline_size", 5)
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	column.add_child(title)
-	var sub := _secondary("Bộ binh · Tầm xa · Pháp sư · Kỵ binh", 22)
+	var names := []
+	for id in Cats.world_versions(world):
+		names.append(Cats.NAMES[Cats.cat_of(id)])
+	var sub := _secondary("Bản thể của %s ở thế giới này · Đổi thế giới mỗi ngày" % ", ".join(names), 22)
 	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	sub.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	column.add_child(sub)
 
-	# The four legendary troops stand on a turning summoning circle.
+	# The banner and the actual reveal share the cat-paw portal artwork.
 	var art := Control.new()
 	art.custom_minimum_size.y = 220
 	art.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	art.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	art.clip_contents = true
 	column.add_child(art)
+	var portal := SummonPortal.new()
+	portal.name = "SummonBannerPortal"
+	portal.ambient = true
+	portal.accent = color
+	art.add_child(portal)
 	var row := UiKit.hbox(14)
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	row.mouse_filter = Control.MOUSE_FILTER_IGNORE
-	for id in SHOWCASE:
-		if PlayerData.TROOPS.has(id):
-			row.add_child(UiKit.troop_portrait(PlayerData.TROOPS[id], 120))
+	for id in Cats.world_versions(world):
+		row.add_child(UiKit.troop_portrait(PlayerData.TROOPS[id], 120))
 	art.add_child(row)
 	var fit := func():
 		row.size = Vector2(art.size.x, 0)
 		row.position = Vector2(0, art.size.y * 0.62 - 56)
+		var portal_scale := minf(art.size.x / 535.0, art.size.y / 210.0)
+		portal.scale = Vector2.ONE * portal_scale
+		portal.position = Vector2(art.size.x * 0.5, art.size.y * 0.83 - 150.0 * portal_scale)
 	art.resized.connect(fit)
 	art.ready.connect(fit)
-	art.draw.connect(func():
-		var t := Time.get_ticks_msec() / 1000.0
-		var center := art.size * Vector2(0.5, 0.5)
-		var ray_length := maxf(art.size.x, art.size.y) * 1.5
-		for i in 12:
-			var angle := t * 0.25 + i * TAU / 12.0
-			art.draw_colored_polygon(PackedVector2Array([center, center + Vector2.from_angle(angle - 0.09) * ray_length, center + Vector2.from_angle(angle + 0.09) * ray_length]), Color(color, 0.08))
-		var radius := minf(art.size.x * 0.4, art.size.y * 0.52)
-		art.draw_set_transform(art.size * Vector2(0.5, 0.86), 0.0, Vector2(1.0, 0.3))
-		art.draw_arc(Vector2.ZERO, radius, 0.0, TAU, 64, Color(color, 0.8), 6.0, true)
-		art.draw_arc(Vector2.ZERO, radius * 0.82, t, t + TAU * 0.8, 48, Color(color.lightened(0.4), 0.7), 3.0, true)
-		art.draw_circle(Vector2.ZERO, radius * 0.76, Color(color, 0.18))
-		art.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
-		art.queue_redraw())
 
 	var tag := PanelContainer.new()
 	tag.add_theme_stylebox_override("panel", UiKit.card_style(color, Color(0.05, 0.04, 0.1, 0.85)))
@@ -155,6 +155,7 @@ func _show_rates() -> void:
 		grid.add_child(name_label)
 		grid.add_child(UiKit.ink(("%.1f%%" % HeroCat.SUMMON_RARITY[r]).replace(".", ","), 22))
 	box.add_child(grid)
-	var pity := UiKit.ink("Bảo hiểm: lượt thứ %d chắc chắn ra lính Huyền thoại. Lính đã tối đa sao thì thẻ trùng đổi thành vàng." % HeroCat.SUMMON_PITY, 22)
+	var pity := UiKit.ink(("Thế giới nổi bật: %d%% số thẻ mỗi phẩm chắc chắn là bản thể của thế giới hôm nay. "
+		+ "Bảo hiểm: lượt thứ %d chắc chắn ra lính Huyền thoại. Lính đã tối đa sao thì thẻ trùng đổi thành vàng.") % [roundi(PlayerData.FEATURED_SHARE * 100), HeroCat.SUMMON_PITY], 22)
 	pity.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	box.add_child(pity)
